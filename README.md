@@ -1,6 +1,6 @@
 # Yuzu Mod — 柚子社少女们的奇妙冒险（4.0 兼容版）
 
-Stellaris 4.2.x 版本兼容移植，基于 [Steam Workshop 原版](https://steamcommunity.com/sharedfiles/filedetails/?id=3315878856) 的 3.12 修复版进行二度修复。
+Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://steamcommunity.com/sharedfiles/filedetails/?id=3315878856) 的 3.12 修复版进行二度修复。
 
 ## 移植内容
 
@@ -8,10 +8,14 @@ Stellaris 4.2.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 
 | 文件 | 修改前 | 修改后 | 原因 |
 |---|---|---|---|
-| `common/ascension_perks/yuzu_ascension_perks.txt` | `planet_pop_assembly_organic_mult` | `planet_pop_assembly_mult` | vanilla 中不存在带 `_organic` 后缀的 modifier，对照 vanilla 同类定义统一使用 `planet_pop_assembly_mult` |
-| `common/buildings/yuzu_buildings.txt` | `planet_pop_assembly_organic_add` | `planet_pop_assembly_add` | 同上，vanilla 的有机人口组装 modifier 键名不含 `_organic` |
+| `common/ascension_perks/yuzu_ascension_perks.txt` | `planet_pop_assembly_organic_mult` | `planet_pop_assembly_mult` | vanilla 中不存在带 `_organic` 后缀的 modifier |
+| `common/buildings/yuzu_buildings.txt` | `planet_pop_assembly_organic_add` | `planet_pop_assembly_add` | 同上 |
 | `common/buildings/yuzu_buildings.txt` | `count_owned_pop` | `count_owned_pop_amount` | 4.0 后 vanilla 重命名了此触发器 |
-| `common/buildings/yuzu_buildings.txt` | `num_pops` | `count_owned_pop_amount = { count > 10 }` | `num_pops` 在 4.0 后已从 vanilla 中移除，改用 `count_owned_pop_amount`（支持 planet/colony scope） |
+| `common/buildings/yuzu_buildings.txt` | `num_pops` | `count_owned_pop_amount = { count > 10 }` | `num_pops` 在 4.0 后已移除，改用 `count_owned_pop_amount`（支持 planet scope） |
+| `common/colony_types/00_yuzu_colony_types.txt` | 完整旧版副本 | 基于 vanilla 4.4.6 重建 | 4.0 后殖民类型系统完全重写（inline_script、complex_trigger_modifier），保留所有 Yuzu 世界排除规则 |
+| `common/colony_types/yuzu_city_colony_types.txt` | `trade_value_mult` | `planet_jobs_trade_produces_mult` | 4.0 后贸易值 modifier 改名 |
+| `common/colony_types/yuzu_city_colony_types.txt` | `planet_administrators_produces_mult` | `planet_bureaucrats_produces_mult` | Administrators 职业已重命名为 Bureaucrats |
+| `common/colony_types/yuzu_city_colony_types.txt` | `planet_administrators_upkeep_mult` | `planet_bureaucrats_upkeep_mult` | 同上 |
 
 ### 已排除的文件
 
