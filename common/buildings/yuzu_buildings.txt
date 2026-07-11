@@ -1,0 +1,3420 @@
+building_yuzu_clone_vats = {
+	icon = building_ancient_relics
+	base_buildtime = @b1_time
+
+	category = pop_assembly
+
+	position_priority = 50
+
+	planet_limit = {
+		base = 1
+	}
+
+	potential = {
+		exists = owner
+		is_yuzu_empire = yes
+		NOT = { has_modifier = resort_colony }
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+			is_yuzu_empire = no
+		}
+	}
+
+	planet_modifier = {
+		planet_pop_assembly_organic_add = 3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_yuzu_rapid_cell_division_1 }
+		}
+		planet_pop_assembly_organic_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_yuzu_rapid_cell_division_2 }
+		}
+		planet_pop_assembly_organic_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = yuzu_overloaded_clone
+			}
+		}
+		planet_pop_assembly_organic_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_personality_transplantation }
+		}
+		planet_stability_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			food = 500
+		}
+		upkeep = {
+			energy = 2
+			food = 10
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = yuzu_overloaded_clone
+				}
+			}
+			energy = 1
+			food = 5
+		}
+	}
+
+	building_sets = {
+		government
+		urban
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = tooltip_only_yuzu_assembly
+	}
+
+}
+
+##### 常规建筑 #####
+
+building_yuzu_cafe = {
+	base_buildtime = @b1_time
+
+	category = amenity
+
+	position_priority = 60
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_YUZU = yes
+		}
+		NOT = {	has_modifier = slave_colony	}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			is_yuzu_empire = no
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	building_sets = {
+		government
+		urban
+	}
+
+	planet_modifier = {
+		planet_amenities_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		modifier = {
+			job_cafe_clerk_add = 300
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+
+		cost = {
+			minerals = @b1_minerals
+		}
+
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_cafe_global"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_cafe_clerk_effect_desc
+	}
+
+}
+
+building_yuzu_cafe_global = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	category = amenity
+	position_priority = 60
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_YUZU = yes
+		}
+		NOT = {	has_modifier = slave_colony	}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			is_yuzu_empire = no
+			has_modifier = slave_colony
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_mult = 0.30
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		modifier = {
+			job_cafe_clerk_add = 600
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_cafe_clerk_effect_desc
+	}
+
+}
+
+building_yuzu_supernatural_research_organization = {
+	base_buildtime = @b1_time
+
+	category = research
+
+	position_priority = 65
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_YUZU = yes
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			is_yuzu_empire = no
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_yuzu_supernatural_research
+			}
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.10
+            planet_jobs_society_research_produces_mult = 0.10
+            planet_jobs_engineering_research_produces_mult = 0.10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		modifier = {
+			job_supernatural_researcher_add = 2
+			job_yuzu_witch_per_pop = 0.04
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_supernatural_research_institute"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_supernatural_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_yuzu_witch_effect_desc
+	}
+
+	ai_resource_production = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_YUZU = yes
+			}
+		}
+		energy = 10
+		minerals = 10
+		food = 10
+		consumer_goods = 10
+		alloys = 10
+		unity = 10
+		society_research = 100
+		engineering_research = 100
+		physics_research = 100
+		rare_crystals = 10
+		volatile_motes = 10
+		exotic_gases = 10
+	}
+}
+
+building_yuzu_supernatural_research_institute = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	category = research
+
+	position_priority = 65
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_YUZU = yes
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			is_yuzu_empire = no
+			has_modifier = slave_colony
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_yuzu_supernatural_research
+			}
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.20
+            planet_jobs_society_research_produces_mult = 0.20
+            planet_jobs_engineering_research_produces_mult = 0.20
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		modifier = {
+			job_supernatural_researcher_add = 4
+			job_yuzu_witch_per_pop = 0.04
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_supernatural_research_center"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_supernatural_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_yuzu_witch_effect_desc
+	}
+
+	ai_resource_production = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_YUZU = yes
+			}
+		}
+		energy = 10
+		minerals = 10
+		food = 10
+		consumer_goods = 10
+		alloys = 10
+		unity = 10
+		society_research = 200
+		engineering_research = 200
+		physics_research = 200
+		rare_crystals = 10
+		volatile_motes = 10
+		exotic_gases = 10
+	}
+}
+
+building_yuzu_supernatural_research_center = {
+	base_buildtime = @b3_time
+	
+	can_build = no
+	category = research
+
+	position_priority = 65
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+
+	potential = {
+		exists = owner
+		owner = { 
+			is_YUZU = yes
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			is_yuzu_empire = no
+			has_modifier = slave_colony
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_yuzu_supernatural_research
+			}
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.30
+            planet_jobs_society_research_produces_mult = 0.30
+            planet_jobs_engineering_research_produces_mult = 0.30
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		modifier = {
+			job_supernatural_researcher_add = 6
+			job_yuzu_witch_per_pop = 0.04
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_supernatural_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_YUZU = yes }
+		}
+		text = job_yuzu_witch_effect_desc
+	}
+
+	ai_resource_production = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_YUZU = yes
+			}
+		}
+		energy = 10
+		minerals = 10
+		food = 10
+		consumer_goods = 10
+		alloys = 10
+		unity = 10
+		society_research = 300
+		engineering_research = 300
+		physics_research = 300
+		rare_crystals = 10
+		volatile_motes = 10
+		exotic_gases = 10
+	}
+}
+
+########## 失落建筑 ##########
+
+##### 覆天穹顶 #####
+building_yuzu_fe_dome = {
+	base_buildtime = @b2_time
+	icon = building_paradise_dome
+	category = amenity
+
+	position_priority = 180
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_fe_dome_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 40
+		planet_amenities_add = 40
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_fe_dome_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_fe_dome_build_count value = 1 }
+		}
+	}
+}
+
+##### 财富圣殿 #####
+building_yuzu_affluence_center = {
+	base_buildtime = @b2_time
+	icon = building_hyper_entertainment_forum
+	category = manufacturing
+
+	position_priority = 160
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_affluence_center_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 100
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			minerals = 25
+			energy = 10
+		}
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_affluence_center_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_affluence_center_build_count value = 1 }
+		}
+	}
+}
+
+##### 营养圣殿 #####
+building_yuzu_nourishment_center = {
+	base_buildtime = @b2_time
+	icon = building_food_processing_center
+	category = resource
+
+	position_priority = 150
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_nourishment_center_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 200
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_nourishment_center_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_nourishment_center_build_count value = 1 }
+		}
+	}
+}
+
+##### 多重次元制造机 #####
+building_yuzu_dimensional_fabricator = {
+	base_buildtime = @b2_time
+	icon = building_nanite_transmuter
+	category = resource
+
+	position_priority = 140
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_dimensional_fabricator_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+
+
+	triggered_planet_modifier = {
+		potential = {
+			is_planet_class = pc_shattered_ring_habitable
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 4
+			planet_miners_alloys_produces_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 200
+			rare_crystals = 4
+			exotic_gases = 4
+			volatile_motes = 4
+			sr_zro = 4
+			sr_dark_matter = 4
+			sr_living_metal = 4
+			nanites = 4
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_dimensional_fabricator_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_dimensional_fabricator_build_count value = 1 }
+		}
+	}
+}
+
+##### 五级奇点 #####
+building_yuzu_class_4_singularity = {
+	base_buildtime = @b2_time
+	icon = building_class_4_singularity
+	category = resource
+
+	position_priority = 130
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_class_4_singularity_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 500
+		}
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_class_4_singularity_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_class_4_singularity_build_count value = 1 }
+		}
+	}
+}
+
+##### 混沌熔炉 #####
+building_yuzu_nano_forge = {
+	base_buildtime = @b2_time
+	icon = building_nano_forge
+	category = manufacturing
+
+	position_priority = 170
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_nano_forge_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			alloys = 50
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			minerals = 50
+			energy = 10
+		}
+	}
+
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_nano_forge_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_nano_forge_build_count value = 1 }
+		}
+	}
+}
+
+##### 神秘档案库 #####
+building_yuzu_master_archive = {
+	base_buildtime = @b2_time
+	icon = building_master_archive
+	category = research
+
+	position_priority = 110
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_master_archive_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		job_yuzu_fe_archivist_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 200
+			society_research = 200
+			engineering_research = 200
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	triggered_desc = {
+		text = job_yuzu_fe_archivist_effect_desc
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_master_archive_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_master_archive_build_count value = 1 }
+		}
+	}
+}
+
+##### 苍穹神龛 #####
+building_yuzu_empyrean_shrine = {
+	base_buildtime = @b2_time
+	icon = building_citadel_of_faith
+	category = research
+
+	position_priority = 120
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_empyrean_shrine_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		job_yuzu_fe_augur_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	triggered_desc = {
+		text = job_yuzu_fe_augur_effect_desc
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_empyrean_shrine_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_empyrean_shrine_build_count value = 1 }
+		}
+	}
+}
+
+##### 圣盾基地 #####
+building_yuzu_fe_stronghold = {
+	base_buildtime = @b2_time
+	icon = building_fortress
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_fe_stronghold_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		job_yuzu_fe_protector_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	triggered_desc = {
+		text = job_yuzu_fe_protector_effect_desc
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_fe_stronghold_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_fe_stronghold_build_count value = 1 }
+		}
+	}
+}
+
+##### 外星庇护所 #####
+building_yuzu_fe_xeno_zoo = {
+	base_buildtime = @b2_time
+	icon = building_fe_xeno_zoo
+	category = unity
+
+	base_cap_amount = 1
+	position_priority = 10
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_fe_xeno_zoo_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 15
+		job_yuzu_fe_xeno_keeper_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_fe_xeno_zoo_tooltip
+	}
+
+	triggered_desc = {
+		text = job_yuzu_fe_xeno_keeper_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_yuzu_fe_xeno_ward_effect_desc
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { which = yuzu_fe_xeno_zoo_build_count value = 1 }
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = { which = yuzu_fe_xeno_zoo_build_count value = 1 }
+		}
+	}
+}
+
+##### 神秘冷冻室 #####
+
+building_yuzu_ancient_cryo_chamber_1 = {
+	base_buildtime = @b2_time
+	icon = building_ancient_cryo_chamber
+
+	base_cap_amount = 1
+	position_priority = 20
+
+	potential = {
+		custom_tooltip = {
+			exists = owner
+			owner = {
+				is_YUZU = yes
+				check_variable = { which = yuzu_ancient_cryo_chamber_build_count value >= 1 }
+			}
+			fail_text = "yuzu_fe_building_failtext"
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 1
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	on_queued = {
+		if = {
+			limit = {
+				NOT = { has_building = building_yuzu_ancient_cryo_chamber_1 } # 不知为何升到2级也会触发，故作限制
+			}
+			owner = {
+				subtract_variable = { which = yuzu_ancient_cryo_chamber_build_count value = 1 }
+			}
+		}
+	}
+
+	on_unqueued = {
+		if = {
+			limit = {
+				NOT = { has_building = building_yuzu_ancient_cryo_chamber_1 } # 不知为何升到2级取消也会触发，故作限制
+			}
+			owner = {
+				change_variable = { which = yuzu_ancient_cryo_chamber_build_count value = 1 }
+			}
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_2"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_2 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 2
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_3"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_3 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 3
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_4"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_4 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 4
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_5"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_5 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 5
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_6"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_6 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 6
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_7"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_7 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 7
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_8"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_8 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 8
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_9"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_9 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 9
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_10"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_10 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 10
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_11"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_11 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 11
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_12"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_12 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 12
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_13"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_13 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 13
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_14"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_14 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 14
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_15"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_15 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 15
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_16"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_16 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 16
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_17"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_17 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 17
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_18"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_18 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 18
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_19"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_19 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 19
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_20"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_20 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 20
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_21"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_21 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 21
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_22"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_22 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 22
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_23"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_23 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 23
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_24"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_24 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 24
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_25"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_25 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 25
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_26"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_26 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 26
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_27"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_27 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 27
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_28"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_28 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 28
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_29"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_29 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 29
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_30"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_30 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 30
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_31"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_31 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 31
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_32"
+	}
+}
+building_yuzu_ancient_cryo_chamber_32 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 32
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_33"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_33 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 33
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_34"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_34 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 34
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_35"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_35 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 35
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_36"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_36 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+
+	position_priority = 20
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop = {
+				limit = { is_YUZU = yes }
+				count >= 10
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			num_pops > 10
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 36
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+}
