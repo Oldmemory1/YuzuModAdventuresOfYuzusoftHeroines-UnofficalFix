@@ -1,0 +1,1450 @@
+[{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_0\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 2,
+	"startColumn": 62,
+	"endLineNumber": 2,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_1\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 4,
+	"startColumn": 62,
+	"endLineNumber": 4,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_2\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 6,
+	"startColumn": 62,
+	"endLineNumber": 6,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_3\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 8,
+	"startColumn": 62,
+	"endLineNumber": 8,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_4\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 10,
+	"startColumn": 62,
+	"endLineNumber": 10,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_5\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 12,
+	"startColumn": 62,
+	"endLineNumber": 12,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_6\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 14,
+	"startColumn": 62,
+	"endLineNumber": 14,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_7\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 16,
+	"startColumn": 62,
+	"endLineNumber": 16,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_8\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 18,
+	"startColumn": 62,
+	"endLineNumber": 18,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_9\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 20,
+	"startColumn": 62,
+	"endLineNumber": 20,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_10\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 22,
+	"startColumn": 63,
+	"endLineNumber": 22,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_11\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 24,
+	"startColumn": 63,
+	"endLineNumber": 24,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_12\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 26,
+	"startColumn": 63,
+	"endLineNumber": 26,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_13\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 28,
+	"startColumn": 63,
+	"endLineNumber": 28,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_14\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 30,
+	"startColumn": 63,
+	"endLineNumber": 30,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_15\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 32,
+	"startColumn": 62,
+	"endLineNumber": 32,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_16\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 34,
+	"startColumn": 63,
+	"endLineNumber": 34,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_17\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 36,
+	"startColumn": 63,
+	"endLineNumber": 36,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_18\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 38,
+	"startColumn": 49,
+	"endLineNumber": 38,
+	"endColumn": 62,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_19\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 40,
+	"startColumn": 63,
+	"endLineNumber": 40,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_20\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 42,
+	"startColumn": 63,
+	"endLineNumber": 42,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_21\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 44,
+	"startColumn": 63,
+	"endLineNumber": 44,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_22\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 46,
+	"startColumn": 63,
+	"endLineNumber": 46,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_23\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 48,
+	"startColumn": 63,
+	"endLineNumber": 48,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_24\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 50,
+	"startColumn": 63,
+	"endLineNumber": 50,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_25\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 52,
+	"startColumn": 63,
+	"endLineNumber": 52,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_26\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 54,
+	"startColumn": 63,
+	"endLineNumber": 54,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_27\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 56,
+	"startColumn": 63,
+	"endLineNumber": 56,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_28\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 58,
+	"startColumn": 49,
+	"endLineNumber": 58,
+	"endColumn": 62,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_29\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 60,
+	"startColumn": 63,
+	"endLineNumber": 60,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_30\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 62,
+	"startColumn": 63,
+	"endLineNumber": 62,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_31\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 64,
+	"startColumn": 63,
+	"endLineNumber": 64,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_32\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 66,
+	"startColumn": 63,
+	"endLineNumber": 66,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_1_33\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 68,
+	"startColumn": 63,
+	"endLineNumber": 68,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_m_s\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 70,
+	"startColumn": 48,
+	"endLineNumber": 70,
+	"endColumn": 61,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_0\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 73,
+	"startColumn": 62,
+	"endLineNumber": 73,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_1\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 75,
+	"startColumn": 62,
+	"endLineNumber": 75,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_2\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 77,
+	"startColumn": 62,
+	"endLineNumber": 77,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_3\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 79,
+	"startColumn": 62,
+	"endLineNumber": 79,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_4\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 81,
+	"startColumn": 62,
+	"endLineNumber": 81,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_5\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 83,
+	"startColumn": 62,
+	"endLineNumber": 83,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_6\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 85,
+	"startColumn": 62,
+	"endLineNumber": 85,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_7\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 87,
+	"startColumn": 62,
+	"endLineNumber": 87,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_8\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 89,
+	"startColumn": 62,
+	"endLineNumber": 89,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_9\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 91,
+	"startColumn": 62,
+	"endLineNumber": 91,
+	"endColumn": 75,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_10\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 93,
+	"startColumn": 63,
+	"endLineNumber": 93,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_11\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 95,
+	"startColumn": 63,
+	"endLineNumber": 95,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_12\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 97,
+	"startColumn": 63,
+	"endLineNumber": 97,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_13\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 99,
+	"startColumn": 63,
+	"endLineNumber": 99,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_14\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 101,
+	"startColumn": 63,
+	"endLineNumber": 101,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_15\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 103,
+	"startColumn": 63,
+	"endLineNumber": 103,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_16\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 105,
+	"startColumn": 63,
+	"endLineNumber": 105,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_17\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 107,
+	"startColumn": 63,
+	"endLineNumber": 107,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_18\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 109,
+	"startColumn": 63,
+	"endLineNumber": 109,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_19\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 111,
+	"startColumn": 63,
+	"endLineNumber": 111,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_20\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 113,
+	"startColumn": 63,
+	"endLineNumber": 113,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_21\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 115,
+	"startColumn": 63,
+	"endLineNumber": 115,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_22\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 117,
+	"startColumn": 63,
+	"endLineNumber": 117,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_23\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 119,
+	"startColumn": 63,
+	"endLineNumber": 119,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_24\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 121,
+	"startColumn": 63,
+	"endLineNumber": 121,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_25\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 123,
+	"startColumn": 63,
+	"endLineNumber": 123,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_26\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 125,
+	"startColumn": 63,
+	"endLineNumber": 125,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_27\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 127,
+	"startColumn": 63,
+	"endLineNumber": 127,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_28\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 129,
+	"startColumn": 63,
+	"endLineNumber": 129,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_29\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 131,
+	"startColumn": 63,
+	"endLineNumber": 131,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_30\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 133,
+	"startColumn": 63,
+	"endLineNumber": 133,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_31\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 135,
+	"startColumn": 63,
+	"endLineNumber": 135,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_32\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 137,
+	"startColumn": 63,
+	"endLineNumber": 137,
+	"endColumn": 76,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/gfx/portraits/portraits/yuzu_portraits.txt",
+	"owner": "_generated_diagnostic_collection_name_#16",
+	"code": {
+		"value": "CW262",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw262"
+		}
+	},
+	"severity": 4,
+	"message": "\"hair_selector\" 不应出现在 \"yuzu_2_33\" 中:键名拼写错误,或这个字段不属于该块;对照 vanilla 同类定义检查。",
+	"source": "CWTools",
+	"startLineNumber": 139,
+	"startColumn": 63,
+	"endLineNumber": 139,
+	"endColumn": 76,
+	"origin": "extHost1"
+}]

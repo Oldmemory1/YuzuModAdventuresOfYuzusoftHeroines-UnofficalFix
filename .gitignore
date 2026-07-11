@@ -9,8 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
-# Game assets (large binary files)
-gfx/
+# Game assets (large binary texture files)
+gfx/**/*.dds
 
 # IDE
 .idea/
