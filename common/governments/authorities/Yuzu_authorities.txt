@@ -1,7 +1,6 @@
 auth_Yuzu = {
 	election_type = oligarchic
 	can_have_emergency_elections = yes
-	emergency_election_cost = 25
 	max_election_candidates = 4
 	
 	can_reform = no
@@ -35,10 +34,8 @@ auth_Yuzu = {
 		country_edict_fund_add = 200
         leader_cost_empire_size_mult = -0.5
         leader_upkeep_empire_size_mult = -0.5
-        pop_demotion_time_mult = -0.75
 		planet_resettlement_unemployed_mult = 2.00
 		#piracy_growth_mult = 100
-		local_trade_protection_add = 500
 		empire_size_penalty_mult = -0.25
         species_empire_size_mult = 0.25
 	}
