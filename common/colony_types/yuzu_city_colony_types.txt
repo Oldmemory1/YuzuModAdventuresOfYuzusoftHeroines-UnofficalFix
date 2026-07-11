@@ -108,7 +108,7 @@ col_yuzu_city_mix = {
 
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.25
-		trade_value_mult = 0.25
+		planet_jobs_trade_produces_mult = 0.25
 	}
 
 	weight_modifier = {
@@ -1059,8 +1059,8 @@ col_yuzu_city_bureau = {
 	}
 
 	planet_modifier = {
-		planet_administrators_produces_mult = 0.20
-		planet_administrators_upkeep_mult = -0.20
+		planet_bureaucrats_produces_mult = 0.20
+		planet_bureaucrats_upkeep_mult = -0.20
 	}
 
 	weight_modifier = {
@@ -1145,8 +1145,8 @@ col_yuzu_city_bureau_spiritualist = {
 	}
 
 	planet_modifier = {
-		planet_administrators_produces_mult = 0.20
-		planet_administrators_upkeep_mult = -0.20
+		planet_bureaucrats_produces_mult = 0.20
+		planet_bureaucrats_upkeep_mult = -0.20
 	}
 
 	weight_modifier = {
