@@ -244,15 +244,14 @@ yuzu_arc_sites_random_events_1 = {
 			set_variable = { which = num_lacked_yuzu_pops value = 10 }
 			save_event_target_as = yuzu_planet_owner
 		}
-		every_owned_pop_group = {
-			limit = { is_YUZU = yes }
+		while = {
 			count = 10
-			owner = {
-				subtract_variable = { which = num_lacked_yuzu_pops value = 1 }
-			}
-			kill_pop_group = {
-				pop_group = this
-				amount = 100
+			random_owned_pop_group = {
+				limit = { is_YUZU = yes }
+				owner = {
+					subtract_variable = { which = num_lacked_yuzu_pops value = 1 }
+				}
+				kill_single_pop = yes
 			}
 		}
 		if = {  # 如果建造完成时星球上人口不足，从整个国家中减去缺少的，防止刷人口
@@ -262,12 +261,11 @@ yuzu_arc_sites_random_events_1 = {
 				}
 			}
 			event_target:yuzu_planet_owner = {
-				every_owned_pop_group = {
-					limit = { is_YUZU = yes }
+				while = {
 					count = num_lacked_yuzu_pops
-					kill_pop_group = {
-						pop_group = this
-						amount = 100
+					random_owned_pop_group = {
+						limit = { is_YUZU = yes }
+						kill_single_pop = yes
 					}
 				}
 			}
