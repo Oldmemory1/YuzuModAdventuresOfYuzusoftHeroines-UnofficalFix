@@ -43,6 +43,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `gfx/models/ships/starbases/yuzu_starbase_entities.asset` | `energy_core_purple_effect`（10 处） | `energy_core_effect` | 该粒子在 vanilla 4.4.6 中不存在；对照 vanilla `fallen_empire_01` 星垒实体使用 `energy_core_effect` |
 | `gfx/projectiles/fallen_yuzu_abyss_empire_01_titan_lance.txt` | `purple_titan_laser_hit/shield/muzzle/windup_entity`（4 处） | `titan_laser_*_entity` | 这些 `purple_*` 实体在 vanilla 4.4.6 中不存在；对照 vanilla `titan_laser` 投射物使用标准实体 |
 | `events/Yuzu_origin_event.txt` | `planet_event` 在 `capital_scope`（Colony 作用域）/ `district_farming_uncapped` / `random_owned_pop` 在 `while` 中 / 虚空居者判断 / `create_pop` | 修复 5 处 CWTools 错误 + 同步 vanilla 模式 | `capital_scope` → `planet = { planet_event }`（4.4.6 中 capital_scope 为 Colony 作用域）；`district_farming_uncapped` → `district_farming`；`while` + `random_owned_pop` → `every_owned_pop` + `count = 5`（对照 vanilla 红巨星起源）；虚空居者判断 → `is_nomadic = no` + `NOR(origin_void_dwellers, origin_void_machines)`；`create_pop` → `create_pop_group`（对照 vanilla `d_decrepit_dwellings` 的 `on_cleared` 效果，每清除贫民窟释放 1 人口=100 pop_amount） |
+| `common/planet_classes/yuzu_planet_classes.txt` | `pop_growth_speed` / `planet_pop_assembly_organic_mult` | `bonus_pop_growth_mult` / `planet_pop_assembly_mult`（4 处） | 对照 vanilla 4.4.6 都市星球（`pc_city`）使用 `bonus_pop_growth_mult = 0.15` + `planet_pop_assembly_mult = 0.15`；盖亚星球使用 `logistic_growth_mult`；`_organic` 后缀已移除 |
 
 ### 版本管理
 
