@@ -41,6 +41,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/ship_sizes/yuzu_ship_sizes.txt` | `colossus_yards` 硬编码建造条件 | 调用 `colossus_possible_construction` | 对照 vanilla 4.4.6 `star_eater`（焚天神兵）建造条件同步；yuzu_star_eater 继承 colossus 建造触发 |
 | `common/pop_jobs/yuzu_jobs.txt` | `trade_value_add` / `has_job` / `job_weights_modifier` / `pop_modifier` | 移除或同步 vanilla 4.4.6 写法 | `trade_value_add`→`trade=8`（对照 clerk）；`has_job`/`job_weights_modifier` 在 4.4.6 中不存在；`pop_modifier`→`planet_modifier`+`planet_defense_armies_add`（对照 soldier） |
 | `gfx/models/ships/starbases/yuzu_starbase_entities.asset` | `energy_core_purple_effect`（10 处） | `energy_core_effect` | 该粒子在 vanilla 4.4.6 中不存在；对照 vanilla `fallen_empire_01` 星垒实体使用 `energy_core_effect` |
+| `gfx/projectiles/fallen_yuzu_abyss_empire_01_titan_lance.txt` | `purple_titan_laser_hit/shield/muzzle/windup_entity`（4 处） | `titan_laser_*_entity` | 这些 `purple_*` 实体在 vanilla 4.4.6 中不存在；对照 vanilla `titan_laser` 投射物使用标准实体 |
 
 ### 版本管理
 
