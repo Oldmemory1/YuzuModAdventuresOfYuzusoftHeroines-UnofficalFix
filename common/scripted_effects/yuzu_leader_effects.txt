@@ -6,7 +6,7 @@ add_yuzu_leader_trait_yuzu = {
 			}
 			NOT = { has_trait = leader_trait_immortal_yuzu }
 		}
-		add_trait_no_notify = leader_trait_yuzu
+		add_trait = leader_trait_yuzu
 	}
 }
 
@@ -27,7 +27,7 @@ add_yuzu_leader_trait_immortal_yuzu = {
 			}
 			NOT = { has_trait = leader_trait_immortal_yuzu }
 		}
-		add_trait_no_notify = leader_trait_immortal_yuzu
+		add_trait = leader_trait_immortal_yuzu
 	}
 }
 
@@ -48,7 +48,7 @@ add_yuzu_leader_trait_astral = {
 			}
 			NOT = { has_trait = leader_trait_yuzu_astral }
 		}
-		add_trait_no_notify = leader_trait_yuzu_astral
+		add_trait = leader_trait_yuzu_astral
 	}
 }
 
@@ -72,7 +72,7 @@ add_yuzu_leader_trait_vampire = {
 			}
 			NOT = { has_trait = leader_trait_yuzu_vampire }
 		}
-		add_trait_no_notify = leader_trait_yuzu_vampire
+		add_trait = leader_trait_yuzu_vampire
 	}
 }
 
@@ -96,7 +96,7 @@ add_yuzu_leader_trait_abyss = {
 			}
 			NOT = { has_trait = leader_trait_yuzu_abyss }
 		}
-		add_trait_no_notify = leader_trait_yuzu_abyss
+		add_trait = leader_trait_yuzu_abyss
 	}
 }
 
@@ -121,7 +121,7 @@ set_yuzu_leader_skill_single = {
 		while = {
 			count = 8
 			if = {
-				limit = { has_skill < 9 }
+				limit = { has_total_skill < 9 }
 				add_skill_without_trait_selection = 1
 			}
 		}
@@ -133,7 +133,7 @@ set_yuzu_leader_skill_single = {
 		while = {
 			count = 7
 			if = {
-				limit = { has_skill < 8 }
+				limit = { has_total_skill < 8 }
 				add_skill_without_trait_selection = 1
 			}
 		}
@@ -145,7 +145,7 @@ set_yuzu_leader_skill_single = {
 		while = {
 			count = 6
 			if = {
-				limit = { has_skill < 7 }
+				limit = { has_total_skill < 7 }
 				add_skill_without_trait_selection = 1
 			}
 		}
@@ -157,7 +157,7 @@ set_yuzu_leader_skill_single = {
 		while = {
 			count = 5
 			if = {
-				limit = { has_skill < 6 }
+				limit = { has_total_skill < 6 }
 				add_skill_without_trait_selection = 1
 			}
 		}
@@ -169,7 +169,7 @@ set_yuzu_leader_skill_single = {
 		while = {
 			count = 4
 			if = {
-				limit = { has_skill < 5 }
+				limit = { has_total_skill < 5 }
 				add_skill_without_trait_selection = 1
 			}
 		}
@@ -181,7 +181,7 @@ set_yuzu_leader_skill_single = {
 		while = {
 			count = 3
 			if = {
-				limit = { has_skill < 4 }
+				limit = { has_total_skill < 4 }
 				add_skill_without_trait_selection = 1
 			}
 		}
@@ -193,7 +193,7 @@ set_yuzu_leader_skill_single = {
 		while = {
 			count = 2
 			if = {
-				limit = { has_skill < 3 }
+				limit = { has_total_skill < 3 }
 				add_skill_without_trait_selection = 1
 			}
 		}
@@ -203,102 +203,111 @@ set_yuzu_leader_skill_single = {
 			owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value = 3 } }
 		}
 		if = {
-			limit = { has_skill < 2 }
+			limit = { has_total_skill < 2 }
+			add_skill_without_trait_selection = 1
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value = 2 } }
+		}
+		if = {
+			limit = { has_total_skill < 2 }
 			add_skill_without_trait_selection = 1
 		}
 	}
 }
 
 update_and_set_yuzu_leader_skill = {
-	switch = {
-		trigger = has_skill
-		#split#
-		10 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 10 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 10 } }
+switch = {
+	trigger = has_total_skill
+	#split#
+	10 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 10 } }
 			}
-		}
-		9 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 9 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 9 } }
-			}
-		}
-		8 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 8 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 8 } }
-			}
-		}
-		7 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 7 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 7 } }
-			}
-		}
-		6 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 6 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 6 } }
-			}
-		}
-		5 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 5 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 5 } }
-			}
-		}
-		4 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 4 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 4 } }
-			}
-		}
-		3 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 3 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 3 } }
-			}
-		}
-		2 = {
-			if = {
-				limit = {
-					owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 2 } }
-				}
-				owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 2 } }
-			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 10 } }
 		}
 	}
-	
-	owner = {
-		every_owned_leader = {
+	9 = {
+		if = {
 			limit = {
-				leader_class = $LEADER_CLASS$
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 9 } }
 			}
-			set_yuzu_leader_skill_single = { LEADER_CLASS = $LEADER_CLASS$ }
-		}
-		every_pool_leader = {
-			limit = {
-				leader_class = $LEADER_CLASS$
-			}
-			set_yuzu_leader_skill_single = { LEADER_CLASS = $LEADER_CLASS$ }
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 9 } }
 		}
 	}
+	8 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 8 } }
+			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 8 } }
+		}
+	}
+	7 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 7 } }
+			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 7 } }
+		}
+	}
+	6 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 6 } }
+			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 6 } }
+		}
+	}
+	5 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 5 } }
+			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 5 } }
+		}
+	}
+	4 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 4 } }
+			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 4 } }
+		}
+	}
+	3 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 3 } }
+			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 3 } }
+		}
+	}
+	2 = {
+		if = {
+			limit = {
+				owner = { check_variable = { which = yuzu_$LEADER_CLASS$_skill value < 2 } }
+			}
+			owner = { set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 2 } }
+		}
+	}
+}
+
+owner = {
+	every_owned_leader = {
+		limit = {
+			leader_class = $LEADER_CLASS$
+		}
+		set_yuzu_leader_skill_single = { LEADER_CLASS = $LEADER_CLASS$ }
+	}
+	every_pool_leader = {
+		limit = {
+			leader_class = $LEADER_CLASS$
+		}
+		set_yuzu_leader_skill_single = { LEADER_CLASS = $LEADER_CLASS$ }
+	}
+}
 }

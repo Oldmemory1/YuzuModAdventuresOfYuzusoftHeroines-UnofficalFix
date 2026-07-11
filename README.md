@@ -36,6 +36,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/districts/yuzu_city_districts.txt` | `job_priest_add` / `job_death_priest_add` | `job_bureaucrat_add`（4 处） | 4.4.6 中祭司/死亡祭司已合并为 bureaucrat 变体（`bureaucrat_is_priest`/`bureaucrat_is_death_priest`） |
 | `common/governments/authorities/Yuzu_authorities.txt` | `emergency_election_cost` / `pop_demotion_time_mult` / `local_trade_protection_add` | 移除（3 处） | 这三个 key 在 4.4.6 中不存在：选举费用改用 game_rule + `country_election_cost_mult`；人口降级机制已变更；贸易保护机制已重做 |
 | `common/game_rules/zzz_yuzu_rules.txt` | `can_orbital_bombard` / `can_species_be_assembled` 两规则 | 与 vanilla 4.4.6 同步 + 柚子 mod 补充 | 移除废弃 tradition/policy_flag 引用，修复 `has_population_control` 格式，新增 vanilla 4.4.6 的 country_type（formless/frenzied_voidworms 等），保留 `new_abyss_empire` 和 `building_yuzu_clone_vats` |
+| `common/scripted_effects/yuzu_leader_effects.txt` | `add_trait_no_notify` | `add_trait`（5 处） | 4.4.6 中静默添加特质使用 `add_trait = trait_name`，`_no_notify` 后缀已移除；移除空的 `else_if` 块 |
 
 ### 版本管理
 
