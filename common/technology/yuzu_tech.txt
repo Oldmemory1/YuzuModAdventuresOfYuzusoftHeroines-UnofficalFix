@@ -91,7 +91,7 @@ tech_memory_storage = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -133,7 +133,7 @@ tech_BMI = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -166,7 +166,7 @@ tech_yuzu_rapid_cell_division_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -199,7 +199,7 @@ tech_yuzu_rapid_cell_division_2 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -250,7 +250,7 @@ tech_spatiotemporal_communication = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -289,7 +289,7 @@ tech_ceremony_communication = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -321,7 +321,7 @@ tech_yuzu_mega_engineering = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -355,7 +355,7 @@ tech_yuzu_city = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -413,7 +413,7 @@ tech_yuzu_abyss_city = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -447,7 +447,7 @@ tech_yuzu_sunset_city = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -485,7 +485,7 @@ tech_yuzu_star_eater = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -517,7 +517,7 @@ tech_yuzu_l_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -548,7 +548,7 @@ tech_yuzu_l_2 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -580,7 +580,7 @@ tech_yuzu_l_3 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -610,7 +610,7 @@ tech_yuzu_lance_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -641,7 +641,7 @@ tech_yuzu_lance_2 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -673,7 +673,7 @@ tech_yuzu_lance_3 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -701,7 +701,7 @@ tech_yuzu_beam_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -732,7 +732,7 @@ tech_yuzu_beam_2 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -762,7 +762,7 @@ tech_yuzu_beam_3 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -790,7 +790,7 @@ tech_yuzu_strike_craft_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -818,7 +818,7 @@ tech_yuzu_torpedoes_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -846,7 +846,7 @@ tech_yuzu_pd_tracking_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -881,7 +881,7 @@ tech_yuzu_jump_drive_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -917,7 +917,7 @@ tech_thrusters_yuzu_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -953,7 +953,7 @@ tech_computer_role_yuzu = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -988,7 +988,7 @@ tech_fire_control_yuzu = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1023,7 +1023,7 @@ tech_sensors_yuzu_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1059,7 +1059,7 @@ tech_sensors_yuzu_2 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1097,7 +1097,7 @@ tech_reactor_yuzu = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1125,7 +1125,7 @@ tech_yuzu_armor_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1155,7 +1155,7 @@ tech_yuzu_armor_2 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1183,7 +1183,7 @@ tech_yuzu_shield_1 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1213,7 +1213,7 @@ tech_yuzu_shield_2 = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -1243,7 +1243,7 @@ tech_pk_back_in_time = {
 	weight_modifier = {
 		factor = 0.25
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = 9
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
