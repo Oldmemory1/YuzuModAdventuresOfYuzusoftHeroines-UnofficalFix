@@ -40,7 +40,7 @@ tr_yuzu_festival_spring = {
 	}
 
 	modifier = {
-		trade_value_mult = 0.10
+		country_trade_produces_mult = 0.10
 		pop_government_ethic_attraction = 0.25
 	}
 

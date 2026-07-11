@@ -1002,7 +1002,7 @@ country_event = {
 # 通讯界面
 country_event = {
 	id = Yuzu_abyss_crisis_event.100
-	title = "TRANSMISSION"a
+	title = "TRANSMISSION"
 
 	desc = {
 		text = Yuzu_abyss_crisis_event.100.desc_01
