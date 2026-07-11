@@ -35,10 +35,6 @@ YUZUGIRL1 = {
 			超越者 天罚神
 		}
 
-		yuzu_reaper_scythe = {
-			降临者
-		}
-
 		constructor = {#工程船
 			施工者
 		}
