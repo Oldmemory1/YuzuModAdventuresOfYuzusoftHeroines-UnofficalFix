@@ -39,6 +39,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/scripted_effects/yuzu_leader_effects.txt` | `add_trait_no_notify` | `add_trait`（5 处） | 4.4.6 中静默添加特质使用 `add_trait = trait_name`，`_no_notify` 后缀已移除；移除空的 `else_if` 块 |
 | `common/ship_sizes/yuzu_other_ship_sizes.txt` | `titan_yards` / `colossus_yards` 硬编码建造条件 | 调用 vanilla scripted triggers（3 个舰种） | 4.4.6 中泰坦组装厂和巨像组装厂合并为 `capital_yards`（主力舰组装厂），改用 `titan/colossus/juggernaut_possible_construction` 同步原版 |
 | `common/ship_sizes/yuzu_ship_sizes.txt` | `colossus_yards` 硬编码建造条件 | 调用 `colossus_possible_construction` | 对照 vanilla 4.4.6 `star_eater`（焚天神兵）建造条件同步；yuzu_star_eater 继承 colossus 建造触发 |
+| `common/pop_jobs/yuzu_jobs.txt` | `trade_value_add` / `has_job` / `job_weights_modifier` / `pop_modifier` | 移除或同步 vanilla 4.4.6 写法 | `trade_value_add`→`trade=8`（对照 clerk）；`has_job`/`job_weights_modifier` 在 4.4.6 中不存在；`pop_modifier`→`planet_modifier`+`planet_defense_armies_add`（对照 soldier） |
 
 ### 版本管理
 

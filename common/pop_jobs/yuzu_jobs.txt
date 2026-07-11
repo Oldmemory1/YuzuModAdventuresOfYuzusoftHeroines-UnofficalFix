@@ -20,14 +20,11 @@ cafe_clerk = {
 		category = planet_cafe_clerks
 		produces = {
 			unity = 1
+			trade = 8
 		}
 		upkeep = {
 			food = 1
 		}
-	}
-
-	planet_modifier = {
-		trade_value_add = 8
 	}
 
 	triggered_planet_modifier = {
@@ -42,14 +39,9 @@ cafe_clerk = {
 		weight = @high_prio_specialist_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
-		mult = value:job_weights_modifier|JOB|cafe_clerk|RESOURCE|unity|FACTOR|0.25|
 		modifier = {
 			factor = 2
 			has_trait = trait_yuzu
-		}
-		modifier = {
-			factor = 1.5
-			has_job = cafe_clerk
 		}
 	}
 }
@@ -105,9 +97,7 @@ supernatural_researcher = {
 
 	weight = {
 		weight = @high_prio_specialist_job_weight
-		mult = value:job_weights_research_modifier|JOB|supernatural_researcher|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		mult = value:job_weights_modifier|JOB|supernatural_researcher|RESOURCE|unity|FACTOR|0.5|
 		modifier = {
 			factor = 2
 			has_trait = trait_yuzu
@@ -130,10 +120,6 @@ supernatural_researcher = {
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_job = supernatural_researcher
 		}
 		modifier = {
 			factor = 0.8
@@ -192,14 +178,9 @@ yuzu_witch = {
 	weight = {
 		weight = @high_prio_specialist_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		mult = value:job_weights_modifier|JOB|yuzu_witch|RESOURCE|unity|FACTOR|0.75|
 		modifier = {
 			factor = 5
 			always = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_job = yuzu_witch
 		}
 	}
 }
@@ -235,7 +216,6 @@ yuzu_slime_researcher = {
 
 	weight = {
 		weight = @high_prio_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|dimensional_portal_researcher|RESOURCE|society_research|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -248,10 +228,6 @@ yuzu_slime_researcher = {
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_job = yuzu_slime_researcher
 		}
 		modifier = {
 			factor = 0.8
@@ -287,7 +263,6 @@ yuzu_slime_breeder = {
 
 	weight = {
 		weight = @high_prio_specialist_job_weight
-		mult = value:job_weights_modifier|JOB|yuzu_slime_breeder|RESOURCE|food|
 		modifier = {
 			factor = 1.1
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -312,10 +287,6 @@ yuzu_slime_breeder = {
 					value >= 0
 				}
 			}
-		}
-		modifier = {
-			factor = 1.5
-			has_job = yuzu_slime_breeder
 		}
 	}
 }
@@ -352,7 +323,6 @@ yuzu_fe_archivist = {
 
 	weight = {
 		weight = 20
-		mult = value:job_weights_research_modifier|JOB|yuzu_fe_archivist|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -365,10 +335,6 @@ yuzu_fe_archivist = {
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_job = yuzu_fe_archivist
 		}
 		modifier = {
 			factor = 0.8
@@ -406,7 +372,6 @@ yuzu_fe_augur = {
 
 	weight = {
 		weight = 20
-		mult = value:job_weights_modifier|JOB|yuzu_fe_augur|RESOURCE|unity|
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -415,10 +380,6 @@ yuzu_fe_augur = {
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_job = yuzu_fe_augur
 		}
 	}
 }
@@ -466,6 +427,7 @@ yuzu_fe_protector = {
 	planet_modifier = {
 		planet_crime_add = -30
 		planet_stability_add = 2
+		planet_defense_armies_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -478,19 +440,10 @@ yuzu_fe_protector = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
-
 	weight = {
 		weight = @soldier_job_weight
 		modifier = {
-			mult = value:job_weights_modifier|JOB|yuzu_fe_protector|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
-		}
-		modifier = {
-			factor = 10
-			has_job = yuzu_fe_protector
 		}
 		modifier = {
 			factor = 10
@@ -584,10 +537,7 @@ yuzu_fe_xeno_keeper = {
 
 	planet_modifier = {
 		planet_crime_add = -20
-	}
-
-	pop_modifier = {
-		pop_defense_armies_add = 2
+		planet_defense_armies_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -597,14 +547,10 @@ yuzu_fe_xeno_keeper = {
 		planet_amenities_add = 10
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
-	
+
 	weight = {
 		weight = @high_prio_specialist_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		modifier = {
-			factor = 1.5
-			has_job = yuzu_fe_xeno_keeper
-		}
 	}
 }
 
