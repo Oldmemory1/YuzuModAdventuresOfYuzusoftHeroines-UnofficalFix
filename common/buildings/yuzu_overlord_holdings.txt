@@ -26,7 +26,7 @@ holding_yuzu_cafe = {
 			planet.owner = { is_gestalt = no }
 		}
 		planet_amenities_mult = 0.15
-		job_overlord_cafe_clerk_add = 3
+		job_overlord_cafe_clerk_add = 300
         monthly_loyalty = 0.5
 	}
 
@@ -36,7 +36,7 @@ holding_yuzu_cafe = {
 			planet.owner = { is_gestalt = yes }
 		}
 		planet_amenities_no_happiness_mult = 0.15
-		job_overlord_cafe_clerk_drone_add = 3
+		job_overlord_cafe_clerk_drone_add = 300
 		monthly_loyalty = 0.5
 	}
 
@@ -87,7 +87,7 @@ holding_yuzu_supernatural_research_organization = {
 			planet.owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_overlord_supernatural_researcher_add = 2
+			job_overlord_supernatural_researcher_add = 200
 			job_overlord_yuzu_witch_per_pop = 0.04
 			monthly_loyalty = 0.5
 		}
@@ -99,7 +99,7 @@ holding_yuzu_supernatural_research_organization = {
 			planet.owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_overlord_supernatural_researcher_drone_add = 2
+			job_overlord_supernatural_researcher_drone_add = 200
 			job_overlord_yuzu_witch_drone_per_pop = 0.04
 			monthly_loyalty = 0.5
 		}
