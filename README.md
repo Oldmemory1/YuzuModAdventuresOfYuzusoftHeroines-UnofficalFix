@@ -33,6 +33,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/decisions/yuzu_decisions.txt` | `any_owned_pop` | `any_owned_pop_group`（含 `country = owner`） | 4.0 后人口系统改动 |
 | `common/decisions/yuzu_special_decisions.txt` | 同上所有问题 + Yuzu 定制理想城 | 同对照 vanilla 更新 | 保留 Yuzu 独有条件（is_YUZU、特殊资源花费、abyss/sunset 城市） |
 | `common/deposits/Yuzu_deposits.txt` | `trade_value_mult` | `planet_jobs_trade_produces_mult`（2 处） | 4.0 后贸易值 modifier 改名，对照 vanilla event_planetary_deposits |
+| `common/districts/yuzu_city_districts.txt` | `job_priest_add` / `job_death_priest_add` | `job_bureaucrat_add`（4 处） | 4.4.6 中祭司/死亡祭司已合并为 bureaucrat 变体（`bureaucrat_is_priest`/`bureaucrat_is_death_priest`） |
 
 ### 版本管理
 

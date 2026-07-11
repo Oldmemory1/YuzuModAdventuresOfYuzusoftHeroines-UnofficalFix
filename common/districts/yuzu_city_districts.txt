@@ -710,7 +710,7 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp NO, Death Cult NO.
-			job_priest_add = 6
+			job_bureaucrat_add = 6
 		}
 	}
 	
@@ -724,7 +724,7 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult NO.
-			job_priest_add = 3
+			job_bureaucrat_add = 3
 			job_manager_add = 3
 		}
 	}
@@ -739,7 +739,7 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp NO, Death Cult YES.
-			job_death_priest_add = 3
+			job_bureaucrat_add = 3
 			job_mortal_initiate_add = 3
 		}
 	}
@@ -754,7 +754,7 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult YES.
-			job_death_priest_add = 2
+			job_bureaucrat_add = 2
 			job_mortal_initiate_add = 2
 			job_manager_add = 2
 		}
