@@ -13,11 +13,19 @@ country_event = {
 	immediate = {
 		set_country_flag = starting_event
 		capital_scope = {
-			planet_event = { id = Yuzu_planet_event.1 days = 1080 random = 720 }
+			planet = {
+				planet_event = { id = Yuzu_planet_event.1 days = 1080 random = 720 }
+			}
 		}
 		if = {
 			limit = {
-				owner = { NOT = { has_origin = origin_void_dwellers } }
+				owner = {
+					is_nomadic = no
+					NOR = {
+						has_origin = origin_void_dwellers
+						has_origin = origin_void_machines
+					}
+				}
 			}
 			capital_scope = {
 				add_building = building_yuzu_clone_vats
@@ -42,7 +50,7 @@ country_event = {
 					remove_building = building_temple
 					add_building = building_yuzu_cafe
 				}
-				
+
 				if = {
 					limit = {
 						owner = { has_origin = origin_yuzu_world }
@@ -57,7 +65,7 @@ country_event = {
 						owner = { has_origin = origin_shattered_ring }
 					}
 					remove_district = district_srw_commercial
-					add_district = district_farming_uncapped
+					add_district = district_farming
 				}
 				else = {
 					remove_district = district_generator
@@ -98,33 +106,32 @@ country_event = {
 			create_pop = { species = owner_main_species }
 		}
 
-		while = {
-			count = 5
-			random_owned_pop = {
-				limit = {
-					has_trait = trait_yuzu
-					NOR = {
-						has_trait = trait_yuzu_vampire
-						has_trait = trait_yuzu_astral
-					}
-				}
-				modify_species = {
-					species = this
-					add_trait = trait_yuzu_vampire
+		every_owned_pop = {
+			limit = {
+				has_trait = trait_yuzu
+				NOR = {
+					has_trait = trait_yuzu_vampire
+					has_trait = trait_yuzu_astral
 				}
 			}
-			random_owned_pop = {
-				limit = {
-					has_trait = trait_yuzu
-					NOR = {
-						has_trait = trait_yuzu_vampire
-						has_trait = trait_yuzu_astral
-					}
+			count = 5
+			modify_species = {
+				species = this
+				add_trait = trait_yuzu_vampire
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				has_trait = trait_yuzu
+				NOR = {
+					has_trait = trait_yuzu_vampire
+					has_trait = trait_yuzu_astral
 				}
-				modify_species = {
-					species = this
-					add_trait = trait_yuzu_astral
-				}
+			}
+			count = 5
+			modify_species = {
+				species = this
+				add_trait = trait_yuzu_astral
 			}
 		}
 		every_owned_leader = {
@@ -218,7 +225,9 @@ country_event = {
 			add_deposit = d_yuzu_islenauts
 			add_deposit = d_yuzu_damaged_buildings
 			add_modifier = { modifier = yuzu_home_planet_modifier }
-			planet_event = { id = Yuzu_situation_event.1 days = 1800 random = 1800 }
+			planet = {
+				planet_event = { id = Yuzu_situation_event.1 days = 1800 random = 1800 }
+			}
 		}
 	}
 }

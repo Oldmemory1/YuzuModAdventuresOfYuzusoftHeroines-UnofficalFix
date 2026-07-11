@@ -42,6 +42,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/pop_jobs/yuzu_jobs.txt` | `trade_value_add` / `has_job` / `job_weights_modifier` / `pop_modifier` | 移除或同步 vanilla 4.4.6 写法 | `trade_value_add`→`trade=8`（对照 clerk）；`has_job`/`job_weights_modifier` 在 4.4.6 中不存在；`pop_modifier`→`planet_modifier`+`planet_defense_armies_add`（对照 soldier） |
 | `gfx/models/ships/starbases/yuzu_starbase_entities.asset` | `energy_core_purple_effect`（10 处） | `energy_core_effect` | 该粒子在 vanilla 4.4.6 中不存在；对照 vanilla `fallen_empire_01` 星垒实体使用 `energy_core_effect` |
 | `gfx/projectiles/fallen_yuzu_abyss_empire_01_titan_lance.txt` | `purple_titan_laser_hit/shield/muzzle/windup_entity`（4 处） | `titan_laser_*_entity` | 这些 `purple_*` 实体在 vanilla 4.4.6 中不存在；对照 vanilla `titan_laser` 投射物使用标准实体 |
+| `events/Yuzu_origin_event.txt` | `planet_event` 在 `capital_scope`（Colony 作用域）/ `district_farming_uncapped` / `random_owned_pop` 在 `while` 中 / 虚空居者判断 | 修复 5 处错误 + 同步 vanilla 虚空居者判断模式 | `capital_scope` → `planet = { planet_event }`（4.4.6 中 capital_scope 为 Colony 作用域）；`district_farming_uncapped` → `district_farming`（对照 vanilla 移除 `_uncapped` 区划）；`while` + `random_owned_pop` → `every_owned_pop` + `count = 5`（对照 vanilla 红巨星起源）；虚空居者判断同步 vanilla `is_nomadic = no` + `NOR(origin_void_dwellers, origin_void_machines)` |
 
 ### 版本管理
 
