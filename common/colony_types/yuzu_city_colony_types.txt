@@ -160,11 +160,11 @@ col_yuzu_city_industrial = {
 		}
 		modifier = {
 			add = 5
-			num_districts = { type = district_yuzu_city_industry value >= 3 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 3 }
 		}
 		modifier = {
 			add = 5
-			num_districts = { type = district_yuzu_city_industry value >= 4 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 4 }
 		}
 		modifier = {
 			add = 10
@@ -183,7 +183,7 @@ col_yuzu_city_industrial = {
 		}
 		modifier = {
 			factor = 0
-			num_districts = { type = district_yuzu_city_industry value = 0 }
+			num_districts = { type = district_yuzu_city_urban_1 value = 0 }
 		}
 	}
 }
@@ -257,11 +257,11 @@ col_yuzu_city_foundry = {
 		}
 		modifier = {
 			add = 3
-			num_districts = { type = district_yuzu_city_industry value >= 2 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 2 }
 		}
 		modifier = {
 			add = 5
-			num_districts = { type = district_yuzu_city_industry value >= 3 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 3 }
 		}
 		modifier = {
 			add = 2
@@ -351,11 +351,11 @@ col_yuzu_city_factory = {
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_yuzu_city_industry value >= 2 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 2 }
 		}
 		modifier = {
 			add = 3
-			num_districts = { type = district_yuzu_city_industry value >= 3 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 3 }
 		}
 		modifier = {
 			add = 2
@@ -439,22 +439,22 @@ col_yuzu_city_refinery = {
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 2 }
 		}
 		modifier = {
 			add = 3
-			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 3 }
 		}
 		modifier = {
 			add = 4
-			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 4 }
 		}
 		modifier = {
 			add = 10
 			num_buildings = { type = building_refinery value >= 2 }
 			num_buildings = { type = building_crystal_plant value >= 2 }
 			num_buildings = { type = building_chemical_plant value >= 2 }
-			num_districts = { type = district_yuzu_city_refinery value >= 5 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 5 }
 		}
 		modifier = {
 			factor = 0
@@ -462,7 +462,7 @@ col_yuzu_city_refinery = {
 				has_building = building_refinery
 				has_building = building_crystal_plant
 				has_building = building_chemical_plant
-				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+				num_districts = { type = district_yuzu_city_urban_1 value >= 1 }
 			}
 		}
 	}
@@ -522,22 +522,22 @@ col_yuzu_city_exotic_gases = {
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 2 }
 		}
 		modifier = {
 			add = 3
-			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 3 }
 		}
 		modifier = {
 			add = 4
-			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 4 }
 		}
 		
 		modifier = {
 			factor = 0
 			NOR = {
 				has_building = building_refinery
-				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+				num_districts = { type = district_yuzu_city_urban_1 value >= 1 }
 			}
 		}
 	}
@@ -598,22 +598,22 @@ col_yuzu_city_rare_crystals = {
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 2 }
 		}
 		modifier = {
 			add = 3
-			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 3 }
 		}
 		modifier = {
 			add = 4
-			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 4 }
 		}
 
 		modifier = {
 			factor = 0
 			NOR = {
 				has_building = building_crystal_plant
-				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+				num_districts = { type = district_yuzu_city_urban_1 value >= 1 }
 			}
 		}
 	}
@@ -670,22 +670,22 @@ col_yuzu_city_volatile_motes = {
 		}
 		modifier = {
 			add = 2
-			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 2 }
 		}
 		modifier = {
 			add = 3
-			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 3 }
 		}
 		modifier = {
 			add = 4
-			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+			num_districts = { type = district_yuzu_city_urban_1 value >= 4 }
 		}
 
 		modifier = {
 			factor = 0
 			NOR = {
 				has_building = building_chemical_plant
-				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+				num_districts = { type = district_yuzu_city_urban_1 value >= 1 }
 			}
 		}
 	}
@@ -765,7 +765,7 @@ col_yuzu_city_rural = {
 		}
 		modifier = {
 			factor = 0
-			num_districts = { type = district_yuzu_city_refinery value = 0 }
+			num_districts = { type = district_yuzu_city_urban_1 value = 0 }
 		}
 	}
 }
@@ -820,7 +820,7 @@ col_yuzu_city_generator = {
 		}
 		modifier = {
 			factor = 0
-			num_districts = { type = district_yuzu_city_refinery value = 0 }
+			num_districts = { type = district_yuzu_city_urban_1 value = 0 }
 		}
 	}
 }
@@ -875,7 +875,7 @@ col_yuzu_city_mining = {
 		}
 		modifier = {
 			factor = 0
-			num_districts = { type = district_yuzu_city_refinery value = 0 }
+			num_districts = { type = district_yuzu_city_urban_1 value = 0 }
 		}
 	}
 }
@@ -930,7 +930,7 @@ col_yuzu_city_farming = {
 		}
 		modifier = {
 			factor = 0
-			num_districts = { type = district_yuzu_city_refinery value = 0 }
+			num_districts = { type = district_yuzu_city_urban_1 value = 0 }
 		}
 	}
 }
@@ -1073,28 +1073,28 @@ col_yuzu_city_bureau = {
 			add = 3
 			OR = {
 				num_buildings = { type = building_bureaucratic_1 value >= 2 }
-				num_districts = { type = district_yuzu_city_administrative value >= 2 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 2 }
 			}
 		}
 		modifier = {
 			add = 4
 			OR = {
 				num_buildings = { type = building_bureaucratic_1 value >= 3 }
-				num_districts = { type = district_yuzu_city_administrative value >= 3 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 3 }
 			}
 		}
 		modifier = {
 			add = 5
 			OR = {
 				num_buildings = { type = building_bureaucratic_1 value >= 4 }
-				num_districts = { type = district_yuzu_city_administrative value >= 4 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 4 }
 			}
 		}
 		modifier = {
 			add = 6
 			OR = {
 				num_buildings = { type = building_bureaucratic_1 value >= 5 }
-				num_districts = { type = district_yuzu_city_administrative value >= 5 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 5 }
 			}
 		}
 		modifier = {
@@ -1119,7 +1119,7 @@ col_yuzu_city_bureau = {
 				num_buildings = { type = building_bureaucratic_1 value = 0 }
 				num_buildings = { type = building_bureaucratic_2 value = 0 }
 				num_buildings = { type = building_bureaucratic_3 value = 0 }
-				num_districts = { type = district_yuzu_city_administrative value = 0 }
+				num_districts = { type = district_yuzu_city_urban_2 value = 0 }
 			}
 		}
 	}
@@ -1160,7 +1160,7 @@ col_yuzu_city_bureau_spiritualist = {
 			OR = {
 				num_buildings = { type = building_temple value >= 2 }
 				num_buildings = { type = building_sacrificial_temple_1 value >= 2 }
-				num_districts = { type = district_yuzu_city_religious value >= 2 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 2 }
 			}
 		}
 		modifier = {
@@ -1168,7 +1168,7 @@ col_yuzu_city_bureau_spiritualist = {
 			OR = {
 				num_buildings = { type = building_temple value >= 3 }
 				num_buildings = { type = building_sacrificial_temple_1 value >= 3 }
-				num_districts = { type = district_yuzu_city_religious value >= 3 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 3 }
 			}
 		}
 		modifier = {
@@ -1176,7 +1176,7 @@ col_yuzu_city_bureau_spiritualist = {
 			OR = {
 				num_buildings = { type = building_temple value >= 4 }
 				num_buildings = { type = building_sacrificial_temple_1 value >= 4 }
-				num_districts = { type = district_yuzu_city_religious value >= 4 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 4 }
 			}
 		}
 		modifier = {
@@ -1184,7 +1184,7 @@ col_yuzu_city_bureau_spiritualist = {
 			OR = {
 				num_buildings = { type = building_temple value >= 5 }
 				num_buildings = { type = building_sacrificial_temple_1 value >= 5 }
-				num_districts = { type = district_yuzu_city_religious value >= 5 }
+				num_districts = { type = district_yuzu_city_urban_2 value >= 5 }
 			}
 		}
 		modifier = {
@@ -1224,7 +1224,7 @@ col_yuzu_city_bureau_spiritualist = {
 				num_buildings = { type = building_sacrificial_temple_2 value = 0 }
 				num_buildings = { type = building_sacred_nexus value = 0 }
 				num_buildings = { type = building_sacrificial_temple_3 value = 0 }
-				num_districts = { type = district_yuzu_city_religious value = 0 }
+				num_districts = { type = district_yuzu_city_urban_2 value = 0 }
 			}
 		}
 	}

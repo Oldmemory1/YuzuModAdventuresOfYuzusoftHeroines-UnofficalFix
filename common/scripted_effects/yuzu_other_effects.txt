@@ -30,37 +30,23 @@ yuzu_arc_sites_random_events_1 = {
 		export_trigger_value_to_variable = {
 			trigger = num_districts
 			parameters = {
-				type = district_arcology_arms_industry
+				type = district_arcology_urban_1
 			}
-			variable = num_district_arms_industry_yuzu
+			variable = num_district_urban_1_yuzu
 		}
 		export_trigger_value_to_variable = {
 			trigger = num_districts
 			parameters = {
-				type = district_arcology_civilian_industry
+				type = district_arcology_urban_2
 			}
-			variable = num_district_civilian_industry_yuzu
+			variable = num_district_urban_2_yuzu
 		}
 		export_trigger_value_to_variable = {
 			trigger = num_districts
 			parameters = {
-				type = district_arcology_leisure
+				type = district_arcology_urban_3
 			}
-			variable = num_district_leisure_yuzu
-		}
-		export_trigger_value_to_variable = {
-			trigger = num_districts
-			parameters = {
-				type = district_arcology_administrative
-			}
-			variable = num_district_administrative_yuzu
-		}
-		export_trigger_value_to_variable = {
-			trigger = num_districts
-			parameters = {
-				type = district_arcology_religious
-			}
-			variable = num_district_religious_yuzu
+			variable = num_district_urban_3_yuzu
 		}
 	}
 
@@ -70,31 +56,21 @@ yuzu_arc_sites_random_events_1 = {
 			add_district = district_yuzu_city_housing
 		}
 		while = {
-			count = num_district_arms_industry_yuzu
-			add_district = district_yuzu_city_industry
+			count = num_district_urban_1_yuzu
+			add_district = district_yuzu_city_urban_1
 		}
 		while = {
-			count = num_district_civilian_industry_yuzu
-			add_district = district_yuzu_city_industry
+			count = num_district_urban_2_yuzu
+			add_district = district_yuzu_city_urban_2
 		}
 		while = {
-			count = num_district_leisure_yuzu
-			add_district = district_yuzu_city_housing
-		}
-		while = {
-			count = num_district_administrative_yuzu
-			add_district = district_yuzu_city_administrative
-		}
-		while = {
-			count = num_district_religious_yuzu
-			add_district = district_yuzu_city_administrative
+			count = num_district_urban_3_yuzu
+			add_district = district_yuzu_city_urban_3
 		}
 		clear_variable = num_district_housing_yuzu
-		clear_variable = num_district_arms_industry_yuzu
-		clear_variable = num_district_civilian_industry_yuzu
-		clear_variable = num_district_leisure_yuzu
-		clear_variable = num_district_administrative_yuzu
-		clear_variable = num_district_religious_yuzu
+		clear_variable = num_district_urban_1_yuzu
+		clear_variable = num_district_urban_2_yuzu
+		clear_variable = num_district_urban_3_yuzu
 	}
 
 	set_yuzu_ps_flag = {

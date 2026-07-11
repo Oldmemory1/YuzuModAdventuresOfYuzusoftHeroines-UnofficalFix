@@ -83,9 +83,16 @@ district_yuzu_city_housing = {
 	}
 }
 
-district_yuzu_city_industry = {
+district_yuzu_city_urban_1 = {
+	icon = district_arcology_housing_secondary
 	base_buildtime = 600
-	is_capped_by_modifier = no
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_arcology_urban_01
+	}
 
 	show_on_uncolonized = {
 		OR = {
@@ -107,53 +114,30 @@ district_yuzu_city_industry = {
 		district_city
 		district_nexus
 		district_hive
+		district_ark_generator
 	}
 
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 1000
-			volatile_motes = 50
+			alloys = 500
 		}
 		upkeep = {
 			energy = 5
-			volatile_motes = 1
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = industrial_maintenance
-				}
-			}
-			energy = 2
 		}
 	}
 
 	planet_modifier = {
-		planet_housing_add = 1000
+		planet_housing_add = 1500
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
+			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			job_artisan_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_crafter_empire = yes }
-		}
-		modifier = {
-			job_artificer_add = 300
+			planet_housing_add = 300
 		}
 	}
 
@@ -161,12 +145,11 @@ district_yuzu_city_industry = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
+				has_technology = tech_housing_1
 			}
 		}
 		modifier = {
-			job_foundry_add = 300
+			planet_housing_add = 300
 		}
 	}
 
@@ -174,324 +157,45 @@ district_yuzu_city_industry = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
 			}
 		}
 		modifier = {
-			job_catalytic_technician_add = 300
+			planet_housing_add = 300
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
+			owner = { is_tankbound_empire = yes }
 		}
 		modifier = {
-			job_alloy_drone_add = 600
+			job_production_overseer_add = 100
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_fabricator_add = 600
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_catalytic_drone_add = 600
-		}
-	}
-
-	# Designation Job Changes
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_foundry
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		modifier = {
-			job_artisan_add = -300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_foundry
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		modifier = {
-			job_artificer_add = -300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_foundry
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_foundry_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_foundry
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_catalytic_technician_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_factory
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		modifier = {
-			job_artisan_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_factory
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		modifier = {
-			job_artificer_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_factory
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_foundry_add = -300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_factory
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_catalytic_technician_add = -300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_factory
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				country_uses_consumer_goods = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_artisan_drone_add = 300
-			job_fabricator_add = -300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_factory
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				country_uses_consumer_goods = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_artisan_drone_add = 300
-			job_catalytic_drone_add = -300
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		text = job_artisan_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		text = job_artificer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				country_uses_consumer_goods = yes
-			}
-		}
-		text = job_artisan_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_foundry_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_technician_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_alloy_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				has_edict = industrial_maintenance
-			}
-		}
-		modifier = {
-			job_maintenance_drone_add = 100
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				has_edict = industrial_maintenance
-			}
-		}
-		text = job_maintenance_drone_effect_desc
+	triggered_name = {
+		text = district_arcology_name
 	}
 }
 
-district_yuzu_city_administrative = {
+district_yuzu_city_urban_2 = {
+	icon = district_arcology_housing_secondary
 	base_buildtime = 600
-	is_capped_by_modifier = no
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_arcology_urban_02
+	}
 
 	show_on_uncolonized = {
 		OR = {
 			uses_district_set = yuzu_abyss_city_world
 			uses_district_set = yuzu_sunset_city_world
-		}
-		from = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			NOT = { is_country_type = new_abyss_empire }
 		}
 	}
 
@@ -500,244 +204,6 @@ district_yuzu_city_administrative = {
 			uses_district_set = yuzu_abyss_city_world
 			uses_district_set = yuzu_sunset_city_world
 		}
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			NOT = { is_country_type = new_abyss_empire }
-		}
-	}
-
-	conversion_ratio = 1
-	convert_to = {
-		district_nexus
-		district_hive
-		district_yuzu_city_religious
-	}
-
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 1000
-			rare_crystals = 50
-		}
-		upkeep = {
-			energy = 5
-			rare_crystals = 1
-		}
-	}
-
-	planet_modifier = {
-		planet_housing_add = 1000
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_megacorp = no
-			}
-		}
-		modifier = {
-			job_bureaucrat_add = 600
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_spiritualist = no
-			}
-		}
-		modifier = {
-			job_manager_add = 600
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { 
-				is_regular_empire = yes
-				is_megacorp = no
-			}
-		}
-		text = job_bureaucrat_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { 
-				is_megacorp = yes
-				is_spiritualist = no
-			}
-		}
-		text = job_manager_effect_desc
-	}
-}
-
-district_yuzu_city_religious = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-
-	show_on_uncolonized = {
-		OR = {
-			uses_district_set = yuzu_abyss_city_world
-			uses_district_set = yuzu_sunset_city_world
-		}
-		from = {
-			OR = {
-				is_spiritualist = yes
-				is_country_type = new_abyss_empire
-			}
-		}
-	}
-
-	potential = {
-		OR = {
-			uses_district_set = yuzu_abyss_city_world
-			uses_district_set = yuzu_sunset_city_world
-		}
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				is_country_type = new_abyss_empire
-			}
-		}
-	}
-
-	conversion_ratio = 1
-	convert_to = {
-		district_nexus
-		district_hive
-		district_yuzu_city_administrative
-	}
-
-	resources = {
-		category = planet_districts
-		cost = {
-			minerals = 1000
-			rare_crystals = 50
-		}
-		upkeep = {
-			energy = 5
-			rare_crystals = 1
-		}
-	}
-
-	planet_modifier = {
-		planet_housing_add = 1000
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_death_cult_empire = no
-			}
-		}
-		modifier = {
-			# Megacorp NO, Death Cult NO.
-			job_bureaucrat_add = 600
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_death_cult_empire = no
-			}
-		}
-		modifier = {
-			# Megacorp YES, Death Cult NO.
-			job_bureaucrat_add = 300
-			job_manager_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = no
-				is_death_cult_empire = yes
-			}
-		}
-		modifier = {
-			# Megacorp NO, Death Cult YES.
-			job_bureaucrat_add = 300
-			job_mortal_initiate_add = 300
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_death_cult_empire = yes
-			}
-		}
-		modifier = {
-			# Megacorp YES, Death Cult YES.
-			job_bureaucrat_add = 200
-			job_mortal_initiate_add = 200
-			job_manager_add = 200
-		}
-	}
-
-	# Priests desc?
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_death_cult_empire = no
-			}
-		}
-		text = job_priest_effect_desc
-	}
-
-	# Death Priests and Mortal Initiates desc?
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_death_cult_empire = yes
-			}
-		}
-		text = jobs_death_priest_and_mortal_initiate_effect_desc
-	}
-
-	# Managers desc?
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-			}
-		}
-		text = job_manager_effect_desc
-	}
-}
-
-district_yuzu_city_refinery = {
-	base_buildtime = 600
-	is_capped_by_modifier = no
-
-	show_on_uncolonized = {
-		uses_district_set = yuzu_abyss_city_world
-	}
-
-	potential = {
-		uses_district_set = yuzu_abyss_city_world
 		exists = owner
 	}
 
@@ -746,35 +212,42 @@ district_yuzu_city_refinery = {
 		district_city
 		district_nexus
 		district_hive
+		district_ark_basic
 	}
 
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 1000
-			exotic_gases = 50
+			alloys = 500
 		}
 		upkeep = {
 			energy = 5
-			exotic_gases = 1
 		}
 	}
 
 	planet_modifier = {
-		planet_housing_add = 1000
+		planet_housing_add = 1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				has_technology = tech_housing_1
 			}
 		}
 		modifier = {
-			job_gas_refiner_add = 100
-			job_translucer_add = 100
-			job_chemist_add = 100
+			planet_housing_add = 300
 		}
 	}
 
@@ -782,164 +255,125 @@ district_yuzu_city_refinery = {
 		potential = {
 			exists = owner
 			owner = {
-				is_gestalt = yes
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
 			}
 		}
 		modifier = {
-			job_gas_refiner_drone_add = 100
-			job_translucer_drone_add = 100
-			job_chemist_drone_add = 100
+			planet_housing_add = 300
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			has_designation = col_yuzu_city_exotic_gases
 			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
+			owner = { is_tankbound_empire = yes }
 		}
 		modifier = {
-			job_gas_refiner_add = 200
-			job_translucer_add = -100
-			job_chemist_add = -100
+			job_production_overseer_add = 100
+		}
+	}
+
+	triggered_name = {
+		text = district_arcology_name
+	}
+}
+
+district_yuzu_city_urban_3 = {
+	icon = district_arcology_housing_secondary
+	base_buildtime = 600
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_arcology_urban_03
+	}
+
+	show_on_uncolonized = {
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+	}
+
+	potential = {
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		exists = owner
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_ark_military
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			alloys = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			has_designation = col_yuzu_city_rare_crystals
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				has_technology = tech_housing_1
 			}
 		}
 		modifier = {
-			job_gas_refiner_add = -100
-			job_translucer_add = 200
-			job_chemist_add = -100
+			planet_housing_add = 300
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			has_designation = col_yuzu_city_volatile_motes
 			exists = owner
 			owner = {
-				is_regular_empire = yes
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
 			}
 		}
 		modifier = {
-			job_gas_refiner_add = -100
-			job_translucer_add = -100
-			job_chemist_add = 200
+			planet_housing_add = 300
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			has_designation = col_yuzu_city_exotic_gases
 			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
+			owner = { is_tankbound_empire = yes }
 		}
 		modifier = {
-			job_gas_refiner_drone_add = 200
-			job_translucer_drone_add = -100
-			job_chemist_drone_add = -100
+			job_production_overseer_add = 100
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_rare_crystals
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_gas_refiner_drone_add = -100
-			job_translucer_drone_add = 200
-			job_chemist_drone_add = -100
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_volatile_motes
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_gas_refiner_drone_add = -100
-			job_translucer_drone_add = -100
-			job_chemist_drone_add = 200
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
-		}
-		text = job_gas_refiner_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
-		}
-		text = job_translucer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
-		}
-		text = job_chemist_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		text = job_gas_refiner_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		text = job_translucer_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		text = job_chemist_drone_effect_desc
+	triggered_name = {
+		text = district_arcology_name
 	}
 }
 

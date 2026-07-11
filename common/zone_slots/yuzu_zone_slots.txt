@@ -57,3 +57,46 @@ slot_yuzu_city_02 = {
 		}
 	}
 }
+
+# Yuzu Arcology Slots ¡ª same as slot_arcology_urban_01/02/03 but for Yuzu city worlds
+# Gives access to doubled-job arcology zones (industrial, foundry, factory,
+# research specialists, unity specialists, fortress, trade).
+
+slot_yuzu_arcology_urban_01 = {
+	included_zone_sets = {
+		arcology
+	}
+
+	unlock = { # planet scope
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+	}
+}
+
+slot_yuzu_arcology_urban_02 = {
+	included_zone_sets = {
+		arcology
+	}
+
+	unlock = { # planet scope
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+	}
+}
+
+slot_yuzu_arcology_urban_03 = {
+	included_zone_sets = {
+		arcology
+	}
+
+	unlock = { # planet scope
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+	}
+}

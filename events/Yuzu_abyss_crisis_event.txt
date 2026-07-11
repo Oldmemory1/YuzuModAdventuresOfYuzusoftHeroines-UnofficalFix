@@ -722,7 +722,7 @@ country_event = {
 				add_building = building_yuzu_fe_dome
 				while = {
 					count = 50
-					add_district = district_yuzu_city_religious
+					add_district = district_yuzu_city_urban_2
 				}
 				planet_event = { id = Yuzu_abyss_crisis_event.104 days = 5 }
 		        planet_event = { id = Yuzu_abyss_crisis_event.105 days = 5 }
