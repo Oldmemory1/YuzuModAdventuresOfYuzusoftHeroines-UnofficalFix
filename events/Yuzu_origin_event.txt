@@ -103,7 +103,9 @@ country_event = {
 				has_deposit = d_decrepit_dwellings
 			}
 			remove_deposit = d_decrepit_dwellings
-			create_pop = { species = owner_main_species }
+			create_pop_group = {
+				species = owner_main_species
+			}
 		}
 
 		every_owned_pop = {
