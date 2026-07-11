@@ -1,0 +1,736 @@
+[{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 94,
+	"startColumn": 4,
+	"endLineNumber": 94,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 136,
+	"startColumn": 4,
+	"endLineNumber": 136,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 169,
+	"startColumn": 4,
+	"endLineNumber": 169,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 202,
+	"startColumn": 4,
+	"endLineNumber": 202,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 253,
+	"startColumn": 4,
+	"endLineNumber": 253,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 292,
+	"startColumn": 4,
+	"endLineNumber": 292,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 324,
+	"startColumn": 4,
+	"endLineNumber": 324,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 358,
+	"startColumn": 4,
+	"endLineNumber": 358,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 416,
+	"startColumn": 4,
+	"endLineNumber": 416,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 450,
+	"startColumn": 4,
+	"endLineNumber": 450,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 488,
+	"startColumn": 4,
+	"endLineNumber": 488,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 520,
+	"startColumn": 4,
+	"endLineNumber": 520,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 551,
+	"startColumn": 4,
+	"endLineNumber": 551,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 583,
+	"startColumn": 4,
+	"endLineNumber": 583,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 613,
+	"startColumn": 4,
+	"endLineNumber": 613,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 644,
+	"startColumn": 4,
+	"endLineNumber": 644,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 676,
+	"startColumn": 4,
+	"endLineNumber": 676,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 704,
+	"startColumn": 4,
+	"endLineNumber": 704,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 735,
+	"startColumn": 4,
+	"endLineNumber": 735,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 765,
+	"startColumn": 4,
+	"endLineNumber": 765,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 793,
+	"startColumn": 4,
+	"endLineNumber": 793,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 821,
+	"startColumn": 4,
+	"endLineNumber": 821,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 849,
+	"startColumn": 4,
+	"endLineNumber": 849,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 884,
+	"startColumn": 4,
+	"endLineNumber": 884,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 920,
+	"startColumn": 4,
+	"endLineNumber": 920,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 956,
+	"startColumn": 4,
+	"endLineNumber": 956,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 991,
+	"startColumn": 4,
+	"endLineNumber": 991,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1026,
+	"startColumn": 4,
+	"endLineNumber": 1026,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1062,
+	"startColumn": 4,
+	"endLineNumber": 1062,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1100,
+	"startColumn": 4,
+	"endLineNumber": 1100,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1128,
+	"startColumn": 4,
+	"endLineNumber": 1128,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1158,
+	"startColumn": 4,
+	"endLineNumber": 1158,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1186,
+	"startColumn": 4,
+	"endLineNumber": 1186,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1216,
+	"startColumn": 4,
+	"endLineNumber": 1216,
+	"endColumn": 10,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/technology/yuzu_tech.txt",
+	"owner": "_generated_diagnostic_collection_name_#15",
+	"code": {
+		"value": "CW101",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw101"
+		}
+	},
+	"severity": 4,
+	"message": "\"@ap_technological_ascendancy_rare_tech\" 未定义。",
+	"source": "CWTools",
+	"startLineNumber": 1246,
+	"startColumn": 4,
+	"endLineNumber": 1246,
+	"endColumn": 10,
+	"origin": "extHost1"
+}]
