@@ -21,11 +21,15 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/name_lists/ABYSS1.txt` + `YUZUGIRL1.txt` | `yuzu_reaper_scythe` 舰船名条目 | 移除 | 该舰船类型未在 `ship_sizes/` 中定义 |
 | `common/component_templates/yuzu_weapons.txt` | `use_ship_kill_target = no` | `use_ship_main_target = no`（6 处） | 旧键已移除，对照 vanilla Arc Emitter / Particle Lance |
 | `common/technology/yuzu_tech.txt` | `@ap_technological_ascendancy_rare_tech` | `factor = 9`（48 处） | 该 scripted variable 在 4.0 后已移除 |
+| `gfx/portraits/portraits/yuzu_portraits.txt` | `hair_selector` | `attachment_selector`（69 处） | 4.0 后 hair_selector 已重命名 |
+| `common/colony_types/yuzu_city_colony_types.txt` | 缺失 `_tt` 本地化键 | 新增 19 条 tooltip 标签 | 对照 vanilla col_city_tt 模式补充 |
+| `common/component_templates/yuzu_others.txt` | `use_ship_kill_target = no` | `use_ship_main_target = no`（2 处） | 对照 vanilla 星爆器/巨像武器 |
+| `common/component_templates/yuzu_roles.txt` | `size_restriction` 含 `yuzu_reaper_scythe` | 移除（2 处） | 该舰船类型未定义 |
+| `common/name_lists/YUZUGIRL1.txt` | 缺失 `yuzu_star_eater_plural` | 新增 | 自定义舰船类型必需 _plural 本地化键 |
 
-### 已排除的文件
+### 版本管理
 
-- `gfx/` — 大型二进制纹理文件（375 个 `.dds`），不纳入 git 版本管理
-- `.idea/` `.vscode/` — IDE 配置文件
+- `gfx/` 仅排除 `.dds` 纹理文件，`.txt`/`.asset`/`.gfx`/`.png` 等定义文件均纳入 git 跟踪
 
 ## 开发环境
 
