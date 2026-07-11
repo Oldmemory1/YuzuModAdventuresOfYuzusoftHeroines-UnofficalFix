@@ -3,7 +3,7 @@ yuzu_xeno_ward = {
 	clothes_texture_index = 3
 	change_job_threshold = 2
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_political_power = -0.25
 		pop_housing_usage_base = 0
 		pop_amenities_usage_base = 1
@@ -25,11 +25,5 @@ yuzu_xeno_ward = {
 			}
 			consumer_goods = @living_standard_luxuries_very_high
 		}
-
-		# Regular food, mineral and energy upkeep.
-		inline_script = "pop_categories/regular_upkeep"
-
-		# Additional energy upkeep for cyborgs.
-		inline_script = "pop_categories/cyborg_upkeep"
 	}
 }
