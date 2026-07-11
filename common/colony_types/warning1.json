@@ -1,0 +1,265 @@
+[{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_atomic_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 2985,
+	"startColumn": 1,
+	"endLineNumber": 2985,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_stone_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3000,
+	"startColumn": 1,
+	"endLineNumber": 3000,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_bronze_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3015,
+	"startColumn": 1,
+	"endLineNumber": 3015,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_early_space_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3030,
+	"startColumn": 1,
+	"endLineNumber": 3030,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_industrial_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3045,
+	"startColumn": 1,
+	"endLineNumber": 3045,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_iron_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3060,
+	"startColumn": 1,
+	"endLineNumber": 3060,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_machine_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3075,
+	"startColumn": 1,
+	"endLineNumber": 3075,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_medieval_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3090,
+	"startColumn": 1,
+	"endLineNumber": 3090,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_renaissance_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3105,
+	"startColumn": 1,
+	"endLineNumber": 3105,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_pre_ftl_steam_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3120,
+	"startColumn": 1,
+	"endLineNumber": 3120,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_infested_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3136,
+	"startColumn": 1,
+	"endLineNumber": 3136,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+},{
+	"resource": "/d:/SteamLibrary/steamapps/workshop/content/281990/3530566279/common/colony_types/00_yuzu_colony_types.txt",
+	"owner": "_generated_diagnostic_collection_name_#11",
+	"code": {
+		"value": "CW100",
+		"target": {
+			"$mid": 1,
+			"path": "/Aa728848/cwtools-vscode/blob/main/docs/diagnostic-codes.md",
+			"scheme": "https",
+			"authority": "github.com",
+			"fragment": "cw100"
+		}
+	},
+	"severity": 4,
+	"message": "本地化键 \"col_contingency_tt\" 在语言 Chinese 中未定义:在对应的 localisation 文件中补上这一键。",
+	"source": "CWTools",
+	"startLineNumber": 3150,
+	"startColumn": 1,
+	"endLineNumber": 3150,
+	"endColumn": 4,
+	"modelVersionId": 5,
+	"origin": "extHost1"
+}]
