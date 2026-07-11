@@ -1,0 +1,67 @@
+ap_personality_transplantation = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_personality_transplantation
+		}
+		is_YUZU = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_tech_BMI"
+			has_technology = tech_BMI
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = enable_yuzu_immortal_leaders
+		custom_tooltip = enable_yuzu_clone
+		hidden_effect = {
+			country_event = { id = Yuzu_leader_event.4 }
+		}
+	}
+
+	modifier = {
+		planet_pop_assembly_organic_mult = 1.00
+	}
+
+	ai_weight = {
+		factor = 20000
+	}
+}
+
+ap_stare_abyss = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_stare_abyss
+		}
+		is_YUZU = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_tech_yuzu_all_in_one_theory"
+			has_technology = tech_yuzu_all_in_one_theory
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = enable_stare_abyss
+		custom_tooltip = describe_stare_abyss
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.4 }
+		}
+	}
+
+	ai_weight = {
+		factor = 20000
+	}
+}
