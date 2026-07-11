@@ -1,384 +1,382 @@
 yuzu_arc_sites_random_events_1 = {
-	random_list = {
-		10 = { fleet_event = { id = ancrel.8040 } }
-		10 = { fleet_event = { id = ancrel.8055 } }
-		10 = { fleet_event = { id = ancrel.8060 } }
-		10 = { fleet_event = { id = ancrel.8070 } }
-		10 = { fleet_event = { id = ancrel.8080 } }
+		random_list = {
+			10 = { fleet_event = { id = ancrel.8040 } }
+			10 = { fleet_event = { id = ancrel.8055 } }
+			10 = { fleet_event = { id = ancrel.8060 } }
+			10 = { fleet_event = { id = ancrel.8070 } }
+			10 = { fleet_event = { id = ancrel.8080 } }
+		}
 	}
-}
 
-yuzu_arc_sites_random_events_2 = {
-	random_list = {
-		10 = { fleet_event = { id = ancrel.8040 } }
-		10 = { fleet_event = { id = ancrel.8055 } }
-		10 = { fleet_event = { id = ancrel.8060 } }
-		10 = { fleet_event = { id = ancrel.8065 } }
-		10 = { fleet_event = { id = ancrel.8070 } }
-		10 = { fleet_event = { id = ancrel.8080 } }
+	yuzu_arc_sites_random_events_2 = {
+		random_list = {
+			10 = { fleet_event = { id = ancrel.8040 } }
+			10 = { fleet_event = { id = ancrel.8055 } }
+			10 = { fleet_event = { id = ancrel.8060 } }
+			10 = { fleet_event = { id = ancrel.8065 } }
+			10 = { fleet_event = { id = ancrel.8070 } }
+			10 = { fleet_event = { id = ancrel.8080 } }
+		}
 	}
-}
 
-save_city_district_num = {
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_housing
-		}
-		variable = num_district_housing_yuzu
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_arms_industry
-		}
-		variable = num_district_arms_industry_yuzu
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_civilian_industry
-		}
-		variable = num_district_civilian_industry_yuzu
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_leisure
-		}
-		variable = num_district_leisure_yuzu
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_administrative
-		}
-		variable = num_district_administrative_yuzu
-	}
-	export_trigger_value_to_variable = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_religious
-		}
-		variable = num_district_religious_yuzu
-	}
-}
-
-set_yuzu_city_district = {
-	while = {
-		count = num_district_housing_yuzu
-		add_district = district_yuzu_city_housing
-	}
-	while = {
-		count = num_district_arms_industry_yuzu
-		add_district = district_yuzu_city_industry
-	}
-	while = {
-		count = num_district_civilian_industry_yuzu
-		add_district = district_yuzu_city_industry
-	}
-	while = {
-		count = num_district_leisure_yuzu
-		add_district = district_yuzu_city_housing
-	}
-	while = {
-		count = num_district_administrative_yuzu
-		add_district = district_yuzu_city_administrative
-	}
-	while = {
-		count = num_district_religious_yuzu
-		add_district = district_yuzu_city_administrative
-	}
-	clear_variable = num_district_housing_yuzu
-	clear_variable = num_district_arms_industry_yuzu
-	clear_variable = num_district_civilian_industry_yuzu
-	clear_variable = num_district_leisure_yuzu
-	clear_variable = num_district_administrative_yuzu
-	clear_variable = num_district_religious_yuzu
-}
-
-set_yuzu_ps_flag = {
-	if = {
-		limit = {
-			NOT = { has_planet_flag = has_set_primary_ps_flag }
-		}
-		switch = {
-			trigger = planet_size
-			1 = { set_planet_flag = primary_ps_1 set_planet_flag = has_set_primary_ps_flag }
-			2 = { set_planet_flag = primary_ps_2 set_planet_flag = has_set_primary_ps_flag }
-			3 = { set_planet_flag = primary_ps_3 set_planet_flag = has_set_primary_ps_flag }
-			4 = { set_planet_flag = primary_ps_4 set_planet_flag = has_set_primary_ps_flag }
-			5 = { set_planet_flag = primary_ps_5 set_planet_flag = has_set_primary_ps_flag }
-			6 = { set_planet_flag = primary_ps_6 set_planet_flag = has_set_primary_ps_flag }
-			7 = { set_planet_flag = primary_ps_7 set_planet_flag = has_set_primary_ps_flag }
-			8 = { set_planet_flag = primary_ps_8 set_planet_flag = has_set_primary_ps_flag }
-			9 = { set_planet_flag = primary_ps_9 set_planet_flag = has_set_primary_ps_flag }
-			10 = { set_planet_flag = primary_ps_10 set_planet_flag = has_set_primary_ps_flag }
-			11 = { set_planet_flag = primary_ps_11 set_planet_flag = has_set_primary_ps_flag }
-			12 = { set_planet_flag = primary_ps_12 set_planet_flag = has_set_primary_ps_flag }
-			13 = { set_planet_flag = primary_ps_13 set_planet_flag = has_set_primary_ps_flag }
-			14 = { set_planet_flag = primary_ps_14 set_planet_flag = has_set_primary_ps_flag }
-			15 = { set_planet_flag = primary_ps_15 set_planet_flag = has_set_primary_ps_flag }
-			16 = { set_planet_flag = primary_ps_16 set_planet_flag = has_set_primary_ps_flag }
-			17 = { set_planet_flag = primary_ps_17 set_planet_flag = has_set_primary_ps_flag }
-			18 = { set_planet_flag = primary_ps_18 set_planet_flag = has_set_primary_ps_flag }
-			19 = { set_planet_flag = primary_ps_19 set_planet_flag = has_set_primary_ps_flag }
-			20 = { set_planet_flag = primary_ps_20 set_planet_flag = has_set_primary_ps_flag }
-			21 = { set_planet_flag = primary_ps_21 set_planet_flag = has_set_primary_ps_flag }
-			22 = { set_planet_flag = primary_ps_22 set_planet_flag = has_set_primary_ps_flag }
-			23 = { set_planet_flag = primary_ps_23 set_planet_flag = has_set_primary_ps_flag }
-			24 = { set_planet_flag = primary_ps_24 set_planet_flag = has_set_primary_ps_flag }
-			25 = { set_planet_flag = primary_ps_25 set_planet_flag = has_set_primary_ps_flag }
-			26 = { set_planet_flag = primary_ps_26 set_planet_flag = has_set_primary_ps_flag }
-			27 = { set_planet_flag = primary_ps_27 set_planet_flag = has_set_primary_ps_flag }
-			28 = { set_planet_flag = primary_ps_28 set_planet_flag = has_set_primary_ps_flag }
-			29 = { set_planet_flag = primary_ps_29 set_planet_flag = has_set_primary_ps_flag }
-			30 = { set_planet_flag = primary_ps_30 set_planet_flag = has_set_primary_ps_flag }
-			31 = { set_planet_flag = primary_ps_31 set_planet_flag = has_set_primary_ps_flag }
-			32 = { set_planet_flag = primary_ps_32 set_planet_flag = has_set_primary_ps_flag }
-			33 = { set_planet_flag = primary_ps_33 set_planet_flag = has_set_primary_ps_flag }
-			34 = { set_planet_flag = primary_ps_34 set_planet_flag = has_set_primary_ps_flag }
-			35 = { set_planet_flag = primary_ps_35 set_planet_flag = has_set_primary_ps_flag }
-			36 = { set_planet_flag = primary_ps_36 set_planet_flag = has_set_primary_ps_flag }
-			37 = { set_planet_flag = primary_ps_37 set_planet_flag = has_set_primary_ps_flag }
-			38 = { set_planet_flag = primary_ps_38 set_planet_flag = has_set_primary_ps_flag }
-			39 = { set_planet_flag = primary_ps_39 set_planet_flag = has_set_primary_ps_flag }
-			40 = { set_planet_flag = primary_ps_40 set_planet_flag = has_set_primary_ps_flag }
-			41 = { set_planet_flag = primary_ps_41 set_planet_flag = has_set_primary_ps_flag }
-			42 = { set_planet_flag = primary_ps_42 set_planet_flag = has_set_primary_ps_flag }
-			43 = { set_planet_flag = primary_ps_43 set_planet_flag = has_set_primary_ps_flag }
-			44 = { set_planet_flag = primary_ps_44 set_planet_flag = has_set_primary_ps_flag }
-			45 = { set_planet_flag = primary_ps_45 set_planet_flag = has_set_primary_ps_flag }
-			46 = { set_planet_flag = primary_ps_46 set_planet_flag = has_set_primary_ps_flag }
-			47 = { set_planet_flag = primary_ps_47 set_planet_flag = has_set_primary_ps_flag }
-			48 = { set_planet_flag = primary_ps_48 set_planet_flag = has_set_primary_ps_flag }
-			49 = { set_planet_flag = primary_ps_49 set_planet_flag = has_set_primary_ps_flag }
-			50 = { set_planet_flag = primary_ps_50 set_planet_flag = has_set_primary_ps_flag }
-			51 = { set_planet_flag = primary_ps_51 set_planet_flag = has_set_primary_ps_flag }
-			52 = { set_planet_flag = primary_ps_52 set_planet_flag = has_set_primary_ps_flag }
-			53 = { set_planet_flag = primary_ps_53 set_planet_flag = has_set_primary_ps_flag }
-			54 = { set_planet_flag = primary_ps_54 set_planet_flag = has_set_primary_ps_flag }
-			55 = { set_planet_flag = primary_ps_55 set_planet_flag = has_set_primary_ps_flag }
-			56 = { set_planet_flag = primary_ps_56 set_planet_flag = has_set_primary_ps_flag }
-			57 = { set_planet_flag = primary_ps_57 set_planet_flag = has_set_primary_ps_flag }
-			58 = { set_planet_flag = primary_ps_58 set_planet_flag = has_set_primary_ps_flag }
-			59 = { set_planet_flag = primary_ps_59 set_planet_flag = has_set_primary_ps_flag }
-			60 = { set_planet_flag = primary_ps_60 set_planet_flag = has_set_primary_ps_flag }
-		}
-	}
-}
-
-set_yuzu_planet_size = {
-	if = {
-		limit = {
-			has_planet_flag = has_set_primary_ps_flag
-		}
-		switch = {
-			trigger = has_planet_flag
-			primary_ps_1 = { set_planet_size = 1 }
-			primary_ps_2 = { set_planet_size = 2 }
-			primary_ps_3 = { set_planet_size = 3 }
-			primary_ps_4 = { set_planet_size = 4 }
-			primary_ps_5 = { set_planet_size = 5 }
-			primary_ps_6 = { set_planet_size = 6 }
-			primary_ps_7 = { set_planet_size = 7 }
-			primary_ps_8 = { set_planet_size = 8 }
-			primary_ps_9 = { set_planet_size = 9 }
-			primary_ps_10 = { set_planet_size = 10 }
-			primary_ps_11 = { set_planet_size = 11 }
-			primary_ps_12 = { set_planet_size = 12 }
-			primary_ps_13 = { set_planet_size = 13 }
-			primary_ps_14 = { set_planet_size = 14 }
-			primary_ps_15 = { set_planet_size = 15 }
-			primary_ps_16 = { set_planet_size = 16 }
-			primary_ps_17 = { set_planet_size = 17 }
-			primary_ps_18 = { set_planet_size = 18 }
-			primary_ps_19 = { set_planet_size = 19 }
-			primary_ps_20 = { set_planet_size = 20 }
-			primary_ps_21 = { set_planet_size = 21 }
-			primary_ps_22 = { set_planet_size = 22 }
-			primary_ps_23 = { set_planet_size = 23 }
-			primary_ps_24 = { set_planet_size = 24 }
-			primary_ps_25 = { set_planet_size = 25 }
-			primary_ps_26 = { set_planet_size = 26 }
-			primary_ps_27 = { set_planet_size = 27 }
-			primary_ps_28 = { set_planet_size = 28 }
-			primary_ps_29 = { set_planet_size = 29 }
-			primary_ps_30 = { set_planet_size = 30 }
-			primary_ps_31 = { set_planet_size = 31 }
-			primary_ps_32 = { set_planet_size = 32 }
-			primary_ps_33 = { set_planet_size = 33 }
-			primary_ps_34 = { set_planet_size = 34 }
-			primary_ps_35 = { set_planet_size = 35 }
-			primary_ps_36 = { set_planet_size = 36 }
-			primary_ps_37 = { set_planet_size = 37 }
-			primary_ps_38 = { set_planet_size = 38 }
-			primary_ps_39 = { set_planet_size = 39 }
-			primary_ps_40 = { set_planet_size = 40 }
-			primary_ps_41 = { set_planet_size = 41 }
-			primary_ps_42 = { set_planet_size = 42 }
-			primary_ps_43 = { set_planet_size = 43 }
-			primary_ps_44 = { set_planet_size = 44 }
-			primary_ps_45 = { set_planet_size = 45 }
-			primary_ps_46 = { set_planet_size = 46 }
-			primary_ps_47 = { set_planet_size = 47 }
-			primary_ps_48 = { set_planet_size = 48 }
-			primary_ps_49 = { set_planet_size = 49 }
-			primary_ps_50 = { set_planet_size = 50 }
-			primary_ps_51 = { set_planet_size = 51 }
-			primary_ps_52 = { set_planet_size = 52 }
-			primary_ps_53 = { set_planet_size = 53 }
-			primary_ps_54 = { set_planet_size = 54 }
-			primary_ps_55 = { set_planet_size = 55 }
-			primary_ps_56 = { set_planet_size = 56 }
-			primary_ps_57 = { set_planet_size = 57 }
-			primary_ps_58 = { set_planet_size = 58 }
-			primary_ps_59 = { set_planet_size = 59 }
-			primary_ps_60 = { set_planet_size = 60 }
-		}
-	}
-}
-
-yuzu_store_pops = {
-	owner = {
-		set_variable = { which = num_lacked_yuzu_pops value = 10 }
-		save_event_target_as = yuzu_planet_owner
-	}
-	while = {
-		count = 10
-		random_owned_pop = {
-			limit = {
-				is_YUZU =yes
+	save_city_district_num = {
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_arcology_housing
 			}
+			variable = num_district_housing_yuzu
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_arcology_arms_industry
+			}
+			variable = num_district_arms_industry_yuzu
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_arcology_civilian_industry
+			}
+			variable = num_district_civilian_industry_yuzu
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_arcology_leisure
+			}
+			variable = num_district_leisure_yuzu
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_arcology_administrative
+			}
+			variable = num_district_administrative_yuzu
+		}
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_arcology_religious
+			}
+			variable = num_district_religious_yuzu
+		}
+	}
+
+	set_yuzu_city_district = {
+		while = {
+			count = num_district_housing_yuzu
+			add_district = district_yuzu_city_housing
+		}
+		while = {
+			count = num_district_arms_industry_yuzu
+			add_district = district_yuzu_city_industry
+		}
+		while = {
+			count = num_district_civilian_industry_yuzu
+			add_district = district_yuzu_city_industry
+		}
+		while = {
+			count = num_district_leisure_yuzu
+			add_district = district_yuzu_city_housing
+		}
+		while = {
+			count = num_district_administrative_yuzu
+			add_district = district_yuzu_city_administrative
+		}
+		while = {
+			count = num_district_religious_yuzu
+			add_district = district_yuzu_city_administrative
+		}
+		clear_variable = num_district_housing_yuzu
+		clear_variable = num_district_arms_industry_yuzu
+		clear_variable = num_district_civilian_industry_yuzu
+		clear_variable = num_district_leisure_yuzu
+		clear_variable = num_district_administrative_yuzu
+		clear_variable = num_district_religious_yuzu
+	}
+
+	set_yuzu_ps_flag = {
+		if = {
+			limit = {
+				NOT = { has_planet_flag = has_set_primary_ps_flag }
+			}
+			switch = {
+				trigger = planet_size
+				1 = { set_planet_flag = primary_ps_1 set_planet_flag = has_set_primary_ps_flag }
+				2 = { set_planet_flag = primary_ps_2 set_planet_flag = has_set_primary_ps_flag }
+				3 = { set_planet_flag = primary_ps_3 set_planet_flag = has_set_primary_ps_flag }
+				4 = { set_planet_flag = primary_ps_4 set_planet_flag = has_set_primary_ps_flag }
+				5 = { set_planet_flag = primary_ps_5 set_planet_flag = has_set_primary_ps_flag }
+				6 = { set_planet_flag = primary_ps_6 set_planet_flag = has_set_primary_ps_flag }
+				7 = { set_planet_flag = primary_ps_7 set_planet_flag = has_set_primary_ps_flag }
+				8 = { set_planet_flag = primary_ps_8 set_planet_flag = has_set_primary_ps_flag }
+				9 = { set_planet_flag = primary_ps_9 set_planet_flag = has_set_primary_ps_flag }
+				10 = { set_planet_flag = primary_ps_10 set_planet_flag = has_set_primary_ps_flag }
+				11 = { set_planet_flag = primary_ps_11 set_planet_flag = has_set_primary_ps_flag }
+				12 = { set_planet_flag = primary_ps_12 set_planet_flag = has_set_primary_ps_flag }
+				13 = { set_planet_flag = primary_ps_13 set_planet_flag = has_set_primary_ps_flag }
+				14 = { set_planet_flag = primary_ps_14 set_planet_flag = has_set_primary_ps_flag }
+				15 = { set_planet_flag = primary_ps_15 set_planet_flag = has_set_primary_ps_flag }
+				16 = { set_planet_flag = primary_ps_16 set_planet_flag = has_set_primary_ps_flag }
+				17 = { set_planet_flag = primary_ps_17 set_planet_flag = has_set_primary_ps_flag }
+				18 = { set_planet_flag = primary_ps_18 set_planet_flag = has_set_primary_ps_flag }
+				19 = { set_planet_flag = primary_ps_19 set_planet_flag = has_set_primary_ps_flag }
+				20 = { set_planet_flag = primary_ps_20 set_planet_flag = has_set_primary_ps_flag }
+				21 = { set_planet_flag = primary_ps_21 set_planet_flag = has_set_primary_ps_flag }
+				22 = { set_planet_flag = primary_ps_22 set_planet_flag = has_set_primary_ps_flag }
+				23 = { set_planet_flag = primary_ps_23 set_planet_flag = has_set_primary_ps_flag }
+				24 = { set_planet_flag = primary_ps_24 set_planet_flag = has_set_primary_ps_flag }
+				25 = { set_planet_flag = primary_ps_25 set_planet_flag = has_set_primary_ps_flag }
+				26 = { set_planet_flag = primary_ps_26 set_planet_flag = has_set_primary_ps_flag }
+				27 = { set_planet_flag = primary_ps_27 set_planet_flag = has_set_primary_ps_flag }
+				28 = { set_planet_flag = primary_ps_28 set_planet_flag = has_set_primary_ps_flag }
+				29 = { set_planet_flag = primary_ps_29 set_planet_flag = has_set_primary_ps_flag }
+				30 = { set_planet_flag = primary_ps_30 set_planet_flag = has_set_primary_ps_flag }
+				31 = { set_planet_flag = primary_ps_31 set_planet_flag = has_set_primary_ps_flag }
+				32 = { set_planet_flag = primary_ps_32 set_planet_flag = has_set_primary_ps_flag }
+				33 = { set_planet_flag = primary_ps_33 set_planet_flag = has_set_primary_ps_flag }
+				34 = { set_planet_flag = primary_ps_34 set_planet_flag = has_set_primary_ps_flag }
+				35 = { set_planet_flag = primary_ps_35 set_planet_flag = has_set_primary_ps_flag }
+				36 = { set_planet_flag = primary_ps_36 set_planet_flag = has_set_primary_ps_flag }
+				37 = { set_planet_flag = primary_ps_37 set_planet_flag = has_set_primary_ps_flag }
+				38 = { set_planet_flag = primary_ps_38 set_planet_flag = has_set_primary_ps_flag }
+				39 = { set_planet_flag = primary_ps_39 set_planet_flag = has_set_primary_ps_flag }
+				40 = { set_planet_flag = primary_ps_40 set_planet_flag = has_set_primary_ps_flag }
+				41 = { set_planet_flag = primary_ps_41 set_planet_flag = has_set_primary_ps_flag }
+				42 = { set_planet_flag = primary_ps_42 set_planet_flag = has_set_primary_ps_flag }
+				43 = { set_planet_flag = primary_ps_43 set_planet_flag = has_set_primary_ps_flag }
+				44 = { set_planet_flag = primary_ps_44 set_planet_flag = has_set_primary_ps_flag }
+				45 = { set_planet_flag = primary_ps_45 set_planet_flag = has_set_primary_ps_flag }
+				46 = { set_planet_flag = primary_ps_46 set_planet_flag = has_set_primary_ps_flag }
+				47 = { set_planet_flag = primary_ps_47 set_planet_flag = has_set_primary_ps_flag }
+				48 = { set_planet_flag = primary_ps_48 set_planet_flag = has_set_primary_ps_flag }
+				49 = { set_planet_flag = primary_ps_49 set_planet_flag = has_set_primary_ps_flag }
+				50 = { set_planet_flag = primary_ps_50 set_planet_flag = has_set_primary_ps_flag }
+				51 = { set_planet_flag = primary_ps_51 set_planet_flag = has_set_primary_ps_flag }
+				52 = { set_planet_flag = primary_ps_52 set_planet_flag = has_set_primary_ps_flag }
+				53 = { set_planet_flag = primary_ps_53 set_planet_flag = has_set_primary_ps_flag }
+				54 = { set_planet_flag = primary_ps_54 set_planet_flag = has_set_primary_ps_flag }
+				55 = { set_planet_flag = primary_ps_55 set_planet_flag = has_set_primary_ps_flag }
+				56 = { set_planet_flag = primary_ps_56 set_planet_flag = has_set_primary_ps_flag }
+				57 = { set_planet_flag = primary_ps_57 set_planet_flag = has_set_primary_ps_flag }
+				58 = { set_planet_flag = primary_ps_58 set_planet_flag = has_set_primary_ps_flag }
+				59 = { set_planet_flag = primary_ps_59 set_planet_flag = has_set_primary_ps_flag }
+				60 = { set_planet_flag = primary_ps_60 set_planet_flag = has_set_primary_ps_flag }
+			}
+		}
+	}
+
+	set_yuzu_planet_size = {
+		if = {
+			limit = {
+				has_planet_flag = has_set_primary_ps_flag
+			}
+			switch = {
+				trigger = has_planet_flag
+				primary_ps_1 = { set_planet_size = 1 }
+				primary_ps_2 = { set_planet_size = 2 }
+				primary_ps_3 = { set_planet_size = 3 }
+				primary_ps_4 = { set_planet_size = 4 }
+				primary_ps_5 = { set_planet_size = 5 }
+				primary_ps_6 = { set_planet_size = 6 }
+				primary_ps_7 = { set_planet_size = 7 }
+				primary_ps_8 = { set_planet_size = 8 }
+				primary_ps_9 = { set_planet_size = 9 }
+				primary_ps_10 = { set_planet_size = 10 }
+				primary_ps_11 = { set_planet_size = 11 }
+				primary_ps_12 = { set_planet_size = 12 }
+				primary_ps_13 = { set_planet_size = 13 }
+				primary_ps_14 = { set_planet_size = 14 }
+				primary_ps_15 = { set_planet_size = 15 }
+				primary_ps_16 = { set_planet_size = 16 }
+				primary_ps_17 = { set_planet_size = 17 }
+				primary_ps_18 = { set_planet_size = 18 }
+				primary_ps_19 = { set_planet_size = 19 }
+				primary_ps_20 = { set_planet_size = 20 }
+				primary_ps_21 = { set_planet_size = 21 }
+				primary_ps_22 = { set_planet_size = 22 }
+				primary_ps_23 = { set_planet_size = 23 }
+				primary_ps_24 = { set_planet_size = 24 }
+				primary_ps_25 = { set_planet_size = 25 }
+				primary_ps_26 = { set_planet_size = 26 }
+				primary_ps_27 = { set_planet_size = 27 }
+				primary_ps_28 = { set_planet_size = 28 }
+				primary_ps_29 = { set_planet_size = 29 }
+				primary_ps_30 = { set_planet_size = 30 }
+				primary_ps_31 = { set_planet_size = 31 }
+				primary_ps_32 = { set_planet_size = 32 }
+				primary_ps_33 = { set_planet_size = 33 }
+				primary_ps_34 = { set_planet_size = 34 }
+				primary_ps_35 = { set_planet_size = 35 }
+				primary_ps_36 = { set_planet_size = 36 }
+				primary_ps_37 = { set_planet_size = 37 }
+				primary_ps_38 = { set_planet_size = 38 }
+				primary_ps_39 = { set_planet_size = 39 }
+				primary_ps_40 = { set_planet_size = 40 }
+				primary_ps_41 = { set_planet_size = 41 }
+				primary_ps_42 = { set_planet_size = 42 }
+				primary_ps_43 = { set_planet_size = 43 }
+				primary_ps_44 = { set_planet_size = 44 }
+				primary_ps_45 = { set_planet_size = 45 }
+				primary_ps_46 = { set_planet_size = 46 }
+				primary_ps_47 = { set_planet_size = 47 }
+				primary_ps_48 = { set_planet_size = 48 }
+				primary_ps_49 = { set_planet_size = 49 }
+				primary_ps_50 = { set_planet_size = 50 }
+				primary_ps_51 = { set_planet_size = 51 }
+				primary_ps_52 = { set_planet_size = 52 }
+				primary_ps_53 = { set_planet_size = 53 }
+				primary_ps_54 = { set_planet_size = 54 }
+				primary_ps_55 = { set_planet_size = 55 }
+				primary_ps_56 = { set_planet_size = 56 }
+				primary_ps_57 = { set_planet_size = 57 }
+				primary_ps_58 = { set_planet_size = 58 }
+				primary_ps_59 = { set_planet_size = 59 }
+				primary_ps_60 = { set_planet_size = 60 }
+			}
+		}
+	}
+
+	yuzu_store_pops = {
+		owner = {
+			set_variable = { which = num_lacked_yuzu_pops value = 10 }
+			save_event_target_as = yuzu_planet_owner
+		}
+		every_owned_pop_group = {
+			limit = { is_YUZU = yes }
+			count = 10
 			owner = {
 				subtract_variable = { which = num_lacked_yuzu_pops value = 1 }
 			}
-			kill_pop = yes
+			kill_pop_group = {
+				pop_group = this
+				amount = 100
+			}
 		}
-	}
-	if = {  # 如果建造完成时星球上人口不足，从整个国家中减去缺少的，防止刷人口
-		limit = {
+		if = {  # 如果建造完成时星球上人口不足，从整个国家中减去缺少的，防止刷人口
+			limit = {
+				event_target:yuzu_planet_owner = {
+					check_variable = { which = num_lacked_yuzu_pops value >= 1 }
+				}
+			}
 			event_target:yuzu_planet_owner = {
-				check_variable = { which = num_lacked_yuzu_pops value >= 1 }
+				every_owned_pop_group = {
+					limit = { is_YUZU = yes }
+					count = num_lacked_yuzu_pops
+					kill_pop_group = {
+						pop_group = this
+						amount = 100
+					}
+				}
 			}
 		}
 		event_target:yuzu_planet_owner = {
-			while = {
-				count = num_lacked_yuzu_pops
-				random_owned_pop = {
-					limit = {
-						is_YUZU =yes
-					}
-					kill_pop = yes
-				}
-			}
+			clear_variable = num_lacked_yuzu_pops
 		}
 	}
-	event_target:yuzu_planet_owner = {
-		clear_variable = num_lacked_yuzu_pops
-	}
-}
 
-yuzu_release_pops = {
-	if = {
-		limit = {
-			owner = { is_YUZU = yes }
-		}
-		while = {
-			count = 10
-			create_pop = { species = owner_main_species }
-			last_created_pop = {
-				add_modifier = {
-					modifier = pop_yuzu_released_from_cryo_chamber
-					days = 3600
-				}
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			any_galaxy_species = { is_species_class = YUZUGIRL }
-		}
-		random_galaxy_species = {
+	yuzu_release_pops = {
+		if = {
 			limit = {
-				is_species_class = YUZUGIRL
+				owner = { is_YUZU = yes }
 			}
-			save_event_target_as = yuzu_released_species
+			create_pop_group = {
+				species = owner_main_species
+				size = 1000
+				effect = {
+					add_modifier = {
+						modifier = pop_yuzu_released_from_cryo_chamber
+						days = 3600
+					}
+				}
+			}
 		}
-		while = {
-			count = 10
-			create_pop = { species = event_target:yuzu_released_species }
-			last_created_pop = {
-				add_modifier = {
-					modifier = pop_yuzu_released_from_cryo_chamber
-					days = 3600
+		else_if = {
+			limit = {
+				any_galaxy_species = { is_species_class = YUZUGIRL }
+			}
+			random_galaxy_species = {
+				limit = {
+					is_species_class = YUZUGIRL
+				}
+				save_event_target_as = yuzu_released_species
+			}
+			create_pop_group = {
+				species = event_target:yuzu_released_species
+				size = 1000
+				effect = {
+					add_modifier = {
+						modifier = pop_yuzu_released_from_cryo_chamber
+						days = 3600
+					}
+				}
+			}
+		}
+		else = {
+			create_species = {
+				name = "NAME_Yuzu"
+				class = YUZUGIRL
+				portrait = random
+				traits = {
+					ideal_planet_class = pc_continental
+					trait = trait_yuzu
+					trait = trait_yuzu_ciallo
+					trait = trait_intelligent
+					trait = trait_traditional
+					trait = trait_talented
+					trait = trait_communal
+					trait = trait_yuzu_big_eater
+					trait = trait_weak
+					trait = trait_sedentary
+				}
+				effect = { save_event_target_as = yuzu_released_species }
+			}
+			create_pop_group = {
+				species = event_target:yuzu_released_species
+				size = 1000
+				effect = {
+					add_modifier = {
+						modifier = pop_yuzu_released_from_cryo_chamber
+						days = 3600
+					}
 				}
 			}
 		}
 	}
-	else = {
-		create_species = {
-			name = "NAME_Yuzu"
-			class = YUZUGIRL
-			portrait = random
-			traits = {
-				ideal_planet_class = pc_continental
-				trait = trait_yuzu
-				trait = trait_yuzu_ciallo
-				trait = trait_intelligent
-				trait = trait_traditional
-				trait = trait_talented
-				trait = trait_communal
-				trait = trait_yuzu_big_eater
-				trait = trait_weak
-				trait = trait_sedentary
-			}
-			effect = { save_event_target_as = yuzu_released_species }
-		}
-		while = {
-			count = 10
-			create_pop = { species = event_target:yuzu_released_species }
-			last_created_pop = {
-				add_modifier = {
-					modifier = pop_yuzu_released_from_cryo_chamber
-					days = 3600
-				}
-			}
-		}
+
+	set_yuzu_crisis_stage_1 = {
+		set_global_flag = yuzu_crisis_stage_1
+		remove_global_flag = yuzu_crisis_stage_2
+		remove_global_flag = yuzu_crisis_stage_3
+		remove_global_flag = yuzu_crisis_stage_4
 	}
-}
 
-set_yuzu_crisis_stage_1 = {
-	set_global_flag = yuzu_crisis_stage_1
-	remove_global_flag = yuzu_crisis_stage_2
-	remove_global_flag = yuzu_crisis_stage_3
-	remove_global_flag = yuzu_crisis_stage_4
-}
+	set_yuzu_crisis_stage_2 = {
+		remove_global_flag = yuzu_crisis_stage_1
+		set_global_flag = yuzu_crisis_stage_2
+		remove_global_flag = yuzu_crisis_stage_3
+		remove_global_flag = yuzu_crisis_stage_4
+	}
 
-set_yuzu_crisis_stage_2 = {
-	remove_global_flag = yuzu_crisis_stage_1
-	set_global_flag = yuzu_crisis_stage_2
-	remove_global_flag = yuzu_crisis_stage_3
-	remove_global_flag = yuzu_crisis_stage_4
-}
+	set_yuzu_crisis_stage_3 = {
+		remove_global_flag = yuzu_crisis_stage_1
+		remove_global_flag = yuzu_crisis_stage_2
+		set_global_flag = yuzu_crisis_stage_3
+		remove_global_flag = yuzu_crisis_stage_4
+	}
 
-set_yuzu_crisis_stage_3 = {
-	remove_global_flag = yuzu_crisis_stage_1
-	remove_global_flag = yuzu_crisis_stage_2
-	set_global_flag = yuzu_crisis_stage_3
-	remove_global_flag = yuzu_crisis_stage_4
-}
+	set_yuzu_crisis_stage_4 = {
+		remove_global_flag = yuzu_crisis_stage_1
+		remove_global_flag = yuzu_crisis_stage_2
+		remove_global_flag = yuzu_crisis_stage_3
+		set_global_flag = yuzu_crisis_stage_4
+	}
 
-set_yuzu_crisis_stage_4 = {
-	remove_global_flag = yuzu_crisis_stage_1
-	remove_global_flag = yuzu_crisis_stage_2
-	remove_global_flag = yuzu_crisis_stage_3
-	set_global_flag = yuzu_crisis_stage_4
-}
-
-end_yuzu_crisis = {
-	remove_global_flag = yuzu_crisis_stage_1
-	remove_global_flag = yuzu_crisis_stage_2
-	remove_global_flag = yuzu_crisis_stage_3
-	remove_global_flag = yuzu_crisis_stage_4
-}
+	end_yuzu_crisis = {
+		remove_global_flag = yuzu_crisis_stage_1
+		remove_global_flag = yuzu_crisis_stage_2
+		remove_global_flag = yuzu_crisis_stage_3
+		remove_global_flag = yuzu_crisis_stage_4
+	}
