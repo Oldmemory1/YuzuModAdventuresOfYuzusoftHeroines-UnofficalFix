@@ -590,3 +590,70 @@ district_yuzu_city_dream = {
 		text = job_agri_drone_effect_desc
 	}
 }
+
+# Swap Districts (visual only — used by Yuzu arcology zone swap_type)
+# These have slot_empty and potential=always=no, purely for visual appearance.
+
+district_yuzu_city_industry = {
+	icon = district_arcology_mixed_industry
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_arcology_name
+	}
+}
+
+district_yuzu_city_administrative = {
+	icon = district_arcology_administrative
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_arcology_name
+	}
+}
+
+district_yuzu_city_religious = {
+	icon = district_arcology_spiritualist
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_arcology_name
+	}
+}
+
+district_yuzu_city_refinery = {
+	icon = district_arcology_fortress
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_arcology_name
+	}
+}
