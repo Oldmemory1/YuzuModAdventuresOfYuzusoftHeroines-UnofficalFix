@@ -6,9 +6,9 @@ d_yuzu_aqua_eden = {
 	
 	planet_modifier = {
         planet_max_districts_add = 1
-		job_enforcer_add = 1
-        planet_housing_add = 10 #住房
-        trade_value_mult = 0.15 #贸易额
+		job_enforcer_add = 100
+        planet_housing_add = 1000 #住房
+        planet_jobs_trade_produces_mult = 0.15 #贸易额
         planet_crime_mult = -0.15 # 犯罪度
         planet_jobs_society_research_produces_mult = 0.20
 	}
@@ -35,14 +35,14 @@ d_yuzu_islenauts = {
 		planet_max_districts_add = 1
         planet_housing_add = 5
         planet_amenities_add = 10
-        trade_value_mult = 0.10
+        planet_jobs_trade_produces_mult = 0.10
         planet_jobs_physics_research_produces_mult = 0.20
         planet_jobs_society_research_produces_mult = 0.20
         planet_jobs_engineering_research_produces_mult = 0.20
         planet_jobs_unity_produces_mult = 0.10
-        job_head_researcher_add = 1
-        job_researcher_add = 2
-        job_culture_worker_add = 2
+        job_head_researcher_add = 100
+        job_researcher_add = 200
+        job_culture_worker_add = 200
 	}
 	
 	drop_weight = {
@@ -57,8 +57,8 @@ d_yuzu_slime_reserve = {
 	icon = d_alien_pets_deposit
 	
 	planet_modifier = {
-		planet_amenities_add = 2
-		job_yuzu_slime_researcher_add = 2
+		planet_amenities_add = 200
+		job_yuzu_slime_researcher_add = 200
 		job_yuzu_slime_researcher_per_pop = 0.05 # 1 per 20
 	}
 	
@@ -77,8 +77,8 @@ d_yuzu_abyss_gate = {
         planet_jobs_physics_research_produces_mult = 0.30
         planet_jobs_society_research_produces_mult = 0.30
         planet_jobs_engineering_research_produces_mult = 0.30
-        job_head_researcher_add = 1
-        job_researcher_add = 12
+        job_head_researcher_add = 100
+        job_researcher_add = 1200
 	}
 	
 	drop_weight = {

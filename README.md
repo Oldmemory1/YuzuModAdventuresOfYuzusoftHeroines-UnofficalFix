@@ -26,6 +26,13 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/component_templates/yuzu_others.txt` | `use_ship_kill_target = no` | `use_ship_main_target = no`（2 处） | 对照 vanilla 星爆器/巨像武器 |
 | `common/component_templates/yuzu_roles.txt` | `size_restriction` 含 `yuzu_reaper_scythe` | 移除（2 处） | 该舰船类型未定义 |
 | `common/name_lists/YUZUGIRL1.txt` | 缺失 `yuzu_star_eater_plural` | 新增 | 自定义舰船类型必需 _plural 本地化键 |
+| `common/decisions/yuzu_decisions.txt` | `num_pops` | `pop_amount`（2 处） | 4.0 后人口统计改为 pop_amount（100/人） |
+| `common/decisions/yuzu_decisions.txt` | `planet_event` / `set_industrial_focus_flags` / `set_ecu_industrial_districts_effect` | 替换为 `carrier_event` / 移除 / 移除 | 对照 vanilla 4.4.6 理想城计划：旧脚本效果已移除，事件改用 carrier_event |
+| `common/decisions/yuzu_decisions.txt` | 缺少 `important` / `on_queued` / `on_unqueued` / `save_deposits` | 新增 | 对照 vanilla 4.4.6 理想城计划结构 |
+| `common/decisions/yuzu_decisions.txt` | `district_*_uncapped` 检查 | 移除 | `_uncapped` 区划类型在 4.4.6 中不存在 |
+| `common/decisions/yuzu_decisions.txt` | `any_owned_pop` | `any_owned_pop_group`（含 `country = owner`） | 4.0 后人口系统改动 |
+| `common/decisions/yuzu_special_decisions.txt` | 同上所有问题 + Yuzu 定制理想城 | 同对照 vanilla 更新 | 保留 Yuzu 独有条件（is_YUZU、特殊资源花费、abyss/sunset 城市） |
+| `common/deposits/Yuzu_deposits.txt` | `trade_value_mult` | `planet_jobs_trade_produces_mult`（2 处） | 4.0 后贸易值 modifier 改名，对照 vanilla event_planetary_deposits |
 
 ### 版本管理
 

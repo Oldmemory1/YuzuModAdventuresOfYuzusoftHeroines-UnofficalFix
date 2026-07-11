@@ -1,4 +1,5 @@
 decision_yuzu_arcology_project = {
+	important = yes
 	owned_planets_only = yes
 	icon = decision_arcology_project
 
@@ -18,12 +19,14 @@ decision_yuzu_arcology_project = {
 		NOR = {
 			is_planet_class = pc_city
 			is_planet_class = pc_relic
+			is_planet_class = pc_nanotech
 			is_planet_class = pc_yuzu_abyss_city
 			is_planet_class = pc_yuzu_sunset_city
 			has_modifier = resort_colony
 			has_modifier = penal_colony
 			has_modifier = slave_colony
 			has_modifier = pm_wenkwort_custodian
+			has_carrier_flag = resort_colony_queued
 		}
 		is_artificial = no
 		exists = owner
@@ -42,77 +45,45 @@ decision_yuzu_arcology_project = {
 				num_districts = { type = district_farming value < 1 }
 				num_districts = { type = district_mining value < 1 }
 				num_districts = { type = district_generator value < 1 }
-				num_districts = { type = district_farming_uncapped value < 1 }
-				num_districts = { type = district_mining_uncapped value < 1 }
-				num_districts = { type = district_generator_uncapped value < 1 }
+			}
+			custom_tooltip = {
+				fail_text = legendary_leader_decision_arcology_project
+				NOT = { has_carrier_flag = legendary_leader_planet }
 			}
 		}
 		num_uncleared_blockers < 1
 	}
 
+	on_queued = {
+		set_carrier_flag = arcology_project_construction
+	}
+
+	on_unqueued = {
+		remove_carrier_flag = arcology_project_construction
+	}
+
 	effect = {
+		remove_carrier_flag = arcology_project_construction
 		# Make city-planet
 		custom_tooltip = decision_arcology_project_effects
 		hidden_effect = {
-			if = {
-				limit = {
-					has_deposit = d_yuzu_aqua_eden
-				}
-				set_planet_flag = has_yuzu_aqua_eden
-			}
-			if = {
-				limit = {
-					has_deposit = d_yuzu_islenauts
-				}
-				set_planet_flag = has_yuzu_islenauts
-			}
-			if = {
-				limit = {
-					has_deposit = d_yuzu_slime_reserve
-				}
-				set_planet_flag = has_yuzu_slime_reserve
-			}
+			save_deposits = yes
 			clear_deposits = yes
-			set_industrial_focus_flags = yes
+			restore_saved_deposits = yes
 			change_pc = pc_city
 			relic_world_conversion_effect = {
 				DISTRICT = district_arcology_housing
 				VARIABLE = num_housing_districts
 			}
-			relic_world_conversion_effect = {
-				DISTRICT = district_arcology_arms_industry
-				VARIABLE = num_industrial_districts
-			}
-			set_ecu_industrial_districts_effect = yes
 			set_planet_entity = {
 				entity = "city_planet_entity"
 				graphical_culture = owner
 			}
+			carrier_event = { id = action.68 }
 			owner = {
 				country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
 			}
-			planet_event = { id = mega.200 }
-			if = {
-				limit = {
-					has_planet_flag = has_yuzu_aqua_eden
-				}
-				add_deposit = d_yuzu_aqua_eden
-				remove_planet_flag = has_yuzu_aqua_eden
-			}
-			if = {
-				limit = {
-					has_planet_flag = has_yuzu_islenauts
-				}
-				add_deposit = d_yuzu_islenauts
-				remove_planet_flag = has_yuzu_islenauts
-			}
-			if = {
-				limit = {
-					has_planet_flag = has_yuzu_slime_reserve
-				}
-				add_deposit = d_yuzu_slime_reserve
-				remove_planet_flag = has_yuzu_slime_reserve
-			}
+			carrier_event = { id = mega.200 }
 			if = {
 				limit = {
 					OR = {
@@ -133,7 +104,7 @@ decision_yuzu_arcology_project = {
 			factor = 100
 			exists = owner
 			OR = {
-				num_pops >= 70
+				pop_amount >= 7000
 				is_capital = yes
 			}
 		}
@@ -141,6 +112,7 @@ decision_yuzu_arcology_project = {
 }
 
 decision_yuzu_arcology_project_relic = {
+	important = yes
 	owned_planets_only = yes
 	icon = decision_arcology_project
 
@@ -170,28 +142,34 @@ decision_yuzu_arcology_project_relic = {
 		num_uncleared_blockers < 1
 	}
 
+	on_queued = {
+		set_carrier_flag = arcology_project_construction
+	}
+
+	on_unqueued = {
+		remove_carrier_flag = arcology_project_construction
+	}
+
 	effect = {
+		remove_carrier_flag = arcology_project_construction
 		# Make city-planet
 		custom_tooltip = decision_arcology_project_effects
 		hidden_effect = {
+			save_deposits = yes
 			clear_deposits = yes
-			set_industrial_focus_flags = yes
+			restore_saved_deposits = yes
 			change_pc = pc_city
 			relic_world_conversion_effect = {
 				DISTRICT = district_arcology_housing
 				VARIABLE = num_housing_districts
 			}
-			relic_world_conversion_effect = {
-				DISTRICT = district_arcology_arms_industry
-				VARIABLE = num_industrial_districts
-			}
-			set_ecu_industrial_districts_effect = yes
 			set_planet_entity = {
 				entity = "city_planet_entity"
 				graphical_culture = owner
 			}
+			carrier_event = { id = action.68 }
 			add_deposit = d_former_relic_world
-			planet_event = { id = mega.201 }
+			carrier_event = { id = mega.201 }
 			while = {
 				count = 4
 				solar_system = {
@@ -268,11 +246,11 @@ decision_restore_yuzu_abyss_city = {
 				limit = {
 					has_modifier = yuzu_abyss_infiltration
 				}
-				planet_event = { id = Yuzu_window_event.104 }
+				carrier_event = { id = Yuzu_window_event.104 }
 				remove_modifier = yuzu_abyss_infiltration
 			}
 			else = {
-				planet_event = { id = Yuzu_window_event.105 }
+				carrier_event = { id = Yuzu_window_event.105 }
 			}
 			save_city_district_num = yes
 			change_pc = pc_yuzu_abyss_city
@@ -322,7 +300,7 @@ decision_yuzu_abyss_city = {
 	effect = {
 		custom_tooltip = decision_yuzu_abyss_city_effects
 		hidden_effect = {
-			planet_event = { id = Yuzu_window_event.106 }
+			carrier_event = { id = Yuzu_window_event.106 }
 			save_city_district_num = yes
 			change_pc = pc_yuzu_abyss_city
 			set_yuzu_city_district = yes
@@ -371,7 +349,7 @@ decision_yuzu_sunset_city = {
 	effect = {
 		custom_tooltip = decision_yuzu_sunset_city_effects
 		hidden_effect = {
-			planet_event = { id = Yuzu_window_event.107 }
+			carrier_event = { id = Yuzu_window_event.107 }
 			save_city_district_num = yes
 			change_pc = pc_yuzu_sunset_city
 			set_yuzu_city_district = yes
