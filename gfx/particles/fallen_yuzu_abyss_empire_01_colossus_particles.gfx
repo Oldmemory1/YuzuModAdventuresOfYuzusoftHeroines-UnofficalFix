@@ -1,0 +1,31 @@
+objectTypes = {
+	
+	pdxparticle = {
+		name = "fallen_yuzu_abyss_empire_01_colossus_core_effect"
+		type = "fallen_yuzu_abyss_empire_01_colossus_core_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "fallen_yuzu_abyss_empire_01_colossus_energy_effect"
+		type = "fallen_yuzu_abyss_empire_01_colossus_energy_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "fallen_yuzu_abyss_empire_01_colossus_energy_start_effect"
+		type = "fallen_yuzu_abyss_empire_01_colossus_energy_start_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "fallen_yuzu_abyss_empire_01_colossus_shield_effect"
+		type = "fallen_yuzu_abyss_empire_01_colossus_shield_effect"
+		
+		scale = 1.0
+	}
+
+}

@@ -1,0 +1,53 @@
+portraits = {
+	abyss_0 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+    texturefile = "gfx/models/portraits/abyss_01/abyss_0.dds" }
+}
+
+portrait_groups = {
+	abyss_01 = {
+		default = abyss_0
+		game_setup = { 
+			add = {
+				portraits = {
+				    abyss_0
+				}
+			}
+		}
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					abyss_0
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					abyss_0
+				}
+			}
+		}
+		
+		#leader scope
+		leader = {
+			add = {
+				portraits = {
+					abyss_0
+				}
+			}
+		}
+
+			
+		#leader scope 
+		ruler = {
+			add = {
+				portraits = {
+					abyss_0
+				}
+			}
+		}
+	}
+}

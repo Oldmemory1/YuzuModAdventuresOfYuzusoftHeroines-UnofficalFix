@@ -1,0 +1,170 @@
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_1"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_1_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_1_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_1_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_2"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_2_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_2_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_2_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_3"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_3_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_3_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_3_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_M_1"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_M_1_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_M_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_M_1_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_M_1_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_M_2"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_M_2_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_M_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_M_2_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_M_2_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_M_3"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_M_3_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_M_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_M_3_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_M_3_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_S_1"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_S_1_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_S_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_S_1_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_S_1_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_S_2"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_S_2_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_S_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_S_2_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_S_2_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_energy_torpedoes_S_3"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "yuzu_energy_torpedoes_S_3_hit_entity"
+	shield_hit_entity = "yuzu_energy_torpedoes_S_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_energy_torpedoes_S_3_muzzle_entity"
+	
+	#ballistic specific
+	entity = "yuzu_energy_torpedoes_S_3_entity"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

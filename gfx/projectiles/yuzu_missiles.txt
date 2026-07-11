@@ -1,0 +1,16 @@
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "yuzu_large_torpedo_01"
+	color = { 0.9 	0.2 	0.1 	1.0 }
+	hit_entity = "yuzu_torpedo_01_large_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_01_large_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_01_large_muzzle_entity"
+	
+	#torpedo specific data
+	entity = "yuzu_torpedo_01_large_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

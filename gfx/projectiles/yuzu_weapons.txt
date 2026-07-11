@@ -1,0 +1,650 @@
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_lance_1"
+	color = { 0.2 	0.9 	0.4 	0.9 }
+	hit_entity = "yuzu_lance_1_hit_entity"
+	shield_hit_entity = "yuzu_lance_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_lance_1_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "yuzu_lance_1_windup_entity"
+		extra_large_turret = "yuzu_lance_1_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_lance_1_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_lance_2"
+	color = { 0.9 	0.2 	0.1 	0.9 }
+	hit_entity = "yuzu_lance_2_hit_entity"
+	shield_hit_entity = "yuzu_lance_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_lance_2_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "yuzu_lance_2_windup_entity"
+		extra_large_turret = "yuzu_lance_2_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_lance_2_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_lance_3"
+	color = { 0.8 	0.2 	1.0 	0.9 }
+	hit_entity = "yuzu_lance_3_hit_entity"
+	shield_hit_entity = "yuzu_lance_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_lance_3_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "yuzu_lance_3_windup_entity"
+		extra_large_turret = "yuzu_lance_3_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		100.0
+			0.4		5.0
+			0.6		0.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_lance_2_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_beam_1"
+	color = { 0.2 	0.9 	0.4 	1.0 }
+	hit_entity = "yuzu_beam_1_hit_entity"
+	shield_hit_entity = "yuzu_beam_1_hit_entity"
+	muzzle_flash_entity = "yuzu_beam_1_muzzle_entity"
+	windup_entity = "yuzu_beam_1_windup_entity"
+	
+	#beam specific data
+	width = 12.0
+	texture_scroll_speed = 2.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_beam_1.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_beam_2"
+	color = { 0.9 	0.2 	0.1 	1.0 }
+	hit_entity = "yuzu_beam_2_hit_entity"
+	shield_hit_entity = "yuzu_beam_2_hit_entity"
+	muzzle_flash_entity = "yuzu_beam_2_muzzle_entity"
+	windup_entity = "yuzu_beam_2_windup_entity"
+	
+	#beam specific data
+	width = 12.0
+	texture_scroll_speed = 2.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_beam_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_beam_3"
+	color = { 0.8 	0.2 	1.0 	1.0 }
+	hit_entity = "yuzu_beam_3_hit_entity"
+	shield_hit_entity = "yuzu_beam_3_hit_entity"
+	muzzle_flash_entity = "yuzu_beam_3_muzzle_entity"
+	windup_entity = "yuzu_beam_3_windup_entity"
+	
+	#beam specific data
+	width = 12.0
+	texture_scroll_speed = 2.0
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_beam_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_l_1"
+	color = { 0.2 	0.9 	0.4 	0.8 }
+	hit_entity = "yuzu_l_1_hit_entity"
+	shield_hit_entity = "yuzu_l_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_1_muzzle_entity"
+	
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 10
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_l_2"
+	color = { 0.9 	0.2 	0.1 	0.8 }
+	hit_entity = "yuzu_l_2_hit_entity"
+	shield_hit_entity = "yuzu_l_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_2_muzzle_entity"
+	
+	#beam specific data
+	width = 3.0
+	texture_scroll_speed = 10
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_l_3"
+	color = { 0.8 	0.2 	1.0 	0.8 }
+	hit_entity = "yuzu_l_3_hit_entity"
+	shield_hit_entity = "yuzu_l_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_3_muzzle_entity"
+	
+	#beam specific data
+	width = 3.0
+	texture_scroll_speed = 10
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_m_1"
+	color = { 0.2 	0.9 	0.4 	0.8 }
+	hit_entity = "yuzu_l_1_hit_entity"
+	shield_hit_entity = "yuzu_l_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_1_muzzle_entity"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 25.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_m_2"
+	color = { 0.9 	0.2 	0.1 	0.8 }
+	hit_entity = "yuzu_l_2_hit_entity"
+	shield_hit_entity = "yuzu_l_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_2_muzzle_entity"
+	
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 10
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_m_3"
+	color = { 0.8 	0.2 	1.0 	0.8 }
+	hit_entity = "yuzu_l_3_hit_entity"
+	shield_hit_entity = "yuzu_l_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_3_muzzle_entity"
+	
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 10
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_s_1"
+	color = { 0.2 	0.9 	0.4 	0.8 }
+	hit_entity = "yuzu_l_1_hit_entity"
+	shield_hit_entity = "yuzu_l_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_1_muzzle_entity"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 25.5
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_s_2"
+	color = { 0.9 	0.2 	0.1 	0.8 }
+	hit_entity = "yuzu_l_2_hit_entity"
+	shield_hit_entity = "yuzu_l_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_2_muzzle_entity"
+	
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 10
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}
+
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "yuzu_s_3"
+	color = { 0.8 	0.2 	1.0 	0.8 }
+	hit_entity = "yuzu_l_3_hit_entity"
+	shield_hit_entity = "yuzu_l_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_l_3_muzzle_entity"
+	
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 10
+	texture_tiling = 5.5
+	
+	hit = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		20.0
+			0.7		5.0
+			1.0 	0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 	0.0
+			0.05	0.0
+			0.1		15.0
+			0.4		5.0
+			1.0 	0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.2
+	}
+}

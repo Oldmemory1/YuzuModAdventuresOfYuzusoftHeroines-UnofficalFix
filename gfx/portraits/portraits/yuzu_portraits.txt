@@ -1,142 +1,142 @@
 portraits = {
-                yuzu_1_0 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_0 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/0.dds" }
-                yuzu_1_1 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_1 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_01/1.dds" }
-                yuzu_1_2 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_2 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/2.dds" }
-                yuzu_1_3 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_3 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/3.dds" }
-                yuzu_1_4 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_4 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/4.dds" }
-                yuzu_1_5 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_5 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_01/5.dds" }
-                yuzu_1_6 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_6 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/6.dds" }
-                yuzu_1_7 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_7 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/7.dds" }
-                yuzu_1_8 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_8 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/8.dds" }
-                yuzu_1_9 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_9 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/9.dds" }
-                yuzu_1_10 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_10 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/10.dds" }
-                yuzu_1_11 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_11 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/11.dds" }
-                yuzu_1_12 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_12 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/12.dds" }
-                yuzu_1_13 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_13 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/13.dds" }
-                yuzu_1_14 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_14 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/14.dds" }
-                yuzu_1_15 = {clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_15 = {clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/15.dds" }
-                yuzu_1_16 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_16 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/16.dds" }
-                yuzu_1_17 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_17 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/17.dds" }
-		yuzu_1_18 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+		yuzu_1_18 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/18.dds" }
-                yuzu_1_19 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_19 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/19.dds" }
-                yuzu_1_20 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_20 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/20.dds" }
-                yuzu_1_21 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_21 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/21.dds" }
-                yuzu_1_22 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_22 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/22.dds" }
-                yuzu_1_23 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_23 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/23.dds" }
-                yuzu_1_24 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_24 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/24.dds" }
-                yuzu_1_25 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_25 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/25.dds" }
-                yuzu_1_26 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_26 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/26.dds" }
-                yuzu_1_27 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_27 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/27.dds" }
-		yuzu_1_28 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+		yuzu_1_28 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/28.dds" }
-                yuzu_1_29 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_29 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/29.dds" }
-                yuzu_1_30 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_30 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/30.dds" }
-                yuzu_1_31 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_31 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/31.dds" }
-                yuzu_1_32 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_32 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/32.dds" }
-                yuzu_1_33 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_1_33 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/33.dds" }
-		yuzu_m_s = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+		yuzu_m_s = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_01/muraseme_surprise.dds" }
 
-                yuzu_2_0 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_0 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/0.dds" }
-                yuzu_2_1 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_1 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/1.dds" }
-                yuzu_2_2 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_2 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/2.dds" }
-                yuzu_2_3 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_3 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/3.dds" }
-                yuzu_2_4 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_4 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/4.dds" }
-                yuzu_2_5 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_5 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/5.dds" }
-                yuzu_2_6 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_6 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/6.dds" }
-                yuzu_2_7 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_7 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/7.dds" }
-                yuzu_2_8 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_8 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/8.dds" }
-                yuzu_2_9 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_9 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/9.dds" }
-                yuzu_2_10 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_10 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/10.dds" }
-                yuzu_2_11 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_11 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/11.dds" }
-                yuzu_2_12 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_12 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/12.dds" }
-                yuzu_2_13 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_13 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/13.dds" }
-                yuzu_2_14 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_14 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/14.dds" }
-                yuzu_2_15 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_15 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/15.dds" }
-                yuzu_2_16 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_16 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/16.dds" }
-                yuzu_2_17 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_17 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/17.dds" }
-                yuzu_2_18 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_18 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/18.dds" }
-                yuzu_2_19 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_19 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/19.dds" }
-                yuzu_2_20 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_20 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/20.dds" }
-                yuzu_2_21 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_21 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/21.dds" }
-                yuzu_2_22 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_22 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/22.dds" }
-                yuzu_2_23 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_23 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/23.dds" }
-                yuzu_2_24 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_24 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/24.dds" }
-                yuzu_2_25 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_25 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/25.dds" }
-                yuzu_2_26 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_26 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/26.dds" }
-                yuzu_2_27 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_27 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/27.dds" }
-                yuzu_2_28 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_28 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/28.dds" }
-                yuzu_2_29 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_29 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 		texturefile = "gfx/models/portraits/yuzugirl_02/29.dds" }
-                yuzu_2_30 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_30 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/30.dds" }
-                yuzu_2_31 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_31 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/31.dds" }
-                yuzu_2_32 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_32 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/32.dds" }
-                yuzu_2_33 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+                yuzu_2_33 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
 	        texturefile = "gfx/models/portraits/yuzugirl_02/33.dds" }
 }
 

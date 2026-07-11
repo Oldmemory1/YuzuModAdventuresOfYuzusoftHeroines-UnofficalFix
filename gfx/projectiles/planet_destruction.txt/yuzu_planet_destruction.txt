@@ -1,0 +1,146 @@
+back_in_time_gfx = {
+
+	texture = "gfx/models/combat_items/back_in_time_laser.dds"
+
+	color = { 1.0 1.0 1.0 1.0 }
+
+	windup_entity = "colossus_back_in_time_windup_entity"
+
+	ship_fire_entity = "colossus_back_in_time_muzzle_entity"
+
+	planet_hit_entity = "colossus_back_in_time_hit_entity"
+
+	megastructure_hit_entity = "colossus_back_in_time_hit_entity"
+
+	planet_overlay_entity = "back_in_time_alpha_override_effect_entity"
+
+	windup = {
+		duration = 0.0
+	}
+	start = {
+		duration = 1.5
+		width = {
+			1.0 35.0
+		}
+		texture_scroll_speed = {
+			0.0 0.2
+		}
+		texture_tiling = 2.5
+		alpha = {
+			0.0 0.0
+			1.0 1.0
+		}
+	}
+	in_progress = {
+		duration = 10.0
+		width = {
+			0.0 35.0
+			0.5 35.0
+			1.0 35.0
+		}
+		texture_scroll_speed = {
+			0.0 0.2
+		}
+		texture_tiling = {
+			0.0 	2.5
+		}
+		alpha = {
+			0.0 1.0
+			0.5 1.2
+			1.0 1.0
+		}
+	}
+	end = {
+		duration = 2.0
+		width = {
+			1.0 35.0
+		}
+		texture_scroll_speed = 0.2
+		texture_tiling = 2.5
+		alpha = {
+			0.0 1.1
+			1.0 0.0
+		}
+	}
+
+	fade = {
+		fade_in = { 0.0 50.0 }
+		fade_out = { 1.0 50.0 }
+	}
+}
+
+yuzu_star_destroyer_effect_gfx = {
+
+	texture = "gfx/models/combat_items/star_eater_beam_diffuse.dds"
+
+	color = { 1.0 1.0 1.0 4.0 }
+	planet_dissolve_color_mult = { 0.8 1.2 1.5 }
+
+	windup_entity = "star_eater_muzzle_windup_entity"
+
+	ship_fire_entity = "star_eater_chargeup_entity"
+
+	planet_hit_entity = "star_eater_hit_entity"
+
+	star_hit_entity = "star_eater_hit_entity"
+
+	megastructure_hit_entity = "star_eater_hit_entity"
+
+	hit_entity_positioning = entity_center
+
+	windup = {
+		duration = 0.0
+	}
+	start = {
+		duration = 1.0
+		width = {
+			0.0 10.0
+			1.0 80.0
+		}
+		texture_scroll_speed = {
+			0.0 0.2
+		}
+		texture_tiling = 2.5
+		alpha = {
+			0.0 0.0
+			1.0 1.0
+		}
+	}
+	in_progress = {
+		duration = 1.0
+		width = {
+			0.0 80.0
+			0.5 90.0
+			1.0 80.0
+		}
+		texture_scroll_speed = {
+			0.0 0.3
+		}
+		texture_tiling = {
+			0.0 	2.5
+		}
+		alpha = {
+			0.0 0.5
+			0.5 0.70
+			1.0 0.5
+		}
+	}
+	end = {
+		duration = 1.0
+		width = {
+			0.0 80.0
+			1.0 10.0
+		}
+		texture_scroll_speed = 0.2
+		texture_tiling = 2.5
+		alpha = {
+			0.0 1.1
+			1.0 0.0
+		}
+	}
+
+	fade = {
+		fade_in = { 0.0 50.0 }
+		fade_out = { 1.0 50.0 }
+	}
+}

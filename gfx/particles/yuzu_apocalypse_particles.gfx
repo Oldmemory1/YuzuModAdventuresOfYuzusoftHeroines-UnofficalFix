@@ -1,0 +1,23 @@
+objectTypes = {
+	pdxparticle = {
+		name = "back_in_time_laser_hit_effect"
+		type = "back_in_time_laser_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "back_in_time_laser_muzzle_effect"
+		type = "back_in_time_laser_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "back_in_time_muzzle_windup_effect"
+		type = "back_in_time_muzzle_windup_effect"
+		
+		scale = 1.0
+	}
+
+}

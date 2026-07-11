@@ -1,0 +1,435 @@
+objectTypes = {
+	pdxparticle = {
+		name = "yuzu_lance_1_hit_effect"
+		type = "yuzu_lance_1_hit_effect"
+		
+		scale = 1.15
+	}
+
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_particle"
+		type = "yuzu_lance_1_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_lance_1_windup_effect"
+		type = "yuzu_lance_1_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_windup_effect"
+		type = "yuzu_lance_1_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_lance_2_hit_effect"
+		type = "yuzu_lance_2_hit_effect"
+		
+		scale = 1.15
+	}
+
+	pdxparticle = {
+		name = "yuzu_lance_2_muzzle_particle"
+		type = "yuzu_lance_2_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_lance_2_windup_effect"
+		type = "yuzu_lance_2_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_lance_2_muzzle_windup_effect"
+		type = "yuzu_lance_2_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_lance_3_hit_effect"
+		type = "yuzu_lance_3_hit_effect"
+		
+		scale = 1.15
+	}
+
+	pdxparticle = {
+		name = "yuzu_lance_3_muzzle_particle"
+		type = "yuzu_lance_3_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_lance_3_windup_effect"
+		type = "yuzu_lance_3_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_lance_3_muzzle_windup_effect"
+		type = "yuzu_lance_3_muzzle_windup_effect"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_1_hit_effect"
+		type = "yuzu_beam_1_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_2_hit_effect"
+		type = "yuzu_beam_2_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_3_hit_effect"
+		type = "yuzu_beam_3_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_windup_effect"
+		type = "yuzu_beam_1_muzzle_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_2_muzzle_windup_effect"
+		type = "yuzu_beam_2_muzzle_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_3_muzzle_windup_effect"
+		type = "yuzu_beam_3_muzzle_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_1_windup_effect"
+		type = "yuzu_beam_1_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_2_windup_effect"
+		type = "yuzu_beam_2_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_3_windup_effect"
+		type = "yuzu_beam_3_windup_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_effect"
+		type = "yuzu_beam_1_muzzle_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_2_muzzle_effect"
+		type = "yuzu_beam_2_muzzle_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_beam_3_muzzle_effect"
+		type = "yuzu_beam_3_muzzle_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_l_1_hit_effect"
+		type = "yuzu_l_1_hit_effect"
+		
+		scale = 1.15
+	}
+
+	pdxparticle = {
+		name = "yuzu_l_1_muzzle_particle"
+		type = "yuzu_l_1_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_l_2_hit_effect"
+		type = "yuzu_l_2_hit_effect"
+		
+		scale = 1.15
+	}
+
+	pdxparticle = {
+		name = "yuzu_l_2_muzzle_particle"
+		type = "yuzu_l_2_muzzle"
+		
+		scale = 1.5
+	}
+	
+	pdxparticle = {
+		name = "yuzu_l_3_hit_effect"
+		type = "yuzu_l_3_hit_effect"
+		
+		scale = 1.15
+	}
+
+	pdxparticle = {
+		name = "yuzu_l_3_muzzle_particle"
+		type = "yuzu_l_3_muzzle"
+		
+		scale = 1.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_1_muzzle_particle"
+		type = "yuzu_energy_torpedoes_1_file"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_1_idle_particle"
+		type = "yuzu_energy_torpedoes_1_idle_file"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_1_hit_effect"
+		type = "yuzu_energy_torpedoes_1_hit_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_2_muzzle_particle"
+		type = "yuzu_energy_torpedoes_2_file"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_2_idle_particle"
+		type = "yuzu_energy_torpedoes_2_idle_file"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_2_hit_effect"
+		type = "yuzu_energy_torpedoes_2_hit_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_3_muzzle_particle"
+		type = "yuzu_energy_torpedoes_3_file"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_3_idle_particle"
+		type = "yuzu_energy_torpedoes_3_idle_file"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_3_hit_effect"
+		type = "yuzu_energy_torpedoes_3_hit_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_1_muzzle_particle"
+		type = "yuzu_energy_torpedoes_1_file"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_1_idle_particle"
+		type = "yuzu_energy_torpedoes_1_idle_file"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_1_hit_effect"
+		type = "yuzu_energy_torpedoes_1_hit_effect"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_2_muzzle_particle"
+		type = "yuzu_energy_torpedoes_2_file"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_2_idle_particle"
+		type = "yuzu_energy_torpedoes_2_idle_file"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_2_hit_effect"
+		type = "yuzu_energy_torpedoes_2_hit_effect"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_3_muzzle_particle"
+		type = "yuzu_energy_torpedoes_3_file"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_3_idle_particle"
+		type = "yuzu_energy_torpedoes_3_idle_file"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_M_3_hit_effect"
+		type = "yuzu_energy_torpedoes_3_hit_effect"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_1_muzzle_particle"
+		type = "yuzu_energy_torpedoes_1_file"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_1_idle_particle"
+		type = "yuzu_energy_torpedoes_1_idle_file"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_1_hit_effect"
+		type = "yuzu_energy_torpedoes_1_hit_effect"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_2_muzzle_particle"
+		type = "yuzu_energy_torpedoes_2_file"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_2_idle_particle"
+		type = "yuzu_energy_torpedoes_2_idle_file"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_2_hit_effect"
+		type = "yuzu_energy_torpedoes_2_hit_effect"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_3_muzzle_particle"
+		type = "yuzu_energy_torpedoes_3_file"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_3_idle_particle"
+		type = "yuzu_energy_torpedoes_3_idle_file"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_energy_torpedoes_S_3_hit_effect"
+		type = "yuzu_energy_torpedoes_3_hit_effect"
+		
+		scale = 0.5
+	}
+
+	pdxparticle = {
+		name = "yuzu_torpedo_01_large_hit_effect"
+		type = "yuzu_torpedo_01_hit_effect"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_large_torpedo_01_idle_flame_particle"
+		type = "yuzu_torpedo_01_idle_flame_file"
+		
+		scale = 1.25
+	}
+
+	pdxparticle = {
+		name = "yuzu_missile_large_hit_effect"
+		type = "yuzu_hit_effect"
+		
+		scale = 0.75
+	}
+
+	pdxparticle = {
+		name = "yuzu_torpedo_large_muzzle_particle"
+		type = "yuzu_torpedo_muzzle_file"
+		
+		scale = 3.0
+	}
+
+	pdxparticle = {
+		name = "back_in_time_effect"
+		type = "back_in_time_effect"
+		
+		scale = 0.2
+	}
+}

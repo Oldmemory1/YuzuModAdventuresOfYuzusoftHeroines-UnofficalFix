@@ -1,0 +1,555 @@
+entity = {
+	name = "yuzu_lance_1_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_lance_1_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_lance_2_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_lance_2_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_lance_3_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_lance_3_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_lance_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_lance_1_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "projectile_large_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_lance_2_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_lance_2_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "projectile_large_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_lance_3_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_lance_3_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "projectile_large_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_lance_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "yuzu_lance_1_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_2_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "yuzu_lance_2_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_3_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "yuzu_lance_3_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_1_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "yuzu_lance_1_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "yuzu_lance_1_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "yuzu_lance_1_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "yuzu_lance_1_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "yuzu_lance_1_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "yuzu_lance_1_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "yuzu_lance_1_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "yuzu_lance_1_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "yuzu_lance_1_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_2_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "yuzu_lance_2_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "yuzu_lance_2_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "yuzu_lance_2_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "yuzu_lance_2_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "yuzu_lance_2_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "yuzu_lance_2_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "yuzu_lance_2_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "yuzu_lance_2_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "yuzu_lance_2_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_3_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "yuzu_lance_3_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "yuzu_lance_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "yuzu_lance_3_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "yuzu_lance_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "yuzu_lance_3_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "yuzu_lance_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "yuzu_lance_3_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "yuzu_lance_3_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "yuzu_lance_3_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_1_turret_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "yuzu_lance_1_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_2_turret_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "yuzu_lance_2_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_lance_3_turret_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "yuzu_lance_3_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_beam_1_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_beam_1_hit_effect" keep_particle = yes sound = { soundeffect = "perdition_beam_hit" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_beam_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_beam_1_hit_effect" sound = { soundeffect = "shield_hit" } }
+		start_event = { particle = "titan_laser_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_beam_2_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_beam_2_hit_effect" sound = { soundeffect = "shield_hit" } }
+		start_event = { particle = "titan_laser_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_beam_3_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_beam_3_hit_effect" sound = { soundeffect = "shield_hit" } }
+		start_event = { particle = "titan_laser_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_beam_2_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_beam_2_hit_effect" keep_particle = yes sound = { soundeffect = "perdition_beam_hit" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_beam_3_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_beam_3_hit_effect" keep_particle = yes sound = { soundeffect = "perdition_beam_hit" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_beam_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "yuzu_beam_1_muzzle_effect" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_01" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_02" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_02" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_03" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_03" } }
+	}
+}
+
+entity = {
+	name = "yuzu_beam_2_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "yuzu_beam_2_muzzle_effect" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_01" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_02" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_02" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_03" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_03" } }
+	}
+}
+
+entity = {
+	name = "yuzu_beam_3_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "yuzu_beam_3_muzzle_effect" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_01" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_02" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_02" } }
+		
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_fire_layer_03" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_perdition_beam_fire_layer_03" } }
+	}
+}
+
+entity = {
+	name = "yuzu_beam_1_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_windup_layer_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_windup_layer_02" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = "xl_gun_01" particle = "yuzu_beam_1_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_beam_2_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_windup_layer_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_windup_layer_02" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = "xl_gun_01" particle = "yuzu_beam_2_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_beam_3_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_windup_layer_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "perdition_beam_windup_layer_02" } }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = "xl_gun_01" particle = "yuzu_beam_3_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_l_1_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_l_1_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_l_2_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_l_2_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_l_3_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "yuzu_l_3_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_l_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_l_1_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "projectile_large_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_l_2_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_l_2_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "projectile_large_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_l_3_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "yuzu_l_3_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "projectile_large_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_l_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "yuzu_l_1_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_l_2_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "yuzu_l_2_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_l_3_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "yuzu_l_3_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
+	}
+}
+
+# WINDUP
+
+entity = {
+	name = "colossus_back_in_time_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = no state_time = 0.1
+		event = { trigger_once = yes sound = { soundeffect = "shieled_windup_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "shieled_windup_layer_2" } }
+		
+		event = { time = 0.0 particle = "back_in_time_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASH
+
+entity = {
+	name = "colossus_back_in_time_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7.0 looping = no
+		event = { time = 0 particle = "back_in_time_laser_muzzle_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "shieled_fire_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "shieled_fire_layer_2" } }
+		event = { trigger_once = yes sound = { soundeffect = "shieled_fire_layer_3" } }
+
+		event = { trigger_once = yes sound = { soundeffect = "distance_shieled_fire_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shieled_fire_layer_2" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shieled_fire_layer_3" } }
+
+		event = { trigger_once = yes sound = { soundeffect = "colossus_shield_beam" stop_on_state_change = yes } }
+
+
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "colossus_back_in_time_hit_entity"
+	#pdxmesh = "shielded_planet_laser_hit_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		start_event = { particle = "back_in_time_laser_hit_effect" keep_particle = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "shieled_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "shieled_hit_layer_2" } }
+
+		event = { trigger_once = yes sound = { soundeffect = "distance_shieled_hit_layer_1" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shieled_hit_layer_2" } }
+
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+	
+	game_data = {
+		uv_animation_speed   = -0.25
+		uv_animation_direction  = { 0.0 1.0 }
+	}
+	#game_data = { 
+	#	bloom_factor = 1.2 
+	#	uv_animation_speed 		= 2
+	#	uv_animation_direction 	= { 0.0 -0.02 }
+	#}
+}

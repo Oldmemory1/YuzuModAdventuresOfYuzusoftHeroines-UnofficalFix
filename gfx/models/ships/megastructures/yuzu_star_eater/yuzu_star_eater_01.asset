@@ -1,0 +1,594 @@
+@star_eater_scale = 50
+
+#####################################################
+#####											#####
+#####					Avian					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "avian_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "avian_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####				Arthropiod					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "arthropoid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.4 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "arthropoid_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Fungoid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "fungoid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "fungoid_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Humanoid				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "humanoid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "humanoid_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Lithoid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "lithoid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "lithoid_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####				Mammalian					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "mammalian_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "mammalian_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####				Molluscoid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "molluscoid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "molluscoid_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Necroid					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "necroid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "necroid_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Nemesis					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "nemesis_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }	
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+#	attach = { main_body = "nemesis_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Aquatic					#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "aquatic_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }	
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+#	attach = { main_body = "aquatic_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Plantoid				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "plantoid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "plantoid_01_star_eater_ship_entity" }
+}
+
+#####################################################
+#####											#####
+#####					Reptilian				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "reptilian_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "reptilian_01_star_eater_ship_entity" }
+}
+
+
+#####################################################
+#####											#####
+#####					Toxoid				#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "toxoid_01_yuzu_star_eater_entity"
+	pdxmesh = "star_eater_01_frame_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 6.3 node = "main_body" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 13.4 node = "main_boby" particle = "star_eater_explosion_4_effect" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	
+	game_data = {
+		size = @star_eater_scale
+		emissive_recolor_crunch = 2.0
+	}
+
+	#attach = { main_body = "toxoid_01_star_eater_ship_entity" }
+}
