@@ -1,0 +1,138 @@
+opinion_yuzu_wish_peace = {
+	opinion = {
+		base = 1000
+	}
+
+	accumulative = yes
+
+	max = 1000
+
+	monthly = yes
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_win_the_hearts = {
+	opinion = {
+		base = 50
+	}
+
+	accumulative = no
+}
+
+opinion_yuzu_fanatic = {
+	opinion = {
+		base = 100
+	}
+
+	accumulative = no
+}
+
+opinion_yuzu_share_techs = {
+	opinion = {
+		base = 100
+	}
+
+	accumulative = yes
+
+	max = 100
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_destroyed_systems = {
+	opinion = {
+		base = -10
+	}
+
+	accumulative = yes
+
+	min = -50
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_backed_a_world = {
+	opinion = {
+		base = -60
+	}
+
+	accumulative = yes
+
+	min = -300
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_backed_my_world = {
+	opinion = {
+		base = -600
+	}
+
+	accumulative = yes
+
+	min = -3000
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_backed_a_primitive_world = {
+	opinion = {
+		base = -40
+	}
+
+	accumulative = yes
+
+	min = -200
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_backed_a_primitive_world_phile = {
+	opinion = {
+		base = -60
+	}
+
+	accumulative = yes
+
+	min = -300
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_abyss_descended_1 = {
+	opinion = {
+		base = 50
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_yuzu_abyss_descended_2 = {
+	opinion = {
+		base = 100
+	}
+
+	accumulative = yes
+
+	decay = {
+		base = 1
+	}
+}

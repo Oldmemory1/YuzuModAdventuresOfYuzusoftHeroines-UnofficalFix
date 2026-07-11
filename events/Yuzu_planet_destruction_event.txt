@@ -1,0 +1,766 @@
+namespace = Yuzu_planet_destruction_event
+
+#摧毁星系
+planet_event = {
+	id = Yuzu_planet_destruction_event.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		add_threat = { who = from.owner amount = 10 }
+		from = {
+			owner = {
+				save_event_target_as = crisis_country
+				add_victory_score = {
+					source = destroyed_stars_score
+					score = 10
+				}
+				switch = {
+					trigger = galaxy_size
+					huge = { add_resource = { sr_dark_matter = 1000 } }
+					large = { add_resource = { sr_dark_matter = 1500 } }
+					medium = { add_resource = { sr_dark_matter = 2000 } }
+					small = { add_resource = { sr_dark_matter = 2500 } }
+					tiny = { add_resource = { sr_dark_matter = 3000 } }
+				}
+			}
+		}
+		solar_system = { save_event_target_as = destroyed_system }
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_communications = event_target:crisis_country
+				NOR = {
+					is_same_value = event_target:crisis_country
+					has_country_flag = can_build_star_eaters
+					has_country_flag = star_eater_alert@event_target:crisis_country
+				}
+				intel_level = {
+					system = event_target:destroyed_system
+					level = none
+				}
+			}
+			country_event = { id = crisis.6180 }
+		}
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_communications = event_target:crisis_country
+				NOR = {
+					is_same_value = event_target:crisis_country
+					has_country_flag = can_build_star_eaters
+					has_country_flag = star_eater_alert@event_target:crisis_country
+				}
+				intel_level = {
+					system = event_target:destroyed_system
+					level > none
+				}
+			}
+			country_event = { id = crisis.6181 }
+		}
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_communications = event_target:crisis_country
+				NOR = {
+					is_same_value = event_target:crisis_country
+					has_country_flag = star_eater_alert@event_target:crisis_country
+				}
+				has_country_flag = can_build_star_eaters
+			}
+			country_event = { id = crisis.6182 }
+		}
+		every_playable_country = {
+			limit = {
+				has_communications = event_target:crisis_country
+			}
+			add_opinion_modifier = {
+				who = event_target:crisis_country
+				modifier = opinion_yuzu_destroyed_systems
+			}
+		}
+		solar_system = {
+			random_system_planet = {
+				limit = { has_modifier = holy_planet }
+				planet_event = { id = planet_destruction.605 }
+			}
+			set_update_modifiers_batch = begin
+			destroy_star_system = yes
+			set_update_modifiers_batch = end
+		}
+	}
+}
+
+# 时光倒流
+planet_event = {
+	id = Yuzu_planet_destruction_event.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		# Swarm Situation Log counter
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = swarm }
+			}
+			every_country = {
+				limit = { has_event_chain = "prethoryn_scourge_chain" }
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds"
+					amount = -1
+				}
+				add_event_chain_counter = {
+					event_chain = "prethoryn_scourge_chain"
+					counter = "infested_worlds_cleansed"
+					amount = 1
+				}
+			}
+			set_planet_flag = yuzu_planet_back_in_time_1
+		}
+		else_if = {
+			limit = {
+				count_owned_pop = {
+					count > 0
+				}
+			}
+			set_planet_flag = yuzu_planet_back_in_time_2
+		}
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+			# Generate threat
+			add_threat = { who = from.owner amount = 3 }
+			# modifier for allies + those upset by genocide
+			every_country = {
+				limit = {
+					NOR = {
+						is_same_value = from.owner
+						is_same_value = root.owner
+						AND = {
+							has_federation = yes
+							is_in_federation_with = from.owner
+						}
+					}
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+					OR = {
+						AND = {
+							has_federation = yes
+							is_in_federation_with = root.owner
+						}
+						has_ai_personality = awakened_fallen_empire_xenophile
+						AND = {
+							is_country_type = default
+							OR = {
+								is_egalitarian = yes
+								is_xenophile = yes
+								is_spiritualist = yes
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_yuzu_backed_a_world
+					who = from.owner
+				}
+			}
+			# modifiers for victim
+			owner = {
+				add_opinion_modifier = {
+					modifier = opinion_yuzu_backed_my_world
+					who = from.owner
+				}
+				if = {
+					limit = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+					add_modifier = {
+						modifier = colossus_victim
+						days = 10800 # 30 years
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = owner
+				owner = { is_country_type = primitive }
+			}
+			# modifier for allies + those upset by genocide
+			every_country = {
+				limit = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+					is_country_type = default
+					NOR = {
+						is_xenophobe = yes
+						is_homicidal = yes
+						is_xenophile = yes
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_yuzu_backed_a_primitive_world
+					who = from.owner
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = { is_same_value = from.owner }
+					OR = {
+						has_communications = from.owner
+						has_communications = root.owner
+					}
+					OR = {
+						has_ai_personality = awakened_fallen_empire_xenophile
+						AND = {
+							is_country_type = default
+							is_xenophile = yes
+						}
+					}
+				}
+				add_opinion_modifier = {
+					modifier = opinion_yuzu_backed_a_primitive_world_phile
+					who = from.owner
+				}
+			}
+		}
+		# Add war exhaustion to planet owner
+		owner = {
+			if = {
+				limit = { #isn't the case when the crisis bombards planets, for instance
+					is_at_war_with = from.fleet.owner
+				}
+				add_static_war_exhaustion = {
+					attacker = from.fleet.owner
+					location = root
+					value_for_planet_destruction = 1.0
+				}
+			}
+		}
+		#every_owned_pop = {
+		#	from.owner = {
+		#		if = {
+		#			limit = { has_ascension_perk = ap_become_the_crisis }
+		#			complete_crisis_objective = crisobj_purge_pops
+		#		}
+		#	}
+		#}
+		set_update_modifiers_batch = begin
+		remove_all_districts = yes
+		remove_all_buildings = yes
+		destroy_colony = yes
+		set_update_modifiers_batch = end
+		if = {
+			limit = {
+				is_planet_class = pc_black_hole
+				planet_size = 2
+			}
+			solar_system = {
+				random_system_ambient_object = {
+					limit = {
+						is_ambient_object_type = dimensional_horrorling_object
+					}
+					destroy_ambient_object = this
+				}
+			}
+		}
+		set_yuzu_planet_size = yes
+		if = {
+			limit = { has_planet_flag = primary_pc_desert }
+			change_pc = pc_desert
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_arid  }
+			change_pc = pc_arid 
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_savannah }
+			change_pc = pc_savannah
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_tropical }
+			change_pc = pc_tropical
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_continental }
+			change_pc = pc_continental
+			reroll_planet = yes
+			if = {
+				limit = {
+					has_planet_flag = planet_earth
+				}
+				set_planet_entity = { entity = "continental_planet_earth_entity" }
+			}
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_ocean  }
+			change_pc = pc_ocean
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_tundra }
+			change_pc = pc_tundra
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_arctic }
+			change_pc = pc_arctic
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_alpine }
+			change_pc = pc_alpine
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_gaia }
+			change_pc = pc_gaia
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_relic }
+			clear_deposits = yes
+			change_pc = pc_relic
+			relic_world_deposits = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_relic_abyss }
+			clear_deposits = yes
+			change_pc = pc_relic
+			relic_world_deposits = yes
+			if = {
+				limit = { has_planet_flag = yuzu_broken_abyss_world }
+				remove_planet_flag = yuzu_broken_abyss_world
+				set_planet_flag = yuzu_planet_back_in_time_3
+			}
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_molten }
+			change_pc = pc_molten
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_barren }
+			if = {
+				limit = {
+					has_modifier = terraforming_candidate
+				}
+				set_planet_flag = yuzu_may_terraform
+			}
+			random_list = {
+				95 = { change_pc = pc_barren }
+				5 = { change_pc = pc_barren_cold }
+			}
+			reroll_planet = yes
+			if = {
+				limit = {
+					has_planet_flag = yuzu_may_terraform
+				}
+				random_list = {
+					50 = { add_modifier = { modifier = terraforming_candidate } } # 其实环境改造候选和潮汐锁定好像不会被reroll_planet去掉
+					50 = {}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_barren_cold }
+			if = {
+				limit = {
+					has_modifier = terraforming_candidate
+				}
+				set_planet_flag = yuzu_may_terraform
+			}
+			random_list = {
+				5 = { change_pc = pc_barren }
+				95 = { change_pc = pc_barren_cold }
+			}
+			reroll_planet = yes
+			if = {
+				limit = {
+					has_planet_flag = yuzu_may_terraform
+				}
+				random_list = {
+					50 = { add_modifier = { modifier = terraforming_candidate } }
+					50 = {}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_toxic }
+			change_pc = pc_toxic
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_frozen }
+			change_pc = pc_frozen
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_broken }
+			change_pc = pc_broken
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_shattered }
+			change_pc = pc_shattered
+			reroll_planet = yes
+		}
+		else_if = {
+			limit = { has_planet_flag = primary_pc_gas_giant }
+			change_pc = pc_gas_giant
+			reroll_planet = yes
+			random_list = {
+				20 = {
+					set_planet_entity = { entity = "gas_giant_01_entity" }
+				}
+				20 = {
+					set_planet_entity = { entity = "gas_giant_02_entity" }
+				}
+				20 = {
+					set_planet_entity = { entity = "gas_giant_03_entity" }
+				}
+				20 = {
+					set_planet_entity = { entity = "gas_giant_04_entity" }
+				}
+				20 = {
+					set_planet_entity = { entity = "gas_giant_05_entity" }
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = primary_pc_desert
+					has_planet_flag = primary_pc_arid
+					has_planet_flag = primary_pc_savannah
+					has_planet_flag = primary_pc_tropical
+					has_planet_flag = primary_pc_continental
+					has_planet_flag = primary_pc_ocean
+					has_planet_flag = primary_pc_tundra
+					has_planet_flag = primary_pc_arctic
+					has_planet_flag = primary_pc_alpine
+					has_planet_flag = primary_pc_gaia
+				}
+				NOT = { has_planet_flag = has_no_primitives_back }
+			}
+			random_list = {
+				60 = {}
+				20 = {
+					set_planet_flag = has_no_primitives_back
+				}
+				15 = {
+					random_list = {
+						25 = { generate_pre_ftls_on_planet = yes }
+						70 = { generate_very_early_pre_ftls_on_planet = yes }
+						5 = { generate_subterranean_pre_ftls_on_planet = yes }
+					}
+					set_planet_flag = has_no_primitives_back
+					set_planet_flag = yuzu_planet_back_in_time_4
+				}
+				5 = {
+					random_list = {
+						25 = { generate_pre_ftls_on_planet = yes }
+						70 = { generate_very_early_pre_ftls_on_planet = yes }
+						5 = { generate_subterranean_pre_ftls_on_planet = yes }
+					}
+					set_planet_flag = yuzu_planet_back_in_time_4
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_planet_flag = yuzu_planet_back_in_time_1
+			}
+			from.owner = {
+				country_event = { id = Yuzu_planet_destruction_event.101 }
+			}
+		}
+		if = {
+			limit = {
+				has_planet_flag = yuzu_planet_back_in_time_2
+				NOT = { has_planet_flag = yuzu_planet_back_in_time_4 }
+			}
+			from.owner = {
+				country_event = { id = Yuzu_planet_destruction_event.102 }
+			}
+		}
+		if = {
+			limit = {
+				has_planet_flag = yuzu_planet_back_in_time_3
+			}
+			from.owner = {
+				country_event = { id = Yuzu_planet_destruction_event.103 }
+			}
+		}
+		if = {
+			limit = {
+				has_planet_flag = yuzu_planet_back_in_time_4
+			}
+			from.owner = {
+				country_event = { id = Yuzu_planet_destruction_event.104 }
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = yuzu_planet_back_in_time_1
+					has_planet_flag = yuzu_planet_back_in_time_2
+					has_planet_flag = yuzu_planet_back_in_time_3
+					has_planet_flag = yuzu_planet_back_in_time_4
+				}
+			}
+			from.owner = {
+				country_event = { id = Yuzu_planet_destruction_event.105 }
+			}
+		}
+		#Dismantle observation post
+		if = {
+			limit = {
+				has_observation_outpost = yes
+			}
+			if = {
+				limit = {
+					has_planet_flag = yuzu_planet_back_in_time_4
+				}
+				observation_outpost_owner = {
+					country_event = { id = Yuzu_planet_destruction_event.110 days = 1 }
+				}
+			}
+			else = {
+				observation_outpost_owner = {
+					country_event = { id = Yuzu_planet_destruction_event.111 days = 1 }
+				}
+			}
+		}
+		remove_planet_flag = yuzu_planet_back_in_time_1
+		remove_planet_flag = yuzu_planet_back_in_time_2
+		remove_planet_flag = yuzu_planet_back_in_time_3
+		remove_planet_flag = yuzu_planet_back_in_time_4
+	}
+}
+
+#回溯孵化星球
+country_event = {
+	id = Yuzu_planet_destruction_event.101
+	title = Yuzu_planet_destruction_event.101.name
+	desc = Yuzu_planet_destruction_event.101.desc
+	picture = GFX_evt_planet_beam
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fired_yuzu_back_in_time_1 }
+	}
+
+	immediate = {
+		set_country_flag = fired_yuzu_back_in_time_1
+	}
+
+	option = {
+		name = Yuzu_planet_destruction_event.101.a
+	}
+}
+
+#回溯有人星球
+country_event = {
+	id = Yuzu_planet_destruction_event.102
+	title = Yuzu_planet_destruction_event.102.name
+	desc = Yuzu_planet_destruction_event.102.desc
+	picture = GFX_evt_planet_beam
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fired_yuzu_back_in_time_2 }
+	}
+
+	immediate = {
+		set_country_flag = fired_yuzu_back_in_time_2
+	}
+
+	option = {
+		name = OK
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+
+	option = {
+		name = planet_destruction.101.a.purifexter
+		trigger = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 60
+			min = 600
+			max = 3000
+		}
+	}
+}
+
+#回溯毁灭的深渊都市星球
+country_event = {
+	id = Yuzu_planet_destruction_event.103
+	title = Yuzu_planet_destruction_event.103.name
+	desc = Yuzu_planet_destruction_event.103.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fired_yuzu_back_in_time_3 }
+	}
+
+	immediate = {
+		set_country_flag = fired_yuzu_back_in_time_3
+	}
+
+	option = {
+		name = Yuzu_planet_destruction_event.103.a
+	}
+}
+
+#土著重现
+country_event = {
+	id = Yuzu_planet_destruction_event.104
+	title = Yuzu_planet_destruction_event.104.name
+	desc = Yuzu_planet_destruction_event.104.desc
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = AMAZING
+	}
+}
+
+#星球回溯（普通）
+country_event = {
+	id = Yuzu_planet_destruction_event.105
+	title = Yuzu_planet_destruction_event.105.name
+	desc = Yuzu_planet_destruction_event.105.desc
+	picture = GFX_evt_planet_beam
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = fired_yuzu_back_in_time_0 }
+	}
+
+	immediate = {
+		set_country_flag = fired_yuzu_back_in_time_0
+	}
+
+	option = {
+		name = Yuzu_planet_destruction_event.105.a
+	}
+}
+
+# 观测站：土著重现
+country_event = {
+	id = Yuzu_planet_destruction_event.110
+	title = Yuzu_planet_destruction_event.110.name
+	desc = {
+		trigger = {
+			is_same_value = fromfrom.owner
+		}
+		text = Yuzu_planet_destruction_event.110.desc.self
+	}
+	desc = {
+		trigger = {
+			NOT = { is_same_value = fromfrom.owner }
+		}
+		text = Yuzu_planet_destruction_event.110.desc.notself
+	}
+
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_mystic_reveal
+	location = from
+
+	trigger = {
+		from = {
+			has_observation_outpost = yes
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_planet_destruction_event.110.a
+	}
+}
+
+# 观测站：回溯土著
+country_event = {
+	id = Yuzu_planet_destruction_event.111
+	title = Yuzu_planet_destruction_event.111.name
+	desc = {
+		trigger = {
+			is_same_value = fromfrom.owner
+		}
+		text = Yuzu_planet_destruction_event.111.desc.self
+	}
+	desc = {
+		trigger = {
+			NOT = { is_same_value = fromfrom.owner }
+		}
+		text = Yuzu_planet_destruction_event.111.desc.notself
+	}
+
+	picture = GFX_evt_planet_beam
+	show_sound = event_mystic_reveal
+	location = from
+
+	trigger = {
+		from = {
+			has_observation_outpost = yes
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_planet_destruction_event.111.a
+		from = {
+			observation_outpost = {
+				dismantle = yes
+			}
+		}
+	}
+}

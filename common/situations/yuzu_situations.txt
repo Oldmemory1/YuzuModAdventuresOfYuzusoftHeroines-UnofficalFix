@@ -1,0 +1,277 @@
+situation_yuzu_slime = {
+	picture = GFX_evt_yuzu_slime
+	start_value = 30
+#	progress_direction = bidirectional
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_unknown
+	fail_icon_frame = GFX_situation_outcome_frame_blue
+	fail_icon = GFX_situation_outcome_unknown
+	monthly_progress = {
+		modifier = {
+			desc = string_current_approach
+			OR = {
+				current_situation_approach = approach_yuzu_do_nothing
+				current_situation_approach = approach_yuzu_assistance
+			}
+			add = 2.5
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_yuzu_eliminate
+			subtract = 3
+		}
+		modifier = {
+			desc = string_current_approach
+			current_situation_approach = approach_yuzu_cordon_off
+			subtract = 1.5
+		}
+	}
+	approach = {
+		name = approach_yuzu_do_nothing
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = approach_yuzu_do_nothing_effect
+		}
+		ai_weight = {
+			base = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+					}
+				}
+			}
+		}
+	}
+	approach = {
+		name = approach_yuzu_eliminate
+		icon = GFX_situation_approach_sword
+		icon_background = GFX_situation_approach_bg_red
+		on_select = {
+			custom_tooltip = approach_yuzu_eliminate_effect
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 5
+			}
+		}
+		ai_weight = {
+			base = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_militarist = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+		potential = {
+			NOT = { has_situation_flag = yuzu_slime_adapted }
+			OR = {
+				NOT = { current_stage = stage_3 }
+				owner = { is_xenophobe = yes }
+			}
+		}
+	}
+	approach = {
+		name = approach_yuzu_assistance
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_yuzu_assistance_effect
+		}
+		triggered_target_modifier = {
+			potential = {
+				current_stage = stage_1
+			}
+			modifier = {
+				planet_stability_add = 5
+			    pop_happiness = 0.05
+				planet_pops_consumer_goods_upkeep_mult = -0.1
+			}
+		}
+		triggered_target_modifier = {
+			potential = {
+				current_stage = stage_2_alt
+			}
+			modifier = {
+				planet_stability_add = 10
+			    pop_happiness = 0.1
+				planet_pops_consumer_goods_upkeep_mult = -0.2
+			}
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				trigger = {
+					current_stage = stage_1
+				}
+				consumer_goods = 5
+			}
+			upkeep = {
+				trigger = {
+					current_stage = stage_2_alt
+				}
+				consumer_goods = 10
+			}
+		}
+		ai_weight = {
+			base = 2
+			modifier = {
+				factor = 3
+				owner = {
+					has_country_resource = {
+						type = consumer_goods
+						amount >= 200
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+					}
+				}
+			}
+		}
+		potential = {
+			OR = {
+				current_stage = stage_2_alt
+				AND = {
+					has_situation_flag = yuzu_unlock_assistance
+					current_stage = stage_1
+				}
+			}
+		}
+	}
+	approach = {
+		name = approach_yuzu_cordon_off
+		icon = GFX_situation_approach_whip
+		icon_background = GFX_situation_approach_bg_yellow
+		on_select = {
+			custom_tooltip = approach_yuzu_cordon_off_effect
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				energy = 2
+			}
+		}
+		ai_weight = {
+			base = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_militarist = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+		potential = {
+			current_stage = stage_3
+			NOT = { has_situation_flag = yuzu_slime_adapted }
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = situation_unknown_outcome_approach
+		hidden_effect = {
+			if = {
+				limit = { current_situation_approach = approach_yuzu_eliminate }
+				situation_event = { id = Yuzu_situation_event.6 }
+			}
+			else = {
+#			    limit = { current_situation_approach = approach_yuzu_cordon_off }
+				situation_event = { id = Yuzu_situation_event.7 }
+			}
+		}
+	}
+	stages = {
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 5
+			on_first_enter = {
+				situation_event = { id = Yuzu_situation_event.2 }
+			}
+	#		custom_tooltip = stage_unknown_effects
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 15
+			on_first_enter = {
+				situation_event = { id = Yuzu_situation_event.3 }
+			}
+			modifier = {
+				planet_stability_add = -5
+				pop_happiness = -0.05
+				planet_pops_consumer_goods_upkeep_mult = 0.1
+			}
+	#		custom_tooltip = stage_unknown_effects
+		}
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 50
+			modifier = {
+				planet_stability_add = -10
+				pop_happiness = -0.1
+				planet_pops_consumer_goods_upkeep_mult = 0.2
+			}
+	#		custom_tooltip = stage_unknown_effects
+		}
+		stage_2_alt = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 90
+			on_first_enter = {
+				situation_event = { id = Yuzu_situation_event.4 }
+			}
+			modifier = {
+				planet_stability_add = -20
+				pop_happiness = -0.2
+				planet_pops_consumer_goods_upkeep_mult = 0.4
+			}
+	#		custom_tooltip = stage_unknown_effects
+		}
+		stage_3_alt = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			on_first_enter = {
+				situation_event = { id = Yuzu_situation_event.5 }
+			}
+			modifier = {
+				planet_stability_add = -5
+				pop_happiness = -0.05
+				planet_pops_consumer_goods_upkeep_mult = 0.1
+			}
+	#		custom_tooltip = stage_unknown_effects
+		}
+	}
+	on_progress_complete = {
+		custom_tooltip = situation_unknown_outcome_approach
+		hidden_effect = {
+			situation_event = { id = Yuzu_situation_event.8 }
+		}
+	}
+
+	abort_trigger = {
+		OR = {
+			NOT = { exists = target.owner }
+			target.owner = { NOT = { is_same_value = root.owner } }
+		}
+	}
+}

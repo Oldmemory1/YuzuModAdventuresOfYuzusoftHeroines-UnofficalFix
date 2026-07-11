@@ -1,0 +1,188 @@
+is_YUZU = {
+    species = {
+    	is_species_class = YUZUGIRL
+	}
+}
+
+is_yuzu_empire = {
+	owner_species = { is_YUZU = yes }
+}
+
+is_yuzu_abyss_empire = {
+	is_country_type = new_abyss_empire
+}
+
+has_set_yuzu_primary_pc_flag = {
+	OR = {
+		has_planet_flag = primary_pc_desert
+		has_planet_flag = primary_pc_arid
+		has_planet_flag = primary_pc_savannah
+		has_planet_flag = primary_pc_tropical
+		has_planet_flag = primary_pc_continental
+		has_planet_flag = primary_pc_ocean
+		has_planet_flag = primary_pc_tundra
+		has_planet_flag = primary_pc_arctic
+		has_planet_flag = primary_pc_alpine
+		has_planet_flag = primary_pc_gaia
+		has_planet_flag = primary_pc_relic
+		has_planet_flag = primary_pc_relic_abyss
+		has_planet_flag = primary_pc_molten
+		has_planet_flag = primary_pc_barren
+		has_planet_flag = primary_pc_barren_cold
+		has_planet_flag = primary_pc_toxic
+		has_planet_flag = primary_pc_frozen
+		has_planet_flag = primary_pc_gas_giant
+		has_planet_flag = primary_pc_broken
+		has_planet_flag = primary_pc_shattered
+	}
+}
+
+can_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_YUZU = {
+	custom_tooltip = {
+		fail_text = is_not_star
+		is_star = yes
+	}
+	custom_tooltip = {
+		fail_text = is_black_hole
+		NOT = { is_planet_class = pc_black_hole }
+	}
+	custom_tooltip = {
+		fail_text = star_owner_is_not_hostile
+		OR = {
+			NOT = { exists = space_owner }
+			space_owner = { is_hostile = from.owner }
+		}
+	}
+}
+
+can_destroy_planet_with_PLANET_KILLER_BACK_IN_TIME = {
+	OR = {
+		custom_tooltip = {
+			text = is_not_hostile_cracker
+			OR = {
+				AND = {
+					exists = space_owner
+					space_owner = {
+						OR = {
+							is_hostile = from.owner
+							is_at_war_with = from.owner
+							is_country_type = swarm
+							is_country_type = extradimensional
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+							is_country_type = ai_empire
+							is_country_type = new_abyss_empire
+						}
+					}
+				}
+				AND = { # colony
+					exists = owner
+					owner = {
+						OR = {
+							is_hostile = from.owner
+							is_at_war_with = from.owner
+							is_country_type = swarm
+							is_country_type = extradimensional
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+							is_country_type = ai_empire
+							is_country_type = new_abyss_empire
+						}
+					}
+				}
+				AND = { # primitive
+					exists = space_owner
+					exists = owner
+					owner = {
+						is_primitive = yes
+					}
+					space_owner = {
+						OR = {
+							is_hostile = from.owner
+							is_at_war_with = from.owner
+							is_country_type = swarm
+							is_country_type = extradimensional
+							is_country_type = extradimensional_2
+							is_country_type = extradimensional_3
+							is_country_type = ai_empire
+							is_country_type = new_abyss_empire
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			text = yuzu_no_right_back_in_time
+			OR = { 
+				NOT = { exists = owner }
+				AND = {
+					exists = owner
+					owner = { is_primitive = yes }
+				}
+			}
+			OR = {
+				NOT = { exists = space_owner }
+				AND = {
+					exists = space_owner
+					space_owner = { is_same_value = from.owner }
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = yuzu_can_not_back_because_pc_ai_1
+		NOR = {
+			is_planet_class = pc_ai
+			is_planet_class = pc_machine_broken
+		}
+	}
+	custom_tooltip = {
+		fail_text = yuzu_can_not_back_because_pc_ai_2
+		NAND = {
+			has_global_flag = ai_invasion_happened
+			OR = {
+				has_planet_flag = machine_world_1
+				has_planet_flag = machine_world_2
+				has_planet_flag = machine_world_3
+				has_planet_flag = machine_world_4
+				has_planet_flag = machine_lair
+			}
+			NOT = { is_planet_class = pc_ai }
+		}
+	}
+	custom_tooltip = {
+		fail_text = can_not_back_in_time
+		has_set_yuzu_primary_pc_flag = yes
+	}
+	if = {
+		limit = {
+			exists = owner
+			owner = { is_country_type = primitive }
+		}
+		custom_tooltip = {
+			fail_text = yuzu_back_primitives_not_xenophobe
+			from.owner = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+	}
+}
+
+has_yuzu_crisis_stage_1 ={
+	has_global_flag = yuzu_crisis_stage_1
+}
+
+has_yuzu_crisis_stage_2 ={
+	has_global_flag = yuzu_crisis_stage_2
+}
+
+has_yuzu_crisis_stage_3 ={
+	has_global_flag = yuzu_crisis_stage_3
+}
+
+has_yuzu_crisis_stage_4 ={
+	has_global_flag = yuzu_crisis_stage_4
+}

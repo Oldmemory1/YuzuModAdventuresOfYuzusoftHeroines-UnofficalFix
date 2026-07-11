@@ -1,0 +1,304 @@
+leader_trait_yuzu = {
+	icon = "gfx/interface/icons/traits/leader_traits/trait_yuzu.dds"
+	custom_subtitle = triggered_trait
+
+	leader_trait_rarity = common
+	sorting_priority = 2000
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+		negative_traits_leader = -2
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_immortal_yuzu = {
+	icon = "gfx/interface/icons/traits/leader_traits/trait_yuzu.dds"
+	immortal_leaders = yes
+	custom_subtitle = triggered_trait
+
+	leader_trait_rarity = common
+	sorting_priority = 2000
+	self_modifier = {
+		leader_trait_selection_options_add = 1
+		negative_traits_leader = -2
+	}
+	self_modifier = {
+		species_leader_exp_gain = 0.25
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_yuzu_astral = {
+	icon = "gfx/interface/icons/traits/leader_traits/trait_astral.dds"
+	custom_subtitle = triggered_trait
+	
+	leader_trait_rarity = common
+	sorting_priority = 500
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		species_leader_exp_gain = 0.25
+	}
+
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_weapon_damage = 0.10
+		ship_speed_mult = 0.10
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+		ships_upkeep_mult = -0.10
+		ship_sensor_range_add = 1
+		ship_cloaking_strength_add = 1
+		ship_disengage_chance_mult = 0.20
+		ship_emergency_ftl_mult = -0.10
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.1
+		ship_anomaly_generation_chance_mult = 0.2
+		ship_anomaly_research_speed_mult = 0.2
+		ship_anomaly_fail_risk = -0.2
+		ship_archaeological_site_clues_add = 1
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.10
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.20
+		army_health = 0.20
+		army_disengage_chance_mult = 0.5
+		armies_upkeep_mult = -0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_specialist_produces_mult = 0.10
+		planet_building_build_speed_mult = 0.20
+		planet_clear_blocker_speed_mult = 0.20 # planet_clear_blocker_time_mult = -0.10 无效
+		starbase_shipyard_build_speed_mult = 0.20 # starbase_shipyard_build_time_mult = -0.10 貌似无效
+		planet_army_build_speed_mult = 0.20
+		planet_amenities_mult = 0.10
+		planet_crime_mult = -0.25
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		country_megastructure_build_cap_add = 1
+		country_starbase_capacity_mult = 0.25
+		starbase_defense_platform_capacity_mult = 0.50
+		country_war_exhaustion_mult = -0.10
+		empire_size_districts_mult = -0.50
+		empire_size_colonies_mult = -0.40
+	    empire_size_systems_mult = -0.30
+		empire_size_pops_mult = -0.20
+		empire_size_penalty_mult = -0.10
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_yuzu_vampire = {
+	icon = "gfx/interface/icons/traits/leader_traits/trait_vampire.dds"
+	custom_subtitle = triggered_trait
+	
+	leader_trait_rarity = common
+	sorting_priority = 500
+	triggered_self_modifier = {
+		potential = {
+			always = yes
+		}
+		species_leader_exp_gain = 0.25
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.10
+		ship_weapon_range_mult = 0.10
+		ship_evasion_mult = 0.2
+		ship_hull_mult = 0.1
+		ship_hyperlane_range_add = 1
+		ship_disengage_opportunities_add = 1
+		ship_experience_gain_mult = 0.5
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		science_ship_survey_speed = 0.2
+		ship_anomaly_generation_chance_mult = 0.1
+		ship_anomaly_research_speed_mult = 0.1
+		ship_anomaly_fail_risk = -0.1
+		shipclass_science_ship_disengage_mult = 0.25
+		ship_archaeological_site_excavation_speed_mult = 0.25
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.05
+		category_field_manipulation_research_speed_mult = 0.15
+		category_biology_research_speed_mult = 0.15
+		category_industry_research_speed_mult = 0.15
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.25
+		army_morale = 0.5
+		army_morale_damage_mult = 0.5
+		army_experience_gain_mult = 0.5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_worker_produces_mult = 0.10
+		planet_buildings_cost_mult = -0.10
+		planet_districts_cost_mult = -0.10
+		deposit_blockers_cost_mult = -0.10
+
+		armies_cost_mult = -0.10
+		planet_orbital_bombardment_damage = -0.20
+		planet_crime_add = -25
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		country_enclave_capacity_add = 1
+		country_starbase_influence_cost_mult = -0.20
+		country_claim_influence_cost_mult = -0.20
+		country_war_exhaustion_mult = -0.10
+		empire_size_districts_mult = -0.25
+		empire_size_colonies_mult = -0.20
+	    empire_size_systems_mult = -0.15
+		empire_size_pops_mult = -0.10
+		empire_size_penalty_mult = -0.20
+		starbase_shipyard_build_cost_mult = -0.10
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_yuzu_abyss = {
+	icon = "gfx/interface/icons/traits/leader_traits/trait_abyss.dds"
+	custom_subtitle = triggered_trait
+	
+	leader_trait_rarity = common
+	sorting_priority = 2000
+	self_modifier = {
+		leader_trait_selection_options_add = 2
+	}
+	triggered_fleet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		ship_fire_rate_mult = 0.20
+		ship_weapon_damage = 0.20
+		ship_speed_mult = 0.20
+		ship_evasion_mult = 0.20
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+		ship_shield_regen_add_perc = 0.5
+	}
+	triggered_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		shipclass_science_ship_disengage_mult = 0.50
+		ship_archaeological_site_clues_add = 5
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = scientist
+		}
+		all_technology_research_speed = 0.20
+	}
+	triggered_army_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = commander
+		}
+		army_damage_mult = 0.50
+		army_health = 0.50
+		army_morale = 0.50
+		army_morale_damage_mult = 0.50
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_ruler = no
+			leader_class = official
+		}
+		planet_jobs_produces_mult = 0.10
+		planet_stability_add = 10
+		planet_crime_add = -100
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			is_ruler = yes
+		}
+		country_ruler_influence_produces_add = 5
+	}
+	leader_class = { commander scientist official }
+	initial = no
+	randomized = no
+}
+
+leader_trait_yuzu_abyss_presiding_judge = {
+	icon = "gfx/interface/icons/traits/leader_traits/trait_abyss.dds"
+	#councilor_trait = yes
+	custom_subtitle = triggered_trait
+	leader_trait_rarity = common
+	sorting_priority = 500
+	fleet_modifier = {
+		ship_fire_rate_mult = 0.50
+		ship_weapon_range_mult = 0.50
+		ship_weapon_damage = 0.20
+		ship_speed_mult = 0.20
+		ship_evasion_mult = 0.20
+		ship_hull_regen_add_perc = 1.0
+		ship_armor_regen_add_perc = 1.0
+		ship_shield_regen_add_perc = 1.0
+	}
+	leader_class = { commander }
+	#leader_trait = { commander }
+	initial = no
+	randomized = no
+}

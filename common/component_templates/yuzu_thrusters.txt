@@ -1,0 +1,185 @@
+utility_component_template = {
+	key = "SHIP_THRUSTER_YUZU"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1"
+	icon_frame = 1
+	power = -35
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 15
+			sr_dark_matter = 1
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.50
+		ship_evasion_add = 25
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1" }
+	component_set = "thruster_components"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_YUZU"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1"
+	icon_frame = 1
+	power = -70
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			sr_dark_matter = 2
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.50
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_YUZU"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1"
+	icon_frame = 1
+	power = -140
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 60
+			sr_dark_matter = 4
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.50
+		ship_evasion_add = 12
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1" }
+	component_set = "thruster_components"
+	size_restriction = { cruiser crisis_cruiser offspring_cruiser }
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_YUZU"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1"
+	icon_frame = 1
+	power = -280
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			sr_dark_matter = 8
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.50
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1" }
+	component_set = "thruster_components"
+	size_restriction = { battleship offspring_battleship }
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_YUZU"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1"
+	icon_frame = 1
+	power = -560
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 240
+			sr_dark_matter = 16
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.50
+		ship_evasion_add = 5
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1" }
+	component_set = "thruster_components"
+	size_restriction = { titan }
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_YUZU"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1"
+	icon_frame = 1
+	power = -700
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 360
+			sr_dark_matter = 32
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.50
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1" }
+	component_set = "thruster_components"
+	size_restriction = { colossus juggernaut star_eater yuzu_star_eater }
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}

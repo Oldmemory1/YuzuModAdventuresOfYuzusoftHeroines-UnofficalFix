@@ -1,0 +1,441 @@
+yuzu_overloaded_clone = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+	}
+
+	modifier = {
+		custom_tooltip = edict_yuzu_overloaded_clone_tooltip
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			has_country_resource = {
+				type = food
+				amount >= 1000
+			}
+		}
+	}
+}
+
+yuzu_share_techs = {
+	length = 3600
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	allow = {
+		is_overlord = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.21 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+yuzu_wish_resource = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  200
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.100 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+#		weight = 500
+#		modifier = {
+#			factor = 0
+#			NOR = {
+#				has_country_resource = {
+#					type = energy
+#					amount < 100
+#				}
+#				has_country_resource = {
+#					type = minerals
+#					amount < 100
+#				}
+#				has_country_resource = {
+#					type = food
+#					amount < 100
+#				}
+#				has_country_resource = {
+#					type = consumer_goods
+#					amount < 100
+#				}
+#				has_country_resource = {
+#					type = alloys
+#					amount < 100
+#				}
+#				AND = {
+#					has_country_resource = {
+#						type = exotic_gases
+#						amount < 50
+#					}
+#					OR = {
+#						has_technology = tech_mine_exotic_gases
+#						has_technology = tech_exotic_gases
+#					}
+#				}
+#				AND = {
+#					has_country_resource = {
+#						type = rare_crystals
+#						amount < 50
+#					}
+#					OR = {
+#						has_technology = tech_mine_rare_crystals
+#						has_technology = tech_rare_crystals
+#					}
+#				}
+#				AND = {
+#					has_country_resource = {
+#						type = volatile_motes
+#						amount < 50
+#					}
+#					OR = {
+#						has_technology = tech_mine_volatile_motes
+#						has_technology = tech_volatile_motes
+#					}
+#				}
+#				AND = {
+#					OR = {
+#						has_country_resource = {
+#							type = sr_dark_matter
+#							amount < 50
+#						}
+#						AND = {
+#							has_country_resource = {
+#								type = sr_dark_matter
+#								amount < 5000
+#							}
+#							has_technology = tech_yuzu_reaper_scythe
+#						}
+#					}
+#					has_technology = tech_mine_dark_matter
+#				}
+#				AND = {
+#					OR = {
+#						has_country_resource = {
+#							type = sr_living_metal
+#							amount < 50
+#						}
+#						AND = {
+#							has_country_resource = {
+#								type = sr_living_metal
+#								amount < 5000
+#							}
+#							has_technology = tech_yuzu_reaper_scythe
+#						}
+#					}
+#					has_technology = tech_mine_living_metal
+#				}
+#				OR = {
+#					has_country_resource = {
+#						type = nanites
+#						amount < 50
+#					}
+#					AND = {
+#						has_country_resource = {
+#							type = nanites
+#							amount < 5000
+#						}
+#						has_technology = tech_yuzu_reaper_scythe
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+yuzu_wish_research = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  200
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.101 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+#		weight = 500
+#		modifier = {
+#			factor = 0
+#			OR = {
+#				AND = {
+#					exists = overlord
+#					overlord = {
+#						is_ai = no
+#						has_valid_civic = civic_yuzu_win_the_hearts
+#					}
+#				}
+#				has_monthly_income = { resource = physics_research value >= 1000 }
+#			}
+#		}
+	}
+}
+
+yuzu_wish_unity_influence = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  200
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.102 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+#		weight = 500
+#		modifier = {
+#			factor = 0
+#			NOR = {
+#				has_monthly_income = { resource = unity value < 200 }
+#				has_country_resource = {
+#					type = influence
+#					amount < 100
+#				}
+#			}
+#		}
+	}
+}
+
+yuzu_wish_artifacts = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  500
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.103 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+#		weight = 500
+#		modifier = {
+#			factor = 0
+#			has_country_resource = {
+#				type = minor_artifacts
+#				amount >= 100
+#			}
+#		}
+	}
+}
+
+yuzu_wish_fleet = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  1000
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.104 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+#		weight = 500
+#		modifier = {
+#			factor = 0
+#			NAND = {
+#				OR = {
+#					has_monthly_income = { resource = energy value >= 50 }
+#					has_country_resource = {
+#						type = energy
+#						amount >= 5000
+#					}
+#				}
+#				OR = {
+#					has_monthly_income = { resource = alloys value >= 10 }
+#					has_country_resource = {
+#						type = alloys
+#						amount >= 1000
+#					}
+#				}
+#				OR = {
+#					AND = {
+#						used_naval_capacity_percent < 0.20
+#						max_naval_capacity > 150
+#					}
+#					AND = {
+#						used_naval_capacity_percent < 0.50
+#						max_naval_capacity > 300
+#					}
+#					AND = {
+#						used_naval_capacity_percent < 0.80
+#						max_naval_capacity > 600
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+yuzu_wish_building = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  1000
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.107 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+yuzu_wish_megastructure_build = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  5000
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.108 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+#		weight = 500
+#		modifier = {
+#			factor = 0
+#			count_owned_megastructure = {
+#				count < 2
+#				limit = { is_upgrading = yes }
+#			}
+#		}
+#		modifier = {
+#			factor = 2
+#			count_owned_megastructure = {
+#				count > 2
+#				limit = { is_upgrading = yes }
+#			}
+#		}
+	}
+}
+
+yuzu_wish_peace = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  10000
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+		OR = {
+			has_ethic = ethic_pacifist
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.105 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

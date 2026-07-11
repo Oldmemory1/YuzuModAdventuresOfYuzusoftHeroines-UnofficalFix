@@ -1,0 +1,119 @@
+site_yuzu_land_of_space_time_chaos = {
+	desc = site_yuzu_land_of_space_time_chaos_desc
+	picture = GFX_evt_senrenbanka_field
+	stages = 6
+	weight = 0
+	max_instances = 999
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	potential = {
+		hidden_trigger = {
+			owner = {
+				is_YUZU = yes
+			}
+		}
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 4 # 2
+		event = Yuzu_arc_sites_event.1
+		icon = GFX_archaeology_runes_B1
+	}
+	stage = {
+		difficulty = 2
+		event = Yuzu_arc_sites_event.2
+		icon = GFX_archaeology_runes_B2
+	}
+	stage = {
+		difficulty = 6 # 4
+		event = Yuzu_arc_sites_event.3
+		icon = GFX_archaeology_runes_B3
+	}
+	stage = {
+		difficulty = 8 # 6
+		event = Yuzu_arc_sites_event.4
+		icon = GFX_archaeology_runes_B4
+	}
+	stage = {
+		difficulty = 8 # 6
+		event = Yuzu_arc_sites_event.5
+		icon = GFX_archaeology_runes_B5
+	}
+	stage = {
+		difficulty = 10 # 8
+		event = Yuzu_arc_sites_event.6
+		icon = GFX_archaeology_runes_B6
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = yuzu_arc_sites_random_events_1 } }
+	}
+}
+
+site_yuzu_land_of_ceremony = {
+	desc = site_yuzu_land_of_ceremony_desc
+	picture = GFX_evt_relic_world
+	stages = 6
+	weight = 0
+	max_instances = 1
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	potential = {
+		hidden_trigger = {
+			owner = {
+				is_YUZU = yes
+			}
+		}
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 2
+		event = Yuzu_arc_sites_event.7
+		icon = GFX_archaeology_runes_B1
+	}
+	stage = {
+		difficulty = 6 # 4
+		event = Yuzu_arc_sites_event.8
+		icon = GFX_archaeology_runes_B2
+	}
+	stage = {
+		difficulty = 8 # 6
+		event = Yuzu_arc_sites_event.9
+		icon = GFX_archaeology_runes_B3
+	}
+	stage = {
+		difficulty = 8 # 6
+		event = Yuzu_arc_sites_event.10
+		icon = GFX_archaeology_runes_B4
+	}
+	stage = {
+		difficulty = 10 # 8
+		event = Yuzu_arc_sites_event.11
+		icon = GFX_archaeology_runes_B5
+	}
+	stage = {
+		difficulty = 10 # 8
+		event = Yuzu_arc_sites_event.12
+		icon = GFX_archaeology_runes_B6
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = yuzu_arc_sites_random_events_2 } }
+	}
+}

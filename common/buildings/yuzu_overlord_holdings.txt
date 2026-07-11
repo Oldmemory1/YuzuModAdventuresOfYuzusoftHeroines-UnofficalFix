@@ -1,0 +1,115 @@
+holding_yuzu_cafe = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = building_yuzu_cafe
+	base_cap_amount = 1
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	potential = {
+		owner.overlord = { is_yuzu_empire = yes }
+		owner = { is_machine_empire = no }
+	#	NOT = {	has_modifier = slave_colony	}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		planet_amenities_mult = 0.15
+		job_overlord_cafe_clerk_add = 3
+        monthly_loyalty = 0.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		planet_amenities_no_happiness_mult = 0.15
+		job_overlord_cafe_clerk_drone_add = 3
+		monthly_loyalty = 0.5
+	}
+
+	triggered_desc = {
+		text = job_overlord_cafe_clerk_effect_desc
+	}
+}
+
+holding_yuzu_supernatural_research_organization = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = building_yuzu_supernatural_research_organization
+	base_cap_amount = 1
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	potential = {
+		owner.overlord = { is_yuzu_empire = yes }
+		owner = { is_machine_empire = no }
+	#	NOT = {	has_modifier = slave_colony	}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = {
+				has_valid_civic = civic_yuzu_supernatural_research
+			}
+		}
+		modifier = {
+			planet_jobs_physics_research_produces_mult = 0.10
+            planet_jobs_society_research_produces_mult = 0.10
+            planet_jobs_engineering_research_produces_mult = 0.10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_overlord_supernatural_researcher_add = 2
+			job_overlord_yuzu_witch_per_pop = 0.04
+			monthly_loyalty = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_overlord_supernatural_researcher_drone_add = 2
+			job_overlord_yuzu_witch_drone_per_pop = 0.04
+			monthly_loyalty = 0.5
+		}
+	}
+
+	triggered_desc = {
+		text = job_overlord_supernatural_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_overlord_yuzu_witch_effect_desc
+	}
+}

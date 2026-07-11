@@ -1,0 +1,175 @@
+ABYSS1 = {
+	randomized = no
+	
+	ship_names = {
+
+		corvette = {#护卫舰
+			食尸鬼 深潜者 拜亚基 空鬼 炎之精 夜魇 夏盖虫族
+		}
+		
+		destroyer = {#驱逐舰
+			钻地魔虫 修格斯 无形之子 恐怖猎手 米-戈 夏塔克鸟 黑山羊幼崽 古老者 古革巨人
+		}
+		
+		cruiser = {#巡洋舰
+			星之彩 巨噬蠕虫 飞天水螅 伊斯之伟大种族 庭达罗斯之猎犬 星之眷族
+		}
+		
+		battleship = {#战列舰
+			克苏鲁 哈斯塔 克图格亚 撒托古亚 伊塔库亚 昌格纳-方庚 艾霍特 格拉基 加塔诺托亚 修德梅尔 伊戈罗纳克 伊格
+		}
+
+		titan = {#泰坦
+			阿布霍斯 格赫罗斯
+		}
+
+		colossus = {
+			犹格-索托斯
+			奈亚拉托提普
+			莎布-尼古拉斯
+		}
+		
+		juggernaut = {
+			犹格-索托斯
+			奈亚拉托提普
+			莎布-尼古拉斯
+		}
+
+		yuzu_star_eater = {
+			阿撒托斯
+		}
+
+		yuzu_reaper_scythe = {
+			洛夫克拉夫特
+		}
+
+		constructor = {#工程船
+		    灰色束缚 坟墓之吻 黄之祈愿 黑暗之影 众魔从令 控制之咏 消沉吸取 噩运之仪 末日之指 裂解仪式 黄廷之音 痛苦之歌
+		}
+		
+		colonizer = { #殖民船
+			深渊行者
+		}
+
+		sponsored_colonizer = {
+			深渊行者
+		}
+		
+		science = {#科研船
+			伊波恩之书 死灵之书 纳克特抄本 拉莱耶文本 格拉基启示录 刻莱诺残篇 格哈恩残篇 萨塞克斯手稿 波纳佩圣典 赞苏石板 翡翠石板
+			诺查丹玛斯的预言 纳斯编年史 伊拉内克纸草 诺姆羊皮卷 卡纳玛戈斯圣约书 犹基亚颂歌
+		}
+
+		transport = {
+			深渊使者01 深渊使者02 深渊使者03 深渊使者04 深渊使者05 深渊使者06 深渊使者07 深渊使者08 深渊使者09 深渊使者10 深渊使者11 深渊使者12
+		}
+
+		military_station_small = {#防御平台
+			黄衣之王 欢宴者
+		}
+		
+		ion_cannon = {
+			肿胀之女 夜吼者 黑法老
+		}
+	}
+
+	fleet_names = {
+		sequential_name = ABYSS_FLEET_ORD #"深渊舰队$O$"
+	}
+	
+	army_names = {
+	
+		defense_army = {
+			sequential_name = ABYSS_ARMY01_ORD #"深渊卫队$O$"
+		}
+
+		assault_army = {
+			sequential_name = ABYSS_ARMY02_ORD #"深渊军团$O$"
+		}
+		
+		slave_army = {
+			sequential_name = ABYSS_ARMY03_ORD #"深渊契约军团$O$"
+		}
+		
+		clone_army = { 
+			sequential_name = ABYSS_ARMY04_ORD #"深渊克隆军团$O$"
+		}
+		
+		robotic_army = {
+			sequential_name = ABYSS_ARMY05_ORD #"深渊机械军团$O$"
+		}
+
+		robotic_defense_army = {
+			sequential_name = ABYSS_ARMY06_ORD #"深渊机械卫队$O$"
+		}
+		
+		psionic_army = { 
+			sequential_name = ABYSS_ARMY07_ORD #"深渊灵能军团$O$"
+		}
+		
+		xenomorph_army = {
+			sequential_name = ABYSS_ARMY08_ORD #"深渊异形军团$O$"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = ABYSS_ARMY09_ORD #"深渊战斗军团$O$"
+		}
+
+		occupation_army = {
+			sequential_name = ABYSS_ARMY10_ORD #"深渊占领军$O$"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = ABYSS_ARMY11_ORD #"深渊机械占领军$O$"
+		}
+
+		primitive_army = {
+			sequential_name = ABYSS_ARMY12_ORD #"原始军队$O$"
+		}
+		industrial_army = {
+			sequential_name = ABYSS_ARMY13_ORD #"工业军队$O$"
+		}
+		postatomic_army = {
+			sequential_name = ABYSS_ARMY14_ORD #"后原子军$O$"
+		}
+
+		yuzu_werewolf_army = {
+			sequential_name = ABYSS_ARMY15_ORD #"深渊狼人军团$O$"
+		}
+	}
+
+	planet_names = {
+		generic = {
+			names = {
+				阿卡姆 敦威治 印斯茅斯 金斯波特 密斯卡托尼克 奥塞尔 卡尔克萨 拉莱耶 卡达斯 犹格斯 奈克特 哈利 耶库伯 德谟克利特 乌撒 纳拉克萨
+			    塞雷纳利亚 纳拉斯 索兰 希柏里尔 洛玛尔 西徐亚 斯特提罗斯 伊伯 卡达瑟隆 伊拉尼克 刹拉 纳利耶尔 伊姆普兰 布纳齐克 塞达瑟里亚
+			}
+		}
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			first_names = {
+				深渊圣者
+			}
+			second_names = {
+				代号A 代号B 代号C 代号D 代号E 代号F 代号G 代号H 代号I 代号J 代号K 代号L 代号M
+				代号N 代号O 代号P 代号Q 代号R 代号S 代号T 代号U 代号V 代号W 代号X 代号Y 代号Z
+			}
+
+			use_full_regnal_name = yes
+
+			#copied from above
+			regnal_first_names = {
+				深渊圣者
+			}
+			regnal_second_names = {
+				代号A 代号B 代号C 代号D 代号E 代号F 代号G 代号H 代号I 代号J 代号K 代号L 代号M
+				代号N 代号O 代号P 代号Q 代号R 代号S 代号T 代号U 代号V 代号W 代号X 代号Y 代号Z
+			}
+		}
+	}
+}

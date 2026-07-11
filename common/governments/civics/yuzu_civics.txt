@@ -1,0 +1,90 @@
+civic_yuzu_supernatural_research = {
+	description = civic_yuzu_supernatural_research_effects
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+
+	possible = {
+		authority = {
+			value = auth_Yuzu
+		}
+
+	}
+
+	random_weight = {
+		base = 1000
+	}
+}
+
+civic_yuzu_social_talent = {
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		authority = {
+			value = auth_Yuzu
+		}
+
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+				value = civic_inwards_perfection
+				value = civic_selective_kinship
+				value = civic_pompous_purists
+			}
+		}
+		ethics = {
+			NOT = { value = ethic_fanatic_xenophobe }
+		}
+	}
+
+	random_weight = {
+		base = 1000
+	}
+
+	modifier = {
+		country_civics_influence_produces_add = 1
+		diplomacy_upkeep_mult = -0.25
+		envoys_add = 2
+		trade_value_mult = 0.2
+		diplo_weight_mult = 0.2
+		country_trust_growth = 0.50
+		country_trust_cap_add = 100
+	}
+}
+
+civic_yuzu_win_the_hearts = {
+	description = civic_tooltip_yuzu_win_the_hearts_effects
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		authority = {
+			value = auth_Yuzu
+		}
+		ethics = {
+			NOR = {
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+		}
+	}
+
+	random_weight = {
+		base = 5
+		modifier = {
+			factor = 1000
+			is_overlord = yes
+		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+		}
+	}
+	modifier = {
+		divided_patrongage_max_subjects = 5
+	}
+}

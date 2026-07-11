@@ -1,0 +1,1254 @@
+@yuzu_tier5cost4 = 56000
+@yuzu_tier5cost5 = 64000
+@yuzu_tier5cost6 = 72000
+
+@yuzu_tier6cost1 = 88000
+@yuzu_tier6cost2 = 104000
+@yuzu_tier6cost3 = 120000
+@yuzu_tier6cost4 = 136000
+@yuzu_tier6cost5 = 152000
+@yuzu_tier6cost6 = 168000
+@yuzu_tier6cost7 = 184000
+
+@yuzu_tier5weight4 = 19
+@yuzu_tier5weight5 = 18
+@yuzu_tier5weight6 = 17
+
+@yuzu_tier6weight1 = 16
+@yuzu_tier6weight2 = 15
+@yuzu_tier6weight3 = 14
+@yuzu_tier6weight4 = 13
+@yuzu_tier6weight5 = 12
+@yuzu_tier6weight6 = 11
+@yuzu_tier6weight7 = 10
+
+tech_yuzu_space_time_theory = {
+	cost = @yuzu_tier5cost4
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	weight = 0
+
+	gateway = yuzu_space_time
+
+	modifier = {
+		country_physics_tech_research_speed = 0.20
+		num_tech_alternatives_add = 1
+		ship_ftl_jumpdrive_range_mult = 0.50
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_yuzu_all_in_one_theory = {
+	cost = @yuzu_tier6cost1
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	weight = 0
+
+	gateway = yuzu_abyss
+
+	modifier = {
+		planet_researchers_physics_research_produces_add = 2
+		all_technology_research_speed = 0.20
+		num_tech_alternatives_add = 1
+		ship_ftl_jumpdrive_range_mult = 0.50
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_memory_storage = {
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	is_rare = yes
+	category = { biology }
+	weight = @tier2weight3
+
+	gateway = yuzu_memory
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.05
+		planet_jobs_specialist_produces_mult = 0.05
+		species_leader_exp_gain = 0.25
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_BMI = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	is_rare = yes
+	category = { biology }
+	prerequisites = { "tech_memory_storage" }
+	weight = @tier3weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_YUZU_MEMORY_TRANSMISSION_TITLE"
+			desc = "TECH_UNLOCK_YUZU_MEMORY_TRANSMISSION_DESC"
+		}
+	}
+
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.10
+		planet_jobs_specialist_produces_mult = 0.10
+		ship_starting_experience_add = 100
+		army_starting_experience_add = 100
+		intel_encryption_add = 2
+		intel_decryption_add = 2
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_yuzu_rapid_cell_division_1 = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	is_rare = yes
+	category = { biology }
+	prerequisites = { "tech_cloning" }
+	weight = @tier3weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_YUZU_RAPID_CELL_DIVISION_1_TITLE"
+			desc = "TECH_YUZU_RAPID_CELL_DIVISION_1_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_rapid_cell_division_2 = {
+	cost = @yuzu_tier5cost4
+	area = society
+	tier = 5
+	is_rare = yes
+	category = { biology }
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_cloning" }
+	weight = @yuzu_tier5weight4
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_YUZU_RAPID_CELL_DIVISION_2_TITLE"
+			desc = "TECH_YUZU_RAPID_CELL_DIVISION_2_DESC"
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_werewolf = {
+	cost = @tier5cost1
+	area = society
+	category = { biology }
+	tier = 5
+	is_rare = yes
+	weight = 0
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_spatiotemporal_communication = {
+	cost = @yuzu_tier5cost5
+	area = society
+	tier = 5
+	is_rare = yes
+	category = { military_theory }
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_doctrine_fleet_size_5" "tech_doctrine_navy_size_4" }
+	weight = @yuzu_tier5weight5
+
+#	prereqfor_desc = {
+#		ship = {
+#			title = "TECH_SPATIOTEMPORAL_COMMUNICATION_TITLE"
+#			desc = "TECH_SPATIOTEMPORAL_COMMUNICATION_DESC"
+#		}
+#	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	modifier = {
+		country_naval_cap_add = 1000
+		command_limit_add = 30
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_ceremony_communication = {
+	cost = @yuzu_tier6cost2
+	area = society
+	tier = 6
+	is_rare = yes
+	category = { military_theory }
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_doctrine_fleet_size_5" "tech_doctrine_navy_size_4" }
+	weight =  @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+#	prereqfor_desc = {
+#		ship = {
+#			title = "TECH_CEREMONY_COMMUNICATION_TITLE"
+#			desc = "TECH_CEREMONY_COMMUNICATION_DESC"
+#		}
+#	}
+
+	modifier = {
+		country_naval_cap_add = 2000
+		command_limit_add = 60
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_mega_engineering = {
+	cost = @yuzu_tier6cost2
+	area = engineering
+	tier = 6
+	is_rare = yes
+	category = { voidcraft }
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_mega_engineering" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	modifier = {
+		megastructure_build_speed_mult = 0.5
+		country_megastructure_build_cap_add = 1
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_city = {
+	cost = @yuzu_tier6cost1
+	area = engineering
+	tier = 6
+	is_rare = yes
+	category = { industry }
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_housing_2" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_YUZU_CITY_TITLE"
+			desc = "TECH_YUZU_CITY_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_restore_abyss_city = {
+	cost = @yuzu_tier6cost2
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	category = { industry }
+	weight = 0
+
+	gateway = yuzu_abyss
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_YUZU_RESTORE_ABYSS_CITY_TITLE"
+			desc = "TECH_YUZU_RESTORE_ABYSS_CITY_DESC"
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_abyss_city = {
+	cost = @yuzu_tier6cost3
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	category = { industry }
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_yuzu_restore_abyss_city" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_YUZU_ABYSS_CITY_TITLE"
+			desc = "TECH_YUZU_ABYSS_CITY_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_sunset_city = {
+	cost = @yuzu_tier6cost3
+	area = engineering
+	tier = 6
+	is_rare = yes
+	category = { industry }
+	prerequisites = { "tech_yuzu_abyss_city" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_YUZU_SUNSET_CITY_TITLE"
+			desc = "TECH_YUZU_SUNSET_CITY_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_star_eater = {
+	cost = @yuzu_tier6cost5
+	area = engineering
+	category = { voidcraft }
+	tier = 6
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_juggernaut" }
+	weight = @yuzu_tier6weight5
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		ship = {
+			title = "TECH_UNLOCK_YUZU_STAR_EATER_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_YUZU_STAR_EATER_CONSTRUCTION_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+###Weapon###
+
+tech_yuzu_l_1 = {
+	cost = @yuzu_tier5cost4
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_energy_torpedoes_2" }
+	weight = @yuzu_tier5weight4
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_l_2 = {
+	cost = @yuzu_tier6cost1
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_energy_torpedoes_2" }
+	weight = @yuzu_tier6weight1
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_l_3 = {
+	cost = @yuzu_tier6cost2
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_2" }
+	weight = @yuzu_tier6weight2
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_lance_1 = {
+	cost = @yuzu_tier5cost5
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_1" "tech_battleships" }
+	weight = @yuzu_tier5weight5
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_lance_2 = {
+	cost = @yuzu_tier6cost2
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_2" "tech_battleships" }
+	weight = @yuzu_tier6weight2
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_lance_3 = {
+	cost = @yuzu_tier6cost3
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_3" "tech_yuzu_lance_2" }
+	weight = @yuzu_tier6weight3
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_beam_1 = {
+	cost = @yuzu_tier5cost6
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_lance_1" "tech_titans" }
+	weight = @yuzu_tier5weight6
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_beam_2 = {
+	cost = @yuzu_tier6cost3
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_lance_2" "tech_titans" }
+	weight = @yuzu_tier6weight3
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_beam_3 = {
+	cost = @yuzu_tier6cost4
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_lance_3" "tech_yuzu_beam_2" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_strike_craft_1 = {
+	cost = @yuzu_tier6cost2
+	area = engineering
+	category = { voidcraft }
+	tier = 6
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_strike_craft_3" }
+	weight = @yuzu_tier6weight2
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_torpedoes_1 = {
+	cost = @yuzu_tier6cost2
+	area = engineering
+	category = { propulsion }
+	tier = 6
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_torpedoes_3" }
+	weight = @yuzu_tier6weight2
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_pd_tracking_1 = {
+	area = physics
+	tier = 6
+	cost = @yuzu_tier6cost2
+	category = { computing }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_pd_tracking_3" }
+	weight = @yuzu_tier6weight2
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_jump_drive_1 = {
+	cost = @yuzu_tier5cost6
+	area = physics
+	tier = 5
+	category = { particles }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_jump_drive_1" }
+	weight = @yuzu_tier5weight6
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_YUZU_JUMPDRIVE_1_TITLE"
+			desc = "TECH_UNLOCK_YUZU_JUMPDRIVE_1_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_thrusters_yuzu_1 = {
+	area = engineering
+	cost = @yuzu_tier5cost4
+	tier = 5
+	category = { propulsion }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_thrusters_4" }
+	weight = @yuzu_tier5weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_THRUSTER_YUZU_1_TITLE"
+			desc = "TECH_UNLOCK_THRUSTER_YUZU_1_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_computer_role_yuzu = {
+	area = physics
+	tier = 5
+	cost = @yuzu_tier5cost5
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_combat_computers_3" }
+	weight = @yuzu_tier5cost5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_COMBAT_COMPUTERS_YUZU_TITLE"
+			desc = "TECH_UNLOCK_COMBAT_COMPUTERS_YUZU_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_fire_control_yuzu = {
+	area = physics
+	tier = 5
+	cost = @yuzu_tier5cost4
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_auxiliary_fire_control" }
+	weight = @yuzu_tier5weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_FIRE_CONTROL_YUZU_TITLE"
+			desc = "TECH_UNLOCK_FIRE_CONTROL_YUZU_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+tech_sensors_yuzu_1 = {
+	area = physics
+	cost = @yuzu_tier5cost4
+	tier = 5
+	category = { computing }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_sensors_4" }
+	weight = @yuzu_tier5weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_SENSOR_YUZU_1_TITLE"
+			desc = "TECH_UNLOCK_SENSOR_YUZU_1_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_sensors_yuzu_2 = {
+	area = physics
+	cost = @yuzu_tier6cost1
+	tier = 6
+	category = { computing }
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_sensors_4" }
+	weight = @yuzu_tier6weight1
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_SENSOR_YUZU_2_TITLE"
+			desc = "TECH_UNLOCK_SENSOR_YUZU_2_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_reactor_yuzu = {
+	area = physics
+	cost = @yuzu_tier6cost2
+	tier = 6
+	category = { particles }
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_zero_point_power" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_REACTOR_YUZU_TITLE"
+			desc = "TECH_UNLOCK_REACTOR_YUZU_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_armor_1 = {
+	area = engineering
+	cost = @yuzu_tier5cost5
+	tier = 5
+	category = { materials }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_ship_armor_5" }
+	weight = @yuzu_tier5weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_armor_2 = {
+	area = engineering
+	cost = @yuzu_tier6cost2
+	tier = 6
+	category = { materials }
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_ship_armor_5" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_shield_1 = {
+	area = physics
+	cost = @yuzu_tier5cost5
+	tier = 5
+	category = { field_manipulation }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_shields_5" }
+	weight = @yuzu_tier5weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_shield_2 = {
+	area = physics
+	cost = @yuzu_tier6weight2
+	tier = 6
+	category = { field_manipulation }
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_shields_5" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_pk_back_in_time = {
+	area = physics
+	cost = @yuzu_tier5cost6
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_colossus" }
+	ai_update_type = military
+	weight = @yuzu_tier5weight6
+
+	potential = {
+		host_has_dlc = "Apocalypse"
+		is_YUZU = yes
+		has_country_flag = colossus_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}

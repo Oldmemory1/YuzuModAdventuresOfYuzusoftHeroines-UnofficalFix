@@ -1,0 +1,1280 @@
+namespace = Yuzu_other_event
+
+# on_game_start
+event = {
+	id = Yuzu_other_event.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_galaxy_planet = {
+			limit = {
+				has_set_yuzu_primary_pc_flag = no
+			}
+			# 被毁灭的恒星系
+			if = {
+				limit = {
+					has_planet_flag = planet_with_too_many_moons
+				}
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = {
+					solar_system = { has_star_flag = planet_with_too_many_moons_system }
+					is_planet_class = pc_shattered_2
+				}
+				set_planet_flag = primary_pc_gaia
+			}
+			
+			else_if = {
+				limit = { is_planet_class = pc_molten }
+				set_planet_flag = primary_pc_molten
+			}
+			else_if = {
+				limit = { is_planet_class = pc_barren }
+				set_planet_flag = primary_pc_barren
+				random_list = {
+					95 = {}
+					5 = { set_planet_flag = yuzu_may_terraform }
+				}
+			}
+			else_if = {
+				limit = { is_planet_class = pc_barren_cold }
+				set_planet_flag = primary_pc_barren_cold
+				random_list = {
+					95 = {}
+					5 = { set_planet_flag = yuzu_may_terraform }
+				}
+			}
+			else_if = {
+				limit = { is_planet_class = pc_toxic }
+				random_list = {
+					90 = { set_planet_flag = primary_pc_toxic }
+					1 = { set_planet_flag = primary_pc_desert }
+					1 = { set_planet_flag = primary_pc_arid }
+					1 = { set_planet_flag = primary_pc_savannah }
+					1 = { set_planet_flag = primary_pc_tropical }
+					1 = { set_planet_flag = primary_pc_continental }
+					1 = { set_planet_flag = primary_pc_ocean }
+					1 = { set_planet_flag = primary_pc_tundra }
+					1 = { set_planet_flag = primary_pc_arctic }
+					1 = { set_planet_flag = primary_pc_alpine }
+					1 = { set_planet_flag = primary_pc_gaia }
+				}
+			}
+			else_if = {
+				limit = { is_planet_class = pc_frozen }
+				set_planet_flag = primary_pc_frozen
+			}
+			else_if = {
+				limit = {
+					is_planet_class = pc_gas_giant
+				}
+				set_planet_flag = primary_pc_gas_giant
+			}
+
+			else_if = {
+				limit = { is_planet_class = pc_desert }
+				set_planet_flag = primary_pc_desert
+			}
+			else_if = {
+				limit = { is_planet_class = pc_arid }
+				set_planet_flag = primary_pc_arid
+			}
+			else_if = {
+				limit = { is_planet_class = pc_savannah }
+				set_planet_flag = primary_pc_savannah
+			}
+			else_if = {
+				limit = { is_planet_class = pc_tropical }
+				set_planet_flag = primary_pc_tropical
+			}
+			else_if = {
+				limit = { is_planet_class = pc_continental }
+				set_planet_flag = primary_pc_continental
+			}
+			else_if = {
+				limit = { is_planet_class = pc_ocean }
+				set_planet_flag = primary_pc_ocean
+			}
+			else_if = {
+				limit = { is_planet_class = pc_tundra }
+				set_planet_flag = primary_pc_tundra
+			}
+			else_if = {
+				limit = { is_planet_class = pc_arctic }
+				set_planet_flag = primary_pc_arctic
+			}
+			else_if = {
+				limit = { is_planet_class = pc_alpine }
+				set_planet_flag = primary_pc_alpine
+			}
+			else_if = {
+				limit = { is_planet_class = pc_nuked }
+				random_list = {
+					10 = { set_planet_flag = primary_pc_desert }
+					10 = { set_planet_flag = primary_pc_arid }
+					10 = { set_planet_flag = primary_pc_savannah }
+					10 = { set_planet_flag = primary_pc_tropical }
+					10 = { set_planet_flag = primary_pc_continental }
+					10 = { set_planet_flag = primary_pc_ocean }
+					10 = { set_planet_flag = primary_pc_tundra }
+					10 = { set_planet_flag = primary_pc_arctic }
+					10 = { set_planet_flag = primary_pc_alpine }
+					10 = { set_planet_flag = primary_pc_gaia }
+				}
+			}
+			else_if = {
+				limit = { is_planet_class = pc_gaia }
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = { is_planet_class = pc_machine }
+				random_list = {
+					10 = { set_planet_flag = primary_pc_desert }
+					10 = { set_planet_flag = primary_pc_arid }
+					10 = { set_planet_flag = primary_pc_savannah }
+					10 = { set_planet_flag = primary_pc_tropical }
+					10 = { set_planet_flag = primary_pc_continental }
+					10 = { set_planet_flag = primary_pc_ocean }
+					10 = { set_planet_flag = primary_pc_tundra }
+					10 = { set_planet_flag = primary_pc_arctic }
+					10 = { set_planet_flag = primary_pc_alpine }
+					10 = { set_planet_flag = primary_pc_gaia }
+				}
+			}
+			else_if = {
+				limit = { is_planet_class = pc_shrouded }
+				random_list = {
+					10 = { set_planet_flag = primary_pc_desert }
+					10 = { set_planet_flag = primary_pc_arid }
+					10 = { set_planet_flag = primary_pc_savannah }
+					10 = { set_planet_flag = primary_pc_tropical }
+					10 = { set_planet_flag = primary_pc_continental }
+					10 = { set_planet_flag = primary_pc_ocean }
+					10 = { set_planet_flag = primary_pc_tundra }
+					10 = { set_planet_flag = primary_pc_arctic }
+					10 = { set_planet_flag = primary_pc_alpine }
+					10 = { set_planet_flag = primary_pc_gaia }
+				}
+			}
+			else_if = {
+				limit = { is_planet_class = pc_broken }
+				random_list = {
+					5 = { set_planet_flag = primary_pc_desert }
+					5 = { set_planet_flag = primary_pc_arid }
+					5 = { set_planet_flag = primary_pc_savannah }
+					5 = { set_planet_flag = primary_pc_tropical }
+					5 = { set_planet_flag = primary_pc_continental }
+					5 = { set_planet_flag = primary_pc_ocean }
+					5 = { set_planet_flag = primary_pc_tundra }
+					5 = { set_planet_flag = primary_pc_arctic }
+					5 = { set_planet_flag = primary_pc_alpine }
+					5 = { set_planet_flag = primary_pc_gaia }
+					5 = { set_planet_flag = primary_pc_broken }
+					9 = { set_planet_flag = primary_pc_molten }
+					9 = { set_planet_flag = primary_pc_barren }
+					9 = { set_planet_flag = primary_pc_barren_cold }
+					9 = { set_planet_flag = primary_pc_toxic }
+					9 = { set_planet_flag = primary_pc_frozen }
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_shattered
+						is_planet_class = pc_shattered_2
+					}
+				}
+				random_list = {
+					5 = { set_planet_flag = primary_pc_desert }
+					5 = { set_planet_flag = primary_pc_arid }
+					5 = { set_planet_flag = primary_pc_savannah }
+					5 = { set_planet_flag = primary_pc_tropical }
+					5 = { set_planet_flag = primary_pc_continental }
+					5 = { set_planet_flag = primary_pc_ocean }
+					5 = { set_planet_flag = primary_pc_tundra }
+					5 = { set_planet_flag = primary_pc_arctic }
+					5 = { set_planet_flag = primary_pc_alpine }
+					5 = { set_planet_flag = primary_pc_gaia }
+					5 = { set_planet_flag = primary_pc_broken }
+					8 = { set_planet_flag = primary_pc_molten }
+					8 = { set_planet_flag = primary_pc_barren }
+					8 = { set_planet_flag = primary_pc_barren_cold }
+					8 = { set_planet_flag = primary_pc_toxic }
+					8 = { set_planet_flag = primary_pc_frozen }
+					5 = { set_planet_flag = primary_pc_shattered }
+				}
+			}
+			else_if = {
+				limit = { is_planet_class = pc_gray_goo }
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = { is_planet_class = pc_city }
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = { is_planet_class = pc_relic }
+				set_planet_flag = primary_pc_relic
+			}
+			set_yuzu_ps_flag = yes
+		}
+	}
+}
+
+# on_yearly_pulse
+event = {
+	id = Yuzu_other_event.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_galaxy_planet = {
+			limit = {
+				has_set_yuzu_primary_pc_flag = no
+			}
+			if = {
+				limit = { has_planet_flag = Zrocursor_homeworld }
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = { 
+					solar_system = { has_star_flag = last_baol_system }
+					is_planet_class = pc_nuked
+			    }
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = { has_planet_flag = vultaum_homeworld }
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = { has_planet_flag = yuht_homeworld }
+				set_planet_flag = primary_pc_gaia
+			}
+			else_if = {
+				limit = { has_planet_flag = irassian_homeworld }
+				set_planet_flag = primary_pc_gaia
+			}
+			
+			else_if = {
+				limit = {
+					solar_system = { has_star_flag = lcluster }
+				}
+				if = {
+					limit = { is_planet_class = pc_molten }
+					set_planet_flag = primary_pc_molten
+				}
+				else_if = {
+					limit = { is_planet_class = pc_barren }
+					set_planet_flag = primary_pc_barren
+					random_list = {
+						95 = {}
+						5 = { set_planet_flag = yuzu_may_terraform }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_barren_cold }
+					set_planet_flag = primary_pc_barren_cold
+					random_list = {
+						95 = {}
+						5 = { set_planet_flag = yuzu_may_terraform }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_toxic }
+					random_list = {
+						90 = { set_planet_flag = primary_pc_toxic }
+						1 = { set_planet_flag = primary_pc_desert }
+						1 = { set_planet_flag = primary_pc_arid }
+						1 = { set_planet_flag = primary_pc_savannah }
+						1 = { set_planet_flag = primary_pc_tropical }
+						1 = { set_planet_flag = primary_pc_continental }
+						1 = { set_planet_flag = primary_pc_ocean }
+						1 = { set_planet_flag = primary_pc_tundra }
+						1 = { set_planet_flag = primary_pc_arctic }
+						1 = { set_planet_flag = primary_pc_alpine }
+						1 = { set_planet_flag = primary_pc_gaia }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_frozen }
+					set_planet_flag = primary_pc_frozen
+				}
+				else_if = {
+					limit = { is_planet_class = pc_gas_giant }
+					set_planet_flag = primary_pc_gas_giant
+				}
+				else_if = {
+					limit = { is_planet_class = pc_desert }
+					set_planet_flag = primary_pc_desert
+				}
+				else_if = {
+					limit = { is_planet_class = pc_arid }
+					set_planet_flag = primary_pc_arid
+				}
+				else_if = {
+					limit = { is_planet_class = pc_savannah }
+					set_planet_flag = primary_pc_savannah
+				}
+				else_if = {
+					limit = { is_planet_class = pc_tropical }
+					set_planet_flag = primary_pc_tropical
+				}
+				else_if = {
+					limit = { is_planet_class = pc_continental }
+					set_planet_flag = primary_pc_continental
+				}
+				else_if = {
+					limit = { is_planet_class = pc_ocean }
+					set_planet_flag = primary_pc_ocean
+				}
+				else_if = {
+					limit = { is_planet_class = pc_tundra }
+					set_planet_flag = primary_pc_tundra
+				}
+				else_if = {
+					limit = { is_planet_class = pc_arctic }
+					set_planet_flag = primary_pc_arctic
+				}
+				else_if = {
+					limit = { is_planet_class = pc_alpine }
+					set_planet_flag = primary_pc_alpine
+				}
+				else_if = {
+					limit = { is_planet_class = pc_nuked }
+					set_planet_flag = primary_pc_gaia
+				}
+				else_if = {
+					limit = { is_planet_class = pc_gaia }
+					set_planet_flag = primary_pc_gaia
+				}
+				else_if = {
+					limit = { is_planet_class = pc_broken }
+					random_list = {
+						49 = { set_planet_flag = primary_pc_gaia }
+						1 = { set_planet_flag = primary_pc_broken }
+						10 = { set_planet_flag = primary_pc_molten }
+						10 = { set_planet_flag = primary_pc_barren }
+						10 = { set_planet_flag = primary_pc_barren_cold }
+						10 = { set_planet_flag = primary_pc_toxic }
+						10 = { set_planet_flag = primary_pc_frozen }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_shattered
+							is_planet_class = pc_shattered_2
+						}
+					}
+					random_list = {
+						88 = { set_planet_flag = primary_pc_gaia }
+						1 = { set_planet_flag = primary_pc_broken }
+						2 = { set_planet_flag = primary_pc_molten }
+						2 = { set_planet_flag = primary_pc_barren }
+						2 = { set_planet_flag = primary_pc_barren_cold }
+						2 = { set_planet_flag = primary_pc_toxic }
+						2 = { set_planet_flag = primary_pc_frozen }
+						1 = { set_planet_flag = primary_pc_shattered }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_gray_goo }
+					set_planet_flag = primary_pc_gaia
+				}
+			}
+
+			else = {
+				if = {
+					limit = { is_planet_class = pc_molten }
+					set_planet_flag = primary_pc_molten
+				}
+				else_if = {
+					limit = { is_planet_class = pc_barren }
+					set_planet_flag = primary_pc_barren
+					random_list = {
+						95 = {}
+						5 = { set_planet_flag = yuzu_may_terraform }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_barren_cold }
+					set_planet_flag = primary_pc_barren_cold
+					random_list = {
+						95 = {}
+						5 = { set_planet_flag = yuzu_may_terraform }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_toxic }
+					random_list = {
+						90 = { set_planet_flag = primary_pc_toxic }
+						1 = { set_planet_flag = primary_pc_desert }
+						1 = { set_planet_flag = primary_pc_arid }
+						1 = { set_planet_flag = primary_pc_savannah }
+						1 = { set_planet_flag = primary_pc_tropical }
+						1 = { set_planet_flag = primary_pc_continental }
+						1 = { set_planet_flag = primary_pc_ocean }
+						1 = { set_planet_flag = primary_pc_tundra }
+						1 = { set_planet_flag = primary_pc_arctic }
+						1 = { set_planet_flag = primary_pc_alpine }
+						1 = { set_planet_flag = primary_pc_gaia }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_frozen }
+					set_planet_flag = primary_pc_frozen
+				}
+				else_if = {
+					limit = {
+						is_planet_class = pc_gas_giant
+					}
+					set_planet_flag = primary_pc_gas_giant
+				}
+				else_if = {
+					limit = { is_planet_class = pc_machine }
+					random_list = {
+						10 = { set_planet_flag = primary_pc_desert }
+						10 = { set_planet_flag = primary_pc_arid }
+						10 = { set_planet_flag = primary_pc_savannah }
+						10 = { set_planet_flag = primary_pc_tropical }
+						10 = { set_planet_flag = primary_pc_continental }
+						10 = { set_planet_flag = primary_pc_ocean }
+						10 = { set_planet_flag = primary_pc_tundra }
+						10 = { set_planet_flag = primary_pc_arctic }
+						10 = { set_planet_flag = primary_pc_alpine }
+						10 = { set_planet_flag = primary_pc_gaia }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_shrouded }
+					random_list = {
+						10 = { set_planet_flag = primary_pc_desert }
+						10 = { set_planet_flag = primary_pc_arid }
+						10 = { set_planet_flag = primary_pc_savannah }
+						10 = { set_planet_flag = primary_pc_tropical }
+						10 = { set_planet_flag = primary_pc_continental }
+						10 = { set_planet_flag = primary_pc_ocean }
+						10 = { set_planet_flag = primary_pc_tundra }
+						10 = { set_planet_flag = primary_pc_arctic }
+						10 = { set_planet_flag = primary_pc_alpine }
+						10 = { set_planet_flag = primary_pc_gaia }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_broken }
+					random_list = {
+						5 = { set_planet_flag = primary_pc_desert }
+						5 = { set_planet_flag = primary_pc_arid }
+						5 = { set_planet_flag = primary_pc_savannah }
+						5 = { set_planet_flag = primary_pc_tropical }
+						5 = { set_planet_flag = primary_pc_continental }
+						5 = { set_planet_flag = primary_pc_ocean }
+						5 = { set_planet_flag = primary_pc_tundra }
+						5 = { set_planet_flag = primary_pc_arctic }
+						5 = { set_planet_flag = primary_pc_alpine }
+						5 = { set_planet_flag = primary_pc_gaia }
+						5 = { set_planet_flag = primary_pc_broken }
+						9 = { set_planet_flag = primary_pc_molten }
+						9 = { set_planet_flag = primary_pc_barren }
+						9 = { set_planet_flag = primary_pc_barren_cold }
+						9 = { set_planet_flag = primary_pc_toxic }
+						9 = { set_planet_flag = primary_pc_frozen }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_shattered
+							is_planet_class = pc_shattered_2
+						}
+					}
+					random_list = {
+						5 = { set_planet_flag = primary_pc_desert }
+						5 = { set_planet_flag = primary_pc_arid }
+						5 = { set_planet_flag = primary_pc_savannah }
+						5 = { set_planet_flag = primary_pc_tropical }
+						5 = { set_planet_flag = primary_pc_continental }
+						5 = { set_planet_flag = primary_pc_ocean }
+						5 = { set_planet_flag = primary_pc_tundra }
+						5 = { set_planet_flag = primary_pc_arctic }
+						5 = { set_planet_flag = primary_pc_alpine }
+						5 = { set_planet_flag = primary_pc_gaia }
+						5 = { set_planet_flag = primary_pc_broken }
+						8 = { set_planet_flag = primary_pc_molten }
+						8 = { set_planet_flag = primary_pc_barren }
+						8 = { set_planet_flag = primary_pc_barren_cold }
+						8 = { set_planet_flag = primary_pc_toxic }
+						8 = { set_planet_flag = primary_pc_frozen }
+						5 = { set_planet_flag = primary_pc_shattered }
+					}
+				}
+				
+				else_if = {
+					limit = { is_planet_class = pc_desert }
+					set_planet_flag = primary_pc_desert
+				}
+				else_if = {
+					limit = { is_planet_class = pc_arid }
+					set_planet_flag = primary_pc_arid
+				}
+				else_if = {
+					limit = { is_planet_class = pc_savannah }
+					set_planet_flag = primary_pc_savannah
+				}
+				else_if = {
+					limit = { is_planet_class = pc_tropical }
+					set_planet_flag = primary_pc_tropical
+				}
+				else_if = {
+					limit = { is_planet_class = pc_continental }
+					set_planet_flag = primary_pc_continental
+				}
+				else_if = {
+					limit = { is_planet_class = pc_ocean }
+					set_planet_flag = primary_pc_ocean
+				}
+				else_if = {
+					limit = { is_planet_class = pc_tundra }
+					set_planet_flag = primary_pc_tundra
+				}
+				else_if = {
+					limit = { is_planet_class = pc_arctic }
+					set_planet_flag = primary_pc_arctic
+				}
+				else_if = {
+					limit = { is_planet_class = pc_alpine }
+					set_planet_flag = primary_pc_alpine
+				}
+				else_if = {
+					limit = { is_planet_class = pc_nuked }
+					random_list = {
+						10 = { set_planet_flag = primary_pc_desert }
+						10 = { set_planet_flag = primary_pc_arid }
+						10 = { set_planet_flag = primary_pc_savannah }
+						10 = { set_planet_flag = primary_pc_tropical }
+						10 = { set_planet_flag = primary_pc_continental }
+						10 = { set_planet_flag = primary_pc_ocean }
+						10 = { set_planet_flag = primary_pc_tundra }
+						10 = { set_planet_flag = primary_pc_arctic }
+						10 = { set_planet_flag = primary_pc_alpine }
+						10 = { set_planet_flag = primary_pc_gaia }
+					}
+				}
+				else_if = {
+					limit = { is_planet_class = pc_gaia }
+					set_planet_flag = primary_pc_gaia
+				}
+				else_if = {
+					limit = { is_planet_class = pc_city }
+					set_planet_flag = primary_pc_gaia
+				}
+				else_if = {
+					limit = { is_planet_class = pc_relic }
+					set_planet_flag = primary_pc_relic
+				}
+			}
+			set_yuzu_ps_flag = yes
+		}
+	}
+}
+
+# 资源统合母星系
+# this: capital planet
+# from: founder species
+planet_event = {
+	id = Yuzu_other_event.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_origin = origin_machine
+		}
+	}
+
+	immediate = {
+		solar_system = {
+			every_system_planet = {
+				limit = {
+					has_set_yuzu_primary_pc_flag = no
+				}
+				if = {
+					limit = { is_planet_class = pc_molten }
+					set_planet_flag = primary_pc_gas_giant
+					change_planet_size = 6
+					set_yuzu_ps_flag = yes
+					change_planet_size = -6
+				}
+				else_if = {
+					limit = { is_planet_class = pc_broken }
+					random_list = {
+						20 = { set_planet_flag = primary_pc_molten }
+						20 = { set_planet_flag = primary_pc_barren }
+						20 = { set_planet_flag = primary_pc_barren_cold }
+						20 = { set_planet_flag = primary_pc_toxic }
+						20 = { set_planet_flag = primary_pc_frozen }
+					}
+					set_yuzu_ps_flag = yes
+				}
+			}
+		}
+	}
+}
+
+# on_released_as_vassal
+country_event = {
+	id = Yuzu_other_event.10
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = { has_authority = auth_Yuzu }
+	}
+
+	immediate = {
+		country_remove_ethic = ethic_authoritarian
+		country_remove_ethic = ethic_fanatic_authoritarian
+		country_remove_ethic = ethic_egalitarian
+		country_remove_ethic = ethic_fanatic_egalitarian
+		country_remove_ethic = ethic_materialist
+		country_remove_ethic = ethic_fanatic_materialist
+		country_remove_ethic = ethic_spiritualist
+		country_remove_ethic = ethic_fanatic_spiritualist
+		country_remove_ethic = ethic_militarist
+		country_remove_ethic = ethic_fanatic_militarist
+		country_remove_ethic = ethic_pacifist
+		country_remove_ethic = ethic_fanatic_pacifist
+		country_remove_ethic = ethic_xenophile
+		country_remove_ethic = ethic_fanatic_xenophile
+		country_remove_ethic = ethic_xenophobe
+		country_remove_ethic = ethic_fanatic_xenophobe
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_authoritarian
+				}
+			}
+			country_add_ethic = ethic_authoritarian
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_authoritarian
+				}
+			}
+			country_add_ethic = ethic_fanatic_authoritarian
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_egalitarian
+				}
+			}
+			country_add_ethic = ethic_egalitarian
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_egalitarian
+				}
+			}
+			country_add_ethic = ethic_fanatic_egalitarian
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_materialist
+				}
+			}
+			country_add_ethic = ethic_materialist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+			country_add_ethic = ethic_fanatic_materialist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_spiritualist
+				}
+			}
+			country_add_ethic = ethic_spiritualist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+			country_add_ethic = ethic_fanatic_spiritualist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_militarist
+				}
+			}
+			country_add_ethic = ethic_militarist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_militarist
+				}
+			}
+			country_add_ethic = ethic_fanatic_militarist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_pacifist
+				}
+			}
+			country_add_ethic = ethic_pacifist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+			country_add_ethic = ethic_fanatic_pacifist
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_xenophile
+				}
+			}
+			country_add_ethic = ethic_xenophile
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+			country_add_ethic = ethic_fanatic_xenophile
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_xenophobe
+				}
+			}
+			country_add_ethic = ethic_xenophobe
+		}
+		if = {
+			limit = {
+				from = {
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+			country_add_ethic = ethic_fanatic_xenophobe
+		}
+		if = {
+			limit = {
+				is_YUZU = yes
+			}
+			change_government = {
+				authority = auth_Yuzu
+				cooldown = yes
+				remove_invalid_civics = yes
+				civics = { civic = civic_yuzu_social_talent civic = civic_yuzu_supernatural_research civic = random }
+			}
+			if = {
+				limit = {
+					has_valid_civic = civic_yuzu_win_the_hearts
+				}
+				force_remove_civic = civic_yuzu_win_the_hearts
+				random_list = {
+					20 = { force_add_civic = civic_functional_architecture }
+					20 = { force_add_civic = civic_environmentalist }
+					20 = { force_add_civic = civic_mining_guilds }
+					20 = { force_add_civic = civic_crafters }
+					20 = { force_add_civic = civic_efficient_bureaucracy }
+				}
+			}
+		}
+		else = {
+			change_government = {
+				authority = random
+				cooldown = yes
+				remove_invalid_civics = yes
+				civics = { civic = random civic = random civic = random }
+			}
+		}
+	}
+}
+
+##### 远古冷冻室事件 #####
+
+# on_building_complete & on_building_replaced
+planet_event = {
+	id = Yuzu_other_event.20
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+#		last_building_changed = building_yuzu_ancient_cryo_chamber_1
+		has_building = building_yuzu_ancient_cryo_chamber_1
+		NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_1 }
+	}
+
+	immediate = {
+		set_planet_flag = yuzu_ancient_cryo_chamber_1
+		yuzu_store_pops = yes
+	}
+}
+
+# on_building_upgraded
+planet_event = {
+	id = Yuzu_other_event.21
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+#		OR = {
+#			last_building_changed = building_yuzu_ancient_cryo_chamber_2
+#			last_building_changed = building_yuzu_ancient_cryo_chamber_3
+#		}
+		OR = {
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_2
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_2 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_3
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_3 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_4
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_4 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_5
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_5 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_6
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_6 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_7
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_7 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_8
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_8 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_9
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_9 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_10
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_10 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_11
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_11 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_12
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_12 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_13
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_13 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_14
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_14 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_15
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_15 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_16
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_16 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_17
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_17 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_18
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_18 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_19
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_19 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_20
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_20 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_21
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_21 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_22
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_22 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_23
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_23 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_24
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_24 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_25
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_25 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_26
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_26 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_27
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_27 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_28
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_28 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_29
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_29 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_30
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_30 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_31
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_31 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_32
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_32 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_33
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_33 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_34
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_34 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_35
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_35 }
+			}
+			AND = {
+				has_building = building_yuzu_ancient_cryo_chamber_36
+				NOT = { has_planet_flag = yuzu_ancient_cryo_chamber_36 }
+			}
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_building
+			building_yuzu_ancient_cryo_chamber_2 = { set_planet_flag = yuzu_ancient_cryo_chamber_2 remove_planet_flag = yuzu_ancient_cryo_chamber_1 }
+			building_yuzu_ancient_cryo_chamber_3 = { set_planet_flag = yuzu_ancient_cryo_chamber_3 remove_planet_flag = yuzu_ancient_cryo_chamber_2 }
+			building_yuzu_ancient_cryo_chamber_4 = { set_planet_flag = yuzu_ancient_cryo_chamber_4 remove_planet_flag = yuzu_ancient_cryo_chamber_3 }
+			building_yuzu_ancient_cryo_chamber_5 = { set_planet_flag = yuzu_ancient_cryo_chamber_5 remove_planet_flag = yuzu_ancient_cryo_chamber_4 }
+			building_yuzu_ancient_cryo_chamber_6 = { set_planet_flag = yuzu_ancient_cryo_chamber_6 remove_planet_flag = yuzu_ancient_cryo_chamber_5 }
+			building_yuzu_ancient_cryo_chamber_7 = { set_planet_flag = yuzu_ancient_cryo_chamber_7 remove_planet_flag = yuzu_ancient_cryo_chamber_6 }
+			building_yuzu_ancient_cryo_chamber_8 = { set_planet_flag = yuzu_ancient_cryo_chamber_8 remove_planet_flag = yuzu_ancient_cryo_chamber_7 }
+			building_yuzu_ancient_cryo_chamber_9 = { set_planet_flag = yuzu_ancient_cryo_chamber_9 remove_planet_flag = yuzu_ancient_cryo_chamber_8 }
+			building_yuzu_ancient_cryo_chamber_10 = { set_planet_flag = yuzu_ancient_cryo_chamber_10 remove_planet_flag = yuzu_ancient_cryo_chamber_9 }
+			building_yuzu_ancient_cryo_chamber_11 = { set_planet_flag = yuzu_ancient_cryo_chamber_11 remove_planet_flag = yuzu_ancient_cryo_chamber_10 }
+			building_yuzu_ancient_cryo_chamber_12 = { set_planet_flag = yuzu_ancient_cryo_chamber_12 remove_planet_flag = yuzu_ancient_cryo_chamber_11 }
+			building_yuzu_ancient_cryo_chamber_13 = { set_planet_flag = yuzu_ancient_cryo_chamber_13 remove_planet_flag = yuzu_ancient_cryo_chamber_12 }
+			building_yuzu_ancient_cryo_chamber_14 = { set_planet_flag = yuzu_ancient_cryo_chamber_14 remove_planet_flag = yuzu_ancient_cryo_chamber_13 }
+			building_yuzu_ancient_cryo_chamber_15 = { set_planet_flag = yuzu_ancient_cryo_chamber_15 remove_planet_flag = yuzu_ancient_cryo_chamber_14 }
+			building_yuzu_ancient_cryo_chamber_16 = { set_planet_flag = yuzu_ancient_cryo_chamber_16 remove_planet_flag = yuzu_ancient_cryo_chamber_15 }
+			building_yuzu_ancient_cryo_chamber_17 = { set_planet_flag = yuzu_ancient_cryo_chamber_17 remove_planet_flag = yuzu_ancient_cryo_chamber_16 }
+			building_yuzu_ancient_cryo_chamber_18 = { set_planet_flag = yuzu_ancient_cryo_chamber_18 remove_planet_flag = yuzu_ancient_cryo_chamber_17 }
+			building_yuzu_ancient_cryo_chamber_19 = { set_planet_flag = yuzu_ancient_cryo_chamber_19 remove_planet_flag = yuzu_ancient_cryo_chamber_18 }
+			building_yuzu_ancient_cryo_chamber_20 = { set_planet_flag = yuzu_ancient_cryo_chamber_20 remove_planet_flag = yuzu_ancient_cryo_chamber_19 }
+			building_yuzu_ancient_cryo_chamber_21 = { set_planet_flag = yuzu_ancient_cryo_chamber_21 remove_planet_flag = yuzu_ancient_cryo_chamber_20 }
+			building_yuzu_ancient_cryo_chamber_22 = { set_planet_flag = yuzu_ancient_cryo_chamber_22 remove_planet_flag = yuzu_ancient_cryo_chamber_21 }
+			building_yuzu_ancient_cryo_chamber_23 = { set_planet_flag = yuzu_ancient_cryo_chamber_23 remove_planet_flag = yuzu_ancient_cryo_chamber_22 }
+			building_yuzu_ancient_cryo_chamber_24 = { set_planet_flag = yuzu_ancient_cryo_chamber_24 remove_planet_flag = yuzu_ancient_cryo_chamber_23 }
+			building_yuzu_ancient_cryo_chamber_25 = { set_planet_flag = yuzu_ancient_cryo_chamber_25 remove_planet_flag = yuzu_ancient_cryo_chamber_24 }
+			building_yuzu_ancient_cryo_chamber_26 = { set_planet_flag = yuzu_ancient_cryo_chamber_26 remove_planet_flag = yuzu_ancient_cryo_chamber_25 }
+			building_yuzu_ancient_cryo_chamber_27 = { set_planet_flag = yuzu_ancient_cryo_chamber_27 remove_planet_flag = yuzu_ancient_cryo_chamber_26 }
+			building_yuzu_ancient_cryo_chamber_28 = { set_planet_flag = yuzu_ancient_cryo_chamber_28 remove_planet_flag = yuzu_ancient_cryo_chamber_27 }
+			building_yuzu_ancient_cryo_chamber_29 = { set_planet_flag = yuzu_ancient_cryo_chamber_29 remove_planet_flag = yuzu_ancient_cryo_chamber_28 }
+			building_yuzu_ancient_cryo_chamber_30 = { set_planet_flag = yuzu_ancient_cryo_chamber_30 remove_planet_flag = yuzu_ancient_cryo_chamber_29 }
+			building_yuzu_ancient_cryo_chamber_31 = { set_planet_flag = yuzu_ancient_cryo_chamber_31 remove_planet_flag = yuzu_ancient_cryo_chamber_30 }
+			building_yuzu_ancient_cryo_chamber_32 = { set_planet_flag = yuzu_ancient_cryo_chamber_32 remove_planet_flag = yuzu_ancient_cryo_chamber_31 }
+			building_yuzu_ancient_cryo_chamber_33 = { set_planet_flag = yuzu_ancient_cryo_chamber_33 remove_planet_flag = yuzu_ancient_cryo_chamber_32 }
+			building_yuzu_ancient_cryo_chamber_34 = { set_planet_flag = yuzu_ancient_cryo_chamber_34 remove_planet_flag = yuzu_ancient_cryo_chamber_33 }
+			building_yuzu_ancient_cryo_chamber_35 = { set_planet_flag = yuzu_ancient_cryo_chamber_35 remove_planet_flag = yuzu_ancient_cryo_chamber_34 }
+			building_yuzu_ancient_cryo_chamber_36 = { set_planet_flag = yuzu_ancient_cryo_chamber_36 remove_planet_flag = yuzu_ancient_cryo_chamber_35 }
+		}
+		yuzu_store_pops = yes
+	}
+}
+
+# on_building_demolished
+planet_event = {
+	id = Yuzu_other_event.22
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+#		last_building_changed = building_yuzu_ancient_cryo_chamber_1
+        NOT = { has_building = building_yuzu_ancient_cryo_chamber_1 }
+		has_planet_flag = yuzu_ancient_cryo_chamber_1
+	}
+
+	immediate = {
+		remove_planet_flag = yuzu_ancient_cryo_chamber_1
+		yuzu_release_pops = yes
+	}
+}
+
+# on_building_replaced
+planet_event = {
+	id = Yuzu_other_event.23
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+#		last_building_changed = building_yuzu_ancient_cryo_chamber_1
+		NOR = {
+			has_building = building_yuzu_ancient_cryo_chamber_1
+			has_building = building_yuzu_ancient_cryo_chamber_2
+			has_building = building_yuzu_ancient_cryo_chamber_3
+			has_building = building_yuzu_ancient_cryo_chamber_4
+			has_building = building_yuzu_ancient_cryo_chamber_5
+			has_building = building_yuzu_ancient_cryo_chamber_6
+			has_building = building_yuzu_ancient_cryo_chamber_7
+			has_building = building_yuzu_ancient_cryo_chamber_8
+			has_building = building_yuzu_ancient_cryo_chamber_9
+			has_building = building_yuzu_ancient_cryo_chamber_10
+			has_building = building_yuzu_ancient_cryo_chamber_11
+			has_building = building_yuzu_ancient_cryo_chamber_12
+			has_building = building_yuzu_ancient_cryo_chamber_13
+			has_building = building_yuzu_ancient_cryo_chamber_14
+			has_building = building_yuzu_ancient_cryo_chamber_15
+			has_building = building_yuzu_ancient_cryo_chamber_16
+			has_building = building_yuzu_ancient_cryo_chamber_17
+			has_building = building_yuzu_ancient_cryo_chamber_18
+			has_building = building_yuzu_ancient_cryo_chamber_19
+			has_building = building_yuzu_ancient_cryo_chamber_20
+			has_building = building_yuzu_ancient_cryo_chamber_21
+			has_building = building_yuzu_ancient_cryo_chamber_22
+			has_building = building_yuzu_ancient_cryo_chamber_23
+			has_building = building_yuzu_ancient_cryo_chamber_24
+			has_building = building_yuzu_ancient_cryo_chamber_25
+			has_building = building_yuzu_ancient_cryo_chamber_26
+			has_building = building_yuzu_ancient_cryo_chamber_27
+			has_building = building_yuzu_ancient_cryo_chamber_28
+			has_building = building_yuzu_ancient_cryo_chamber_29
+			has_building = building_yuzu_ancient_cryo_chamber_30
+			has_building = building_yuzu_ancient_cryo_chamber_31
+			has_building = building_yuzu_ancient_cryo_chamber_32
+			has_building = building_yuzu_ancient_cryo_chamber_33
+			has_building = building_yuzu_ancient_cryo_chamber_34
+			has_building = building_yuzu_ancient_cryo_chamber_35
+			has_building = building_yuzu_ancient_cryo_chamber_36
+		}
+		OR = {
+			has_planet_flag = yuzu_ancient_cryo_chamber_1
+			has_planet_flag = yuzu_ancient_cryo_chamber_2
+			has_planet_flag = yuzu_ancient_cryo_chamber_3
+			has_planet_flag = yuzu_ancient_cryo_chamber_4
+			has_planet_flag = yuzu_ancient_cryo_chamber_5
+			has_planet_flag = yuzu_ancient_cryo_chamber_6
+			has_planet_flag = yuzu_ancient_cryo_chamber_7
+			has_planet_flag = yuzu_ancient_cryo_chamber_8
+			has_planet_flag = yuzu_ancient_cryo_chamber_9
+			has_planet_flag = yuzu_ancient_cryo_chamber_10
+			has_planet_flag = yuzu_ancient_cryo_chamber_11
+			has_planet_flag = yuzu_ancient_cryo_chamber_12
+			has_planet_flag = yuzu_ancient_cryo_chamber_13
+			has_planet_flag = yuzu_ancient_cryo_chamber_14
+			has_planet_flag = yuzu_ancient_cryo_chamber_15
+			has_planet_flag = yuzu_ancient_cryo_chamber_16
+			has_planet_flag = yuzu_ancient_cryo_chamber_17
+			has_planet_flag = yuzu_ancient_cryo_chamber_18
+			has_planet_flag = yuzu_ancient_cryo_chamber_19
+			has_planet_flag = yuzu_ancient_cryo_chamber_20
+			has_planet_flag = yuzu_ancient_cryo_chamber_21
+			has_planet_flag = yuzu_ancient_cryo_chamber_22
+			has_planet_flag = yuzu_ancient_cryo_chamber_23
+			has_planet_flag = yuzu_ancient_cryo_chamber_24
+			has_planet_flag = yuzu_ancient_cryo_chamber_25
+			has_planet_flag = yuzu_ancient_cryo_chamber_26
+			has_planet_flag = yuzu_ancient_cryo_chamber_27
+			has_planet_flag = yuzu_ancient_cryo_chamber_28
+			has_planet_flag = yuzu_ancient_cryo_chamber_29
+			has_planet_flag = yuzu_ancient_cryo_chamber_30
+			has_planet_flag = yuzu_ancient_cryo_chamber_31
+			has_planet_flag = yuzu_ancient_cryo_chamber_32
+			has_planet_flag = yuzu_ancient_cryo_chamber_33
+			has_planet_flag = yuzu_ancient_cryo_chamber_34
+			has_planet_flag = yuzu_ancient_cryo_chamber_35
+			has_planet_flag = yuzu_ancient_cryo_chamber_36
+		}
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_planet_flag
+			yuzu_ancient_cryo_chamber_1 = { remove_planet_flag = yuzu_ancient_cryo_chamber_1 yuzu_release_pops = yes }
+			yuzu_ancient_cryo_chamber_2 = { remove_planet_flag = yuzu_ancient_cryo_chamber_2 while = { count = 2 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_3 = { remove_planet_flag = yuzu_ancient_cryo_chamber_3 while = { count = 3 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_4 = { remove_planet_flag = yuzu_ancient_cryo_chamber_4 while = { count = 4 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_5 = { remove_planet_flag = yuzu_ancient_cryo_chamber_5 while = { count = 5 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_6 = { remove_planet_flag = yuzu_ancient_cryo_chamber_6 while = { count = 6 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_7 = { remove_planet_flag = yuzu_ancient_cryo_chamber_7 while = { count = 7 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_8 = { remove_planet_flag = yuzu_ancient_cryo_chamber_8 while = { count = 8 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_9 = { remove_planet_flag = yuzu_ancient_cryo_chamber_9 while = { count = 9 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_10 = { remove_planet_flag = yuzu_ancient_cryo_chamber_10 while = { count = 10 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_11 = { remove_planet_flag = yuzu_ancient_cryo_chamber_11 while = { count = 11 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_12 = { remove_planet_flag = yuzu_ancient_cryo_chamber_12 while = { count = 12 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_13 = { remove_planet_flag = yuzu_ancient_cryo_chamber_13 while = { count = 13 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_14 = { remove_planet_flag = yuzu_ancient_cryo_chamber_14 while = { count = 14 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_15 = { remove_planet_flag = yuzu_ancient_cryo_chamber_15 while = { count = 15 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_16 = { remove_planet_flag = yuzu_ancient_cryo_chamber_16 while = { count = 16 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_17 = { remove_planet_flag = yuzu_ancient_cryo_chamber_17 while = { count = 17 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_18 = { remove_planet_flag = yuzu_ancient_cryo_chamber_18 while = { count = 18 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_19 = { remove_planet_flag = yuzu_ancient_cryo_chamber_19 while = { count = 19 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_20 = { remove_planet_flag = yuzu_ancient_cryo_chamber_20 while = { count = 20 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_21 = { remove_planet_flag = yuzu_ancient_cryo_chamber_21 while = { count = 21 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_22 = { remove_planet_flag = yuzu_ancient_cryo_chamber_22 while = { count = 22 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_23 = { remove_planet_flag = yuzu_ancient_cryo_chamber_23 while = { count = 23 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_24 = { remove_planet_flag = yuzu_ancient_cryo_chamber_24 while = { count = 24 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_25 = { remove_planet_flag = yuzu_ancient_cryo_chamber_25 while = { count = 25 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_26 = { remove_planet_flag = yuzu_ancient_cryo_chamber_26 while = { count = 26 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_27 = { remove_planet_flag = yuzu_ancient_cryo_chamber_27 while = { count = 27 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_28 = { remove_planet_flag = yuzu_ancient_cryo_chamber_28 while = { count = 28 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_29 = { remove_planet_flag = yuzu_ancient_cryo_chamber_29 while = { count = 29 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_30 = { remove_planet_flag = yuzu_ancient_cryo_chamber_30 while = { count = 30 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_31 = { remove_planet_flag = yuzu_ancient_cryo_chamber_31 while = { count = 31 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_32 = { remove_planet_flag = yuzu_ancient_cryo_chamber_32 while = { count = 32 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_33 = { remove_planet_flag = yuzu_ancient_cryo_chamber_33 while = { count = 33 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_34 = { remove_planet_flag = yuzu_ancient_cryo_chamber_34 while = { count = 34 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_35 = { remove_planet_flag = yuzu_ancient_cryo_chamber_35 while = { count = 35 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_36 = { remove_planet_flag = yuzu_ancient_cryo_chamber_36 while = { count = 36 yuzu_release_pops = yes } }
+		}
+	}
+}
+
+# on_building_downgraded
+planet_event = {
+	id = Yuzu_other_event.24
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+#		OR = {
+#			last_building_changed = building_yuzu_ancient_cryo_chamber_2
+#			last_building_changed = building_yuzu_ancient_cryo_chamber_3
+#		}
+        has_building = building_yuzu_ancient_cryo_chamber_1
+		OR = {
+			has_planet_flag = yuzu_ancient_cryo_chamber_2
+			has_planet_flag = yuzu_ancient_cryo_chamber_3
+			has_planet_flag = yuzu_ancient_cryo_chamber_4
+			has_planet_flag = yuzu_ancient_cryo_chamber_5
+			has_planet_flag = yuzu_ancient_cryo_chamber_6
+			has_planet_flag = yuzu_ancient_cryo_chamber_7
+			has_planet_flag = yuzu_ancient_cryo_chamber_8
+			has_planet_flag = yuzu_ancient_cryo_chamber_9
+			has_planet_flag = yuzu_ancient_cryo_chamber_10
+			has_planet_flag = yuzu_ancient_cryo_chamber_11
+			has_planet_flag = yuzu_ancient_cryo_chamber_12
+			has_planet_flag = yuzu_ancient_cryo_chamber_13
+			has_planet_flag = yuzu_ancient_cryo_chamber_14
+			has_planet_flag = yuzu_ancient_cryo_chamber_15
+			has_planet_flag = yuzu_ancient_cryo_chamber_16
+			has_planet_flag = yuzu_ancient_cryo_chamber_17
+			has_planet_flag = yuzu_ancient_cryo_chamber_18
+			has_planet_flag = yuzu_ancient_cryo_chamber_19
+			has_planet_flag = yuzu_ancient_cryo_chamber_20
+			has_planet_flag = yuzu_ancient_cryo_chamber_21
+			has_planet_flag = yuzu_ancient_cryo_chamber_22
+			has_planet_flag = yuzu_ancient_cryo_chamber_23
+			has_planet_flag = yuzu_ancient_cryo_chamber_24
+			has_planet_flag = yuzu_ancient_cryo_chamber_25
+			has_planet_flag = yuzu_ancient_cryo_chamber_26
+			has_planet_flag = yuzu_ancient_cryo_chamber_27
+			has_planet_flag = yuzu_ancient_cryo_chamber_28
+			has_planet_flag = yuzu_ancient_cryo_chamber_29
+			has_planet_flag = yuzu_ancient_cryo_chamber_30
+			has_planet_flag = yuzu_ancient_cryo_chamber_31
+			has_planet_flag = yuzu_ancient_cryo_chamber_32
+			has_planet_flag = yuzu_ancient_cryo_chamber_33
+			has_planet_flag = yuzu_ancient_cryo_chamber_34
+			has_planet_flag = yuzu_ancient_cryo_chamber_35
+			has_planet_flag = yuzu_ancient_cryo_chamber_36
+		}
+	}
+
+	immediate = {
+		set_planet_flag = yuzu_ancient_cryo_chamber_1
+		switch = {
+			trigger = has_planet_flag
+			yuzu_ancient_cryo_chamber_2 = { remove_planet_flag = yuzu_ancient_cryo_chamber_2 yuzu_release_pops = yes }
+			yuzu_ancient_cryo_chamber_3 = { remove_planet_flag = yuzu_ancient_cryo_chamber_3 while = { count = 2 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_4 = { remove_planet_flag = yuzu_ancient_cryo_chamber_4 while = { count = 3 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_5 = { remove_planet_flag = yuzu_ancient_cryo_chamber_5 while = { count = 4 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_6 = { remove_planet_flag = yuzu_ancient_cryo_chamber_6 while = { count = 5 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_7 = { remove_planet_flag = yuzu_ancient_cryo_chamber_7 while = { count = 6 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_8 = { remove_planet_flag = yuzu_ancient_cryo_chamber_8 while = { count = 7 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_9 = { remove_planet_flag = yuzu_ancient_cryo_chamber_9 while = { count = 8 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_10 = { remove_planet_flag = yuzu_ancient_cryo_chamber_10 while = { count = 9 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_11 = { remove_planet_flag = yuzu_ancient_cryo_chamber_11 while = { count = 10 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_12 = { remove_planet_flag = yuzu_ancient_cryo_chamber_12 while = { count = 11 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_13 = { remove_planet_flag = yuzu_ancient_cryo_chamber_13 while = { count = 12 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_14 = { remove_planet_flag = yuzu_ancient_cryo_chamber_14 while = { count = 13 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_15 = { remove_planet_flag = yuzu_ancient_cryo_chamber_15 while = { count = 14 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_16 = { remove_planet_flag = yuzu_ancient_cryo_chamber_16 while = { count = 15 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_17 = { remove_planet_flag = yuzu_ancient_cryo_chamber_17 while = { count = 16 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_18 = { remove_planet_flag = yuzu_ancient_cryo_chamber_18 while = { count = 17 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_19 = { remove_planet_flag = yuzu_ancient_cryo_chamber_19 while = { count = 18 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_20 = { remove_planet_flag = yuzu_ancient_cryo_chamber_20 while = { count = 19 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_21 = { remove_planet_flag = yuzu_ancient_cryo_chamber_21 while = { count = 20 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_22 = { remove_planet_flag = yuzu_ancient_cryo_chamber_22 while = { count = 21 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_23 = { remove_planet_flag = yuzu_ancient_cryo_chamber_23 while = { count = 22 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_24 = { remove_planet_flag = yuzu_ancient_cryo_chamber_24 while = { count = 23 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_25 = { remove_planet_flag = yuzu_ancient_cryo_chamber_25 while = { count = 24 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_26 = { remove_planet_flag = yuzu_ancient_cryo_chamber_26 while = { count = 25 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_27 = { remove_planet_flag = yuzu_ancient_cryo_chamber_27 while = { count = 26 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_28 = { remove_planet_flag = yuzu_ancient_cryo_chamber_28 while = { count = 27 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_29 = { remove_planet_flag = yuzu_ancient_cryo_chamber_29 while = { count = 28 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_30 = { remove_planet_flag = yuzu_ancient_cryo_chamber_30 while = { count = 29 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_31 = { remove_planet_flag = yuzu_ancient_cryo_chamber_31 while = { count = 30 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_32 = { remove_planet_flag = yuzu_ancient_cryo_chamber_32 while = { count = 31 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_33 = { remove_planet_flag = yuzu_ancient_cryo_chamber_33 while = { count = 32 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_34 = { remove_planet_flag = yuzu_ancient_cryo_chamber_34 while = { count = 33 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_35 = { remove_planet_flag = yuzu_ancient_cryo_chamber_35 while = { count = 34 yuzu_release_pops = yes } }
+			yuzu_ancient_cryo_chamber_36 = { remove_planet_flag = yuzu_ancient_cryo_chamber_36 while = { count = 35 yuzu_release_pops = yes } }
+		}
+	}
+}

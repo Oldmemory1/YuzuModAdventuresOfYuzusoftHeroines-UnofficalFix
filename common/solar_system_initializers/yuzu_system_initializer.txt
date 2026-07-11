@@ -1,0 +1,869 @@
+@distance = 50
+@base_moon_distance = 10
+@jumps = 3
+
+
+### Sol System
+yuzu_sol_system_initializer = {
+	name = "NAME_Sol"
+
+	class = "sc_g"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 145
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 290
+	}
+
+	flags = { empire_home_system sol_system sol yuzu_home_star }
+
+	usage = origin
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "NAME_Sol"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_Mercury"
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = 15
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_Venus"
+		class = "pc_toxic"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = 17
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_Earth"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = 25
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		flags = { planet_earth yuzu_home_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "NAME_Luna"
+			class = "pc_barren_cold"
+			size = 5
+			orbit_distance = 12
+			orbit_angle = 40
+			has_ring = no
+			entity = "cold_barren_planet_luna_entity"
+		}
+	}
+
+	planet = {
+		name = "NAME_Mars"
+		class = "pc_barren"
+		orbit_distance = 25
+		orbit_angle = 60
+		size = 13
+		has_ring = no
+		entity = "barren_planet_mars_entity"
+
+		init_effect = {
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "NAME_1_Ceres"
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_2_Pallas"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_3_Juno"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_4_Vesta"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_Jupiter"
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = -160
+		size = 35
+		has_ring = no
+		entity = "gas_giant_jupiter_entity"
+		change_orbit = 6
+
+		moon = {
+			name = "NAME_Io"
+			class = "pc_molten"
+			size = 6
+			orbit_distance = 10
+			orbit_angle = 110
+			has_ring = no
+		}
+		moon = {
+			name = "NAME_Europa"
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 2.5
+			orbit_angle = 10
+			has_ring = no
+		}
+		moon = {
+			name = "NAME_Ganymede"
+			class = "pc_frozen"
+			size = 9
+			orbit_distance = 2.5
+			orbit_angle = 80
+			has_ring = no
+		}
+		moon = {
+			name = "NAME_Callisto"
+			class = "pc_frozen"
+			size = 7
+			orbit_distance = 2.5
+			orbit_angle = -155
+			has_ring = no
+		}
+	}
+
+	planet = {
+		name = "NAME_Saturn"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 170
+		size = 30
+		has_ring = yes
+		entity = "gas_giant_05_entity"
+		change_orbit = 7
+
+		moon = {
+			name = "NAME_Titan"
+			class = "pc_frozen"
+			size = 8
+			orbit_distance = 12
+			orbit_angle = 320
+			has_ring = no
+		}
+	}
+
+	planet = {
+		name = "NAME_Uranus"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = 20
+		has_ring = no
+		entity = "gas_giant_03_entity"
+	}
+
+	planet = {
+		name = "NAME_Neptune"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = -195
+		size = 20
+		has_ring = no
+		entity = "gas_giant_02_entity"
+		change_orbit = 4
+
+		moon = {
+			name = "NAME_Triton"
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 7
+			orbit_angle = 115
+			has_ring = no
+		}
+	}
+
+	planet = {
+		name = "NAME_134340_Pluto"
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_136472_Makemake"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_136108_Haumea"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		name = "NAME_20000_Varuna"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	neighbor_system = {
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "sol_neighbor_t1"
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "sol_neighbor_t1_first_colony"
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies = 0 }
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "sol_neighbor_t1_no_guaranteed_colony"
+	}
+}
+
+yuzu_old_abyss_system = {
+	name = "NAME_Yuzu_Abyss"
+	class = sc_black_hole
+	flags = { old_abyss }
+
+	init_effect = {
+		save_global_event_target_as = old_abyss_system
+	}
+
+	planet = {
+		name = "NAME_Abyss_Lord"
+		count = 1
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 20
+		has_ring = no
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+			add_deposit = d_dark_matter_deposit_10
+		}
+	}
+
+	change_orbit = 45
+
+	init_effect = {
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 0
+			orbit_distance = 45
+		}
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 90
+			orbit_distance = 45
+		}
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 180
+			orbit_distance = 45
+		}
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 270
+			orbit_distance = 45
+		}
+	}
+
+	planet = {
+		name = "NAME_Yuzu_Eternal"
+		count = 1
+		class = pc_relic
+		orbit_distance = 65
+		orbit_angle = 90
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		modifiers = none
+		flags = { primary_pc_relic_abyss has_no_primitives_back has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			relic_world_deposits = yes
+			create_archaeological_site = site_yuzu_land_of_ceremony
+			set_planet_flag = ceremony_planet
+			save_global_event_target_as = yuzu_ceremony_planet
+			prevent_anomaly = yes
+
+			create_country = {
+				name = "NAME_Yuzu_Mythical_Creature"
+				type = guardian_yuzu_ceremony_monster
+				flag = {
+					icon = {
+						category = "zoological"
+						file = "flag_zoological_5.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+			}
+			last_created_country = {
+				save_global_event_target_as = yuzu_ceremony_monster_country
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = yuzu_mythical_creature_power
+						}
+					}
+					add_modifier = {
+						modifier = yuzu_mythical_creature_power
+						days = -1
+					}
+				}
+				add_modifier = { modifier = yuzu_cloaking_detection_modifier }
+			}
+
+			create_fleet = {
+				name = "NAME_Yuzu_Dimensional_Visitor"
+				settings = {
+					spawn_debris = no
+					is_boss = yes
+				}
+				effect = {
+					set_owner = event_target:yuzu_ceremony_monster_country
+					create_ship = {
+						name = "NAME_Yuzu_Ceremony_Monster"
+						design = "NAME_Dimensional_Horror"
+					}
+					set_location = event_target:yuzu_ceremony_planet
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 500
+				}
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Eternal_Moon_A"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 15
+			orbit_angle = 90
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Eternal_Moon_B"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Eternal_Moon_C"
+			count = 1
+			class = pc_barren_cold
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Eternal_Moon_D"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Eternal_Moon_E"
+			count = 1
+			class = pc_broken
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Eternal_Moon_F"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+
+	planet = {
+		name = "NAME_Abyss_Altar_A"
+		class = "pc_gas_giant"
+		orbit_distance = 0
+		orbit_angle = 60
+		size = 30
+		has_ring = yes
+		entity = "gas_giant_02_entity"
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+			while = { count = 10 add_deposit = d_physics_10 }
+		}
+	}
+
+	planet = {
+		name = "NAME_Yuzu_Chaos"
+		count = 1
+		class = pc_shattered
+		orbit_distance = 0
+		orbit_angle = 60
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		flags = { primary_pc_relic_abyss yuzu_broken_abyss_world has_no_primitives_back has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Chaos_Moon_A"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 15
+			orbit_angle = 90
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Chaos_Moon_B"
+			count = 1
+			class = pc_broken
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Chaos_Moon_C"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Chaos_Moon_D"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Chaos_Moon_E"
+			count = 1
+			class = pc_barren_cold
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Chaos_Moon_F"
+			count = 1
+			class = pc_barren_cold
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+
+	planet = {
+		name = "NAME_Abyss_Altar_B"
+		class = "pc_gas_giant"
+		orbit_distance = 0
+		orbit_angle = 60
+		size = 30
+		has_ring = yes
+		entity = "gas_giant_01_entity"
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+			while = { count = 10 add_deposit = d_engineering_10 }
+		}
+	}
+
+	planet = {
+		name = "NAME_Yuzu_Dark"
+		count = 1
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_angle = 60
+		change_orbit = 20
+		size = 10
+		has_ring = no
+		flags = { primary_pc_relic_abyss yuzu_broken_abyss_world has_no_primitives_back has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Dark_Moon_A"
+			count = 1
+			class = pc_broken
+			orbit_distance = 15
+			orbit_angle = 90
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Dark_Moon_B"
+			count = 1
+			class = pc_shattered
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Dark_Moon_C"
+			count = 1
+			class = pc_barren_cold
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Dark_Moon_D"
+			count = 1
+			class = pc_gaia
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Dark_Moon_E"
+			count = 1
+			class = pc_arctic
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+
+		moon = {
+			name = "NAME_Yuzu_Dark_Moon_F"
+			count = 1
+			class = pc_barren_cold
+			orbit_distance = 0
+			orbit_angle = 60
+			size = 30
+			has_ring = no
+			flags = { primary_pc_gaia has_no_primitives_back }
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+
+	planet = {
+		name = "NAME_Abyss_Altar_C"
+		class = "pc_gas_giant"
+		orbit_distance = 0
+		orbit_angle = 60
+		size = 30
+		has_ring = yes
+		entity = "gas_giant_03_entity"
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+			while = { count = 10 add_deposit = d_society_10 }
+		}
+	}
+}
+
+yuzu_new_abyss_system = {
+	class = sc_black_hole
+	name = "NAME_Abyss_Core"
+
+	flags = { new_abyss }
+
+	planet = {
+		count = 1
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 20
+		has_ring = no
+		init_effect = {
+			save_global_event_target_as = new_abyss_system
+			clear_deposits = yes
+			prevent_anomaly = yes
+			add_deposit = d_dark_matter_deposit_10
+		}
+	}
+
+	change_orbit = 100
+
+	planet = {
+		class = pc_yuzu_abyss_city
+		name = "NAME_Abyss_Sanctuary"
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		modifiers = none
+		flags = { new_abyss_capital_planet primary_pc_gaia has_no_primitives_back }
+
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+			add_deposit = d_yuzu_abyss_gate
+		}
+
+		moon = {
+			count = 1
+			name = "NAME_Abyss_Moon_1"
+			class = pc_frozen
+			orbit_distance = 10
+		    orbit_angle = { min = 90 max = 270 }
+			size = 10
+			has_ring = no
+			flags = { primary_pc_frozen }
+			init_effect = {
+				clear_deposits = yes
+				prevent_anomaly = yes
+				add_deposit = d_rare_crystals_5
+			}
+		}
+
+		moon = {
+			count = 1
+			name = "NAME_Abyss_Moon_2"
+			class = pc_toxic
+			orbit_distance = 10
+		    orbit_angle = { min = 90 max = 270 }
+			size = 10
+			has_ring = no
+			flags = { primary_pc_toxic }
+			init_effect = {
+				clear_deposits = yes
+				prevent_anomaly = yes
+				add_deposit = d_exotic_gases_5
+			}
+		}
+
+		moon = {
+			count = 1
+			name = "NAME_Abyss_Moon_3"
+			class = pc_molten
+			orbit_distance = 10
+		    orbit_angle = { min = 90 max = 270 }
+			size = 10
+			has_ring = no
+			flags = { primary_pc_molten }
+			init_effect = {
+				clear_deposits = yes
+				prevent_anomaly = yes
+				add_deposit = d_volatile_motes_5
+			}
+		}
+	}
+
+	change_orbit = 40
+
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 15
+		flags = { primary_pc_barren_cold }
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 11
+		flags = { primary_pc_barren_cold }
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+		}
+	}
+
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 13
+		flags = { primary_pc_barren_cold }
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+		}
+	}
+}

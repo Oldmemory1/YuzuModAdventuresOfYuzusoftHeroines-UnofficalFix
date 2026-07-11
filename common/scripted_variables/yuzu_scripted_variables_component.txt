@@ -1,0 +1,203 @@
+# Small
+
+@yuzu_s_t1_cost = 40
+@yuzu_s_t2_cost = 50
+@yuzu_s_t3_cost = 60
+@yuzu_rs_s_cost = 120
+
+@yuzu_s_t1_upkeep_energy = 0.40
+@yuzu_s_t1_upkeep_alloys = 0.08
+@yuzu_s_t2_upkeep_energy = 0.50
+@yuzu_s_t2_upkeep_alloys = 0.10
+@yuzu_s_t3_upkeep_energy = 0.60
+@yuzu_s_t3_upkeep_alloys = 0.12
+@yuzu_rs_s_upkeep_energy = 1.20
+@yuzu_rs_s_upkeep_alloys = 0.24
+
+# Medium
+
+@yuzu_m_t1_cost = 80
+@yuzu_m_t2_cost = 100
+@yuzu_m_t3_cost = 120
+@yuzu_rs_m_cost = 240
+
+@yuzu_m_t1_upkeep_energy = 0.80
+@yuzu_m_t1_upkeep_alloys = 0.16
+@yuzu_m_t2_upkeep_energy = 1.00
+@yuzu_m_t2_upkeep_alloys = 0.20
+@yuzu_m_t3_upkeep_energy = 1.20
+@yuzu_m_t3_upkeep_alloys = 0.24
+@yuzu_rs_m_upkeep_energy = 2.40
+@yuzu_rs_m_upkeep_alloys = 0.48
+
+# Large
+
+@yuzu_l_t1_cost = 160
+@yuzu_l_t2_cost = 200
+@yuzu_l_t3_cost = 240
+@yuzu_rs_l_cost = 480
+
+@yuzu_l_t1_upkeep_energy = 1.60
+@yuzu_l_t1_upkeep_alloys = 0.32
+@yuzu_l_t2_upkeep_energy = 2.00
+@yuzu_l_t2_upkeep_alloys = 0.40
+@yuzu_l_t3_upkeep_energy = 2.40
+@yuzu_l_t3_upkeep_alloys = 0.48
+@yuzu_rs_l_upkeep_energy = 4.80
+@yuzu_rs_l_upkeep_alloys = 0.96
+
+# Extra Large
+
+@yuzu_xl_t1_cost = 320
+@yuzu_xl_t2_cost = 400
+@yuzu_xl_t3_cost = 480
+@yuzu_rs_xl_cost = 960
+
+@yuzu_xl_t1_upkeep_energy = 3.20
+@yuzu_xl_t1_upkeep_alloys = 0.64
+@yuzu_xl_t2_upkeep_energy = 4.00
+@yuzu_xl_t2_upkeep_alloys = 0.80
+@yuzu_xl_t3_upkeep_energy = 4.80
+@yuzu_xl_t3_upkeep_alloys = 0.96
+@yuzu_rs_xl_upkeep_energy = 9.60
+@yuzu_rs_xl_upkeep_alloys = 1.92
+
+# Titanic
+
+@yuzu_titanic_t1_cost = 640
+@yuzu_titanic_t2_cost = 800
+@yuzu_titanic_t3_cost = 960
+@yuzu_rs_titanic_cost = 1920
+
+@yuzu_titanic_t1_upkeep_energy = 6.40
+@yuzu_titanic_t1_upkeep_alloys = 1.28
+@yuzu_titanic_t2_upkeep_energy = 8.00
+@yuzu_titanic_t2_upkeep_alloys = 1.60
+@yuzu_titanic_t3_upkeep_energy = 9.60
+@yuzu_titanic_t3_upkeep_alloys = 1.92
+@yuzu_rs_titanic_upkeep_energy = 19.2
+@yuzu_rs_titanic_upkeep_alloys = 3.84
+
+#################
+# RARE RESOURCES
+#################
+
+@yuzu_s_t1_rare = 0.75
+@yuzu_s_t2_rare = 1.00
+@yuzu_s_t3_rare = 1.25
+@yuzu_rs_s_rare = 2.50
+
+@yuzu_m_t1_rare = 1.50
+@yuzu_m_t2_rare = 2.00
+@yuzu_m_t3_rare = 2.50
+@yuzu_rs_m_rare = 5.00
+
+@yuzu_l_t1_rare = 3.00
+@yuzu_l_t2_rare = 4.00
+@yuzu_l_t3_rare = 5.00
+@yuzu_rs_l_rare = 10.00
+
+@yuzu_xl_t1_rare = 6.00
+@yuzu_xl_t2_rare = 8.00
+@yuzu_xl_t3_rare = 10.00
+@yuzu_rs_xl_rare = 20.00
+
+@yuzu_titanic_t1_rare = 12.00
+@yuzu_titanic_t2_rare = 16.00
+@yuzu_titanic_t3_rare = 20.00
+@yuzu_rs_titanic_rare = 40.00
+
+#################
+# SHIELDS
+#################
+
+@yuzu_shield_s_t1_cost = 20 # 较低，以稀有资源代替
+@yuzu_shield_s_t1_cost_rare = 0.4
+@yuzu_shield_s_t2_cost = 25
+@yuzu_shield_s_t2_cost_rare = 0.5
+
+@yuzu_shield_s_t1_upkeep_energy = 0.20
+@yuzu_shield_s_t1_upkeep_alloys = 0.04
+@yuzu_shield_s_t2_upkeep_energy = 0.25
+@yuzu_shield_s_t2_upkeep_alloys = 0.05
+
+
+@yuzu_shield_m_t1_cost = 40 # 较低，以稀有资源代替
+@yuzu_shield_m_t1_cost_rare = 0.8
+@yuzu_shield_m_t2_cost = 50
+@yuzu_shield_m_t2_cost_rare = 1.0
+
+@yuzu_shield_m_t1_upkeep_energy = 0.40
+@yuzu_shield_m_t1_upkeep_alloys = 0.08
+@yuzu_shield_m_t2_upkeep_energy = 0.50
+@yuzu_shield_m_t2_upkeep_alloys = 0.10
+
+
+@yuzu_shield_l_t1_cost = 80 # 较低，以稀有资源代替
+@yuzu_shield_l_t1_cost_rare = 1.6
+@yuzu_shield_l_t2_cost = 100
+@yuzu_shield_l_t2_cost_rare = 2.0
+
+@yuzu_shield_l_t1_upkeep_energy = 0.80
+@yuzu_shield_l_t1_upkeep_alloys = 0.16
+@yuzu_shield_l_t2_upkeep_energy = 1.00
+@yuzu_shield_l_t2_upkeep_alloys = 0.20
+
+# 承受值 & 回复值
+
+@yuzu_shield_S1 = 250
+@yuzu_shield_M1 = 625
+@yuzu_shield_L1 = 1500
+
+@yuzu_regen_S1 = 2.50
+@yuzu_regen_M1 = 6.25
+@yuzu_regen_L1 = 15.0
+
+@yuzu_shield_S2 = 335
+@yuzu_shield_M2 = 835
+@yuzu_shield_L2 = 2000
+
+@yuzu_regen_S2 = 3.35
+@yuzu_regen_M2 = 8.35
+@yuzu_regen_L2 = 20.0
+
+#############
+#	ARMOR	#
+#############
+
+@yuzu_armor_s_t1_cost = 36 # @yuzu_s_t1_cost = 40，减少部分以稀有资源代替
+@yuzu_armor_s_t1_cost_rare = 0.8
+@yuzu_armor_s_t2_cost = 45
+@yuzu_armor_s_t2_cost_rare = 1.0
+
+@yuzu_armor_m_t1_cost = 72 # @yuzu_m_t1_cost = 80，减少部分以稀有资源代替
+@yuzu_armor_m_t1_cost_rare = 1.6
+@yuzu_armor_m_t2_cost = 90
+@yuzu_armor_m_t2_cost_rare = 2.0
+
+@yuzu_armor_l_t1_cost = 144 # @yuzu_l_t1_cost = 160，减少部分以稀有资源代替
+@yuzu_armor_l_t1_cost_rare = 3.2
+@yuzu_armor_l_t2_cost = 180
+@yuzu_armor_l_t2_cost_rare = 4.0
+
+# 承受值 & 回复值
+
+@yuzu_armor_S1 = 250
+@yuzu_armor_M1 = 625
+@yuzu_armor_L1 = 1500
+
+@yuzu_armor_S2 = 335
+@yuzu_armor_M2 = 835
+@yuzu_armor_L2 = 2000
+
+#############
+#	POWER	#
+#############
+
+@yuzu_power_S1 = -80
+@yuzu_power_M1 = -160
+@yuzu_power_L1 = -320
+
+@yuzu_power_S2 = -100
+@yuzu_power_M2 = -200
+@yuzu_power_L2 = -400

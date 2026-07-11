@@ -1,0 +1,99 @@
+record_and_set_yuzu_leader_skill = {
+	if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 10
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 10 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 9
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 9 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 8
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 8 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 7
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 7 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 6
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 6 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 5
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 5 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 4
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 4 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 3
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 3 }
+	}
+	else_if = {
+		limit = {
+			any_owned_leader = {
+				leader_class = $LEADER_CLASS$
+				has_skill = 2
+			}
+		}
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 2 }
+	}
+	else = {
+		set_variable = { which = yuzu_$LEADER_CLASS$_skill value = 1 }
+	}
+
+	every_owned_leader = {
+		limit = {
+			leader_class = $LEADER_CLASS$
+		}
+		set_yuzu_leader_skill_single = { LEADER_CLASS = $LEADER_CLASS$ }
+	}
+	every_pool_leader = {
+		limit = {
+			leader_class = $LEADER_CLASS$
+		}
+		set_yuzu_leader_skill_single = { LEADER_CLASS = $LEADER_CLASS$ }
+	}
+}

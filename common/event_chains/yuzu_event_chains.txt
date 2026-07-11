@@ -1,0 +1,19 @@
+yuzu_abyss_coming_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_stare_abyss
+}
+
+yuzu_abyss_descended_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_stare_abyss
+	counter = {
+		yuzu_abyss_kills_us = {
+		}
+		yuzu_abyss_kills_others = {
+		}
+		yuzu_abyss_victims = {
+		}
+		yuzu_abyss_sacrificed_planets = {
+		}
+	}
+}

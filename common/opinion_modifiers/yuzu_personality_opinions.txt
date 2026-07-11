@@ -1,0 +1,29 @@
+opinion_yuzu_cuteness = {
+	trigger = {
+		is_YUZU = no
+		FROM = {
+			is_YUZU = yes
+		}
+	}
+
+	opinion = {
+		modifier = {
+			add = 10
+		}	
+	}
+}
+
+opinion_yuzu_companions = {
+	trigger = {
+		is_YUZU = yes
+		FROM = {
+			is_YUZU = yes
+		}
+	}
+
+	opinion = {
+		modifier = {
+			add = 100
+		}	
+	}
+}

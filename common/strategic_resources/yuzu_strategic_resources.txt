@@ -1,0 +1,16 @@
+fragment_of_heart = {
+	tradable = no
+	category = other
+#	max = 1000000
+
+	visibility_prerequisite = { always = yes }
+#	visibility_prerequisite = { is_YUZU = yes }  # 好像没用
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 100000
+	}
+}

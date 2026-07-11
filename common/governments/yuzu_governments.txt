@@ -1,0 +1,11 @@
+gov_Yuzu = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+	
+	possible = {
+		has_authority = auth_Yuzu
+	}
+	weight = {
+		base = 10000
+	}
+}

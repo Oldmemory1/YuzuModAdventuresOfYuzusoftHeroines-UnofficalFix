@@ -1,0 +1,1037 @@
+weapon_component_template = {
+	key = "YUZU_BEAM_1"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_beam_1"
+	icon_frame = 1
+	power = -600
+
+	firing_arc = 10.0
+	min_range = 30.0
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_yuzu_beam_1" }
+	component_set = "YUZU_BEAM_1"
+	projectile_gfx = "yuzu_beam_1"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 5000
+		max = 7500
+	}
+	windup = {
+		min = 30
+		max = 45
+	}
+	total_fire_time = 180
+	range = 300
+	accuracy = 0.90
+	tracking = 0.3
+	shield_penetration = 1
+	armor_penetration = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_titanic_t1_cost
+			rare_crystals = @yuzu_titanic_t1_rare
+		}
+		upkeep = {
+			energy = @yuzu_titanic_t1_upkeep_energy
+			alloys = @yuzu_titanic_t1_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_BEAM_2"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_beam_2"
+	icon_frame = 1
+	power = -700
+
+	firing_arc = 10.0
+	min_range = 30.0
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_yuzu_beam_2" }
+	component_set = "YUZU_BEAM_2"
+	projectile_gfx = "yuzu_beam_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_BEAM_3"
+	damage = {
+		min = 10000
+		max = 25000
+	}
+	windup = {
+		min = 40
+		max = 50
+	}
+	total_fire_time = 200
+	range = 320
+	accuracy = 0.9
+	tracking = 0
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_titanic_t2_cost
+			rare_crystals = @yuzu_titanic_t2_rare
+		}
+		upkeep = {
+			energy = @yuzu_titanic_t2_upkeep_energy
+			alloys = @yuzu_titanic_t2_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_BEAM_3"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_beam_3"
+	icon_frame = 1
+	power = -800
+
+	firing_arc = 10.0
+	min_range = 30.0
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_yuzu_beam_3" }
+	component_set = "YUZU_BEAM_3"
+	projectile_gfx = "yuzu_beam_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 15000
+		max = 37500
+	}
+	windup = {
+		min = 40
+		max = 50
+	}
+	total_fire_time = 200
+	range = 320
+	accuracy = 0.9
+	tracking = 0
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_titanic_t3_cost
+			rare_crystals = @yuzu_titanic_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_titanic_t3_upkeep_energy
+			alloys = @yuzu_titanic_t3_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_LANCE_1"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_lance_1"
+	icon_frame = 1
+	power = -300
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_yuzu_lance_1" }
+	component_set = "YUZU_LANCE_1"
+	projectile_gfx = "yuzu_lance_1"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 1000
+		max = 1500
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 70
+	range = 180
+	accuracy = 0.85
+	tracking = 0.4
+	shield_penetration = 1
+	armor_penetration = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_xl_t1_cost
+			rare_crystals = @yuzu_xl_t1_rare
+		}
+		upkeep = {
+			energy = @yuzu_xl_t1_upkeep_energy
+			alloys = @yuzu_xl_t1_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_LANCE_2"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_lance_2"
+	icon_frame = 1
+	power = -350
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_yuzu_lance_2" }
+	component_set = "YUZU_LANCE_2"
+	projectile_gfx = "yuzu_lance_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_LANCE_3"
+	damage = {
+		min = 2000
+		max = 5000
+	}
+	windup = {
+		min = 10
+		max = 20
+	}
+	total_fire_time = 75
+	range = 200
+	accuracy = 0.9
+	tracking = 0.1
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_xl_t2_cost
+			rare_crystals = @yuzu_xl_t2_rare
+		}
+		upkeep = {
+			energy = @yuzu_xl_t2_upkeep_energy
+			alloys = @yuzu_xl_t2_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_LANCE_3"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_lance_3"
+	icon_frame = 1
+	power = -400
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_yuzu_lance_3" }
+	component_set = "YUZU_LANCE_3"
+	projectile_gfx = "yuzu_lance_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 3000
+		max = 7500
+	}
+	windup = {
+		min = 10
+		max = 20
+	}
+	total_fire_time = 75
+	range = 200
+	accuracy = 0.9
+	tracking = 0.1
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_xl_t3_cost
+			rare_crystals = @yuzu_xl_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_xl_t3_upkeep_energy
+			alloys = @yuzu_xl_t3_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_L_1"
+	size = large
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1"
+	icon_frame = 1
+	power = -110
+
+	prerequisites = { "tech_yuzu_l_1" }
+	component_set = "YUZU_ENERGY_TORPEDO_1"
+	projectile_gfx = "yuzu_energy_torpedoes_1"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 180
+		max = 300
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.80
+	tracking = 0.5
+	shield_penetration = 1
+	armor_penetration = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_l_t1_cost
+			rare_crystals = @yuzu_l_t1_rare
+		}
+		upkeep = {
+			energy = @yuzu_l_t1_upkeep_energy
+			alloys = @yuzu_l_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_L_2"
+	size = large
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_2"
+	icon_frame = 1
+	power = -130
+
+	prerequisites = { "tech_yuzu_l_2" }
+	component_set = "YUZU_ENERGY_TORPEDO_2"
+	projectile_gfx = "yuzu_energy_torpedoes_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_L_3"
+	damage = {
+		min = 360
+		max = 960
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 150
+	accuracy = 0.9
+	tracking = 0.2
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_l_t2_cost
+			rare_crystals = @yuzu_l_t2_rare
+		}
+		upkeep = {
+			energy = @yuzu_l_t2_upkeep_energy
+			alloys = @yuzu_l_t2_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_L_3"
+	size = large
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3"
+	icon_frame = 1
+	power = -150
+
+	prerequisites = { "tech_yuzu_l_3" }
+	component_set = "YUZU_ENERGY_TORPEDO_3"
+	projectile_gfx = "yuzu_energy_torpedoes_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 540
+		max = 1440
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 150
+	accuracy = 0.9
+	tracking = 0.2
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_l_t3_cost
+			rare_crystals = @yuzu_l_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_l_t3_upkeep_energy
+			alloys = @yuzu_l_t3_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_M_1"
+	size = medium
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1"
+	icon_frame = 1
+	power = -60
+
+	prerequisites = { "tech_yuzu_l_1" }
+	component_set = "YUZU_ENERGY_TORPEDO_1"
+	projectile_gfx = "yuzu_energy_torpedoes_M_1"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 75
+		max = 125
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.80
+	tracking = 0.6
+	shield_penetration = 1
+	armor_penetration = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_m_t1_cost
+			rare_crystals = @yuzu_m_t1_rare
+		}
+		upkeep = {
+			energy = @yuzu_m_t1_upkeep_energy
+			alloys = @yuzu_m_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_M_2"
+	size = medium
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_2"
+	icon_frame = 1
+	power = -70
+
+	prerequisites = { "tech_yuzu_l_2" }
+	component_set = "YUZU_ENERGY_TORPEDO_2"
+	projectile_gfx = "yuzu_energy_torpedoes_M_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_M_3"
+	damage = {
+		min = 150
+		max = 400
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.9
+	tracking = 0.3
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_m_t2_cost
+			rare_crystals = @yuzu_m_t2_rare
+		}
+		upkeep = {
+			energy = @yuzu_m_t2_upkeep_energy
+			alloys = @yuzu_m_t2_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_M_3"
+	size = medium
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3"
+	icon_frame = 1
+	power = -80
+
+	prerequisites = { "tech_yuzu_l_3" }
+	component_set = "YUZU_ENERGY_TORPEDO_3"
+	projectile_gfx = "yuzu_energy_torpedoes_M_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 225
+		max = 600
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.9
+	tracking = 0.3
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_m_t3_cost
+			rare_crystals = @yuzu_m_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_m_t3_upkeep_energy
+			alloys = @yuzu_m_t3_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_S_1"
+	size = small
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1"
+	icon_frame = 1
+	power = -35
+
+	prerequisites = { "tech_yuzu_l_1" }
+	component_set = "YUZU_ENERGY_TORPEDO_1"
+	projectile_gfx = "yuzu_energy_torpedoes_S_1"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 30
+		max = 50
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 60
+	accuracy = 0.80
+	tracking = 0.7
+	shield_penetration = 1
+	armor_penetration = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_s_t1_cost
+			rare_crystals = @yuzu_s_t1_rare
+		}
+		upkeep = {
+			energy = @yuzu_s_t1_upkeep_energy
+			alloys = @yuzu_s_t1_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_S_2"
+	size = small
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_2"
+	icon_frame = 1
+	power = -40
+
+	prerequisites = { "tech_yuzu_l_2" }
+	component_set = "YUZU_ENERGY_TORPEDO_2"
+	projectile_gfx = "yuzu_energy_torpedoes_S_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_S_3"
+	damage = {
+		min = 60
+		max = 160
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.9
+	tracking = 0.4
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_s_t2_cost
+			rare_crystals = @yuzu_s_t2_rare
+		}
+		upkeep = {
+			energy = @yuzu_s_t2_upkeep_energy
+			alloys = @yuzu_s_t2_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_S_3"
+	size = small
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3"
+	icon_frame = 1
+	power = -45
+
+	prerequisites = { "tech_yuzu_l_3" }
+	component_set = "YUZU_ENERGY_TORPEDO_3"
+	projectile_gfx = "yuzu_energy_torpedoes_S_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 90
+		max = 240
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.9
+	tracking = 0.4
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_s_t3_cost
+			rare_crystals = @yuzu_s_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_s_t3_upkeep_energy
+			alloys = @yuzu_s_t3_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "YUZU_STRIKE_CRAFT_1"
+	size = LARGE
+	entity = "bomber_entity"
+
+	weapon_type = point_defence
+	projectile_gfx = "scout_laser_1"
+
+	power = -75
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_l_t2_cost
+		}
+		upkeep = {
+			energy = @yuzu_l_t2_upkeep_energy
+			alloys = @yuzu_l_t2_upkeep_alloys
+		}
+	}
+
+	count = 10
+	regeneration_per_day = 1
+	launch_time = 1.5
+
+	damage = { min = 15 max = 50 }
+	cooldown = 2.5
+	range = 15
+	engagement_range = 150
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 100
+	armor = 50
+	shield = 50
+	evasion = 0.70
+
+	speed = 750
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 1.0
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_ship_part_yuzu_strike_craft_1"
+	icon_frame = 1
+	component_set = "YUZU_STRIKE_CRAFT_1"
+	prerequisites = { "tech_yuzu_strike_craft_1" }
+
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_TORPEDO_1"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+
+	icon = "GFX_ship_part_yuzu_torpedo_1"
+	icon_frame = 1
+	type = missile
+
+	prerequisites = { "tech_yuzu_torpedoes_1" }
+	component_set = "YUZU_TORPEDO_1"
+	projectile_gfx = "yuzu_large_torpedo_01"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+
+	power = -40
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_m_t2_cost
+			rare_crystals = @yuzu_m_t2_rare
+		}
+		upkeep = {
+			energy = @yuzu_m_t2_upkeep_energy
+			alloys = @yuzu_m_t2_upkeep_alloys
+		}
+	}
+
+	damage = { min = 750 max = 1500 }
+	windup = {
+		min = 2
+		max = 20
+	}
+	total_fire_time = 200
+	range = 150
+	accuracy = 1.00
+	tracking = 0.30
+
+	missile_speed = 20 # 500 跟表里的不一样
+	missile_evasion = 0
+	missile_shield = 75
+	missile_armor = 50
+	missile_health = 75
+	missile_retarget_range = 200
+
+	shield_penetration = 1.0
+
+	size_damage_factor = 1
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_POINT_DEFENCE_1"
+	size = point_defence
+
+	icon = "GFX_ship_part_yuzu_point_defense_1"
+	icon_frame = 1
+
+	prerequisites = { "tech_yuzu_pd_tracking_1" }
+	component_set = "YUZU_POINT_DEFENCE_1"
+	type = point_defence
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }
+
+	power = -20
+
+	damage = {
+		min = 5
+		max = 20
+	}
+	windup = {
+		min = 0.1
+		max = 1.0
+	}
+	total_fire_time = 3
+	range = 50
+	accuracy = 0.8
+	tracking = 0.5
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+		}
+		upkeep = {
+			energy = 0.25
+			alloys = 0.05
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+
+	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}

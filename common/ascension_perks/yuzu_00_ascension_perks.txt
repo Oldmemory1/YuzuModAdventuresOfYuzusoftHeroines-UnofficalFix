@@ -1,0 +1,27 @@
+##### 原版内容 #####
+
+#################
+# GENERIC ASCENSION PERKS
+#################
+
+#ap_imperial_prerogative = { # 为什么覆盖这个会导致游戏崩溃？？？
+#	modifier = {
+#		empire_size_colonies_mult = -0.50
+#	}
+
+#	potential = {
+#		NOT = {
+#			has_ascension_perk = ap_imperial_prerogative
+#		}
+#		NOT = { has_authority = auth_corporate }
+#		NOT = { has_authority = auth_Yuzu }
+#	}
+
+#	ai_weight = {
+#		factor = 15
+#	}
+
+#	on_enabled = {
+#		run_ai_strategic_data = yes
+#	}
+#}

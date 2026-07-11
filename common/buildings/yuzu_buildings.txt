@@ -40,21 +40,21 @@ building_yuzu_clone_vats = {
 	}
 
 	planet_modifier = {
-		planet_pop_assembly_organic_add = 3
+		planet_pop_assembly_add = 3
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_yuzu_rapid_cell_division_1 }
 		}
-		planet_pop_assembly_organic_add = 1
+		planet_pop_assembly_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_yuzu_rapid_cell_division_2 }
 		}
-		planet_pop_assembly_organic_add = 1
+		planet_pop_assembly_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -63,7 +63,7 @@ building_yuzu_clone_vats = {
 				has_edict = yuzu_overloaded_clone
 			}
 		}
-		planet_pop_assembly_organic_add = 1
+		planet_pop_assembly_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1166,14 +1166,14 @@ building_yuzu_ancient_cryo_chamber_1 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1250,14 +1250,14 @@ building_yuzu_ancient_cryo_chamber_2 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1312,14 +1312,14 @@ building_yuzu_ancient_cryo_chamber_3 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1374,14 +1374,14 @@ building_yuzu_ancient_cryo_chamber_4 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1436,14 +1436,14 @@ building_yuzu_ancient_cryo_chamber_5 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1498,14 +1498,14 @@ building_yuzu_ancient_cryo_chamber_6 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1560,14 +1560,14 @@ building_yuzu_ancient_cryo_chamber_7 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1622,14 +1622,14 @@ building_yuzu_ancient_cryo_chamber_8 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1684,14 +1684,14 @@ building_yuzu_ancient_cryo_chamber_9 = {
 	allow = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1747,14 +1747,14 @@ building_yuzu_ancient_cryo_chamber_10 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1810,14 +1810,14 @@ building_yuzu_ancient_cryo_chamber_11 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1872,14 +1872,14 @@ building_yuzu_ancient_cryo_chamber_12 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1935,14 +1935,14 @@ building_yuzu_ancient_cryo_chamber_13 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -1998,14 +1998,14 @@ building_yuzu_ancient_cryo_chamber_14 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2061,14 +2061,14 @@ building_yuzu_ancient_cryo_chamber_15 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2124,14 +2124,14 @@ building_yuzu_ancient_cryo_chamber_16 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2187,14 +2187,14 @@ building_yuzu_ancient_cryo_chamber_17 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2250,14 +2250,14 @@ building_yuzu_ancient_cryo_chamber_18 = {
 		has_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2313,14 +2313,14 @@ building_yuzu_ancient_cryo_chamber_19 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2376,14 +2376,14 @@ building_yuzu_ancient_cryo_chamber_20 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2439,14 +2439,14 @@ building_yuzu_ancient_cryo_chamber_21 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2502,14 +2502,14 @@ building_yuzu_ancient_cryo_chamber_22 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2565,14 +2565,14 @@ building_yuzu_ancient_cryo_chamber_23 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2628,14 +2628,14 @@ building_yuzu_ancient_cryo_chamber_24 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2691,14 +2691,14 @@ building_yuzu_ancient_cryo_chamber_25 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2754,14 +2754,14 @@ building_yuzu_ancient_cryo_chamber_26 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2817,14 +2817,14 @@ building_yuzu_ancient_cryo_chamber_27 = {
 		has_major_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2880,14 +2880,14 @@ building_yuzu_ancient_cryo_chamber_28 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -2943,14 +2943,14 @@ building_yuzu_ancient_cryo_chamber_29 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -3006,14 +3006,14 @@ building_yuzu_ancient_cryo_chamber_30 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -3069,14 +3069,14 @@ building_yuzu_ancient_cryo_chamber_31 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -3131,14 +3131,14 @@ building_yuzu_ancient_cryo_chamber_32 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -3194,14 +3194,14 @@ building_yuzu_ancient_cryo_chamber_33 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -3257,14 +3257,14 @@ building_yuzu_ancient_cryo_chamber_34 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -3320,14 +3320,14 @@ building_yuzu_ancient_cryo_chamber_35 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }
@@ -3383,14 +3383,14 @@ building_yuzu_ancient_cryo_chamber_36 = {
 		has_fully_upgraded_capital = yes
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_1
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = { is_YUZU = yes }
 				count >= 10
 			}
 		}
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
-			num_pops > 10
+			count_owned_pop_amount = { count > 10 }
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }

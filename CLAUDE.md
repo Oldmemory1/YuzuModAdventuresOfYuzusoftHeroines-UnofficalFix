@@ -1,0 +1,1 @@
+这是一个已经过时的mod，我现在在做它的移植。如果你不知道怎么写，可以参考原版D:\SteamLibrary\steamapps\common\Stellaris中的写法。项目中我使用了uv创建了python3.11虚拟环境，你可以用uv run运行python脚本，uv add来安装你需要的软件包。

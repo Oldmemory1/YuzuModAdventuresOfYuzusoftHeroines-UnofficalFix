@@ -1,0 +1,278 @@
+utility_component_template = {
+	key = "CORVETTE_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 600
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 60
+			sr_dark_matter = 2
+		}
+		upkeep = {
+			energy = 0.60
+			alloys = 0.06
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+	component_set = "power_core"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 1200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			sr_dark_matter = 4
+		}
+		upkeep = {
+			energy = 1.20
+			alloys = 0.12
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+	component_set = "power_core"
+	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 2400
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 240
+			sr_dark_matter = 8
+		}
+		upkeep = {
+			energy = 2.40
+			alloys = 0.24
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+	component_set = "power_core"
+	size_restriction = { cruiser crisis_cruiser offspring_cruiser }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 4800
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 480
+			sr_dark_matter = 16
+		}
+		upkeep = {
+			energy = 4.80
+			alloys = 0.48
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+	component_set = "power_core"
+	size_restriction = { battleship offspring_battleship }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 9600
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 960
+			sr_dark_matter = 32
+		}
+		upkeep = {
+			energy = 9.60
+			alloys = 0.96
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+	component_set = "power_core"
+	size_restriction = { titan }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 24000
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+
+	component_set = "power_core"
+	size_restriction = { colossus star_eater yuzu_star_eater }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_YUZU_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 1800
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			sr_dark_matter = 8
+		}
+		upkeep = {
+			energy = 1.20
+			alloys = 0.12
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 2400
+	prerequisites = { "tech_reactor_yuzu" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 240
+			sr_dark_matter = 16
+		}
+	}
+
+	component_set = "power_core"
+	size_restriction = { ion_cannon }
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_YUZU_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 14400
+
+	prerequisites = { "tech_reactor_yuzu" }
+	component_set = "power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}

@@ -1,0 +1,131 @@
+component_set = {
+	key = "YUZU_LANCE_1"
+
+	icon = "GFX_ship_part_yuzu_lance_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_LANCE_2"
+
+	icon = "GFX_ship_part_yuzu_lance_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_LANCE_3"
+
+	icon = "GFX_ship_part_yuzu_lance_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_ENERGY_TORPEDO_1"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_ENERGY_TORPEDO_2"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_ENERGY_TORPEDO_3"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_1"
+
+	icon = "GFX_ship_part_yuzu_beam_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_2"
+
+	icon = "GFX_ship_part_yuzu_beam_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_3"
+
+	icon = "GFX_ship_part_yuzu_beam_3"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_STRIKE_CRAFT_1"
+
+	icon = "GFX_ship_part_yuzu_strike_craft_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_TORPEDO_1"
+
+	icon = "GFX_ship_part_yuzu_torpedo_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_POINT_DEFENCE_1"
+	icon = "GFX_ship_part_yuzu_point_defense_1"
+	icon_frame = 1
+}
+
+component_set = { # Nanobot Assimilation
+	key = "PLANET_KILLER_STAR_CRACKER_YUZU"
+
+	icon = "GFX_ship_part_nanobot_diffuser"
+	icon_frame = 1
+}
+
+component_set = { #YUZU
+	key = "PLANET_KILLER_BACK_IN_TIME"
+
+	icon = "GFX_ship_part_back_in_time"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_ARMOR_1"
+
+	icon = "GFX_ship_part_armor_yuzu_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_ARMOR_2"
+
+	icon = "GFX_ship_part_armor_yuzu_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_SHIELD_1"
+
+	icon = "GFX_ship_part_shield_yuzu_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_SHIELD_2"
+
+	icon = "GFX_ship_part_shield_yuzu_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "FIRE_CONTROL_YUZU"
+
+	icon = "GFX_ship_part_fire_control_yuzu"
+	icon_frame = 1
+}

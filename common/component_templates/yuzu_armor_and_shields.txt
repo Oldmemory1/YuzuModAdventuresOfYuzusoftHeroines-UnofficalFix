@@ -1,0 +1,416 @@
+utility_component_template = {
+	key = "SMALL_YUZU_ARMOR_1"
+	size = small
+	icon = "GFX_ship_part_armor_yuzu_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_S1
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_armor_1" }
+	component_set = "YUZU_ARMOR_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_s_t1_cost
+			sr_dark_matter = @yuzu_armor_s_t1_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_s_t1_upkeep_energy
+			alloys = @yuzu_s_t1_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_ARMOR_1"
+	size = medium
+	icon = "GFX_ship_part_armor_yuzu_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_M1
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_armor_1" }
+	component_set = "YUZU_ARMOR_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_m_t1_cost
+			sr_dark_matter = @yuzu_armor_m_t1_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_m_t1_upkeep_energy
+			alloys = @yuzu_m_t1_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_ARMOR_1"
+	size = large
+	icon = "GFX_ship_part_armor_yuzu_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_L1
+	}
+	
+	ship_modifier = {
+		ship_armor_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_armor_1" }
+	component_set = "YUZU_ARMOR_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_l_t1_cost
+			sr_dark_matter = @yuzu_armor_l_t1_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_l_t1_upkeep_energy
+			alloys = @yuzu_l_t1_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_ARMOR_2"
+	size = small
+	icon = "GFX_ship_part_armor_yuzu_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_S2
+	}
+
+	prerequisites = { "tech_yuzu_armor_2" }
+	component_set = "YUZU_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_s_t2_cost
+			sr_dark_matter = @yuzu_armor_s_t2_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_s_t2_upkeep_energy
+			alloys = @yuzu_s_t2_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_ARMOR_2"
+	size = medium
+	icon = "GFX_ship_part_armor_yuzu_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_M2
+	}
+
+	prerequisites = { "tech_yuzu_armor_2" }
+	component_set = "YUZU_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_m_t2_cost
+			sr_dark_matter = @yuzu_armor_m_t2_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_m_t2_upkeep_energy
+			alloys = @yuzu_m_t2_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_ARMOR_2"
+	size = large
+	icon = "GFX_ship_part_armor_yuzu_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_L2
+	}
+
+	prerequisites = { "tech_yuzu_armor_2" }
+	component_set = "YUZU_ARMOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_l_t2_cost
+			sr_dark_matter = @yuzu_armor_l_t2_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_l_t2_upkeep_energy
+			alloys = @yuzu_l_t2_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_SHIELD_1"
+	size = small
+	icon = "GFX_ship_part_shield_yuzu_1"
+	icon_frame = 1
+	power = @yuzu_power_S1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_s_t1_cost
+			sr_dark_matter = @yuzu_shield_s_t1_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_s_t1_upkeep_energy
+			alloys = @yuzu_shield_s_t1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_S1
+		ship_shield_regen_add_static = @yuzu_regen_S1
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.2
+	}
+	prerequisites = { "tech_yuzu_shield_1" }
+	component_set = "YUZU_SHIELD_1"
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_SHIELD_1"
+	size = medium
+	icon = "GFX_ship_part_shield_yuzu_1"
+	icon_frame = 1
+	power = @yuzu_power_M1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_m_t1_cost
+			sr_dark_matter = @yuzu_shield_m_t1_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_m_t1_upkeep_energy
+			alloys = @yuzu_shield_m_t1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_M1
+		ship_shield_regen_add_static = @yuzu_regen_M1
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.2
+	}
+	prerequisites = { "tech_yuzu_shield_1" }
+	component_set = "YUZU_SHIELD_1"
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_SHIELD_1"
+	size = large
+	icon = "GFX_ship_part_shield_yuzu_1"
+	icon_frame = 1
+	power = @yuzu_power_L1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_l_t1_cost
+			sr_dark_matter = @yuzu_shield_l_t1_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_l_t1_upkeep_energy
+			alloys = @yuzu_shield_l_t1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_L1
+		ship_shield_regen_add_static = @yuzu_regen_L1
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.2
+	}
+	prerequisites = { "tech_yuzu_shield_1" }
+	component_set = "YUZU_SHIELD_1"
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_SHIELD_2"
+	size = small
+	icon = "GFX_ship_part_shield_yuzu_2"
+	icon_frame = 1
+	power = @yuzu_power_S2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_s_t2_cost
+			sr_dark_matter = @yuzu_shield_s_t2_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_s_t2_upkeep_energy
+			alloys = @yuzu_shield_s_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_S2
+		ship_shield_regen_add_static = @yuzu_regen_S2
+	}
+	prerequisites = { "tech_yuzu_shield_2" }
+	component_set = "YUZU_SHIELD_2"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_SHIELD_2"
+	size = medium
+	icon = "GFX_ship_part_shield_yuzu_2"
+	icon_frame = 1
+	power = @yuzu_power_M2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_m_t2_cost
+			sr_dark_matter = @yuzu_shield_m_t2_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_m_t2_upkeep_energy
+			alloys = @yuzu_shield_m_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_M2
+		ship_shield_regen_add_static = @yuzu_regen_M2
+	}
+	prerequisites = { "tech_yuzu_shield_2" }
+	component_set = "YUZU_SHIELD_2"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_SHIELD_2"
+	size = large
+	icon = "GFX_ship_part_shield_yuzu_2"
+	icon_frame = 1
+	power = @yuzu_power_L2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_l_t2_cost
+			sr_dark_matter = @yuzu_shield_l_t2_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_l_t2_upkeep_energy
+			alloys = @yuzu_shield_l_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_L2
+		ship_shield_regen_add_static = @yuzu_regen_L2
+	}
+	prerequisites = { "tech_yuzu_shield_2" }
+	component_set = "YUZU_SHIELD_2"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}

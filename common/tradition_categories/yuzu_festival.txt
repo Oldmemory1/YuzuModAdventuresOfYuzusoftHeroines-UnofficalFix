@@ -1,0 +1,20 @@
+tradition_yuzu_festival = {
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_yuzu_festival_adopt"
+	finish_bonus = "tr_yuzu_festival_finish"
+	traditions = {
+		"tr_yuzu_festival_dance"
+		"tr_yuzu_festival_murasamemaru"
+		"tr_yuzu_festival_associations"
+		"tr_yuzu_festival_spring"
+		"tr_yuzu_festival_school"
+	}
+
+	potential = {
+		is_yuzu_empire = yes
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}

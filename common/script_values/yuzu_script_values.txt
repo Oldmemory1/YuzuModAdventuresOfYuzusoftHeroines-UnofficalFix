@@ -1,0 +1,12 @@
+yuzu_overlord_councilor_level = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		trigger_scope = owner.overlord
+		parameters = {
+			type = $TYPE$
+		}
+		multiplier = 0.05
+		mode = add
+	}
+}

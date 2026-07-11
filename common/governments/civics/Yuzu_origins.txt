@@ -1,0 +1,29 @@
+origin_yuzu_world = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_yuzu_world.dds"
+	picture = GFX_origin_yuzu_world
+#	max_once_global = yes
+	possible = {
+		authority = { value = auth_Yuzu }
+		species_class = {
+			value = YUZUGIRL
+		}
+	}
+
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 3 # YUZUGIRL_species_trait_points_add = 3
+		modify_species_cost_mult = -0.25
+	}
+
+    initializers = { yuzu_sol_system_initializer }
+
+	flags = { custom_start_screen }
+
+	description = "origin_tooltip_yuzu_effects"
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}

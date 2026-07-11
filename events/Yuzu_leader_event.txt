@@ -1,0 +1,177 @@
+namespace = Yuzu_leader_event
+
+country_event = {
+	id = Yuzu_leader_event.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_ascension_perk = ap_personality_transplantation }
+			}
+			every_owned_leader = {
+				add_yuzu_leader_trait_yuzu = yes
+				remove_yuzu_leader_trait_immortal_yuzu = yes
+			}
+	
+			every_pool_leader = {
+				add_yuzu_leader_trait_yuzu = yes
+				remove_yuzu_leader_trait_immortal_yuzu = yes
+			}
+		}
+		else = {
+			every_owned_leader = {
+				add_yuzu_leader_trait_immortal_yuzu = yes
+				remove_yuzu_leader_trait_yuzu = yes
+			}
+			every_pool_leader = {
+				add_yuzu_leader_trait_immortal_yuzu = yes
+				remove_yuzu_leader_trait_yuzu = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_leader_event.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_owned_leader = {
+			add_yuzu_leader_trait_astral = yes
+			remove_yuzu_leader_trait_astral = yes
+		}
+
+		every_pool_leader = {
+			add_yuzu_leader_trait_astral = yes
+			remove_yuzu_leader_trait_astral = yes
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_leader_event.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_owned_leader = {
+			add_yuzu_leader_trait_vampire = yes
+			remove_yuzu_leader_trait_vampire = yes
+		}
+
+		every_pool_leader = {
+			add_yuzu_leader_trait_vampire = yes
+			remove_yuzu_leader_trait_vampire = yes
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_leader_event.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_owned_leader = {
+			add_yuzu_leader_trait_immortal_yuzu = yes
+			remove_yuzu_leader_trait_yuzu = yes
+		}
+
+		every_pool_leader = {
+			add_yuzu_leader_trait_immortal_yuzu = yes
+			remove_yuzu_leader_trait_yuzu = yes
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_leader_event.7
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_owned_leader = {
+			add_yuzu_leader_trait_abyss = yes
+		}
+
+		every_pool_leader = {
+			add_yuzu_leader_trait_abyss = yes
+		}
+	}
+}
+
+# on_tech_increased
+country_event = {
+	id = Yuzu_leader_event.10
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_YUZU = yes
+		last_increased_tech = tech_BMI
+	}
+
+	immediate = {
+		record_and_set_yuzu_leader_skill = { LEADER_CLASS = official }
+		record_and_set_yuzu_leader_skill = { LEADER_CLASS = scientist }
+		record_and_set_yuzu_leader_skill = { LEADER_CLASS = commander }
+	}
+}
+
+# on_leader_level_up
+country_event = {
+	id = Yuzu_leader_event.11
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_YUZU = yes
+		has_technology = tech_BMI
+	}
+
+	immediate = {
+		from = {
+			switch = {
+				trigger = leader_class
+				official = { update_and_set_yuzu_leader_skill = { LEADER_CLASS = official } }
+				scientist = { update_and_set_yuzu_leader_skill = { LEADER_CLASS = scientist } }
+				commander = { update_and_set_yuzu_leader_skill = { LEADER_CLASS = commander } }
+			}
+		}
+	}
+}
+
+# on_leader_spawned
+country_event = {
+	id = Yuzu_leader_event.12
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_YUZU = yes
+		has_technology = tech_BMI
+	}
+
+	immediate = {
+		from = {
+			switch = {
+				trigger = leader_class
+				official = {
+					set_yuzu_leader_skill_single = { LEADER_CLASS = official }
+				}
+				scientist = {
+					set_yuzu_leader_skill_single = { LEADER_CLASS = scientist }
+				}
+				commander = {
+					set_yuzu_leader_skill_single = { LEADER_CLASS = commander }
+				}
+			}
+		}
+	}
+}

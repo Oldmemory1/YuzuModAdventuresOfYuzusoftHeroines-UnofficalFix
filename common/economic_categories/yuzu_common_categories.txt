@@ -1,0 +1,39 @@
+planet_cafe_clerks = {
+	parent = planet_jobs_productive
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_yuzu_witches = {
+	parent = planet_jobs_productive
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+pop_category_yuzu_xeno_ward = {
+	parent = planet_pops
+}
+
+planet_overlord_cafe_clerks = {
+	parent = holdings_jobs
+}
+
+planet_overlord_supernatural_researchers = {
+	parent = holdings_jobs
+}
+
+planet_overlord_yuzu_witches = {
+	parent = holdings_jobs
+}

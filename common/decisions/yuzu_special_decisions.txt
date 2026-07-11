@@ -1,0 +1,389 @@
+decision_yuzu_arcology_project = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+			volatile_motes = 100
+			exotic_gases = 100
+			rare_crystals = 100
+		}
+	}
+
+	potential = {
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_relic
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+			has_modifier = pm_wenkwort_custodian
+		}
+		is_artificial = no
+		exists = owner
+		owner = {
+			is_YUZU = yes
+			has_technology = tech_yuzu_city
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { owner = { is_ai = no } }
+			custom_tooltip = {
+				fail_text = decision_arcology_project_requirements
+				free_district_slots < 1
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+				num_districts = { type = district_generator value < 1 }
+				num_districts = { type = district_farming_uncapped value < 1 }
+				num_districts = { type = district_mining_uncapped value < 1 }
+				num_districts = { type = district_generator_uncapped value < 1 }
+			}
+		}
+		num_uncleared_blockers < 1
+	}
+
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			if = {
+				limit = {
+					has_deposit = d_yuzu_aqua_eden
+				}
+				set_planet_flag = has_yuzu_aqua_eden
+			}
+			if = {
+				limit = {
+					has_deposit = d_yuzu_islenauts
+				}
+				set_planet_flag = has_yuzu_islenauts
+			}
+			if = {
+				limit = {
+					has_deposit = d_yuzu_slime_reserve
+				}
+				set_planet_flag = has_yuzu_slime_reserve
+			}
+			clear_deposits = yes
+			set_industrial_focus_flags = yes
+			change_pc = pc_city
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_housing
+				VARIABLE = num_housing_districts
+			}
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_arms_industry
+				VARIABLE = num_industrial_districts
+			}
+			set_ecu_industrial_districts_effect = yes
+			set_planet_entity = {
+				entity = "city_planet_entity"
+				graphical_culture = owner
+			}
+			owner = {
+				country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
+			}
+			planet_event = { id = mega.200 }
+			if = {
+				limit = {
+					has_planet_flag = has_yuzu_aqua_eden
+				}
+				add_deposit = d_yuzu_aqua_eden
+				remove_planet_flag = has_yuzu_aqua_eden
+			}
+			if = {
+				limit = {
+					has_planet_flag = has_yuzu_islenauts
+				}
+				add_deposit = d_yuzu_islenauts
+				remove_planet_flag = has_yuzu_islenauts
+			}
+			if = {
+				limit = {
+					has_planet_flag = has_yuzu_slime_reserve
+				}
+				add_deposit = d_yuzu_slime_reserve
+				remove_planet_flag = has_yuzu_slime_reserve
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			exists = owner
+			OR = {
+				num_pops >= 70
+				is_capital = yes
+			}
+		}
+	}
+}
+
+decision_yuzu_arcology_project_relic = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+			volatile_motes = 100
+			exotic_gases = 100
+			rare_crystals = 100
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_relic
+		is_artificial = no
+		exists = owner
+		owner = {
+			is_YUZU = yes
+			has_technology = tech_yuzu_city
+		}
+	}
+
+	allow = {
+		num_uncleared_blockers < 1
+	}
+
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			clear_deposits = yes
+			set_industrial_focus_flags = yes
+			change_pc = pc_city
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_housing
+				VARIABLE = num_housing_districts
+			}
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_arms_industry
+				VARIABLE = num_industrial_districts
+			}
+			set_ecu_industrial_districts_effect = yes
+			set_planet_entity = {
+				entity = "city_planet_entity"
+				graphical_culture = owner
+			}
+			add_deposit = d_former_relic_world
+			planet_event = { id = mega.201 }
+			while = {
+				count = 4
+				solar_system = {
+					random_system_ambient_object = {
+						limit = { has_ambient_object_flag = relic_world_debris }
+						destroy_ambient_object = this
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+			if = {
+				limit = {
+					has_planet_flag = primary_pc_relic_abyss
+				}
+				owner = {
+					country_event = { id = Yuzu_country_event.11 }
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+decision_restore_yuzu_abyss_city = {
+	owned_planets_only = yes
+	icon = decision_yuzu_abyss_city
+
+	enactment_time = 600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+			alloys = 2000
+			volatile_motes = 100
+			exotic_gases = 100
+			rare_crystals = 100
+			sr_dark_matter = 100
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_city
+		has_planet_flag = primary_pc_relic_abyss
+		is_artificial = no
+		exists = owner
+		owner = {
+			is_YUZU = yes
+			has_technology = tech_yuzu_restore_abyss_city
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = decision_restore_yuzu_abyss_city_effects
+		hidden_effect = {
+			if = {
+				limit = {
+					has_modifier = yuzu_abyss_infiltration
+				}
+				planet_event = { id = Yuzu_window_event.104 }
+				remove_modifier = yuzu_abyss_infiltration
+			}
+			else = {
+				planet_event = { id = Yuzu_window_event.105 }
+			}
+			save_city_district_num = yes
+			change_pc = pc_yuzu_abyss_city
+			set_yuzu_city_district = yes
+			add_deposit = d_yuzu_abyss_gate
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+}
+
+decision_yuzu_abyss_city = {
+	owned_planets_only = yes
+	icon = decision_yuzu_abyss_city
+
+	enactment_time = 1200
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+			alloys = 2000
+			volatile_motes = 100
+			exotic_gases = 100
+			rare_crystals = 100
+			sr_dark_matter = 100
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_city
+		NOT = { has_planet_flag = primary_pc_relic_abyss }
+		is_artificial = no
+		exists = owner
+		owner = {
+			is_YUZU = yes
+			has_technology = tech_yuzu_abyss_city
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = decision_yuzu_abyss_city_effects
+		hidden_effect = {
+			planet_event = { id = Yuzu_window_event.106 }
+			save_city_district_num = yes
+			change_pc = pc_yuzu_abyss_city
+			set_yuzu_city_district = yes
+			add_deposit = d_yuzu_imitation_abyss_gate
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+}
+
+decision_yuzu_sunset_city = {
+	owned_planets_only = yes
+	icon = decision_yuzu_sunset_city
+
+	enactment_time = 1200
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+			alloys = 2000
+			volatile_motes = 100
+			exotic_gases = 100
+			rare_crystals = 100
+			sr_dark_matter = 100
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_city
+		NOT = { has_planet_flag = primary_pc_relic_abyss }
+		is_artificial = no
+		exists = owner
+		owner = {
+			is_YUZU = yes
+			has_technology = tech_yuzu_sunset_city
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = decision_yuzu_sunset_city_effects
+		hidden_effect = {
+			planet_event = { id = Yuzu_window_event.107 }
+			save_city_district_num = yes
+			change_pc = pc_yuzu_sunset_city
+			set_yuzu_city_district = yes
+			add_deposit = d_yuzu_dream_gate
+			while = {
+				count = trigger:planet_size
+				add_deposit = d_yuzu_dream_land
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+}

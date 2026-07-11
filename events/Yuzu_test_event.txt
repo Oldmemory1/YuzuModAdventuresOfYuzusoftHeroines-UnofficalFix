@@ -1,0 +1,139 @@
+namespace = Yuzu_test_event
+
+country_event = {
+	id = Yuzu_test_event.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		add_resource = { fragment_of_heart = 1000000 }
+		set_country_flag = colossus_project
+		set_country_flag = yuzu_abyss_project
+		give_technology = {
+			tech = tech_genetic_resequencing
+			message = no
+		}
+		give_technology = {
+			tech = tech_yuzu_werewolf
+			message = no
+		}
+		give_technology = {
+			tech = tech_colossus
+			message = no
+		}
+		give_technology = {
+			tech = tech_yuzu_space_time_theory
+			message = no
+		}
+		give_technology = {
+			tech = tech_yuzu_all_in_one_theory
+			message = no
+		}
+		give_technology = {
+			tech = tech_yuzu_restore_abyss_city
+			message = no
+		}
+		add_relic = r_murasamemaru
+		add_relic = r_silver_key
+	}
+}
+
+country_event = {
+	id = Yuzu_test_event.2
+#	title = OK
+#	desc = OK
+#	picture = GFX_evt_senrenbanka_field
+#	show_sound = event_default
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = yuzu_old_abyss_system_discovered }
+			}
+			set_global_flag = yuzu_old_abyss_system_discovered
+			capital_scope = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 30
+					max_jumps = 0
+					initializer = "yuzu_old_abyss_system"
+				}
+				if = {
+					limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+					add_hyperlane = {
+						from = this
+						to = last_created_system
+					}
+				}
+				else = {
+					add_extra_hyperlane_to_spawned_system_effect = yes
+				}
+			}
+			hidden_effect = {
+				country_event = { id = Yuzu_window_event.1 days = 1 }
+			}
+		}
+		else = {
+			hidden_effect = {
+				country_event = { id = Yuzu_window_event.2 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_test_event.3
+#	title = OK
+#	desc = OK
+#	picture = GFX_evt_senrenbanka_field
+#	show_sound = event_default
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				is_country_type = global_event
+			}
+			country_event = { id = Yuzu_abyss_crisis_event.1 }
+			country_event = { id = Yuzu_abyss_crisis_event.3 days = 5 }
+			country_event = { id = Yuzu_abyss_crisis_event.8 days = 10 }
+			country_event = { id = Yuzu_abyss_crisis_event.10 days = 15 }
+#			country_event = { id = Yuzu_test_event.4 days = 20 }
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_test_event.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:new_abyss_capital_planet = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = Presiding_Judge_Fleet_Created }
+					exists = owner
+					owner = { is_yuzu_abyss_empire = yes }
+				}
+				planet_event = { id = Yuzu_abyss_crisis_event.116 }
+			}
+		}
+	}
+}

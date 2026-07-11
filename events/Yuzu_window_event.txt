@@ -1,0 +1,152 @@
+namespace = Yuzu_window_event
+
+# 发现破败的深渊（第一）
+country_event = {
+	id = Yuzu_window_event.1
+	title = Yuzu_window_event.1.name
+	desc = Yuzu_window_event.1.desc
+	picture = GFX_evt_dimensional_horror
+	show_sound = event_activating_unknown_technology
+	location = event_target:old_abyss_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_window_event.1.a
+	}
+}
+
+# 发现破败的深渊（非第一）
+country_event = {
+	id = Yuzu_window_event.2
+	title = Yuzu_window_event.2.name
+	desc = Yuzu_window_event.2.desc
+	picture = GFX_evt_black_hole
+	show_sound = event_sensor_ping
+	location = event_target:old_abyss_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = ASTOUNDING
+	}
+
+	option = {
+		name = Yuzu_window_event.2.a
+	}
+}
+
+# 堕天神兵建造完成
+ship_event = {
+	id = Yuzu_window_event.5
+	title = Yuzu_window_event.5.name
+	desc = Yuzu_window_event.5.desc
+	picture = GFX_evt_binary_stars
+	show_sound = event_default
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ship_size = yuzu_star_eater
+		owner = {
+			NOT = { has_country_flag = yuzu_star_eater_constructed }
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = yuzu_star_eater_constructed
+		}
+	}
+
+	option = {
+		name = Yuzu_window_event.5.a
+		trigger = {
+			owner = {
+				NOR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_window_event.5.b
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+	}
+}
+
+#重建深渊之城（侵蚀星球）
+planet_event = {
+	id = Yuzu_window_event.104
+	title = Yuzu_window_event.104.name
+	desc = Yuzu_window_event.104.desc
+	picture = GFX_evt_city_planet
+	show_sound = event_cityscape
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = REMARKABLE
+	}
+}
+
+#重建深渊之城
+planet_event = {
+	id = Yuzu_window_event.105
+	title = Yuzu_window_event.105.name
+	desc = Yuzu_window_event.105.desc
+	picture = GFX_evt_city_planet
+	show_sound = event_cityscape
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = REMARKABLE
+	}
+}
+
+#建立深渊之城
+planet_event = {
+	id = Yuzu_window_event.106
+	title = Yuzu_window_event.106.name
+	desc = Yuzu_window_event.106.desc
+	picture = GFX_evt_city_planet
+	show_sound = event_cityscape
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = REMARKABLE
+	}
+}
+
+#建立夕阳之城
+planet_event = {
+	id = Yuzu_window_event.107
+	title = Yuzu_window_event.107.name
+	desc = Yuzu_window_event.107.desc
+	picture = GFX_evt_city_planet
+	show_sound = event_cityscape
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_window_event.107.a
+	}
+}

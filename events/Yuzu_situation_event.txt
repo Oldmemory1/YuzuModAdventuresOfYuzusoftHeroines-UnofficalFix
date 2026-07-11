@@ -1,0 +1,336 @@
+namespace = Yuzu_situation_event
+
+#####史莱姆危机#####
+
+#start
+planet_event = {
+	id = Yuzu_situation_event.1
+	title = Yuzu_situation_event.1.name
+	desc = Yuzu_situation_event.1.desc
+	picture = GFX_evt_yuzu_slime
+	show_sound = event_alien_nature #event_wind_ruins
+	is_triggered_only = yes
+
+	location = root
+
+	pre_triggers = {
+		has_owner = yes
+		original_owner = yes
+		has_ground_combat = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	immediate = {
+		owner = {
+			start_situation = {
+				type = situation_yuzu_slime
+				target = root
+				effect = {
+					save_event_target_as = yuzu_slime_situation
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Yuzu_situation_event.1.a
+		icon = {
+			icon = GFX_situation_approach_shrug
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		event_target:yuzu_slime_situation = {
+			set_situation_approach = approach_yuzu_do_nothing
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Yuzu_situation_event.1.b
+		icon = {
+			icon = GFX_situation_approach_sword
+			icon_background = GFX_situation_approach_bg_red
+			text = set_situation_approach_icon_text
+		}
+		event_target:yuzu_slime_situation = {
+			set_situation_approach = approach_yuzu_eliminate
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_militarist = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+# 基本控制
+situation_event = {
+	id = Yuzu_situation_event.2
+	title = Yuzu_situation_event.2.name
+	desc = Yuzu_situation_event.2.desc
+
+	picture = GFX_evt_salute
+	show_sound = event_salute
+	is_triggered_only = yes
+	location = target
+	situation = this
+
+	option = {
+		name = Yuzu_situation_event.2.a
+		set_situation_approach = approach_yuzu_cordon_off
+		icon = {
+			icon = GFX_situation_approach_whip
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_militarist = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_situation_event.2.b
+		trigger = {
+			owner = { is_xenophobe = yes }
+		}
+		set_situation_approach = approach_yuzu_eliminate
+		icon = {
+			icon = GFX_situation_approach_sword
+			icon_background = GFX_situation_approach_bg_red
+			text = set_situation_approach_icon_text
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_militarist = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+# 数量减少
+situation_event = {
+	id = Yuzu_situation_event.3
+	title = Yuzu_situation_event.3.name
+	desc = Yuzu_situation_event.3.desc
+
+	picture = GFX_evt_news_room
+	show_sound = event_default
+	is_triggered_only = yes
+	location = target
+	situation = this
+
+	option = {
+		name = Yuzu_situation_event.3.a
+	}
+}
+
+# 大规模增殖
+situation_event = {
+	id = Yuzu_situation_event.4
+	title = Yuzu_situation_event.4.name
+	desc = Yuzu_situation_event.4.desc
+
+	picture = GFX_evt_yuzu_slime
+	show_sound = event_factions
+	is_triggered_only = yes
+	location = target
+	situation = this
+
+	immediate = {
+		set_situation_flag = yuzu_unlock_assistance
+	}
+
+	option = {
+		name = Yuzu_situation_event.4.a
+		set_situation_approach = approach_yuzu_assistance
+		icon = {
+			icon = GFX_situation_approach_balance_sheet
+			icon_background = GFX_situation_approach_bg_green
+			text = set_situation_approach_icon_text
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				owner = {
+					has_country_resource = {
+						type = consumer_goods
+						amount >= 200
+					}
+				}
+			}
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_situation_event.4.b
+		set_situation_approach = approach_yuzu_do_nothing
+		icon = {
+			icon = GFX_situation_approach_shrug
+			icon_background = GFX_situation_approach_bg_yellow
+			text = set_situation_approach_icon_text
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_situation_event.4.c
+		set_situation_approach = approach_yuzu_eliminate
+		icon = {
+			icon = GFX_situation_approach_sword
+			icon_background = GFX_situation_approach_bg_red
+			text = set_situation_approach_icon_text
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_militarist = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+# 适应
+situation_event = {
+	id = Yuzu_situation_event.5
+	title = Yuzu_situation_event.5.name
+	desc = Yuzu_situation_event.5.desc
+
+	picture = GFX_evt_news_room
+	show_sound = event_default
+	is_triggered_only = yes
+	location = target
+	situation = this
+
+	immediate = {
+		set_situation_flag = yuzu_slime_adapted
+	}
+
+	option = {
+		name = Yuzu_situation_event.5.a
+	}
+}
+
+# 灭绝
+situation_event = {
+	id = Yuzu_situation_event.6
+	title = Yuzu_situation_event.6.name
+	desc = Yuzu_situation_event.6.desc
+
+	picture = GFX_evt_victorious_army
+	show_sound = event_ground_battle
+	is_triggered_only = yes
+	location = target
+
+	after = { destroy_situation = this }
+
+	option = {
+		name = Yuzu_situation_event.6.a
+	}
+}
+
+# 自然保护区
+situation_event = {
+	id = Yuzu_situation_event.7
+	title = Yuzu_situation_event.7.name
+	desc = Yuzu_situation_event.7.desc
+
+	picture = GFX_evt_animal_wildlife
+	show_sound = event_alien_nature
+	is_triggered_only = yes
+	location = target
+
+	after = { destroy_situation = this }
+
+	option = {
+		name = Yuzu_situation_event.7.a
+		target = {
+			add_deposit = d_yuzu_slime_reserve
+		}
+	}
+}
+
+# 共存
+situation_event = {
+	id = Yuzu_situation_event.8
+	title = Yuzu_situation_event.8.name
+	desc = Yuzu_situation_event.8.desc
+
+	picture = GFX_evt_metropolis
+	show_sound = event_default
+	is_triggered_only = yes
+	location = target
+
+	after = { destroy_situation = this }
+
+	option = {
+		name = Yuzu_situation_event.8.a
+		target = {
+			add_modifier = { modifier = yuzu_with_slime }
+		}
+	}
+}

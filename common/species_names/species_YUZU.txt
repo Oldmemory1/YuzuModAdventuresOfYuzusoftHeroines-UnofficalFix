@@ -1,0 +1,9 @@
+YUZUGIRL = {
+	yuzugirl_name_1 = {
+		name = SPEC_Yuzugirl_Name_1
+		plural = SPEC_Yuzugirl_Name_1_pl
+		home_planet = SPEC_Yuzugirl_Name_1_planet
+		home_system = SPEC_Yuzugirl_Name_1_system
+		name_list = "YUZUGIRL1"
+	}
+}

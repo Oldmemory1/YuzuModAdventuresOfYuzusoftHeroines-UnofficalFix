@@ -1,0 +1,245 @@
+utility_component_template = {
+	key = "YUZU_JUMP_DRIVE"
+	size = small
+	icon = "GFX_ship_part_yuzu_jump_drive_1"
+	icon_frame = 1
+	power = -35
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_disengage_opportunities_add = 3
+		ship_windup_mult = -0.9
+		ship_ftl_jumpdrive_range_mult = 1.00
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_yuzu_jump_drive_1" }
+	component_set = "ftl_components"
+}
+
+utility_component_template = {
+	key = "SENSOR_YUZU_1"
+	size = medium
+	icon = "GFX_ship_part_sensor_yuzu_1"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	sensor_range = 5
+	hyperlane_range = 6
+
+	ship_modifier = {
+		ship_tracking_add = 20
+	}
+
+	prerequisites = { "tech_sensors_yuzu_1" }
+	component_set = "sensor_components"
+
+	ai_weight = {
+		weight = 5000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SENSOR_YUZU_2"
+	size = medium
+	icon = "GFX_ship_part_sensor_yuzu_2"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 12
+		}
+	}
+	sensor_range = 6
+	hyperlane_range = 7
+
+	ship_modifier = {
+		ship_tracking_add = 25
+	}
+
+	prerequisites = { "tech_sensors_yuzu_2" }
+	component_set = "sensor_components"
+
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "FIRE_CONTROL_YUZU"
+	size = aux
+	icon = "GFX_ship_part_fire_control_yuzu"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+			rare_crystals = 1
+		}
+	}
+
+	ship_modifier = {
+		ship_accuracy_add = 5
+		ship_tracking_add = 5
+		ship_evasion_mult = 0.2
+	}
+
+	prerequisites = { tech_fire_control_yuzu }
+	component_set = "FIRE_CONTROL_YUZU"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "PLANET_KILLER_STAR_CRACKER_YUZU"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+	can_destroy_stars = yes
+
+	icon = GFX_ship_part_nanobot_diffuser
+	icon_frame = 1
+	power = -7500
+
+	damage = { min = 0 max = 0 }
+	windup = { min = 90 max = 90 }
+	total_fire_time = 30
+	accuracy = 1
+
+	prerequisites = { "tech_yuzu_star_eater" }
+	size_restriction = { yuzu_star_eater }
+	component_set = "PLANET_KILLER_STAR_CRACKER_YUZU"
+
+	planet_destruction_gfx = "star_destroyer_effect_gfx"
+
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "PLANET_KILLER_BACK_IN_TIME"
+	size = planet_killer
+	type = planet_killer
+	use_ship_kill_target = no
+
+	prerequisites = { "tech_pk_back_in_time" }
+
+	icon = GFX_ship_part_back_in_time
+	icon_frame = 1
+	power = -7500
+
+	damage = { min = 0 max = 0 }
+	windup = { min = 90 max = 90 }
+	total_fire_time = 30
+	accuracy = 1
+
+	size_restriction = { colossus }
+	component_set = "PLANET_KILLER_BACK_IN_TIME"
+
+	planet_destruction_gfx = "global_pacifier_gfx"
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SHIP_AURA_ABYSS"
+	size = medium
+	icon = "GFX_ship_part_aura_yuzu_abyss"
+	icon_frame = 1
+	power = 0
+
+	size_restriction = { yuzu_star_eater }
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "aura_yuzu_abyss"
+		system_wide = yes
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_yuzu_abyss
+			priority = 10
+		}
+
+		modifier = {
+			ship_weapon_damage = -0.50
+			ship_fire_rate_mult = -0.50
+			ship_shield_mult = -0.50
+		}
+		damage_per_day = {
+			damage = {
+				min = 500
+				max = 1000
+			}
+			accuracy = 1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}

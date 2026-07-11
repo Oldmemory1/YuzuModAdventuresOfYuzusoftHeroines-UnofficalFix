@@ -1,0 +1,5 @@
+yuzu_abyss_starbase_modifier = {
+	ship_shield_mult = 1
+	ship_armor_mult = 1
+	ship_hull_mult = 1
+}

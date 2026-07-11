@@ -1,0 +1,69 @@
+yuzugirls1 = {
+	name = "EMPIRE_DESIGN_yuzugirls1"
+	adjective = "PRESCRIPTED_adjective_yuzugirls1"
+	spawn_enabled = no # yes / no / always
+	spawn_as_fallen = no # overrides spawn_enabled for fallen empires
+	ignore_portrait_duplication = yes
+
+	species = {
+		class = "YUZUGIRL"
+		portrait = "yuzugirl_01"
+		name = "SPEC_Yuzugirl_Name_1"
+		plural = "SPEC_Yuzugirl_Name_1_pl"
+		adjective = "PRESCRIPTED_species_adjective_yuzugirls1"
+		name_list= "YUZUGIRL1"
+		gender = female
+		trait = "trait_yuzu"
+		trait = "trait_sedentary"
+		trait = "trait_charismatic"
+		trait = "trait_yuzu_ciallo"
+		trait = "trait_yuzu_big_eater"
+	}
+
+	ship_prefix = "PRESCRIPTED_ship_prefix_yuzugirls1"
+	
+	room = "personality_metalheads_room" 
+	
+	ethic = "ethic_fanatic_egalitarian"
+	ethic = "ethic_pacifist"
+	authority = "auth_Yuzu"
+	government = "gov_Yuzu"
+	civics = { "civic_yuzu_supernatural_research" "civic_yuzu_social_talent" }
+	origin = "origin_yuzu_world"
+
+	planet_name = "SPEC_Yuzugirl_Name_1_planet"
+	planet_class = "pc_continental"
+	system_name = "SPEC_Yuzugirl_Name_1_system"
+	initializer = "yuzu_sol_system_initializer"
+
+	graphical_culture = nemesis_01
+	city_graphical_culture = humanoid_01
+
+	empire_flag = {
+		icon = {
+			category = "yuzusoft"
+			file = "flag_yuzu_1.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors = {
+			"white"
+			"white"
+			"dark_teal"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "PRESCRIPTED_ruler_name_yuzugirls1"
+		gender = female
+		portrait = "yuzu_1_1"
+		texture = 0
+		clothes = 0
+		ruler_title = "RT_YUZU_SUPERINTENDENT"
+		ruler_title_female = "RT_YUZU_SUPERINTENDENT_FEMALE"
+		leader_class = scientist
+	}
+}

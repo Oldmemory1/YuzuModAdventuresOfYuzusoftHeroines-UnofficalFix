@@ -1,0 +1,85 @@
+yuzu_werewolf_project_modifier = {
+	BIOLOGICAL_species_trait_picks_add = 3 # YUZUGIRL_species_trait_picks_add = 3
+	modify_species_cost_mult = -0.25
+}
+
+yuzu_spatiotemporal_crack_modifiers = {
+	category_field_manipulation_research_speed_mult = 0.10
+}
+
+yuzu_win_the_hearts = {
+	monthly_loyalty = 5.0
+	planet_jobs_produces_mult = 0.25
+	station_gatherers_produces_mult = 0.20
+	station_researchers_produces_mult = 0.20
+	pop_happiness = 0.05
+}
+
+yuzu_wish_megastructure_build_modifier = {
+	megastructure_build_speed_mult = 10000
+}
+
+yuzu_mythical_creature_power = {
+	ship_weapon_damage = 0.5
+	ship_shield_mult = 0.5
+	ship_armor_mult = 0.5
+	ship_hull_mult = 0.5
+}
+
+yuzu_cloaking_detection_modifier = {
+	hide_from_country_list = yes
+	ship_cloaking_detection_add = 10
+}
+
+##### 深渊天灾 #####
+yuzu_abyss_empire_defeated = {
+	pop_happiness = 0.2
+}
+
+guardians_of_the_galaxy_anti_abyss_0 = {
+	ship_fire_rate_mult = 0.10
+	ship_weapon_range_mult = 0.10
+	ships_upkeep_mult = -0.25
+}
+
+guardians_of_the_galaxy_anti_abyss_1 = {
+	ship_weapon_damage = 0.20
+	ship_shield_mult = 0.20
+	ship_armor_mult = 0.20
+	ship_hull_mult = 0.20
+}
+
+guardians_of_the_galaxy_anti_abyss_2 = {
+	ship_weapon_damage = 0.20
+	ship_shield_mult = 0.20
+	ship_armor_mult = 0.20
+	ship_hull_mult = 0.20
+}
+
+guardians_of_the_galaxy_anti_abyss_3 = {
+	ship_weapon_damage = 0.20
+	ship_shield_mult = 0.20
+	ship_armor_mult = 0.20
+	ship_hull_mult = 0.20
+}
+
+guardians_of_the_galaxy_anti_abyss_4 = {
+	ship_weapon_damage = -0.20
+	ship_shield_mult = -0.20
+	ship_armor_mult = -0.20
+	ship_hull_mult = -0.20
+}
+
+guardians_of_the_galaxy_anti_abyss_5 = {
+	ship_weapon_damage = -0.20
+	ship_shield_mult = -0.20
+	ship_armor_mult = -0.20
+	ship_hull_mult = -0.20
+}
+
+guardians_of_the_galaxy_anti_abyss_6 = {
+	ship_weapon_damage = -0.20
+	ship_shield_mult = -0.20
+	ship_armor_mult = -0.20
+	ship_hull_mult = -0.20
+}

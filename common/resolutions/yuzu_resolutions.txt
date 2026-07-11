@@ -1,0 +1,149 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+
+@resolution_flag_timer = 360
+
+resolution_galactic_focus_crisis_yuzu_abyss = {
+	icon = "GFX_resolution_emergency_measure"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_galactic_focus_crisis_yuzu_abyss_effect_success
+
+		hidden_effect = {
+			repeal_all_galactic_focus_resolutions = yes
+			set_global_flag = galactic_focus_crisis_yuzu_abyss
+			set_global_flag = galactic_community_crisis_fighting
+
+			set_global_flag = galactic_community_resolution_passed
+
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_global_flag = yuzu_abyss_descended_ongoing
+		NOT = { has_global_flag = galactic_focus_crisis_yuzu_abyss }
+	}
+
+	active = { # Resolution only in effect while this trigger is met
+		has_global_flag = yuzu_abyss_descended_ongoing
+	}
+
+	ai_weight = {
+		base = @resolution_weight_loved
+
+		modifier = {
+			factor = 2
+
+			any_neighbor_country = {
+				is_country_type = new_abyss_empire
+			}
+			desc = gal_com_neighboring_yuzu_abyss
+		}
+
+		modifier = {
+			factor = 0.75
+
+			NOT = {
+				any_neighbor_country = {
+					is_country_type = new_abyss_empire
+				}
+			}
+			desc = gal_com_not_neighboring_yuzu_abyss
+		}
+
+		modifier = {
+			factor = 0.75
+
+			has_yuzu_crisis_stage_1 = yes
+			desc = gal_com_crisis_stage_1
+		}
+
+		modifier = {
+			factor = 1.25
+
+			has_yuzu_crisis_stage_3 = yes
+			desc = gal_com_crisis_stage_3
+		}
+
+		modifier = {
+			factor = 10
+
+			has_yuzu_crisis_stage_4 = yes
+			desc = gal_com_crisis_stage_4
+		}
+
+		modifier = {
+			factor = 10
+
+			has_ascension_perk = ap_defender_of_the_galaxy
+			desc = ap_defender_of_the_galaxy
+		}
+
+		modifier = {
+			factor = 1.2
+			is_militarist = yes
+			desc = ethic_militarist
+		}
+
+		modifier = {
+			factor = 1.1
+			is_xenophile = yes
+			desc = ethic_xenophile
+		}
+
+		modifier = {
+			factor = 1.2
+			OR = {
+				is_materialist = yes
+				is_synthetic_empire = yes
+			}
+			desc = gal_com_is_materialist_or_synthetic
+		}
+
+		modifier = {
+			factor = 0.5
+			is_xenophobe = yes
+
+			NOT = {
+				any_neighbor_country = {
+					is_country_type = new_abyss_empire
+				}
+			}
+			desc = ethic_xenophobe
+		}
+	}
+}

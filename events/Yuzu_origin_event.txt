@@ -1,0 +1,224 @@
+namespace = Yuzu_origin_event
+
+# on_game_start_country
+country_event = {
+	id = Yuzu_origin_event.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_yuzu_empire = yes
+	}
+
+	immediate = {
+		set_country_flag = starting_event
+		capital_scope = {
+			planet_event = { id = Yuzu_planet_event.1 days = 1080 random = 720 }
+		}
+		if = {
+			limit = {
+				owner = { NOT = { has_origin = origin_void_dwellers } }
+			}
+			capital_scope = {
+				add_building = building_yuzu_clone_vats
+				if = {
+					limit = {
+						has_building = building_research_lab_1
+					}
+					remove_building = building_research_lab_1
+					add_building = building_yuzu_supernatural_research_organization
+				}
+				if = {
+					limit = {
+						has_building = building_commercial_zone
+					}
+					remove_building = building_commercial_zone
+					add_building = building_yuzu_cafe
+				}
+				else_if = {
+					limit = {
+						has_building = building_temple
+					}
+					remove_building = building_temple
+					add_building = building_yuzu_cafe
+				}
+				
+				if = {
+					limit = {
+						owner = { has_origin = origin_yuzu_world }
+					}
+					remove_district = district_generator
+					remove_district = district_mining
+					add_district = district_farming
+					add_district = district_farming
+				}
+				else_if = {
+					limit = {
+						owner = { has_origin = origin_shattered_ring }
+					}
+					remove_district = district_srw_commercial
+					add_district = district_farming_uncapped
+				}
+				else = {
+					remove_district = district_generator
+					add_district = district_farming
+				}
+			}
+		}
+		else = {
+			every_owned_planet = {
+				if = {
+					limit = {
+						has_building = building_holo_theatres
+					}
+					remove_building = building_holo_theatres
+					add_building = building_yuzu_cafe
+				}
+				else_if = {
+					limit = {
+						has_building = building_temple
+					}
+					remove_building = building_temple
+					add_building = building_yuzu_cafe
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_building = building_hydroponics_farm
+				}
+				remove_building = building_hydroponics_farm
+				add_building = building_yuzu_clone_vats
+			}
+		}
+		every_owned_planet = {
+			limit = {
+				has_deposit = d_decrepit_dwellings
+			}
+			remove_deposit = d_decrepit_dwellings
+			create_pop = { species = owner_main_species }
+		}
+
+		while = {
+			count = 5
+			random_owned_pop = {
+				limit = {
+					has_trait = trait_yuzu
+					NOR = {
+						has_trait = trait_yuzu_vampire
+						has_trait = trait_yuzu_astral
+					}
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_yuzu_vampire
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					has_trait = trait_yuzu
+					NOR = {
+						has_trait = trait_yuzu_vampire
+						has_trait = trait_yuzu_astral
+					}
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_yuzu_astral
+				}
+			}
+		}
+		every_owned_leader = {
+			random_list = {
+				25 = {
+					modify_species = {
+						species = this
+						add_trait = trait_yuzu_vampire
+					}
+				}
+				25 = {
+					modify_species = {
+						species = this
+						add_trait = trait_yuzu_astral
+					}
+				}
+				50 = {}
+			}
+		}
+		every_pool_leader = {
+			random_list = {
+				25 = {
+					modify_species = {
+						species = this
+						add_trait = trait_yuzu_vampire
+					}
+				}
+				25 = {
+					modify_species = {
+						species = this
+						add_trait = trait_yuzu_astral
+					}
+				}
+				50 = {}
+			}
+		}
+		country_event = { id = Yuzu_leader_event.2 }
+		country_event = { id = Yuzu_leader_event.3 }
+	}
+}
+
+# on_game_start_country
+country_event = {
+	id = Yuzu_origin_event.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = lost_colony_parent
+		is_yuzu_empire = yes
+		is_ai = yes
+	}
+
+	immediate = {
+		change_government = {
+			authority = auth_Yuzu
+			cooldown = yes
+			remove_invalid_civics = yes
+			civics = { civic = random civic = random }
+		}
+		every_owned_planet = {
+			limit = {
+				NOT = { has_building = building_yuzu_clone_vats }
+			}
+			add_building = building_yuzu_clone_vats
+		}
+	}
+}
+
+# on_game_start_country
+country_event = {
+	id = Yuzu_origin_event.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_yuzu_world
+	}
+
+	immediate = {
+		give_technology = { message = yes tech = tech_genome_mapping }
+		give_technology = { message = yes tech = tech_cloning }
+		give_technology = { message = yes tech = tech_gene_banks }
+		give_technology = { message = yes tech = tech_gene_tailoring }
+		give_technology = { message = yes tech = tech_gene_expressions }
+		#give_technology = { message = yes tech = tech_ult_nano_drone_enhance }
+		add_research_option = tech_gene_seed_purification
+		country_event = { id = Yuzu_country_event.6 days = 3600 random = 3600 }
+		capital_scope = {
+			add_deposit = d_yuzu_aqua_eden
+			add_deposit = d_yuzu_islenauts
+			add_deposit = d_yuzu_damaged_buildings
+			add_modifier = { modifier = yuzu_home_planet_modifier }
+			planet_event = { id = Yuzu_situation_event.1 days = 1800 random = 1800 }
+		}
+	}
+}

@@ -1,0 +1,367 @@
+namespace = Yuzu_arc_sites_event
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.1
+	title = Yuzu_arc_sites_event.1.name
+	desc = Yuzu_arc_sites_event.1.desc
+	picture = GFX_evt_senrenbanka_field
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.2
+	title = Yuzu_arc_sites_event.2.name
+	desc = Yuzu_arc_sites_event.2.desc
+	picture = GFX_evt_senrenbanka_field
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_arc_sites_event.2.a
+		owner = {
+			add_relic = r_murasamemaru
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.3
+	title = Yuzu_arc_sites_event.3.name
+	desc = Yuzu_arc_sites_event.3.desc
+	picture = GFX_evt_senrenbanka_field
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ASTOUNDING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.4
+	title = Yuzu_arc_sites_event.4.name
+	desc = Yuzu_arc_sites_event.4.desc
+	picture = GFX_evt_senrenbanka_field
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CURIOUS
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.5
+	title = Yuzu_arc_sites_event.5.name
+	desc = Yuzu_arc_sites_event.5.desc
+	picture = GFX_evt_senrenbanka_field
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = INCREDIBLE
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.6
+	title = Yuzu_arc_sites_event.6.name
+	desc = {
+		text = Yuzu_arc_sites_event.6.desc.first_finder
+		trigger = {
+			NOT = { has_global_flag = yuzu_old_abyss_system_discovered }
+		}
+	}
+	desc = {
+		text = Yuzu_arc_sites_event.6.desc.not_first_finder
+		trigger = {
+			has_global_flag = yuzu_old_abyss_system_discovered
+		}
+	}
+	picture = GFX_evt_senrenbanka_field
+	#show_sound = event_finding_loot
+	show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = REMARKABLE
+		owner = {
+			if = {
+				limit = {
+					NOR = {
+						has_technology = tech_yuzu_space_time_theory
+						has_tech_option = tech_yuzu_space_time_theory
+					}
+				}
+				add_research_option = tech_yuzu_space_time_theory
+				add_tech_progress = {
+					tech = tech_yuzu_space_time_theory
+					progress = 0.25
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = yuzu_old_abyss_system_discovered }
+				}
+				set_global_flag = yuzu_old_abyss_system_discovered
+				from.solar_system = {
+					spawn_system = {
+						min_distance = 20
+						max_distance = 30
+						max_jumps = 0
+						initializer = "yuzu_old_abyss_system"
+					}
+					if = {
+						limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+						add_hyperlane = {
+							from = this
+							to = last_created_system
+						}
+					}
+					else = {
+						add_extra_hyperlane_to_spawned_system_effect = yes
+					}
+				}
+				hidden_effect = {
+					country_event = { id = Yuzu_window_event.1 days = 1 }
+				}
+			}
+			else = {
+				hidden_effect = {
+					country_event = { id = Yuzu_window_event.2 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.7
+	title = Yuzu_arc_sites_event.7.name
+	desc = Yuzu_arc_sites_event.7.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = DISCONCERTING
+		great_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.8
+	title = Yuzu_arc_sites_event.8.name
+	desc = Yuzu_arc_sites_event.8.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = ASTOUNDING
+		great_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier3researchreward
+				min = @tier3researchmin
+				max = @tier3researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.9
+	title = Yuzu_arc_sites_event.9.name
+	desc = Yuzu_arc_sites_event.9.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CURIOUS
+		great_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.10
+	title = Yuzu_arc_sites_event.10.name
+	desc = Yuzu_arc_sites_event.10.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_arc_sites_event.10.a
+		great_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier4researchreward
+				min = @tier4researchmin
+				max = @tier4researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.11
+	title = Yuzu_arc_sites_event.11.name
+	desc = Yuzu_arc_sites_event.11.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	#show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_arc_sites_event.11.a
+		great_artifact_reward = yes
+		owner = {
+			IF = {
+				limit = {
+					NOR = {
+						has_technology = tech_yuzu_all_in_one_theory
+						has_tech_option = tech_yuzu_all_in_one_theory
+					}
+				}
+				add_research_option = tech_yuzu_all_in_one_theory
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.12
+	title = Yuzu_arc_sites_event.12.name
+	desc = Yuzu_arc_sites_event.12.desc
+	picture = GFX_evt_relic_world
+	#show_sound = event_finding_loot
+	show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_arc_sites_event.12.a
+		great_artifact_reward = yes
+		owner = {
+			add_relic = r_silver_key
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+		}
+	}
+}

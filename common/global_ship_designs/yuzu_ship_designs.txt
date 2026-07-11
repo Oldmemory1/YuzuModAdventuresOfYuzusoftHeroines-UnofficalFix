@@ -1,0 +1,868 @@
+# Massive Ship
+ship_design = {
+	name = "NAME_Yuzu_Titan"
+	ship_size = massive_ship_fallen_empire
+	section = {
+		template = "fallen_empire_massive_warship_key"
+		slot = "mid"
+
+		component = {
+			slot = "TITANIC_01"
+			template = "YUZU_BEAM_1"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_03"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_04"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component="SENSOR_YUZU_1"
+	required_component="YUZU_JUMP_DRIVE"
+	required_component="COMBAT_COMPUTER_ARTILLERY_YUZU"
+	required_component="TITAN_DARK_MATTER_REACTOR"
+	required_component="TITAN_SHIP_THRUSTER_YUZU"
+
+	allow_buildable_trigger = is_yuzu_empire
+}
+
+# Large Ship
+ship_design = {
+	name = "NAME_Yuzu_Large"
+	ship_size = large_ship_fallen_empire
+	section = {
+		template = "fallen_empire_large_warship_key"
+		slot = "mid"
+
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "YUZU_LANCE_1"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component="SENSOR_YUZU_1"
+	required_component="YUZU_JUMP_DRIVE"
+	required_component="COMBAT_COMPUTER_LINE_YUZU"
+	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component="BATTLESHIP_SHIP_THRUSTER_YUZU"
+
+	allow_buildable_trigger = is_yuzu_empire
+}
+
+# Small Ship
+ship_design = {
+	name = "NAME_Yuzu_Small"
+	ship_size = small_ship_fallen_empire
+	section = {
+		template = "fallen_empire_warship_small_key"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "PD_01"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_02"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_03"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_04"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "MEDIUM_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "MEDIUM_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+	required_component="SENSOR_YUZU_1"
+	required_component="YUZU_JUMP_DRIVE"
+	required_component="COMBAT_COMPUTER_PICKET_YUZU"
+	required_component="DESTROYER_DARK_MATTER_REACTOR"
+	required_component="DESTROYER_SHIP_THRUSTER_YUZU"
+
+	allow_buildable_trigger = is_yuzu_empire
+}
+
+####################
+
+# Massive Ship
+ship_design = {
+	name = "NAME_Abyss_Titan"
+	ship_size = massive_ship_fallen_empire
+	section = {
+		template = "fallen_empire_massive_warship_key"
+		slot = "mid"
+
+		component = {
+			slot = "TITANIC_01"
+			template = "YUZU_BEAM_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "YUZU_STRIKE_CRAFT_1"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "YUZU_STRIKE_CRAFT_1"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_03"
+			template = "YUZU_STRIKE_CRAFT_1"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_04"
+			template = "YUZU_STRIKE_CRAFT_1"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "ENIGMATIC_DECODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "ENIGMATIC_DECODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "ENIGMATIC_DECODER"
+		}
+	}
+	required_component="SENSOR_YUZU_2"
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_ARTILLERY_PRECOG"
+	required_component="TITAN_YUZU_REACTOR"
+	required_component="TITAN_SHIP_THRUSTER_5"
+
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}
+
+# Large Ship
+ship_design = {
+	name = "NAME_Abyss_Large"
+	ship_size = large_ship_fallen_empire
+	section = {
+		template = "fallen_empire_large_warship_key"
+		slot = "mid"
+
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "YUZU_STRIKE_CRAFT_1"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "YUZU_STRIKE_CRAFT_1"
+		}
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "YUZU_LANCE_3"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "ENIGMATIC_ENCODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "ENIGMATIC_ENCODER"
+		}
+	}
+	required_component="SENSOR_YUZU_2"
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_LINE_PRECOG"
+	required_component="BATTLESHIP_YUZU_REACTOR"
+	required_component="BATTLESHIP_SHIP_THRUSTER_5"
+
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}
+
+# Small Ship
+ship_design = {
+	name = "NAME_Abyss_Small"
+	ship_size = small_ship_fallen_empire
+	section = {
+		template = "fallen_empire_warship_small_key"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "YUZU_S_3"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "YUZU_S_3"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "YUZU_S_3"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "YUZU_S_3"
+		}
+		component = {
+			slot = "PD_01"
+			template = "YUZU_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "PD_02"
+			template = "YUZU_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "PD_03"
+			template = "YUZU_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "PD_04"
+			template = "YUZU_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_5"
+			template = "MEDIUM_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_6"
+			template = "MEDIUM_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "ENIGMATIC_ENCODER"
+		}
+	}
+	required_component="SENSOR_YUZU_2"
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="COMBAT_COMPUTER_PICKET_PRECOG"
+	required_component="DESTROYER_YUZU_REACTOR"
+	required_component="DESTROYER_SHIP_THRUSTER_5"
+
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}
+
+# Construction Ship
+ship_design = {
+	name = "NAME_Abyss_Constructor"
+	ship_size = constructor
+	section = {
+		template = "DEFAULT_CONSTRUCTION_SECTION"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_UTILITY_1"
+			template = "SMALL_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "SMALL_UTILITY_2"
+			template = "SMALL_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "SMALL_UTILITY_3"
+			template = "SMALL_YUZU_ARMOR_2"
+		}
+	}
+	required_component="PSI_JUMP_DRIVE_1"
+	required_component="SHIP_THRUSTER_5"
+	required_component="SENSOR_YUZU_2"
+	required_component="CORVETTE_YUZU_REACTOR"
+
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}
+
+# Defense Platform
+ship_design = {
+	name = "NAME_Abyss_Platform"
+	ship_size = military_station_small_fallen_empire
+	section = {
+		template = "fallen_empire_station_small_key"
+		slot = "mid"
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "YUZU_M_3"
+		}
+		component = {
+			slot = "PD_01"
+			template = "YUZU_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "PD_02"
+			template = "YUZU_POINT_DEFENCE_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "ENIGMATIC_DECODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "ENIGMATIC_DECODER"
+		}
+	}
+	required_component="SENSOR_YUZU_2"
+	required_component="COMBAT_COMPUTER_PLATFORM_PRECOG"
+	required_component="PLATFORM_YUZU_REACTOR"
+
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}
+
+# Defense Platform
+ship_design = {
+	name = "NAME_Abyss_Ion_Cannon"
+	ship_size = ion_cannon
+	section = {
+		template = "ION_CANNON_CORE"
+		slot = "ship"
+
+		component = {
+			slot = "TITANIC_GUN_01"
+			template = "YUZU_BEAM_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_ARMOR_2"
+		}
+	}
+	required_component="SENSOR_YUZU_2"
+	required_component="COMBAT_COMPUTER_PLATFORM_PRECOG"
+	required_component="ION_CANNON_YUZU_REACTOR"
+
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}

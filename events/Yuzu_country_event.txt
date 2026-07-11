@@ -1,0 +1,1122 @@
+#modified
+namespace = Yuzu_country_event
+
+country_event = {
+	id = Yuzu_country_event.1
+	title = "Yuzu_country_event.1.name"
+	desc = "Yuzu_country_event.1.desc"
+	picture = GFX_evt_murasamemaru
+	is_triggered_only = yes
+	
+	trigger = {
+		has_origin = origin_yuzu_world
+	}
+
+	immediate = {
+		every_system_within_border = {
+			every_fleet_in_system = {
+				limit = {
+					NOR = {
+						is_ship_class = shipclass_mining_station
+						is_ship_class = shipclass_research_station
+						is_ship_class = shipclass_observation_station
+						is_ship_class = shipclass_military_station
+						AND = {
+							is_ship_class = shipclass_starbase
+							NOT = { is_ship_size = juggernaut }
+						}
+					}
+					controller = {
+						is_hostile = root
+					}
+				}
+				if = {
+					limit = {
+						has_fleet_flag = Presiding_Judge_Fleet
+					}
+					set_global_flag = murasamemuru_eliminated_abyss
+					root = {
+						country_event = { id = Yuzu_abyss_crisis_event.107 days = 1 }
+					}
+				}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	option = {
+		name = Yuzu_country_event.1.a
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.2
+	is_triggered_only = yes
+	title = Yuzu_country_event.2.name
+    desc = Yuzu_country_event.2.desc
+	picture = GFX_evt_wormhole
+    location = event_target:Yuzu_Dimension_Fleet
+
+	immediate = {
+		capital_scope = {
+			create_random_yuzu_fleet = yes
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+country_event = { #凝视深渊飞升选择
+	id = Yuzu_country_event.4
+	title = Yuzu_country_event.4.name
+	desc = Yuzu_country_event.4.desc
+	picture = GFX_evt_stare_abyss
+	show_sound = event_radio_chatter
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+		capital_scope = {
+			enable_special_project = {
+				name = "YUZU_ABYSS_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+country_event = { #凝视深渊完成
+	id = Yuzu_country_event.5
+	title = Yuzu_country_event.5.name
+	desc = Yuzu_country_event.5.desc
+	picture = GFX_evt_stare_abyss
+	show_sound = event_radio_chatter
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = yuzu_abyss_project
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = { #人造狼人计划
+	id = Yuzu_country_event.6
+	title = Yuzu_country_event.6.name
+	desc = Yuzu_country_event.6.desc
+
+	picture = GFX_evt_dr_lab
+	show_sound = event_laboratory_sound
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.6.a
+		capital_scope = {
+			enable_special_project = {
+				name = "YUZU_WEREWOLF_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+
+	option = {
+		name = Yuzu_country_event.6.b
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier3unityreward
+				min = @tier3unitymin
+				max = @tier3unitymax
+			}
+		}
+	}
+}
+
+#人造狼人计划完成
+country_event = {
+	id = Yuzu_country_event.7
+	title = Yuzu_country_event.7.name
+	desc = Yuzu_country_event.7.desc
+	picture = GFX_evt_dr_lab
+	show_sound = event_laboratory_sound
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+		owner = {
+			add_research_option = tech_yuzu_werewolf
+		    add_tech_progress = {
+			    tech = tech_yuzu_werewolf
+			    progress = 0.90
+		    }
+			add_modifier = {
+				modifier = yuzu_werewolf_project_modifier
+				days = -1
+			}
+		}
+	}
+}
+
+# 击败神话生物检查
+country_event = {
+	id = Yuzu_country_event.8
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			is_country_type = guardian_yuzu_ceremony_monster
+		}
+	}
+
+	immediate = {
+		fromfromfrom.solar_system = {
+			save_event_target_as = leviathan_destroyed_system
+		}
+		root = {
+			save_event_target_as = leviathan_destroyer_country
+		}
+		from = {
+			save_event_target_as = leviathan_destroyed_country
+		}
+		country_event = { id = leviathans.6 days = 2 }
+		country_event = { id = Yuzu_country_event.9 }
+	}
+}
+
+#击败神话生物
+country_event = {
+	id = Yuzu_country_event.9
+	title = "Yuzu_country_event.9.name"
+	desc = "Yuzu_country_event.9.desc"
+	picture = GFX_evt_wormhole
+	show_sound = event_super_explosion
+	location = event_target:yuzu_ceremony_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.9.a
+		enable_special_project = {
+			name = "YUZU_SPATIOTEMPORAL_CRACK"
+			location = event_target:yuzu_ceremony_planet
+			owner = root.owner
+		}
+	}
+
+	option = {
+		name = NOTIME
+	}
+}
+
+#时空裂缝研究完成
+country_event = {
+	id = Yuzu_country_event.10
+	title = "Yuzu_country_event.10.name"
+	desc = "Yuzu_country_event.10.desc"
+	picture = GFX_evt_wormhole
+	show_sound = event_energy_field
+	location = event_target:yuzu_ceremony_planet
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.10.a
+		add_modifier = {
+			modifier = yuzu_spatiotemporal_crack_modifiers
+			days = -1
+		}
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = @tier5researchreward
+			min = @tier5researchmin
+			max = @tier5researchmax
+		}
+	}
+}
+
+# 提议修复深渊之门
+country_event = {
+	id = Yuzu_country_event.11
+	title = Yuzu_country_event.11.name
+	desc = Yuzu_country_event.11.desc
+	picture = GFX_evt_stare_abyss
+	location = from
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = has_project_yuzu_repair_abyss_gate }
+	}
+
+	immediate = {
+		set_country_flag = has_project_yuzu_repair_abyss_gate
+	}
+
+	option = {
+		name = Yuzu_country_event.11.a
+		enable_special_project = {
+			name = "YUZU_REPAIR_ABYSS_GATE"
+			location = from
+			owner = root
+		}
+	}
+	option = {
+		name = Yuzu_country_event.11.b
+	}
+}
+
+# 深渊侵蚀
+country_event = {
+	id = Yuzu_country_event.12
+	title = Yuzu_country_event.12.name
+	desc = Yuzu_country_event.12.desc
+	picture = GFX_evt_stare_abyss
+	location = from
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.12.a
+		enable_special_project = {
+			name = "YUZU_PREVENT_ABYSS_INFILTRATION"
+			location = fromfromfrom
+			owner = root
+		}
+	}
+}
+
+# 阻止深渊侵蚀研究完成
+country_event = {
+	id = Yuzu_country_event.13
+	title = Yuzu_country_event.13.name
+	desc = Yuzu_country_event.13.desc
+	picture = GFX_evt_stare_abyss
+	location = from
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.13.a
+		owner = {
+			add_research_option = tech_yuzu_restore_abyss_city
+		    add_tech_progress = {
+			    tech = tech_yuzu_restore_abyss_city
+			    progress = 0.10
+		    }
+		}
+	}
+}
+
+#月检
+country_event = {
+	id = Yuzu_country_event.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				exists = overlord
+				overlord = { has_valid_civic = civic_yuzu_win_the_hearts }
+			}
+			remove_modifier = yuzu_win_the_hearts
+			if = {
+				limit = {
+					overlord = {
+						has_councilor = { COUNCILOR = councilor_yuzu_win_the_hearts }
+					}
+				}
+				add_modifier = {
+					modifier = yuzu_win_the_hearts
+					mult = value:yuzu_overlord_councilor_level|TYPE|councilor_yuzu_win_the_hearts|
+				}
+			}
+			else = {
+				add_modifier = {
+					modifier = yuzu_win_the_hearts
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_opinion_modifier = { who = overlord modifier = opinion_yuzu_win_the_hearts } }
+				}
+				add_opinion_modifier = {
+					who = overlord
+					modifier = opinion_yuzu_win_the_hearts
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { has_opinion_modifier = { who = overlord modifier = opinion_yuzu_fanatic } }
+				}
+				random_list = {
+					1 = {
+						add_opinion_modifier = {
+							who = overlord
+							modifier = opinion_yuzu_fanatic
+						}
+					}
+					99 = { }
+				}
+			}
+		}
+		else_if = {
+			limit = { has_modifier = yuzu_win_the_hearts }
+			remove_modifier = yuzu_win_the_hearts
+		}
+	}
+}
+
+#分享科技
+country_event = {
+	id = Yuzu_country_event.21
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				exists = overlord
+				overlord = { is_same_value = root }
+			}
+			if = {
+				limit = {
+					has_authority = auth_machine_intelligence
+				}
+				copy_techs_from = {
+					target = root
+					except = {
+						# Robots
+						tech_robotic_workers
+						tech_droid_workers
+						tech_synthetic_workers
+						# Food
+						tech_eco_simulation
+						tech_gene_crops
+						tech_nano_vitality_crops
+						tech_nutrient_replication
+						# Misc
+						tech_frontier_health
+						tech_frontier_hospital
+						tech_telepathy
+						tech_precognition_interface
+						tech_psi_jump_drive_1
+						tech_galactic_markets
+						tech_subdermal_stimulation
+						tech_global_research_initiative
+						tech_neural_implants
+						tech_psionic_theory
+						# Non-Machine Robomodding
+						tech_robomodding
+						tech_robomodding_points_1
+						tech_robomodding_points_2
+						# Genetics
+						tech_genome_mapping
+						tech_vitality_boosters
+						tech_epigenetic_triggers
+						tech_cloning
+						tech_gene_banks
+						tech_gene_seed_purification
+						tech_morphogenetic_field_mastery
+						tech_gene_tailoring
+						tech_glandular_acclimation
+						tech_gene_expressions
+						tech_selected_lineages
+						tech_capacity_boosters
+						# Horizon Signal
+						tech_akx_worm_1
+						tech_akx_worm_2
+						tech_akx_worm_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_authority = auth_hive_mind
+				}
+				copy_techs_from = {
+					target = root
+					except = {
+						# Misc
+						tech_frontier_health
+						tech_frontier_hospital
+						tech_telepathy
+						tech_precognition_interface
+						tech_psi_jump_drive_1
+						tech_galactic_markets
+						tech_subdermal_stimulation
+						tech_global_research_initiative
+						tech_neural_implants
+						tech_psionic_theory
+						# Non-Machine Robomodding
+						tech_robomodding
+						tech_robomodding_points_1
+						tech_robomodding_points_2
+						# Horizon Signal
+						tech_akx_worm_1
+						tech_akx_worm_2
+						tech_akx_worm_3
+					}
+				}
+			}
+			else = {
+				copy_techs_from = {
+					target = root
+					except = {
+						# Horizon Signal
+						tech_akx_worm_1
+						tech_akx_worm_2
+						tech_akx_worm_3
+					}
+				}
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_yuzu_share_techs
+			}
+			random_agreement = {
+				limit = {
+					owner = { is_same_value = root } 
+					target = { is_same_value = prev }
+				}
+				add_loyalty = 100
+			}
+		}
+	}
+}
+
+##########愿望事件##########
+
+country_event = {
+	id = Yuzu_country_event.100
+	title = Yuzu_country_event.100.name
+	desc = "Yuzu_country_event.100.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.100.a
+		owner = {
+			add_resource = { energy = 10000 }
+		    add_monthly_resource_mult = {
+				resource = energy
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_resource = {
+					type = energy
+					amount >= 100
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.b
+		owner = {
+			add_resource = { minerals = 10000 }
+		    add_monthly_resource_mult = {
+			    resource = minerals
+			    value = 48
+		    }
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_resource = {
+					type = minerals
+					amount >= 100
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.c
+		owner = {
+			add_resource = { food = 10000 }
+			add_monthly_resource_mult = {
+				resource = food
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_resource = {
+					type = food
+					amount >= 100
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.d
+		owner = {
+			add_resource = { consumer_goods = 5000 }
+			add_monthly_resource_mult = {
+				resource = consumer_goods
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_resource = {
+					type = consumer_goods
+					amount >= 100
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.e
+		owner = {
+			add_resource = { alloys = 2500 }
+			add_monthly_resource_mult = {
+				resource = alloys
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_country_resource = {
+					type = alloys
+					amount >= 100
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.f
+		owner = {
+			 add_resource = { volatile_motes = 1000 }
+             add_monthly_resource_mult = {
+				 resource = volatile_motes
+				 value = 48
+			 }
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_resource = {
+						type = volatile_motes
+						amount >= 50
+					}
+					NOR = {
+						has_technology = tech_mine_volatile_motes
+						has_technology = tech_volatile_motes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.g
+		owner = {
+			 add_resource = { exotic_gases = 1000 }
+		     add_monthly_resource_mult = {
+				 resource = exotic_gases
+				 value = 48
+			 }
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_resource = {
+						type = exotic_gases
+						amount >= 50
+					}
+					NOR = {
+						has_technology = tech_mine_exotic_gases
+						has_technology = tech_exotic_gases
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.h
+		owner = {
+			add_resource = { rare_crystals = 1000 }
+			add_monthly_resource_mult = {
+				resource = rare_crystals
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_resource = {
+						type = rare_crystals
+						amount >= 50
+					}
+					NOR = {
+						has_technology = tech_mine_rare_crystals
+						has_technology = tech_rare_crystals
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.i
+		owner = {
+			add_resource = { sr_living_metal = 500 }
+			add_monthly_resource_mult = {
+				resource = sr_living_metal
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+			#		AND = {
+						has_country_resource = {
+							type = sr_living_metal
+							amount >= 50
+						}
+			#			NOT = { has_technology = tech_yuzu_reaper_scythe }
+			#		}
+			#		has_country_resource = {
+			#			type = sr_living_metal
+			#			amount >= 5000
+			#		}
+					NOT = {
+						has_technology = tech_mine_living_metal
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.j
+		owner = {
+			add_resource = { sr_zro = 500 }
+		    add_monthly_resource_mult = {
+				resource = sr_zro
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_resource = {
+						type = sr_zro
+						amount >= 50
+					}
+					NOT = {
+						has_technology = tech_mine_zro
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.k
+		owner = {
+			add_resource = { sr_dark_matter = 500 }
+		    add_monthly_resource_mult = {
+				resource = sr_dark_matter
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+			#		AND = {
+						has_country_resource = {
+							type = sr_dark_matter
+							amount >= 50
+						}
+			#			NOT = { has_technology = tech_yuzu_reaper_scythe }
+			#		}
+			#		has_country_resource = {
+			#			type = sr_dark_matter
+			#			amount >= 5000
+			#		}
+					NOT = {
+						has_technology = tech_mine_dark_matter
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.100.l
+		owner = {
+			add_resource = { nanites = 500 }
+		    add_monthly_resource_mult = {
+				resource = nanites
+				value = 48
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+			#	OR = {
+			#		AND = {
+						has_country_resource = {
+					        type = nanites
+					        amount >= 50
+				        }
+			#	        NOT = { has_technology = tech_yuzu_reaper_scythe }
+			#		}
+			#		has_country_resource = {
+			#		    type = nanites
+			#		    amount >= 5000
+			#	    }
+			#	}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.101
+	title = Yuzu_country_event.101.name
+	desc = "Yuzu_country_event.101.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.101.a
+		owner = { add_resource = { physics_research = 30000 } }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = Yuzu_country_event.101.b
+		owner = { add_resource = { society_research = 30000 } }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = Yuzu_country_event.101.c
+		owner = { add_resource = { engineering_research = 30000 } }
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = Yuzu_country_event.101.d
+		owner = {
+			add_resource = {
+				physics_research = 10000
+				society_research = 10000
+				engineering_research = 10000
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.102
+	title = Yuzu_country_event.102.name
+	desc = "Yuzu_country_event.102.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.102.a
+		owner = { add_resource = { unity = 5000 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_monthly_income = { resource = unity value >= 200 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.102.b
+		owner = { add_resource = { influence = 500 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				has_country_resource = {
+					type = influence
+					amount >= 100
+				}
+			}
+		}
+	}
+	#option = {
+	#	name = Yuzu_country_event.102.c
+	#	owner = {
+	#		every_owned_leader = {
+	#			add_experience = 75000
+	#		}
+	#	}
+	#	ai_chance = {
+	#		factor = 0
+	#	}
+	#}
+}
+
+country_event = {
+	id = Yuzu_country_event.103
+	title = Yuzu_country_event.103.name
+	desc = "Yuzu_country_event.103.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+		owner = { add_resource = { minor_artifacts = 2000 } }
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.104
+	title = Yuzu_country_event.104.name
+	desc = "Yuzu_country_event.104.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	immediate = {
+		capital_scope = {
+			create_yuzu_fleet_1 = yes
+		}
+	}
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.105
+	title = Yuzu_country_event.105.name
+	desc = "Yuzu_country_event.105.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+				    is_country_type = fallen_empire
+				    is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = {
+				id = Yuzu_country_event.106
+			}
+		}
+		every_war = {
+			end_war_effect = yes
+		}
+		if = {
+			limit = {
+				has_global_flag = war_in_heaven_ongoing
+			}
+			remove_global_flag = war_in_heaven_ongoing
+			set_global_flag = war_in_heaven_ended
+		}
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.106
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+				    is_country_type = fallen_empire
+				    is_country_type = awakened_fallen_empire
+				}
+			}
+			add_opinion_modifier = { who = root modifier = opinion_yuzu_wish_peace }
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.107
+	title = Yuzu_country_event.107.name
+	desc = "Yuzu_country_event.107.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_country_event.107.a
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_fe_dome_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.b
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_class_4_singularity_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.c
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_dimensional_fabricator_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.d
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_nourishment_center_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.e
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_affluence_center_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.f
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_nano_forge_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.g
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_master_archive_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.h
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_empyrean_shrine_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.i
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_fe_stronghold_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.j
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_ancient_cryo_chamber_build_count value = 1 }
+			}
+		}
+	}
+	option = {
+		name = Yuzu_country_event.107.k
+		hidden_effect = {
+			owner = {
+				change_variable = { which = yuzu_fe_xeno_zoo_build_count value = 1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_country_event.108
+	title = Yuzu_country_event.108.name
+	desc = "Yuzu_country_event.108.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = yuzu_wish_megastructure_build_modifier
+			days = 2
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}

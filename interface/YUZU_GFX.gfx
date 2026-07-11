@@ -1,0 +1,215 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_origin_yuzu_world"
+		texturefile = "gfx/event_pictures/origins/origin_yuzu_world.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_relic_murasamemaru"
+		texturefile = "gfx/interface/icons/relics/r_murasamemaru.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_relic_silver_key"
+		texturefile = "gfx/interface/icons/relics/r_silver_key.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_evt_senrenbanka_field"
+		texturefile = "gfx/event_pictures/senrenbanka_field.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_dr_lab"
+		texturefile = "gfx/event_pictures/dr_lab.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_stare_abyss"
+		texturefile = "gfx/event_pictures/stare_abyss.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_yuzu_meguru"
+		texturefile = "gfx/event_pictures/yuzu_meguru.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_murasamemaru"
+		texturefile = "gfx/event_pictures/yuzu_murasamemaru.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_yuzu_slime"
+		texturefile = "gfx/event_pictures/yuzu_slime.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ap_personality_transplantation"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_personality_transplantation.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ap_stare_abyss"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_stare_abyss.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_army_type_yuzu_werewolf"
+		texturefile = "gfx/interface/planetview/yuzu_werewolf.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_lance_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_lance_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_lance_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_lance_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_lance_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_lance_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_energy_torpedoes_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_energy_torpedoes_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_energy_torpedoes_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_energy_torpedoes_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_energy_torpedoes_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_energy_torpedoes_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_beam_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_beam_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_beam_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_strike_craft_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_strike_craft_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_torpedo_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_torpedo_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_point_defense_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_point_defense_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_reactor_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_swarm_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_picket_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_picket_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_line_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_line_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_artillery_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_artillery_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_platform_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_carrier_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sensor_yuzu_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sensor_yuzu_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_armor_yuzu_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_armor_yuzu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_armor_yuzu_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_armor_yuzu_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_shield_yuzu_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_shield_yuzu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_shield_yuzu_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_shield_yuzu_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_jump_drive_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_jump_drive_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_thruster_yuzu_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_thruster_yuzu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_fire_control_yuzu"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_fire_control_yuzu.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_aura_yuzu_abyss"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_aura_yuzu_abyss.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_back_in_time"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_back_in_time.dds"
+	}
+
+	spriteType = {
+		name = "GFX_colony_type_yuzu_exotic_gases"
+		textureFile = "gfx/interface/planetview/colony_type_yuzu_exotic_gases.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_yuzu_rare_crystals"
+		textureFile = "gfx/interface/planetview/colony_type_yuzu_rare_crystals.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_yuzu_volatile_motes"
+		textureFile = "gfx/interface/planetview/colony_type_yuzu_volatile_motes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_resource_fragment_of_heart"
+		textureFile = "gfx/interface/icons/resources/fragment_of_heart.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_fragment_of_heart_large"
+		textureFile = "gfx/interface/icons/resources/fragment_of_heart_large.dds"
+	}
+}

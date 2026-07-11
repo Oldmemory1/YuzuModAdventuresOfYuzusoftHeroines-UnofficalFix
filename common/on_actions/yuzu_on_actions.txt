@@ -1,0 +1,288 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		Yuzu_other_event.2
+	}
+}
+
+on_game_start_country = {
+	events = {
+		Yuzu_origin_event.1
+		Yuzu_origin_event.2
+		Yuzu_origin_event.10
+	}
+}
+
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		Yuzu_leader_event.1
+		Yuzu_leader_event.2
+		Yuzu_leader_event.3
+		Yuzu_leader_event.7
+		Yuzu_leader_event.12
+	}
+}
+
+# A leader leveled up.
+# Scope = Country
+# From = Leader
+on_leader_level_up = {
+	events = {
+		Yuzu_leader_event.11
+	}
+}
+
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+	events = {
+		Yuzu_leader_event.10
+	}
+}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+		Yuzu_leader_event.2
+		Yuzu_leader_event.3
+	}
+}
+
+# Called during empire initialization when starting a new game if has_secondary_species game rule is true.
+# Called before empire_init_create_capital_pops.
+# scope: planet
+# from: founder species
+# fromfrom: secondary species (if exists)
+empire_init_capital_planet = {
+	events = {
+		Yuzu_other_event.5 # 资源统合母星系
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		Yuzu_country_event.20
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		Yuzu_other_event.4
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		Yuzu_leader_event.1
+		Yuzu_ai_event.1
+		Yuzu_ai_event.2
+		Yuzu_ai_event.3
+		Yuzu_ai_event.4
+		Yuzu_ai_event.5
+		Yuzu_ai_event.6
+		Yuzu_ai_event.7
+	}
+}
+
+# No scope, like on_game_start
+on_five_year_pulse = {
+	events = {
+		Yuzu_abyss_crisis_event.1000
+	}
+}
+
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		Yuzu_window_event.5
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		Yuzu_abyss_crisis_event.114
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		Yuzu_country_event.8
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		Yuzu_abyss_crisis_event.160
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+		Yuzu_abyss_crisis_event.161
+	}
+}
+
+# Planet has reached 0 pops from orbital bombardment
+# This = Planet
+# From = Bombarder
+on_planet_zero_pops = {
+	events = {
+		Yuzu_abyss_crisis_event.162
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		Yuzu_abyss_crisis_event.99
+		Yuzu_abyss_crisis_event.100
+	}
+}
+
+#This = ship (starbase)
+#From = owner country
+on_building_starbase_outpost = {
+	events = {
+		Yuzu_abyss_crisis_event.101
+	}
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		Yuzu_abyss_crisis_event.96
+		Yuzu_abyss_crisis_event.502
+	}
+}
+
+# This = Ship
+# From = Disabler Ship
+on_ship_disabled = {
+	events = {
+		Yuzu_abyss_crisis_event.113
+	}
+}
+
+# A planets controller becomes a country not the same as the owner.
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Planet Controller (the one occupying)
+on_planet_occupied = {
+	events = {
+		Yuzu_abyss_crisis_event.115
+	}
+}
+
+# THIS = Ship
+on_jump_drive = {
+	events = {
+		Yuzu_abyss_crisis_event.111
+	}
+}
+
+# fires when a country releases a sector as a vassal
+# This = released vassal
+# From = overlord
+on_released_as_vassal = {
+	events = {
+		Yuzu_other_event.10
+	}
+}
+
+#A building construction has been completed.
+# This = Planet
+on_building_complete = {
+	events = {
+		Yuzu_other_event.20
+	}
+}
+
+# A building construction has been completed, which is an upgrade of previous building.
+# This = Planet
+on_building_upgraded = {
+	events = {
+		Yuzu_other_event.21
+	}
+}
+
+# A building construction has demolished.
+# This = Planet
+on_building_demolished = {
+	events = {
+		Yuzu_other_event.22
+	}
+}
+
+# A building construction has finished, replacing another building.
+# This = Planet
+on_building_replaced = {
+	events = {
+		Yuzu_other_event.20
+		Yuzu_other_event.23
+	}
+}
+
+# A building construction has been downgraded and replaced.
+# This = Planet
+on_building_downgraded = {
+	events = {
+		Yuzu_other_event.24
+	}
+}
+
+##### PLANET_KILLER #####
+
+on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_YUZU = {
+	events = {
+		Yuzu_planet_destruction_event.1
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_YUZU_queued = {
+}
+
+on_destroy_planet_with_PLANET_KILLER_STAR_CRACKER_YUZU_unqueued = {
+}
+
+on_destroy_planet_with_PLANET_KILLER_BACK_IN_TIME = {
+	events = {
+		Yuzu_planet_destruction_event.100
+		origin.3245
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_BACK_IN_TIME_queued = {
+}
+
+on_destroy_planet_with_PLANET_KILLER_BACK_IN_TIME_unqueued = {
+}

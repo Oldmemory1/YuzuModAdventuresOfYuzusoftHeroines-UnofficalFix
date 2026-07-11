@@ -1,0 +1,406 @@
+namespace = Yuzu_ai_event
+
+country_event = {
+	id = Yuzu_ai_event.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = yes
+		is_YUZU = yes
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				has_building = building_yuzu_clone_vats
+				OR = {
+					has_building = building_robot_assembly_plant
+					has_building = building_machine_assembly_plant
+					has_building = building_machine_assembly_complex
+				}
+			}
+			remove_building = building_robot_assembly_plant
+			remove_building = building_machine_assembly_plant
+			remove_building = building_machine_assembly_complex
+		}
+	}
+}
+
+##### ai法令 #####
+
+# 资源充足
+country_event = {
+	id = Yuzu_ai_event.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = yes
+		is_YUZU = yes
+		has_country_resource = {
+			type = fragment_of_heart
+			amount >= 200
+		}
+		OR = {
+			has_country_resource = {
+				type = energy
+				amount < 100
+			}
+			has_country_resource = {
+				type = minerals
+				amount < 100
+			}
+			has_country_resource = {
+				type = food
+				amount < 100
+			}
+			has_country_resource = {
+				type = consumer_goods
+				amount < 100
+			}
+			has_country_resource = {
+				type = alloys
+				amount < 100
+			}
+			AND = {
+				has_country_resource = {
+					type = exotic_gases
+					amount < 50
+				}
+				OR = {
+					has_technology = tech_mine_exotic_gases
+					has_technology = tech_exotic_gases
+				}
+			}
+			AND = {
+				has_country_resource = {
+					type = rare_crystals
+					amount < 50
+				}
+				OR = {
+					has_technology = tech_mine_rare_crystals
+					has_technology = tech_rare_crystals
+				}
+			}
+			AND = {
+				has_country_resource = {
+					type = volatile_motes
+					amount < 50
+				}
+				OR = {
+					has_technology = tech_mine_volatile_motes
+					has_technology = tech_volatile_motes
+				}
+			}
+			AND = {
+#				OR = {
+					has_country_resource = {
+						type = sr_living_metal
+						amount < 50
+					}
+#					AND = {
+#						has_country_resource = {
+#							type = sr_living_metal
+#							amount < 5000
+#						}
+#						has_technology = tech_yuzu_reaper_scythe
+#					}
+#				}
+				has_technology = tech_mine_living_metal
+			}
+			AND = {
+				has_country_resource = {
+					type = sr_zro
+					amount < 50
+				}
+				has_technology = tech_mine_zro
+			}
+			AND = {
+#				OR = {
+					has_country_resource = {
+						type = sr_dark_matter
+						amount < 50
+					}
+#					AND = {
+#						has_country_resource = {
+#							type = sr_dark_matter
+#							amount < 5000
+#						}
+#						has_technology = tech_yuzu_reaper_scythe
+#					}
+#				}
+				has_technology = tech_mine_dark_matter
+			}
+#			OR = {
+				has_country_resource = {
+					type = nanites
+					amount < 50
+				}
+#				AND = {
+#					has_country_resource = {
+#						type = nanites
+#						amount < 5000
+#					}
+#					has_technology = tech_yuzu_reaper_scythe
+#				}
+#			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -160 }
+		}
+		else_if = {
+			limit = {
+				has_ethic = ethic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -180 }
+		}
+		else = {
+			add_resource = { fragment_of_heart = -200 }
+		}
+		country_event = { id = Yuzu_country_event.100 }
+	}
+}
+
+# 科技进步
+country_event = {
+	id = Yuzu_ai_event.3
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = yes
+		is_YUZU = yes
+		NAND = {
+			exists = overlord
+			overlord = {
+				is_ai = no
+				has_valid_civic = civic_yuzu_win_the_hearts
+			}
+		}
+		has_country_resource = {
+			type = fragment_of_heart
+			amount >= 200
+		}
+		OR = {
+			has_monthly_income = { resource = physics_research value < 1000 }
+			has_monthly_income = { resource = society_research value < 1000 }
+			has_monthly_income = { resource = engineering_research value < 1000 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -160 }
+		}
+		else_if = {
+			limit = {
+				has_ethic = ethic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -180 }
+		}
+		else = {
+			add_resource = { fragment_of_heart = -200 }
+		}
+		country_event = { id = Yuzu_country_event.101 }
+	}
+}
+
+# 扩大影响
+country_event = {
+	id = Yuzu_ai_event.4
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = yes
+		is_YUZU = yes
+		has_country_resource = {
+			type = fragment_of_heart
+			amount >= 200
+		}
+		OR = {
+			has_monthly_income = { resource = unity value < 200 }
+			has_country_resource = {
+				type = influence
+				amount < 100
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -160 }
+		}
+		else_if = {
+			limit = {
+				has_ethic = ethic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -180 }
+		}
+		else = {
+			add_resource = { fragment_of_heart = -200 }
+		}
+		country_event = { id = Yuzu_country_event.102 }
+	}
+}
+
+# 文化强国
+country_event = {
+	id = Yuzu_ai_event.5
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = yes
+		is_YUZU = yes
+		has_country_resource = {
+			type = fragment_of_heart
+			amount >= 5000
+		}
+		has_country_resource = {
+			type = minor_artifacts
+			amount < 100
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -400 }
+		}
+		else_if = {
+			limit = {
+				has_ethic = ethic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -450 }
+		}
+		else = {
+			add_resource = { fragment_of_heart = -500 }
+		}
+		country_event = { id = Yuzu_country_event.103 }
+	}
+}
+
+# 舰队增援
+country_event = {
+	id = Yuzu_ai_event.6
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = yes
+		is_YUZU = yes
+		has_country_resource = {
+			type = fragment_of_heart
+			amount >= 1000
+		}
+		OR = {
+			has_monthly_income = { resource = energy value >= 50 }
+			has_country_resource = {
+				type = energy
+				amount >= 5000
+			}
+		}
+		OR = {
+			has_monthly_income = { resource = alloys value >= 10 }
+			has_country_resource = {
+				type = alloys
+				amount >= 1000
+			}
+		}
+		OR = {
+			AND = {
+				used_naval_capacity_percent < 0.20
+				max_naval_capacity > 150
+			}
+			AND = {
+				used_naval_capacity_percent < 0.50
+				max_naval_capacity > 300
+			}
+			AND = {
+				used_naval_capacity_percent < 0.80
+				max_naval_capacity > 600
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -800 }
+		}
+		else_if = {
+			limit = {
+				has_ethic = ethic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -900 }
+		}
+		else = {
+			add_resource = { fragment_of_heart = -1000 }
+		}
+		country_event = { id = Yuzu_country_event.104 }
+	}
+}
+
+# 巨构建造
+country_event = {
+	id = Yuzu_ai_event.7
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = yes
+		is_YUZU = yes
+		has_country_resource = {
+			type = fragment_of_heart
+			amount >= 5000
+		}
+		count_owned_megastructure = {
+			count >= 2
+			limit = { is_upgrading = yes }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -4000 }
+		}
+		else_if = {
+			limit = {
+				has_ethic = ethic_spiritualist
+			}
+			add_resource = { fragment_of_heart = -4500 }
+		}
+		else = {
+			add_resource = { fragment_of_heart = -5000 }
+		}
+		country_event = { id = Yuzu_country_event.108 }
+	}
+}

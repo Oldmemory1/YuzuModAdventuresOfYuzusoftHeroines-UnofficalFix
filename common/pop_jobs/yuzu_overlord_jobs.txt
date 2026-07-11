@@ -1,0 +1,332 @@
+overlord_cafe_clerk = {
+	category = specialist
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	building_icon = building_yuzu_cafe
+	clothes_texture_index = 3
+	icon = cafe_clerk
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 8
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_overlord_cafe_clerks
+		produces = {
+			unity = 1
+		}
+		upkeep = {
+			energy = 8
+			food = 1
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_cafe_clerks
+		produces = {
+			energy = 8
+			unity = 1
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+}
+
+overlord_cafe_clerk_drone = {
+	category = complex_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	building_icon = building_yuzu_cafe
+	clothes_texture_index = 3
+	icon = cafe_clerk
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 8
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_overlord_cafe_clerks
+		produces = {
+			unity = 1
+		}
+		upkeep = {
+			energy = 8
+			food = 1
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_cafe_clerks
+		produces = {
+			energy = 8
+			unity = 1
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+}
+
+overlord_supernatural_researcher = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	building_icon = building_yuzu_supernatural_research_organization
+	clothes_texture_index = 3
+	icon = researcher
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 5
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_overlord_supernatural_researchers
+		produces = {
+			unity = 2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_supernatural_researchers
+		produces = {
+			physics_research = 3
+			society_research = 3
+			engineering_research = 3
+			unity = 2
+		}
+		produces = {
+			trigger = {
+				exists = planet.owner.overlord
+				planet.owner.overlord = { has_valid_civic = civic_yuzu_supernatural_research }
+			}
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+}
+
+overlord_supernatural_researcher_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	building_icon = building_yuzu_supernatural_research_organization
+	clothes_texture_index = 3
+	icon = researcher
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 5
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_overlord_supernatural_researchers
+		produces = {
+			unity = 2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_supernatural_researchers
+		produces = {
+			physics_research = 3
+			society_research = 3
+			engineering_research = 3
+			unity = 2
+		}
+		produces = {
+			trigger = {
+				exists = planet.owner.overlord
+				planet.owner.overlord = { has_valid_civic = civic_yuzu_supernatural_research }
+			}
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+}
+
+overlord_yuzu_witch = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	building_icon = building_yuzu_supernatural_research_organization
+	clothes_texture_index = 3
+	icon = yuzu_witch
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		custom_tooltip = YUZU_WITCH_JOB_TRIGGER
+		complex_specialist_job_check_trigger = yes
+		hidden_trigger = { is_YUZU = yes }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 10
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_overlord_yuzu_witches
+		produces = {
+			unity = 3
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_yuzu_witches
+		produces = {
+			fragment_of_heart = 1
+			unity = 3
+		}
+		produces = {
+			trigger = {
+				exists = planet.owner
+				planet.owner = { has_tradition = tr_yuzu_festival_associations }
+			}
+			fragment_of_heart = 0.5
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+}
+
+overlord_yuzu_witch_drone = {
+	category = complex_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	building_icon = building_yuzu_cafe
+	clothes_texture_index = 3
+	icon = yuzu_witch
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		custom_tooltip = YUZU_WITCH_JOB_TRIGGER
+		can_think = yes
+		hidden_trigger = { is_YUZU = yes }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 10
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_overlord_yuzu_witches
+		produces = {
+			unity = 3
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_yuzu_witches
+		produces = {
+			fragment_of_heart = 1
+			unity = 3
+		}
+		produces = {
+			trigger = {
+				exists = planet.owner
+				planet.owner = { has_tradition = tr_yuzu_festival_associations }
+			}
+			fragment_of_heart = 0.5
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+}

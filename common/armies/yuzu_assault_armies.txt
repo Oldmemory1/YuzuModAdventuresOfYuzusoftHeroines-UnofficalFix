@@ -1,0 +1,38 @@
+yuzu_werewolf_army = {
+	damage = 10.0
+	health = 10.0
+	morale = 20.0
+	morale_damage = 5.0
+	collateral_damage = 5.0
+	war_exhaustion = 5.0
+	time = 500
+	icon = GFX_army_type_yuzu_werewolf
+	has_species = yes
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 500
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	potential_country = {
+		is_yuzu_empire = yes
+	}
+
+	potential = {
+		from = {
+			is_species_class = YUZUGIRL
+		}
+	}
+
+	prerequisites = { "tech_yuzu_werewolf" }
+
+	ai_weight = {
+		base = 500
+	}
+}

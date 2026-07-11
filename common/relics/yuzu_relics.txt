@@ -1,0 +1,119 @@
+@activation_cost = 3000
+@triumph_duration = 3600
+@triumph_duration_short = 1800
+@triumph_duration_veryshort = 900
+
+r_murasamemaru = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_murasamemaru"
+	sound = "relic_activation_blade_of_the_huntress"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = 1000
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0
+			NOT = {
+				any_system_within_border = {
+					any_fleet_in_system = {
+						NOR = {
+							is_ship_class = shipclass_mining_station
+							is_ship_class = shipclass_research_station
+							is_ship_class = shipclass_observation_station
+							is_ship_class = shipclass_military_station
+							AND = {
+								is_ship_class = shipclass_starbase
+								NOT = { is_ship_size = juggernaut }
+							}
+						}
+						controller = {
+							is_hostile = root
+						}
+					}
+				}
+			}
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			is_YUZU = yes
+		}
+		army_morale = 1.00
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = relic_murasamemaru_active
+		custom_tooltip = relic_triumph_cooldown_short
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration_short
+			}
+			country_event = { id = Yuzu_country_event.1 }
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}
+
+r_silver_key = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_relic_silver_key"
+	sound = "relic_activation_blade_of_the_huntress"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = 3000
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		#ship_windup_mult = -0.50
+		ship_jumpdrive_cooldown_mult = -0.50
+	}
+
+	score = 5000
+
+	active_effect = {
+		custom_tooltip = relic_silver_key_active
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			country_event = { id = Yuzu_country_event.2 }
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

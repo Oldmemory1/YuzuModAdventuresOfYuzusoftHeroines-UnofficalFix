@@ -1,0 +1,1231 @@
+# Capital Planet
+col_yuzu_city_capital = {
+	icon = GFX_colony_type_capital
+
+	potential = {
+		is_capital = yes
+		NAND = {
+			exists = owner
+			owner = {
+				OR = {
+					NOR = {
+						is_country_type = default
+						is_country_type = new_abyss_empire
+					}
+					is_gestalt = yes
+				}
+			}
+		}
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_amenities_add = 10
+		pop_government_ethic_attraction = 1
+		planet_jobs_produces_mult = 0.20
+		planet_resettlement_unemployed_destination_mult = 0.1
+	}
+
+	weight_modifier = {
+		base = 150000
+	}
+}
+
+# Capital Planet - Hive Mind
+col_yuzu_city_capital_hive = {
+	icon = GFX_colony_type_capital
+
+	potential = {
+		is_capital = yes
+		exists = owner
+		owner = {
+			is_country_type = default
+			is_hive_empire = yes
+		}
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_amenities_no_happiness_add = 10
+		planet_crime_no_happiness_add = -20
+		planet_jobs_produces_mult = 0.2
+		planet_resettlement_unemployed_destination_mult = 0.1
+	}
+
+	weight_modifier = {
+		base = 150000
+	}
+}
+
+# Capital Planet - Machine Empire
+col_yuzu_city_capital_machine = {
+	icon = GFX_colony_type_capital
+
+	potential = {
+		is_capital = yes
+		exists = owner
+		owner = {
+			is_country_type = default
+			is_machine_empire = yes
+		}
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_amenities_no_happiness_add = 10
+		planet_crime_no_happiness_add = -20
+		planet_jobs_produces_mult = 0.25
+		planet_resettlement_unemployed_destination_mult = 0.1
+	}
+
+	weight_modifier = {
+		base = 150000
+	}
+}
+
+col_yuzu_city_mix = {
+	icon = GFX_colony_type_urban
+
+	potential = {
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.25
+		trade_value_mult = 0.25
+	}
+
+	weight_modifier = {
+		base = 10
+	}
+}
+
+col_yuzu_city_industrial = {
+	icon = GFX_colony_type_industrial
+
+	potential = {
+		exists = owner
+		owner = { country_uses_consumer_goods = yes }
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_artisans_produces_mult = 0.10
+		planet_metallurgists_produces_mult = 0.10
+		planet_artisans_upkeep_mult = -0.10
+		planet_metallurgists_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_industrial
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_yuzu_city_industry value >= 3 }
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_yuzu_city_industry value >= 4 }
+		}
+		modifier = {
+			add = 10
+			AND = {
+				OR = {
+					has_building = building_factory_1
+					has_building = building_factory_2
+					has_building = building_factory_3
+				}
+				OR = {
+					has_building = building_foundry_1
+					has_building = building_foundry_2
+					has_building = building_foundry_3
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_yuzu_city_industry value = 0 }
+		}
+	}
+}
+
+col_yuzu_city_foundry = {
+	icon = GFX_colony_type_foundry
+
+	# used by AI to estimate what will happen when we change the designation
+	ai_resource_conversion = {
+		consumer_goods = 0
+		alloys = 2 
+		
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	ai_resource_current_conversion = {
+		alloys = 0.5
+		consumer_goods = -2
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	potential = {
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_foundry_custom
+
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.2
+		planet_metallurgists_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			owner = { has_monthly_income = { resource = alloys value < 100 } }
+		}
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_foundry
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_industry value >= 2 }
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_yuzu_city_industry value >= 3 }
+		}
+		modifier = {
+			add = 2
+			has_building = building_foundry_1
+		}
+		modifier = {
+			add = 4
+			has_building = building_foundry_2
+		}
+		modifier = {
+			factor = 0
+			num_buildings = { type = building_foundry_1 value = 0 }
+			num_buildings = { type = building_foundry_2 value = 0 }
+		}
+	}
+}
+
+col_yuzu_city_factory = {
+	icon = GFX_colony_type_factory
+
+	# used by AI to estimate what will happen when we change the designation
+	ai_resource_conversion = {
+		consumer_goods = 2
+		alloys = 0
+		
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	# Used by AI to estimate the current effects of this designation
+	ai_resource_current_conversion = {
+		consumer_goods = 0.5
+		alloys = -0.5
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	potential = {
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		exists = owner
+		owner = { country_uses_consumer_goods = yes }
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_factory_custom
+
+	planet_modifier = {
+		planet_artisans_produces_mult = 0.2
+		planet_artisans_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			owner = { has_monthly_income = { resource = consumer_goods value < 5 } }
+		}
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_factory
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_industry value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_industry value >= 3 }
+		}
+		modifier = {
+			add = 2
+			has_building = building_factory_1
+		}
+		modifier = {
+			add = 4
+			has_building = building_factory_2
+		}
+		modifier = {
+			factor = 0
+			num_buildings = { type = building_factory_1 value = 0 }
+			num_buildings = { type = building_factory_2 value = 0 }
+		}
+	}
+}
+
+col_yuzu_city_refinery = {
+	icon = GFX_colony_type_refinery
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_abyss_city_world
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_refiners_produces_mult = 0.1
+		planet_translucers_produces_mult = 0.1
+		planet_chemists_produces_mult = 0.1
+		planet_refiners_upkeep_mult = -0.1
+		planet_translucers_upkeep_mult = -0.1
+		planet_chemists_upkeep_mult = -0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_refiners_produces_mult = 0.05
+			planet_translucers_produces_mult = 0.05
+			planet_chemists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_refinery
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_refinery value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_refinery value >= 3 }
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_crystal_plant value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_crystal_plant value >= 3 }
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_chemical_plant value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_chemical_plant value >= 3 }
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+		}
+		modifier = {
+			add = 10
+			num_buildings = { type = building_refinery value >= 2 }
+			num_buildings = { type = building_crystal_plant value >= 2 }
+			num_buildings = { type = building_chemical_plant value >= 2 }
+			num_districts = { type = district_yuzu_city_refinery value >= 5 }
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_building = building_refinery
+				has_building = building_crystal_plant
+				has_building = building_chemical_plant
+				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+			}
+		}
+	}
+}
+
+col_yuzu_city_exotic_gases = {
+	icon = GFX_colony_type_yuzu_exotic_gases
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_abyss_city_world
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_exotic_gases_custom
+
+	planet_modifier = {
+		planet_refiners_produces_mult = 0.2
+		planet_refiners_upkeep_mult = -0.2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_refiners_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_exotic_gases
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_refinery value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_refinery value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_refinery value >= 4 }
+		}
+		modifier = {
+			add = 10
+			num_buildings = { type = building_refinery value >= 5 }
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+		}
+		
+		modifier = {
+			factor = 0
+			NOR = {
+				has_building = building_refinery
+				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+			}
+		}
+	}
+}
+
+col_yuzu_city_rare_crystals = {
+	icon = GFX_colony_type_yuzu_rare_crystals
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_abyss_city_world
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_rare_crystals_custom
+
+	planet_modifier = {
+		planet_translucers_produces_mult = 0.2
+		planet_translucers_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_translucers_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_exotic_gases
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_crystal_plant value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_crystal_plant value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_crystal_plant value >= 4 }
+		}
+		modifier = {
+			add = 10
+			num_buildings = { type = building_crystal_plant value >= 5 }
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+		}
+
+		modifier = {
+			factor = 0
+			NOR = {
+				has_building = building_crystal_plant
+				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+			}
+		}
+	}
+}
+
+col_yuzu_city_volatile_motes = {
+	icon = GFX_colony_type_yuzu_volatile_motes
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_abyss_city_world
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_volatile_motes_custom
+
+	planet_modifier = {
+		planet_chemists_produces_mult = 0.2
+		planet_chemists_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_chemists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_refinery
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_chemical_plant value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_chemical_plant value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_chemical_plant value >= 4 }
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_refinery value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_refinery value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_refinery value >= 4 }
+		}
+
+		modifier = {
+			factor = 0
+			NOR = {
+				has_building = building_chemical_plant
+				num_districts = { type = district_yuzu_city_refinery value >= 1 }
+			}
+		}
+	}
+}
+
+col_yuzu_city_rural = {
+	icon = GFX_colony_type_rural
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_sunset_city_world
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_technician_produces_mult = 0.2
+		planet_miners_produces_mult = 0.2
+		planet_farmers_produces_mult = 0.2
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_rural
+		}
+		modifier = {
+			add = 2
+			has_building = building_energy_grid
+		}
+		modifier = {
+			add = 3
+			has_building = building_energy_nexus
+		}
+		modifier = {
+			add = 2
+			has_building = building_mineral_purification_plant
+		}
+		modifier = {
+			add = 3
+			has_building = building_mineral_purification_hub
+		}
+		modifier = {
+			add = 2
+			has_building = building_food_processing_facility
+		}
+		modifier = {
+			add = 3
+			has_building = building_food_processing_center
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_dream value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_dream value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_dream value >= 4 }
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_energy_grid
+				has_building = building_energy_nexus
+			}
+			OR = {
+				has_building = building_mineral_purification_plant
+				has_building = building_mineral_purification_hub
+			}
+			OR = {
+				has_building = building_food_processing_facility
+				has_building = building_food_processing_center
+			}
+			num_districts = { type = district_yuzu_city_dream value >= 5 }
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_yuzu_city_refinery value = 0 }
+		}
+	}
+}
+
+col_yuzu_city_generator = {
+	icon = GFX_colony_type_generator
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_sunset_city_world
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_generator_custom
+
+	planet_modifier = {
+		planet_technician_produces_mult = 0.5
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_generator
+		}
+		modifier = {
+			add = 2
+			has_building = building_energy_grid
+		}
+		modifier = {
+			add = 3
+			has_building = building_energy_nexus
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_dream value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_dream value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_dream value >= 4 }
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_energy_grid
+				has_building = building_energy_nexus
+			}
+			num_districts = { type = district_yuzu_city_dream value >= 5 }
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_yuzu_city_refinery value = 0 }
+		}
+	}
+}
+
+col_yuzu_city_mining = {
+	icon = GFX_colony_type_mine
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_sunset_city_world
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_mining_custom
+
+	planet_modifier = {
+		planet_miners_produces_mult = 0.5
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_mining
+		}
+		modifier = {
+			add = 2
+			has_building = building_mineral_purification_plant
+		}
+		modifier = {
+			add = 3
+			has_building = building_mineral_purification_hub
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_dream value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_dream value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_dream value >= 4 }
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_mineral_purification_plant
+				has_building = building_mineral_purification_hub
+			}
+			num_districts = { type = district_yuzu_city_dream value >= 5 }
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_yuzu_city_refinery value = 0 }
+		}
+	}
+}
+
+col_yuzu_city_farming = {
+	icon = GFX_colony_type_farm
+
+	potential = {
+		exists = owner
+		uses_district_set = yuzu_sunset_city_world
+		is_special_colony_type = no
+	}
+
+	custom_tooltip = col_yuzu_city_farming_custom
+
+	planet_modifier = {
+		planet_farmers_produces_mult = 0.5
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_farming
+		}
+		modifier = {
+			add = 2
+			has_building = building_food_processing_facility
+		}
+		modifier = {
+			add = 3
+			has_building = building_food_processing_center
+		}
+		modifier = {
+			add = 2
+			num_districts = { type = district_yuzu_city_dream value >= 2 }
+		}
+		modifier = {
+			add = 3
+			num_districts = { type = district_yuzu_city_dream value >= 3 }
+		}
+		modifier = {
+			add = 4
+			num_districts = { type = district_yuzu_city_dream value >= 4 }
+		}
+		modifier = {
+			add = 10
+			OR = {
+				has_building = building_food_processing_facility
+				has_building = building_food_processing_center
+			}
+			num_districts = { type = district_yuzu_city_dream value >= 5 }
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_yuzu_city_refinery value = 0 }
+		}
+	}
+}
+
+col_yuzu_city_research = {
+	icon = GFX_colony_type_research
+
+	potential = {
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		is_special_colony_type = no
+	}
+
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.2
+		planet_researchers_upkeep_mult = -0.2
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			owner = { has_monthly_income = { resource = physics_research value < 200 } }
+			owner = { has_monthly_income = { resource = society_research value < 200 } }
+			owner = { has_monthly_income = { resource = engineering_research value < 200 } }
+		}
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_research
+		}
+		modifier = {
+			add = 1
+			num_buildings = { type = building_research_lab_1 value >= 2 }
+		}
+		modifier = {
+			add = 2
+			num_buildings = { type = building_research_lab_1 value >= 3 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_research_lab_1 value >= 4 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_research_lab_1 value >= 5 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_research_lab_2 value >= 1 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_research_lab_2 value >= 2 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_research_lab_3 value >= 1 }
+		}
+	}
+}
+
+# Fortress Planet
+col_yuzu_city_fortress = {
+	icon = GFX_colony_type_fortress
+
+	potential = {
+		exists = owner
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.20
+		army_defense_damage_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_fortress
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_stronghold value >= 2 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_stronghold value >= 3 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_stronghold value >= 4 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_fortress value >= 1 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_fortress value >= 2 }
+		}
+	}
+}
+
+col_yuzu_city_bureau = {
+	icon = GFX_colony_type_bureaucratic
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_spiritualist = no
+			is_yuzu_abyss_empire = no
+		}
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.20
+		planet_administrators_upkeep_mult = -0.20
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_bureau
+		}
+		modifier = {
+			add = 3
+			OR = {
+				num_buildings = { type = building_bureaucratic_1 value >= 2 }
+				num_districts = { type = district_yuzu_city_administrative value >= 2 }
+			}
+		}
+		modifier = {
+			add = 4
+			OR = {
+				num_buildings = { type = building_bureaucratic_1 value >= 3 }
+				num_districts = { type = district_yuzu_city_administrative value >= 3 }
+			}
+		}
+		modifier = {
+			add = 5
+			OR = {
+				num_buildings = { type = building_bureaucratic_1 value >= 4 }
+				num_districts = { type = district_yuzu_city_administrative value >= 4 }
+			}
+		}
+		modifier = {
+			add = 6
+			OR = {
+				num_buildings = { type = building_bureaucratic_1 value >= 5 }
+				num_districts = { type = district_yuzu_city_administrative value >= 5 }
+			}
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_bureaucratic_2 value >= 1 }
+		}
+		modifier = {
+			add = 6
+			num_buildings = { type = building_bureaucratic_2 value >= 2 }
+		}
+		modifier = {
+			add = 6
+			num_buildings = { type = building_bureaucratic_3 value >= 1 }
+		}
+		modifier = {
+			add = 7
+			num_buildings = { type = building_bureaucratic_3 value >= 2 }
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				num_buildings = { type = building_bureaucratic_1 value = 0 }
+				num_buildings = { type = building_bureaucratic_2 value = 0 }
+				num_buildings = { type = building_bureaucratic_3 value = 0 }
+				num_districts = { type = district_yuzu_city_administrative value = 0 }
+			}
+		}
+	}
+}
+
+col_yuzu_city_bureau_spiritualist = {
+	icon = GFX_colony_type_bureaucratic
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				is_spiritualist = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+		OR = {
+			uses_district_set = yuzu_abyss_city_world
+			uses_district_set = yuzu_sunset_city_world
+		}
+		is_special_colony_type = no
+	}
+
+	planet_modifier = {
+		planet_administrators_produces_mult = 0.20
+		planet_administrators_upkeep_mult = -0.20
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_city_bureau_spiritualist
+		}
+		modifier = {
+			add = 3
+			OR = {
+				num_buildings = { type = building_temple value >= 2 }
+				num_buildings = { type = building_sacrificial_temple_1 value >= 2 }
+				num_districts = { type = district_yuzu_city_religious value >= 2 }
+			}
+		}
+		modifier = {
+			add = 4
+			OR = {
+				num_buildings = { type = building_temple value >= 3 }
+				num_buildings = { type = building_sacrificial_temple_1 value >= 3 }
+				num_districts = { type = district_yuzu_city_religious value >= 3 }
+			}
+		}
+		modifier = {
+			add = 5
+			OR = {
+				num_buildings = { type = building_temple value >= 4 }
+				num_buildings = { type = building_sacrificial_temple_1 value >= 4 }
+				num_districts = { type = district_yuzu_city_religious value >= 4 }
+			}
+		}
+		modifier = {
+			add = 6
+			OR = {
+				num_buildings = { type = building_temple value >= 5 }
+				num_buildings = { type = building_sacrificial_temple_1 value >= 5 }
+				num_districts = { type = district_yuzu_city_religious value >= 5 }
+			}
+		}
+		modifier = {
+			add = 5
+			OR = {
+				num_buildings = { type = building_holotemple value >= 1 }
+				num_buildings = { type = building_sacrificial_temple_2 value >= 1 }
+			}
+		}
+		modifier = {
+			add = 6
+			OR = {
+				num_buildings = { type = building_holotemple value >= 2 }
+				num_buildings = { type = building_sacrificial_temple_2 value >= 2 }
+			}
+		}
+		modifier = {
+			add = 6
+			OR = {
+				num_buildings = { type = building_sacred_nexus value >= 1 }
+				num_buildings = { type = building_sacrificial_temple_3 value >= 1 }
+			}
+		}
+		modifier = {
+			add = 7
+			OR = {
+				num_buildings = { type = building_sacred_nexus value >= 2 }
+				num_buildings = { type = building_sacrificial_temple_3 value >= 2 }
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				num_buildings = { type = building_temple value = 0 }
+				num_buildings = { type = building_sacrificial_temple_1 value = 0 }
+				num_buildings = { type = building_holotemple value = 0 }
+				num_buildings = { type = building_sacrificial_temple_2 value = 0 }
+				num_buildings = { type = building_sacred_nexus value = 0 }
+				num_buildings = { type = building_sacrificial_temple_3 value = 0 }
+				num_districts = { type = district_yuzu_city_religious value = 0 }
+			}
+		}
+	}
+}

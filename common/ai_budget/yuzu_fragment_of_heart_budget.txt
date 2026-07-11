@@ -1,0 +1,19 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+#fragment_of_heart_expenditure_edicts = {
+#	resource = fragment_of_heart
+#	type = expenditure
+#	category = edicts
+
+#	potential = {
+#		is_YUZU = yes
+#	}
+
+#	fraction = {
+#		weight = 0.5
+#	}
+#}

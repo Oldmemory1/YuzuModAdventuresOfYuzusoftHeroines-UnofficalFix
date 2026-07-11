@@ -1,0 +1,67 @@
+guardian_yuzu_ceremony_monster = {
+	scaled_difficulty_bonuses = 0.5	# scales to setting
+	is_space_critter = yes
+	government = no
+	blocks_piracy = yes
+	destroys_starbases = yes
+	observable = no
+	ai = {
+		enabled = no
+	}
+	faction = {
+		hostile = yes
+		needs_border_access = no
+		generate_borders = no
+		needs_colony = no
+	}
+	modules = {
+		exclusive_diplomacy_module = { contact_rule = on_action_only } # Nothing is allowed, but we need this for relationships.
+		basic_technology_module = {}
+		standard_event_module = {} # For bouncing events
+	}
+}
+
+new_abyss_empire = {
+	sub_title = "COUNTRY_BROKEN_ABYSS_EMPIRE"
+	sub_title_desc = "COUNTRY_BROKEN_ABYSS_EMPIRE_DESC"
+	attack_unarmed_orbital_stations = yes
+	scaled_difficulty_bonuses = 2.0	# scales to setting
+	end_game_crisis = yes
+	destroys_starbases = yes
+	needs_survey = no
+	has_complete_sensor = yes
+	can_planets_be_attacked = yes
+	has_capital = no
+	enforces_borders = no
+#	minimalist_contacts_list_profile = yes
+	home_system = new_abyss
+#	custom_starbase = starbase_fe_outpost
+	observable = yes
+	uses_origins = no
+	government = no
+	ai = {
+		enabled = yes
+		colonizer = yes
+		construction = yes
+		modules = {
+			berserk_military_minister_module
+			invaders_interior_minister_module
+		}
+	}
+	faction = {
+		needs_colony = no
+		hostile = yes
+		needs_border_access = no
+	}
+
+	custom_diplomacy = yes
+
+	modules = {
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
+		exclusive_diplomacy_module = {
+			contact_rule = always
+		}
+	}
+}

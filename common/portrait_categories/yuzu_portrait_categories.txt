@@ -1,0 +1,18 @@
+# Categories of portrait sets used in empire design view.
+# Portrait sets are listed in portrait_sets database.
+
+YUZUGIRL = {
+	name = YUZUGIRL
+
+	sets = {
+		YUZUGIRL
+	}
+}
+
+ABYSS = {
+	name = ABYSS
+
+	sets = {
+		ABYSS
+	}
+}

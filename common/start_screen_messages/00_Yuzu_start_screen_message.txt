@@ -1,0 +1,107 @@
+part = {
+	location = 0
+	localization = "START_SCREEN_YUZU_WORLD"
+
+	trigger = {
+		has_origin = origin_yuzu_world
+	}
+}
+
+
+##### 原版起源 #####
+
+# Hegemon
+part = {
+	location = 0
+	localization = "START_SCREEN_HEGEMON_YUZU"
+
+	trigger = {
+		has_origin = origin_hegemon
+		is_yuzu_empire = yes
+	}
+}
+
+# Doomsday
+part = {
+	location = 0
+	localization = "START_SCREEN_DOOMSDAY_YUZU"
+
+	trigger = {
+		has_origin = origin_doomsday
+		is_yuzu_empire = yes
+	}
+}
+
+# Lost Colony
+part = {
+	location = 0
+	localization = "START_SCREEN_LOST_COLONY_YUZU"
+
+	trigger = {
+		has_origin = origin_lost_colony
+		is_yuzu_empire = yes
+	}
+}
+
+# Star Slingshot
+part = {
+	location = 0
+	localization = "START_SCREEN_STAR_SLINGSHOT_YUZU"
+
+	trigger = {
+		has_origin = origin_star_slingshot
+		is_yuzu_empire = yes
+	}
+}
+
+# Shroudwalker Apprentice
+part = {
+	location = 0
+	localization = "START_SCREEN_SHROUDWALKER_APPRENTICE_YUZU"
+
+	trigger = {
+		has_origin = origin_shroudwalker_apprentice
+		NOR = {
+			has_government = gov_megachurch
+			has_government = gov_sacrificial_megachurch
+		}
+		is_yuzu_empire = yes
+	}
+}
+
+# Shroudwalker Apprentice - Corporate (Megachurch) variant
+part = {
+	location = 0
+	localization = "START_SCREEN_SHROUDWALKER_APPRENTICE_CORPORATE_YUZU"
+
+	trigger = {
+		has_origin = origin_shroudwalker_apprentice
+		OR = {
+			has_government = gov_megachurch
+			has_government = gov_sacrificial_megachurch
+		}
+		is_yuzu_empire = yes
+	}
+}
+
+# Imperial Vassal
+part = {
+	location = 0
+	localization = "START_SCREEN_IMPERIAL_VASSAL_YUZU"
+
+	trigger = {
+		has_origin = origin_imperial_vassal
+		is_yuzu_empire = yes
+	}
+}
+
+# Here Be Dragons - normal
+part = {
+	location = 0
+	localization = "START_SCREEN_HERE_BE_DRAGONS_YUZU"
+
+	trigger = {
+		has_origin = origin_here_be_dragons
+		is_yuzu_empire = yes
+	}
+}

@@ -1,0 +1,2115 @@
+namespace = Yuzu_abyss_crisis_event
+
+# on_five_year_pulse
+# 开始判定
+event = {
+	id = Yuzu_abyss_crisis_event.1000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_crisis_happened
+		NOR = {
+			has_global_flag = galactic_crisis_recently_fired
+			has_global_flag = yuzu_abyss_descended_happened
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = { is_country_type = global_event } # global_event country is always around
+			random_list = {
+				5 = {
+					modifier = {
+						factor = 0
+						NOT = {
+							any_country = {
+								is_country_type = default
+								has_technology = tech_yuzu_all_in_one_theory
+							}
+						}
+					}
+					modifier = {
+						factor = 2
+						any_country = {
+							is_country_type = default
+							OR = {
+								has_technology = tech_yuzu_l_3
+								has_technology = tech_yuzu_lance_3
+								has_technology = tech_yuzu_beam_3
+								has_technology = tech_sensors_yuzu_2
+								has_technology = tech_reactor_yuzu
+								has_technology = tech_yuzu_armor_2
+								has_technology = tech_yuzu_shield_2
+							}
+						}
+					}
+					modifier = {
+						factor = 2
+						any_country = {
+							is_country_type = default
+							has_technology = tech_yuzu_star_eater
+						}
+					}
+					modifier = {
+						factor = 2
+						any_galaxy_planet = {
+							OR = {
+								has_modifier = yuzu_abyss_infiltration
+								is_planet_class = pc_yuzu_abyss_city
+							}
+						}
+					}
+					modifier = {
+						factor = 0.5
+						end_game_years_passed < 35
+					}
+					modifier = {
+						factor = 2
+						end_game_years_passed >= 50
+					}
+					modifier = {
+						factor = 2
+						end_game_years_passed >= 70
+					}
+					modifier = {
+						factor = 3
+						end_game_years_passed >= 85
+					}
+					modifier = {
+						factor = 4
+						end_game_years_passed >= 100
+					}
+					modifier = {
+						factor = 4
+						OR = {
+							has_global_flag = prethoryn_invasion_defeated
+							has_global_flag = extradimensional_invasion_defeated
+							has_global_flag = ai_invasion_defeated
+						}
+					}
+					country_event = { id = Yuzu_abyss_crisis_event.1 days = 1200 random = 800 }
+		            set_global_flag = yuzu_abyss_descended_happened
+				}
+				
+				### Nothing
+				200 = {}
+			}
+		}
+	}
+}
+
+# 开始
+country_event = {
+	id = Yuzu_abyss_crisis_event.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = yuzu_abyss_descended_pre
+		#observer_event = { id = observer.27 }
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = { id = Yuzu_abyss_crisis_event.2 }
+		}
+	}
+}
+
+# 预警
+country_event = {
+	id = Yuzu_abyss_crisis_event.2
+	title = "Yuzu_abyss_crisis_event.2.name"
+	desc = "Yuzu_abyss_crisis_event.2.desc"
+	picture = GFX_evt_physics_research
+	show_sound = event_sensor_ping
+
+	is_triggered_only = yes
+
+	option = {
+		name = DISCONCERTING
+		begin_event_chain = {
+			event_chain = "yuzu_abyss_coming_chain"
+			target = ROOT
+		}
+	}
+}
+
+# 确定位置
+country_event = {
+	id = Yuzu_abyss_crisis_event.3
+	hide_window = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	trigger = {
+		is_country_type = global_event
+		has_global_flag = yuzu_abyss_descended_pre
+	}
+
+	immediate = {
+		remove_global_flag = yuzu_abyss_descended_pre
+		set_global_flag = yuzu_abyss_descended_vanguard
+		set_global_flag = yuzu_abyss_descended_ongoing
+		set_yuzu_crisis_stage_1 = yes
+		random_system = {
+			limit = {
+				OR = {
+					# No owner or neighbors
+					NOT = {
+						exists = space_owner
+					}
+					# Owned but not by fallen empire
+					AND = {
+						exists = space_owner
+						NOT = {
+							any_system_planet = {
+								has_planet_flag = fallen_empire_world
+							}
+						}
+					}
+				}
+				NOR = {
+					any_system_planet = {
+						exists = owner
+						owner = { is_YUZU = yes }
+					}
+					is_star_class = sc_black_hole
+				}
+				NOT = { has_star_flag = old_abyss }
+			}
+			set_star_flag = abyss_invasion_target_1
+			save_global_event_target_as = abyss_invasion_system
+		}
+		if = {
+			limit = { NOT = { any_system = { has_star_flag = abyss_invasion_target_1 } } }
+			random_system = {
+				limit = {
+					OR = {
+						# No owner or neighbors
+						NOT = {
+							exists = space_owner
+						}
+						# Owned but not by fallen empire
+						AND = {
+							exists = space_owner
+							NOT = {
+								any_system_planet = {
+									has_planet_flag = fallen_empire_world
+								}
+							}
+						}
+					}
+					NOT = { has_star_flag = old_abyss }
+				}
+				set_star_flag = abyss_invasion_target_1
+				save_global_event_target_as = abyss_invasion_system
+			}
+		}
+		#observer_event = { id = observer.28 }
+		country_event = { id = Yuzu_abyss_crisis_event.4 }
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = Yuzu_abyss_crisis_event.5 days = 3 }
+		}
+	}
+}
+
+# 搜查队入场
+country_event = {
+	id = Yuzu_abyss_crisis_event.4
+	hide_window = yes
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		#observer_event = { id = observer.30 }
+		if = {
+			limit = {
+				NOT = { exists = event_target:new_abyss_species }
+			}
+			create_species = {
+				name = "NAME_Abyss"
+				class = ABYSS
+				portrait = "abyss_01"
+				traits = {
+					ideal_planet_class = pc_continental
+					trait = trait_abyss
+					trait = trait_extremely_adaptive
+					trait = trait_very_strong
+					trait = trait_resilient
+					trait = trait_intelligent
+					trait = trait_traditional
+				}
+				immortal = yes
+				#homeworld = this
+				effect = { save_event_target_as = new_abyss_species }
+			}
+			create_country = {
+				name = "NAME_New_Abyss_Vanguard"
+				adjective = "NAME_New_Abyss_Vanguard"
+				type = new_abyss_empire
+				#ignore_initial_colony_error = yes
+				species = event_target:new_abyss_species
+				name_list = "ABYSS1"
+				flag = {
+					icon = {
+						category = "domination"
+						file = "domination_15.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "horizontal.dds"
+					}
+					colors={
+						"dark_purple"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					set_graphical_culture = fallen_yuzu_abyss_empire_01
+					save_event_target_as = new_abyss_country
+					set_country_flag = new_abyss_empire_vanguard
+					add_modifier = { modifier = yuzu_cloaking_detection_modifier }
+				}
+			}
+		}
+		random_system = {
+			limit = { has_star_flag = abyss_invasion_target_1 }
+			if = {
+				limit = {
+					OR = {
+						any_system_planet = {
+							exists = owner
+							owner = { is_YUZU = yes }
+						}
+						is_star_class = sc_black_hole
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							is_country_type = default
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+					}
+					country_event = {
+						id = Yuzu_abyss_crisis_event.6
+					}
+				}
+			}
+			else = {
+				destroy_star_system = yes
+				every_country = {
+					limit = {
+						OR = {
+							is_country_type = default
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+					}
+					country_event = {
+						id = Yuzu_abyss_crisis_event.7
+					}
+				}
+			}
+
+			random_system_planet = {
+				event_target:new_abyss_country = {
+					create_new_abyss_fleet_4 = yes
+					while = {
+						count = 6
+						create_new_abyss_fleet_1 = yes
+					}
+					while = {
+						count = 4
+						create_new_abyss_constructor = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+# 搜查队入场通讯
+country_event = {
+	id = Yuzu_abyss_crisis_event.5
+	title = "TRANSMISSION"
+	desc = "Yuzu_abyss_crisis_event.5.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.5.a
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.5.b
+	}
+}
+
+# 搜查队到达1
+country_event = {
+	id = Yuzu_abyss_crisis_event.6
+	title = "Yuzu_abyss_crisis_event.6.name"
+	desc = "Yuzu_abyss_crisis_event.6.desc"
+	picture = GFX_evt_wormhole
+	show_sound = event_ex_started
+	location = event_target:abyss_invasion_system
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			add_opinion_modifier = { who = root modifier = opinion_yuzu_abyss_descended_1 }
+		}
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.6.a
+		end_event_chain = "yuzu_abyss_coming_chain"
+		begin_event_chain = {
+			event_chain = "yuzu_abyss_descended_chain"
+			target = ROOT
+		}
+		create_point_of_interest = {
+			id = yuzu_abyss_descended_poi.1
+			name = "yuzu_abyss_descended_1_poi"
+			desc = "yuzu_abyss_descended_1_poi_desc"
+			event_chain = "yuzu_abyss_descended_chain"
+			category = abyss_vanguard_fleet
+			location = event_target:Abyss_Vanguard_Fleet
+		}
+	}
+}
+
+# 搜查队到达2
+country_event = {
+	id = Yuzu_abyss_crisis_event.7
+	title = "Yuzu_abyss_crisis_event.7.name"
+	desc = "Yuzu_abyss_crisis_event.7.desc"
+	picture = GFX_evt_supernova
+	show_sound = event_super_explosion
+	location = event_target:abyss_invasion_system
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			add_opinion_modifier = { who = root modifier = opinion_yuzu_abyss_descended_1 }
+		}
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.7.a
+		end_event_chain = "yuzu_abyss_coming_chain"
+		begin_event_chain = {
+			event_chain = "yuzu_abyss_descended_chain"
+			target = ROOT
+		}
+		create_point_of_interest = {
+			id = yuzu_abyss_descended_poi.1
+			name = "yuzu_abyss_descended_1_poi"
+			desc = "yuzu_abyss_descended_1_poi_desc"
+			event_chain = "yuzu_abyss_descended_chain"
+			category = abyss_vanguard_fleet
+			location = event_target:Abyss_Vanguard_Fleet
+		}
+	}
+}
+
+# 教廷降临判定
+country_event = {
+	id = Yuzu_abyss_crisis_event.8
+	hide_window = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 36
+		modifier = {
+			factor = 2
+			has_global_flag = abyss_vanguard_defeated
+		}
+	}
+
+	trigger = {
+		is_country_type = global_event
+		has_global_flag = yuzu_abyss_descended_vanguard
+	}
+
+	immediate = {
+		remove_global_flag = yuzu_abyss_descended_vanguard
+		set_global_flag = yuzu_abyss_descended
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = Yuzu_abyss_crisis_event.9 }
+		}
+		country_event = { id = Yuzu_abyss_crisis_event.10 days = 300 random = 200 }
+	}
+}
+
+# 教廷降临预警
+country_event = {
+	id = Yuzu_abyss_crisis_event.9
+	title = "Yuzu_abyss_crisis_event.9.name"
+	desc = "Yuzu_abyss_crisis_event.9.desc"
+	picture = GFX_evt_physics_research
+	show_sound = event_sensor_ping
+	location = event_target:abyss_invasion_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.9.a
+		trigger = {
+			NOT = { has_global_flag = abyss_vanguard_defeated }
+		}
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.9.b
+		trigger = {
+			has_global_flag = abyss_vanguard_defeated
+		}
+	}
+}
+
+# 生成教廷星系 & 生成入场通讯 & 触发失落帝国事件
+country_event = {
+	id = Yuzu_abyss_crisis_event.10
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_system = {
+			limit = {
+				has_star_flag = abyss_invasion_target_1
+			}
+			spawn_system = {
+				min_distance >= 10
+				max_distance <= 15
+				initializer = "yuzu_new_abyss_system"
+			}
+			if = {
+				limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+				add_hyperlane = {
+					from = this
+					to = last_created_system
+				}
+			}
+			else = {
+				add_extra_hyperlane_to_spawned_system_effect = yes
+			}
+		}
+		country_event = { id = Yuzu_abyss_crisis_event.11 }
+
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = { id = Yuzu_abyss_crisis_event.12 }
+			if = {
+				limit = {
+					has_global_flag = abyss_vanguard_defeated
+				}
+				country_event = { id = Yuzu_abyss_crisis_event.13 days = 3 }
+			}
+			else = {
+				country_event = { id = Yuzu_abyss_crisis_event.14 days = 3 }
+			}
+		}
+
+		every_country = {
+			limit = {
+				is_fallen_empire = yes
+			}
+			if = {
+			    limit = {
+				    OR = {
+					    has_ethic = ethic_fanatic_materialist
+					    has_ethic = ethic_fanatic_xenophile
+				    }
+			    }
+				country_event = { id = Yuzu_abyss_crisis_event.200 days = 100 random = 200 }
+		    }
+			else_if = {
+				limit = {
+				    has_ethic = ethic_fanatic_spiritualist
+			    }
+				country_event = { id = Yuzu_abyss_crisis_event.200 days = 200 random = 200 }
+			}
+			else_if = {
+				limit = {
+				    has_ethic = ethic_fanatic_xenophobe
+			    }
+				country_event = { id = Yuzu_abyss_crisis_event.200 days = 300 random = 200 }
+			}
+		}
+	}
+}
+
+# 生成教廷
+country_event = {
+	id = Yuzu_abyss_crisis_event.11
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_yuzu_crisis_stage_2 = yes
+		random_system = {
+			limit = {
+				has_star_flag = new_abyss
+			}
+			random_system_planet = {
+				limit = {
+					has_planet_flag = new_abyss_capital_planet
+				}
+				save_global_event_target_as = new_abyss_capital_planet
+				if = {
+					limit = {
+						NOT = { exists = event_target:new_abyss_species }
+					}
+					create_species = {
+						name = "NAME_Abyss"
+						class = ABYSS
+						portrait = "abyss_01"
+						traits = {
+							ideal_planet_class = pc_continental
+							trait = trait_abyss
+							trait = trait_extremely_adaptive
+							trait = trait_very_strong
+							trait = trait_resilient
+							trait = trait_intelligent
+							trait = trait_traditional
+						}
+						immortal = yes
+						homeworld = this
+						effect = { save_event_target_as = new_abyss_species }
+					}
+				}
+				create_country = {
+					name = "NAME_New_Abyss"
+					adjective = "NAME_New_Abyss"
+					type = new_abyss_empire
+					#ignore_initial_colony_error = yes
+					species = event_target:new_abyss_species
+					name_list = "ABYSS1"
+					flag = {
+						icon = {
+							category = "domination"
+							file = "domination_15.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "horizontal.dds"
+						}
+						colors={
+							"dark_purple"
+							"black"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = fallen_yuzu_abyss_empire_01
+						save_event_target_as = new_abyss_country
+						set_country_flag = new_abyss_empire
+						give_technology = { message = no tech = tech_enigmatic_encoder }
+						give_technology = { message = no tech = tech_enigmatic_decoder }
+						add_modifier = { modifier = yuzu_cloaking_detection_modifier }
+					}
+				}
+				solar_system = {
+					create_starbase = {
+						size = starbase_citadel
+						module = gun_battery
+						module = gun_battery
+						module = missile_battery
+						module = missile_battery
+						module = hangar_bay
+						module = hangar_bay
+						building = target_uplink_computer
+						building = communications_jammer
+						building = disruption_field
+						building = command_center
+						owner = event_target:new_abyss_country
+						effect = {
+							while = {
+								count = 24
+								create_new_abyss_platform = yes
+							}
+							while = {
+								count = 17
+								create_new_abyss_ion_cannon = yes
+							}
+						}
+					}
+					random_ship_in_system = {
+						limit = {
+							is_ship_class = shipclass_starbase
+							NOT = { is_ship_size = juggernaut }
+						}
+						get_galaxy_setup_value = {
+							setting = crisis_strength_scale
+							which = yuzu_crisis_strength_scale
+						}
+						add_modifier = {
+							modifier = yuzu_abyss_starbase_modifier
+							multiplier = yuzu_crisis_strength_scale
+						}
+					}
+				}
+				event_target:new_abyss_country = {
+					while = {
+						count = 12
+						create_new_abyss_fleet_1 = yes
+					}
+					while = {
+						count = 4
+						create_new_abyss_fleet_2 = yes
+					}
+					while = {
+						count = 6
+						create_new_abyss_constructor = yes
+					}
+				}
+				set_owner = event_target:new_abyss_country
+				set_capital = yes
+				while = {
+					count = 100
+					create_pop = {
+						species = event_target:new_abyss_species
+					}
+				}
+				add_building = building_system_capital
+				while = {
+					count = 6
+					add_building = building_yuzu_fe_stronghold
+				}
+				add_building = building_yuzu_master_archive
+				add_building = building_yuzu_class_4_singularity
+				add_building = building_yuzu_fe_dome
+				add_building = building_yuzu_fe_dome
+				add_building = building_yuzu_fe_dome
+				while = {
+					count = 50
+					add_district = district_yuzu_city_religious
+				}
+				planet_event = { id = Yuzu_abyss_crisis_event.104 days = 5 }
+		        planet_event = { id = Yuzu_abyss_crisis_event.105 days = 5 }
+			}
+		}
+		random_country = {
+			limit = {
+				has_country_flag = new_abyss_empire_vanguard
+			}
+			every_owned_fleet = {
+				leader = {
+					#save_event_target_as = new_abyss_vanguard_leader
+					set_owner = event_target:new_abyss_country
+				}
+				set_owner = event_target:new_abyss_country
+				#assign_leader = event_target:new_abyss_vanguard_leader
+			}
+		}
+		event_target:new_abyss_country = {
+			country_event = { id = Yuzu_abyss_crisis_event.106 days = 300 random = 60 }
+		}
+		if = {
+			limit = { has_galactic_custodian = yes }
+			random_playable_country = {
+				limit = { is_galactic_custodian = yes }
+				country_event = { id = custodian.50 days = 30 }
+			}
+		}
+		if = {
+			limit = { has_galactic_emperor = yes }
+			random_playable_country = {
+				limit = { is_galactic_emperor = yes }
+				country_event = { id = emperor.90 days = 30 }
+			}
+		}
+	}
+}
+
+# 教廷入场报告
+country_event = {
+	id = Yuzu_abyss_crisis_event.12
+	title = "Yuzu_abyss_crisis_event.12.name"
+	desc = "Yuzu_abyss_crisis_event.12.desc"
+	picture = GFX_evt_physics_research
+	show_sound = event_ex_started
+	location = event_target:new_abyss_system
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+			}
+			add_opinion_modifier = { who = root modifier = opinion_yuzu_abyss_descended_2 }
+		}
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.12.a
+		create_point_of_interest = {
+			id = yuzu_abyss_descended_poi.2
+			name = "yuzu_abyss_descended_2_poi"
+			desc = "yuzu_abyss_descended_2_poi_desc"
+			event_chain = "yuzu_abyss_descended_chain"
+			category = abyss_capital
+			location = event_target:new_abyss_capital_planet
+		}
+	}
+}
+
+# 教廷入场通讯（搜查队全灭）
+country_event = {
+	id = Yuzu_abyss_crisis_event.13
+	title = "TRANSMISSION"
+	desc = "Yuzu_abyss_crisis_event.13.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.13.a
+	}
+}
+
+# 教廷入场通讯（搜查队存活）
+country_event = {
+	id = Yuzu_abyss_crisis_event.14
+	title = "TRANSMISSION"
+	desc = "Yuzu_abyss_crisis_event.14.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.14.a
+	}
+}
+
+# 搜查队全灭
+country_event = {
+	id = Yuzu_abyss_crisis_event.96
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = new_abyss_empire_vanguard
+		NOR = {
+			has_global_flag = abyss_vanguard_defeated
+			any_country = {
+				has_country_flag = new_abyss_empire
+			}
+	    }
+	}
+
+	immediate = {
+		set_global_flag = abyss_vanguard_defeated
+		if = {
+			limit = {
+				has_global_flag = yuzu_abyss_descended
+			}
+			every_country = {
+				limit = { is_country_type = default }
+				country_event = { id = Yuzu_abyss_crisis_event.97 }
+			}
+		}
+		else = {
+			every_country = {
+				limit = { is_country_type = default }
+				country_event = { id = Yuzu_abyss_crisis_event.98 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.97
+	title = "TRANSMISSION"
+	desc = "Yuzu_abyss_crisis_event.97.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.97.a
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.97.b
+		trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.98
+	title = "TRANSMISSION"
+	desc = "Yuzu_abyss_crisis_event.98.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.98.a
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.98.b
+		trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+}
+
+# 搜查队通讯界面
+country_event = {
+	id = Yuzu_abyss_crisis_event.99
+	title = "TRANSMISSION"
+
+	desc = {
+		text = Yuzu_abyss_crisis_event.99.desc_01
+	}
+	desc = {
+		text = Yuzu_abyss_crisis_event.99.desc_02
+	}
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			is_country_type = new_abyss_empire
+			has_country_flag = new_abyss_empire_vanguard
+		}
+		NOT = { has_country_flag = yuzu_abyss_empire_vanguard_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = yuzu_abyss_empire_vanguard_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = yuzu_abyss_empire_vanguard_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.99.a
+		response_text = Yuzu_abyss_crisis_event.99.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.99.b
+		response_text = Yuzu_abyss_crisis_event.99.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.99.c
+		trigger = {
+			any_system_within_border = {
+				has_star_flag = old_abyss
+			}
+		}
+		response_text = Yuzu_abyss_crisis_event.99.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.99.d
+		trigger = {
+			NOT = {
+				any_system_within_border = {
+					has_star_flag = old_abyss
+				}
+			}
+		}
+		response_text = Yuzu_abyss_crisis_event.99.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.99.e
+		response_text = Yuzu_abyss_crisis_event.99.e.response
+		default_hide_option = yes
+	}
+}
+
+# 通讯界面
+country_event = {
+	id = Yuzu_abyss_crisis_event.100
+	title = "TRANSMISSION"a
+
+	desc = {
+		text = Yuzu_abyss_crisis_event.100.desc_01
+	}
+	desc = {
+		text = Yuzu_abyss_crisis_event.100.desc_02
+	}
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			is_country_type = new_abyss_empire
+			has_country_flag = new_abyss_empire
+		}
+		NOT = { has_country_flag = yuzu_abyss_empire_diplomacy_engaged }
+	}
+
+	immediate = {
+		set_country_flag = yuzu_abyss_empire_diplomacy_engaged
+	}
+
+	after = {
+		hidden_effect = {
+			remove_country_flag = yuzu_abyss_empire_diplomacy_engaged
+		}
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.100.a
+		response_text = Yuzu_abyss_crisis_event.100.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.100.b
+		response_text = Yuzu_abyss_crisis_event.100.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.100.c
+		response_text = Yuzu_abyss_crisis_event.100.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.100.d
+		trigger = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		response_text = Yuzu_abyss_crisis_event.100.d.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.100.e
+		response_text = Yuzu_abyss_crisis_event.100.e.response
+		default_hide_option = yes
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.100.f
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophobe
+			    has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		response_text = Yuzu_abyss_crisis_event.100.f.response
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.100.g
+		trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		response_text = Yuzu_abyss_crisis_event.100.g.response
+	}
+}
+
+# 添加防御平台 & 加buff
+ship_event = {
+	id = Yuzu_abyss_crisis_event.101
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		owner = {
+			is_country_type = new_abyss_empire
+		}
+	}
+
+	immediate = {
+		solar_system = {
+			system_event = {
+				id = Yuzu_abyss_crisis_event.102 days = 1
+			}
+		}
+	}
+}
+
+system_event = {
+	id = Yuzu_abyss_crisis_event.102
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = starbase
+		starbase = {
+			owner = { is_country_type = new_abyss_empire }
+		}
+	}
+	
+	immediate = {
+		random_ship_in_system = {
+			limit = {
+				is_ship_class = shipclass_starbase
+				NOT = { is_ship_size = juggernaut }
+			}
+			get_galaxy_setup_value = {
+				setting = crisis_strength_scale
+				which = yuzu_crisis_strength_scale
+			}
+			add_modifier = {
+				modifier = yuzu_abyss_starbase_modifier
+				multiplier = yuzu_crisis_strength_scale
+			}
+		}
+		starbase = {
+			while = {
+				count = 4
+				create_new_abyss_platform = yes
+			}
+			create_new_abyss_ion_cannon = yes
+		}
+	}
+}
+
+# 增援
+planet_event = {
+	id = Yuzu_abyss_crisis_event.103
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = new_abyss_capital_planet
+		owner = { is_country_type = new_abyss_empire }
+	}
+
+	immediate = {
+		# If at fleet cap, check again later
+		if = {
+			limit = {
+				owner = { num_ships > 2000 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 300 }
+		}
+		# If being bombarded, check again later
+		else_if = {
+			limit = { 
+				OR = {
+					has_orbital_bombardment = yes 
+					has_ground_combat = yes
+				}
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 300 }
+		}
+		else = {
+			owner = {
+				create_new_abyss_fleet_2 = yes
+				while = {
+					count = 2
+					create_new_abyss_constructor = yes
+				}
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.104 }
+		}
+	}
+}
+
+# 增援时间判定
+planet_event = {
+	id = Yuzu_abyss_crisis_event.104
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = new_abyss_capital_planet
+		owner = { is_country_type = new_abyss_empire }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { num_ships > 1000 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 2000 random = 400 }
+		}
+		else_if = {
+			limit = {
+				owner = { num_ships > 750 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 1750 random = 350 }
+		}
+		else_if = {
+			limit = {
+				owner = { num_ships > 500 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 1500 random = 300 }
+		}
+		else_if = {
+			limit = {
+				owner = { num_ships > 400 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 1250 random = 250 }
+		}
+		else_if = {
+			limit = {
+				owner = { num_ships > 300 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 1000 random = 200 }
+		}
+		else_if = {
+			limit = {
+				owner = { num_ships > 200 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 750 random = 150 }
+		}
+		else = {
+			planet_event = { id = Yuzu_abyss_crisis_event.103 days = 500 random = 100 }
+		}
+	}
+}
+
+# 生成神罚军（处于劣势）
+planet_event = {
+	id = Yuzu_abyss_crisis_event.105
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_planet_flag = new_abyss_capital_planet
+		NOT = { has_global_flag = Presiding_Judge_Fleet_Created }
+		owner = { is_country_type = new_abyss_empire }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { num_ships > 150 }
+			}
+			planet_event = { id = Yuzu_abyss_crisis_event.105 days = 300 random = 50 }
+		}
+		# If being bombarded, check again later
+#		else_if = {
+#			limit = { 
+#				OR = {
+#					has_orbital_bombardment = yes 
+#					has_ground_combat = yes
+#				}
+#			}
+#			planet_event = { id = Yuzu_abyss_crisis_event.105 days = 300 random = 50 }
+#		}
+		else = {
+			#owner = { save_event_target_as = new_abyss_country }
+			create_presiding_judge_fleet_and_constructors = yes
+		}
+	}
+}
+
+# 生成巡逻队 & 检测首都
+country_event = {
+	id = Yuzu_abyss_crisis_event.106
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = new_abyss_empire
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				num_ships <= 2000
+			}
+			random_system_within_border = {
+				limit = {
+					any_fleet_in_system = {
+						is_ship_class = shipclass_starbase
+						NOT = { is_ship_size = juggernaut }
+						owner = {
+							is_country_type = new_abyss_empire
+						}
+					}
+					NOT = {
+						any_fleet_in_system = {
+							owner = {
+								is_hostile = root
+							}
+						}
+					}
+				}
+				random_system_planet = {
+					event_target:new_abyss_country = {
+						create_new_abyss_fleet_1 = yes
+						create_new_abyss_constructor = yes
+					}
+				}
+			}
+		}
+		#检测首都
+		if = {
+			limit = {
+				NOR = {
+					has_global_flag = abyss_capital_lost
+					event_target:new_abyss_capital_planet = {
+						exists = owner
+						owner = { is_same_value = root }
+					}
+				}
+			}
+			set_global_flag = abyss_capital_lost
+			every_country = {
+				limit = {
+					is_country_type = default
+				}
+				country_event = { id = Yuzu_abyss_crisis_event.108 }
+			}
+#			if = {
+#				limit = {
+#					NOT = { has_global_flag = Presiding_Judge_Fleet_Created }
+#				}
+#				random_system_within_border = {
+#					random_system_planet = {
+#						event_target:new_abyss_country = {
+#							create_new_abyss_fleet_3 = yes
+#							while = {
+#								count = 3
+#								create_new_abyss_constructor = yes
+#							}
+#						}
+#					}
+#				}
+#			}
+		}
+		country_event = { id = Yuzu_abyss_crisis_event.106 days = 300 random = 60 }
+	}
+}
+
+# 刀斩神罚军
+country_event = {
+	id = Yuzu_abyss_crisis_event.107
+	title = "TRANSMISSION"
+	desc = "Yuzu_abyss_crisis_event.107.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.107.a
+	}
+}
+
+# 圣堂失守通讯
+country_event = {
+	id = Yuzu_abyss_crisis_event.108
+	title = "TRANSMISSION"
+	desc = "Yuzu_abyss_crisis_event.108.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.108.a
+	}
+}
+
+# 神罚军入场
+country_event = {
+	id = Yuzu_abyss_crisis_event.109
+	title = Yuzu_abyss_crisis_event.109.name
+	desc = Yuzu_abyss_crisis_event.109.desc
+	picture = GFX_evt_fallen_empire_awakes
+	show_sound = event_alien_signal
+	location = event_target:Presiding_Judge_Fleet
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.109.a
+		create_point_of_interest = {
+			id = yuzu_abyss_descended_poi.3
+			name = "yuzu_abyss_descended_3_poi"
+			desc = "yuzu_abyss_descended_3_poi_desc"
+			event_chain = "yuzu_abyss_descended_chain"
+			category = abyss_presiding_judge_fleet
+			location = event_target:Presiding_Judge_Fleet
+		}
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.109.b
+		create_point_of_interest = {
+			id = yuzu_abyss_descended_poi.3
+			name = "yuzu_abyss_descended_3_poi"
+			desc = "yuzu_abyss_descended_3_poi_desc"
+			event_chain = "yuzu_abyss_descended_chain"
+			category = abyss_presiding_judge_fleet
+			location = event_target:Presiding_Judge_Fleet
+		}
+	}
+}
+
+# 跃迁反制
+ship_event = {
+	id = Yuzu_abyss_crisis_event.111
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		solar_system = {
+			exists = space_owner
+			space_owner = {
+				is_country_type = new_abyss_empire
+			}
+		}
+		owner = {
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+
+	immediate = {
+		solar_system = {
+			save_event_target_as = yuzu_mia_system
+		}
+		owner = {
+			country_event = { id = Yuzu_abyss_crisis_event.112 }
+		}
+		fleet = {
+			set_mia = mia_return_home
+		}
+	}
+}
+
+# 跃迁反制弹窗
+country_event = {
+	id = Yuzu_abyss_crisis_event.112
+	title = Yuzu_abyss_crisis_event.112.name
+	desc = Yuzu_abyss_crisis_event.112.desc
+	picture = GFX_evt_wormhole
+	location = event_target:yuzu_mia_system
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = yuzu_jump_drive_failed }
+	}
+
+	immediate = {
+		set_country_flag = yuzu_jump_drive_failed
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.112.a
+	}
+}
+
+# 摧毁教廷空间站(disable)
+ship_event = {
+	id = Yuzu_abyss_crisis_event.113
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_country_type = new_abyss_empire }
+		is_ship_class = shipclass_starbase
+		NOT = { is_ship_size = juggernaut }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = Presiding_Judge_Fleet_Created }
+				solar_system = { has_star_flag = new_abyss }
+			}
+			# 生成神罚军（首都空间站被毁）
+			event_target:new_abyss_capital_planet = {
+				if = {
+					limit = {
+						exists = owner
+						owner = { is_yuzu_abyss_empire = yes }
+					}
+					planet_event = { id = Yuzu_abyss_crisis_event.116 days = 5 }
+				}
+			}
+		}
+		destroy_ship = this # 可触发 Yuzu_abyss_crisis_event.114 ？
+		if = {
+			limit = {
+				FROM.owner = { has_event_chain = "yuzu_abyss_descended_chain" }
+			}
+			FROM.owner = {
+				add_event_chain_counter = {
+					event_chain = "yuzu_abyss_descended_chain"
+					counter = "yuzu_abyss_kills_us"
+					amount = 1
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				has_event_chain = "yuzu_abyss_descended_chain"
+				NOT = { is_same_value = FROM.owner }
+			}
+			add_event_chain_counter = {
+				event_chain = "yuzu_abyss_descended_chain"
+				counter = "yuzu_abyss_kills_others"
+				amount = 1
+			}
+		}
+	}
+}
+
+# 摧毁教廷空间站(天灾摧毁 & on_ship_disabled？）
+country_event = {
+	id = Yuzu_abyss_crisis_event.114
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = new_abyss_empire
+		NOT = { has_global_flag = Presiding_Judge_Fleet_Created }
+		fromfrom = {
+			is_ship_class = shipclass_starbase
+			NOT = { is_ship_size = juggernaut }
+			solar_system = {
+				has_star_flag = new_abyss
+			}
+		}
+	}
+
+	immediate = {
+		# 生成神罚军（首都空间站被毁）
+		event_target:new_abyss_capital_planet = {
+			if = {
+				limit = {
+					exists = owner
+					owner = { is_yuzu_abyss_empire = yes }
+				}
+				planet_event = { id = Yuzu_abyss_crisis_event.116 days = 5 }
+			}
+		}
+	}
+}
+
+# 占领教廷星球
+planet_event = {
+	id = Yuzu_abyss_crisis_event.115
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			is_yuzu_abyss_empire = yes
+		}
+		fromfrom = {
+			OR = {
+				is_country_type = default
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	immediate = {
+		set_owner = fromfrom
+		every_owned_pop = {
+			limit = {
+				is_species_class = ABYSS
+			}
+			add_modifier = {
+				modifier = pop_recently_conquered
+				days = 3600
+			}
+		}
+	}
+}
+
+# 生成神罚军
+planet_event = {
+	id = Yuzu_abyss_crisis_event.116
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		create_presiding_judge_fleet_and_constructors = yes
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.150
+	hide_window = yes
+
+	trigger = {
+		has_yuzu_crisis_stage_3 = yes
+		is_country_type = new_abyss_empire
+		galaxy_percentage < 0.15
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		set_yuzu_crisis_stage_2 = yes
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.151
+	hide_window = yes
+
+	trigger = {
+		has_yuzu_crisis_stage_2 = yes
+		is_country_type = new_abyss_empire
+		galaxy_percentage > 0.20
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		set_yuzu_crisis_stage_3 = yes
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.152
+	hide_window = yes
+
+	trigger = {
+		has_yuzu_crisis_stage_4 = yes
+		is_country_type = new_abyss_empire
+		galaxy_percentage < 0.30
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		set_yuzu_crisis_stage_3 = yes
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.153
+	hide_window = yes
+
+	trigger = {
+		has_yuzu_crisis_stage_3 = yes
+		is_country_type = new_abyss_empire
+		galaxy_percentage > 0.40
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		set_yuzu_crisis_stage_4 = yes
+	}
+}
+
+# on_ship_destroyed_victim
+country_event = {
+	id = Yuzu_abyss_crisis_event.160
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = new_abyss_empire
+		exists = from
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				FROM = { has_event_chain = "yuzu_abyss_descended_chain" }
+			}
+			FROM = {
+				add_event_chain_counter = {
+					event_chain = "yuzu_abyss_descended_chain"
+					counter = "yuzu_abyss_kills_us"
+					amount = 1
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				has_event_chain = "yuzu_abyss_descended_chain"
+				NOT = { is_same_value = FROM }
+			}
+			add_event_chain_counter = {
+				event_chain = "yuzu_abyss_descended_chain"
+				counter = "yuzu_abyss_kills_others"
+				amount = 1
+			}
+		}
+	}
+}
+
+# on_ship_destroyed_perp
+country_event = {
+	id = Yuzu_abyss_crisis_event.161
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = new_abyss_empire
+	}
+
+	immediate = {
+		every_country = {
+			limit = { has_event_chain = "yuzu_abyss_descended_chain" }
+			add_event_chain_counter = {
+				event_chain = "yuzu_abyss_descended_chain"
+				counter = "yuzu_abyss_victims"
+				amount = 1
+			}
+		}
+	}
+}
+
+# on_planet_zero_pops
+# Colony Bombarded
+planet_event = {
+	id = Yuzu_abyss_crisis_event.162
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = {
+			is_country_type = new_abyss_empire
+		}
+	}
+
+	immediate = {
+	#	destroy_colony = yes
+		if = {
+			limit = { FROM = { is_country_type = new_abyss_empire } }
+			every_country = {
+				limit = { has_event_chain = "yuzu_abyss_descended_chain" }
+				add_event_chain_counter = {
+					event_chain = "yuzu_abyss_descended_chain"
+					counter = "yuzu_abyss_sacrificed_planets"
+					amount = 1
+				}
+			}
+		}
+	}
+}
+
+# 失落觉醒
+country_event = {
+	id = Yuzu_abyss_crisis_event.200
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_global_flag = yuzu_abyss_defeated }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			country_event = { id = Yuzu_abyss_crisis_event.200 days = 300 }
+		}
+		else_if = {
+			limit = {
+				is_country_type = awakened_fallen_empire
+			}
+			if = {
+				limit = {
+					OR = {
+						has_ethic = ethic_fanatic_materialist
+						has_ethic = ethic_fanatic_xenophile
+					}
+				}
+				set_country_flag = guardians_of_the_galaxy
+
+				# 给星河守护者后续舰队增援
+			    country_event = { id = fallen_empires.13 }
+			    country_event = { id = fallen_empires.13 days = 300 random = 100 }
+			    country_event = { id = fallen_empires.13 days = 600 random = 100 }
+			    country_event = { id = fallen_empires.13 days = 900 random = 100 }
+			    country_event = { id = fallen_empires.13 days = 1800 random = 100 }
+			    country_event = { id = fallen_empires.13 days = 2700 random = 100 }
+			    country_event = { id = fallen_empires.13 days = 3600 random = 100 }
+			}
+		}
+		else = {
+			set_global_flag = guardians_of_the_galaxy_happened
+		    country_event = { id = fallen_empires_awakening.3 }
+			#remove_country_flag = sleepers_awake_first_sleeper
+		    country_event = { id = fallen_empires.13 }
+			country_event = { id = Yuzu_abyss_crisis_event.204 }
+
+		    if = {
+			    limit = {
+				    OR = {
+					    has_ethic = ethic_fanatic_materialist
+					    has_ethic = ethic_fanatic_xenophile
+				    }
+			    }
+				set_country_flag = guardians_of_the_galaxy
+
+				# 给星河守护者后续舰队增援
+				country_event = { id = fallen_empires.13 }
+				country_event = { id = fallen_empires.13 days = 300 random = 100 }
+				country_event = { id = fallen_empires.13 days = 600 random = 100 }
+				country_event = { id = fallen_empires.13 days = 900 random = 100 }
+				country_event = { id = fallen_empires.13 days = 1800 random = 100 }
+				country_event = { id = fallen_empires.13 days = 2700 random = 100 }
+				country_event = { id = fallen_empires.13 days = 3600 random = 100 }
+
+				every_country = {
+					limit = {
+						is_country_type = default
+					}
+					random_list = {
+						50 = { add_opinion_modifier = { who = root modifier = opinion_crisis_fighter } }
+						50 = { add_opinion_modifier = { who = root modifier = opinion_crisis_fighter_small } }
+					}
+				}
+
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = { id = Yuzu_abyss_crisis_event.201 }
+				}
+		    }
+			else_if = {
+				limit = {
+				    has_ethic = ethic_fanatic_spiritualist
+			    }
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = { id = Yuzu_abyss_crisis_event.202 }
+				}
+			}
+			else_if = {
+				limit = {
+				    has_ethic = ethic_fanatic_xenophobe
+			    }
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = { id = Yuzu_abyss_crisis_event.203 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.201
+	title = Yuzu_abyss_crisis_event.201.name
+	desc = Yuzu_abyss_crisis_event.201.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.201.a
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.201.b
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.202
+	title = Yuzu_abyss_crisis_event.202.name
+	desc = Yuzu_abyss_crisis_event.202.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.202.a
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.202.b
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.203
+	title = Yuzu_abyss_crisis_event.203.name
+	desc = Yuzu_abyss_crisis_event.203.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_alien_signal
+	location = from
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.203.a
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.203.b
+	}
+}
+
+# 上buff
+country_event = {
+	id = Yuzu_abyss_crisis_event.204
+
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = guardians_of_the_galaxy_anti_abyss_0 days = 10800
+		}
+		add_modifier = {
+			modifier = guardians_of_the_galaxy_anti_abyss_1 days = 9000
+		}
+		add_modifier = {
+			modifier = guardians_of_the_galaxy_anti_abyss_2 days = 7200
+		}
+		add_modifier = {
+			modifier = guardians_of_the_galaxy_anti_abyss_3 days = 5400
+		}
+		add_modifier = {
+			modifier = guardians_of_the_galaxy_anti_abyss_4 days = 2700
+		}
+		add_modifier = {
+			modifier = guardians_of_the_galaxy_anti_abyss_5 days = 1800
+		}
+		add_modifier = {
+			modifier = guardians_of_the_galaxy_anti_abyss_6 days = 900
+		}
+	}
+}
+
+# 教廷被击败通讯
+country_event = {
+	id = Yuzu_abyss_crisis_event.500
+	title = "TRANSMISSION"
+	desc = {
+		text = Yuzu_abyss_crisis_event.500.a.desc
+		trigger = {
+			NOT = {
+				has_global_flag = murasamamuru_eliminated_abyss
+			}
+		}
+	}
+	desc = {
+		text = Yuzu_abyss_crisis_event.500.b.desc
+		trigger = {
+			has_global_flag = murasamamuru_eliminated_abyss
+		}
+	}
+
+	diplomatic = yes
+
+	picture_event_data = {
+		room = "abyss_room"
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.500.a
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.500.b
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.500.c
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.500.d
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = Yuzu_abyss_crisis_event.500.e
+		trigger = {
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+}
+
+# 教廷被击败
+# on_country_destroyed
+country_event = {
+	id = Yuzu_abyss_crisis_event.502
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = new_abyss_empire
+	}
+
+	immediate = {
+		set_global_flag = yuzu_abyss_defeated
+		end_yuzu_crisis = yes
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = { id = Yuzu_abyss_crisis_event.500 }
+			country_event = { id = Yuzu_abyss_crisis_event.503 days = 3 }
+		}
+		remove_global_flag = yuzu_abyss_descended_ongoing
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.503
+	title = Yuzu_abyss_crisis_event.503.name
+	desc = Yuzu_abyss_crisis_event.503.desc
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = end_galactic_focus_crisis_yuzu_abyss
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.503.a
+		add_modifier = {
+			modifier = yuzu_abyss_empire_defeated
+			days = 3600
+		}
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier5unityreward
+		}
+		end_event_chain = "yuzu_abyss_descended_chain"
+	}
+}
+
+	

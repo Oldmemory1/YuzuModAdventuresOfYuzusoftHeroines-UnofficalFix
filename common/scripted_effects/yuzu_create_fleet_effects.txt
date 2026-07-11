@@ -1,0 +1,699 @@
+create_random_yuzu_fleet = {
+	create_fleet = {
+		name = "NAME_Yuzu_Dimension_Fleet"
+		settings = {
+			can_change_composition = no
+			can_change_leader = yes
+			uses_naval_capacity = no
+			spawn_debris = no
+		}
+		effect = {
+			set_owner = PREV.owner
+			save_event_target_as = Yuzu_Dimension_Fleet
+			random_list = {
+				10 = { #腹中战舰
+					create_ship = {
+						name = "NAME_AH4B"
+						design = "NAME_AH4B"
+						prefix = no
+					}
+				}
+				10 = { #无畏战舰
+					create_ship = {
+						name = "NAME_Type_37"
+						design = "NAME_Type_37"
+						prefix = no
+						graphical_culture = "npf_01"
+					}
+				}
+				10 = { #以太龙
+					create_ship = {
+						name = "NAME_Grand_Dragon"
+						design = "NAME_Grand_Dragon"
+						prefix = no
+						graphical_culture = owner
+					}
+					while = {
+						count = 3
+						create_ship = {
+							name = "NAME_Dragonspawn"
+							design = "NAME_Dragonspawn"
+							prefix = no
+						}
+					}
+				}
+				10 = { #天龙
+					create_ship = {
+						name = "NAME_Sky_Dragon"
+						design = "NAME_Sky_Dragon"
+						prefix = no
+						graphical_culture = owner
+					}
+					while = {
+						count = 3
+						create_ship = {
+							name = "NAME_Sky_Dragon_Baby"
+							design = "NAME_Sky_Dragon_Baby"
+							prefix = no
+							graphical_culture = owner
+						}
+					}
+				}
+				10 = { #L星龙
+					while = {
+						count = 6
+						create_ship = {
+							name = "NAME_Nanite_Dragon"
+							design = "NAME_Nanite_Dragon"
+							prefix = no
+						}
+					}
+				}
+				10 = {
+					create_ship = {
+						name = "NAME_Reclaimer"
+						design = "NAME_Reclaimer"
+						prefix = no
+						graphical_culture = owner
+					}
+				}
+				10 = {
+					create_ship = {
+						name = "NAME_Stellarite"
+						design = "NAME_Stellarite"
+						prefix = no
+						graphical_culture = owner
+					}
+				}
+				10 = {
+					create_ship = {
+						name = "NAME_Voidspawn"
+						design = "NAME_Voidspawn"
+						prefix = no
+						graphical_culture = owner
+					}
+				}
+				10 = {
+					create_ship = {
+						name = "NAME_Corrupted_Avata"
+						design = "NAME_Corrupted_Avata"
+						prefix = no
+						graphical_culture = owner
+					}
+				}
+				10 = {
+					create_ship = {
+						name = "NAME_Infinity_Machine"
+						design = "NAME_Infinity_Machine"
+						prefix = no
+						graphical_culture = techno
+					}
+				}
+				10 = {
+					random_list = {
+						10 = {
+							create_ship = {
+								name = "NAME_Spectral_Wraith_650THz"
+								design = "NAME_Spectral_Wraith_650THz"
+								prefix = no
+								graphical_culture = owner
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Spectral_Wraith_450THz"
+								design = "NAME_Spectral_Wraith_450THz"
+								prefix = no
+								graphical_culture = owner
+							}
+						}
+						10 = {
+							create_ship = {
+								name = "NAME_Spectral_Wraith_520THz"
+								design = "NAME_Spectral_Wraith_520THz"
+								prefix = no
+								graphical_culture = owner
+							}
+						}
+				    }
+				}
+				10 = {
+					create_ship = {
+						name = "NAME_Nanite_Mothership"
+						design = "NAME_Nanite_Mothership"
+						prefix = no
+						graphical_culture = owner
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = "NAME_Nanite_Interdictor"
+							design = "NAME_Nanite_Interdictor"
+							prefix = no
+							graphical_culture = owner
+						}
+					}
+				}
+				10 = { #缇扬奇
+				    create_ship = {
+					    name = "NAME_Progenitor"
+					    design = "NAME_Progenitor"
+					    prefix = no
+				    }
+					while = {
+						count = 3
+						create_ship = {
+							name = "NAME_Tiyanki_Bull"
+							design = "NAME_Tiyanki_Bull"
+							prefix = no
+						}
+						create_ship = {
+							name = "NAME_Tiyanki_Cow"
+							design = "NAME_Tiyanki_Cow"
+							prefix = no
+						}
+					}
+					while = {
+						count = 9
+						create_ship = {
+							name = "NAME_Tiyanki_Calf"
+							design = "NAME_Tiyanki_Calf"
+							prefix = no
+						}
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = "NAME_Tiyanki_Hatchling"
+							design = "NAME_Tiyanki_Hatchling"
+							prefix = no
+						}
+					}
+				}
+				10 = { #变形虫
+					create_ship = {
+						name = "NAME_Adopted_Amoeba_Centenarian"
+						design = "NAME_Adopted_Amoeba_Centenarian"
+						prefix = no
+					}
+					while = {
+						count = 3
+						create_ship = {
+							name = "NAME_Large_Space_Organism_Orange"
+							design = "NAME_Large_Space_Organism_Orange"
+							prefix = no
+						}
+						create_ship = {
+							name = "NAME_Large_Space_Organism_Teal"
+							design = "NAME_Large_Space_Organism_Teal"
+							prefix = no
+						}
+						create_ship = {
+							name = "NAME_Large_Space_Organism_Blue"
+							design = "NAME_Large_Space_Organism_Blue"
+							prefix = no
+						}
+						create_ship = {
+							name = "NAME_Large_Space_Organism_Zebra"
+							design = "NAME_Large_Space_Organism_Zebra"
+							prefix = no
+						}
+					}
+					while = {
+						count = 9
+						create_ship = {
+							name = "NAME_Small_Space_Organism_Orange"
+							design = "NAME_Small_Space_Organism_Orange"
+							prefix = no
+						}
+						create_ship = {
+							name = "NAME_Small_Space_Organism_Teal"
+							design = "NAME_Small_Space_Organism_Teal"
+							prefix = no
+						}
+						create_ship = {
+							name = "NAME_Small_Space_Organism_Blue"
+							design = "NAME_Small_Space_Organism_Blue"
+							prefix = no
+						}
+						create_ship = {
+							name = "NAME_Small_Space_Organism_Zebra"
+							design = "NAME_Small_Space_Organism_Zebra"
+							prefix = no
+						}
+					}
+				}
+			}
+			set_location = {
+				target = PREV
+				distance = 35
+				angle = random
+			}
+		}
+	}
+}
+
+create_yuzu_fleet_1 = {
+	create_fleet = {
+		name = "NAME_Yuzu_Fleet_1"
+		effect = {
+			set_owner = PREV.owner
+			random_list = {
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan"
+						graphical_culture = "fallen_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan"
+						graphical_culture = "fallen_empire_02"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan"
+						graphical_culture = "fallen_empire_03"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan"
+						graphical_culture = "fallen_empire_04"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan"
+						graphical_culture = "fallen_machine_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+				}
+			}
+			
+			set_location = {
+				target = PREV
+				distance = 35
+				angle = random
+			}
+		}
+	}
+}
+
+create_new_abyss_fleet_1 = {
+	random_list = {
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:new_abyss_species
+				name = random
+				skill = 5
+				set_age = 1267
+				#traits = {
+				#	trait = leader_trait_commander_abyss
+				#}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:new_abyss_species
+				name = random
+				skill = 5
+				set_age = 1182
+				#traits = {
+				#	trait = leader_trait_commander_abyss
+				#}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:new_abyss_species
+				name = random
+				skill = 5
+				set_age = 1239
+				#traits = {
+				#	trait = leader_trait_commander_abyss
+				#}
+			}
+		}
+	}
+
+	create_fleet = {
+		name = "NAME_New_Abyss_Fleet_1"
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_Abyss_Large"
+				graphical_culture = "fallen_yuzu_abyss_empire_01"
+			}
+			while = {
+				count = 4
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Small"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = PREVPREV
+				distance = 35
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
+
+create_new_abyss_fleet_2 = {
+	random_list = {
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:new_abyss_species
+				name = random
+				skill = 8
+				set_age = 3245
+				#traits = {
+				#	trait = leader_trait_commander_abyss
+				#}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:new_abyss_species
+				name = random
+				skill = 8
+				set_age = 2946
+				#traits = {
+				#	trait = leader_trait_commander_abyss
+				#}
+			}
+		}
+		10 = {
+			create_leader = {
+				class = commander
+				species = event_target:new_abyss_species
+				name = random
+				skill = 8
+				set_age = 3412
+				#traits = {
+				#	trait = leader_trait_commander_abyss
+				#}
+			}
+		}
+	}
+
+	create_fleet = {
+		name = "NAME_New_Abyss_Fleet_2"
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_Abyss_Titan"
+				graphical_culture = "fallen_yuzu_abyss_empire_01"
+			}
+			while = {
+				count = 6
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Large"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			while = {
+				count = 24
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Small"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = PREVPREV
+				distance = 35
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
+
+create_new_abyss_fleet_3 = {
+	create_leader = {
+		class = commander
+		species = event_target:new_abyss_species
+		name = "NAME_Abyss_Presiding_Judge"
+		skill = 10
+		set_age = 12736
+		traits = {
+			trait = leader_trait_yuzu_abyss_presiding_judge
+		}
+	}
+	create_fleet = {
+		name = "NAME_New_Abyss_Fleet_3"
+		effect = {
+			set_owner = PREV
+			set_fleet_flag = Presiding_Judge_Fleet
+			save_global_event_target_as = Presiding_Judge_Fleet
+			while = {
+				count = 3
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Titan"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			while = {
+				count = 18
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Large"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			while = {
+				count = 72
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Small"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = PREVPREV
+				distance = 35
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
+
+create_new_abyss_fleet_4 = {
+	create_leader = {
+		class = commander
+		species = event_target:new_abyss_species
+		name = random
+		skill = 6
+		set_age = 2173
+		#traits = {
+		#	trait = leader_trait_commander_abyss
+		#}
+	}
+	create_fleet = {
+		name = "NAME_New_Abyss_Fleet_4"
+		effect = {
+			set_owner = PREV
+			save_global_event_target_as = Abyss_Vanguard_Fleet
+			while = {
+				count = 3
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Large"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			while = {
+				count = 12
+				create_ship = {
+					name = random
+					design = "NAME_Abyss_Small"
+					graphical_culture = "fallen_yuzu_abyss_empire_01"
+				}
+			}
+			assign_leader = last_created_leader
+			set_location = {
+				target = PREVPREV
+				distance = 35
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			set_fleet_bombardment_stance = armageddon
+		}
+	}
+}
+
+create_new_abyss_constructor = {
+	create_fleet = {
+		name = "NAME_New_Abyss_Constructor"
+		effect = {
+			set_owner = PREV
+			create_ship = {
+				name = random
+				design = "NAME_Abyss_Constructor"
+				graphical_culture = "fallen_yuzu_abyss_empire_01"
+			}
+			set_location = {
+				target = PREVPREV
+				distance = 10
+				angle = random
+			}
+		}
+	}
+}
+
+create_new_abyss_platform = {
+	create_ship = {
+		name = random
+		design = "NAME_Abyss_Platform"
+		graphical_culture = "fallen_yuzu_abyss_empire_01"
+	}
+}
+
+create_new_abyss_ion_cannon = {
+	create_ship = {
+		name = random
+		design = "NAME_Abyss_Ion_Cannon"
+		graphical_culture = "fallen_yuzu_abyss_empire_01"
+	}
+}
+
+create_presiding_judge_fleet_and_constructors = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = Presiding_Judge_Fleet_Created }
+			owner = { is_country_type = new_abyss_empire }
+		}
+		set_global_flag = Presiding_Judge_Fleet_Created
+		owner = {
+			create_new_abyss_fleet_3 = yes
+			while = {
+				count = 3
+				create_new_abyss_constructor = yes
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			country_event = { id = Yuzu_abyss_crisis_event.109 }
+		}
+	}
+}

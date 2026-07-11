@@ -1,0 +1,44 @@
+namespace = Yuzu_planet_event
+
+planet_event = {
+	id = Yuzu_planet_event.1
+	title = "TRANSMISSION"
+	desc = "Yuzu_planet_event.1.desc"
+
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = yuzu_m_s
+		room = "senrenbanka_1_room"
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { is_same_value = from }
+	}
+
+	option = {
+		name = Yuzu_planet_event.1.a
+		response_text = Yuzu_planet_event.1.a.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_planet_event.1.b
+		response_text = Yuzu_planet_event.1.b.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_planet_event.1.c
+		response_text = Yuzu_planet_event.1.c.response
+		is_dialog_only = yes
+	}
+	option = {
+		name = Yuzu_planet_event.1.d
+		response_text = Yuzu_planet_event.1.d.response
+		default_hide_option = yes
+		hidden_effect = {
+			create_archaeological_site = site_yuzu_land_of_space_time_chaos
+		}
+	}
+}
