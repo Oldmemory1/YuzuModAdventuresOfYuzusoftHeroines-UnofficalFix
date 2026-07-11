@@ -16,6 +16,11 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/colony_types/yuzu_city_colony_types.txt` | `trade_value_mult` | `planet_jobs_trade_produces_mult` | 4.0 后贸易值 modifier 改名 |
 | `common/colony_types/yuzu_city_colony_types.txt` | `planet_administrators_produces_mult` | `planet_bureaucrats_produces_mult` | Administrators 职业已重命名为 Bureaucrats |
 | `common/colony_types/yuzu_city_colony_types.txt` | `planet_administrators_upkeep_mult` | `planet_bureaucrats_upkeep_mult` | 同上 |
+| `common/name_lists/ABYSS1.txt` | 直接中文文本 | 本地化键 + YAML（145 条） | 消除 ~500KB CW100 警告，支持多语言翻译 |
+| `common/name_lists/YUZUGIRL1.txt` | 直接中文文本 + A0-Z9 | 本地化键 + YAML（330 条） | 同上 |
+| `common/name_lists/ABYSS1.txt` + `YUZUGIRL1.txt` | `yuzu_reaper_scythe` 舰船名条目 | 移除 | 该舰船类型未在 `ship_sizes/` 中定义 |
+| `common/component_templates/yuzu_weapons.txt` | `use_ship_kill_target = no` | `use_ship_main_target = no`（6 处） | 旧键已移除，对照 vanilla Arc Emitter / Particle Lance |
+| `common/technology/yuzu_tech.txt` | `@ap_technological_ascendancy_rare_tech` | `factor = 9`（48 处） | 该 scripted variable 在 4.0 后已移除 |
 
 ### 已排除的文件
 
