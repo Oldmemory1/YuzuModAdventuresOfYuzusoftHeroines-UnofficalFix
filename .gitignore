@@ -18,3 +18,4 @@ gfx/
 
 # Diagnostic files
 error.json
+uv.lock

@@ -4,65 +4,65 @@ YUZUGIRL1 = {
 	ship_names = {
 
 		corvette = {#护卫舰
-			突击者 巡视者
+			YUZU_SHIP_CORVETTE_01 YUZU_SHIP_CORVETTE_02
 		}
 		
 		destroyer = {#驱逐舰
-			防卫者 阻击者 监视者
+			YUZU_SHIP_DESTROYER_01 YUZU_SHIP_DESTROYER_02 YUZU_SHIP_DESTROYER_03
 		}
 
 		cruiser = {#巡洋舰
-			歼灭者 守护者 守望者
+			YUZU_SHIP_CRUISER_01 YUZU_SHIP_CRUISER_02 YUZU_SHIP_CRUISER_03
 		}
 		
 		battleship = {#战列舰
-			监察者 终结者 执行者
+			YUZU_SHIP_BATTLESHIP_01 YUZU_SHIP_BATTLESHIP_02 YUZU_SHIP_BATTLESHIP_03
 		}
 
 		titan = {#泰坦
-			全视者 毁灭者 裁定者
+			YUZU_SHIP_TITAN_01 YUZU_SHIP_TITAN_02 YUZU_SHIP_TITAN_03
 		}
 
 		colossus = {
-			创世神 破坏神 引导者
+			YUZU_SHIP_COLOSSUS_01 YUZU_SHIP_COLOSSUS_02 YUZU_SHIP_COLOSSUS_03
 		}
 		
 		juggernaut = {
-			创世神 破坏神 引导者
+			YUZU_SHIP_COLOSSUS_01 YUZU_SHIP_COLOSSUS_02 YUZU_SHIP_COLOSSUS_03
 		}
 
 		yuzu_star_eater = {
-			超越者 天罚神
+			YUZU_SHIP_YUZU_STAR_EATER_01 YUZU_SHIP_YUZU_STAR_EATER_02
 		}
 
 		constructor = {#工程船
-			施工者
+			YUZU_SHIP_CONSTRUCTOR_01
 		}
 		
 		colonizer = { #殖民船
-			开拓者
+			YUZU_SHIP_COLONIZER_01
 		}
 
 		sponsored_colonizer = {
-			开拓者
+			YUZU_SHIP_COLONIZER_01
 		}
 		
 		science = {#科研船
-			探索者
+			YUZU_SHIP_SCIENCE_01
 		}
 
 		transport = {
-			运输者01 运输者02 运输者03 运输者04 运输者05 运输者06 运输者07 运输者08 运输者09 运输者10
-			运输者11 运输者12 运输者13 运输者14 运输者15 运输者16 运输者17 运输者18 运输者19 运输者20
+			YUZU_SHIP_TRANSPORT_01 YUZU_SHIP_TRANSPORT_02 YUZU_SHIP_TRANSPORT_03 YUZU_SHIP_TRANSPORT_04 YUZU_SHIP_TRANSPORT_05 YUZU_SHIP_TRANSPORT_06 YUZU_SHIP_TRANSPORT_07 YUZU_SHIP_TRANSPORT_08 YUZU_SHIP_TRANSPORT_09 YUZU_SHIP_TRANSPORT_10
+			YUZU_SHIP_TRANSPORT_11 YUZU_SHIP_TRANSPORT_12 YUZU_SHIP_TRANSPORT_13 YUZU_SHIP_TRANSPORT_14 YUZU_SHIP_TRANSPORT_15 YUZU_SHIP_TRANSPORT_16 YUZU_SHIP_TRANSPORT_17 YUZU_SHIP_TRANSPORT_18 YUZU_SHIP_TRANSPORT_19 YUZU_SHIP_TRANSPORT_20
 		}
 
 		military_station_small = {#防御平台
-			警戒者
+			YUZU_SHIP_MILITARY_STATION_SMALL_01
 		}
 		
 		ion_cannon = {
-			守护神
-			净化者
+			YUZU_SHIP_ION_CANNON_01
+			YUZU_SHIP_ION_CANNON_02
 		}
 	}
 
@@ -134,9 +134,9 @@ YUZUGIRL1 = {
 	planet_names = {
 		generic = {
 			names = {
-				阴阳局 风纪班 伊甸园 阿雷克桑 欧所库雷斯 塔弦岛 知更鸟 莱泽鲁格 牙与爪的兽亭 黑猫 穗织 建实神社 志那都庄 田心屋
-				夜宴 谜语 星光 魔女 死神 蝴蝶
-				长夏 影武者 漆黑之衣 彷徨人
+				YUZU_PLANET_01 YUZU_PLANET_02 YUZU_PLANET_03 YUZU_PLANET_04 YUZU_PLANET_05 YUZU_PLANET_06 YUZU_PLANET_07 YUZU_PLANET_08 YUZU_PLANET_09 YUZU_PLANET_10 YUZU_PLANET_11 YUZU_PLANET_12 YUZU_PLANET_13 YUZU_PLANET_14
+				YUZU_PLANET_15 YUZU_PLANET_16 YUZU_PLANET_17 YUZU_PLANET_18 YUZU_PLANET_19 YUZU_PLANET_20
+				YUZU_PLANET_21 YUZU_PLANET_22 YUZU_PLANET_23 YUZU_PLANET_24
 			}
 		}
 	}
@@ -147,7 +147,7 @@ YUZUGIRL1 = {
 	character_names = {
 		default = {
 			first_names = {
-				柚子克隆体
+				YUZU_CHAR_FIRST_01
 			}
 			second_names = {
 				A0 A1 A2 A3 A4 A5 A6 A7 A8 A9
@@ -182,7 +182,7 @@ YUZUGIRL1 = {
 
 			#copied from above
 			regnal_first_names = {
-				柚子克隆体
+				YUZU_CHAR_FIRST_01
 			}
 			regnal_second_names = {
 				A0 A1 A2 A3 A4 A5 A6 A7 A8 A9
