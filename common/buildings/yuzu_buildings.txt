@@ -315,7 +315,7 @@ building_yuzu_supernatural_research_organization = {
 			owner = { is_YUZU = yes }
 		}
 		modifier = {
-			job_supernatural_researcher_add = 2
+			job_supernatural_researcher_add = 200
 			job_yuzu_witch_per_pop = 0.04
 		}
 	}
@@ -420,7 +420,7 @@ building_yuzu_supernatural_research_institute = {
 			owner = { is_YUZU = yes }
 		}
 		modifier = {
-			job_supernatural_researcher_add = 4
+			job_supernatural_researcher_add = 400
 			job_yuzu_witch_per_pop = 0.04
 		}
 	}
@@ -527,7 +527,7 @@ building_yuzu_supernatural_research_center = {
 			owner = { is_YUZU = yes }
 		}
 		modifier = {
-			job_supernatural_researcher_add = 6
+			job_supernatural_researcher_add = 600
 			job_yuzu_witch_per_pop = 0.04
 		}
 	}
