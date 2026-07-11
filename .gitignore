@@ -19,3 +19,4 @@ gfx/**/*.dds
 # Diagnostic files
 error.json
 uv.lock
+/.cwtools-ai

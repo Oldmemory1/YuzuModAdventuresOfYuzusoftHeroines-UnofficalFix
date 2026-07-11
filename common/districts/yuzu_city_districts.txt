@@ -619,7 +619,7 @@ district_yuzu_city_administrative = {
 			}
 		}
 		modifier = {
-			job_manager_add = 6
+			job_manager_add = 600
 		}
 	}
 
@@ -697,7 +697,7 @@ district_yuzu_city_religious = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -724,8 +724,8 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult NO.
-			job_bureaucrat_add = 3
-			job_manager_add = 3
+			job_bureaucrat_add = 300
+			job_manager_add = 300
 		}
 	}
 
@@ -739,8 +739,8 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp NO, Death Cult YES.
-			job_bureaucrat_add = 3
-			job_mortal_initiate_add = 3
+			job_bureaucrat_add = 300
+			job_mortal_initiate_add = 300
 		}
 	}
 	
@@ -754,9 +754,9 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult YES.
-			job_bureaucrat_add = 2
-			job_mortal_initiate_add = 2
-			job_manager_add = 2
+			job_bureaucrat_add = 200
+			job_mortal_initiate_add = 200
+			job_manager_add = 200
 		}
 	}
 
@@ -838,9 +838,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_add = 1
-			job_translucer_add = 1
-			job_chemist_add = 1
+			job_gas_refiner_add = 100
+			job_translucer_add = 100
+			job_chemist_add = 100
 		}
 	}
 
@@ -852,9 +852,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_drone_add = 1
-			job_translucer_drone_add = 1
-			job_chemist_drone_add = 1
+			job_gas_refiner_drone_add = 100
+			job_translucer_drone_add = 100
+			job_chemist_drone_add = 100
 		}
 	}
 
@@ -867,9 +867,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_add = 2
-			job_translucer_add = -1
-			job_chemist_add = -1
+			job_gas_refiner_add = 200
+			job_translucer_add = -100
+			job_chemist_add = -100
 		}
 	}
 
@@ -882,9 +882,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_add = -1
-			job_translucer_add = 2
-			job_chemist_add = -1
+			job_gas_refiner_add = -100
+			job_translucer_add = 200
+			job_chemist_add = -100
 		}
 	}
 
@@ -897,9 +897,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_add = -1
-			job_translucer_add = -1
-			job_chemist_add = 2
+			job_gas_refiner_add = -100
+			job_translucer_add = -100
+			job_chemist_add = 200
 		}
 	}
 
@@ -912,9 +912,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_drone_add = 2
-			job_translucer_drone_add = -1
-			job_chemist_drone_add = -1
+			job_gas_refiner_drone_add = 200
+			job_translucer_drone_add = -100
+			job_chemist_drone_add = -100
 		}
 	}
 
@@ -927,9 +927,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_drone_add = -1
-			job_translucer_drone_add = 2
-			job_chemist_drone_add = -1
+			job_gas_refiner_drone_add = -100
+			job_translucer_drone_add = 200
+			job_chemist_drone_add = -100
 		}
 	}
 
@@ -942,9 +942,9 @@ district_yuzu_city_refinery = {
 			}
 		}
 		modifier = {
-			job_gas_refiner_drone_add = -1
-			job_translucer_drone_add = -1
-			job_chemist_drone_add = 2
+			job_gas_refiner_drone_add = -100
+			job_translucer_drone_add = -100
+			job_chemist_drone_add = 200
 		}
 	}
 
@@ -1052,9 +1052,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_add = 2
-			job_miner_add = 2
-			job_farmer_add = 2
+			job_technician_add = 200
+			job_miner_add = 200
+			job_farmer_add = 200
 		}
 	}
 
@@ -1066,9 +1066,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = 2
-			job_mining_drone_add = 2
-			job_agri_drone_add = 2
+			job_technician_drone_add = 200
+			job_mining_drone_add = 200
+			job_agri_drone_add = 200
 		}
 	}
 
@@ -1081,9 +1081,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_add = 4
-			job_miner_add = -2
-			job_farmer_add = -2
+			job_technician_add = 400
+			job_miner_add = -200
+			job_farmer_add = -200
 		}
 	}
 
@@ -1096,9 +1096,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_add = -2
-			job_miner_add = 4
-			job_farmer_add = -2
+			job_technician_add = -200
+			job_miner_add = 400
+			job_farmer_add = -200
 		}
 	}
 
@@ -1111,9 +1111,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_add = -2
-			job_miner_add = -2
-			job_farmer_add = 4
+			job_technician_add = -200
+			job_miner_add = -200
+			job_farmer_add = 400
 		}
 	}
 
@@ -1126,9 +1126,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = 4
-			job_mining_drone_add = -2
-			job_agri_drone_add = -2
+			job_technician_drone_add = 400
+			job_mining_drone_add = -200
+			job_agri_drone_add = -200
 		}
 	}
 
@@ -1141,9 +1141,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = -2
-			job_mining_drone_add = 4
-			job_agri_drone_add = -2
+			job_technician_drone_add = -200
+			job_mining_drone_add = 400
+			job_agri_drone_add = -200
 		}
 	}
 
@@ -1156,9 +1156,9 @@ district_yuzu_city_dream = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = -2
-			job_mining_drone_add = -2
-			job_agri_drone_add = 4
+			job_technician_drone_add = -200
+			job_mining_drone_add = -200
+			job_agri_drone_add = 400
 		}
 	}
 
