@@ -158,7 +158,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater yuzu_star_eater offspring_destroyer offspring_cruiser offspring_battleship yuzu_reaper_scythe }
+	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater yuzu_star_eater offspring_destroyer offspring_cruiser offspring_battleship }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_computer_role_yuzu" }
@@ -193,7 +193,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater yuzu_star_eater offspring_cruiser offspring_battleship yuzu_reaper_scythe }
+	size_restriction = { cruiser battleship juggernaut titan star_eater yuzu_star_eater offspring_cruiser offspring_battleship }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_computer_role_yuzu" }
