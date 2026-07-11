@@ -36,7 +36,7 @@ district_yuzu_city_housing = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 15
+		planet_housing_add = 1500
 	}
 
 	triggered_planet_modifier = {
@@ -55,7 +55,7 @@ district_yuzu_city_housing = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -67,7 +67,7 @@ district_yuzu_city_housing = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -80,7 +80,7 @@ district_yuzu_city_housing = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -93,7 +93,7 @@ district_yuzu_city_housing = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 3
+			job_maintenance_drone_add = 300
 		}
 	}
 
@@ -105,8 +105,8 @@ district_yuzu_city_housing = {
 			}
 		}
 		modifier = {
-			job_merchant_add = 1
-			job_clerk_add = 3
+			job_merchant_add = 100
+			job_clerk_add = 300
 		}
 	}
 
@@ -116,7 +116,7 @@ district_yuzu_city_housing = {
 			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
 		}
 		modifier = {
-			job_clerk_add = 3
+			job_clerk_add = 300
 		}
 	}
 
@@ -197,7 +197,7 @@ district_yuzu_city_industry = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -209,7 +209,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_artisan_add = 3
+			job_artisan_add = 300
 		}
 	}
 
@@ -219,7 +219,7 @@ district_yuzu_city_industry = {
 			owner = { is_crafter_empire = yes }
 		}
 		modifier = {
-			job_artificer_add = 3
+			job_artificer_add = 300
 		}
 	}
 
@@ -232,7 +232,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_foundry_add = 3
+			job_foundry_add = 300
 		}
 	}
 
@@ -245,7 +245,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_catalytic_technician_add = 3
+			job_catalytic_technician_add = 300
 		}
 	}
 
@@ -258,7 +258,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_alloy_drone_add = 6
+			job_alloy_drone_add = 600
 		}
 	}
 
@@ -271,7 +271,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_fabricator_add = 6
+			job_fabricator_add = 600
 		}
 	}
 
@@ -284,7 +284,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_catalytic_drone_add = 6
+			job_catalytic_drone_add = 600
 		}
 	}
 
@@ -299,7 +299,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_artisan_add = -3
+			job_artisan_add = -300
 		}
 	}
 
@@ -313,7 +313,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_artificer_add = -3
+			job_artificer_add = -300
 		}
 	}
 
@@ -327,7 +327,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_foundry_add = 3
+			job_foundry_add = 300
 		}
 	}
 
@@ -341,7 +341,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_catalytic_technician_add = 3
+			job_catalytic_technician_add = 300
 		}
 	}
 
@@ -355,7 +355,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_artisan_add = 3
+			job_artisan_add = 300
 		}
 	}
 
@@ -369,7 +369,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_artificer_add = 3
+			job_artificer_add = 300
 		}
 	}
 
@@ -383,7 +383,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_foundry_add = -3
+			job_foundry_add = -300
 		}
 	}
 
@@ -397,7 +397,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_catalytic_technician_add = -3
+			job_catalytic_technician_add = -300
 		}
 	}
 
@@ -412,8 +412,8 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_artisan_drone_add = 3
-			job_fabricator_add = -3
+			job_artisan_drone_add = 300
+			job_fabricator_add = -300
 		}
 	}
 
@@ -428,8 +428,8 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_artisan_drone_add = 3
-			job_catalytic_drone_add = -3
+			job_artisan_drone_add = 300
+			job_catalytic_drone_add = -300
 		}
 	}
 
@@ -529,7 +529,7 @@ district_yuzu_city_industry = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 1
+			job_maintenance_drone_add = 100
 		}
 	}
 
@@ -594,7 +594,7 @@ district_yuzu_city_administrative = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -606,7 +606,7 @@ district_yuzu_city_administrative = {
 			}
 		}
 		modifier = {
-			job_bureaucrat_add = 6
+			job_bureaucrat_add = 600
 		}
 	}
 	
@@ -710,7 +710,7 @@ district_yuzu_city_religious = {
 		}
 		modifier = {
 			# Megacorp NO, Death Cult NO.
-			job_bureaucrat_add = 6
+			job_bureaucrat_add = 600
 		}
 	}
 	
@@ -827,7 +827,7 @@ district_yuzu_city_refinery = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	triggered_planet_modifier = {
