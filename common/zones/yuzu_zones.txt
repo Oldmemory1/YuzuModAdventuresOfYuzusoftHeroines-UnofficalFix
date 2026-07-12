@@ -6,11 +6,17 @@
 # District: district_yuzu_city_urban_1/2/3
 
 zone_yuzu_industrial_arcology = {
-	inline_script = {
-		script = zones/shared_industrial_zone
-		AMOUNT = @doubled_scaling_district_2_jobs
-		LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+
+	icon = GFX_district_specialization_industrial
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
 	}
+
 	swap_type = district_yuzu_city_industry
 	swap_type_weight = 5
 
@@ -19,23 +25,31 @@ zone_yuzu_industrial_arcology = {
 	}
 
 	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
+		industrial
+		automation
+		origin
 	}
 
 	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
+		script = jobs/yuzu_zone_job_goods
+		AMOUNT = 500
+	}
+	inline_script = {
+		script = jobs/yuzu_zone_job_alloy
+		AMOUNT = 500
 	}
 }
 
 zone_yuzu_foundry_arcology = {
-	inline_script = {
-		script = zones/shared_industrial_foundry_zone
-		AMOUNT = @doubled_scaling_district_1_job
-		LARGE_AMOUNT = @doubled_scaling_district_1_job
+	
+	icon = GFX_district_specialization_foundry
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
 	}
 
 	swap_type = district_yuzu_city_industry
@@ -46,22 +60,27 @@ zone_yuzu_foundry_arcology = {
 	}
 
 	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
+		foundry
+		automation
+		origin
 	}
 
 	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
+		script = jobs/yuzu_zone_job_alloy
+		AMOUNT = 1000
 	}
 }
 
 zone_yuzu_factory_arcology = {
-	inline_script = {
-		script = zones/shared_industrial_factory_zone
-		AMOUNT = @doubled_scaling_district_1_job
+
+	icon = GFX_district_specialization_factory
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
 	}
 
 	swap_type = district_yuzu_city_industry
@@ -72,275 +91,14 @@ zone_yuzu_factory_arcology = {
 	}
 
 	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
+		factory
+		automation
+		origin
 	}
 
 	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
+		script = jobs/yuzu_zone_job_goods
+		AMOUNT = 1000
 	}
 }
 
-zone_yuzu_research_arcology = {
-	inline_script = {
-		script = zones/shared_research_zone
-		AMOUNT = @doubled_scaling_district_3_jobs
-	}
-
-	swap_type = district_yuzu_city_administrative
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-}
-
-zone_yuzu_research_physics_arcology = {
-	inline_script = {
-		script = zones/shared_research_physics_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	inline_script = {
-		script = zones/potential_no_wilderness
-	}
-
-	swap_type = district_yuzu_city_administrative
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-}
-
-zone_yuzu_research_society_arcology = {
-	inline_script = {
-		script = zones/shared_research_society_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	inline_script = {
-		script = zones/potential_no_wilderness
-	}
-
-	swap_type = district_yuzu_city_administrative
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-}
-
-zone_yuzu_research_engineering_arcology = {
-	inline_script = {
-		script = zones/shared_research_engineering_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	inline_script = {
-		script = zones/potential_no_wilderness
-	}
-
-	swap_type = district_yuzu_city_administrative
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-}
-
-zone_yuzu_unity_arcology = {
-	inline_script = {
-		script = zones/shared_unity_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	swap_type = district_yuzu_city_administrative
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-
-	convert_to = {
-		zone_yuzu_unity_spiritualist_arcology
-		zone_yuzu_unity_bio_trophy_arcology
-	}
-}
-
-zone_yuzu_unity_spiritualist_arcology = {
-	inline_script = {
-		script = zones/shared_unity_spiritualist_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	swap_type = district_yuzu_city_religious
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-
-	convert_to = {
-		zone_yuzu_unity_arcology
-		zone_yuzu_unity_bio_trophy_arcology
-	}
-}
-
-zone_yuzu_unity_bio_trophy_arcology = {
-	inline_script = {
-		script = zones/shared_unity_bio_trophy_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	swap_type = district_yuzu_city_administrative
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	triggered_district_planet_modifier = {
-		planet_housing_add = -1500
-	}
-
-	convert_to = {
-		zone_yuzu_unity_arcology
-		zone_yuzu_unity_spiritualist_arcology
-	}
-}
-
-zone_yuzu_fortress_arcology = {
-	inline_script = {
-		script = zones/shared_fortress_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	swap_type = district_yuzu_city_refinery
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-}
-
-zone_yuzu_trade_arcology = {
-	inline_script = {
-		script = zones/shared_trade_zone
-		AMOUNT = @doubled_scaling_district_1_job
-	}
-
-	swap_type = district_yuzu_city_industry
-	swap_type_weight = 5
-
-	zone_sets = {
-		yuzu_arcology
-	}
-
-	included_building_sets = {
-		urban_automation_arcology
-	}
-
-	excluded_building_sets = {
-		urban_automation
-	}
-
-	inline_script = {
-		script = zones/shared_arcology_zone_modifiers
-	}
-}

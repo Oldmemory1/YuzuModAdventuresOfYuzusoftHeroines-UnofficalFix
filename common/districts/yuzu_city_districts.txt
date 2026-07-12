@@ -6,8 +6,8 @@ district_yuzu_city_housing = {
 
 	zone_slots = {
 		slot_city_government
-		slot_yuzu_city_01
-		slot_yuzu_city_02
+		slot_yuzu_arcology_urban_01
+		slot_yuzu_arcology_urban_02
 	}
 
 	show_on_uncolonized = {
@@ -626,34 +626,5 @@ district_yuzu_city_administrative = {
 	}
 }
 
-district_yuzu_city_religious = {
-	icon = district_arcology_spiritualist
-	zone_slots = {
-		slot_empty
-	}
-	show_on_uncolonized = {
-		always = no
-	}
-	potential = {
-		always = no
-	}
-	triggered_name = {
-		text = district_arcology_name
-	}
-}
 
-district_yuzu_city_refinery = {
-	icon = district_arcology_fortress
-	zone_slots = {
-		slot_empty
-	}
-	show_on_uncolonized = {
-		always = no
-	}
-	potential = {
-		always = no
-	}
-	triggered_name = {
-		text = district_arcology_name
-	}
-}
+
