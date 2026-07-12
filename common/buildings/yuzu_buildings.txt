@@ -931,7 +931,7 @@ building_yuzu_master_archive = {
 	}
 
 	planet_modifier = {
-		job_yuzu_fe_archivist_add = 10
+		job_yuzu_fe_archivist_add = 1000
 	}
 
 	resources = {
