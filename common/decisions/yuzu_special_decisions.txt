@@ -8,7 +8,7 @@ decision_yuzu_arcology_project = {
 		category = decisions
 		cost = {
 			influence = 200
-			minerals = 20000
+			alloys = 10000
 			volatile_motes = 100
 			exotic_gases = 100
 			rare_crystals = 100
@@ -45,6 +45,10 @@ decision_yuzu_arcology_project = {
 				num_districts = { type = district_farming value < 1 }
 				num_districts = { type = district_mining value < 1 }
 				num_districts = { type = district_generator value < 1 }
+				# Volcanic Worlds
+				num_districts = { type = district_geothermal value < 1 }
+				num_districts = { type = district_melting value < 1 }
+				num_districts = { type = district_polytechnic value < 1 }
 			}
 			custom_tooltip = {
 				fail_text = legendary_leader_decision_arcology_project
@@ -121,7 +125,7 @@ decision_yuzu_arcology_project_relic = {
 		category = decisions
 		cost = {
 			influence = 200
-			minerals = 20000
+			alloys = 10000
 			volatile_motes = 100
 			exotic_gases = 100
 			rare_crystals = 100
@@ -215,8 +219,7 @@ decision_restore_yuzu_abyss_city = {
 		category = decisions
 		cost = {
 			influence = 200
-			minerals = 20000
-			alloys = 2000
+			alloys = 10000
 			volatile_motes = 100
 			exotic_gases = 100
 			rare_crystals = 100
@@ -273,8 +276,7 @@ decision_yuzu_abyss_city = {
 		category = decisions
 		cost = {
 			influence = 200
-			minerals = 20000
-			alloys = 2000
+			alloys = 10000
 			volatile_motes = 100
 			exotic_gases = 100
 			rare_crystals = 100
@@ -322,8 +324,7 @@ decision_yuzu_sunset_city = {
 		category = decisions
 		cost = {
 			influence = 200
-			minerals = 20000
-			alloys = 2000
+			alloys = 10000
 			volatile_motes = 100
 			exotic_gases = 100
 			rare_crystals = 100
