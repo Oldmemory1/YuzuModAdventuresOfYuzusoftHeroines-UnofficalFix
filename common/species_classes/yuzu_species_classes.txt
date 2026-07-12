@@ -9,16 +9,6 @@ YUZUGIRL = {
 
 	portrait_modding = yes
 
-	portraits = {
-		"yuzugirl_01"
-		"yuzugirl_02"
-	}
-
-	non_randomized_portraits = { #避免随机刷出？
-	    "yuzugirl_01"
-		"yuzugirl_02"
-	}
-
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 
@@ -34,14 +24,6 @@ ABYSS = {
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
     gender = no
-
-	portraits = {
-		"abyss_01"
-	}
-
-	non_randomized_portraits = {
-	    "abyss_01"
-	}
 
 	graphical_culture = humanoid_01
 	move_pop_sound_effect = "moving_pop_confirmation"

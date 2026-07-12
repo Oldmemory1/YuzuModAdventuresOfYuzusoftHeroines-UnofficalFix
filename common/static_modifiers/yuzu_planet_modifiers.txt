@@ -27,7 +27,6 @@ yuzu_abyss_infiltration = {
 	planet_stability_add = -20
 	planet_max_districts_add = -5
 	planet_resettlement_unemployed_destination_mult = -1.00
-	planet_immigration_pull_mult = -1.00
 	icon = "gfx/interface/icons/planet_modifiers/yuzu_abyss_infiltration.dds"
 	icon_frame = 3
 }
