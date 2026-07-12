@@ -46,8 +46,13 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/planet_classes/yuzu_planet_classes.txt` | `pop_growth_speed` / `planet_pop_assembly_organic_mult` | `bonus_pop_growth_mult` / `planet_pop_assembly_mult`（4 处） | 对照 vanilla 4.4.6 都市星球（`pc_city`）使用 `bonus_pop_growth_mult = 0.15` + `planet_pop_assembly_mult = 0.15`；盖亚星球使用 `logistic_growth_mult`；`_organic` 后缀已移除 |
 | `common/scripted_effects/yuzu_other_effects.txt` | `random_owned_pop` / `create_pop` + `last_created_pop` 在 `while` 中（5 处） | `while` + `random_owned_pop_group` + `kill_single_pop` / `create_pop_group` + `effect` | 对照 vanilla 4.4.6 `random_owned_pop_group` in `while`（参考 mod 3081699910 `plnmg_kill_with_mwc`）；ghost_signal 使用 `add_modifier` 在 pop_group 上；`create_pop` → `create_pop_group` + `size`（1 旧 pop = 100 pop_amount） |
 | `common/pop_categories/yuzu_categories.txt` | `pop_modifier` / `inline_script "pop_categories/regular_upkeep"` / `inline_script "pop_categories/cyborg_upkeep"`（3 处） | `pop_group_modifier` / 移除（2 处） | 对照 vanilla 4.4.6 `xeno_ward`（`02_other_categories.txt:605-649`）：`pop_modifier` 已重命名为 `pop_group_modifier`；`regular_upkeep` 和 `cyborg_upkeep` inline scripts 不存在（食物/矿物/能源维护费由生活标准系统处理） |
-| `common/districts/yuzu_city_districts.txt` — `district_yuzu_city_housing` | 无 zone_slots，直接 `job_*_add` + designation 切换（pre-4.4.6 模式） | 使用 4.4.6 zone 系统：`slot_city_government` + `slot_yuzu_city_01` + `slot_yuzu_city_02`（新增 `common/zone_slots/yuzu_zone_slots.txt`） | 对照 vanilla `district_arcology_housing`（`01_arcology_districts.txt`）：普世城住房区划不再直接提供岗位，而是通过 zone 特化；Yuzu zone slots 使用 `urban` 集但排除 `zone_spawning`（蜂巢）和 `zone_machine_replication`（机械世界）；建造费用改为合金（匹配普世城） |
-| `common/districts/yuzu_city_districts.txt` — 全面重构为 4.4.6 zone 系统 | 4 个区划使用 pre-4.4.6 模式直接加岗位 + designation 切换 | 新增 3 个 `district_yuzu_city_urban_1/2/3`（对标 `district_arcology_urban_1/2/3`），旧 4 区划转为 swap district（`slot_empty`，纯视觉）；新增 `common/zones/yuzu_zones.txt`（12 个 Yuzu arcology zones，`yuzu_arcology` zone set）；zone slots 改用 `yuzu_arcology` 集 | 对照 vanilla 4.4.6 普世城 + 参考 mod 2660548454：urban 区划使用 Yuzu 专属 arcology zone set 提供双倍岗位特化；zone 的 `swap_type` 指向 Yuzu swap district 实现视觉切换；同步更新 `yuzu_city_colony_types.txt`、`yuzu_other_effects.txt`、`Yuzu_abyss_crisis_event.txt`、localisation |
+| `common/districts/yuzu_city_districts.txt` — `district_yuzu_city_housing` | 无 zone_slots，直接 `job_*_add` + designation 切换（pre-4.4.6 模式） | 使用 4.4.6 zone 系统：`slot_city_government` + `slot_yuzu_city_01` + `slot_yuzu_city_02`（新增 `common/zone_slots/yuzu_zone_slots.txt`） | 对照 vanilla `district_arcology_housing`（`01_arcology_districts.txt`）；Yuzu zone slots 使用 `urban` 集但排除 `zone_spawning`（蜂巢）和 `zone_machine_replication`（机械世界） |
+| `common/districts/yuzu_city_districts.txt` — 迁移至 4.4.6 zone 系统 | 5 个区划使用 pre-4.4.6 模式直接加岗位 + designation 切换 | 新增 3 个 `district_yuzu_city_urban_1/2/3`（对标 `district_arcology_urban_1/2/3`）；旧 `industry`/`administrative`/`religious`/`refinery` 转为 swap district（`slot_empty`，纯视觉）；`district_yuzu_city_dream` 保留 | 对照 vanilla 4.4.6 普世城 + 参考 mod 2660548454；同步更新 `yuzu_city_colony_types.txt`、`yuzu_other_effects.txt`（`save_city_district_num`/`set_yuzu_city_district`）、`Yuzu_abyss_crisis_event.txt`、localisation |
+| `common/zones/yuzu_zones.txt` + `common/zone_slots/yuzu_zone_slots.txt`（新增） | — | 自定义 Yuzu zone 系统：3 个 arcology zone（`zone_yuzu_industrial/foundry/factory_arcology`，`yuzu_arcology` zone set）+ 3 个 dream zone（`zone_yuzu_energy/minerals/food_city_dream`，`yuzu_arcology_dream` zone set）；2 个 `slot_yuzu_city_01/02`（urban 集）+ 3 个 `slot_yuzu_arcology_urban_01/02/03` | 所有 Yuzu zone 使用 `zone_yuzu_*` 前缀避免覆盖原版；arcology zone 通过 `swap_type` 指向 Yuzu swap district 实现视觉切换；dream zone 为 sunset 世界专属（`planet_max_districts_add = 1`） |
+| `common/inline_scripts/jobs/yuzu_zone_job_*.txt`（新增，6 个） | — | 自定义 inline_scripts 按帝国类型分发岗位（`yuzu_zone_job_alloy/goods/energy/minerals/food/unity`） | 4.4.6 zone 系统通过 inline_script 提供岗位；每个 script 根据 `is_regular_empire`/`is_hive_empire`/`is_machine_empire`/`is_spiritualist` 分配合适的岗位类型 |
+| `common/districts/yuzu_city_districts.txt` — 梦境区划修复 | 建筑图标缺失、zone_slot 为空 | 添加缺失的 `slot_yuzu_city_dream_01` 及对应 zone | 对照 vanilla pattern 补充 dream zone slot 定义 |
+| `common/game_rules/zzz_yuzu_rules.txt` | 规则参数错误 | 修复 game rule | 同步 vanilla 4.4.6 规则格式 |
+| `localisation/simp_chinese/yuzu_planet_l_simp_chinese.yml` | — | 新增 24 条 arcology zone 本地化 + 6 条 dream zone 本地化；恢复旧区划的本地化条目 | zone 名称引用 `$zone_*$` 变量或自定义中文翻译（dream zone 使用幻梦境主题） |
 
 ### 版本管理
 
@@ -66,12 +71,16 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 ├── common/                  # 游戏数据定义
 │   ├── ascension_perks/     # 飞升天赋
 │   ├── buildings/           # 建筑
+│   ├── colony_types/        # 殖民类型
 │   ├── decisions/           # 决议
 │   ├── deposits/            # 地块沉积
 │   ├── districts/           # 区划
 │   ├── edicts/              # 法令
+│   ├── game_rules/          # 游戏规则
 │   ├── governments/         # 政体/起源/国民理念
+│   ├── inline_scripts/      # 内联脚本（jobs/ 等）
 │   ├── planet_classes/      # 行星类型
+│   ├── pop_categories/      # 人口类别
 │   ├── pop_jobs/            # 人口职业
 │   ├── scripted_effects/    # 脚本化效果
 │   ├── scripted_triggers/   # 脚本化触发器
@@ -79,11 +88,15 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 │   ├── static_modifiers/    # 静态修正
 │   ├── technology/          # 科技
 │   ├── traditions/          # 传统
-│   └── traits/              # 特质
+│   ├── traits/              # 特质
+│   ├── zone_slots/          # Zone 插槽定义
+│   └── zones/               # Zone 定义
 ├── events/                  # 事件脚本
 ├── gfx/                     # 纹理素材（git 排除）
 ├── interface/               # UI 定义
 ├── localisation/            # 本地化文本（简体中文）
+├── docs/                    # 参考文档
+├── scripts/                 # Python 辅助脚本
 └── main.py                  # Python 辅助脚本
 ```
 
