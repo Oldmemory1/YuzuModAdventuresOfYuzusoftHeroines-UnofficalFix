@@ -50,6 +50,7 @@
  YUZU_PREVENT_ABYSS_INFILTRATION_DESC:0"深渊之息从[Root.GetName]的深渊之门中一刻不断地涌出，周围的浓度高到我们最先进的防护装置也挡不住超过10秒。虽然弥漫开来后它的浓度有所下降，不至于对星球上的人们造成致命威胁，但是若不解决，人们将每天都得穿着厚厚的防护服，工作和生活也将收到严重的影响。"
 
  yuzu_wish_megastructure_build_modifier:0"愿望：巨构建造"
+ yuzu_cloaking_detection_modifier:0"深渊侦测"
  yuzu_abyss_empire_defeated:0"深渊教廷被击败"
  guardians_of_the_galaxy_anti_abyss_0:0"对抗深渊教廷0"
  guardians_of_the_galaxy_anti_abyss_1:0"对抗深渊教廷1"
