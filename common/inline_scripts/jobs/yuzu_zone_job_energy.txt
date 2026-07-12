@@ -1,0 +1,29 @@
+#常规
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_fallen_empire_spiritualist = no
+		}
+	}
+	job_technician_add = $AMOUNT$
+}
+#唯心堕落
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_fallen_empire_spiritualist = yes }
+	}
+	job_fe_acolyte_generator_add = $AMOUNT$
+}
+#格式塔
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_technician_drone_add = $AMOUNT$
+}

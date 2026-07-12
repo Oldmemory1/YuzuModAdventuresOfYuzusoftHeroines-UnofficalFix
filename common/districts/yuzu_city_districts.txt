@@ -389,6 +389,10 @@ district_yuzu_city_dream = {
 		exists = owner
 	}
 
+	zone_slots = {
+		slot_yuzu_arcology_dream_city
+	}
+
 	conversion_ratio = 1
 	convert_to = {
 		district_city
@@ -405,128 +409,6 @@ district_yuzu_city_dream = {
 		upkeep = {
 			energy = 5
 			rare_crystals = 1
-		}
-	}
-
-	planet_modifier = {
-		planet_max_districts_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
-		}
-		modifier = {
-			job_technician_add = 200
-			job_miner_add = 200
-			job_farmer_add = 200
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_technician_drone_add = 200
-			job_mining_drone_add = 200
-			job_agri_drone_add = 200
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_generator
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
-		}
-		modifier = {
-			job_technician_add = 400
-			job_miner_add = -200
-			job_farmer_add = -200
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_mining
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
-		}
-		modifier = {
-			job_technician_add = -200
-			job_miner_add = 400
-			job_farmer_add = -200
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_farming
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
-		}
-		modifier = {
-			job_technician_add = -200
-			job_miner_add = -200
-			job_farmer_add = 400
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_generator
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_technician_drone_add = 400
-			job_mining_drone_add = -200
-			job_agri_drone_add = -200
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_mining
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_technician_drone_add = -200
-			job_mining_drone_add = 400
-			job_agri_drone_add = -200
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_designation = col_yuzu_city_farming
-			exists = owner
-			owner = {
-				is_gestalt = yes
-			}
-		}
-		modifier = {
-			job_technician_drone_add = -200
-			job_mining_drone_add = -200
-			job_agri_drone_add = 400
 		}
 	}
 
@@ -589,6 +471,10 @@ district_yuzu_city_dream = {
 		}
 		text = job_agri_drone_effect_desc
 	}
+
+	triggered_name = {
+		text = district_yuzu_city_dream
+	}
 }
 
 # Swap Districts (visual only — used by Yuzu arcology zone swap_type)
@@ -625,6 +511,3 @@ district_yuzu_city_administrative = {
 		text = district_arcology_name
 	}
 }
-
-
-

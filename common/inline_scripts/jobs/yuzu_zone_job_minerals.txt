@@ -1,0 +1,20 @@
+#常规
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_miner_add = $AMOUNT$
+}
+#格式塔
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_mining_drone_add = $AMOUNT$
+}

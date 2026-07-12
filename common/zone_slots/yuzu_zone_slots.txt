@@ -100,3 +100,14 @@ slot_yuzu_arcology_urban_03 = {
 		}
 	}
 }
+
+slot_yuzu_arcology_dream_city = {
+	included_zone_sets = {
+		yuzu_arcology_dream
+	}
+
+	unlock = { # planet scope
+		uses_district_set = yuzu_sunset_city_world
+
+	}
+}
