@@ -191,3 +191,10 @@
  zone_yuzu_fortress_arcology_desc: "$zone_fortress_desc$"
  zone_yuzu_trade_arcology: "$zone_trade$"
  zone_yuzu_trade_arcology_desc: "$zone_trade_desc$"
+# Yuzu Dream Zone localisation (Sunset City World — custom inline scripts)
+ zone_yuzu_energy_city_dream:0 "梦境能源区"
+ zone_yuzu_energy_city_dream_desc:0 "从幻梦境的混沌中提取纯粹的能量——发电机的嗡鸣与虚幻的雷鸣在此交织，为现实世界提供源源不断的电力。"
+ zone_yuzu_minerals_city_dream:0 "梦境矿区"
+ zone_yuzu_minerals_city_dream_desc:0 "幻梦境的大地深处埋藏着无尽的矿物，只需轻轻叩击便会浮现于眼前——采矿在这里不需要钻头，需要的是想象力。"
+ zone_yuzu_food_city_dream:0 "梦境农场"
+ zone_yuzu_food_city_dream_desc:0 "梦境中的土地永不贫瘠，只需播下思想的种子就能收获丰饶的作物——在这片幻梦境里，丰收是唯一被允许的结局。"
