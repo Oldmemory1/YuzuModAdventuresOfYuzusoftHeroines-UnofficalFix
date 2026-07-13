@@ -55,6 +55,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `localisation/simp_chinese/yuzu_planet_l_simp_chinese.yml` | — | 新增 24 条 arcology zone 本地化 + 6 条 dream zone 本地化；恢复旧区划的本地化条目 | zone 名称引用 `$zone_*$` 变量或自定义中文翻译（dream zone 使用幻梦境主题） |
 | `events/Yuzu_abyss_crisis_event.txt` | `every_owned_pop`（immediate 块中） | `every_owned_pop_group` | 4.4.6 中 `every_owned_pop` 在 `immediate` 中已废弃；对照 vanilla `colony_events_1.txt` 等使用 pop group 操作 `pop_recently_conquered` |
 | `events/Yuzu_planet_destruction_event.txt` | `every_owned_pop`（已注释掉，巨像摧毁行星时危机进度统计失效） | `while { count = value:per_100_pop_amount }` + `from.owner = { complete_crisis_objective = crisobj_purge_pops }` | 逐 pop 调用已废弃，对照 vanilla `planet_destruction_events.txt:969-977` 按每 100 人口循环统计 |
+| `events/Yuzu_planet_destruction_event.txt` | `count_owned_pop` | `count_owned_pop_amount` | 4.0 后人口统计触发器重命名（pop 以 1/100 为单位，`count > 0` 逻辑不变） |
 
 ### 版本管理
 

@@ -122,7 +122,7 @@ planet_event = {
 		}
 		else_if = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					count > 0
 				}
 			}
