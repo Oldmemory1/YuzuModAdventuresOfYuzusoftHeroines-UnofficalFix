@@ -1,7 +1,12 @@
 cafe_clerk = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_yuzu_cafe
+	swappable_data = {
+		default = {
+			icon = cafe_clerk
+			building_icon = building_yuzu_cafe
+		}
+	}
 	clothes_texture_index = 3
 
 	possible_pre_triggers = {
@@ -49,10 +54,14 @@ cafe_clerk = {
 supernatural_researcher = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_yuzu_supernatural_research_organization
+	swappable_data = {
+		default = {
+			icon = researcher
+			building_icon = building_yuzu_supernatural_research_organization
+		}
+	}
 	clothes_texture_index = 3
-	icon = astral_researcher
-
+	
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -132,7 +141,13 @@ supernatural_researcher = {
 yuzu_witch = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_yuzu_supernatural_research_organization
+
+	swappable_data = {
+		default = {
+			building_icon = building_yuzu_supernatural_research_organization
+			icon = yuzu_witch
+		}
+	}
 	clothes_texture_index = 3
 
 	possible_pre_triggers = {
@@ -188,9 +203,16 @@ yuzu_witch = {
 yuzu_slime_researcher = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_research_lab_1
+	
 	clothes_texture_index = 3
-	icon = astral_researcher
+	
+
+	swappable_data = {
+		default = {
+			building_icon = building_research_lab_1
+			icon = researcher
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -241,9 +263,16 @@ yuzu_slime_breeder = {
 	category = worker
 	condition_string = WORKER_JOB_TRIGGER
 	is_capped_by_modifier = yes
-	building_icon = building_food_processing_facility
+	
 	clothes_texture_index = 2
-	icon = farmer
+	
+
+	swappable_data = {
+		default = {
+			building_icon = building_food_processing_facility
+			icon = farmer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -295,10 +324,17 @@ yuzu_slime_breeder = {
 
 yuzu_fe_archivist = {
 	category = specialist
-	icon = fe_archivist
+	
 	is_capped_by_modifier = yes
-	building_icon = building_master_archive
+	
 	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_master_archive
+			icon = fe_archivist
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -346,10 +382,17 @@ yuzu_fe_archivist = {
 
 yuzu_fe_augur = {
 	category = specialist
-	icon = priest
+	
 	is_capped_by_modifier = yes
-	building_icon = building_citadel_of_faith
+	
 	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_citadel_of_faith
+			icon = priest
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -386,9 +429,16 @@ yuzu_fe_augur = {
 
 yuzu_fe_protector = {
 	category = specialist
-	icon = enforcer
+	
 	condition_string = BATTLE_THRALL_JOB_TRIGGER
-	building_icon = building_fortress
+	
+
+	swappable_data = {
+		default = {
+			building_icon = building_fortress
+			icon = enforcer
+		}
+	}
 	clothes_texture_index = 2
 
 	possible_pre_triggers = {
@@ -518,10 +568,17 @@ yuzu_fe_protector = {
 
 yuzu_fe_xeno_keeper = {
 	category = specialist
-	icon = culture_worker
+	
 	is_capped_by_modifier = yes
-	building_icon = building_fe_xeno_zoo
+	
 	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_fe_xeno_zoo
+			icon = culture_worker
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -556,9 +613,15 @@ yuzu_fe_xeno_keeper = {
 
 yuzu_fe_xeno_ward = {
 	category = yuzu_xeno_ward
-	icon = fe_xeno_ward
 	is_capped_by_modifier = no
 	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_fe_xeno_zoo
+			icon = fe_xeno_ward
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes

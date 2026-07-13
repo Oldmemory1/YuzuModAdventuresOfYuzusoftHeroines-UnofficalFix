@@ -61,7 +61,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `events/Yuzu_test_event.txt` | `capital_scope` → `spawn_system` + `add_hyperlane`（`from = this`，this 为 Colony） | `capital_scope.solar_system` → 同上（this 为 System） | `capital_scope` 在 4.4.6 中为 Colony 作用域，`add_hyperlane` 需 System 作用域；对照 vanilla `game_start.txt`、`toxoids_events.txt` 使用 `solar_system` 链式调用 |
 | `events/Yuzu_test_event.txt` | `give_technology = { tech = tech_genetic_resequencing }` | 移除 | 该科技在 4.4.6 中不存在（可能是极旧版本的遗传修饰科技），测试事件无需此科技 |
 | `common/deposits/Yuzu_deposits.txt` | `job_researcher_add` / `job_head_researcher_add` / `job_culture_worker_add` 在 `planet_modifier` 中（6 个特征） | `job_physicist_add` + `job_biologist_add` + `job_engineer_add` / `job_bureaucrat_add` / `job_enforcer_add` 在 `triggered_planet_modifier` 中 + 格式塔分流；gate 类特征改用 `inline_script = jobs/yuzu_zone_job_researcher` | 4.4.6 中 `researcher`/`head_researcher`/`culture_worker` 均为 fake job（`possible = always = no`），且 `job_*_add` 须在 `triggered_planet_modifier` 中配合 `exists = owner` 检查；对照 vanilla `d_migrating_forest_reserve` / `d_payback_habitat_research` |
-| `common/pop_jobs/yuzu_jobs.txt` | `icon = researcher`（supernatural_researcher） | `icon = astral_researcher` | 4.4.6 中 `researcher` 图标已移除；`astral_researcher` 主题与超自然研究一致 |
+| `common/pop_jobs/yuzu_jobs.txt` | `icon = researcher`（supernatural_researcher） | `icon = researcher` | 4.4.6 中 `researcher` 图标已移除；`astral_researcher` 主题与超自然研究一致 |
 | `events/Yuzu_origin_event.txt` | `building_commercial_zone` | `building_holo_theatres` | 4.4.6 中商业区建筑已移除，对照 vanilla 使用剧院 |
 | `common/inline_scripts/jobs/yuzu_zone_job_researcher.txt` | — | **新增** | Yuzu gate 特征的研究岗位 inline_script（`$AMOUNT$` 参数化 + 格式塔分流） |
 
