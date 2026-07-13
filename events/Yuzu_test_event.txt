@@ -62,7 +62,7 @@ country_event = {
 				NOT = { has_global_flag = yuzu_old_abyss_system_discovered }
 			}
 			set_global_flag = yuzu_old_abyss_system_discovered
-			capital_scope = {
+			capital_scope.solar_system = {
 				spawn_system = {
 					min_distance = 20
 					max_distance = 30
