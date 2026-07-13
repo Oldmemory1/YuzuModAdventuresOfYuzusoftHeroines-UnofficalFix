@@ -170,6 +170,10 @@ ship_design = {
 			slot = "AUX_UTILITY_3"
 			template = "FIRE_CONTROL_YUZU"
 		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "FIRE_CONTROL_YUZU"
+		}
 	}
 
 	required_component="SENSOR_YUZU_1"
@@ -269,6 +273,10 @@ ship_design = {
 			slot = "AUX_UTILITY_2"
 			template = "FIRE_CONTROL_YUZU"
 		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "FIRE_CONTROL_YUZU"
+		}
 	}
 
 	required_component="SENSOR_YUZU_1"
@@ -354,6 +362,10 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
 			template = "FIRE_CONTROL_YUZU"
 		}
 	}
@@ -540,6 +552,10 @@ ship_design = {
 			slot = "AUX_UTILITY_3"
 			template = "ENIGMATIC_DECODER"
 		}
+		component = {
+			slot = "AUX_UTILITY_4"
+			template = "ENIGMATIC_DECODER"
+		}
 	}
 	required_component="SENSOR_YUZU_2"
 	required_component="PSI_JUMP_DRIVE_1"
@@ -638,6 +654,10 @@ ship_design = {
 			slot = "AUX_UTILITY_2"
 			template = "ENIGMATIC_ENCODER"
 		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "ENIGMATIC_ENCODER"
+		}
 	}
 	required_component="SENSOR_YUZU_2"
 	required_component="PSI_JUMP_DRIVE_1"
@@ -722,6 +742,10 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
+			template = "ENIGMATIC_ENCODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
 			template = "ENIGMATIC_ENCODER"
 		}
 	}
@@ -882,6 +906,18 @@ ship_design = {
 		component = {
 			slot = "LARGE_UTILITY_6"
 			template = "LARGE_YUZU_ARMOR_2"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "ENIGMATIC_DECODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "ENIGMATIC_DECODER"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "ENIGMATIC_DECODER"
 		}
 	}
 	required_component="SENSOR_YUZU_2"
