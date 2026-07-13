@@ -22,6 +22,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/component_templates/yuzu_weapons.txt` | `use_ship_kill_target = no` | `use_ship_main_target = no`（6 处） | 旧键已移除，对照 vanilla Arc Emitter / Particle Lance |
 | `common/technology/yuzu_tech.txt` | `@ap_technological_ascendancy_rare_tech` | `factor = 9`（48 处） | 该 scripted variable 在 4.0 后已移除 |
 | `gfx/portraits/portraits/yuzu_portraits.txt` | `hair_selector` | `attachment_selector`（69 处） | 4.0 后 hair_selector 已重命名 |
+| `gfx/portraits/portraits/abyss_portraits.txt` | `hair_selector` | `attachment_selector`（1 处） | 同上，之前修复 yuzu_portraits 时遗漏 |
 | `common/colony_types/yuzu_city_colony_types.txt` | 缺失 `_tt` 本地化键 | 新增 19 条 tooltip 标签 | 对照 vanilla col_city_tt 模式补充 |
 | `common/component_templates/yuzu_others.txt` | `use_ship_kill_target = no` | `use_ship_main_target = no`（2 处） | 对照 vanilla 星爆器/巨像武器 |
 | `common/component_templates/yuzu_roles.txt` | `size_restriction` 含 `yuzu_reaper_scythe` | 移除（2 处） | 该舰船类型未定义 |

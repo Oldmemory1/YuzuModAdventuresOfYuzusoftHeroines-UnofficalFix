@@ -1,5 +1,5 @@
 portraits = {
-	abyss_0 = { clothes_selector = "no_texture" hair_selector = "no_texture" 
+	abyss_0 = { clothes_selector = "no_texture" attachment_selector = "no_texture" 
     texturefile = "gfx/models/portraits/abyss_01/abyss_0.dds" }
 }
 
