@@ -51,7 +51,7 @@ supernatural_researcher = {
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_yuzu_supernatural_research_organization
 	clothes_texture_index = 3
-	icon = researcher
+	icon = astral_researcher
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -190,7 +190,7 @@ yuzu_slime_researcher = {
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_research_lab_1
 	clothes_texture_index = 3
-	icon = researcher
+	icon = astral_researcher
 
 	possible_pre_triggers = {
 		has_owner = yes
