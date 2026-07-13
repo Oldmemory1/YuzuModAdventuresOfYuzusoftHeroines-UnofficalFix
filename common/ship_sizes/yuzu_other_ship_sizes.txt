@@ -1,4 +1,4 @@
-#####原版内容#####
+##### 原版内容 — 同步 vanilla 4.4.6 #####
 
 titan = {
 	formation_priority = @titan_formation_priority
@@ -10,19 +10,23 @@ titan = {
 	modifier = {
 		ship_evasion_add = @titan_evasion
 	}
-	size_multiplier = 16
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_16
 	fleet_slot_size = 8
 	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
 	num_target_locators = 4
 	is_space_station = no
-	icon = ship_size_military_16
 	base_buildtime = @titan_build_time
 	can_have_federation_design = yes
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes
 	selectable = { host_has_dlc = "Apocalypse" }
 
 	default_behavior = artillery
+
+	role_background = "GFX_role_selection_titan"
+	ship_roles = { artillery gunship }
 
 	prerequisites = { "tech_titans" }
 
@@ -51,6 +55,9 @@ titan = {
 			energy = @titan_upkeep_energy
 			alloys = @titan_upkeep_alloys
 		}
+		logistics = {
+			trade = @titan_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
@@ -59,8 +66,8 @@ titan = {
 
 	ai_ship_data = {
 		min = 1
-		max = 20
-		planet_mult = 1.0
+		max = 15
+		planet_mult = 0.1
 	}
 }
 
@@ -74,16 +81,17 @@ colossus = {
 	modifier = {
 		ship_evasion_add = @colossus_evasion
 	}
-	size_multiplier = 32
+	size_multiplier = 100
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_32
 	fleet_slot_size = 32
 	section_slots = { "ship" = { locator = "frame_ship" } }
 	num_target_locators = 4
 	is_space_station = no
-	icon = ship_size_military_32
 	base_buildtime = @colossus_build_time
 	can_have_federation_design = no
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes
 	selectable = { host_has_dlc = "Apocalypse" }
 
 	prerequisites = { "tech_colossus" }
@@ -112,6 +120,9 @@ colossus = {
 			energy = @colossus_upkeep_energy
 			alloys = @colossus_upkeep_alloys
 		}
+		logistics = {
+			trade = @colossus_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
@@ -120,21 +131,22 @@ colossus = {
 
 	ai_ship_data = {
 		min = 1
-		max = 3
-		planet_mult = 0.2
+		max = 1
 	}
+
+	available_to_everyone = yes
 }
 
 juggernaut = {
 	formation_priority = @juggernaut_formation_priority
-	max_speed = @speed_very_slow
+	max_speed = @speed_slow
 	acceleration = 0.2
 	rotation_speed = 0.15
 	collision_radius = @juggernaut_collision_radius
 	max_hitpoints = @juggernaut_hp
 	modifier = {
 		ship_evasion_add = @juggernaut_evasion
-		starbase_shipyard_capacity_add = 2
+		starbase_shipyard_capacity_add = 10
 	}
 
 	base_buildtime = @juggernaut_build_time
@@ -146,8 +158,10 @@ juggernaut = {
 		}
 	}
 
-	combat_size_multiplier = 5
-	size_multiplier = 32
+	combat_size_multiplier = 100
+	size_multiplier = 100
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_64
 	fleet_slot_size = 32
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -162,16 +176,16 @@ juggernaut = {
 	}
 
 	num_target_locators = 0
-	can_have_federation_design = yes
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+	can_have_federation_design = no
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes
 	can_disable = no
-	icon_frame = 7 #probably unused, but mobile starbases are special
-	icon = ship_size_military_64
+	icon_frame = 7
 	ship_class_icon_frame = 35
 	selectable = { host_has_dlc = "Federations" }
 
 	default_behavior = carrier
+	ship_roles = { carrier artillery }
 
 	prerequisites = { "tech_juggernaut" }
 	class = shipclass_starbase
@@ -190,7 +204,8 @@ juggernaut = {
 
 	ai_ship_data = {
 		min = 1
-		max = 3
-		planet_mult = 0.2
+		max = 1
 	}
+
+	available_to_everyone = yes
 }

@@ -65,6 +65,9 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `events/Yuzu_origin_event.txt` | `building_commercial_zone` | `building_holo_theatres` | 4.4.6 中商业区建筑已移除，对照 vanilla 使用剧院 |
 | `common/inline_scripts/jobs/yuzu_zone_job_researcher.txt` | — | **新增** | Yuzu gate 特征的研究岗位 inline_script（`$AMOUNT$` 参数化 + 格式塔分流） |
 | `common/country_limits/.../yuzu_ship_of_size_limits.txt` | colossus/juggernaut: `base = 32` + `max = 96` + `naval_cap_fraction` | `base = 100`，移除 `max` 和 `naval_cap_fraction` | 同步 vanilla 4.4.6 `00_ship_of_size_limits.txt`；yuzu_star_eater 同步调整为 `base = 100` |
+| `common/ship_sizes/yuzu_other_ship_sizes.txt` | titan/colossus/juggernaut: 旧版 `size_multiplier` 等（如 titan=16, colossus=32, juggernaut=32） | 同步 vanilla 4.4.6：titan=80, colossus/juggernaut=100；新增 `map_counter_icon`、`resources.logistics`、`ship_roles`、`available_to_everyone` | 旧版舰船大小参数已大幅调整，对照 `00_ship_sizes.txt` / `01_colossi.txt` / `18_juggernauts.txt` |
+| `common/ship_sizes/yuzu_ship_sizes.txt` | yuzu_star_eater: `size_multiplier=64`, `fleet_slot_size=64`, HP=300000, 多余再生/aura | 同步 vanilla star_eater 结构：`size_multiplier=40`, `fleet_slot_size=8`, HP=150000，移除多余 modifier | 对照 vanilla `20_nemesis.txt` star_eater；保留 `is_YUZU = yes` 和 `tech_yuzu_star_eater` 定制 |
+| `common/ship_sizes/yuzu_fallen_empires.txt` | 全 FE 舰船: 硬编码 HP、旧版 `size_multiplier`、缺失 `ship_modifier`/`map_counter_icon`、再生 0.5、缺失 biogenesis FE 舰船 | 同步 vanilla 4.4.6 `04_fallen_empires.txt`：使用 `@fe_*_hp` 变量、新版 multiplier、新增 `ship_modifier`（射程加成）、再生 0.1、新增 5 艘 biogenesis FE 舰船 | 保留每个 `graphical_culture` 中的 `fallen_yuzu_abyss_empire_01` |
 
 ### 版本管理
 
