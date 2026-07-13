@@ -11,6 +11,10 @@ ship_design = {
 			template = "YUZU_BEAM_1"
 		}
 		component = {
+			slot = "TITANIC_02"
+			template = "YUZU_BEAM_1"
+		}
+		component = {
 			slot = "STRIKE_CRAFT_01"
 			template = "STRIKE_CRAFT_HANGAR_3"
 		}
@@ -198,6 +202,10 @@ ship_design = {
 			template = "YUZU_LANCE_1"
 		}
 		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "YUZU_LANCE_1"
+		}
+		component = {
 			slot = "LARGE_GUN_01"
 			template = "YUZU_L_1"
 		}
@@ -285,6 +293,10 @@ ship_design = {
 			template = "YUZU_L_1"
 		}
 		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1"
+		}
+		component = {
 			slot = "SMALL_GUN_01"
 			template = "YUZU_S_1"
 		}
@@ -366,6 +378,10 @@ ship_design = {
 
 		component = {
 			slot = "TITANIC_01"
+			template = "YUZU_BEAM_3"
+		}
+		component = {
+			slot = "TITANIC_02"
 			template = "YUZU_BEAM_3"
 		}
 		component = {
@@ -555,6 +571,10 @@ ship_design = {
 			template = "YUZU_LANCE_3"
 		}
 		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "YUZU_LANCE_3"
+		}
+		component = {
 			slot = "LARGE_GUN_01"
 			template = "YUZU_L_3"
 		}
@@ -638,6 +658,10 @@ ship_design = {
 
 		component = {
 			slot = "LARGE_GUN_01"
+			template = "YUZU_L_3"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
 			template = "YUZU_L_3"
 		}
 		component = {
