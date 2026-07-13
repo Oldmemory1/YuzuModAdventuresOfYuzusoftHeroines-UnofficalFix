@@ -205,7 +205,7 @@ trait_abyss = {
 		species_empire_size_mult = 0.50
 	}
 
-	triggered_planet_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -215,7 +215,9 @@ trait_abyss = {
 				}
 			}
 		}
-		planet_pops_consumer_goods_upkeep_mult = -0.50
+		modifier = {
+			planet_pops_consumer_goods_upkeep_mult = -0.50
+		}
 	}
 
 	slave_cost = {

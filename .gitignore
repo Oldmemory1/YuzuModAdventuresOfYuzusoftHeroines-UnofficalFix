@@ -20,3 +20,4 @@ gfx/**/*.dds
 error.json
 uv.lock
 /.cwtools-ai
+/docs

@@ -56,6 +56,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `events/Yuzu_abyss_crisis_event.txt` | `every_owned_pop`（immediate 块中） | `every_owned_pop_group` | 4.4.6 中 `every_owned_pop` 在 `immediate` 中已废弃；对照 vanilla `colony_events_1.txt` 等使用 pop group 操作 `pop_recently_conquered` |
 | `events/Yuzu_planet_destruction_event.txt` | `every_owned_pop`（已注释掉，巨像摧毁行星时危机进度统计失效） | `while { count = value:per_100_pop_amount }` + `from.owner = { complete_crisis_objective = crisobj_purge_pops }` | 逐 pop 调用已废弃，对照 vanilla `planet_destruction_events.txt:969-977` 按每 100 人口循环统计 |
 | `events/Yuzu_planet_destruction_event.txt` | `count_owned_pop` | `count_owned_pop_amount` | 4.0 后人口统计触发器重命名（pop 以 1/100 为单位，`count > 0` 逻辑不变） |
+| `common/traits/yuzu_species_traits.txt` | `triggered_planet_modifier`（trait_abyss 中） | `triggered_pop_group_modifier` + 嵌套 `modifier` 块 | `triggered_planet_modifier` 仅在领袖特质中存在，物种特质中须用 `triggered_pop_group_modifier`；对照 vanilla 水生特质 (`02_species_traits_basic_characteristics.txt`) 和低维护特质 (`09_tox_traits.txt`) |
 
 ### 版本管理
 
