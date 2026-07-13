@@ -15,10 +15,6 @@ country_event = {
 		set_country_flag = colossus_project
 		set_country_flag = yuzu_abyss_project
 		give_technology = {
-			tech = tech_genetic_resequencing
-			message = no
-		}
-		give_technology = {
 			tech = tech_yuzu_werewolf
 			message = no
 		}

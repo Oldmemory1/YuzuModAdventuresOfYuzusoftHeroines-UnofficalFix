@@ -58,6 +58,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `events/Yuzu_planet_destruction_event.txt` | `count_owned_pop` | `count_owned_pop_amount` | 4.0 后人口统计触发器重命名（pop 以 1/100 为单位，`count > 0` 逻辑不变） |
 | `common/traits/yuzu_species_traits.txt` | `triggered_planet_modifier`（trait_abyss 中） | `triggered_pop_group_modifier` + 嵌套 `modifier` 块 | `triggered_planet_modifier` 仅在领袖特质中存在，物种特质中须用 `triggered_pop_group_modifier`；对照 vanilla 水生特质 (`02_species_traits_basic_characteristics.txt`) 和低维护特质 (`09_tox_traits.txt`) |
 | `events/Yuzu_test_event.txt` | `capital_scope` → `spawn_system` + `add_hyperlane`（`from = this`，this 为 Colony） | `capital_scope.solar_system` → 同上（this 为 System） | `capital_scope` 在 4.4.6 中为 Colony 作用域，`add_hyperlane` 需 System 作用域；对照 vanilla `game_start.txt`、`toxoids_events.txt` 使用 `solar_system` 链式调用 |
+| `events/Yuzu_test_event.txt` | `give_technology = { tech = tech_genetic_resequencing }` | 移除 | 该科技在 4.4.6 中不存在（可能是极旧版本的遗传修饰科技），测试事件无需此科技 |
 
 ### 版本管理
 
