@@ -1,16 +1,31 @@
 d_yuzu_aqua_eden = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare #稀有
-	
+
 	icon = d_yuzu_aqua_eden
-	
+
 	planet_modifier = {
-        planet_max_districts_add = 1
+		planet_max_districts_add = 1
+		planet_housing_add = 1000 #住房
+		planet_jobs_trade_produces_mult = 0.15 #贸易额
+		planet_crime_mult = -0.15 #犯罪度
+		planet_jobs_society_research_produces_mult = 0.20
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
 		job_enforcer_add = 100
-        planet_housing_add = 1000 #住房
-        planet_jobs_trade_produces_mult = 0.15 #贸易额
-        planet_crime_mult = -0.15 # 犯罪度
-        planet_jobs_society_research_produces_mult = 0.20
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_patrol_drone_add = 100
 	}
 
 	drop_weight = {
@@ -21,7 +36,7 @@ d_yuzu_aqua_eden = {
 d_yuzu_islenauts = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare #稀有
-	
+
 	icon = d_yuzu_islenauts
 
 	resources = {
@@ -30,21 +45,40 @@ d_yuzu_islenauts = {
 			rare_crystals = 1
 		}
 	}
-	
+
 	planet_modifier = {
 		planet_max_districts_add = 1
-        planet_housing_add = 500
-        planet_amenities_add = 1000
-        planet_jobs_trade_produces_mult = 0.10
-        planet_jobs_physics_research_produces_mult = 0.20
-        planet_jobs_society_research_produces_mult = 0.20
-        planet_jobs_engineering_research_produces_mult = 0.20
-        planet_jobs_unity_produces_mult = 0.10
-        job_head_researcher_add = 100
-        job_researcher_add = 200
-        job_culture_worker_add = 200
+		planet_housing_add = 500
+		planet_amenities_add = 1000
+		planet_jobs_trade_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.20
+		planet_jobs_engineering_research_produces_mult = 0.20
+		planet_jobs_unity_produces_mult = 0.10
 	}
-	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_physicist_add = 100
+		job_biologist_add = 100
+		job_engineer_add = 100
+		job_bureaucrat_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_calculator_physicist_add = 100
+		job_calculator_biologist_add = 100
+		job_calculator_engineer_add = 100
+		job_coordinator_add = 200
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -53,15 +87,22 @@ d_yuzu_islenauts = {
 d_yuzu_slime_reserve = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
-	
+
 	icon = d_alien_pets_deposit
-	
+
 	planet_modifier = {
 		planet_amenities_add = 200
-		job_yuzu_slime_researcher_add = 200
-		job_yuzu_slime_researcher_per_pop = 0.05 # 1 per 20
 	}
-	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_yuzu_slime_researcher_add = 200
+		job_yuzu_slime_researcher_per_pop = 0.05 # 1 per 20 pops
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -70,17 +111,35 @@ d_yuzu_slime_reserve = {
 d_yuzu_abyss_gate = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare #稀有
-	
+
 	icon = d_yuzu_abyss_gate
-	
+
 	planet_modifier = {
-        planet_jobs_physics_research_produces_mult = 0.30
-        planet_jobs_society_research_produces_mult = 0.30
-        planet_jobs_engineering_research_produces_mult = 0.30
-        job_head_researcher_add = 100
-        job_researcher_add = 1200
+		planet_jobs_physics_research_produces_mult = 0.30
+		planet_jobs_society_research_produces_mult = 0.30
+		planet_jobs_engineering_research_produces_mult = 0.30
 	}
-	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_physicist_add = 433
+		job_biologist_add = 433
+		job_engineer_add = 434
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_calculator_physicist_add = 433
+		job_calculator_biologist_add = 433
+		job_calculator_engineer_add = 434
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -89,17 +148,35 @@ d_yuzu_abyss_gate = {
 d_yuzu_imitation_abyss_gate = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare #稀有
-	
+
 	icon = d_yuzu_abyss_gate
-	
+
 	planet_modifier = {
-        planet_jobs_physics_research_produces_mult = 0.15
-        planet_jobs_society_research_produces_mult = 0.15
-        planet_jobs_engineering_research_produces_mult = 0.15
-        job_head_researcher_add = 100
-        job_researcher_add = 600
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
 	}
-	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_physicist_add = 233
+		job_biologist_add = 233
+		job_engineer_add = 234
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_calculator_physicist_add = 233
+		job_calculator_biologist_add = 233
+		job_calculator_engineer_add = 234
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -108,17 +185,35 @@ d_yuzu_imitation_abyss_gate = {
 d_yuzu_dream_gate = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
-	
+
 	icon = d_yuzu_dream_gate
-	
+
 	planet_modifier = {
-        planet_jobs_physics_research_produces_mult = 0.15
-        planet_jobs_society_research_produces_mult = 0.15
-        planet_jobs_engineering_research_produces_mult = 0.15
-        job_head_researcher_add = 100
-        job_researcher_add = 600
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
 	}
-	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_physicist_add = 233
+		job_biologist_add = 233
+		job_engineer_add = 234
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_calculator_physicist_add = 233
+		job_calculator_biologist_add = 233
+		job_calculator_engineer_add = 234
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -126,13 +221,13 @@ d_yuzu_dream_gate = {
 
 d_yuzu_dream_land = {
 	is_for_colonizable = yes
-	
+
 	icon = d_yuzu_dream_land
-	
+
 	planet_modifier = {
-        district_yuzu_city_dream_max = 1
+		district_yuzu_city_dream_max = 1
 	}
-	
+
 	drop_weight = {
 		weight = 0
 	}
