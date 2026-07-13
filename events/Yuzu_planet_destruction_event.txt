@@ -252,14 +252,15 @@ planet_event = {
 				}
 			}
 		}
-		#every_owned_pop = {
-		#	from.owner = {
-		#		if = {
-		#			limit = { has_ascension_perk = ap_become_the_crisis }
-		#			complete_crisis_objective = crisobj_purge_pops
-		#		}
-		#	}
-		#}
+		while = {
+			count = value:per_100_pop_amount #For every 100 pops iterate through this loop once
+			from.owner = {
+				if = {
+					limit = { has_ascension_perk = ap_become_the_crisis }
+					complete_crisis_objective = crisobj_purge_pops
+				}
+			}
+		}
 		set_update_modifiers_batch = begin
 		remove_all_districts = yes
 		remove_all_buildings = yes

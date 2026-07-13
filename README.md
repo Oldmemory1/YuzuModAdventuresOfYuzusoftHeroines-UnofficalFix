@@ -53,6 +53,8 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/districts/yuzu_city_districts.txt` — 梦境区划修复 | 建筑图标缺失、zone_slot 为空 | 添加缺失的 `slot_yuzu_city_dream_01` 及对应 zone | 对照 vanilla pattern 补充 dream zone slot 定义 |
 | `common/game_rules/zzz_yuzu_rules.txt` | 规则参数错误 | 修复 game rule | 同步 vanilla 4.4.6 规则格式 |
 | `localisation/simp_chinese/yuzu_planet_l_simp_chinese.yml` | — | 新增 24 条 arcology zone 本地化 + 6 条 dream zone 本地化；恢复旧区划的本地化条目 | zone 名称引用 `$zone_*$` 变量或自定义中文翻译（dream zone 使用幻梦境主题） |
+| `events/Yuzu_abyss_crisis_event.txt` | `every_owned_pop`（immediate 块中） | `every_owned_pop_group` | 4.4.6 中 `every_owned_pop` 在 `immediate` 中已废弃；对照 vanilla `colony_events_1.txt` 等使用 pop group 操作 `pop_recently_conquered` |
+| `events/Yuzu_planet_destruction_event.txt` | `every_owned_pop`（已注释掉，巨像摧毁行星时危机进度统计失效） | `while { count = value:per_100_pop_amount }` + `from.owner = { complete_crisis_objective = crisobj_purge_pops }` | 逐 pop 调用已废弃，对照 vanilla `planet_destruction_events.txt:969-977` 按每 100 人口循环统计 |
 
 ### 版本管理
 
@@ -102,7 +104,6 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 
 ## 已知问题
 
-- 4.0 人口统计方式变更后，模组特有巨像清除人口不会被统计在武灾（ genocide）进度内
 - 更多兼容性问题待发现和修复
 
 ## 许可

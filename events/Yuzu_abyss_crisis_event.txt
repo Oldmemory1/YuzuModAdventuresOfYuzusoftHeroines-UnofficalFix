@@ -1605,7 +1605,7 @@ planet_event = {
 
 	immediate = {
 		set_owner = fromfrom
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_species_class = ABYSS
 			}
