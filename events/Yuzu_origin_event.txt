@@ -34,8 +34,8 @@ country_event = {
 						has_building = building_research_lab_1
 					}
 					remove_building = building_research_lab_1
-					add_building = building_yuzu_supernatural_research_organization
 				}
+				add_building = building_yuzu_supernatural_research_organization
 				if = {
 					limit = {
 						has_building = building_commercial_zone
