@@ -704,11 +704,8 @@ country_event = {
 				}
 				set_owner = event_target:new_abyss_country
 				set_capital = yes
-				while = {
-					count = 100
-					create_pop = {
-						species = event_target:new_abyss_species
-					}
+				create_pop_group = {
+					species = event_target:new_abyss_species
 				}
 				add_building = building_system_capital
 				while = {

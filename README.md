@@ -55,6 +55,7 @@ Stellaris 4.4.x 版本兼容移植，基于 [Steam Workshop 原版](https://stea
 | `common/game_rules/zzz_yuzu_rules.txt` | 规则参数错误 | 修复 game rule | 同步 vanilla 4.4.6 规则格式 |
 | `localisation/simp_chinese/yuzu_planet_l_simp_chinese.yml` | — | 新增 24 条 arcology zone 本地化 + 6 条 dream zone 本地化；恢复旧区划的本地化条目 | zone 名称引用 `$zone_*$` 变量或自定义中文翻译（dream zone 使用幻梦境主题） |
 | `events/Yuzu_abyss_crisis_event.txt` | `every_owned_pop`（immediate 块中） | `every_owned_pop_group` | 4.4.6 中 `every_owned_pop` 在 `immediate` 中已废弃；对照 vanilla `colony_events_1.txt` 等使用 pop group 操作 `pop_recently_conquered` |
+| `events/Yuzu_abyss_crisis_event.txt` | `while { count = 100 } create_pop = { species = ... }`（新深渊帝国首都人口创建） | `create_pop_group = { species = ... }` | 4.4.6 中 `create_pop` 已废弃，人口改为 pop_group 系统；对照 vanilla `ancrel.2067`（`create_pop_group`）；导致危机刷出的圣堂行星无人口 |
 | `events/Yuzu_planet_destruction_event.txt` | `every_owned_pop`（已注释掉，巨像摧毁行星时危机进度统计失效） | `while { count = value:per_100_pop_amount }` + `from.owner = { complete_crisis_objective = crisobj_purge_pops }` | 逐 pop 调用已废弃，对照 vanilla `planet_destruction_events.txt:969-977` 按每 100 人口循环统计 |
 | `events/Yuzu_planet_destruction_event.txt` | `count_owned_pop` | `count_owned_pop_amount` | 4.0 后人口统计触发器重命名（pop 以 1/100 为单位，`count > 0` 逻辑不变） |
 | `common/traits/yuzu_species_traits.txt` | `triggered_planet_modifier`（trait_abyss 中） | `triggered_pop_group_modifier` + 嵌套 `modifier` 块 | `triggered_planet_modifier` 仅在领袖特质中存在，物种特质中须用 `triggered_pop_group_modifier`；对照 vanilla 水生特质 (`02_species_traits_basic_characteristics.txt`) 和低维护特质 (`09_tox_traits.txt`) |
