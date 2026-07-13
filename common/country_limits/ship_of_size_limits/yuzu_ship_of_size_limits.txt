@@ -1,26 +1,22 @@
-##### 原版内容 #####
+##### 原版内容 — 同步 vanilla 4.4.6 #####
 colossus_ships_limit = {
-	ship_types = { 
+	ship_types = {
 		colossus
 	}
-	
-	base = 32 # 1 * colossus's size_multiplier
-	max = 96 # 3 * 32
-	naval_cap_fraction = 0.032
+
+	base = 100 # 1 * colossus's size_multiplier
 	show = {
 		is_scope_valid = yes
 		has_technology = tech_colossus
 	}
 }
 
-##### 原版内容 #####
+##### 原版内容 — 同步 vanilla 4.4.6 #####
 juggernaut_ships_limit = {
 	ship_types = {
 		juggernaut
 	}
-	base = 32 # 1 * juggernaut's size_multiplier
-	max = 96 # 3 * 32
-	naval_cap_fraction = 0.032
+	base = 100 # 1 * juggernaut's size_multiplier
 	show = {
 		is_scope_valid = yes
 		has_technology = tech_juggernaut
@@ -31,7 +27,7 @@ yuzu_star_eater_ships_limit = {
 	ship_types = {
 		yuzu_star_eater
 	}
-	base = 64
+	base = 100
 	show = {
 		is_scope_valid = yes
 		has_technology = tech_yuzu_star_eater
