@@ -120,24 +120,9 @@ d_yuzu_abyss_gate = {
 		planet_jobs_engineering_research_produces_mult = 0.30
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		job_physicist_add = 433
-		job_biologist_add = 433
-		job_engineer_add = 434
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		job_calculator_physicist_add = 433
-		job_calculator_biologist_add = 433
-		job_calculator_engineer_add = 434
+	inline_script = {
+		script = jobs/yuzu_zone_job_researcher
+		AMOUNT = 450
 	}
 
 	drop_weight = {
@@ -157,24 +142,9 @@ d_yuzu_imitation_abyss_gate = {
 		planet_jobs_engineering_research_produces_mult = 0.15
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		job_physicist_add = 233
-		job_biologist_add = 233
-		job_engineer_add = 234
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		job_calculator_physicist_add = 233
-		job_calculator_biologist_add = 233
-		job_calculator_engineer_add = 234
+	inline_script = {
+		script = jobs/yuzu_zone_job_researcher
+		AMOUNT = 250
 	}
 
 	drop_weight = {
@@ -194,24 +164,9 @@ d_yuzu_dream_gate = {
 		planet_jobs_engineering_research_produces_mult = 0.15
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		job_physicist_add = 233
-		job_biologist_add = 233
-		job_engineer_add = 234
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		job_calculator_physicist_add = 233
-		job_calculator_biologist_add = 233
-		job_calculator_engineer_add = 234
+	inline_script = {
+		script = jobs/yuzu_zone_job_researcher
+		AMOUNT = 250
 	}
 
 	drop_weight = {

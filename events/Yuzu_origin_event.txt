@@ -38,11 +38,12 @@ country_event = {
 				add_building = building_yuzu_supernatural_research_organization
 				if = {
 					limit = {
-						has_building = building_commercial_zone
+						has_building = building_holo_theatres
 					}
-					remove_building = building_commercial_zone
+					remove_building = building_holo_theatres
 					add_building = building_yuzu_cafe
 				}
+
 				else_if = {
 					limit = {
 						has_building = building_temple

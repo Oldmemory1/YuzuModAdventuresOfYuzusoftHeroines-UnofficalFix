@@ -1,0 +1,18 @@
+triggered_planet_modifier = {
+	potential = {
+		owner? = {
+			is_gestalt = no
+			not = { has_country_flag = fallen_empire_1 }
+		}
+	}
+	job_physicist_add = $AMOUNT$
+	job_biologist_add = $AMOUNT$
+	job_engineer_add = $AMOUNT$
+}
+
+triggered_planet_modifier = {
+	potential = { owner? = { is_gestalt = yes } }
+	job_calculator_physicist_add = $AMOUNT$
+	job_calculator_biologist_add = $AMOUNT$
+	job_calculator_engineer_add = $AMOUNT$
+}
