@@ -145,21 +145,21 @@
 
 # 承受值 & 回复值
 
-@yuzu_shield_S1 = 250
-@yuzu_shield_M1 = 625
-@yuzu_shield_L1 = 1500
+@yuzu_shield_S1 = 500
+@yuzu_shield_M1 = 1500
+@yuzu_shield_L1 = 4500
 
-@yuzu_regen_S1 = 2.50
-@yuzu_regen_M1 = 6.25
-@yuzu_regen_L1 = 15.0
+@yuzu_regen_S1 = 3.0
+@yuzu_regen_M1 = 9.0
+@yuzu_regen_L1 = 27.0
 
-@yuzu_shield_S2 = 335
-@yuzu_shield_M2 = 835
-@yuzu_shield_L2 = 2000
+@yuzu_shield_S2 = 750
+@yuzu_shield_M2 = 2250
+@yuzu_shield_L2 = 6750
 
-@yuzu_regen_S2 = 3.35
-@yuzu_regen_M2 = 8.35
-@yuzu_regen_L2 = 20.0
+@yuzu_regen_S2 = 4.5
+@yuzu_regen_M2 = 13.5
+@yuzu_regen_L2 = 40.5
 
 #############
 #	ARMOR	#
@@ -182,13 +182,13 @@
 
 # 承受值 & 回复值
 
-@yuzu_armor_S1 = 250
-@yuzu_armor_M1 = 625
-@yuzu_armor_L1 = 1500
+@yuzu_armor_S1 = 500
+@yuzu_armor_M1 = 1300
+@yuzu_armor_L1 = 3000
 
-@yuzu_armor_S2 = 335
-@yuzu_armor_M2 = 835
-@yuzu_armor_L2 = 2000
+@yuzu_armor_S2 = 750
+@yuzu_armor_M2 = 1950
+@yuzu_armor_L2 = 4500
 
 #############
 #	POWER	#
