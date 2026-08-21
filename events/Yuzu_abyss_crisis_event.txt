@@ -708,8 +708,18 @@ country_event = {
 				}
 				set_owner = event_target:new_abyss_country
 				set_capital = yes
-				create_pop_group = {
-					species = event_target:new_abyss_species
+					while = {
+						count = 100
+						create_pop_group = {
+							species = event_target:new_abyss_species
+							size = 100
+						}
+					}
+				event_target:new_abyss_country = {
+					change_variable = { which = yuzu_fe_stronghold_build_count value = 6 }
+					change_variable = { which = yuzu_master_archive_build_count value = 1 }
+					change_variable = { which = yuzu_class_4_singularity_build_count value = 1 }
+					change_variable = { which = yuzu_fe_dome_build_count value = 3 }
 				}
 				add_building = building_system_capital
 				while = {

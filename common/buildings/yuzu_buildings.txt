@@ -596,7 +596,10 @@ building_yuzu_fe_dome = {
 		custom_tooltip = {
 			exists = owner
 			owner = {
-				is_YUZU = yes
+				OR = {
+					is_YUZU = yes
+					is_yuzu_abyss_empire = yes
+				}
 				check_variable = { which = yuzu_fe_dome_build_count value >= 1 }
 			}
 			fail_text = "yuzu_fe_building_failtext"
@@ -817,7 +820,10 @@ building_yuzu_class_4_singularity = {
 		custom_tooltip = {
 			exists = owner
 			owner = {
-				is_YUZU = yes
+				OR = {
+					is_YUZU = yes
+					is_yuzu_abyss_empire = yes
+				}
 				check_variable = { which = yuzu_class_4_singularity_build_count value >= 1 }
 			}
 			fail_text = "yuzu_fe_building_failtext"
@@ -919,7 +925,10 @@ building_yuzu_master_archive = {
 		custom_tooltip = {
 			exists = owner
 			owner = {
-				is_YUZU = yes
+				OR = {
+					is_YUZU = yes
+					is_yuzu_abyss_empire = yes
+				}
 				check_variable = { which = yuzu_master_archive_build_count value >= 1 }
 			}
 			fail_text = "yuzu_fe_building_failtext"
@@ -1033,7 +1042,10 @@ building_yuzu_fe_stronghold = {
 		custom_tooltip = {
 			exists = owner
 			owner = {
-				is_YUZU = yes
+				OR = {
+					is_YUZU = yes
+					is_yuzu_abyss_empire = yes
+				}
 				check_variable = { which = yuzu_fe_stronghold_build_count value >= 1 }
 			}
 			fail_text = "yuzu_fe_building_failtext"
