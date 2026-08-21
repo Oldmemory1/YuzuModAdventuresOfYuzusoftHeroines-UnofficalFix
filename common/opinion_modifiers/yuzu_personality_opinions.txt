@@ -27,3 +27,11 @@ opinion_yuzu_companions = {
 		}	
 	}
 }
+
+opinion_helped_us_in_abyss_crisis = {
+	opinion = {
+		modifier = {
+			add = 800
+		}	
+	}
+}

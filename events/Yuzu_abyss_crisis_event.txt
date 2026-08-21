@@ -86,6 +86,7 @@ event = {
 							has_global_flag = prethoryn_invasion_defeated
 							has_global_flag = extradimensional_invasion_defeated
 							has_global_flag = ai_invasion_defeated
+							has_global_flag = synth_queen_defeated
 						}
 					}
 					country_event = { id = Yuzu_abyss_crisis_event.1 days = 1200 random = 800 }
@@ -137,7 +138,13 @@ country_event = {
 			event_chain = "yuzu_abyss_coming_chain"
 			target = ROOT
 		}
+		hidden_effect ={
+			country_event = { id = Yuzu_abyss_crisis_event.601 days = 3 }	
+			country_event = { id = Yuzu_abyss_crisis_event.602 days = 30 }
+			country_event = { id = Yuzu_abyss_crisis_event.5 days = 10 }
+		}
 	}
+	
 }
 
 # 确定位置
@@ -348,6 +355,7 @@ country_event = {
 	id = Yuzu_abyss_crisis_event.5
 	title = "TRANSMISSION"
 	desc = "Yuzu_abyss_crisis_event.5.desc"
+	fire_only_once = yes
 
 	diplomatic = yes
 
@@ -558,19 +566,19 @@ country_event = {
 					    has_ethic = ethic_fanatic_xenophile
 				    }
 			    }
-				country_event = { id = Yuzu_abyss_crisis_event.200 days = 100 random = 200 }
+				country_event = { id = Yuzu_abyss_crisis_event.200 days = 50 random = 50 }
 		    }
 			else_if = {
 				limit = {
 				    has_ethic = ethic_fanatic_spiritualist
 			    }
-				country_event = { id = Yuzu_abyss_crisis_event.200 days = 200 random = 200 }
+				country_event = { id = Yuzu_abyss_crisis_event.200 days = 300 random = 300 }
 			}
 			else_if = {
 				limit = {
 				    has_ethic = ethic_fanatic_xenophobe
 			    }
-				country_event = { id = Yuzu_abyss_crisis_event.200 days = 300 random = 200 }
+				country_event = { id = Yuzu_abyss_crisis_event.200 days = 500 random = 500 }
 			}
 		}
 	}
@@ -667,10 +675,11 @@ country_event = {
 								count = 24
 								create_new_abyss_platform = yes
 							}
-							while = {
-								count = 17
-								create_new_abyss_ion_cannon = yes
-							}
+							#while = {
+							#	count = 17
+							#	create_new_abyss_ion_cannon = yes
+							# remove create ion cannon because it is too difficult
+							#}
 						}
 					}
 					random_ship_in_system = {
@@ -678,13 +687,8 @@ country_event = {
 							is_ship_class = shipclass_starbase
 							NOT = { is_ship_size = juggernaut }
 						}
-						get_galaxy_setup_value = {
-							setting = crisis_strength_scale
-							which = yuzu_crisis_strength_scale
-						}
 						add_modifier = {
 							modifier = yuzu_abyss_starbase_modifier
-							multiplier = yuzu_crisis_strength_scale
 						}
 					}
 				}
@@ -1128,13 +1132,8 @@ system_event = {
 				is_ship_class = shipclass_starbase
 				NOT = { is_ship_size = juggernaut }
 			}
-			get_galaxy_setup_value = {
-				setting = crisis_strength_scale
-				which = yuzu_crisis_strength_scale
-			}
 			add_modifier = {
 				modifier = yuzu_abyss_starbase_modifier
-				multiplier = yuzu_crisis_strength_scale
 			}
 		}
 		starbase = {
@@ -1142,7 +1141,8 @@ system_event = {
 				count = 4
 				create_new_abyss_platform = yes
 			}
-			create_new_abyss_ion_cannon = yes
+			# create_new_abyss_ion_cannon = yes
+			# remove create ion cannon because it is too difficult
 		}
 	}
 }
@@ -1547,7 +1547,7 @@ ship_event = {
 	}
 }
 
-# 摧毁教廷空间站(天灾摧毁 & on_ship_disabled？）
+# 摧毁教廷空间站（天灾摧毁 & on_ship_disabled？）
 country_event = {
 	id = Yuzu_abyss_crisis_event.114
 	hide_window = yes
@@ -1764,31 +1764,29 @@ country_event = {
 	}
 }
 
-# on_planet_zero_pops
-# Colony Bombarded
-planet_event = {
+# on_planet_bombarded
+# Planet has reached 100 devastation from orbital bombardment
+carrier_event = {
 	id = Yuzu_abyss_crisis_event.162
 	hide_window = yes
 
 	is_triggered_only = yes
 
 	trigger = {
+		planet_devastation >= 100
 		FROM = {
 			is_country_type = new_abyss_empire
 		}
 	}
 
 	immediate = {
-	#	destroy_colony = yes
-		if = {
-			limit = { FROM = { is_country_type = new_abyss_empire } }
-			every_country = {
-				limit = { has_event_chain = "yuzu_abyss_descended_chain" }
-				add_event_chain_counter = {
-					event_chain = "yuzu_abyss_descended_chain"
-					counter = "yuzu_abyss_sacrificed_planets"
-					amount = 1
-				}
+		destroy_colony = yes
+		every_country = {
+			limit = { has_event_chain = "yuzu_abyss_descended_chain" }
+			add_event_chain_counter = {
+				event_chain = "yuzu_abyss_descended_chain"
+				counter = "yuzu_abyss_sacrificed_planets"
+				amount = 1
 			}
 		}
 	}
@@ -1810,7 +1808,7 @@ country_event = {
 			limit = {
 				is_at_war = yes
 			}
-			country_event = { id = Yuzu_abyss_crisis_event.200 days = 300 }
+			country_event = { id = Yuzu_abyss_crisis_event.200 days = 100 }
 		}
 		else_if = {
 			limit = {
@@ -2109,4 +2107,606 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = Yuzu_abyss_crisis_event.601
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#选择堕落对话发起国
+		set_country_flag = fallen_empire_dialog_with_yuzu
+		random_list = {
+			100 = {
+				modifier = {
+					factor = 0
+					NOT = {
+						any_country = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
+							is_gestalt = no
+							has_ethic = ethic_fanatic_xenophile
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						OR = {
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+						is_gestalt = no
+						has_ethic = ethic_fanatic_xenophile
+					}
+					save_global_event_target_as = fallen_empire_dialog_with_yuzu
+				}
+			}
+			50 = {
+				modifier = {
+					factor = 0
+					NOT = {
+						any_country = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
+							is_gestalt = no
+							has_ethic = ethic_fanatic_materialist
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						OR = {
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+						is_gestalt = no
+						has_ethic = ethic_fanatic_materialist
+					}
+					save_global_event_target_as = fallen_empire_dialog_with_yuzu
+				}
+			}
+			25 = {
+				modifier = {
+					factor = 0
+					NOT = {
+						any_country = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
+							is_gestalt = no
+							has_ethic = ethic_fanatic_spiritualist
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						OR = {
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+						is_gestalt = no
+						has_ethic = ethic_fanatic_spiritualist
+					}
+					save_global_event_target_as = fallen_empire_dialog_with_yuzu
+				}
+			}
+			5 = {
+				modifier = {
+					factor = 0
+					NOT = {
+						any_country = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
+							is_gestalt = no
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						OR = {
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+						is_gestalt = no
+						has_ethic = ethic_fanatic_xenophobe
+					}
+					save_global_event_target_as = fallen_empire_dialog_with_yuzu
+				}
+			}
+		}
+	}
+}
+
+#堕落与玩家的对话
+country_event = {
+	id = Yuzu_abyss_crisis_event.602
+	title = "Yuzu_abyss_crisis_event.602.1.a"
+	desc = "Yuzu_abyss_crisis_event.602.2.a"
+	diplomatic = yes
+	diplomatic_title = BLANK_STRING
+	show_sound = event_bad_omen
+
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = event_target:fallen_empire_dialog_with_yuzu
+		planet_background = event_target:fallen_empire_dialog_with_yuzu
+		graphical_culture = event_target:fallen_empire_dialog_with_yuzu
+		city_level = event_target:fallen_empire_dialog_with_yuzu
+		room = event_target:fallen_empire_dialog_with_yuzu
+	}
+
+	trigger = {
+		NOR = {
+			has_active_event = { Yuzu_abyss_crisis_event.602 }
+			has_country_flag = fallen_empire_has_warned_about_abyss_crisis
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+				has_valid_civic = "civic_machine_terminator"
+				is_genocidal_infernal = yes
+				is_ai = yes
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = fallen_empire_has_warned_about_abyss_crisis
+		every_country = { #换对话国
+			limit = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			# remove_country_flag = fallen_empire_dialog_with_yuzu
+		}
+	}
+
+	#少量援助
+	option = {
+		name = fallen_warning_help.1.b
+		custom_tooltip = fallen_warning_help.2.b
+		allow = {
+			# 检查资源库存是否达标（调整为工整近似值，接近1/3份）
+			resource_stockpile_compare = { resource = energy       value >= 50000 }   # 原33333→35000（更工整，接近1/3）
+			resource_stockpile_compare = { resource = minerals     value >= 50000 }   # 原33333→35000（同上）
+			resource_stockpile_compare = { resource = alloys       value >= 50000 }  # 原233333→230000（23万，更工整）
+			resource_stockpile_compare = { resource = volatile_motes value >= 500 }    # 原333→300（整百数）
+			resource_stockpile_compare = { resource = rare_crystals value >= 500 }
+			resource_stockpile_compare = { resource = exotic_gases value >= 500 }
+			resource_stockpile_compare = { resource = sr_dark_matter value >= 250 }    # 原167→150（整十数）
+		}
+		add_resource = {
+			# 扣除工整近似值的资源（负数表示消耗）
+			energy       = -50000   # 调整后能量消耗
+			minerals     = -50000   # 调整后矿物消耗
+			alloys       = -50000  # 调整后合金消耗
+			volatile_motes = -500    # 调整后易爆微粒消耗
+			rare_crystals = -500
+			exotic_gases = -500
+			sr_dark_matter = -250    # 调整后暗物质消耗
+		}
+		hidden_effect = {
+			set_global_flag = fallen_empire_warning_attend_minimum
+			every_country = { #堕落支援
+				limit = {
+					OR = {
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+					is_gestalt = no
+				}
+				while = { #刷10次
+					count = 10
+					create_fleet = {
+						effect = {
+							set_owner = prev.owner
+							while = {
+								count = 6
+								create_fallen_empire_large_ship_assistance_for_abyss_crisis = yes
+							}
+							while = {
+								count = 10
+								create_fallen_empire_small_ship_assistance_for_abyss_crisis = yes
+							}
+							
+							set_location = {
+								target = owner.capital_scope
+								distance = 30
+								angle = random
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_helped_us_in_abyss_crisis
+				}
+			}
+		}
+	}	
+	#部分援助
+	option = {
+		name = fallen_warning_help.1.c
+		custom_tooltip = fallen_warning_help.2.c
+		allow = {
+			# 检查资源库存是否达标（按1/3份工整值×2，保持2/3比例，取整到工整数）
+			resource_stockpile_compare = { resource = energy       value >= 75000 }   # 1/3份35000×2=70000（原66667→70000，更工整）
+			resource_stockpile_compare = { resource = minerals     value >= 75000 }   # 同上（原66667→70000）
+			resource_stockpile_compare = { resource = alloys       value >= 75000 }  # 1/3份230000×2=460000（原466667→460000，整万数）
+			resource_stockpile_compare = { resource = volatile_motes value >= 1000 }    # 1/3份300×2=600（原667→600，整百数）
+			resource_stockpile_compare = { resource = rare_crystals value >= 1000 }
+			resource_stockpile_compare = { resource = exotic_gases value >= 1000 }
+			resource_stockpile_compare = { resource = sr_dark_matter value >= 500 }    # 1/3份150×2=300（原333→300，整百数）
+		}
+		add_resource = {
+			# 扣除工整近似值的资源（负数表示消耗，与allow对应）
+			energy       = -75000   # 调整后能量消耗（1/3份35000×2）
+			minerals     = -75000   # 调整后矿物消耗（同上）
+			alloys       = -75000  # 调整后合金消耗（1/3份230000×2）
+			volatile_motes = -1000    # 调整后易爆微粒消耗（1/3份300×2）
+			rare_crystals =  -1000
+			exotic_gases = -1000
+			sr_dark_matter = -500    # 调整后暗物质消耗（1/3份150×2）
+		}
+		hidden_effect = {
+			set_global_flag = fallen_empire_warning_attend_medium
+			every_country = { #堕落支援
+				limit = {
+					OR = {
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+					is_gestalt = no
+				}			
+				while = { #刷15次
+					count = 15
+					create_fleet = {
+						effect = {
+							set_owner = prev.owner
+							while = {
+								count = 6
+								create_fallen_empire_large_ship_assistance_for_abyss_crisis = yes
+							}
+							while = {
+								count = 10
+								create_fallen_empire_small_ship_assistance_for_abyss_crisis = yes
+							}
+							while = {
+								count = 4
+								create_fallen_empire_titan_assistance_for_abyss_crisis = yes
+							}
+							
+							set_location = {
+								target = owner.capital_scope
+								distance = 30
+								angle = random
+							}
+						}
+					}
+				}
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_helped_us_in_abyss_crisis
+				}
+			}
+		}
+	}	
+	#大量援助
+	option = {
+		name = fallen_warning_help.1.d
+		custom_tooltip = fallen_warning_help.2.d
+		allow = {
+			# 检查所有需消耗资源的库存是否达标（必须同时满足）
+			resource_stockpile_compare = { resource = energy       value >= 200000 }  # 能量 ≥ 200000
+			resource_stockpile_compare = { resource = minerals     value >= 200000 }  # 矿物 ≥ 200000
+			resource_stockpile_compare = { resource = alloys       value >= 200000 }  # 合金 ≥ 200000
+			resource_stockpile_compare = { resource = volatile_motes value >= 3000 }   # 易爆微粒 ≥ 3000
+			resource_stockpile_compare = { resource = rare_crystals value >= 3000 }
+			resource_stockpile_compare = { resource = exotic_gases value >= 3000 }
+			resource_stockpile_compare = { resource = sr_dark_matter value >= 1500 }    # 暗物质（sr_前缀）≥ 1500
+		}
+		add_resource = {
+			# 一次性扣除所有资源（负数表示消耗）
+			energy       = -200000
+			minerals     = -200000
+			alloys       = -200000
+			volatile_motes = -3000
+			rare_crystals = -3000
+			exotic_gases =  -3000
+			sr_dark_matter = -1500
+		}
+		hidden_effect = {
+			set_global_flag = fallen_empire_warning_attend_large
+			every_country = { #堕落支援
+				limit = {
+					OR = {
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+					is_gestalt = no
+				}
+
+				add_modifier = {
+					modifier = fallen_empire_warning_attend_large_modifier
+				}
+
+				while = { #刷20次
+					count = 20
+					owner = {
+						create_leader = { #刷一个十级超级舰长
+							class = admiral
+							species = root.owner_main_species # 改为帮助者（玩家）的主物种
+							name = random
+							skill = 10
+							leader_age_min = 25
+							leader_age_max = 45
+							traits = {
+								trait = subclass_commander_admiral
+								trait = leader_trait_cautious
+								trait = leader_trait_engineer
+								trait = leader_trait_artillerist_2
+								trait = leader_trait_commanding_presence_2
+								trait = leader_trait_artillery_specialization_2
+								trait = leader_trait_scout_2
+								trait = leader_trait_void_hunter_2
+								trait = leader_trait_master_gunner
+							}
+						}
+					}
+					create_fleet = {
+						effect = {
+							set_owner = prev.owner
+							while = {
+								count = 6
+								create_fallen_empire_large_ship_assistance_for_abyss_crisis = yes
+							}
+							while = {
+								count = 10
+								create_fallen_empire_small_ship_assistance_for_abyss_crisis = yes
+							}
+							while = {
+								count = 4
+								create_fallen_empire_titan_assistance_for_abyss_crisis = yes
+							}
+								
+							set_location = {
+								target = owner.capital_scope
+								distance = 30
+								angle = random
+							}
+						}
+					}
+					last_created_fleet = { assign_leader = last_created_leader }
+				}
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_helped_us_in_abyss_crisis
+				}
+			}
+		}		
+	}
+	# 巨额援助
+	option = {
+		name = fallen_warning_help.1.e
+		custom_tooltip = fallen_warning_help.2.e
+		allow = {
+			# 检查所有需消耗资源的库存是否达标（必须同时满足）
+			resource_stockpile_compare = { resource = energy       value >= 500000 }  # 能量 ≥ 200000
+			resource_stockpile_compare = { resource = minerals     value >= 500000 }  # 矿物 ≥ 200000
+			resource_stockpile_compare = { resource = alloys       value >= 500000 }  # 合金 ≥ 200000
+			resource_stockpile_compare = { resource = volatile_motes value >= 7500 }   # 易爆微粒 ≥ 3000
+			resource_stockpile_compare = { resource = rare_crystals value >= 7500 }
+			resource_stockpile_compare = { resource = exotic_gases value >= 7500 }
+			resource_stockpile_compare = { resource = sr_dark_matter value >= 3000 }    # 暗物质（sr_前缀）≥ 1500
+		}
+		add_resource = {
+			# 一次性扣除所有资源（负数表示消耗）
+			energy       = -500000
+			minerals     = -500000
+			alloys       = -500000
+			volatile_motes = -7500
+			rare_crystals = -7500
+			exotic_gases =  -7500
+			sr_dark_matter = -3000
+		}
+		hidden_effect = {
+			set_global_flag = fallen_empire_warning_attend_extreme
+			every_country = { #堕落支援
+				limit = {
+					OR = {
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+					is_gestalt = no
+				}
+
+				add_modifier = {
+					modifier = fallen_empire_warning_attend_extreme_modifier
+				}
+
+				while = { #刷20次
+					count = 20
+					owner = {
+						create_leader = { #刷一个十级超级舰长
+							class = admiral
+							species = root.owner_main_species # 改为帮助者（玩家）的主物种
+							name = random
+							skill = 10
+							leader_age_min = 25
+							leader_age_max = 45
+							traits = {
+								trait = subclass_commander_admiral
+								trait = leader_trait_cautious
+								trait = leader_trait_engineer
+								trait = leader_trait_artillerist_2
+								trait = leader_trait_commanding_presence_2
+								trait = leader_trait_artillery_specialization_2
+								trait = leader_trait_scout_2
+								trait = leader_trait_void_hunter_2
+								trait = leader_trait_master_gunner
+							}
+						}
+					}
+					create_fleet = {
+						effect = {
+							set_owner = prev.owner
+							while = {
+								count = 18
+								create_fallen_empire_large_ship_assistance_for_abyss_crisis = yes
+							}
+							while = {
+								count = 30
+								create_fallen_empire_small_ship_assistance_for_abyss_crisis = yes
+							}
+							while = {
+								count = 4
+								create_fallen_empire_titan_assistance_for_abyss_crisis = yes
+							}
+
+							set_location = {
+								target = owner.capital_scope
+								distance = 30
+								angle = random
+							}
+						}
+					}
+					last_created_fleet = { assign_leader = last_created_leader }
+				}
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_helped_us_in_abyss_crisis
+				}
+			}
+		}		
+	}
+	#无行动
+	option = {
+		name = fallen_warning_help.1.f
+		custom_tooltip = fallen_warning_help.2.f
+		hidden_effect = {
+			set_global_flag = fallen_empire_warning_attend_none
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = Yuzu_abyss_crisis_event.603 days = 60 }
+		}
+	}
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.603
+	title = "Yuzu_abyss_crisis_event.603.1"
+	desc = "Yuzu_abyss_crisis_event.603.2"
+	diplomatic = yes
+	diplomatic_title = BLANK_STRING
+	show_sound = event_bad_omen
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = fallen_empire_has_warned_about_difficult_battle
+	}
+
+	picture_event_data = {
+		portrait = event_target:fallen_empire_dialog_with_yuzu
+		planet_background = event_target:fallen_empire_dialog_with_yuzu
+		graphical_culture = event_target:fallen_empire_dialog_with_yuzu
+		city_level = event_target:fallen_empire_dialog_with_yuzu
+		room = event_target:fallen_empire_dialog_with_yuzu
+	}
+
+	trigger = {
+		NOR = {
+			has_active_event = { Yuzu_abyss_crisis_event.603 }
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_ai = yes
+			}
+			has_country_flag = fallen_empire_has_warned_about_difficult_battle
+		}
+	}
+	option = {
+		name = DISTURBING
+	}
+	after = {
+		hidden_effect ={
+			country_event = { id = Yuzu_abyss_crisis_event.604 days = 90 }	
+		}
+	}
 	
+}
+
+country_event = {
+	id = Yuzu_abyss_crisis_event.604
+	title = "Yuzu_abyss_crisis_event.604.1"
+	desc = "Yuzu_abyss_crisis_event.604.2"
+	diplomatic = yes
+	diplomatic_title = BLANK_STRING
+	show_sound = event_bad_omen
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = fallen_empire_has_warned_tmp1
+		set_country_flag = yuzu_warned_about_abyss_patrols
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				is_gestalt = no
+			}
+			set_closed_borders = {
+				who = root
+				status = no
+				forced = 50
+			}
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:fallen_empire_dialog_with_yuzu
+		planet_background = event_target:fallen_empire_dialog_with_yuzu
+		graphical_culture = event_target:fallen_empire_dialog_with_yuzu
+		city_level = event_target:fallen_empire_dialog_with_yuzu
+		room = event_target:fallen_empire_dialog_with_yuzu
+	}
+
+	trigger = {
+		AND = {
+			NOR = {
+				has_active_event = { Yuzu_abyss_crisis_event.604 }
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+					is_ai = yes
+				}
+				has_country_flag = fallen_empire_has_warned_tmp1
+			}
+			OR = {
+				has_global_flag = fallen_empire_warning_attend_extreme
+				has_global_flag = fallen_empire_warning_attend_large
+				has_global_flag = fallen_empire_warning_attend_medium
+				has_global_flag = fallen_empire_warning_attend_minimum
+			}
+		}
+	}
+
+	option = {
+		name = UNDERSTOOD
+	}
+}

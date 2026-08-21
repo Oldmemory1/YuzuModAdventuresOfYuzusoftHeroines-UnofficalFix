@@ -59,6 +59,8 @@
  guardians_of_the_galaxy_anti_abyss_4:0"对抗深渊教廷4"
  guardians_of_the_galaxy_anti_abyss_5:0"对抗深渊教廷5"
  guardians_of_the_galaxy_anti_abyss_6:0"对抗深渊教廷6"
+ fallen_empire_warning_attend_large_modifier:0"失落帝国的警告：大量援助"
+ fallen_empire_warning_attend_extreme_modifier:0"失落帝国的警告：巨额援助"
  yuzu_sol_system_initializer_NAME:0"太阳系（柚子）"
  yuzu_sol_system_initializer_DESC:0"这将是选择柚子世界起源时的起始恒星系。"
  
@@ -203,6 +205,7 @@
  opinion_yuzu_backed_a_primitive_world_phile:0 "$opinion_cracked_a_primitive_world_phile$"
  opinion_yuzu_abyss_descended_1:0"深渊威胁"
  opinion_yuzu_abyss_descended_2:0"生死存亡"
+ opinion_helped_us_in_abyss_crisis:0"在深渊教廷危机中帮助了我们"
 
  edict_yuzu_overloaded_clone_tooltip:0"£building£§Y$building_yuzu_clone_vats$§!提供的§Y每月有机人口生长§!：§G+1§!\n£building£§Y$building_yuzu_clone_vats$§!的£energy£§H能量币§!维护费：§R+1§!\n£building£§Y$building_yuzu_clone_vats$§!的£food£§H食物§!维护费：§R+5§!"
  edict_yuzu_overloaded_clone:0"超负荷克隆"
