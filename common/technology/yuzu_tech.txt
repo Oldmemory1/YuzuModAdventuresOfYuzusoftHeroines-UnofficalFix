@@ -1195,7 +1195,7 @@ tech_yuzu_shield_1 = {
 
 tech_yuzu_shield_2 = {
 	area = physics
-	cost = @yuzu_tier6weight2
+	cost = @yuzu_tier6cost2
 	tier = 6
 	category = { field_manipulation }
 	ai_update_type = all
