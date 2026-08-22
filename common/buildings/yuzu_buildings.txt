@@ -39,31 +39,55 @@ building_yuzu_clone_vats = {
 		}
 	}
 
-	planet_modifier = {
-		planet_pop_assembly_add = 3
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = { has_trait = trait_yuzu }
+		bonus_pop_growth = 3
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		fake_pop_growth_mod = 3
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			has_trait = trait_yuzu
+			owner = { has_technology = tech_yuzu_rapid_cell_division_1 }
+		}
+		bonus_pop_growth = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_yuzu_rapid_cell_division_1 }
 		}
-		planet_pop_assembly_add = 1
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			has_trait = trait_yuzu
+			owner = { has_technology = tech_yuzu_rapid_cell_division_2 }
+		}
+		bonus_pop_growth = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_yuzu_rapid_cell_division_2 }
 		}
-		planet_pop_assembly_add = 1
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			has_trait = trait_yuzu
+			owner = { has_edict = yuzu_overloaded_clone }
+		}
+		bonus_pop_growth = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_edict = yuzu_overloaded_clone
-			}
+			owner = { has_edict = yuzu_overloaded_clone }
 		}
-		planet_pop_assembly_add = 1
+		fake_pop_growth_mod = 1
 	}
 	triggered_planet_modifier = {
 		potential = {

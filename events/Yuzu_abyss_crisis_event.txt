@@ -612,6 +612,7 @@ country_event = {
 						portrait = "abyss_01"
 						traits = {
 							ideal_planet_class = pc_continental
+							trait = trait_organic
 							trait = trait_abyss
 							trait = trait_extremely_adaptive
 							trait = trait_very_strong
