@@ -1,0 +1,21 @@
+#常规
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_artisan_add = $AMOUNT$
+}
+#格式塔
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_wilderness_empire = no
+		}
+	}
+	job_artisan_drone_add = $AMOUNT$
+}
