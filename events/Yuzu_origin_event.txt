@@ -20,7 +20,6 @@ country_event = {
 		if = {
 			limit = {
 				owner = {
-					is_nomadic = no
 					NOR = {
 						has_origin = origin_void_dwellers
 						has_origin = origin_void_machines
