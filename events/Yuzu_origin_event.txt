@@ -108,19 +108,102 @@ country_event = {
 			}
 		}
 
-		# Assign random advanced trait to Yuzu species
-		# 4.4.6: every_owned_pop replaced with direct species modification
-		random_list = {
-			50 = {
-				modify_species = {
-					species = owner_main_species
-					add_trait = trait_yuzu_vampire
+		# Create the two shared variant species ONCE (vampire + astral), all pop groups transfer into these
+		capital_scope = {
+			if = {
+				limit = {
+					any_owned_pop_group = {
+						has_trait = trait_yuzu
+						NOT = { has_trait = trait_yuzu_vampire }
+						NOT = { has_trait = trait_yuzu_astral }
+					}
+				}
+				random_owned_pop_group = {
+					limit = {
+						has_trait = trait_yuzu
+						NOT = { has_trait = trait_yuzu_vampire }
+						NOT = { has_trait = trait_yuzu_astral }
+					}
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						effect = {
+							modify_species = {
+								species = this
+								change_scoped_species = no
+								add_trait = trait_yuzu_vampire
+								add_traits_at_start_of_list = yes
+								effect = { save_event_target_as = target_vampire_species }
+							}
+						}
+					}
+					create_species = {
+						is_mod = yes
+						name = this
+						plural = this
+						class = this
+						portrait = this
+						traits = this
+						can_be_modified = this
+						homeworld = this
+						namelist = this
+						gender = this
+						effect = {
+							modify_species = {
+								species = this
+								change_scoped_species = no
+								add_trait = trait_yuzu_astral
+								add_traits_at_start_of_list = yes
+								effect = { save_event_target_as = target_astral_species }
+							}
+						}
+					}
 				}
 			}
-			50 = {
-				modify_species = {
-					species = owner_main_species
-					add_trait = trait_yuzu_astral
+		}
+		every_owned_planet = {
+			every_owned_pop_group = {
+				limit = {
+					has_trait = trait_yuzu
+					NOT = { has_trait = trait_yuzu_vampire }
+					NOT = { has_trait = trait_yuzu_astral }
+				}
+				save_event_target_as = source_pop_group
+				prev = {
+					create_pop_group = {
+						pop_group = event_target:source_pop_group
+						species = event_target:target_vampire_species
+						size = 0
+						effect = {
+							transfer_pop_amount = {
+								source = event_target:source_pop_group
+								target = this
+								percentage = 0.25
+							}
+						}
+					}
+				}
+				prev = {
+					create_pop_group = {
+						pop_group = event_target:source_pop_group
+						species = event_target:target_astral_species
+						size = 0
+						effect = {
+							transfer_pop_amount = {
+								source = event_target:source_pop_group
+								target = this
+								percentage = 0.3333
+							}
+						}
+					}
 				}
 			}
 		}
