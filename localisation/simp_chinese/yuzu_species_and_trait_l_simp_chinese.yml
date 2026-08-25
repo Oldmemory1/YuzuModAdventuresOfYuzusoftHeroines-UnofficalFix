@@ -41,7 +41,7 @@
  SPEC_Yuzugirl_Name_1_system:0"太阳"
 
  trait_yuzu:0 "柚子"
- trait_yuzu_desc:0 "§L柚子社的美丽少女，非常可爱。§!"
+ trait_yuzu_desc:0 "§L柚子社的美丽少女，非常可爱。\n§! §R警告：不兼容['ascension_perk:ap_synthetic_evolution']飞升路线以及传统树['tradition_category:tradition_synthetics']，不兼容童话天秤等mod中会修改主物种的飞升，例如['ascension_perk:ap_libra_apotheosis_gene']、['ascension_perk:ap_libra_dimensional_fusion']，如果不听劝告，游玩时出现bug请自负责任！§!"
  trait_yuzu_astral:0"星幽使"
  trait_yuzu_astral_desc:0"§L能够透过星幽子使用星幽术的人。星幽术是星幽使利用星幽子所施展的能力，每个星幽使能使用的星幽术类型都是固定的，但在不同环境下星幽术的效果也有可能会有差异。星际时代人们普遍接受着星幽术带来的便利。§!"
  trait_yuzu_vampire:0"吸血鬼"
