@@ -197,6 +197,17 @@ weapon_component_template = {
 	firing_arc = 25.0
 	min_range = 10.0
 	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
 
 	prerequisites = { "tech_yuzu_lance_1" }
 	component_set = "YUZU_LANCE_1"
@@ -257,6 +268,17 @@ weapon_component_template = {
 	firing_arc = 25.0
 	min_range = 10.0
 	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
 
 	prerequisites = { "tech_yuzu_lance_2" }
 	component_set = "YUZU_LANCE_2"
@@ -321,6 +343,17 @@ weapon_component_template = {
 	firing_arc = 25.0
 	min_range = 10.0
 	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
 
 	prerequisites = { "tech_yuzu_lance_3" }
 	component_set = "YUZU_LANCE_3"
@@ -902,6 +935,10 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
+	hull_damage = 3.00
+	shield_damage = 0.25
+	armor_damage = 3.00
+	armor_penetration = 0.00
 
 	ship_behavior = "fighters_behavior"
 
@@ -971,6 +1008,10 @@ weapon_component_template = {
 	missile_retarget_range = 200
 
 	shield_penetration = 1.0
+	hull_damage = 3.00
+	shield_damage = 0.25
+	armor_damage = 3.00
+	armor_penetration = 0.00
 
 	size_damage_factor = 1
 
@@ -1012,6 +1053,11 @@ weapon_component_template = {
 	range = 50
 	accuracy = 0.8
 	tracking = 0.5
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.0
+	armor_damage = 3.00
+	armor_penetration = 0.00
 
 	resources = {
 		category = ship_components
