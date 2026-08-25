@@ -1,9 +1,10 @@
-version="v4.2.4"
+version="4.4.6"
 tags={
-	"Fixes"
-	"Events"
+	"Economy"
+	"Buildings"
+	"Technologies"
 	"Species"
 }
-name="Yuzu Mod - 柚子社少女们的奇妙冒险（4.0兼容版）"
-supported_version="v4.2.4"
-remote_file_id="3530566279"
+name="Yuzu Mod-Adventures of Yuzusoft Heroines-UnofficalFix-4.4.6"
+supported_version="v4.4.6"
+remote_file_id="3763925794"

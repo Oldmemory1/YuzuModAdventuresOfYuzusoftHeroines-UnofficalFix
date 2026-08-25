@@ -136,3 +136,5 @@ opinion_yuzu_abyss_descended_2 = {
 		base = 1
 	}
 }
+
+

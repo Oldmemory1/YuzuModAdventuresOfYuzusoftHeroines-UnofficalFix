@@ -1,0 +1,33 @@
+#常规
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+			is_fallen_empire_spiritualist = no
+		}
+	}
+	modifier = {
+		job_farmer_add = $AMOUNT$
+	}
+}
+#唯心堕落
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_fallen_empire_spiritualist = yes }
+	}
+	modifier = {
+		job_fe_acolyte_farm_add = $AMOUNT$
+	}
+}
+#格式塔
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_agri_drone_add = $AMOUNT$
+	}
+}

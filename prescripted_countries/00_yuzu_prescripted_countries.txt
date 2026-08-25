@@ -13,6 +13,7 @@ yuzugirls1 = {
 		adjective = "PRESCRIPTED_species_adjective_yuzugirls1"
 		name_list= "YUZUGIRL1"
 		gender = female
+		trait = "trait_organic"
 		trait = "trait_yuzu"
 		trait = "trait_sedentary"
 		trait = "trait_charismatic"

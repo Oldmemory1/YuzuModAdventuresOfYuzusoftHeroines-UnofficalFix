@@ -148,10 +148,10 @@ on_ship_destroyed_perp = {
 	}
 }
 
-# Planet has reached 0 pops from orbital bombardment
+# Planet is being bombarded
 # This = Planet
 # From = Bombarder
-on_colony_zero_pops = {
+on_planet_bombarded = {
 	events = {
 		Yuzu_abyss_crisis_event.162
 	}

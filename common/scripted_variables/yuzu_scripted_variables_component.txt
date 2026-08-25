@@ -113,8 +113,8 @@
 
 @yuzu_shield_s_t1_cost = 20 # 较低，以稀有资源代替
 @yuzu_shield_s_t1_cost_rare = 0.4
-@yuzu_shield_s_t2_cost = 25
-@yuzu_shield_s_t2_cost_rare = 0.5
+@yuzu_shield_s_t2_cost = 80
+@yuzu_shield_s_t2_cost_rare = 2
 
 @yuzu_shield_s_t1_upkeep_energy = 0.20
 @yuzu_shield_s_t1_upkeep_alloys = 0.04
@@ -124,8 +124,8 @@
 
 @yuzu_shield_m_t1_cost = 40 # 较低，以稀有资源代替
 @yuzu_shield_m_t1_cost_rare = 0.8
-@yuzu_shield_m_t2_cost = 50
-@yuzu_shield_m_t2_cost_rare = 1.0
+@yuzu_shield_m_t2_cost = 160
+@yuzu_shield_m_t2_cost_rare = 4
 
 @yuzu_shield_m_t1_upkeep_energy = 0.40
 @yuzu_shield_m_t1_upkeep_alloys = 0.08
@@ -135,8 +135,8 @@
 
 @yuzu_shield_l_t1_cost = 80 # 较低，以稀有资源代替
 @yuzu_shield_l_t1_cost_rare = 1.6
-@yuzu_shield_l_t2_cost = 100
-@yuzu_shield_l_t2_cost_rare = 2.0
+@yuzu_shield_l_t2_cost = 320
+@yuzu_shield_l_t2_cost_rare = 8
 
 @yuzu_shield_l_t1_upkeep_energy = 0.80
 @yuzu_shield_l_t1_upkeep_alloys = 0.16
@@ -145,21 +145,21 @@
 
 # 承受值 & 回复值
 
-@yuzu_shield_S1 = 500
-@yuzu_shield_M1 = 1500
-@yuzu_shield_L1 = 4500
+@yuzu_shield_S1 = 250
+@yuzu_shield_M1 = 750
+@yuzu_shield_L1 = 2250
 
-@yuzu_regen_S1 = 3.0
-@yuzu_regen_M1 = 9.0
-@yuzu_regen_L1 = 27.0
+@yuzu_regen_S1 = 2.50
+@yuzu_regen_M1 = 7.50
+@yuzu_regen_L1 = 22.5
 
-@yuzu_shield_S2 = 750
-@yuzu_shield_M2 = 2250
-@yuzu_shield_L2 = 6750
+@yuzu_shield_S2 = 500
+@yuzu_shield_M2 = 1500
+@yuzu_shield_L2 = 4500
 
-@yuzu_regen_S2 = 4.5
-@yuzu_regen_M2 = 13.5
-@yuzu_regen_L2 = 40.5
+@yuzu_regen_S2 = 5
+@yuzu_regen_M2 = 15
+@yuzu_regen_L2 = 45
 
 #############
 #	ARMOR	#
@@ -167,27 +167,27 @@
 
 @yuzu_armor_s_t1_cost = 36 # @yuzu_s_t1_cost = 40，减少部分以稀有资源代替
 @yuzu_armor_s_t1_cost_rare = 0.8
-@yuzu_armor_s_t2_cost = 45
-@yuzu_armor_s_t2_cost_rare = 1.0
+@yuzu_armor_s_t2_cost = 120
+@yuzu_armor_s_t2_cost_rare = 3
 
 @yuzu_armor_m_t1_cost = 72 # @yuzu_m_t1_cost = 80，减少部分以稀有资源代替
 @yuzu_armor_m_t1_cost_rare = 1.6
-@yuzu_armor_m_t2_cost = 90
-@yuzu_armor_m_t2_cost_rare = 2.0
+@yuzu_armor_m_t2_cost = 240
+@yuzu_armor_m_t2_cost_rare = 6
 
 @yuzu_armor_l_t1_cost = 144 # @yuzu_l_t1_cost = 160，减少部分以稀有资源代替
 @yuzu_armor_l_t1_cost_rare = 3.2
-@yuzu_armor_l_t2_cost = 180
-@yuzu_armor_l_t2_cost_rare = 4.0
+@yuzu_armor_l_t2_cost = 480
+@yuzu_armor_l_t2_cost_rare = 12
 
 # 承受值 & 回复值
 
-@yuzu_armor_S1 = 500
-@yuzu_armor_M1 = 1300
-@yuzu_armor_L1 = 3000
+@yuzu_armor_S1 = 250
+@yuzu_armor_M1 = 750
+@yuzu_armor_L1 = 2250
 
-@yuzu_armor_S2 = 750
-@yuzu_armor_M2 = 1950
+@yuzu_armor_S2 = 500
+@yuzu_armor_M2 = 1500
 @yuzu_armor_L2 = 4500
 
 #############

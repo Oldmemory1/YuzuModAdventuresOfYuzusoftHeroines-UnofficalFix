@@ -18,8 +18,10 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_yuzu" }
 	component_set = "power_core"
-	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
-
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		ship_uses_corvette_reactors = yes
+	}
 	ai_weight = {
 		weight = 100
 		modifier = {
@@ -50,7 +52,10 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_yuzu" }
 	component_set = "power_core"
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		ship_uses_destroyer_reactors = yes
+	}
 
 	ai_weight = {
 		weight = 100
@@ -82,7 +87,12 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_yuzu" }
 	component_set = "power_core"
-	size_restriction = { cruiser crisis_cruiser offspring_cruiser }
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
+
+	potential = {
+		ship_uses_cruiser_reactors = yes
+	}
+
 
 	ai_weight = {
 		weight = 100
@@ -114,7 +124,11 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_yuzu" }
 	component_set = "power_core"
-	size_restriction = { battleship offspring_battleship }
+	# size_restriction = { battleship offspring_battleship ember_battleship }
+
+	potential = {
+		ship_uses_battleship_reactors = yes
+	}
 
 	ai_weight = {
 		weight = 100
@@ -146,7 +160,11 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_yuzu" }
 	component_set = "power_core"
-	size_restriction = { titan }
+	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
+
+	potential = {
+		ship_uses_titan_reactors = yes
+	}
 
 	ai_weight = {
 		weight = 100
@@ -171,7 +189,65 @@ utility_component_template = {
 	prerequisites = { "tech_reactor_yuzu" }
 
 	component_set = "power_core"
-	size_restriction = { colossus star_eater yuzu_star_eater }
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_colossus_components = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_YUZU_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu"
+	icon_frame = 1
+	power = 24000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2880
+			sr_dark_matter = 96
+		}
+		upkeep = {
+			energy = 28.8
+			alloys = 2.88
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu" }
+
+	component_set = "power_core"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_juggernaut_reactors = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
 
 	ai_weight = {
 		weight = 100
@@ -203,11 +279,14 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_yuzu" }
 	component_set = "power_core"
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		military_station_small
-		military_station_medium
-		military_station_large
+	# class_restriction = { shipclass_military_station }
+	# size_restriction = {
+	# 	military_station_small
+	# 	military_station_medium
+	# 	military_station_large
+	# }
+	potential = {
+		ship_uses_platform_reactors = yes
 	}
 
 	ai_weight = {
@@ -236,7 +315,10 @@ utility_component_template = {
 	}
 
 	component_set = "power_core"
-	size_restriction = { ion_cannon }
+	# size_restriction = { ion_cannon }
+	potential = {
+		ship_uses_ion_cannon_components = yes
+	}
 
 	ai_weight = {
 		weight = 100
@@ -257,14 +339,23 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_yuzu" }
 	component_set = "power_core"
-	class_restriction = { shipclass_starbase }
-	size_restriction = {
-		starbase_outpost
-		starbase_starport
-		starbase_starhold
-		starbase_starfortress
-		starbase_citadel
-		juggernaut
+	# class_restriction = { shipclass_starbase shipclass_military_special }
+	# size_restriction = {
+	#	starbase_outpost
+	#	starbase_starport
+	#	starbase_starhold
+	#	starbase_starfortress
+	#	starbase_citadel
+	#	juggernaut
+	#	starbase_deep_space_citadel_1
+	#	starbase_deep_space_citadel_2
+	#	starbase_deep_space_citadel_3
+	#	monadic_qerr
+	# }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+		}
 	}
 
 	ai_weight = {

@@ -39,31 +39,55 @@ building_yuzu_clone_vats = {
 		}
 	}
 
-	planet_modifier = {
-		planet_pop_assembly_add = 3
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = { has_trait = trait_yuzu }
+		bonus_pop_growth = 3
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		fake_pop_growth_mod = 3
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			has_trait = trait_yuzu
+			owner = { has_technology = tech_yuzu_rapid_cell_division_1 }
+		}
+		bonus_pop_growth = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_yuzu_rapid_cell_division_1 }
 		}
-		planet_pop_assembly_add = 1
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			has_trait = trait_yuzu
+			owner = { has_technology = tech_yuzu_rapid_cell_division_2 }
+		}
+		bonus_pop_growth = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_technology = tech_yuzu_rapid_cell_division_2 }
 		}
-		planet_pop_assembly_add = 1
+		fake_pop_growth_mod = 1
+	}
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			has_trait = trait_yuzu
+			owner = { has_edict = yuzu_overloaded_clone }
+		}
+		bonus_pop_growth = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_edict = yuzu_overloaded_clone
-			}
+			owner = { has_edict = yuzu_overloaded_clone }
 		}
-		planet_pop_assembly_add = 1
+		fake_pop_growth_mod = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -283,6 +307,10 @@ building_yuzu_supernatural_research_organization = {
 		NOT = { has_modifier = slave_colony }
 	}
 
+	building_sets = {
+		research
+	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -382,6 +410,10 @@ building_yuzu_supernatural_research_institute = {
 
 	allow = {
 		has_major_upgraded_capital = yes
+	}
+
+	building_sets = {
+		research
 	}
 
 	potential = {
@@ -491,6 +523,10 @@ building_yuzu_supernatural_research_center = {
 		has_fully_upgraded_capital = yes
 	}
 
+	building_sets = {
+		research
+	}
+
 	potential = {
 		exists = owner
 		owner = { 
@@ -587,19 +623,35 @@ building_yuzu_supernatural_research_center = {
 ##### 覆天穹顶 #####
 building_yuzu_fe_dome = {
 	base_buildtime = @b2_time
-	icon = building_paradise_dome
+	icon = building_fe_dome
 	category = amenity
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
 
 	position_priority = 180
 
 	potential = {
-		custom_tooltip = {
-			exists = owner
-			owner = {
+		exists = owner
+		owner = {
+			OR = {
 				is_YUZU = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "yuzu_fe_building_failtext"
+			owner = {
 				check_variable = { which = yuzu_fe_dome_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -638,26 +690,42 @@ building_yuzu_fe_dome = {
 ##### 财富圣殿 #####
 building_yuzu_affluence_center = {
 	base_buildtime = @b2_time
-	icon = building_hyper_entertainment_forum
+	icon = building_affluence_center
 	category = manufacturing
 
 	position_priority = 160
 
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+	}
+
 	potential = {
-		custom_tooltip = {
-			exists = owner
-			owner = {
-				is_YUZU = yes
-				check_variable = { which = yuzu_affluence_center_build_count value >= 1 }
-			}
-			fail_text = "yuzu_fe_building_failtext"
+		exists = owner
+		owner = {
+			is_YUZU = yes
 		}
 	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "yuzu_fe_building_failtext"
+			owner = {
+				check_variable = { which = yuzu_affluence_center_build_count value >= 1 }
+			}
+		}
+	}
+	
 
 	destroy_trigger = {
 		always = no
 	}
 
+	inline_script = {
+		script = jobs/yuzu_building_job_goods
+		AMOUNT = 1200
+	}
 
 	resources = {
 		category = planet_buildings
@@ -689,19 +757,30 @@ building_yuzu_affluence_center = {
 ##### 营养圣殿 #####
 building_yuzu_nourishment_center = {
 	base_buildtime = @b2_time
-	icon = building_food_processing_center
+	icon = building_nourishment_center
 	category = resource
 
 	position_priority = 150
 
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_farming
+	}
+
 	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	allow = {
 		custom_tooltip = {
-			exists = owner
+			fail_text = "yuzu_fe_building_failtext"
 			owner = {
-				is_YUZU = yes
 				check_variable = { which = yuzu_nourishment_center_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -709,7 +788,10 @@ building_yuzu_nourishment_center = {
 		always = no
 	}
 
-
+	inline_script = {
+		script = jobs/yuzu_building_job_food
+		AMOUNT = 1200
+	}
 
 	resources = {
 		category = planet_buildings
@@ -740,19 +822,29 @@ building_yuzu_nourishment_center = {
 ##### 多重次元制造机 #####
 building_yuzu_dimensional_fabricator = {
 	base_buildtime = @b2_time
-	icon = building_nanite_transmuter
+	icon = building_dimensional_fabricator
 	category = resource
 
 	position_priority = 140
 
+	building_sets = {
+		fallen_empire
+		fallen_empire_mining
+	}
+
 	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	allow = {
 		custom_tooltip = {
-			exists = owner
+			fail_text = "yuzu_fe_building_failtext"
 			owner = {
-				is_YUZU = yes
 				check_variable = { which = yuzu_dimensional_fabricator_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -760,6 +852,10 @@ building_yuzu_dimensional_fabricator = {
 		always = no
 	}
 
+	inline_script = {
+		script = jobs/yuzu_building_job_minerals
+		AMOUNT = 1200
+	}
 
 
 	triggered_planet_modifier = {
@@ -813,14 +909,27 @@ building_yuzu_class_4_singularity = {
 
 	position_priority = 130
 
+	building_sets = {
+		fallen_empire
+		fallen_empire_generator
+	}
+
 	potential = {
-		custom_tooltip = {
-			exists = owner
-			owner = {
+		exists = owner
+		owner = {
+			OR = {
 				is_YUZU = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "yuzu_fe_building_failtext"
+			owner = {
 				check_variable = { which = yuzu_class_4_singularity_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -828,7 +937,10 @@ building_yuzu_class_4_singularity = {
 		always = no
 	}
 
-
+	inline_script = {
+		script = jobs/yuzu_building_job_energy
+		AMOUNT = 1200
+	}
 
 	resources = {
 		category = planet_buildings
@@ -861,14 +973,25 @@ building_yuzu_nano_forge = {
 
 	position_priority = 170
 
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+	}
+
 	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	allow = {
 		custom_tooltip = {
-			exists = owner
+			fail_text = "yuzu_fe_building_failtext"
 			owner = {
-				is_YUZU = yes
 				check_variable = { which = yuzu_nano_forge_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -876,8 +999,6 @@ building_yuzu_nano_forge = {
 		always = no
 	}
 
-	planet_modifier = {
-	}
 
 	resources = {
 		category = planet_buildings
@@ -893,6 +1014,10 @@ building_yuzu_nano_forge = {
 		}
 	}
 
+	inline_script = {
+		script = jobs/yuzu_building_job_alloy
+		AMOUNT = 1200
+	}
 
 	on_queued = {
 		owner = {
@@ -916,13 +1041,21 @@ building_yuzu_master_archive = {
 	position_priority = 110
 
 	potential = {
-		custom_tooltip = {
-			exists = owner
-			owner = {
+		exists = owner
+		owner = {
+			OR = {
 				is_YUZU = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "yuzu_fe_building_failtext"
+			owner = {
 				check_variable = { which = yuzu_master_archive_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -975,13 +1108,18 @@ building_yuzu_empyrean_shrine = {
 	position_priority = 120
 
 	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	allow = {
 		custom_tooltip = {
-			exists = owner
+			fail_text = "yuzu_fe_building_failtext"
 			owner = {
-				is_YUZU = yes
 				check_variable = { which = yuzu_empyrean_shrine_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -1030,13 +1168,21 @@ building_yuzu_fe_stronghold = {
 	position_priority = 90
 
 	potential = {
-		custom_tooltip = {
-			exists = owner
-			owner = {
+		exists = owner
+		owner = {
+			OR = {
 				is_YUZU = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "yuzu_fe_building_failtext"
+			owner = {
 				check_variable = { which = yuzu_fe_stronghold_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -1085,13 +1231,18 @@ building_yuzu_fe_xeno_zoo = {
 	position_priority = 10
 
 	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	allow = {
 		custom_tooltip = {
-			exists = owner
+			fail_text = "yuzu_fe_building_failtext"
 			owner = {
-				is_YUZU = yes
 				check_variable = { which = yuzu_fe_xeno_zoo_build_count value >= 1 }
 			}
-			fail_text = "yuzu_fe_building_failtext"
 		}
 	}
 
@@ -1149,13 +1300,9 @@ building_yuzu_ancient_cryo_chamber_1 = {
 	position_priority = 20
 
 	potential = {
-		custom_tooltip = {
-			exists = owner
-			owner = {
-				is_YUZU = yes
-				check_variable = { which = yuzu_ancient_cryo_chamber_build_count value >= 1 }
-			}
-			fail_text = "yuzu_fe_building_failtext"
+		exists = owner
+		owner = {
+			is_YUZU = yes
 		}
 	}
 
@@ -1174,6 +1321,12 @@ building_yuzu_ancient_cryo_chamber_1 = {
 		custom_tooltip = {
 			fail_text = yuzu_pop_is_not_enought_2
 			count_owned_pop_amount = { count > 10 }
+		}
+		custom_tooltip = {
+			fail_text = "yuzu_fe_building_failtext"
+			owner = {
+				check_variable = { which = yuzu_ancient_cryo_chamber_build_count value >= 1 }
+			}
 		}
 		hidden_trigger = {
 			owner = { is_ai = no }

@@ -83,3 +83,15 @@ guardians_of_the_galaxy_anti_abyss_6 = {
 	ship_armor_mult = -0.20
 	ship_hull_mult = -0.20
 }
+
+fallen_empire_warning_attend_large_modifier = {
+	country_commander_cap_add = 30
+	country_naval_cap_add = 20000
+	ships_upkeep_mult = -0.20
+}
+
+fallen_empire_warning_attend_extreme_modifier = {
+	country_commander_cap_add = 30
+	country_naval_cap_add = 40000
+	ships_upkeep_mult = -0.40
+}

@@ -18,7 +18,18 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
-	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_corvette_components  = yes
+	}
 
 	ai_weight = {
 		weight = 50
@@ -49,7 +60,19 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_destroyer_components = yes
+	}
+
 
 	ai_weight = {
 		weight = 50
@@ -80,7 +103,18 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
-	size_restriction = { cruiser crisis_cruiser offspring_cruiser }
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_cruiser_components = yes
+	}
 
 	ai_weight = {
 		weight = 50
@@ -111,7 +145,18 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
-	size_restriction = { battleship offspring_battleship }
+	# size_restriction = { battleship offspring_battleship }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_battleship_components = yes
+	}
 
 	ai_weight = {
 		weight = 50
@@ -142,7 +187,18 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
-	size_restriction = { titan }
+	# size_restriction = { titan }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_titan_thrusters = yes
+	}
 
 	ai_weight = {
 		weight = 50
@@ -173,7 +229,18 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
-	size_restriction = { colossus juggernaut star_eater yuzu_star_eater }
+	# size_restriction = { colossus juggernaut star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_colossus_thrusters = yes
+	}
 
 	ai_weight = {
 		weight = 50

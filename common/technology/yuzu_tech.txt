@@ -598,7 +598,7 @@ tech_yuzu_lance_1 = {
 	is_reverse_engineerable = no
 	category = { field_manipulation }
 	ai_update_type = military
-	prerequisites = { "tech_yuzu_l_1" "tech_battleships" }
+	prerequisites = { "tech_yuzu_l_1" OR = { "tech_battleships" "tech_stingers" "tech_cosmogenesis_stinger" } }
 	weight = @yuzu_tier5weight5
 
 	gateway = yuzu_space_time
@@ -628,7 +628,7 @@ tech_yuzu_lance_2 = {
 	is_reverse_engineerable = no
 	category = { field_manipulation }
 	ai_update_type = military
-	prerequisites = { "tech_yuzu_l_2" "tech_battleships" }
+	prerequisites = { "tech_yuzu_l_2" OR = { "tech_battleships" "tech_stingers" } }
 	weight = @yuzu_tier6weight2
 
 	gateway = yuzu_abyss
@@ -691,7 +691,7 @@ tech_yuzu_beam_1 = {
 	is_reverse_engineerable = no
 	category = { field_manipulation }
 	ai_update_type = military
-	prerequisites = { "tech_yuzu_lance_1" "tech_titans" }
+	prerequisites = { "tech_yuzu_lance_1" OR = {"tech_titans" "tech_biogenesis_titans"} }
 	weight = @yuzu_tier5weight6
 
 	potential = {
@@ -719,7 +719,7 @@ tech_yuzu_beam_2 = {
 	is_reverse_engineerable = no
 	category = { field_manipulation }
 	ai_update_type = military
-	prerequisites = { "tech_yuzu_lance_2" "tech_titans" }
+	prerequisites = { "tech_yuzu_lance_2" OR = {"tech_titans" "tech_biogenesis_titans"} }
 	weight = @yuzu_tier6weight3
 
 	gateway = yuzu_abyss
@@ -1195,7 +1195,7 @@ tech_yuzu_shield_1 = {
 
 tech_yuzu_shield_2 = {
 	area = physics
-	cost = @yuzu_tier6weight2
+	cost = @yuzu_tier6cost2
 	tier = 6
 	category = { field_manipulation }
 	ai_update_type = all

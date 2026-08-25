@@ -697,3 +697,27 @@ create_presiding_judge_fleet_and_constructors = {
 		}
 	}
 }
+
+create_fallen_empire_large_ship_assistance_for_abyss_crisis = {
+	create_ship = {
+		name = random
+		design = "NAME_Assistance_Large"
+		graphical_culture = owner
+	}
+}
+
+create_fallen_empire_small_ship_assistance_for_abyss_crisis = {
+	create_ship = {
+		name = random
+		design = "NAME_Assistance_Small"
+		graphical_culture = owner
+	}
+}
+
+create_fallen_empire_titan_assistance_for_abyss_crisis = {
+	create_ship = {
+		name = random
+		design = "NAME_Assistance_Titan"
+		graphical_culture = owner
+	}
+}

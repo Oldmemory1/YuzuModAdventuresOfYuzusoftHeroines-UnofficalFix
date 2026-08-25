@@ -102,6 +102,66 @@ zone_yuzu_factory_arcology = {
 	}
 }
 
+zone_yuzu_unity_arcology = {
+	icon = GFX_district_specialization_unity
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_administrative
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		unity
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_unity
+		AMOUNT = 1000
+	}
+}
+
+zone_yuzu_unity_spiritualist_arcology = {
+	icon = GFX_district_specialization_priest
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_religious
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		unity
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_priest
+		AMOUNT = 1000
+	}
+}
+
 zone_yuzu_energy_city_dream = {
 	icon = GFX_district_specialization_energy
 

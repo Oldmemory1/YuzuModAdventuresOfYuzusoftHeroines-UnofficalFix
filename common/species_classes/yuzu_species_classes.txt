@@ -15,6 +15,9 @@ YUZUGIRL = {
 	resources = {}
 
     trait = "trait_yuzu"
+	
+    # 类别级默认特质，设计器中锁定不可移除（同原版 HUM 类别）
+    
 }
 
 ABYSS = {
@@ -29,6 +32,6 @@ ABYSS = {
 	move_pop_sound_effect = "moving_pop_confirmation"
 
 	resources = {}
-
 	trait = "trait_abyss"
+	
 }
