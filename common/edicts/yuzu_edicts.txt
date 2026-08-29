@@ -346,31 +346,6 @@ yuzu_wish_fleet = {
 	}
 }
 
-yuzu_wish_building = {
-	length = 0
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = edicts
-		cost = {
-			fragment_of_heart =  1000
-		}
-	}
-
-	potential = {
-		is_YUZU = yes
-	}
-
-	effect = {
-		hidden_effect = {
-			country_event = { id = Yuzu_country_event.107 }
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-}
-
 yuzu_wish_megastructure_build = {
 	length = 0
 	icon = "GFX_edict_type_time"

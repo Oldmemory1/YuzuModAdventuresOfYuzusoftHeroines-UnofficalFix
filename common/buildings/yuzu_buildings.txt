@@ -646,15 +646,6 @@ building_yuzu_fe_dome = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_fe_dome_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -667,22 +658,11 @@ building_yuzu_fe_dome = {
 	resources = {
 		category = planet_buildings
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b2_minerals
 		}
 		upkeep = {
 			energy = 10
-		}
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_fe_dome_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_fe_dome_build_count value = 1 }
 		}
 	}
 }
@@ -708,14 +688,6 @@ building_yuzu_affluence_center = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_affluence_center_build_count value >= 1 }
-			}
-		}
-	}
 	
 
 	destroy_trigger = {
@@ -733,23 +705,12 @@ building_yuzu_affluence_center = {
 			consumer_goods = 100
 		}
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b3_minerals
 		}
 		upkeep = {
 			minerals = 25
 			energy = 10
-		}
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_affluence_center_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_affluence_center_build_count value = 1 }
 		}
 	}
 }
@@ -775,15 +736,6 @@ building_yuzu_nourishment_center = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_nourishment_center_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -799,22 +751,11 @@ building_yuzu_nourishment_center = {
 			food = 200
 		}
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b3_minerals
 		}
 		upkeep = {
 			energy = 20
-		}
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_nourishment_center_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_nourishment_center_build_count value = 1 }
 		}
 	}
 }
@@ -836,15 +777,6 @@ building_yuzu_dimensional_fabricator = {
 		exists = owner
 		owner = {
 			is_YUZU = yes
-		}
-	}
-
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_dimensional_fabricator_build_count value >= 1 }
-			}
 		}
 	}
 
@@ -881,22 +813,11 @@ building_yuzu_dimensional_fabricator = {
 			nanites = 4
 		}
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b3_minerals
 		}
 		upkeep = {
 			energy = 20
-		}
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_dimensional_fabricator_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_dimensional_fabricator_build_count value = 1 }
 		}
 	}
 }
@@ -924,15 +845,6 @@ building_yuzu_class_4_singularity = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_class_4_singularity_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -945,22 +857,11 @@ building_yuzu_class_4_singularity = {
 	resources = {
 		category = planet_buildings
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b3_minerals
 		}
 		produces = {
 			energy = 500
-		}
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_class_4_singularity_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_class_4_singularity_build_count value = 1 }
 		}
 	}
 }
@@ -986,15 +887,6 @@ building_yuzu_nano_forge = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_nano_forge_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -1006,6 +898,7 @@ building_yuzu_nano_forge = {
 			alloys = 50
 		}
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -1017,18 +910,6 @@ building_yuzu_nano_forge = {
 	inline_script = {
 		script = jobs/yuzu_building_job_alloy
 		AMOUNT = 1200
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_nano_forge_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_nano_forge_build_count value = 1 }
-		}
 	}
 }
 
@@ -1050,15 +931,6 @@ building_yuzu_master_archive = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_master_archive_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -1075,6 +947,7 @@ building_yuzu_master_archive = {
 			engineering_research = 200
 		}
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b2_minerals
 		}
 		upkeep = {
@@ -1084,18 +957,6 @@ building_yuzu_master_archive = {
 
 	triggered_desc = {
 		text = job_yuzu_fe_archivist_effect_desc
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_master_archive_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_master_archive_build_count value = 1 }
-		}
 	}
 }
 
@@ -1114,15 +975,6 @@ building_yuzu_empyrean_shrine = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_empyrean_shrine_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -1134,6 +986,7 @@ building_yuzu_empyrean_shrine = {
 	resources = {
 		category = planet_buildings
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -1143,18 +996,6 @@ building_yuzu_empyrean_shrine = {
 
 	triggered_desc = {
 		text = job_yuzu_fe_augur_effect_desc
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_empyrean_shrine_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_empyrean_shrine_build_count value = 1 }
-		}
 	}
 }
 
@@ -1177,15 +1018,6 @@ building_yuzu_fe_stronghold = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_fe_stronghold_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -1197,6 +1029,7 @@ building_yuzu_fe_stronghold = {
 	resources = {
 		category = planet_buildings
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b2_minerals
 		}
 		upkeep = {
@@ -1206,18 +1039,6 @@ building_yuzu_fe_stronghold = {
 
 	triggered_desc = {
 		text = job_yuzu_fe_protector_effect_desc
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_fe_stronghold_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_fe_stronghold_build_count value = 1 }
-		}
 	}
 }
 
@@ -1237,15 +1058,6 @@ building_yuzu_fe_xeno_zoo = {
 		}
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_fe_xeno_zoo_build_count value >= 1 }
-			}
-		}
-	}
-
 	destroy_trigger = {
 		always = no
 	}
@@ -1258,6 +1070,7 @@ building_yuzu_fe_xeno_zoo = {
 	resources = {
 		category = planet_buildings
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -1275,18 +1088,6 @@ building_yuzu_fe_xeno_zoo = {
 
 	triggered_desc = {
 		text = job_yuzu_fe_xeno_ward_effect_desc
-	}
-
-	on_queued = {
-		owner = {
-			subtract_variable = { which = yuzu_fe_xeno_zoo_build_count value = 1 }
-		}
-	}
-
-	on_unqueued = {
-		owner = {
-			change_variable = { which = yuzu_fe_xeno_zoo_build_count value = 1 }
-		}
 	}
 }
 
@@ -1322,12 +1123,6 @@ building_yuzu_ancient_cryo_chamber_1 = {
 			fail_text = yuzu_pop_is_not_enought_2
 			count_owned_pop_amount = { count > 10 }
 		}
-		custom_tooltip = {
-			fail_text = "yuzu_fe_building_failtext"
-			owner = {
-				check_variable = { which = yuzu_ancient_cryo_chamber_build_count value >= 1 }
-			}
-		}
 		hidden_trigger = {
 			owner = { is_ai = no }
 		}
@@ -1346,6 +1141,7 @@ building_yuzu_ancient_cryo_chamber_1 = {
 			fragment_of_heart = 1
 		}
 		cost = {
+			fragment_of_heart = 1000
 			minerals = @b2_minerals
 		}
 	}
@@ -1353,29 +1149,6 @@ building_yuzu_ancient_cryo_chamber_1 = {
 	triggered_desc = {
 		text = building_yuzu_ancient_cryo_chamber_tooltip
 	}
-
-	on_queued = {
-		if = {
-			limit = {
-				NOT = { has_building = building_yuzu_ancient_cryo_chamber_1 } # 不知为何升到2级也会触发，故作限制
-			}
-			owner = {
-				subtract_variable = { which = yuzu_ancient_cryo_chamber_build_count value = 1 }
-			}
-		}
-	}
-
-	on_unqueued = {
-		if = {
-			limit = {
-				NOT = { has_building = building_yuzu_ancient_cryo_chamber_1 } # 不知为何升到2级取消也会触发，故作限制
-			}
-			owner = {
-				change_variable = { which = yuzu_ancient_cryo_chamber_build_count value = 1 }
-			}
-		}
-	}
-
 	upgrades = {
 		"building_yuzu_ancient_cryo_chamber_2"
 	}
