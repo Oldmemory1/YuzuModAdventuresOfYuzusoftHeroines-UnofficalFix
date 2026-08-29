@@ -1,0 +1,1 @@
+@yuzu_fe_building_tier_1_fragment_of_heart_cost = 1000 

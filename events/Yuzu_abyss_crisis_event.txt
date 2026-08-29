@@ -716,21 +716,13 @@ country_event = {
 							size = 100
 						}
 					}
-				event_target:new_abyss_country = {
-					change_variable = { which = yuzu_fe_stronghold_build_count value = 6 }
-					change_variable = { which = yuzu_master_archive_build_count value = 1 }
-					change_variable = { which = yuzu_class_4_singularity_build_count value = 1 }
-					change_variable = { which = yuzu_fe_dome_build_count value = 3 }
-				}
 				add_building = building_system_capital
 				while = {
-					count = 6
+					count = 2
 					add_building = building_yuzu_fe_stronghold
 				}
 				add_building = building_yuzu_master_archive
 				add_building = building_yuzu_class_4_singularity
-				add_building = building_yuzu_fe_dome
-				add_building = building_yuzu_fe_dome
 				add_building = building_yuzu_fe_dome
 				while = {
 					count = 50

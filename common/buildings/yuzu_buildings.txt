@@ -658,7 +658,7 @@ building_yuzu_fe_dome = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b2_minerals
 		}
 		upkeep = {
@@ -705,7 +705,7 @@ building_yuzu_affluence_center = {
 			consumer_goods = 100
 		}
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -751,7 +751,7 @@ building_yuzu_nourishment_center = {
 			food = 200
 		}
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -813,7 +813,7 @@ building_yuzu_dimensional_fabricator = {
 			nanites = 4
 		}
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -857,7 +857,7 @@ building_yuzu_class_4_singularity = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b3_minerals
 		}
 		produces = {
@@ -898,7 +898,7 @@ building_yuzu_nano_forge = {
 			alloys = 50
 		}
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -947,7 +947,7 @@ building_yuzu_master_archive = {
 			engineering_research = 200
 		}
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b2_minerals
 		}
 		upkeep = {
@@ -986,7 +986,7 @@ building_yuzu_empyrean_shrine = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -1029,7 +1029,7 @@ building_yuzu_fe_stronghold = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b2_minerals
 		}
 		upkeep = {
@@ -1070,7 +1070,7 @@ building_yuzu_fe_xeno_zoo = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b3_minerals
 		}
 		upkeep = {
@@ -1141,7 +1141,7 @@ building_yuzu_ancient_cryo_chamber_1 = {
 			fragment_of_heart = 1
 		}
 		cost = {
-			fragment_of_heart = 1000
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
 			minerals = @b2_minerals
 		}
 	}
