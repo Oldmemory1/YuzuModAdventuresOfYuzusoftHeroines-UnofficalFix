@@ -723,7 +723,7 @@ country_event = {
 				}
 				add_building = building_yuzu_master_archive
 				add_building = building_yuzu_class_4_singularity
-				add_building = building_yuzu_fe_dome
+				add_building = building_yuzu_fe_dome_tier_1
 				while = {
 					count = 50
 					add_district = district_yuzu_city_urban_2

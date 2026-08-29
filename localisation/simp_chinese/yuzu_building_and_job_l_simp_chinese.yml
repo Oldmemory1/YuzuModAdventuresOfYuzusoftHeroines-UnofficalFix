@@ -87,8 +87,8 @@
  mod_job_yuzu_fe_augur_add:0 "$job_yuzu_fe_augur$岗位"
 
 
- building_yuzu_fe_dome:0 "覆天穹顶"
- building_yuzu_fe_dome_desc:0 "依托极度先进的反重力科技漂浮在空中的超级乌托邦。从地面望去，它几乎覆盖了整个天空。"
+ building_yuzu_fe_dome_tier_1:0 "覆天穹顶"
+ building_yuzu_fe_dome_tier_1_desc:0 "依托极度先进的反重力科技漂浮在空中的超级乌托邦。从地面望去，它几乎覆盖了整个天空。"
 
 
  building_yuzu_fe_stronghold:0 "圣盾基地"

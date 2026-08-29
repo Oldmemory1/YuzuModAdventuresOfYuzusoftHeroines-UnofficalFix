@@ -621,7 +621,7 @@ building_yuzu_supernatural_research_center = {
 ########## 失落建筑 ##########
 
 ##### 覆天穹顶 #####
-building_yuzu_fe_dome = {
+building_yuzu_fe_dome_tier_1 = {
 	base_buildtime = @b2_time
 	icon = building_fe_dome
 	category = amenity
