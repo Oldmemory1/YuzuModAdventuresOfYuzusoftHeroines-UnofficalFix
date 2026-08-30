@@ -722,7 +722,7 @@ country_event = {
 					add_building = building_yuzu_fe_stronghold
 				}
 				add_building = building_yuzu_master_archive
-				add_building = building_yuzu_class_4_singularity
+				add_building = building_yuzu_class_4_singularity_tier_1
 				add_building = building_yuzu_fe_dome_tier_1
 				while = {
 					count = 50

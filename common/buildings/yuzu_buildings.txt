@@ -623,7 +623,7 @@ building_yuzu_supernatural_research_center = {
 ##### 覆天穹顶 #####
 building_yuzu_fe_dome_tier_1 = {
 	base_buildtime = @b2_time
-	icon = building_fe_dome
+	icon = building_fe_sky_dome
 	category = amenity
 
 	building_sets = {
@@ -665,12 +665,65 @@ building_yuzu_fe_dome_tier_1 = {
 			energy = 10
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_2"
+	}
+}
+
+##### 碧落穹顶 #####
+building_yuzu_fe_dome_tier_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_fe_dome
+	category = amenity
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	position_priority = 180
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_YUZU = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 8000
+		planet_amenities_add = 8000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
 }
 
 ##### 财富圣殿 #####
-building_yuzu_affluence_center = {
+building_yuzu_affluence_center_tier_1 = {
 	base_buildtime = @b2_time
-	icon = building_affluence_center
+	icon = building_affluence_emporium
 	category = manufacturing
 
 	position_priority = 160
@@ -687,8 +740,6 @@ building_yuzu_affluence_center = {
 			is_YUZU = yes
 		}
 	}
-
-	
 
 	destroy_trigger = {
 		always = no
@@ -713,12 +764,66 @@ building_yuzu_affluence_center = {
 			energy = 10
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_affluence_center_tier_2"
+	}
+}
+
+##### 丰饶圣殿 #####
+building_yuzu_affluence_center_tier_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_affluence_center
+	category = manufacturing
+	position_priority = 160
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 1000
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_goods
+		AMOUNT = 2400
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 200
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			minerals = 50
+			energy = 20
+		}
+	}
 }
 
 ##### 营养圣殿 #####
-building_yuzu_nourishment_center = {
+building_yuzu_nourishment_center_tier_1 = {
 	base_buildtime = @b2_time
-	icon = building_nourishment_center
+	icon = building_nourishment_complex
 	category = resource
 
 	position_priority = 150
@@ -758,15 +863,163 @@ building_yuzu_nourishment_center = {
 			energy = 20
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_nourishment_center_tier_2"
+	}
+}
+
+##### 琼浆圣殿 #####
+building_yuzu_nourishment_center_tier_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_nourishment_center
+	category = resource
+
+	position_priority = 150
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_farming
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.05
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_food
+		AMOUNT = 2400
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 400
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 40
+		}
+	}
+}
+
+##### 多重次元复制机 #####
+building_yuzu_dimensional_fabricator_tier_1 = {
+	base_buildtime = @b2_time
+	icon = building_dimensional_replicator
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			rare_crystals = 8
+			exotic_gases = 8
+			volatile_motes = 8
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_2"
+	}
 }
 
 ##### 多重次元制造机 #####
-building_yuzu_dimensional_fabricator = {
-	base_buildtime = @b2_time
+building_yuzu_dimensional_fabricator_tier_2 = {
+	base_buildtime = @b3_time
+	can_build = no
 	icon = building_dimensional_fabricator
-	category = resource
+	category = manufacturing
 
 	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			rare_crystals = 20
+			exotic_gases = 20
+			volatile_motes = 20
+			sr_zro = 5
+			sr_dark_matter = 5
+			sr_living_metal = 5
+			nanites = 5
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 40
+		}
+	}
+}
+
+##### 星核采矿阵 #####
+building_yuzu_fe_mine_tier_1 = {
+	base_buildtime = @b2_time
+	icon = building_fe_mine_1
+	category = resource
+
+	position_priority = 145
 
 	building_sets = {
 		fallen_empire
@@ -789,7 +1042,6 @@ building_yuzu_dimensional_fabricator = {
 		AMOUNT = 1200
 	}
 
-
 	triggered_planet_modifier = {
 		potential = {
 			is_planet_class = pc_shattered_ring_habitable
@@ -804,13 +1056,6 @@ building_yuzu_dimensional_fabricator = {
 		category = planet_buildings
 		produces = {
 			minerals = 200
-			rare_crystals = 4
-			exotic_gases = 4
-			volatile_motes = 4
-			sr_zro = 4
-			sr_dark_matter = 4
-			sr_living_metal = 4
-			nanites = 4
 		}
 		cost = {
 			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
@@ -820,12 +1065,71 @@ building_yuzu_dimensional_fabricator = {
 			energy = 20
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_fe_mine_tier_2"
+	}
+}
+
+##### 星核钻穿枢纽 #####
+building_yuzu_fe_mine_tier_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_fe_mine_2
+	category = resource
+
+	position_priority = 145
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_mining
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_minerals
+		AMOUNT = 2400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_planet_class = pc_shattered_ring_habitable
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 4
+			planet_miners_alloys_produces_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 400
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 40
+		}
+	}
 }
 
 ##### 五级奇点 #####
-building_yuzu_class_4_singularity = {
+building_yuzu_class_4_singularity_tier_1 = {
 	base_buildtime = @b2_time
-	icon = building_class_4_singularity
+	icon = building_class_3_singularity
 	category = resource
 
 	position_priority = 130
@@ -864,12 +1168,61 @@ building_yuzu_class_4_singularity = {
 			energy = 500
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_class_4_singularity_tier_2"
+	}
+}
+
+##### 六级奇点 #####
+building_yuzu_class_4_singularity_tier_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_class_4_singularity
+	category = resource
+
+	position_priority = 130
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_generator
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_YUZU = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_energy
+		AMOUNT = 2400
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 1000
+		}
+	}
 }
 
 ##### 混沌熔炉 #####
-building_yuzu_nano_forge = {
+building_yuzu_nano_forge_tier_1 = {
 	base_buildtime = @b2_time
-	icon = building_nano_forge
+	icon = building_micro_forge
 	category = manufacturing
 
 	position_priority = 170
@@ -877,7 +1230,7 @@ building_yuzu_nano_forge = {
 	building_sets = {
 		fallen_empire
 		industrial
-		factory
+		foundry
 	}
 
 	potential = {
@@ -910,6 +1263,61 @@ building_yuzu_nano_forge = {
 	inline_script = {
 		script = jobs/yuzu_building_job_alloy
 		AMOUNT = 1200
+	}
+
+	upgrades = {
+		"building_yuzu_nano_forge_tier_2"
+	}
+}
+
+##### 万象熔炉 #####
+building_yuzu_nano_forge_tier_2 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_nano_forge
+	category = manufacturing
+
+	position_priority = 170
+
+	building_sets = {
+		fallen_empire
+		industrial
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_structures_upkeep_mult = -0.05
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_alloy
+		AMOUNT = 2400
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			alloys = 100
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			minerals = 100
+			energy = 20
+		}
 	}
 }
 

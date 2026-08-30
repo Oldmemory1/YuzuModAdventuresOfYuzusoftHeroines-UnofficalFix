@@ -47,24 +47,46 @@
 
  yuzu_fe_building_failtext:0"§R需要从§!§Y法令（愿望）§!§R中获取§!"
 
- building_yuzu_nourishment_center:0 "营养圣殿"
- building_yuzu_nourishment_center_desc:0 "只要是有味道的东西，这里就能迅速重现出来。"
+ building_yuzu_nourishment_center_tier_1:0 "营养圣殿"
+ building_yuzu_nourishment_center_tier_1_desc:0 "只要是有味道的东西，这里就能迅速重现出来。"
+
+ building_yuzu_nourishment_center_tier_2:0 "琼浆圣殿"
+ building_yuzu_nourishment_center_tier_2_desc:0 "营养圣殿的进一步升华。只要心念所至，世间珍馐便会自行汇聚；圣殿深处的甘泉仿佛能够听见食欲本身，把最荒诞不经的味觉渴求也化作触手可及的盛宴，连行星气候都因此变得温柔。"
 
 
- building_yuzu_nano_forge:0 "混沌熔炉"
- building_yuzu_nano_forge_desc:1 "巨型真空混沌熔炼装置将原材料高效地转化为拥有奇迹般效能的高端合金。"
+ building_yuzu_nano_forge_tier_1:0 "混沌熔炉"
+ building_yuzu_nano_forge_tier_1_desc:1 "巨型真空混沌熔炼装置将原材料高效地转化为拥有奇迹般效能的高端合金。"
+
+ building_yuzu_nano_forge_tier_2:0 "万象熔炉"
+ building_yuzu_nano_forge_tier_2_desc:0 "混沌熔炉的进一步升华。巨型纳米复制机舱把原材料压进近乎真空的炼造循环，万千形态的合金如潮水般凝结；整座熔炉甚至开始分担行星结构的维护负荷。"
 
 
- building_yuzu_dimensional_fabricator:0 "多重次元制造机"
- building_yuzu_dimensional_fabricator_desc:0 "这座建筑利用闻所未闻的多重次元重叠科技，从多个异世界吸取大量宝贵的资源。"
+ building_yuzu_dimensional_fabricator_tier_1:0 "多重次元复制机"
+ building_yuzu_dimensional_fabricator_tier_1_desc:0 "这些装置能流畅地将能量隧连进多重次元的织构，从中提取出珍稀的战略资源。"
+
+ building_yuzu_dimensional_fabricator_tier_2:0 "多重次元制造机"
+ building_yuzu_dimensional_fabricator_tier_2_desc:0 "多重次元复制机的进一步升华。先进织造机不断隧连进维度空间的织构，基础战略资源洪流般涌出，零素、暗物质、活体金属与纳米机器人也自此稳定成型。"
+
+ building_yuzu_fe_mine_tier_1:0 "星核采矿阵"
+ building_yuzu_fe_mine_tier_1_desc:0 "透过行星地幔锁定全部矿脉，以量子隧穿在无需物理接触的情况下钻取固态岩层，源源不断输出矿物。"
+
+ building_yuzu_fe_mine_tier_2:0 "星核钻穿枢纽"
+ building_yuzu_fe_mine_tier_2_desc:0 "星核采矿阵的进一步升华。量子隧穿井架直抵外地核以上的全部岩层与熔浆界面，矿物被无接触地连续抽出，整座阵列成为行星矿脉的中央枢纽。"
 
 
- building_yuzu_affluence_center:0 "财富圣殿"
- building_yuzu_affluence_center_desc:0 "无论多奇特的材料，都可以在这里迅速找到。"
+ building_yuzu_affluence_center_tier_1:0 "财富圣殿"
+ building_yuzu_affluence_center_tier_1_desc:0 "无论多奇特的材料，都可以在这里迅速找到。"
 
 
- building_yuzu_class_4_singularity:0 "五级奇点"
- building_yuzu_class_4_singularity_desc:0 "运用了无人能够理解的奇点技术制作的全自动发电站，超大型隔离场中源源不断地产生着能量。"
+ building_yuzu_affluence_center_tier_2:0 "丰饶圣殿"
+ building_yuzu_affluence_center_tier_2_desc:0 "财富圣殿的进一步升华。先进的欲望预测与物质复现系统交织运转，几乎任何奇珍异宝都能在转念之间被调集出来，整座圣殿本身就是一座永不落幕的丰饶之源。"
+
+
+ building_yuzu_class_4_singularity_tier_1:0 "五级奇点"
+ building_yuzu_class_4_singularity_tier_1_desc:0 "运用了无人能够理解的奇点技术制作的全自动发电站，超大型隔离场中源源不断地产生着能量。"
+
+ building_yuzu_class_4_singularity_tier_2:0 "六级奇点"
+ building_yuzu_class_4_singularity_tier_2_desc:0 "五级奇点的进一步升华。更强的隔离场把奇点推到更高能级，能量产出挑战着物理学本身，而约束结构却比以往任何时候都更加稳固。"
 
 
  building_yuzu_master_archive:0 "神秘档案库"
@@ -89,6 +111,9 @@
 
  building_yuzu_fe_dome_tier_1:0 "覆天穹顶"
  building_yuzu_fe_dome_tier_1_desc:0 "依托极度先进的反重力科技漂浮在空中的超级乌托邦。从地面望去，它几乎覆盖了整个天空。"
+
+ building_yuzu_fe_dome_tier_2:0 "碧落穹顶"
+ building_yuzu_fe_dome_tier_2_desc:0 "覆天穹顶的进一步升华。整座浮空乌托邦被织入澄澈的碧落之中，反重力穹幕与梦幻生境融为一体，让栖居其中的人们几乎忘却了尘世的重量。"
 
 
  building_yuzu_fe_stronghold:0 "圣盾基地"

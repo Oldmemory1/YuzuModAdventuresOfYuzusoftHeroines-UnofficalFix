@@ -1,1 +1,2 @@
-@yuzu_fe_building_tier_1_fragment_of_heart_cost = 1000 
+@yuzu_fe_building_tier_1_fragment_of_heart_cost = 1000
+@yuzu_fe_building_tier_2_fragment_of_heart_cost = 2000
