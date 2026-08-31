@@ -6,8 +6,6 @@ district_yuzu_city_housing = {
 
 	zone_slots = {
 		slot_city_government
-		slot_yuzu_arcology_urban_01
-		slot_yuzu_arcology_urban_02
 		slot_yuzu_city_01
 		slot_yuzu_city_02
 	}
@@ -94,8 +92,6 @@ district_yuzu_city_urban_1 = {
 
 	zone_slots = {
 		slot_yuzu_arcology_urban_01
-		slot_yuzu_city_01
-		slot_yuzu_city_02
 	}
 
 	show_on_uncolonized = {
@@ -194,8 +190,6 @@ district_yuzu_city_urban_2 = {
 
 	zone_slots = {
 		slot_yuzu_arcology_urban_02
-		slot_yuzu_city_01
-		slot_yuzu_city_02
 	}
 
 	show_on_uncolonized = {
@@ -294,8 +288,6 @@ district_yuzu_city_urban_3 = {
 
 	zone_slots = {
 		slot_yuzu_arcology_urban_03
-		slot_yuzu_city_01
-		slot_yuzu_city_02
 	}
 
 	show_on_uncolonized = {

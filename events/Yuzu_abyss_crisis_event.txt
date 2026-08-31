@@ -716,14 +716,12 @@ country_event = {
 							size = 100
 						}
 					}
+				# housing provides slot_city_government / zone_default for the capital
+				add_district = district_yuzu_city_housing
 				add_building = building_system_capital
-				while = {
-					count = 2
-					add_building = building_yuzu_fe_stronghold
-				}
 				add_building = building_yuzu_master_archive
-				add_building = building_yuzu_class_4_singularity_tier_1
-				add_building = building_yuzu_fe_dome_tier_1
+				add_building = building_yuzu_class_4_singularity_tier_2
+				add_building = building_yuzu_fe_dome_tier_2
 				while = {
 					count = 50
 					add_district = district_yuzu_city_urban_2
@@ -762,6 +760,8 @@ country_event = {
 				country_event = { id = emperor.90 days = 30 }
 			}
 		}
+		# 教廷正式生成后，开启全星系共享的深渊危机局势
+		yuzu_abyss_situation_start_all = yes
 	}
 }
 
@@ -1706,6 +1706,8 @@ country_event = {
 }
 
 # on_ship_destroyed_victim
+# This = owner of destroyed ship; From = combatant owner
+# 危机舰船被摧毁：局势 -1
 country_event = {
 	id = Yuzu_abyss_crisis_event.160
 	hide_window = yes
@@ -1741,10 +1743,13 @@ country_event = {
 				amount = 1
 			}
 		}
+		yuzu_abyss_situation_reduce_progress = { VALUE = 1 }
 	}
 }
 
 # on_ship_destroyed_perp
+# This = combatant owner; From = destroyed ship owner
+# 危机摧毁他人舰船：局势 +1
 country_event = {
 	id = Yuzu_abyss_crisis_event.161
 	hide_window = yes
@@ -1764,11 +1769,13 @@ country_event = {
 				amount = 1
 			}
 		}
+		yuzu_abyss_situation_add_progress = { VALUE = 1 }
 	}
 }
 
 # on_planet_bombarded
 # Planet has reached 100 devastation from orbital bombardment
+# 危机轰炸摧毁殖民地：局势 +10
 carrier_event = {
 	id = Yuzu_abyss_crisis_event.162
 	hide_window = yes
@@ -1792,6 +1799,7 @@ carrier_event = {
 				amount = 1
 			}
 		}
+		yuzu_abyss_situation_add_progress = { VALUE = 10 }
 	}
 }
 
@@ -2068,6 +2076,7 @@ country_event = {
 	immediate = {
 		set_global_flag = yuzu_abyss_defeated
 		end_yuzu_crisis = yes
+		yuzu_abyss_situation_end_all = yes
 		every_country = {
 			limit = {
 				OR = {
@@ -2080,6 +2089,133 @@ country_event = {
 			country_event = { id = Yuzu_abyss_crisis_event.503 days = 3 }
 		}
 		remove_global_flag = yuzu_abyss_descended_ongoing
+	}
+}
+
+# 深渊危机局势到达 1000：本帝国失败通知
+country_event = {
+	id = Yuzu_abyss_crisis_event.510
+	title = Yuzu_abyss_crisis_event.510.name
+	desc = Yuzu_abyss_crisis_event.510.desc
+	picture = GFX_evt_stare_abyss
+	show_sound = event_bad_omen
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.510.a
+	}
+}
+
+# 深渊危机局势到达 1000：向其它普通国家广播
+country_event = {
+	id = Yuzu_abyss_crisis_event.513
+	title = Yuzu_abyss_crisis_event.513.name
+	desc = Yuzu_abyss_crisis_event.513.desc
+	picture = GFX_evt_stare_abyss
+	show_sound = event_bad_omen
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_abyss_crisis_event.513.a
+	}
+}
+
+# 深渊教廷危机局势：研究分析方案每月推进暗物质偏导护盾
+situation_event = {
+	id = Yuzu_abyss_crisis_event.511
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_situation_type = situation_yuzu_abyss_crisis
+		current_situation_approach = approach_yuzu_abyss_crisis_research
+		owner = {
+			NOT = { has_technology = tech_dark_matter_deflector }
+		}
+	}
+
+	immediate = {
+		owner = {
+			if = {
+				limit = {
+					NOT = { has_tech_option = tech_dark_matter_deflector }
+				}
+				add_research_option = tech_dark_matter_deflector
+			}
+			add_tech_progress = {
+				tech = tech_dark_matter_deflector
+				progress = 0.01
+			}
+		}
+	}
+}
+
+# 深渊教廷危机局势：中和深渊能量方案本地月衰减（最低钳制到 10）
+situation_event = {
+	id = Yuzu_abyss_crisis_event.512
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_situation_type = situation_yuzu_abyss_crisis
+		current_situation_approach = approach_yuzu_abyss_crisis_neutral_abyss_energy
+		situation_progress > 10
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_covenant_with_the_cradle_of_souls = yes }
+			}
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = trigger:situation_progress
+						subtract = 5
+						value >= 10
+					}
+				}
+				add_situation_progress = -5
+			}
+			else = {
+				set_situation_progress = 10
+			}
+		}
+		else_if = {
+			limit = {
+				owner = { has_covenant_with_the_eater_of_worlds = yes }
+			}
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = trigger:situation_progress
+						subtract = 1
+						value >= 10
+					}
+				}
+				add_situation_progress = -1
+			}
+			else = {
+				set_situation_progress = 10
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = trigger:situation_progress
+						subtract = 3
+						value >= 10
+					}
+				}
+				add_situation_progress = -3
+			}
+			else = {
+				set_situation_progress = 10
+			}
+		}
 	}
 }
 

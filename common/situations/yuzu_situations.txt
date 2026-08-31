@@ -275,3 +275,179 @@ situation_yuzu_slime = {
 		}
 	}
 }
+
+# 深渊教廷危机局势
+# 每个 default 普通国家各有一份；战斗进度通过 scripted_effect 同步
+# 中和方案衰减仅影响本帝国副本，因此谁先到 1000 只灭谁
+# 10 -> 1000：危机未结束前最低钳制到 10；教廷被消灭时结束
+situation_yuzu_abyss_crisis = {
+	picture = GFX_evt_stare_abyss
+	category = negative
+	situation_log_category = crises
+	complete_icon = GFX_situation_outcome_negative
+	complete_icon_frame = GFX_situation_outcome_frame_red
+	fail_icon = GFX_situation_outcome_positive
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	initial_progress = 10
+
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 250
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_yellow
+			end = 500
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_yellow
+			end = 750
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 1000
+		}
+	}
+
+	approach = {
+		name = approach_yuzu_abyss_crisis_endure
+		icon = GFX_situation_approach_shrug
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = approach_yuzu_abyss_crisis_endure_tt
+		}
+		ai_weight = {
+			base = 10
+		}
+	}
+
+	approach = {
+		name = approach_yuzu_abyss_crisis_research
+		icon = GFX_situation_approach_research
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_yuzu_abyss_crisis_research_tt
+			custom_tooltip = approach_yuzu_abyss_crisis_research_dark_matter_tt
+		}
+		modifier = {
+			ship_hull_damage_mult = 0.25
+			ship_shield_mult = 0.50
+			country_physics_research_produces_mult = 0.25
+			planet_physicists_upkeep_mult = 1.0
+		}
+		ai_weight = {
+			base = 10
+			modifier = {
+				factor = 5
+				owner = {
+					is_materialist = yes
+				}
+			}
+		}
+	}
+
+	approach = {
+		name = approach_yuzu_abyss_crisis_neutral_abyss_energy
+		icon = GFX_situation_approach_spiral
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_yuzu_abyss_crisis_neutral_abyss_energy_tt
+		}
+		potential = {
+			owner = {
+				OR = {
+					has_breached_shroud = yes
+					has_ascension_perk = ap_become_the_crisis
+				}
+				NOR = {
+					has_covenant_with_end_of_the_cycle = yes
+					has_origin = origin_endbringers
+				}
+			}
+		}
+		resources = {
+			category = situations
+			upkeep = {
+				sr_zro = 5
+			}
+		}
+		ai_weight = {
+			base = 10
+			modifier = {
+				factor = 5
+				owner = {
+					is_spiritualist = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				owner = {
+					has_monthly_income = {
+						resource = sr_zro
+						value < 5
+					}
+				}
+			}
+		}
+	}
+
+	# 研究分析：推进暗物质偏导护盾；中和方案：本地衰减局势
+	on_monthly = {
+		events = {
+			Yuzu_abyss_crisis_event.511
+			Yuzu_abyss_crisis_event.512
+		}
+	}
+
+	# 危机未结束前最低钳制到 10
+	# 进度 >= 12 时月衰减 -2；进度为 11 时只衰减 -1，避免掉到 10 以下
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = -5
+			desc = situation_yuzu_abyss_crisis_monthly_decay
+			situation_progress >= 12
+		}
+		modifier = {
+			add = -1
+			desc = situation_yuzu_abyss_crisis_monthly_decay
+			situation_progress >= 11
+			situation_progress < 12
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = situation_yuzu_abyss_crisis_complete_tt
+		hidden_effect = {
+			owner = {
+				save_event_target_as = yuzu_abyss_swallowed_country
+				country_event = { id = Yuzu_abyss_crisis_event.510 }
+			}
+			every_playable_country = {
+				limit = {
+					is_country_type = default
+					NOT = { is_same_value = event_target:yuzu_abyss_swallowed_country }
+				}
+				country_event = { id = Yuzu_abyss_crisis_event.513 }
+			}
+			event_target:yuzu_abyss_swallowed_country = {
+				destroy_country = yes
+			}
+			destroy_situation = this
+		}
+	}
+
+	abort_trigger = {
+		OR = {
+			has_global_flag = yuzu_abyss_defeated
+			NOR = {
+				any_country = { is_country_type = new_abyss_empire }
+			}
+		}
+	}
+}

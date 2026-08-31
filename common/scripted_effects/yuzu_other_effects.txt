@@ -354,3 +354,80 @@ yuzu_arc_sites_random_events_1 = {
 		remove_global_flag = yuzu_crisis_stage_3
 		remove_global_flag = yuzu_crisis_stage_4
 	}
+
+	# 给所有 default 普通国家开启深渊教廷危机局势（战斗进度同步）
+	yuzu_abyss_situation_start_all = {
+		every_playable_country = {
+			limit = {
+				is_country_type = default
+				NOT = {
+					any_situation = {
+						is_situation_type = situation_yuzu_abyss_crisis
+					}
+				}
+			}
+			start_situation = {
+				type = situation_yuzu_abyss_crisis
+			}
+		}
+	}
+
+	# 同步增加所有深渊教廷危机局势进度（VALUE 为正）
+	yuzu_abyss_situation_add_progress = {
+		every_playable_country = {
+			limit = {
+				is_country_type = default
+			}
+			every_situation = {
+				limit = {
+					is_situation_type = situation_yuzu_abyss_crisis
+				}
+				add_situation_progress = $VALUE$
+			}
+		}
+	}
+
+	# 安全扣减进度（VALUE 为正数，表示要减少多少）
+	# 危机未结束前最低钳制到 10：足够则扣减后不低于 10；已接近下限则直接设为 10
+	yuzu_abyss_situation_reduce_progress = {
+		every_playable_country = {
+			limit = {
+				is_country_type = default
+			}
+			every_situation = {
+				limit = {
+					is_situation_type = situation_yuzu_abyss_crisis
+					situation_progress > 10
+				}
+				if = {
+					limit = {
+						# 扣减后仍 >= 10
+						check_variable_arithmetic = {
+							which = trigger:situation_progress
+							subtract = $VALUE$
+							value >= 10
+						}
+					}
+					add_situation_progress = -$VALUE$
+				}
+				else = {
+					set_situation_progress = 10
+				}
+			}
+		}
+	}
+
+	# 结束所有深渊教廷危机局势
+	yuzu_abyss_situation_end_all = {
+		every_playable_country = {
+			limit = {
+				is_country_type = default
+			}
+			every_situation = {
+				limit = {
+					is_situation_type = situation_yuzu_abyss_crisis
+				}
+				destroy_situation = this
+			}
+		}
+	}
