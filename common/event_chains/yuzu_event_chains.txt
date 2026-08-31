@@ -1,11 +1,13 @@
 yuzu_abyss_coming_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_stare_abyss
+	situation_log_category = crises
 }
 
 yuzu_abyss_descended_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
 	picture = GFX_evt_stare_abyss
+	situation_log_category = crises
 	counter = {
 		yuzu_abyss_kills_us = {
 		}

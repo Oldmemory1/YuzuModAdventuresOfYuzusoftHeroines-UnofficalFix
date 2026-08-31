@@ -255,9 +255,13 @@
  approach_yuzu_abyss_crisis_endure_tt:0"我们只能尽全力抵抗深渊教廷，努力压低危机局势。"
  approach_yuzu_abyss_crisis_research:0"研究分析"
  approach_yuzu_abyss_crisis_research_tt:0"我们需要研究一种对她们舰船的船体造成更高伤害以及更有效对抗她们的武器的方案。"
+ approach_yuzu_abyss_crisis_military:0"保障我方舰队"
+ approach_yuzu_abyss_crisis_military_tt:0"我们需要保障我方舰队，消灭更多深渊教廷舰船压低危机局势。"
  approach_yuzu_abyss_crisis_research_dark_matter_tt:0"若尚未掌握§Y$tech_dark_matter_deflector$§!，每月额外获得§G1%§!该科技研究进度。"
  approach_yuzu_abyss_crisis_neutral_abyss_energy:0"中和深渊能量"
  approach_yuzu_abyss_crisis_neutral_abyss_energy_tt:0"虚境中的能量或许可以帮助我们中和危险的深渊能量。每月消耗§Y5§!$sr_zro$；与魂灵之月窠签订契约时，每月额外§G-5§!局势进度；与世界之喰煞签订契约时，每月额外§G-1§!局势进度；签约目标不为二者或没有签约超主时，每月额外§G-3§!局势进度。"
+ approach_yuzu_abyss_crisis_neutral_abyss_energy_fail_shroud_or_crisis:0"$TRIGGER_FAIL$未突入虚境或未采用星海天罚野望。"
+ approach_yuzu_abyss_crisis_neutral_abyss_energy_fail_end_of_cycle:0"$TRIGGER_FAIL$是终末使者起源或与轮回之终末签订了契约。"
 
  YUZU_FLEET_ORD:0"柚子舰队$O$"
  YUZU_ARMY01_ORD:0"柚子卫队$O$"

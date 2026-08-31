@@ -303,7 +303,7 @@ situation_yuzu_abyss_crisis = {
 		}
 		stage_3 = {
 			icon = GFX_situation_stage_3
-			icon_background = GFX_situation_stage_frame_yellow
+			icon_background = GFX_situation_stage_frame_orange
 			end = 1500
 		}
 		stage_4 = {
