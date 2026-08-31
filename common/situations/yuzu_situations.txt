@@ -278,8 +278,8 @@ situation_yuzu_slime = {
 
 # 深渊教廷危机局势
 # 每个 default 普通国家各有一份；战斗进度通过 scripted_effect 同步
-# 中和方案衰减仅影响本帝国副本，因此谁先到 1000 只灭谁
-# 10 -> 1000：危机未结束前最低钳制到 10；教廷被消灭时结束
+# 中和方案衰减仅影响本帝国副本，因此谁先到 2000 只灭谁
+# 10 -> 2000：危机未结束前最低钳制到 10；教廷被消灭时结束
 situation_yuzu_abyss_crisis = {
 	picture = GFX_evt_stare_abyss
 	category = negative
@@ -288,28 +288,28 @@ situation_yuzu_abyss_crisis = {
 	complete_icon_frame = GFX_situation_outcome_frame_red
 	fail_icon = GFX_situation_outcome_positive
 	fail_icon_frame = GFX_situation_outcome_frame_green
-	initial_progress = 10
+	initial_progress = 100
 
 	stages = {
 		stage_1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_green
-			end = 250
+			end = 500
 		}
 		stage_2 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_yellow
-			end = 500
+			end = 1000
 		}
 		stage_3 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_yellow
-			end = 750
+			end = 1500
 		}
 		stage_4 = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_red
-			end = 1000
+			end = 2000
 		}
 	}
 
@@ -358,15 +358,24 @@ situation_yuzu_abyss_crisis = {
 		on_select = {
 			custom_tooltip = approach_yuzu_abyss_crisis_neutral_abyss_energy_tt
 		}
-		potential = {
-			owner = {
-				OR = {
-					has_breached_shroud = yes
-					has_ascension_perk = ap_become_the_crisis
+		# keep visible when unmet; grey out via allow + fail_text
+		allow = {
+			custom_tooltip = {
+				fail_text = approach_yuzu_abyss_crisis_neutral_abyss_energy_fail_shroud_or_crisis
+				owner = {
+					OR = {
+						has_breached_shroud = yes
+						has_ascension_perk = ap_become_the_crisis
+					}
 				}
-				NOR = {
-					has_covenant_with_end_of_the_cycle = yes
-					has_origin = origin_endbringers
+			}
+			custom_tooltip = {
+				fail_text = approach_yuzu_abyss_crisis_neutral_abyss_energy_fail_end_of_cycle
+				owner = {
+					NOR = {
+						has_covenant_with_end_of_the_cycle = yes
+						has_origin = origin_endbringers
+					}
 				}
 			}
 		}
@@ -396,6 +405,29 @@ situation_yuzu_abyss_crisis = {
 		}
 	}
 
+	approach = {
+		name = approach_yuzu_abyss_crisis_military
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_green
+		on_select = {
+			custom_tooltip = approach_yuzu_abyss_crisis_military_tt
+		}
+		modifier = {
+			country_alloys_produces_mult = 0.25
+			country_consumer_goods_produces_mult = -0.25
+			starbase_shipyard_build_cost_mult = -0.15
+		}
+		ai_weight = {
+			base = 10
+			modifier = {
+				factor = 5
+				owner = {
+					is_militarist = yes
+				}
+			}
+		}
+	}
+
 	# 研究分析：推进暗物质偏导护盾；中和方案：本地衰减局势
 	on_monthly = {
 		events = {
@@ -411,13 +443,13 @@ situation_yuzu_abyss_crisis = {
 		modifier = {
 			add = -5
 			desc = situation_yuzu_abyss_crisis_monthly_decay
-			situation_progress >= 12
+			situation_progress >= 15
 		}
 		modifier = {
 			add = -1
 			desc = situation_yuzu_abyss_crisis_monthly_decay
 			situation_progress >= 11
-			situation_progress < 12
+			situation_progress < 15
 		}
 	}
 
