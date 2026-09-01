@@ -167,7 +167,8 @@ country_event = {
 		set_global_flag = yuzu_abyss_descended_vanguard
 		set_global_flag = yuzu_abyss_descended_ongoing
 		set_yuzu_crisis_stage_1 = yes
-		random_system = {
+		# Prefer galaxy rim like Prethoryn, so the invasion can be chokepointed.
+		random_rim_system = {
 			limit = {
 				OR = {
 					# No owner or neighbors
