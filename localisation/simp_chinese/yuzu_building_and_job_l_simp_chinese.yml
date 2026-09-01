@@ -222,9 +222,9 @@
  building_yuzu_ancient_cryo_chamber_35_desc:0"$building_yuzu_ancient_cryo_chamber_21_desc$"
  building_yuzu_ancient_cryo_chamber_36:0"神秘冷冻室·∞"
  building_yuzu_ancient_cryo_chamber_36_desc:0"$building_yuzu_ancient_cryo_chamber_21_desc$"
- building_yuzu_ancient_cryo_chamber_tooltip:0"建造或升级完毕时，星球上的§Y10§! £pop£ §Y柚子人口§!会进入神秘冷冻室接受冷冻。在神秘冷冻室中被冷冻的 £pop£ §Y柚子人口§!将会在神秘冷冻室被拆除或降级时释放。"
- yuzu_pop_is_not_enought_1:0"$TRIGGER_FAIL$§R星球上的柚子人口数少于10。§!"
- yuzu_pop_is_not_enought_2:0"$TRIGGER_FAIL$§R星球上的总人口数不大于10。§!"
+ building_yuzu_ancient_cryo_chamber_tooltip:0"建造或升级完毕时，星球上的§Y1000§! £pop£ §Y柚子人口§!会进入神秘冷冻室接受冷冻。在神秘冷冻室中被冷冻的 £pop£ §Y柚子人口§!将会在神秘冷冻室被拆除或降级时释放。"
+ yuzu_pop_is_not_enought_1:0"$TRIGGER_FAIL$§R星球上的柚子人口数少于1000。§!"
+ yuzu_pop_is_not_enought_2:0"$TRIGGER_FAIL$§R星球上的总人口数不大于1000。§!"
 
 
  job_yuzu_slime_researcher:0"史莱姆研究员"

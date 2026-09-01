@@ -255,9 +255,14 @@ decision_restore_yuzu_abyss_city = {
 			else = {
 				carrier_event = { id = Yuzu_window_event.105 }
 			}
-			save_city_district_num = yes
 			change_pc = pc_yuzu_abyss_city
-			set_yuzu_city_district = yes
+			validate_and_repair_planet_buildings_and_districts = yes
+
+			# Keep vanilla district_arcology_housing; strip any extra yuzu housing created on change_pc
+			while = {
+				limit = { num_districts = { type = district_yuzu_city_housing value > 0 } }
+				remove_district = district_yuzu_city_housing
+			}
 			add_deposit = d_yuzu_abyss_gate
 		}
 	}
@@ -303,9 +308,14 @@ decision_yuzu_abyss_city = {
 		custom_tooltip = decision_yuzu_abyss_city_effects
 		hidden_effect = {
 			carrier_event = { id = Yuzu_window_event.106 }
-			save_city_district_num = yes
 			change_pc = pc_yuzu_abyss_city
-			set_yuzu_city_district = yes
+			validate_and_repair_planet_buildings_and_districts = yes
+
+			# Keep vanilla district_arcology_housing; strip any extra yuzu housing created on change_pc
+			while = {
+				limit = { num_districts = { type = district_yuzu_city_housing value > 0 } }
+				remove_district = district_yuzu_city_housing
+			}
 			add_deposit = d_yuzu_imitation_abyss_gate
 		}
 	}
@@ -351,9 +361,14 @@ decision_yuzu_sunset_city = {
 		custom_tooltip = decision_yuzu_sunset_city_effects
 		hidden_effect = {
 			carrier_event = { id = Yuzu_window_event.107 }
-			save_city_district_num = yes
 			change_pc = pc_yuzu_sunset_city
-			set_yuzu_city_district = yes
+			validate_and_repair_planet_buildings_and_districts = yes
+
+			# Keep vanilla district_arcology_housing; strip any extra yuzu housing created on change_pc
+			while = {
+				limit = { num_districts = { type = district_yuzu_city_housing value > 0 } }
+				remove_district = district_yuzu_city_housing
+			}
 			add_deposit = d_yuzu_dream_gate
 			while = {
 				count = trigger:planet_size

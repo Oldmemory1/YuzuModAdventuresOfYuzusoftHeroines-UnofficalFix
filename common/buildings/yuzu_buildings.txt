@@ -1329,6 +1329,14 @@ building_yuzu_master_archive = {
 
 	position_priority = 110
 
+	building_sets = {
+		fallen_empire
+		research
+		physics
+		society
+		engineering
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1363,18 +1371,20 @@ building_yuzu_master_archive = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_yuzu_fe_archivist_effect_desc
-	}
 }
 
 ##### 苍穹神龛 #####
 building_yuzu_empyrean_shrine = {
 	base_buildtime = @b2_time
-	icon = building_citadel_of_faith
+	icon = building_empyrean_shrine
 	category = research
 
 	position_priority = 120
+
+	building_sets = {
+		fallen_empire
+		unity
+	}
 
 	potential = {
 		exists = owner
@@ -1402,9 +1412,6 @@ building_yuzu_empyrean_shrine = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_yuzu_fe_augur_effect_desc
-	}
 }
 
 ##### 圣盾基地 #####
@@ -1415,6 +1422,11 @@ building_yuzu_fe_stronghold = {
 	planetary_ftl_inhibitor = yes
 
 	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
 
 	potential = {
 		exists = owner
@@ -1445,9 +1457,6 @@ building_yuzu_fe_stronghold = {
 		}
 	}
 
-	triggered_desc = {
-		text = job_yuzu_fe_protector_effect_desc
-	}
 }
 
 ##### 外星庇护所 #####
@@ -1458,6 +1467,10 @@ building_yuzu_fe_xeno_zoo = {
 
 	base_cap_amount = 1
 	position_priority = 10
+
+	building_sets = {
+		fallen_empire
+	}
 
 	potential = {
 		exists = owner
@@ -1490,13 +1503,6 @@ building_yuzu_fe_xeno_zoo = {
 		text = building_yuzu_fe_xeno_zoo_tooltip
 	}
 
-	triggered_desc = {
-		text = job_yuzu_fe_xeno_keeper_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_yuzu_fe_xeno_ward_effect_desc
-	}
 }
 
 ##### 神秘冷冻室 #####
@@ -1507,6 +1513,12 @@ building_yuzu_ancient_cryo_chamber_1 = {
 
 	base_cap_amount = 1
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -1570,6 +1582,12 @@ building_yuzu_ancient_cryo_chamber_2 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1631,6 +1649,12 @@ building_yuzu_ancient_cryo_chamber_3 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -1694,6 +1718,12 @@ building_yuzu_ancient_cryo_chamber_4 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1755,6 +1785,12 @@ building_yuzu_ancient_cryo_chamber_5 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -1818,6 +1854,12 @@ building_yuzu_ancient_cryo_chamber_6 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -1879,6 +1921,12 @@ building_yuzu_ancient_cryo_chamber_7 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -1942,6 +1990,12 @@ building_yuzu_ancient_cryo_chamber_8 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2004,6 +2058,12 @@ building_yuzu_ancient_cryo_chamber_9 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2065,6 +2125,12 @@ building_yuzu_ancient_cryo_chamber_10 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -2129,6 +2195,12 @@ building_yuzu_ancient_cryo_chamber_11 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2190,6 +2262,12 @@ building_yuzu_ancient_cryo_chamber_12 = {
 	can_build = no
 	icon = building_ancient_cryo_chamber
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -2254,6 +2332,12 @@ building_yuzu_ancient_cryo_chamber_13 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2316,6 +2400,12 @@ building_yuzu_ancient_cryo_chamber_14 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -2380,6 +2470,12 @@ building_yuzu_ancient_cryo_chamber_15 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2442,6 +2538,12 @@ building_yuzu_ancient_cryo_chamber_16 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -2506,6 +2608,12 @@ building_yuzu_ancient_cryo_chamber_17 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2568,6 +2676,12 @@ building_yuzu_ancient_cryo_chamber_18 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -2632,6 +2746,12 @@ building_yuzu_ancient_cryo_chamber_19 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2694,6 +2814,12 @@ building_yuzu_ancient_cryo_chamber_20 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -2758,6 +2884,12 @@ building_yuzu_ancient_cryo_chamber_21 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2820,6 +2952,12 @@ building_yuzu_ancient_cryo_chamber_22 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -2884,6 +3022,12 @@ building_yuzu_ancient_cryo_chamber_23 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -2946,6 +3090,12 @@ building_yuzu_ancient_cryo_chamber_24 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -3010,6 +3160,12 @@ building_yuzu_ancient_cryo_chamber_25 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3072,6 +3228,12 @@ building_yuzu_ancient_cryo_chamber_26 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -3136,6 +3298,12 @@ building_yuzu_ancient_cryo_chamber_27 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3198,6 +3366,12 @@ building_yuzu_ancient_cryo_chamber_28 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -3262,6 +3436,12 @@ building_yuzu_ancient_cryo_chamber_29 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3324,6 +3504,12 @@ building_yuzu_ancient_cryo_chamber_30 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -3388,6 +3574,12 @@ building_yuzu_ancient_cryo_chamber_31 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3449,6 +3641,12 @@ building_yuzu_ancient_cryo_chamber_32 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -3513,6 +3711,12 @@ building_yuzu_ancient_cryo_chamber_33 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3575,6 +3779,12 @@ building_yuzu_ancient_cryo_chamber_34 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
@@ -3639,6 +3849,12 @@ building_yuzu_ancient_cryo_chamber_35 = {
 
 	position_priority = 20
 
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
 	potential = {
 		exists = owner
 		owner = {
@@ -3701,6 +3917,12 @@ building_yuzu_ancient_cryo_chamber_36 = {
 	icon = building_ancient_cryo_chamber
 
 	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
 
 	potential = {
 		exists = owner
