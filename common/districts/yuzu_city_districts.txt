@@ -1,4 +1,7 @@
 district_yuzu_city_housing = {
+	# Restored yuzu cities keep vanilla district_arcology_housing (and its 6+6 buildings).
+	# This ID remains for crisis scripted add_district only — hide from player UI so it
+	# does not appear as a second empty 「居住理想城」 next to vanilla housing + 3 towers.
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
@@ -11,18 +14,11 @@ district_yuzu_city_housing = {
 	}
 
 	show_on_uncolonized = {
-		OR = {
-			uses_district_set = yuzu_abyss_city_world
-			uses_district_set = yuzu_sunset_city_world
-		}
+		always = no
 	}
 
 	potential = {
-		OR = {
-			uses_district_set = yuzu_abyss_city_world
-			uses_district_set = yuzu_sunset_city_world
-		}
-		exists = owner
+		always = no
 	}
 
 	conversion_ratio = 1

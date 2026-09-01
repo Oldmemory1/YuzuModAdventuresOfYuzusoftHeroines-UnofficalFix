@@ -113,6 +113,16 @@ zone_yuzu_unity_arcology = {
 		}
 	}
 
+	# Match vanilla shared_unity_zone: administrative center is for non-spiritualists
+	potential = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_spiritualist = no
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+	}
+
 	swap_type = district_yuzu_city_administrative
 	swap_type_weight = 5
 
@@ -130,6 +140,10 @@ zone_yuzu_unity_arcology = {
 		script = jobs/yuzu_zone_job_unity
 		AMOUNT = 1000
 	}
+
+	convert_to = {
+		zone_yuzu_unity_spiritualist_arcology
+	}
 }
 
 zone_yuzu_unity_spiritualist_arcology = {
@@ -140,6 +154,14 @@ zone_yuzu_unity_spiritualist_arcology = {
 		category = planet_zones
 		cost = {
 			minerals = 1000
+		}
+	}
+
+	# Match vanilla shared_unity_spiritualist_zone: only spiritualists
+	potential = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_spiritualist = yes
 		}
 	}
 
@@ -159,6 +181,10 @@ zone_yuzu_unity_spiritualist_arcology = {
 	inline_script = {
 		script = jobs/yuzu_zone_job_priest
 		AMOUNT = 1000
+	}
+
+	convert_to = {
+		zone_yuzu_unity_arcology
 	}
 }
 
@@ -185,7 +211,7 @@ zone_yuzu_energy_city_dream = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_energy
-		AMOUNT = 600
+		AMOUNT = 1000
 	}
 
 	planet_modifier = {
@@ -216,7 +242,7 @@ zone_yuzu_minerals_city_dream = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_minerals
-		AMOUNT = 600
+		AMOUNT = 1000
 	}
 
 	planet_modifier = {
@@ -225,7 +251,7 @@ zone_yuzu_minerals_city_dream = {
 }
 
 zone_yuzu_food_city_dream = {
-	icon = GFX_district_specialization_minerals
+	icon = GFX_district_specialization_food
 
 	base_buildtime = 360
 	resources = {
@@ -248,7 +274,7 @@ zone_yuzu_food_city_dream = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_food
-		AMOUNT = 600
+		AMOUNT = 1000
 	}
 
 	planet_modifier = {

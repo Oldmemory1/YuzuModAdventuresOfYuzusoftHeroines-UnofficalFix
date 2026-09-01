@@ -184,3 +184,124 @@ can_species_be_assembled = {
 		country = root.owner
 	}
 }
+
+# This = leader, leader we'd like to trade
+# Root = country, country that owns the leader currently
+# From = country, country that would receive the leader
+# Full replace of vanilla can_trade_leader: preserve specialist/TAC paths,
+# and add a Yuzu branch for leader_trait_yuzu / leader_trait_immortal_yuzu.
+can_trade_leader = {
+	# Shared safety (always)
+	this = {
+		is_councilor = no
+		is_heir = no
+	}
+	is_gestalt_node = no
+	NOR = {
+		has_trait = leader_trait_fotd_scientist
+		has_trait = leader_trait_fotd_commander
+	}
+	ROOT = {
+		NAND = {
+			is_overlord = yes
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
+	}
+
+	OR = {
+		# Path A: vanilla specialist subject / tactical algorithms
+		AND = {
+			this = {
+				has_specialist_subject_leader_trait = yes
+			}
+			OR = {
+				AND = { # Either from subject to Overlord
+					ROOT = {
+						is_subject = yes
+					}
+					FROM = {
+						is_overlord_to = ROOT
+					}
+				}
+				AND = { # Or from a tactical cogitator empire to a NON tactical cogitator empire
+					ROOT = { has_valid_civic = civic_machine_tactical_algorithms }
+					FROM = {
+						NOT = { has_valid_civic = civic_machine_tactical_algorithms }
+						is_fallen_empire = no
+						NOT = {
+							any_owned_leader = {
+								has_trait = leader_trait_tactical_algorithms
+							}
+						}
+					}
+				}
+			}
+			# The subject and overlord must both be regular empires, machine intelligences or hive-minds.
+			OR = {
+				AND = {
+					ROOT = {
+						is_regular_empire = yes
+					}
+					FROM = {
+						is_regular_empire = yes
+					}
+				}
+				AND = {
+					ROOT = {
+						is_machine_empire = yes
+					}
+					FROM = {
+						is_machine_empire = yes
+					}
+				}
+				AND = {
+					ROOT = {
+						is_hive_empire = yes
+					}
+					FROM = {
+						is_hive_empire = yes
+					}
+				}
+				AND = { # Tactical Cogitator option
+					ROOT = {
+						has_valid_civic = civic_machine_tactical_algorithms
+					}
+					FROM = {
+						OR = {
+							is_regular_empire = yes
+							is_hive_empire = yes
+							is_machine_empire = yes
+						}
+						NOT = { has_country_flag = no_murdering_tactical_leaders }
+						NOT = {
+							any_owned_leader = {
+								has_trait = leader_trait_tactical_algorithms
+							}
+						}
+					}
+				}
+			}
+		}
+
+		# Path B: Yuzu leaders — any owner can sell; no buyer quantity limit; cross-type OK
+		AND = {
+			this = {
+				OR = {
+					has_trait = leader_trait_yuzu
+					has_trait = leader_trait_immortal_yuzu
+				}
+			}
+			FROM = {
+				is_fallen_empire = no
+				OR = {
+					is_regular_empire = yes
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+	}
+}

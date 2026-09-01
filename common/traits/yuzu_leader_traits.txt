@@ -33,6 +33,7 @@ leader_trait_immortal_yuzu = {
 	leader_class = { commander scientist official }
 	initial = no
 	randomized = no
+	trade_acceptance_weight = 15
 }
 
 leader_trait_yuzu_astral = {
@@ -121,6 +122,7 @@ leader_trait_yuzu_astral = {
 	leader_class = { commander scientist official }
 	initial = no
 	randomized = no
+	trade_acceptance_weight = 15
 }
 
 leader_trait_yuzu_vampire = {
@@ -212,6 +214,7 @@ leader_trait_yuzu_vampire = {
 	leader_class = { commander scientist official }
 	initial = no
 	randomized = no
+	trade_acceptance_weight = 15
 }
 
 leader_trait_yuzu_abyss = {

@@ -717,7 +717,8 @@ country_event = {
 						}
 					}
 				# housing provides slot_city_government / zone_default for the capital
-				add_district = district_yuzu_city_housing
+				# Use vanilla housing: yuzu city worlds keep district_arcology_housing valid.
+				add_district = district_arcology_housing
 				add_building = building_system_capital
 				add_building = building_yuzu_master_archive
 				add_building = building_yuzu_class_4_singularity_tier_2

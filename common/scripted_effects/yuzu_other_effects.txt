@@ -53,7 +53,7 @@ yuzu_arc_sites_random_events_1 = {
 	set_yuzu_city_district = {
 		while = {
 			count = num_district_housing_yuzu
-			add_district = district_yuzu_city_housing
+			add_district = district_arcology_housing
 		}
 		while = {
 			count = num_district_urban_1_yuzu
