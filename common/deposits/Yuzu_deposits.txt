@@ -180,7 +180,7 @@ d_yuzu_dream_land = {
 	icon = d_yuzu_dream_land
 
 	planet_modifier = {
-		district_yuzu_city_dream_max = 1
+		district_yuzu_city_dream_max_add = 1
 	}
 
 	drop_weight = {

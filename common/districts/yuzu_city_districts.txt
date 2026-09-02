@@ -378,6 +378,9 @@ district_yuzu_city_urban_3 = {
 
 district_yuzu_city_dream = {
 	base_buildtime = 600
+	# Non-empty is_uncapped generates district_yuzu_city_dream_max(_add) capacity.
+	# Without this, deposit/zone max modifiers display in the UI but do not cap builds.
+	is_uncapped = { always = no }
 
 	show_on_uncolonized = {
 		uses_district_set = yuzu_sunset_city_world
@@ -491,7 +494,7 @@ district_yuzu_city_industry = {
 		always = no
 	}
 	triggered_name = {
-		text = district_arcology_name
+		text = district_yuzu_city_industry
 	}
 }
 
@@ -507,7 +510,7 @@ district_yuzu_city_administrative = {
 		always = no
 	}
 	triggered_name = {
-		text = district_arcology_name
+		text = district_yuzu_city_administrative
 	}
 }
 
@@ -523,6 +526,6 @@ district_yuzu_city_religious = {
 		always = no
 	}
 	triggered_name = {
-		text = district_arcology_name
+		text = district_yuzu_city_religious
 	}
 }
