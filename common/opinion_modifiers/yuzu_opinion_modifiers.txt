@@ -59,12 +59,11 @@ opinion_yuzu_destroyed_systems = {
 
 opinion_yuzu_backed_a_world = {
 	opinion = {
-		base = -60
+		base = -5
 	}
-
 	accumulative = yes
 
-	min = -300
+	min = -25
 
 	decay = {
 		base = 1
@@ -73,12 +72,12 @@ opinion_yuzu_backed_a_world = {
 
 opinion_yuzu_backed_my_world = {
 	opinion = {
-		base = -600
+		base = -500
 	}
 
 	accumulative = yes
 
-	min = -3000
+	min = -2500
 
 	decay = {
 		base = 1

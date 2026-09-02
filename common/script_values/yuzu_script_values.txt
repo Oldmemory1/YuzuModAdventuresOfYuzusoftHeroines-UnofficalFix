@@ -10,3 +10,9 @@ yuzu_overlord_councilor_level = {
 		mode = add
 	}
 }
+
+# 记忆传递目标等级：读取国家变量 yuzu_leader_skill（已由 set_yuzu_leader_skill_single 计算为 该类历史最大-1，下限2）
+leader_yuzu_skill = {
+	base = 0
+	add = owner.yuzu_leader_skill
+}
