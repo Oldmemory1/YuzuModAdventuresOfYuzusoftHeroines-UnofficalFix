@@ -134,7 +134,7 @@ set_yuzu_leader_skill_single = {
 			count = 8
 			if = {
 				limit = { has_base_skill < value:leader_yuzu_skill }
-				add_skill = 1
+				add_skill_without_trait_selection = 1
 			}
 		}
 	}
