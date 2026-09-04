@@ -31,6 +31,10 @@ weapon_component_template = {
 	tracking = 0.3
 	shield_penetration = 1
 	armor_penetration = 1
+
+	collateral_damage = 250
+	collateral_range = 20
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -95,6 +99,10 @@ weapon_component_template = {
 	shield_penetration = 0.00
 	armor_damage = 3.00
 	armor_penetration = 0.00
+
+	collateral_damage = 375
+	collateral_range = 30
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -158,6 +166,8 @@ weapon_component_template = {
 	shield_penetration = 0.00
 	armor_damage = 3.00
 	armor_penetration = 0.00
+	collateral_damage = 500
+	collateral_range = 40
 	resources = {
 		category = ship_components
 		cost = {
