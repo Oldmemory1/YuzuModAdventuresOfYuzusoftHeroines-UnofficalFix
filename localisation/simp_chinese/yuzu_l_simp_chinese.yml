@@ -229,6 +229,10 @@
  edict_yuzu_wish_megastructure_build_desc:0"许下愿望，立即完成当前巨型结构的建造。"
  edict_yuzu_wish_peace:0"愿望：世界和平"
  edict_yuzu_wish_peace_desc:0"许下愿望，强制终结所有战争并大幅提升各个国家之间的评价。"
+ edict_yuzu_spacetime_overload_1:0"时空乱流超载 I"
+ edict_yuzu_spacetime_overload_1_desc:0"祈愿时空乱流发射器得到超载强化：+25% 护盾穿透、+25% 装甲穿透、+25% 时空乱流类武器伤害。开启时消耗一次心之碎片，并每月支付维护费。"
+ edict_yuzu_spacetime_overload_2:0"时空乱流超载 II"
+ edict_yuzu_spacetime_overload_2_desc:0"祈愿时空乱流发射器得到过载强化：+25% 护盾穿透、+25% 装甲穿透、+25% 时空乱流类武器伤害。开启时消耗一次心之碎片，并每月支付维护费。"
 
  pop_yuzu_released_from_cryo_chamber:0"从冷冻中释放"
 

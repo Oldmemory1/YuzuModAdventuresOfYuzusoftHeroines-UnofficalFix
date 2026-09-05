@@ -414,3 +414,59 @@ yuzu_wish_peace = {
 		weight = 0
 	}
 }
+
+yuzu_spacetime_overload_1 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  20000
+		}
+		upkeep = {
+			fragment_of_heart =  200
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	modifier = {
+		ship_shield_penetration_add = 0.25
+		ship_armor_penetration_add = 0.25
+		weapon_type_spacetime_turbulence_weapon_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+yuzu_spacetime_overload_2 = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  30000
+		}
+		upkeep = {
+			fragment_of_heart =  300
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	modifier = {
+		ship_shield_penetration_add = 0.25
+		ship_armor_penetration_add = 0.25
+		weapon_type_spacetime_turbulence_weapon_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

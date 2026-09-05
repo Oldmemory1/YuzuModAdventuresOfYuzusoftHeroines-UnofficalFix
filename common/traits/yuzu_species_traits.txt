@@ -138,7 +138,7 @@ trait_yuzu_ciallo = {
 
 	modifier = {
         pop_government_ethic_attraction = 0.20
-        planet_jobs_unity_produces_mult = 0.20
+        bureaucrat_jobs_bonus_workforce_mult = 0.20
 	}
 	ai_weight = {
 		weight = 50

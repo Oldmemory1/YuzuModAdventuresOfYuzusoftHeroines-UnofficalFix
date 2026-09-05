@@ -36,7 +36,7 @@ cafe_clerk = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 8
+		planet_amenities_add = 800
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -100,7 +100,7 @@ supernatural_researcher = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -186,7 +186,7 @@ yuzu_witch = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 

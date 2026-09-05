@@ -60,6 +60,13 @@
  YUZU_ENERGY_TORPEDO_2_DESC:0"仿佛自深渊而来高能能量团，似乎散发着带来毁灭的魔音。"
  YUZU_ENERGY_TORPEDO_3:0"恐惧魔音"
  YUZU_ENERGY_TORPEDO_3_DESC:0"仿佛自深渊而来高能能量团，似乎散发着带来恐惧的魔音。"
+
+ weapon_type_spacetime_turbulence:0"§Y时空乱流§!"
+ mod_weapon_type_spacetime_turbulence_weapon_damage_mult:0"时空乱流武器伤害"
+ mod_weapon_type_spacetime_turbulence_weapon_fire_rate_mult:0"时空乱流武器攻速"
+ weapon_type_spacetime_abyss:0"§Y深渊§!"
+ mod_weapon_type_spacetime_abyss_weapon_damage_mult:0"深渊武器伤害"
+ mod_weapon_type_spacetime_abyss_weapon_fire_rate_mult:0"深渊武器攻速"
  YUZU_S_1:0"小型时空乱流发射器"
  YUZU_S_2:0"小型毁灭魔音"
  YUZU_S_3:0"小型恐惧魔音"
