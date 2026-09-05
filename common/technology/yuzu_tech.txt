@@ -1252,3 +1252,179 @@ tech_pk_back_in_time = {
 		factor = 100
 	}
 }
+
+###Repeatable###
+
+tech_yuzu_repeatable_spacetime_turbulence_damage = {
+	area = physics
+	cost = @spacetimeTurbulenceRepeatableTechBaseCost
+	cost_per_level = @spacetimeTurbulenceRepeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { particles }
+	ai_update_type = military
+	levels = -1
+	prerequisites = { "tech_yuzu_l_1" "tech_yuzu_lance_1" "tech_yuzu_beam_1" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_spacetime_turbulence
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_spacetime_turbulence }
+		}
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		weapon_type_spacetime_turbulence_weapon_damage_mult = 0.25
+	}
+}
+
+tech_yuzu_repeatable_spacetime_turbulence_fire_rate = {
+	area = physics
+	cost = @spacetimeTurbulenceRepeatableTechBaseCost
+	cost_per_level = @spacetimeTurbulenceRepeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { particles }
+	ai_update_type = military
+	levels = -1
+	prerequisites = { "tech_yuzu_l_1" "tech_yuzu_lance_1" "tech_yuzu_beam_1" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_spacetime_turbulence
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_spacetime_turbulence }
+		}
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		weapon_type_spacetime_turbulence_weapon_fire_rate_mult = 0.25
+	}
+}
+
+tech_yuzu_repeatable_abyss_damage = {
+	area = physics
+	cost = @abyssRepeatableTechBaseCost
+	cost_per_level = @abyssRepeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { particles }
+	ai_update_type = military
+	levels = -1
+	prerequisites = { "tech_yuzu_l_3" "tech_yuzu_lance_3" "tech_yuzu_beam_3" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_abyss
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_abyss }
+		}
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		weapon_type_abyss_weapon_damage_mult = 0.25
+	}
+}
+
+tech_yuzu_repeatable_abyss_fire_rate = {
+	area = physics
+	cost = @abyssRepeatableTechBaseCost
+	cost_per_level = @abyssRepeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { particles }
+	ai_update_type = military
+	levels = -1
+	prerequisites = { "tech_yuzu_l_3" "tech_yuzu_lance_3" "tech_yuzu_beam_3" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_abyss
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_abyss }
+		}
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		weapon_type_abyss_weapon_fire_rate_mult = 0.25
+	}
+}
