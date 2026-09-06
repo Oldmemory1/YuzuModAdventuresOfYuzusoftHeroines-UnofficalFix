@@ -1,11 +1,3 @@
-yuzu_star_eater_ships_limit = {
-	ship_types = {
-		yuzu_star_eater
-	}
-	base = 40 # 1 * yuzu_star_eater's size_multiplier
-	show = {
-		is_scope_valid = yes
-		has_technology = tech_yuzu_star_eater
-	}
-}
-
+# 堕天神兵 (yuzu_star_eater) 与原版 star_eater（焚天神兵）一致，不设舰船数量上限。
+# 原实现通过 yuzu_star_eater_ships_limit (base = 40 = 1 * size_multiplier) 限制为 1 艘；
+# 现因要求可无限建造（同原版），该键已移除，不再定义。

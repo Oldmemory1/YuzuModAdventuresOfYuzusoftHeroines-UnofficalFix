@@ -26,7 +26,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 50
+		weight = 500
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -62,7 +62,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 50
+		weight = 500
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -98,7 +98,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 50
+		weight = 500
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -130,7 +130,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 100
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -163,7 +163,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 100
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -196,7 +196,7 @@ utility_component_template = {
 		}
 	}
 	ai_weight = {
-		weight = 100
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -233,7 +233,7 @@ utility_component_template = {
 	component_set = "YUZU_SHIELD_1"
 
 	ai_weight = {
-		weight = 50
+		weight = 500
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -269,7 +269,7 @@ utility_component_template = {
 	component_set = "YUZU_SHIELD_1"
 
 	ai_weight = {
-		weight = 50
+		weight = 500
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -305,7 +305,7 @@ utility_component_template = {
 	component_set = "YUZU_SHIELD_1"
 
 	ai_weight = {
-		weight = 50
+		weight = 500
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -338,7 +338,7 @@ utility_component_template = {
 	component_set = "YUZU_SHIELD_2"
 
 	ai_weight = {
-		weight = 100
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -372,7 +372,7 @@ utility_component_template = {
 	component_set = "YUZU_SHIELD_2"
 
 	ai_weight = {
-		weight = 100
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -406,7 +406,7 @@ utility_component_template = {
 	component_set = "YUZU_SHIELD_2"
 
 	ai_weight = {
-		weight = 100
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no

@@ -244,7 +244,7 @@ tech_spatiotemporal_communication = {
 
 	modifier = {
 		country_naval_cap_add = 1000
-		command_limit_add = 30
+		command_limit_add = 150
 	}
 
 	weight_modifier = {
@@ -283,7 +283,7 @@ tech_ceremony_communication = {
 
 	modifier = {
 		country_naval_cap_add = 2000
-		command_limit_add = 60
+		command_limit_add = 300
 	}
 
 	weight_modifier = {

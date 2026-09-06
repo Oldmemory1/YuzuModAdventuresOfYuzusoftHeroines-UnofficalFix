@@ -1,4 +1,4 @@
-# Here you can specify the lists of limits for the number of ships of some types that country can own 
+# Here you can specify the lists of limits for the number of ships of some types that country can own
 # and potentially the lists of limits for the number of building of some type (not implemented yet)
 
 # Example:
@@ -12,9 +12,11 @@
 #	}
 # }
 
-##### 原版内容 #####
+##### 堕天神兵上限 #####
+# 堕天神兵 (yuzu_star_eater) 与原版 star_eater（焚天神兵）一致：不设舰船数量上限。
+# ownership_limits 为 additive（可叠加），此处不再添加 yuzu_star_eater_ships_limit，
+# 因此原版 default 中的 titan/colossus/juggernaut/space_dragon/paladin/nomadic 等上限仍正常生效。
 default = {
 	ship_of_size_limits = {
-		yuzu_star_eater_ships_limit
 	}
 }

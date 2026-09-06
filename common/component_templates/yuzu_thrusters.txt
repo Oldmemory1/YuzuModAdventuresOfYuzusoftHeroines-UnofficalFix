@@ -235,11 +235,12 @@ utility_component_template = {
 			from = {
 				country_uses_bio_ships = no
 			}
-			from = {
-				country_uses_bio_ships = yes
-			}
+			is_arkship_ship = yes
 		}
-		ship_uses_colossus_thrusters = yes
+		OR = {
+			ship_uses_colossus_thrusters = yes
+			is_ship_size = yuzu_star_eater
+		}
 	}
 
 	ai_weight = {

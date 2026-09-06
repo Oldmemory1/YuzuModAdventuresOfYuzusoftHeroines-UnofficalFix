@@ -53,7 +53,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -121,7 +121,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 20
+		weight = 2000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -186,7 +186,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -257,7 +257,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -332,7 +332,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 20
+		weight = 2000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -406,7 +406,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -458,7 +458,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -514,7 +514,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 20
+		weight = 2000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -569,7 +569,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -621,7 +621,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -677,7 +677,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 20
+		weight = 2000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -732,7 +732,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -784,7 +784,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 1000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -840,7 +840,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 20
+		weight = 2000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -895,7 +895,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -962,7 +962,7 @@ strike_craft_component_template = {
 	point_defence_targets = { "strike_craft" }
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -1026,7 +1026,7 @@ weapon_component_template = {
 	size_damage_factor = 1
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no
@@ -1083,7 +1083,7 @@ weapon_component_template = {
 	point_defence_targets = { "missile" "strike_craft" }
 
 	ai_weight = {
-		weight = 30
+		weight = 3000
 		modifier = {
 			factor = 0.0
 			is_YUZU = no

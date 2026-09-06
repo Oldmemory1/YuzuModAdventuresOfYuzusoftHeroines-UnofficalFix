@@ -193,6 +193,7 @@ utility_component_template = {
 	potential = {
 		OR = {
 			ship_uses_colossus_components = yes
+			is_ship_size = yuzu_star_eater
 		}
 	}
 
