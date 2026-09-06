@@ -40,6 +40,21 @@
  councilor_yuzu_win_the_hearts_desc:0 "$TITLE$负责宣传柚子社的全新作品。"
  councilor_yuzu_win_the_hearts_custom_modifier_desc:1 "§Y$civic_yuzu_win_the_hearts$§!对附庸的加成提升§G5%§!"
 
+ councilor_yuzu_apocalypse_hunters:0 "守望指挥官"
+ councilor_yuzu_apocalypse_hunters_female:0 "$councilor_yuzu_apocalypse_hunters$"
+ councilor_yuzu_apocalypse_hunters_desc:0 "$TITLE$统率守望星海的舰队，专注消灭任何潜在的天灾文明。"
+
+ civic_yuzu_apocalypse_hunters:0"星海守望者"
+ civic_yuzu_apocalypse_hunters_desc:0"女孩们深知，一旦有文明妄图化身天灾，整个星海都将不复往日安宁。为此，她们守望星海，决不让任何灾难有机会重演。"
+ civic_yuzu_apocalypse_hunters_effects:0"绝不让任何灾祸有重演的机会。\n§H获得对希图化身天灾的文明的特种宣战理由「抑制」，战争目标「先发制人」；被宣战方反制战争目标「铲除干净」。§!"
+
+ casus_belli_cb_containment_crisis_empire:0"抑制"
+
+ war_goal_preemptive_end_crisis:0"先发制人"
+ war_goal_preemptive_end_crisis_desc:0"我们必须彻底消灭对星系造成潜在威胁的天灾帝国。"
+ war_goal_yuzu_crisis_extermination:0"铲除干净"
+ war_goal_yuzu_crisis_extermination_desc:0"发动战争，以彻底地灭绝对我们伟大计划产生威胁的存在。我们没有时间——当然也没有仁心——去和那些胆敢站出来反对我们的人讲道理。"
+
  YUZU_SPATIOTEMPORAL_CRACK:0"时空裂缝"
  YUZU_SPATIOTEMPORAL_CRACK_DESC:0"失去了神话生物维持的时空裂缝正在愈合，我们的一些科学家提议，趁着时空裂缝还没消失，应该抓紧时间进行研究。"
  yuzu_spatiotemporal_crack_modifiers:0"时空的见解"

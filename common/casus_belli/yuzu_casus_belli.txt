@@ -1,0 +1,31 @@
+# 仅当攻击者拥有 civic_yuzu_apocalypse_hunters、且目标采用了任一官方"化身天灾"飞升
+# （星海天罚/宇宙创生/巨兽之怒/星系热症，见 yuzu_is_crisis_aspirant）时可用。
+# 刻意不使用 is_player_crisis，避免把其它 mod 用该旗帜判定的"天灾"也纳入目标。
+cb_containment_crisis_empire = {
+	show_in_diplomacy = yes
+	show_notification = no
+
+	potential = {
+		has_valid_civic = civic_yuzu_apocalypse_hunters
+		is_country_type = default
+	}
+
+	is_valid = {
+		from = { yuzu_is_crisis_aspirant = yes }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		NOT = { is_overlord_to = FROM }
+	}
+
+	proxy_war_resources = {
+		category = proxy_war
+		cost = {
+			influence = 200
+		}
+	}
+	on_proxy_war_start = {
+		pay_proxy_war_additional_resources = { VALUE = -50 }
+	}
+}

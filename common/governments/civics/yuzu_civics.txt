@@ -33,10 +33,15 @@ civic_yuzu_social_talent = {
 				value = civic_inwards_perfection
 				value = civic_selective_kinship
 				value = civic_pompous_purists
+				value = civic_scorched_earth
 			}
 		}
+
 		ethics = {
-			NOT = { value = ethic_fanatic_xenophobe }
+			NOR = { 
+				value = ethic_fanatic_xenophobe 
+				value = ethic_xenophobe
+			}
 		}
 	}
 
@@ -48,8 +53,8 @@ civic_yuzu_social_talent = {
 		country_civics_influence_produces_add = 1
 		diplomacy_upkeep_mult = -0.25
 		envoys_add = 2
-		country_trade_produces_mult = 0.2
-		diplo_weight_mult = 0.2
+		country_trade_produces_mult = 0.25
+		diplo_weight_mult = 0.25
 		country_trust_growth = 0.50
 		country_trust_cap_add = 100
 	}
@@ -86,5 +91,42 @@ civic_yuzu_win_the_hearts = {
 	}
 	modifier = {
 		divided_patrongage_max_subjects = 5
+	}
+}
+
+# 对天灾伤害+50%，境内舰队获得射速/命中(有效伤害)/闪避/追踪加成；
+# 拥有针对天灾文明的"抑制"宣战理由，战争目标为"先发制人"，被宣战方战争目标为"铲除干净"。
+civic_yuzu_apocalypse_hunters = {
+	description = civic_yuzu_apocalypse_hunters_effects
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+
+	possible = {
+		authority = {
+			value = auth_Yuzu
+		}
+		ethics = {
+			OR = {
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+
+	random_weight = {
+		base = 1000
+	}
+
+	modifier = {
+		damage_vs_player_crisis_mult = 0.50
+		ship_friendly_territory_fire_rate_mult = 0.50
+		ship_friendly_territory_accuracy_add = 10
+		ship_friendly_territory_evasion_add = 10
+		ship_friendly_territory_tracking_add = 10
+		country_war_exhaustion_mult = 0.33
 	}
 }

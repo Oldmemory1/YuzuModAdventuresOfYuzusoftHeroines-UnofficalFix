@@ -186,3 +186,15 @@ has_yuzu_crisis_stage_3 ={
 has_yuzu_crisis_stage_4 ={
 	has_global_flag = yuzu_crisis_stage_4
 }
+
+# 这是一个天灾帝国的判定：是否采用了任一官方"化身天灾"飞升（星海天罚/宇宙创生/
+# 巨兽之怒/星系热症）。刻意不用 is_player_crisis（它会把其它 mod 用 is_player_crisis
+# 旗帜判定的"天灾"也算进来），只针对这四个飞升。
+yuzu_is_crisis_aspirant = {
+	OR = {
+		has_ascension_perk = ap_become_the_crisis
+		has_ascension_perk = ap_cosmogenesis
+		has_ascension_perk = ap_behemoths
+		has_ascension_perk = ap_galactic_hyperthermia
+	}
+}

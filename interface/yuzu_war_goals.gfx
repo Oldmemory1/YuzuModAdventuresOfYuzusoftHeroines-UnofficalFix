@@ -1,0 +1,16 @@
+# 灾变猎手(星海守望者)的两个战争目标图标。
+# "先发制人" 用普通战争图标 diplomacy_war.dds（2帧动画，同 wg_conquest）；
+# "铲除干净" 用原版 wg_wipe_them_out 的图标 diplomacy_pathofblood.dds。
+# 引擎根据 war_goal 键自动查找 GFX_wg_<key> 精灵，未定义时显示默认图标。
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wg_preemptive_end_crisis"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_wg_yuzu_crisis_extermination"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_pathofblood.dds"
+	}
+}

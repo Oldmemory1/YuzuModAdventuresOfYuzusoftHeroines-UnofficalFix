@@ -48,7 +48,7 @@ councilor_yuzu_social_talent = {
 		#new
 		#country_trade_attractiveness = 0.05
 		country_trust_cap_add = 20
-		#country_trust_growth = 0.10
+		country_trust_growth = 0.10
 	}
 }
 
@@ -63,4 +63,19 @@ councilor_yuzu_win_the_hearts = {
 		#null
 	}
 	custom_tooltip = "councilor_yuzu_win_the_hearts_custom_modifier_desc"
+}
+
+# 星海守望者的军方内阁：仅指挥官可担任。
+# modifier 数值按任职领袖等级逐级加成。
+councilor_yuzu_apocalypse_hunters = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_yuzu_apocalypse_hunters
+	modifier = {
+		ship_friendly_territory_fire_rate_mult = 0.05
+		damage_vs_player_crisis_mult = 0.05
+		country_trust_cap_add = 20
+	}
 }

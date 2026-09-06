@@ -1,0 +1,63 @@
+# 灾变猎手向天灾文明宣战时使用的"先发制人"战争目标。
+# 配合 cb_containment_crisis_empire 使用：仅攻击者拥有 civic_yuzu_apocalypse_hunters、
+# 且目标是星海天罚/宇宙创生/巨兽之怒/星系热症之一（yuzu_is_crisis_aspirant）时可选。
+# 这是一场无休止的歼灭战（total_war），被宣战方的反制战争目标被设置为"铲除干净"。
+preemptive_end_crisis = {
+	casus_belli = cb_containment_crisis_empire
+
+	total_war = yes
+	destroy_starbases = yes
+	set_defender_wargoal = yuzu_crisis_extermination
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	war_exhaustion = 0.5
+
+	potential = {
+		has_valid_civic = civic_yuzu_apocalypse_hunters
+	}
+
+	possible = {
+		from = { yuzu_is_crisis_aspirant = yes }
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+# "先发制人"战争目标下，被宣战方（天灾文明）反制时使用的"铲除干净"战争目标。
+# 参考原版 wg_wipe_them_out 的歼灭火力（total_war + destroy_starbases）；
+# 仅由 set_defender_wargoal 指定，永远不会作为进攻方选项出现（potential = always = no）。
+yuzu_crisis_extermination = {
+	casus_belli = cb_containment_crisis_empire
+	hide = no_cb
+
+	total_war = yes
+	destroy_starbases = yes
+
+	forbidden_peace_offers = {
+		demand_surrender = ""
+		surrender = ""
+	}
+
+	surrender_acceptance = -1000
+
+	war_exhaustion = 0.5
+
+	potential = {
+		always = no
+	}
+	possible = {
+		always = yes
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

@@ -1,0 +1,26 @@
+# 灾变猎手(星海守望者)"先发制人"战争目标的自定义战争名称。
+# 战争名称由 war_name_format 按 attack 方的 war_goal 匹配生成；命名依据攻击方 war_goal，
+# 所以只为 preemptive_end_crisis 战争目标（owner = attacker）添加格式。
+# 未命中任何格式时回退到 default_war_names（generic "X - Y War"）。
+
+war_name_parts_list = {
+	key = "yuzu_preemptive_war_names"
+	parts = {
+		Yuzu_Preemptive_Action = 1
+		Yuzu_Punitive_Expedition = 1
+	}
+}
+
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+				type = preemptive_end_crisis
+				owner = attacker
+			}
+		}
+	}
+	format = "{war_vs_adjectives {[This.MainAttacker.GetAdj] [This.MainDefender.GetAdj] <yuzu_preemptive_war_names>}}"
+}
