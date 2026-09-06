@@ -24,3 +24,19 @@ war_name_format = {
 	}
 	format = "{war_vs_adjectives {[This.MainAttacker.GetAdj] [This.MainDefender.GetAdj] <yuzu_preemptive_war_names>}}"
 }
+
+# 社交达人"羞辱"(yuzu_humiliate)战争的名称。
+# 参考原版失落帝国羞辱战争（fe_humiliation_war_names），即 "XX惩戒远征"（Punitive_Expedition）。
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+				type = yuzu_humiliate
+				owner = attacker
+			}
+		}
+	}
+	format = "{war_vs_adjectives {[This.MainAttacker.GetAdj] [This.MainDefender.GetAdj] <fe_humiliation_war_names>}}"
+}

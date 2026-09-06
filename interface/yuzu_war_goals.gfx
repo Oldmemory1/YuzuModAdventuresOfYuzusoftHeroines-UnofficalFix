@@ -1,16 +1,24 @@
-# 灾变猎手(星海守望者)的两个战争目标图标。
+# 灾变猎手(星海守望者)的两个战争目标图标，以及社交达人的"羞辱"战争目标图标。
+# 引擎根据 war_goal 键自动查找 GFX_<key> 精灵（key 就是战争目标键，含其前缀），
+# 未定义时显示默认图标。
 # "先发制人" 用普通战争图标 diplomacy_war.dds（2帧动画，同 wg_conquest）；
-# "铲除干净" 用原版 wg_wipe_them_out 的图标 diplomacy_pathofblood.dds。
-# 引擎根据 war_goal 键自动查找 GFX_wg_<key> 精灵，未定义时显示默认图标。
+# "铲除干净" 用原版 wg_wipe_them_out 的图标 diplomacy_pathofblood.dds；
+# "羞辱" 用原版 wg_humiliation / wg_fe_humiliation 的图标 diplomacy_opinion.dds。
 spriteTypes = {
 	spriteType = {
-		name = "GFX_wg_preemptive_end_crisis"
+		name = "GFX_preemptive_end_crisis"
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_war.dds"
 		noOfFrames = 2
 	}
 
 	spriteType = {
-		name = "GFX_wg_yuzu_crisis_extermination"
+		name = "GFX_yuzu_crisis_extermination"
 		texturefile = "gfx/interface/icons/diplomacy/diplomacy_pathofblood.dds"
+	}
+
+	# 社交达人的"羞辱"战争目标，用原版 wg_humiliation 的图标
+	spriteType = {
+		name = "GFX_yuzu_humiliate"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_opinion.dds"
 	}
 }

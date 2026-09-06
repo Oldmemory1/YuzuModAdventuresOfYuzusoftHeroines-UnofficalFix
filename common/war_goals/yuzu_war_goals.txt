@@ -61,3 +61,32 @@ yuzu_crisis_extermination = {
 		weight = 100
 	}
 }
+
+# 社交达人"惩罚"宣战理由下的"羞辱"战争目标。
+# 参考原版 wg_humiliation：给崛起者一个下马威。
+# 关键点：绝不设置 set_defender_wargoal —— 被宣战方可自行选定自己的战争目标；
+# defender_default = yes 只是超时兜底（若被宣战方迟迟不选，才默认为此目标），不会覆盖其自主选择。
+yuzu_humiliate = {
+	casus_belli = cb_yuzu_punishment
+	defender_default = yes
+
+	surrender_acceptance = -25
+
+	possible = {
+		always = yes
+	}
+	
+	on_accept = {
+		custom_tooltip = wg_humiliation_accept
+		hidden_effect = {
+			add_resource = { influence = 100 }
+			from = {
+				add_modifier = { modifier = humiliated days = 3600 }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}

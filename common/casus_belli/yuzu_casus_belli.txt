@@ -29,3 +29,54 @@ cb_containment_crisis_empire = {
 		pay_proxy_war_additional_resources = { VALUE = -50 }
 	}
 }
+
+# 社交达人（civic_yuzu_social_talent）的"惩罚"宣战理由。
+# 仅当攻击者拥有该 civic、且实力相比被宣战方更胜一筹（containing superior）或宛如神明（overwhelming），
+# 目标又对攻击者怀有强烈的敌意（第一次接触活体解剖，或评价 <-300 关系紧张/恶劣）时可用。
+# 专门用来给崛起者一个下马威。
+cb_yuzu_punishment = {
+	show_in_diplomacy = yes
+	show_notification = yes
+
+	potential = {
+		has_valid_civic = civic_yuzu_social_talent
+		is_country_type = default
+		NOT = { is_in_federation_with = from }
+	}
+
+	is_valid = {
+		# 宣战方实力相比被宣战方更胜一筹 / 宛如神明（同原版 cb_subjugation 的写法）
+		relative_power = {
+			who = FROM
+			category = all
+			value > equivalent
+		}
+		from = {
+			# 目标是普通文明（原版 default 类型；或 Kasako 框架标记为 default 的国家）
+			is_country_type = default
+
+			OR = {
+				# 被宣战方第一次接触活体解剖
+				has_relation_flag = { who = root flag = vivisectors }
+				# 或关系紧张/恶劣（评价层级为 hostile 及以下：terrible/poor）
+				opinion_level = { who = root level <= poor }
+			}
+		}
+		# has_total_war_cb = no
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+		NOT = { is_overlord_to = FROM }
+	}
+
+	proxy_war_resources = {
+		category = proxy_war
+		cost = {
+			influence = 100
+		}
+	}
+	on_proxy_war_start = {
+		pay_proxy_war_additional_resources = { VALUE = -25 }
+	}
+}
