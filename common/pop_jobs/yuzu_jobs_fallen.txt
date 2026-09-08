@@ -1,0 +1,250 @@
+##### 能量司仪 #####
+yuzu_energy_officiant = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+
+	swappable_data = {
+		default = {
+			icon = yuzu_energy_officiant
+			building_icon = building_energy_grid
+		}
+	}
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 10
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		modifier = {
+			factor = 2
+			has_trait = trait_yuzu
+		}
+	}
+}
+
+yuzu_energy_officiant_drone = {
+	category = complex_drone
+	is_capped_by_modifier = yes
+	condition_string = DRONE_JOB_TRIGGER
+
+	swappable_data = {
+		default = {
+			icon = yuzu_energy_officiant_drone
+			building_icon = building_energy_grid
+		}
+	}
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 10
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+	}
+}
+
+##### 冶炼师 #####
+yuzu_smelter = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+
+	swappable_data = {
+		default = {
+			icon = yuzu_smelter
+			building_icon = building_foundry_1
+		}
+	}
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+		NOT = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 6
+		}
+		upkeep = {
+			minerals = 12
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		modifier = {
+			factor = 2
+			has_trait = trait_yuzu
+		}
+	}
+}
+
+yuzu_smelter_drone = {
+	category = complex_drone
+	is_capped_by_modifier = yes
+	condition_string = DRONE_JOB_TRIGGER
+
+	swappable_data = {
+		default = {
+			icon = yuzu_smelter_drone
+			building_icon = building_foundry_1
+		}
+	}
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		NOT = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 6
+		}
+		upkeep = {
+			minerals = 12
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+	}
+}
+
+##### 催化熔铸师 #####
+yuzu_catalytic_smelter = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+
+	swappable_data = {
+		default = {
+			icon = yuzu_catalytic_smelter
+			building_icon = building_foundry_1
+		}
+	}
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 7.5
+		}
+		upkeep = {
+			food = 18
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		modifier = {
+			factor = 2
+			has_trait = trait_yuzu
+		}
+	}
+}
+
+yuzu_catalytic_smelter_drone = {
+	category = complex_drone
+	is_capped_by_modifier = yes
+	condition_string = DRONE_JOB_TRIGGER
+
+	swappable_data = {
+		default = {
+			icon = yuzu_catalytic_smelter_drone
+			building_icon = building_foundry_1
+		}
+	}
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		industrial_jobs_are_catalytic_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			alloys = 7.5
+		}
+		upkeep = {
+			food = 18
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+	}
+}

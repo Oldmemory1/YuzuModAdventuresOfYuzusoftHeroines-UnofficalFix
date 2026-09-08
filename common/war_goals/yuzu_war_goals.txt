@@ -77,11 +77,39 @@ yuzu_humiliate = {
 	}
 	
 	on_accept = {
-		custom_tooltip = wg_humiliation_accept
+		custom_tooltip = yuzu_humiliation_accept
 		hidden_effect = {
 			add_resource = { influence = 100 }
 			from = {
-				add_modifier = { modifier = humiliated days = 3600 }
+				add_modifier = { modifier = yuzu_public_humiliation days = 3600 }
+			}
+
+			# 强制被宣战方（败者）撤销对宣战方（胜者）所有领土的宣称（借鉴原版失落帝国羞辱战争 fallen_empire_humiliate_effect）。
+			save_event_target_as = yuzu_humiliator
+			from = {
+				save_event_target_as = yuzu_humiliated_empire
+			}
+			event_target:yuzu_humiliator = {
+				every_system_within_border = {
+					limit = {
+						event_target:yuzu_humiliated_empire = {
+							OR = {
+								has_claim = prev
+								any_subject = { has_claim = prevprev }
+							}
+						}
+					}
+					event_target:yuzu_humiliated_empire = {
+						if = {
+							limit = { has_claim = prev }
+							prev = { remove_claims = { who = event_target:yuzu_humiliated_empire } }
+						}
+						every_subject = {
+							limit = { has_claim = prevprev }
+							prevprev = { remove_claims = { who = this } }
+						}
+					}
+				}
 			}
 		}
 	}

@@ -1,0 +1,55 @@
+# Regular Empires - Normal (minerals -> alloys)
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_yuzu_smelter_add = $AMOUNT$
+	}
+}
+
+# Regular Empires - Catalytic (food -> alloys)
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_yuzu_catalytic_smelter_add = $AMOUNT$
+	}
+}
+
+# Gestalt Empires - Normal (minerals -> alloys)
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_yuzu_smelter_drone_add = $AMOUNT$
+	}
+}
+
+# Gestalt Empires - Catalytic (food -> alloys)
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_yuzu_catalytic_smelter_drone_add = $AMOUNT$
+	}
+}

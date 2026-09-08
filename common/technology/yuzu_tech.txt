@@ -1428,3 +1428,36 @@ tech_yuzu_repeatable_abyss_fire_rate = {
 		weapon_type_abyss_weapon_fire_rate_mult = 0.25
 	}
 }
+
+# 社会学会循环：资源存储上限。每级 +500000 资源容量。
+# 图标参考原版宇宙创生(cosmogenesis)失落帝国仓库科技 tech_fe_silo_1，加黄角标(循环箭头)。
+tech_yuzu_repeatable_resource_storage = {
+	area = society
+	cost = @abyssRepeatableTechBaseCost
+	cost_per_level = @abyssRepeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { statecraft }
+	ai_update_type = all
+	levels = -1
+	prerequisites = { "tech_yuzu_all_in_one_theory" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		country_resource_max_add = 500000
+	}
+}

@@ -62,6 +62,8 @@
  tech_yuzu_repeatable_abyss_damage_desc:0"持续精进深渊武器的聚焦构型，让深渊的怒涛撕裂得更为彻底。"
  tech_yuzu_repeatable_abyss_fire_rate:0"深渊过载冷却"
  tech_yuzu_repeatable_abyss_fire_rate_desc:0"优化深渊武器的冷却循环，让深渊的浪潮冲刷得更加频繁。"
+ tech_yuzu_repeatable_resource_storage:0"无尽仓储"
+ tech_yuzu_repeatable_resource_storage_desc:0"以深渊教廷的仓储技术为基，持续扩张星海仓廪，让国家的资源储备浩瀚无边。每级资源容量 §G+500000§!"
 
  YUZU_ENERGY_TORPEDO_1:0"时空乱流发射器"
  YUZU_ENERGY_TORPEDO_1_DESC:0"通过发射时空乱流，可以直接对敌方船体造成巨大影响。"

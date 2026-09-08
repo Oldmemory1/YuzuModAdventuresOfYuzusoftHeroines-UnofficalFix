@@ -58,6 +58,9 @@
  casus_belli_cb_yuzu_punishment:0"惩罚"
  war_goal_yuzu_humiliate:0"羞辱"
  war_goal_yuzu_humiliate_desc:0"发动战争，以给崛起者一个下马威。"
+ yuzu_public_humiliation:0"受辱"
+ yuzu_public_humiliation_desc:0"我们被其他国家公开羞辱"
+ yuzu_humiliation_accept:0"§Y[From.GetName]§! 被公开羞辱：其§Y外交权重§!与§Y影响力产出§!大幅下降，§Y科技研究速度§!停滞，§Y幸福度§!受挫，历时 §Y10§! 年\n§Y[Root.GetName]§! 获得 §G+100§! £influence£\n并强制 §Y[From.GetName]§! 撤销对 §Y[Root.GetName]§! 所有领土的宣称。"
 
  YUZU_SPATIOTEMPORAL_CRACK:0"时空裂缝"
  YUZU_SPATIOTEMPORAL_CRACK_DESC:0"失去了神话生物维持的时空裂缝正在愈合，我们的一些科学家提议，趁着时空裂缝还没消失，应该抓紧时间进行研究。"

@@ -44,6 +44,50 @@
  planet_yuzu_witches:0"魔女岗位"
  YUZU_WITCH_JOB_TRIGGER:0"这个岗位仅能由柚子大类的人口从事。"
 
+ job_yuzu_energy_officiant:0"能量司仪"
+ job_yuzu_energy_officiant_plural:0"能量司仪"
+ job_yuzu_energy_officiant_desc:0"她们从不多言，只是以精密的专注不断校准着能量流的涌浪，把这座发电矩阵稳稳地维系在最善解人意的状态。"
+ job_yuzu_energy_officiant_effect_desc:0"£job_yuzu_energy_officiant£$job_yuzu_energy_officiant_plural$产出£energy£ §Y$energy$§!"
+ mod_job_yuzu_energy_officiant_add:0"$job_yuzu_energy_officiant$岗位"
+ mod_job_yuzu_energy_officiant_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_energy_officiant$岗位"
+
+ job_yuzu_energy_officiant_drone:0"能量司仪子个体"
+ job_yuzu_energy_officiant_drone_plural:0"能量司仪子个体"
+ job_yuzu_energy_officiant_drone_desc:0"为奇点能量而生的专用单元。它们以精密的循环不断校准能量流的涌浪，将这座发电矩阵维系在不可思议的高效状态。"
+ job_yuzu_energy_officiant_drone_effect_desc:0"£job_yuzu_energy_officiant_drone£$job_yuzu_energy_officiant_drone_plural$产出£energy£ §Y$energy$§!"
+ mod_job_yuzu_energy_officiant_drone_add:0"$job_yuzu_energy_officiant_drone$岗位"
+ mod_job_yuzu_energy_officiant_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_energy_officiant_drone$岗位"
+
+
+ job_yuzu_smelter:0"熔铸师"
+ job_yuzu_smelter_plural:0"熔铸师"
+ job_yuzu_smelter_desc:0"把粗粝的矿石锻造成合金的匠人。他们守在温度惊人的熔炉旁，以精准到毫厘的火候，让每一块金属都呈现出恰到好处的韧性。"
+ job_yuzu_smelter_effect_desc:0"£job_yuzu_smelter£$job_yuzu_smelter_plural$消耗£minerals£§Y$minerals$§!，产出£alloys£ §Y$alloys$§!"
+ mod_job_yuzu_smelter_add:0"$job_yuzu_smelter$岗位"
+ mod_job_yuzu_smelter_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_smelter$岗位"
+
+ job_yuzu_smelter_drone:0"熔铸子个体"
+ job_yuzu_smelter_drone_plural:0"熔铸子个体"
+ job_yuzu_smelter_drone_desc:0"专为熔炼诞生的单元。它们在炽热中纤毫不差地配比原料，自成一体的循环让整座熔炉恒久地运转，几乎不知疲倦为何物。"
+ job_yuzu_smelter_drone_effect_desc:0"£job_yuzu_smelter_drone£$job_yuzu_smelter_drone_plural$消耗£minerals£§Y$minerals$§!，产出£alloys£ §Y$alloys$§!"
+ mod_job_yuzu_smelter_drone_add:0"$job_yuzu_smelter_drone$岗位"
+ mod_job_yuzu_smelter_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_smelter_drone$岗位"
+
+
+ job_yuzu_catalytic_smelter:0"催化熔铸师"
+ job_yuzu_catalytic_smelter_plural:0"催化熔铸师"
+ job_yuzu_catalytic_smelter_desc:0"掌握催化工艺的锻造者。他们用生机勃勃的有机物取代冰冷的矿石，以奇妙的催化反应淬炼出同样坚韧的合金——仿佛为金属注入了一缕不灭的活力。"
+ job_yuzu_catalytic_smelter_effect_desc:0"£job_yuzu_catalytic_smelter£$job_yuzu_catalytic_smelter_plural$消耗£food£§Y$food$§!，产出£alloys£ §Y$alloys$§!"
+ mod_job_yuzu_catalytic_smelter_add:0"$job_yuzu_catalytic_smelter$岗位"
+ mod_job_yuzu_catalytic_smelter_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_catalytic_smelter$岗位"
+
+ job_yuzu_catalytic_smelter_drone:0"催化熔铸子个体"
+ job_yuzu_catalytic_smelter_drone_plural:0"催化熔铸子个体"
+ job_yuzu_catalytic_smelter_drone_desc:0"遵循催化循环的熔炼单元。它们以有机物为养料，通过连续不断的催化反应将生物质冶炼成合金，为整座熔炉注入近乎自我生长的活力。"
+ job_yuzu_catalytic_smelter_drone_effect_desc:0"£job_yuzu_catalytic_smelter_drone£$job_yuzu_catalytic_smelter_drone_plural$消耗£food£§Y$food$§!，产出£alloys£ §Y$alloys$§!"
+ mod_job_yuzu_catalytic_smelter_drone_add:0"$job_yuzu_catalytic_smelter_drone$岗位"
+ mod_job_yuzu_catalytic_smelter_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_catalytic_smelter_drone$岗位"
+
 
  yuzu_fe_building_failtext:0"§R需要从§!§Y法令（愿望）§!§R中获取§!"
 
@@ -59,6 +103,15 @@
 
  building_yuzu_nano_forge_tier_2:0 "万象熔炉"
  building_yuzu_nano_forge_tier_2_desc:0 "混沌熔炉的进一步升华。巨型纳米复制机舱把原材料压进近乎真空的炼造循环，万千形态的合金如潮水般凝结；整座熔炉甚至开始分担行星结构的维护负荷。"
+
+ building_yuzu_nano_forge_tier_3:0 "九曜熔炉"
+ building_yuzu_nano_forge_tier_3_desc:0 "万象熔炉的进一步升华。幽绿色的熔炼回路自炉心蔓延开去，将整座铸造矩阵化作一具活着的、会呼吸的熔炉，合金的产出变得愈发细腻而纯粹。"
+
+ building_yuzu_nano_forge_tier_4:0 "真阳熔炉"
+ building_yuzu_nano_forge_tier_4_desc:0 "九曜熔炉的进一步升华。赤粉色的炉火汇聚成不熄的熔炼之河，任何投入其中的材料都会被淬炼成极致精纯的合金，连行星结构的维护负荷也被整座熔炉悄然分担。"
+
+ building_yuzu_nano_forge_tier_5:0 "万象终熔"
+ building_yuzu_nano_forge_tier_5_desc:0 "熔炉链路的终极形态。淡金色的光辉笼罩着整片铸造矩阵，仿佛行星之心为这座最后的熔炉镀上神性——它既是合金的源头，也是一座燃亮深空的祭坛。"
 
 
  building_yuzu_dimensional_fabricator_tier_1:0 "多重次元复制机"
@@ -87,6 +140,15 @@
 
  building_yuzu_class_4_singularity_tier_2:0 "六级奇点"
  building_yuzu_class_4_singularity_tier_2_desc:0 "五级奇点的进一步升华。更强的隔离场把奇点推到更高能级，能量产出挑战着物理学本身，而约束结构却比以往任何时候都更加稳固。"
+
+ building_yuzu_class_4_singularity_tier_3:0 "七级奇点"
+ building_yuzu_class_4_singularity_tier_3_desc:0 "六级奇点的进一步升华。幽绿色的谐振环自隔离场深处生长而出，缠上合金塔架的每一道缝隙，仿佛奇点正在与这座工业巨构呼吸同频，让能量的洪流变得温驯而绵长。"
+
+ building_yuzu_class_4_singularity_tier_4:0 "八级奇点"
+ building_yuzu_class_4_singularity_tier_4_desc:0 "七级奇点的进一步升华。熔岩般的赤红能量自塔顶倾泻而下，将整座阵列灼成一座不熄的熔炉，哪怕只是远远凝望，也会为那磅礴的存在感所折服。"
+
+ building_yuzu_class_4_singularity_tier_5:0 "九级奇点"
+ building_yuzu_class_4_singularity_tier_5_desc:0 "奇点链路的终极形态。鎏金的光辉笼罩着每一条回路，仿佛整颗行星都在为这最后的能量圣殿镀上神性——它既是一座发电站，也是一座点亮深空的祭坛。"
 
 
  building_yuzu_master_archive:0 "神秘档案库"

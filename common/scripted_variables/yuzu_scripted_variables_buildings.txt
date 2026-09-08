@@ -1,2 +1,6 @@
 @yuzu_fe_building_tier_1_fragment_of_heart_cost = 1000
 @yuzu_fe_building_tier_2_fragment_of_heart_cost = 2000
+@yuzu_fe_building_tier_3_fragment_of_heart_cost = 3000
+@yuzu_fe_building_tier_4_fragment_of_heart_cost = 4000
+@yuzu_fe_building_tier_5_fragment_of_heart_cost = 6000
+@yuzu_fe_building_tier_5_time = 1800

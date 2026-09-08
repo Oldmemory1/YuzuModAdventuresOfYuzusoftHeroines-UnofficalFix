@@ -95,3 +95,15 @@ fallen_empire_warning_attend_extreme_modifier = {
 	country_naval_cap_add = 40000
 	ships_upkeep_mult = -0.40
 }
+
+##### 社交达人「惩罚」战争目标：公开羞辱 #####
+# 击败"刻意招惹社交达人"的敌对国后，给其施加的公开羞辱（比原版 humiliated 重得多）。
+# 原版 humiliated 仅 -0.33 影响力产出 / -0.25 外交权重 / -0.10 幸福度；
+# 这里借鉴原版 humiliated_cosmogenesis 的科技停滞（all_technology_research_speed = -0.5），体现"文明蒙羞、科技落后"。
+yuzu_public_humiliation = {
+	icon = "gfx/interface/icons/modifiers/mod_influence_negative.dds"
+	diplo_weight_mult = -0.50
+	country_influence_produces_mult = -0.50
+	pop_happiness = -0.20
+	all_technology_research_speed = -0.50
+}

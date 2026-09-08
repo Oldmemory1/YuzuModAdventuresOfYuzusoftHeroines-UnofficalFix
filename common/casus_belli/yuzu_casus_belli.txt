@@ -70,6 +70,16 @@ cb_yuzu_punishment = {
 		NOT = { is_overlord_to = FROM }
 	}
 
+	# 攻击方实力跌至"相对更胜一筹"以下（被宣战方追平/反超）时自动失效，避免无限羞辱循环（参考原版 cb_subjugation）。
+	destroy_if = {
+		NOT = { is_country_type = awakened_fallen_empire }
+		relative_power = {
+			who = FROM
+			category = all
+			value < superior
+		}
+	}
+
 	proxy_war_resources = {
 		category = proxy_war
 		cost = {
