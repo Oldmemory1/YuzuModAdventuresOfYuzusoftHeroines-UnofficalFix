@@ -75,107 +75,47 @@ yuzu_wish_resource = {
 
 	ai_weight = {
 		weight = 0
-#		weight = 500
-#		modifier = {
-#			factor = 0
-#			NOR = {
-#				has_country_resource = {
-#					type = energy
-#					amount < 100
-#				}
-#				has_country_resource = {
-#					type = minerals
-#					amount < 100
-#				}
-#				has_country_resource = {
-#					type = food
-#					amount < 100
-#				}
-#				has_country_resource = {
-#					type = consumer_goods
-#					amount < 100
-#				}
-#				has_country_resource = {
-#					type = alloys
-#					amount < 100
-#				}
-#				AND = {
-#					has_country_resource = {
-#						type = exotic_gases
-#						amount < 50
-#					}
-#					OR = {
-#						has_technology = tech_mine_exotic_gases
-#						has_technology = tech_exotic_gases
-#					}
-#				}
-#				AND = {
-#					has_country_resource = {
-#						type = rare_crystals
-#						amount < 50
-#					}
-#					OR = {
-#						has_technology = tech_mine_rare_crystals
-#						has_technology = tech_rare_crystals
-#					}
-#				}
-#				AND = {
-#					has_country_resource = {
-#						type = volatile_motes
-#						amount < 50
-#					}
-#					OR = {
-#						has_technology = tech_mine_volatile_motes
-#						has_technology = tech_volatile_motes
-#					}
-#				}
-#				AND = {
-#					OR = {
-#						has_country_resource = {
-#							type = sr_dark_matter
-#							amount < 50
-#						}
-#						AND = {
-#							has_country_resource = {
-#								type = sr_dark_matter
-#								amount < 5000
-#							}
-#							has_technology = tech_yuzu_reaper_scythe
-#						}
-#					}
-#					has_technology = tech_mine_dark_matter
-#				}
-#				AND = {
-#					OR = {
-#						has_country_resource = {
-#							type = sr_living_metal
-#							amount < 50
-#						}
-#						AND = {
-#							has_country_resource = {
-#								type = sr_living_metal
-#								amount < 5000
-#							}
-#							has_technology = tech_yuzu_reaper_scythe
-#						}
-#					}
-#					has_technology = tech_mine_living_metal
-#				}
-#				OR = {
-#					has_country_resource = {
-#						type = nanites
-#						amount < 50
-#					}
-#					AND = {
-#						has_country_resource = {
-#							type = nanites
-#							amount < 5000
-#						}
-#						has_technology = tech_yuzu_reaper_scythe
-#					}
-#				}
-#			}
-#		}
+		modifier = {
+			weight = 500
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 200
+			}
+			OR = {
+				has_country_resource = {
+					type = energy
+					amount < 500
+				}
+				has_country_resource = {
+					type = minerals
+					amount < 500
+				}
+				has_country_resource = {
+					type = food
+					amount < 500
+				}
+				has_country_resource = {
+					type = consumer_goods
+					amount < 500
+				}
+				has_country_resource = {
+					type = alloys
+					amount < 500
+				}
+				has_country_resource = {
+					type = exotic_gases
+					amount < 100
+				}
+				has_country_resource = {
+					type = rare_crystals
+					amount < 100
+				}
+				has_country_resource = {
+					type = volatile_motes
+					amount < 100
+				}
+			}
+		}
 	}
 }
 
@@ -201,20 +141,27 @@ yuzu_wish_research = {
 
 	ai_weight = {
 		weight = 0
-#		weight = 500
-#		modifier = {
-#			factor = 0
-#			OR = {
-#				AND = {
-#					exists = overlord
-#					overlord = {
-#						is_ai = no
-#						has_valid_civic = civic_yuzu_win_the_hearts
-#					}
-#				}
-#				has_monthly_income = { resource = physics_research value >= 1000 }
-#			}
-#		}
+		modifier = {
+			weight = 500
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 200
+			}
+			OR = {
+				has_monthly_income = {
+					resource = physics_research
+					value < 800
+				}
+				has_monthly_income = {
+					resource = society_research
+					value < 800
+				}
+				has_monthly_income = {
+					resource = engineering_research
+					value < 800
+				}
+			}
+		}
 	}
 }
 
@@ -240,17 +187,23 @@ yuzu_wish_unity_influence = {
 
 	ai_weight = {
 		weight = 0
-#		weight = 500
-#		modifier = {
-#			factor = 0
-#			NOR = {
-#				has_monthly_income = { resource = unity value < 200 }
-#				has_country_resource = {
-#					type = influence
-#					amount < 100
-#				}
-#			}
-#		}
+		modifier = {
+			weight = 500
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 200
+			}
+			OR = {
+				has_monthly_income = {
+					resource = unity
+					value > 300
+				}
+				has_country_resource = {
+					type = influence
+					amount < 200
+				}
+			}
+		}
 	}
 }
 
@@ -276,14 +229,17 @@ yuzu_wish_artifacts = {
 
 	ai_weight = {
 		weight = 0
-#		weight = 500
-#		modifier = {
-#			factor = 0
-#			has_country_resource = {
-#				type = minor_artifacts
-#				amount >= 100
-#			}
-#		}
+		modifier = {
+			weight = 300
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 500
+			}
+			has_country_resource = {
+				type = minor_artifacts
+				amount < 200
+			}
+		}
 	}
 }
 
@@ -309,40 +265,20 @@ yuzu_wish_fleet = {
 
 	ai_weight = {
 		weight = 0
-#		weight = 500
-#		modifier = {
-#			factor = 0
-#			NAND = {
-#				OR = {
-#					has_monthly_income = { resource = energy value >= 50 }
-#					has_country_resource = {
-#						type = energy
-#						amount >= 5000
-#					}
-#				}
-#				OR = {
-#					has_monthly_income = { resource = alloys value >= 10 }
-#					has_country_resource = {
-#						type = alloys
-#						amount >= 1000
-#					}
-#				}
-#				OR = {
-#					AND = {
-#						used_naval_capacity_percent < 0.20
-#						max_naval_capacity > 150
-#					}
-#					AND = {
-#						used_naval_capacity_percent < 0.50
-#						max_naval_capacity > 300
-#					}
-#					AND = {
-#						used_naval_capacity_percent < 0.80
-#						max_naval_capacity > 600
-#					}
-#				}
-#			}
-#		}
+		modifier = {
+			weight = 1000
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 1000
+			}
+			OR = {
+				is_at_war = yes
+				AND = {
+					used_naval_capacity_percent < 0.40
+					max_naval_capacity > 200
+				}
+			}
+		}
 	}
 }
 
@@ -368,21 +304,17 @@ yuzu_wish_megastructure_build = {
 
 	ai_weight = {
 		weight = 0
-#		weight = 500
-#		modifier = {
-#			factor = 0
-#			count_owned_megastructure = {
-#				count < 2
-#				limit = { is_upgrading = yes }
-#			}
-#		}
-#		modifier = {
-#			factor = 2
-#			count_owned_megastructure = {
-#				count > 2
-#				limit = { is_upgrading = yes }
-#			}
-#		}
+		modifier = {
+			weight = 200
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 5000
+			}
+			has_country_resource = {
+				type = alloys
+				amount >= 20000
+			}
+		}
 	}
 }
 
@@ -412,6 +344,14 @@ yuzu_wish_peace = {
 
 	ai_weight = {
 		weight = 0
+		modifier = {
+			weight = 300
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 10000
+			}
+			is_at_war = yes
+		}
 	}
 }
 
@@ -440,6 +380,14 @@ yuzu_spacetime_overload_1 = {
 
 	ai_weight = {
 		weight = 0
+		modifier = {
+			weight = 150
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 50000
+			}
+			is_at_war = yes
+		}
 	}
 }
 
@@ -468,5 +416,13 @@ yuzu_spacetime_overload_2 = {
 
 	ai_weight = {
 		weight = 0
+		modifier = {
+			weight = 100
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 50000
+			}
+			is_at_war = yes
+		}
 	}
 }

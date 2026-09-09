@@ -1,0 +1,13 @@
+fragment_of_heart_expenditure_edicts = {
+	resource = fragment_of_heart
+	type = expenditure
+	category = edicts
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight = {
+		weight = 0.25
+	}
+}

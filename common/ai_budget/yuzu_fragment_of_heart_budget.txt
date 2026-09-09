@@ -4,16 +4,16 @@
 #################
 ## Expenditure ##
 #################
-#fragment_of_heart_expenditure_edicts = {
-#	resource = fragment_of_heart
-#	type = expenditure
-#	category = edicts
+fragment_of_heart_expenditure_edicts = {
+	resource = fragment_of_heart
+	type = expenditure
+	category = edicts
 
-#	potential = {
-#		is_YUZU = yes
-#	}
+	potential = {
+		is_YUZU = yes
+	}
 
-#	fraction = {
-#		weight = 0.5
-#	}
-#}
+	weight = {
+		weight = 0.75
+	}
+}

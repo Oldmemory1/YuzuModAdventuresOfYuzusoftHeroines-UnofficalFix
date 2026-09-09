@@ -1,8 +1,8 @@
 # Small
 
-@yuzu_s_t1_cost = 40
-@yuzu_s_t2_cost = 50
-@yuzu_s_t3_cost = 60
+@yuzu_s_t1_cost = 15
+@yuzu_s_t2_cost = 52
+@yuzu_s_t3_cost = 78
 @yuzu_rs_s_cost = 120
 
 @yuzu_s_t1_upkeep_energy = 0.40
@@ -16,9 +16,9 @@
 
 # Medium
 
-@yuzu_m_t1_cost = 80
-@yuzu_m_t2_cost = 100
-@yuzu_m_t3_cost = 120
+@yuzu_m_t1_cost = 55
+@yuzu_m_t2_cost = 185
+@yuzu_m_t3_cost = 277
 @yuzu_rs_m_cost = 240
 
 @yuzu_m_t1_upkeep_energy = 0.80
@@ -32,9 +32,9 @@
 
 # Large
 
-@yuzu_l_t1_cost = 160
-@yuzu_l_t2_cost = 200
-@yuzu_l_t3_cost = 240
+@yuzu_l_t1_cost = 172
+@yuzu_l_t2_cost = 581
+@yuzu_l_t3_cost = 872
 @yuzu_rs_l_cost = 480
 
 @yuzu_l_t1_upkeep_energy = 1.60
@@ -48,9 +48,9 @@
 
 # Extra Large
 
-@yuzu_xl_t1_cost = 320
-@yuzu_xl_t2_cost = 400
-@yuzu_xl_t3_cost = 480
+@yuzu_xl_t1_cost = 569
+@yuzu_xl_t2_cost = 1822
+@yuzu_xl_t3_cost = 2734
 @yuzu_rs_xl_cost = 960
 
 @yuzu_xl_t1_upkeep_energy = 3.20
@@ -64,9 +64,9 @@
 
 # Titanic
 
-@yuzu_titanic_t1_cost = 640
-@yuzu_titanic_t2_cost = 800
-@yuzu_titanic_t3_cost = 960
+@yuzu_titanic_t1_cost = 1037
+@yuzu_titanic_t2_cost = 3204
+@yuzu_titanic_t3_cost = 4806
 @yuzu_rs_titanic_cost = 1920
 
 @yuzu_titanic_t1_upkeep_energy = 6.40
@@ -82,38 +82,38 @@
 # RARE RESOURCES
 #################
 
-@yuzu_s_t1_rare = 0.75
-@yuzu_s_t2_rare = 1.00
-@yuzu_s_t3_rare = 1.25
+@yuzu_s_t1_rare = 0.16
+@yuzu_s_t2_rare = 0.55
+@yuzu_s_t3_rare = 0.82
 @yuzu_rs_s_rare = 2.50
 
-@yuzu_m_t1_rare = 1.50
-@yuzu_m_t2_rare = 2.00
-@yuzu_m_t3_rare = 2.50
+@yuzu_m_t1_rare = 0.58
+@yuzu_m_t2_rare = 1.96
+@yuzu_m_t3_rare = 2.93
 @yuzu_rs_m_rare = 5.00
 
-@yuzu_l_t1_rare = 3.00
-@yuzu_l_t2_rare = 4.00
-@yuzu_l_t3_rare = 5.00
+@yuzu_l_t1_rare = 1.82
+@yuzu_l_t2_rare = 6.14
+@yuzu_l_t3_rare = 9.22
 @yuzu_rs_l_rare = 10.00
 
-@yuzu_xl_t1_rare = 6.00
-@yuzu_xl_t2_rare = 8.00
-@yuzu_xl_t3_rare = 10.00
+@yuzu_xl_t1_rare = 6.01
+@yuzu_xl_t2_rare = 19.26
+@yuzu_xl_t3_rare = 28.9
 @yuzu_rs_xl_rare = 20.00
 
-@yuzu_titanic_t1_rare = 12.00
-@yuzu_titanic_t2_rare = 16.00
-@yuzu_titanic_t3_rare = 20.00
+@yuzu_titanic_t1_rare = 10.96
+@yuzu_titanic_t2_rare = 33.87
+@yuzu_titanic_t3_rare = 50.8
 @yuzu_rs_titanic_rare = 40.00
 
 #################
 # SHIELDS
 #################
 
-@yuzu_shield_s_t1_cost = 20 # 较低，以稀有资源代替
+@yuzu_shield_s_t1_cost = 34 # 较低，以稀有资源代替
 @yuzu_shield_s_t1_cost_rare = 0.4
-@yuzu_shield_s_t2_cost = 80
+@yuzu_shield_s_t2_cost = 69
 @yuzu_shield_s_t2_cost_rare = 2
 
 @yuzu_shield_s_t1_upkeep_energy = 0.20
@@ -122,9 +122,9 @@
 @yuzu_shield_s_t2_upkeep_alloys = 0.05
 
 
-@yuzu_shield_m_t1_cost = 40 # 较低，以稀有资源代替
+@yuzu_shield_m_t1_cost = 86 # 较低，以稀有资源代替
 @yuzu_shield_m_t1_cost_rare = 0.8
-@yuzu_shield_m_t2_cost = 160
+@yuzu_shield_m_t2_cost = 172
 @yuzu_shield_m_t2_cost_rare = 4
 
 @yuzu_shield_m_t1_upkeep_energy = 0.40
@@ -133,9 +133,9 @@
 @yuzu_shield_m_t2_upkeep_alloys = 0.10
 
 
-@yuzu_shield_l_t1_cost = 80 # 较低，以稀有资源代替
+@yuzu_shield_l_t1_cost = 215 # 较低，以稀有资源代替
 @yuzu_shield_l_t1_cost_rare = 1.6
-@yuzu_shield_l_t2_cost = 320
+@yuzu_shield_l_t2_cost = 430
 @yuzu_shield_l_t2_cost_rare = 8
 
 @yuzu_shield_l_t1_upkeep_energy = 0.80
@@ -165,19 +165,19 @@
 #	ARMOR	#
 #############
 
-@yuzu_armor_s_t1_cost = 36 # @yuzu_s_t1_cost = 40，减少部分以稀有资源代替
+@yuzu_armor_s_t1_cost = 34 # @yuzu_s_t1_cost = 40，减少部分以稀有资源代替
 @yuzu_armor_s_t1_cost_rare = 0.8
-@yuzu_armor_s_t2_cost = 120
+@yuzu_armor_s_t2_cost = 69
 @yuzu_armor_s_t2_cost_rare = 3
 
-@yuzu_armor_m_t1_cost = 72 # @yuzu_m_t1_cost = 80，减少部分以稀有资源代替
+@yuzu_armor_m_t1_cost = 86 # @yuzu_m_t1_cost = 80，减少部分以稀有资源代替
 @yuzu_armor_m_t1_cost_rare = 1.6
-@yuzu_armor_m_t2_cost = 240
+@yuzu_armor_m_t2_cost = 172
 @yuzu_armor_m_t2_cost_rare = 6
 
-@yuzu_armor_l_t1_cost = 144 # @yuzu_l_t1_cost = 160，减少部分以稀有资源代替
+@yuzu_armor_l_t1_cost = 215 # @yuzu_l_t1_cost = 160，减少部分以稀有资源代替
 @yuzu_armor_l_t1_cost_rare = 3.2
-@yuzu_armor_l_t2_cost = 480
+@yuzu_armor_l_t2_cost = 430
 @yuzu_armor_l_t2_cost_rare = 12
 
 # 承受值 & 回复值
@@ -201,3 +201,12 @@
 @yuzu_power_S2 = -100
 @yuzu_power_M2 = -200
 @yuzu_power_L2 = -400
+
+# 独立定价:冲突的鱼雷 / 掠袭机(不与 M_2 / L_2 共用)
+@yuzu_torpedo_1_cost = 500
+@yuzu_torpedo_1_rare = 5.3
+@yuzu_strike_craft_1_cost = 200
+@yuzu_torpedo_1_upkeep_energy = 1.00
+@yuzu_torpedo_1_upkeep_alloys = 0.20
+@yuzu_strike_craft_1_upkeep_energy = 2.00
+@yuzu_strike_craft_1_upkeep_alloys = 0.40

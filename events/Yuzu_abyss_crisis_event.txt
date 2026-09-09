@@ -763,7 +763,7 @@ country_event = {
 			}
 		}
 		# 教廷正式生成后，开启全星系共享的深渊危机局势
-		yuzu_abyss_situation_start_all = yes
+		# yuzu_abyss_situation_start_all = yes
 	}
 }
 

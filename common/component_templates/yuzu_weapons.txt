@@ -916,11 +916,11 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @yuzu_l_t2_cost
+			alloys = @yuzu_strike_craft_1_cost
 		}
 		upkeep = {
-			energy = @yuzu_l_t2_upkeep_energy
-			alloys = @yuzu_l_t2_upkeep_alloys
+			energy = @yuzu_strike_craft_1_upkeep_energy
+			alloys = @yuzu_strike_craft_1_upkeep_alloys
 		}
 	}
 
@@ -983,7 +983,7 @@ weapon_component_template = {
 	prerequisites = { "tech_yuzu_torpedoes_1" }
 	component_set = "YUZU_TORPEDO_1"
 	projectile_gfx = "yuzu_large_torpedo_01"
-	tags = { weapon_type_explosive weapon_type_abyss }
+	tags = { weapon_type_explosive g_slot weapon_type_abyss }
 	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
 	ai_tag_weight = 0
 
@@ -991,12 +991,12 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @yuzu_m_t2_cost
-			rare_crystals = @yuzu_m_t2_rare
+			alloys = @yuzu_torpedo_1_cost
+			rare_crystals = @yuzu_torpedo_1_rare
 		}
 		upkeep = {
-			energy = @yuzu_m_t2_upkeep_energy
-			alloys = @yuzu_m_t2_upkeep_alloys
+			energy = @yuzu_torpedo_1_upkeep_energy
+			alloys = @yuzu_torpedo_1_upkeep_alloys
 		}
 	}
 
