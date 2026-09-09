@@ -427,7 +427,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_1" }
 	component_set = "YUZU_ENERGY_TORPEDO_1"
-	projectile_gfx = "yuzu_energy_torpedoes_1"
+	projectile_gfx = "yuzu_l_1"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -479,7 +479,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_2" }
 	component_set = "YUZU_ENERGY_TORPEDO_2"
-	projectile_gfx = "yuzu_energy_torpedoes_2"
+	projectile_gfx = "yuzu_l_2"
 	tags = { weapon_type_energy weapon_type_abyss }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -535,7 +535,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_3" }
 	component_set = "YUZU_ENERGY_TORPEDO_3"
-	projectile_gfx = "yuzu_energy_torpedoes_3"
+	projectile_gfx = "yuzu_l_3"
 	tags = { weapon_type_energy weapon_type_abyss }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -590,7 +590,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_1" }
 	component_set = "YUZU_ENERGY_TORPEDO_1"
-	projectile_gfx = "yuzu_energy_torpedoes_M_1"
+	projectile_gfx = "yuzu_m_1"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -642,7 +642,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_2" }
 	component_set = "YUZU_ENERGY_TORPEDO_2"
-	projectile_gfx = "yuzu_energy_torpedoes_M_2"
+	projectile_gfx = "yuzu_m_2"
 	tags = { weapon_type_energy weapon_type_abyss }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -698,7 +698,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_3" }
 	component_set = "YUZU_ENERGY_TORPEDO_3"
-	projectile_gfx = "yuzu_energy_torpedoes_M_3"
+	projectile_gfx = "yuzu_m_3"
 	tags = { weapon_type_energy weapon_type_abyss }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -753,7 +753,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_1" }
 	component_set = "YUZU_ENERGY_TORPEDO_1"
-	projectile_gfx = "yuzu_energy_torpedoes_S_1"
+	projectile_gfx = "yuzu_s_1"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -805,7 +805,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_2" }
 	component_set = "YUZU_ENERGY_TORPEDO_2"
-	projectile_gfx = "yuzu_energy_torpedoes_S_2"
+	projectile_gfx = "yuzu_s_2"
 	tags = { weapon_type_energy weapon_type_abyss }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
@@ -861,7 +861,7 @@ weapon_component_template = {
 
 	prerequisites = { "tech_yuzu_l_3" }
 	component_set = "YUZU_ENERGY_TORPEDO_3"
-	projectile_gfx = "yuzu_energy_torpedoes_S_3"
+	projectile_gfx = "yuzu_s_3"
 	tags = { weapon_type_energy weapon_type_abyss }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
