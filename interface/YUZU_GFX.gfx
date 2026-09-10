@@ -212,4 +212,12 @@ spriteTypes = {
 		name = "GFX_resource_fragment_of_heart_large"
 		textureFile = "gfx/interface/icons/resources/fragment_of_heart_large.dds"
 	}
+	spriteType = {
+		name = "GFX_ship_part_crystal_armor_yuzu_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_crystal_armor_yuzu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_crystal_armor_yuzu_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_crystal_armor_yuzu_2.dds"
+	}
 }

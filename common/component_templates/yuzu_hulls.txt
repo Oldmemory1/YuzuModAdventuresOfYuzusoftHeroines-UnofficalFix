@@ -1,0 +1,195 @@
+# 晶体镀层 (Crystal-Infused / Crystal-Forged Plating 移植)
+# 版1 = 深绿 (GFX_ship_part_crystal_armor_yuzu_1) / 版2 = 红 (GFX_ship_part_crystal_armor_yuzu_2)
+# 数值复刻原版 vanilla：船体值 + 减伤，造价用稀有水晶
+
+utility_component_template = {
+	key = "SMALL_YUZU_CRYSTAL_ARMOR_1"
+	size = small
+	icon = "GFX_ship_part_crystal_armor_yuzu_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 0.50
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_1" }
+	component_set = "YUZU_CRYSTAL_ARMOR_1"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_S1
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 3
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_CRYSTAL_ARMOR_1"
+	size = medium
+	icon = "GFX_ship_part_crystal_armor_yuzu_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 1.00
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_1" }
+	component_set = "YUZU_CRYSTAL_ARMOR_1"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_M1
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 4
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_CRYSTAL_ARMOR_1"
+	size = large
+	icon = "GFX_ship_part_crystal_armor_yuzu_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 2.00
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_1" }
+	component_set = "YUZU_CRYSTAL_ARMOR_1"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_L1
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 5
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_CRYSTAL_ARMOR_2"
+	size = small
+	icon = "GFX_ship_part_crystal_armor_yuzu_2"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 0.66
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_2" }
+	component_set = "YUZU_CRYSTAL_ARMOR_2"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_S2
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 4
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_CRYSTAL_ARMOR_2"
+	size = medium
+	icon = "GFX_ship_part_crystal_armor_yuzu_2"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 1.32
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_2" }
+	component_set = "YUZU_CRYSTAL_ARMOR_2"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_M2
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 5
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_CRYSTAL_ARMOR_2"
+	size = large
+	icon = "GFX_ship_part_crystal_armor_yuzu_2"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 2.64
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_2" }
+	component_set = "YUZU_CRYSTAL_ARMOR_2"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_L2
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 6
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}

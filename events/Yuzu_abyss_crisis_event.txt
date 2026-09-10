@@ -762,6 +762,17 @@ country_event = {
 				country_event = { id = emperor.90 days = 30 }
 			}
 		}
+		# 教廷本体已生成 —— 开始计算「速杀」窗口，对齐原版 crisis_trigger.1 的
+		# galactic_crisis_early_defeat_tracker_1/2（5 年 / 10 年），由 event.502 结算。
+		# 用独立 flag 名，避免与原版天灾的同类计时器互相消耗。
+		set_timed_global_flag = {
+			flag = yuzu_abyss_early_defeat_tracker_1
+			years = 5
+		}
+		set_timed_global_flag = {
+			flag = yuzu_abyss_early_defeat_tracker_2
+			years = 10
+		}
 		# 教廷正式生成后，开启全星系共享的深渊危机局势
 		# yuzu_abyss_situation_start_all = yes
 	}
@@ -2078,6 +2089,27 @@ country_event = {
 	immediate = {
 		set_global_flag = yuzu_abyss_defeated
 		end_yuzu_crisis = yes
+		# 与原版 end_crisis 对齐：本危机被击败同样让后续危机强度翻倍。
+		# 原版 end_crisis = { 清 crisis_stage_1~4 ; multiply_crisis_strength = 2 }
+		# 这里不直接调用 end_crisis，因为它会清掉原版的 crisis_stage_1~4 ——
+		# 若此时另有原版天灾正在进行，会导致其阶段推进被重置。
+		# 本危机用的是自己的 yuzu_crisis_stage_* flag，已由 end_yuzu_crisis 清理。
+		multiply_crisis_strength = 2
+		# 速杀奖励，对齐原版天灾被击败时的 galactic_crisis_early_defeat_tracker_*。
+		# 计时起点为 event.11（教廷本体生成）。
+		# 与原版略有出入：tracker_1 命中时这里连 tracker_2 一并清掉，
+		# 原版只清 tracker_1（靠计时自然过期）。这样语义相同但不会残留。
+		if = {
+			limit = { has_global_flag = yuzu_abyss_early_defeat_tracker_1 }
+			remove_global_flag = yuzu_abyss_early_defeat_tracker_1
+			remove_global_flag = yuzu_abyss_early_defeat_tracker_2
+			multiply_crisis_strength = 1.5
+		}
+		else_if = {
+			limit = { has_global_flag = yuzu_abyss_early_defeat_tracker_2 }
+			remove_global_flag = yuzu_abyss_early_defeat_tracker_2
+			multiply_crisis_strength = 1.25
+		}
 		yuzu_abyss_situation_end_all = yes
 		every_country = {
 			limit = {

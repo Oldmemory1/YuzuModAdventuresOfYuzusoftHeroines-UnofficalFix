@@ -1,11 +1,27 @@
 #####原版内容#####
+#
+# ⚠️ 维护须知：本文件靠「同名 + zzzzzzz 前缀最后加载」覆盖原版 scripted_trigger。
+# 原版每次新增条目（DLC / 版本更新）都会在这里被静默覆盖掉，不会报错。
+# 改动前请务必 diff 原版对应定义：
+#   common/scripted_triggers/00_scripted_triggers.txt
+#   common/scripted_triggers/01_scripted_triggers_planet_killers.txt
+# 能委托原版子触发器的一律委托（见 habitable_planet），不要抄平铺列表。
+#
+# 2026-09-10 补回原版遗漏项：
+#   is_regular_empire : +awakened_marauders, +exiled
+#   is_crisis_faction : +synth_queen, +awakened_synth_queen, +synth_queen_storm, +voidworms_crisis
+#   habitable_planet  : 改为委托 habitable_planet_not_urban（原缺 pc_volcanic）
+#   wears_clothes     : +tox2/3/6/8/10/11/12/14/15, +cyb1~8/10, +season_10_portrait
 
 is_regular_empire = {
 	OR = {
 		is_country_type = default
+		#for checks in buildings and districts
+		is_country_type = awakened_marauders
 		is_country_type = fallen_empire
-		is_country_type = awakened_fallen_empire #for checks in buildings
-		is_country_type = new_abyss_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = exiled
+		is_country_type = new_abyss_empire	# YUZU
 	}
 	NOT = { has_ethic = ethic_gestalt_consciousness	}
 }
@@ -19,26 +35,22 @@ is_crisis_faction = {
 		is_country_type = ai_empire
 		is_country_type = gray_goo
 		is_country_type = awakened_marauders
-		is_country_type = new_abyss_empire
+		is_country_type = synth_queen
+		is_country_type = awakened_synth_queen
+		is_country_type = synth_queen_storm
+		is_country_type = voidworms_crisis
+		is_country_type = new_abyss_empire	# YUZU
 	}
 }
 
+# 委托原版 habitable_planet_not_urban，避免原版新增行星类型时再漏
 habitable_planet = {
 	OR = {
-		is_planet_class = pc_desert
-		is_planet_class = pc_tropical
-		is_planet_class = pc_arid
-		is_planet_class = pc_continental
-		is_planet_class = pc_ocean
-		is_planet_class = pc_tundra
-		is_planet_class = pc_arctic
-		is_planet_class = pc_alpine
-		is_planet_class = pc_savannah
-		is_planet_class = pc_gaia
+		habitable_planet_not_urban = yes
 		is_planet_class = pc_relic
 		is_planet_class = pc_city
-		is_planet_class = pc_yuzu_abyss_city
-		is_planet_class = pc_yuzu_sunset_city
+		is_planet_class = pc_yuzu_abyss_city	# YUZU
+		is_planet_class = pc_yuzu_sunset_city	# YUZU
 	}
 }
 
@@ -158,5 +170,24 @@ wears_clothes = { # The species uses the portrait that wears clothes
 		species_portrait = nec13
 		species_portrait = nec14
 		species_portrait = nec15
+		species_portrait = tox2
+		species_portrait = tox3
+		species_portrait = tox6
+		species_portrait = tox8
+		species_portrait = tox10
+		species_portrait = tox11
+		species_portrait = tox12
+		species_portrait = tox14
+		species_portrait = tox15
+		species_portrait = cyb8
+		species_portrait = cyb1
+		species_portrait = cyb2
+		species_portrait = cyb3
+		species_portrait = cyb6
+		species_portrait = cyb7
+		species_portrait = cyb4
+		species_portrait = cyb10
+		species_portrait = cyb5
+		species_portrait = season_10_portrait
 	}
 }

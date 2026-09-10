@@ -1461,3 +1461,61 @@ tech_yuzu_repeatable_resource_storage = {
 		country_resource_max_add = 500000
 	}
 }
+
+tech_yuzu_crystal_armor_1 = {
+	area = engineering
+	cost = @yuzu_tier5cost5
+	tier = 5
+	category = { materials }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_space_time_theory" "tech_crystal_armor_1" }
+	weight = @yuzu_tier5weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_crystal_armor_2 = {
+	area = engineering
+	cost = @yuzu_tier6cost2
+	tier = 6
+	category = { materials }
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_all_in_one_theory" "tech_crystal_armor_2" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}

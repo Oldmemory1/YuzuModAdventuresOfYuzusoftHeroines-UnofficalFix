@@ -1,3 +1,7 @@
+# ⚠️ 维护须知：本文件靠「同名 + zzz 前缀最后加载」覆盖原版 scripted_effect。
+# 原版每次新增条目都会被静默覆盖掉，不会报错。
+# 改动前请 diff 原版：common/scripted_effects/galactic_community_effects.txt
+# 2026-09-10 补回原版遗漏项：synth_queen / voidworm_plague / malevolent_aura
 repeal_all_galactic_focus_resolutions = {
 	remove_global_flag = galactic_focus_crisis_prethoryn
 	remove_global_flag = galactic_focus_crisis_contingency
@@ -5,12 +9,18 @@ repeal_all_galactic_focus_resolutions = {
 	remove_global_flag = galactic_focus_crisis_greatkhan
 	remove_global_flag = galactic_focus_crisis_nanites
 	remove_global_flag = galactic_focus_war_in_heaven
+	remove_global_flag = galactic_focus_crisis_synth_queen
+	remove_global_flag = galactic_focus_crisis_voidworm_plague
+	remove_global_flag = galactic_focus_crisis_malevolent_aura
 	remove_global_flag = galactic_focus_crisis_yuzu_abyss
 	cancel_resolution = resolution_galactic_focus_crisis_prethoryn
 	cancel_resolution = resolution_galactic_focus_crisis_contingency
 	cancel_resolution = resolution_galactic_focus_crisis_unbidden
 	cancel_resolution = resolution_galactic_focus_crisis_greatkhan
 	cancel_resolution = resolution_galactic_focus_crisis_nanites
+	cancel_resolution = resolution_galactic_focus_crisis_synth_queen
+	cancel_resolution = resolution_galactic_focus_crisis_voidworm_plague
+	cancel_resolution = resolution_galactic_focus_crisis_malevolent_aura
 	if = { #these are in IFs because the hidden description raises error messages on their names otherwise
 		limit = {
 			OR = {

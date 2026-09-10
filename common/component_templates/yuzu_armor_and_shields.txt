@@ -21,8 +21,8 @@ utility_component_template = {
 			sr_dark_matter = @yuzu_armor_s_t1_cost_rare
 		}
 		upkeep = {
-			energy = @yuzu_s_t1_upkeep_energy
-			alloys = @yuzu_s_t1_upkeep_alloys
+			energy = @yuzu_armor_s_t1_upkeep_energy
+			alloys = @yuzu_armor_s_t1_upkeep_alloys
 		}
 	}
 	ai_weight = {
@@ -57,8 +57,8 @@ utility_component_template = {
 			sr_dark_matter = @yuzu_armor_m_t1_cost_rare
 		}
 		upkeep = {
-			energy = @yuzu_m_t1_upkeep_energy
-			alloys = @yuzu_m_t1_upkeep_alloys
+			energy = @yuzu_armor_m_t1_upkeep_energy
+			alloys = @yuzu_armor_m_t1_upkeep_alloys
 		}
 	}
 	ai_weight = {
@@ -93,8 +93,8 @@ utility_component_template = {
 			sr_dark_matter = @yuzu_armor_l_t1_cost_rare
 		}
 		upkeep = {
-			energy = @yuzu_l_t1_upkeep_energy
-			alloys = @yuzu_l_t1_upkeep_alloys
+			energy = @yuzu_armor_l_t1_upkeep_energy
+			alloys = @yuzu_armor_l_t1_upkeep_alloys
 		}
 	}
 	ai_weight = {
@@ -125,8 +125,8 @@ utility_component_template = {
 			sr_dark_matter = @yuzu_armor_s_t2_cost_rare
 		}
 		upkeep = {
-			energy = @yuzu_s_t2_upkeep_energy
-			alloys = @yuzu_s_t2_upkeep_alloys
+			energy = @yuzu_armor_s_t2_upkeep_energy
+			alloys = @yuzu_armor_s_t2_upkeep_alloys
 		}
 	}
 	ai_weight = {
@@ -158,8 +158,8 @@ utility_component_template = {
 			sr_dark_matter = @yuzu_armor_m_t2_cost_rare
 		}
 		upkeep = {
-			energy = @yuzu_m_t2_upkeep_energy
-			alloys = @yuzu_m_t2_upkeep_alloys
+			energy = @yuzu_armor_m_t2_upkeep_energy
+			alloys = @yuzu_armor_m_t2_upkeep_alloys
 		}
 	}
 	ai_weight = {
@@ -191,8 +191,8 @@ utility_component_template = {
 			sr_dark_matter = @yuzu_armor_l_t2_cost_rare
 		}
 		upkeep = {
-			energy = @yuzu_l_t2_upkeep_energy
-			alloys = @yuzu_l_t2_upkeep_alloys
+			energy = @yuzu_armor_l_t2_upkeep_energy
+			alloys = @yuzu_armor_l_t2_upkeep_alloys
 		}
 	}
 	ai_weight = {

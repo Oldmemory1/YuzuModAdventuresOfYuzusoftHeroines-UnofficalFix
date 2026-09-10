@@ -5,12 +5,12 @@
 @yuzu_s_t3_cost = 78
 @yuzu_rs_s_cost = 120
 
-@yuzu_s_t1_upkeep_energy = 0.40
-@yuzu_s_t1_upkeep_alloys = 0.08
-@yuzu_s_t2_upkeep_energy = 0.50
-@yuzu_s_t2_upkeep_alloys = 0.10
-@yuzu_s_t3_upkeep_energy = 0.60
-@yuzu_s_t3_upkeep_alloys = 0.12
+@yuzu_s_t1_upkeep_energy = 0.21
+@yuzu_s_t1_upkeep_alloys = 0.043
+@yuzu_s_t2_upkeep_energy = 0.74
+@yuzu_s_t2_upkeep_alloys = 0.148
+@yuzu_s_t3_upkeep_energy = 1.11
+@yuzu_s_t3_upkeep_alloys = 0.222
 @yuzu_rs_s_upkeep_energy = 1.20
 @yuzu_rs_s_upkeep_alloys = 0.24
 
@@ -21,12 +21,12 @@
 @yuzu_m_t3_cost = 277
 @yuzu_rs_m_cost = 240
 
-@yuzu_m_t1_upkeep_energy = 0.80
-@yuzu_m_t1_upkeep_alloys = 0.16
-@yuzu_m_t2_upkeep_energy = 1.00
-@yuzu_m_t2_upkeep_alloys = 0.20
-@yuzu_m_t3_upkeep_energy = 1.20
-@yuzu_m_t3_upkeep_alloys = 0.24
+@yuzu_m_t1_upkeep_energy = 0.63
+@yuzu_m_t1_upkeep_alloys = 0.125
+@yuzu_m_t2_upkeep_energy = 2.11
+@yuzu_m_t2_upkeep_alloys = 0.422
+@yuzu_m_t3_upkeep_energy = 3.16
+@yuzu_m_t3_upkeep_alloys = 0.632
 @yuzu_rs_m_upkeep_energy = 2.40
 @yuzu_rs_m_upkeep_alloys = 0.48
 
@@ -37,12 +37,12 @@
 @yuzu_l_t3_cost = 872
 @yuzu_rs_l_cost = 480
 
-@yuzu_l_t1_upkeep_energy = 1.60
-@yuzu_l_t1_upkeep_alloys = 0.32
-@yuzu_l_t2_upkeep_energy = 2.00
-@yuzu_l_t2_upkeep_alloys = 0.40
-@yuzu_l_t3_upkeep_energy = 2.40
-@yuzu_l_t3_upkeep_alloys = 0.48
+@yuzu_l_t1_upkeep_energy = 1.57
+@yuzu_l_t1_upkeep_alloys = 0.314
+@yuzu_l_t2_upkeep_energy = 5.30
+@yuzu_l_t2_upkeep_alloys = 1.060
+@yuzu_l_t3_upkeep_energy = 7.95
+@yuzu_l_t3_upkeep_alloys = 1.590
 @yuzu_rs_l_upkeep_energy = 4.80
 @yuzu_rs_l_upkeep_alloys = 0.96
 
@@ -53,12 +53,12 @@
 @yuzu_xl_t3_cost = 2734
 @yuzu_rs_xl_cost = 960
 
-@yuzu_xl_t1_upkeep_energy = 3.20
-@yuzu_xl_t1_upkeep_alloys = 0.64
-@yuzu_xl_t2_upkeep_energy = 4.00
-@yuzu_xl_t2_upkeep_alloys = 0.80
-@yuzu_xl_t3_upkeep_energy = 4.80
-@yuzu_xl_t3_upkeep_alloys = 0.96
+@yuzu_xl_t1_upkeep_energy = 4.15
+@yuzu_xl_t1_upkeep_alloys = 0.83
+@yuzu_xl_t2_upkeep_energy = 13.29
+@yuzu_xl_t2_upkeep_alloys = 2.66
+@yuzu_xl_t3_upkeep_energy = 19.95
+@yuzu_xl_t3_upkeep_alloys = 3.99
 @yuzu_rs_xl_upkeep_energy = 9.60
 @yuzu_rs_xl_upkeep_alloys = 1.92
 
@@ -69,12 +69,12 @@
 @yuzu_titanic_t3_cost = 4806
 @yuzu_rs_titanic_cost = 1920
 
-@yuzu_titanic_t1_upkeep_energy = 6.40
-@yuzu_titanic_t1_upkeep_alloys = 1.28
-@yuzu_titanic_t2_upkeep_energy = 8.00
-@yuzu_titanic_t2_upkeep_alloys = 1.60
-@yuzu_titanic_t3_upkeep_energy = 9.60
-@yuzu_titanic_t3_upkeep_alloys = 1.92
+@yuzu_titanic_t1_upkeep_energy = 6.05
+@yuzu_titanic_t1_upkeep_alloys = 0.91
+@yuzu_titanic_t2_upkeep_energy = 18.69
+@yuzu_titanic_t2_upkeep_alloys = 2.80
+@yuzu_titanic_t3_upkeep_energy = 28.04
+@yuzu_titanic_t3_upkeep_alloys = 4.20
 @yuzu_rs_titanic_upkeep_energy = 19.2
 @yuzu_rs_titanic_upkeep_alloys = 3.84
 
@@ -190,6 +190,16 @@
 @yuzu_armor_M2 = 1500
 @yuzu_armor_L2 = 4500
 
+# 船体值(晶体镀层):比原版水晶甲高,量级对齐 armor
+
+@yuzu_hull_S1 = 250
+@yuzu_hull_M1 = 750
+@yuzu_hull_L1 = 2250
+
+@yuzu_hull_S2 = 500
+@yuzu_hull_M2 = 1500
+@yuzu_hull_L2 = 4500
+
 #############
 #	POWER	#
 #############
@@ -206,7 +216,21 @@
 @yuzu_torpedo_1_cost = 500
 @yuzu_torpedo_1_rare = 5.3
 @yuzu_strike_craft_1_cost = 200
-@yuzu_torpedo_1_upkeep_energy = 1.00
-@yuzu_torpedo_1_upkeep_alloys = 0.20
-@yuzu_strike_craft_1_upkeep_energy = 2.00
-@yuzu_strike_craft_1_upkeep_alloys = 0.40
+@yuzu_torpedo_1_upkeep_energy = 4.56
+@yuzu_torpedo_1_upkeep_alloys = 0.91
+@yuzu_strike_craft_1_upkeep_energy = 1.82
+@yuzu_strike_craft_1_upkeep_alloys = 0.365
+
+# 装甲独立维护费(原借用了武器变量,现按 armor 惯例拆出;数值不变)
+@yuzu_armor_s_t1_upkeep_energy = 0.40
+@yuzu_armor_s_t1_upkeep_alloys = 0.08
+@yuzu_armor_m_t1_upkeep_energy = 0.80
+@yuzu_armor_m_t1_upkeep_alloys = 0.16
+@yuzu_armor_l_t1_upkeep_energy = 1.60
+@yuzu_armor_l_t1_upkeep_alloys = 0.32
+@yuzu_armor_s_t2_upkeep_energy = 0.50
+@yuzu_armor_s_t2_upkeep_alloys = 0.10
+@yuzu_armor_m_t2_upkeep_energy = 1.00
+@yuzu_armor_m_t2_upkeep_alloys = 0.20
+@yuzu_armor_l_t2_upkeep_energy = 2.00
+@yuzu_armor_l_t2_upkeep_alloys = 0.40
