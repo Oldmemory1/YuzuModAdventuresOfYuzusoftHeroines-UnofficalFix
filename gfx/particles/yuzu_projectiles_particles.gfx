@@ -432,4 +432,60 @@ objectTypes = {
 		
 		scale = 0.2
 	}
+
+	# ---- 高级版 (teal #39C5BB) ----
+	pdxparticle = {
+		name = "yuzu_l_1_hit_effect_advanced"
+		type = "yuzu_l_1_hit_effect_advanced"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_l_1_muzzle_particle_advanced"
+		type = "yuzu_l_1_muzzle_advanced"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_hit_effect_advanced"
+		type = "yuzu_lance_1_hit_effect_advanced"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_particle_advanced"
+		type = "yuzu_lance_1_muzzle_advanced"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_windup_effect_advanced"
+		type = "yuzu_lance_1_windup_effect_advanced"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_windup_effect_advanced"
+		type = "yuzu_lance_1_muzzle_windup_effect_advanced"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_hit_effect_advanced"
+		type = "yuzu_beam_1_hit_effect_advanced"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_effect_advanced"
+		type = "yuzu_beam_1_muzzle_effect_advanced"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_windup_effect_advanced"
+		type = "yuzu_beam_1_muzzle_windup_effect_advanced"
+		
+		scale = 1.0
+	}
 }
