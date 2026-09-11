@@ -62,6 +62,27 @@ component_set = {
 }
 
 component_set = {
+	key = "YUZU_ENERGY_TORPEDO_1_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_LANCE_1_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_lance_1_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_1_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_beam_1_advanced"
+	icon_frame = 1
+}
+
+component_set = {
 	key = "YUZU_STRIKE_CRAFT_1"
 
 	icon = "GFX_ship_part_yuzu_strike_craft_1"

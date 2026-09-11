@@ -18,6 +18,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
+	upgrades_to = "SHIP_THRUSTER_YUZU_ADVANCED"
 	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
 	potential = {
 		OR = {
@@ -60,6 +61,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_YUZU_ADVANCED"
 	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
 	potential = {
 		OR = {
@@ -103,6 +105,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
+	upgrades_to = "CRUISER_SHIP_THRUSTER_YUZU_ADVANCED"
 	# size_restriction = { cruiser crisis_cruiser offspring_cruiser }
 	potential = {
 		OR = {
@@ -145,6 +148,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_YUZU_ADVANCED"
 	# size_restriction = { battleship offspring_battleship }
 	potential = {
 		OR = {
@@ -187,6 +191,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
+	upgrades_to = "TITAN_SHIP_THRUSTER_YUZU_ADVANCED"
 	# size_restriction = { titan }
 	potential = {
 		OR = {
@@ -229,6 +234,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_yuzu_1" }
 	component_set = "thruster_components"
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_YUZU_ADVANCED"
 	# size_restriction = { colossus juggernaut star_eater yuzu_star_eater }
 	potential = {
 		OR = {

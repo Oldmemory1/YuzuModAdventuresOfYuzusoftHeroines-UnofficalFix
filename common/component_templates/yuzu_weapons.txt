@@ -7,7 +7,7 @@ weapon_component_template = {
 	icon_frame = 1
 	power = -600
 
-	firing_arc = 10.0
+	#	firing_arc = 10.0  # 与原版制式T槽武器一致,不限制开火角度
 	min_range = 30.0
 	use_ship_main_target = no
 
@@ -17,6 +17,7 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
+	upgrades_to = "YUZU_BEAM_1_ADVANCED"
 	damage = {
 		min = 5000
 		max = 7500
@@ -71,7 +72,7 @@ weapon_component_template = {
 	icon_frame = 1
 	power = -700
 
-	firing_arc = 10.0
+	#	firing_arc = 10.0  # 与原版制式T槽武器一致,不限制开火角度
 	min_range = 30.0
 	use_ship_main_target = no
 
@@ -139,7 +140,7 @@ weapon_component_template = {
 	icon_frame = 1
 	power = -800
 
-	firing_arc = 10.0
+	#	firing_arc = 10.0  # 与原版制式T槽武器一致,不限制开火角度
 	min_range = 30.0
 	use_ship_main_target = no
 
@@ -225,6 +226,7 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
+	upgrades_to = "YUZU_LANCE_1_ADVANCED"
 	damage = {
 		min = 1000
 		max = 1500
@@ -431,6 +433,7 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
+	upgrades_to = "YUZU_L_1_ADVANCED"
 	damage = {
 		min = 180
 		max = 300
@@ -594,6 +597,7 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
+	upgrades_to = "YUZU_M_1_ADVANCED"
 	damage = {
 		min = 75
 		max = 125
@@ -757,6 +761,7 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
+	upgrades_to = "YUZU_S_1_ADVANCED"
 	damage = {
 		min = 30
 		max = 50

@@ -234,3 +234,32 @@
 @yuzu_armor_m_t2_upkeep_alloys = 0.20
 @yuzu_armor_l_t2_upkeep_energy = 2.00
 @yuzu_armor_l_t2_upkeep_alloys = 0.40
+
+##########################################
+# 高级版 (ADVANCED) —— 约为 Tier1 的 1.5 倍
+##########################################
+
+@yuzu_s_t1_advanced_cost = 23
+@yuzu_s_t1_advanced_rare = 0.24
+@yuzu_s_t1_advanced_upkeep_energy = 0.32
+@yuzu_s_t1_advanced_upkeep_alloys = 0.065
+
+@yuzu_m_t1_advanced_cost = 83
+@yuzu_m_t1_advanced_rare = 0.87
+@yuzu_m_t1_advanced_upkeep_energy = 0.95
+@yuzu_m_t1_advanced_upkeep_alloys = 0.188
+
+@yuzu_l_t1_advanced_cost = 258
+@yuzu_l_t1_advanced_rare = 2.73
+@yuzu_l_t1_advanced_upkeep_energy = 2.36
+@yuzu_l_t1_advanced_upkeep_alloys = 0.471
+
+@yuzu_xl_t1_advanced_cost = 854
+@yuzu_xl_t1_advanced_rare = 9.02
+@yuzu_xl_t1_advanced_upkeep_energy = 6.23
+@yuzu_xl_t1_advanced_upkeep_alloys = 1.245
+
+@yuzu_titanic_t1_advanced_cost = 1556
+@yuzu_titanic_t1_advanced_rare = 16.44
+@yuzu_titanic_t1_advanced_upkeep_energy = 9.08
+@yuzu_titanic_t1_advanced_upkeep_alloys = 1.365

@@ -1,0 +1,376 @@
+# 柚子防御站 —— 复用原版赛博勒克斯三个站点模板。
+# 来源：原版 common/global_ship_designs/ai_ship_designs.txt 的 NAME_Cybrex_Core / _Station_1 / _Station_2。
+# ship_size 与 section 模板全部直接沿用原版，本文件只新增 design，不覆盖任何原版条目。
+#
+#   小站 NAME_Yuzu_Station_Small : ship_size = blue_military_station_small_ai, section = ai_station_small_key
+#                                  10000 船体 / +20 装甲（≈ 原版 2 级星基 starport 的 10000）
+#   大站 NAME_Yuzu_Station_Large : ship_size = blue_military_station_large_ai, section = ai_station_large_key
+#                                  20000 船体 / +45 装甲（≈ 原版 3 级星基 starhold 的 20000）
+#   核心 NAME_Yuzu_Station_Core  : ship_size = blue_core_ai,                  section = ai_core_key
+#                                  40000 船体 / +100 装甲（≈ 半座 citadel 的 80000，开局用会严重超模）
+#
+# 三个 ship_size 均为 is_space_station = yes / max_speed = 0 / fleet_slot_size = 4，
+# 且没有 construction_type —— 即"自由漂浮站点舰"，按普通舰船编入舰队，
+# 既不进星基防御槽、也不是星基，用法参考原版危机初始星系（crisis_initializers.txt）的 create_fleet。
+#
+# 部件替换：原版这三个 design 塞的是 T5 部件（等离子3 / 伽马激光 / 能量长矛2 / 护盾5 / 装甲5），
+# 2200 年开局严重超模，且被打爆后残骸可被逆推出高级科技。这里换成柚子 Tier-1（点防/舰载机除外，见下）：
+#   YUZU_S_1 / YUZU_M_1 / YUZU_L_1 / YUZU_LANCE_1   时空乱流系列武器
+#   YUZU_SHIELD_1 / YUZU_ARMOR_1                     时空屏障 / 世界装甲
+#   FIRE_CONTROL_YUZU                                时空感知水晶
+# 两处例外，都用原版部件（也和原版赛博勒克斯 design 本身的写法一致）：
+#   点防槽  → POINT_DEFENCE_3      守护者点防御，不用柚子的深渊之壁(YUZU_POINT_DEFENCE_1)
+#   舰载机槽 → STRIKE_CRAFT_HANGAR_3 先进型战斗机中队，不用柚子的深渊使徒(YUZU_STRIKE_CRAFT_1)
+# 舰载机写法与 yuzu_ship_designs.txt 里 NAME_Yuzu_Titan 一致。
+# 想要更强形态，把部件名里的 _1 改成 _2 / _3（或 yuzu_advanced.txt 里的 *_ADVANCED）即可，槽位不用动。
+#
+# 脚本侧生成时注意：
+#   1) 这三个 ship_size 的 graphical_culture 白名单只有 ai_01，
+#      create_ship 必须显式写 graphical_culture = "ai_01"，否则取不到模型；
+#   2) 建议 fleet 带 settings = { uses_naval_capacity = no spawn_debris = no }，
+#      免掉 4 点海军容量占用，并避免残骸泄科技。
+#
+# 槽位坑：ai_station_large_key 里的 MEDIUM_GUN_01 / MEDIUM_GUN_02 实际声明的是 small_turret
+# （原版自己却往里面塞了 MEDIUM_PLASMA_3）。这里按真实槽位尺寸放 YUZU_S_1。
+#
+# required_component 沿用原版写法，只声明传感器（原版是 SENSOR_4，这里换成柚子的 SENSOR_YUZU_1）。
+# 这三个 ship_size 没有 required_component_set，所以反应堆/推进器/超光速都不需要装。
+
+# 小站 —— 开局首都防御的首选形态
+ship_design = {
+	name = "NAME_Yuzu_Station_Small"
+	ship_size = blue_military_station_small_ai
+
+	section = {
+		template = "ai_station_small_key"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "PD_01"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_M_1"
+		}
+
+		# medium_utility_slots = 4：盾(2) + 甲(2)
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_YUZU_ARMOR_1"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component = "SENSOR_YUZU_1"
+}
+
+# 大站 —— 中期形态（≈ 3 级星基）
+ship_design = {
+	name = "NAME_Yuzu_Station_Large"
+	ship_size = blue_military_station_large_ai
+
+	section = {
+		template = "ai_station_large_key"
+		slot = "mid"
+
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "YUZU_S_1"
+		}
+		# 这两个槽名写作 MEDIUM_GUN，实际是 small_turret
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_S_1"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1"
+		}
+
+		# large_utility_slots = 6：盾(3) + 甲(3)
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component = "SENSOR_YUZU_1"
+}
+
+# 核心 —— 后期形态（≈ 半座 citadel，开局慎用）
+ship_design = {
+	name = "NAME_Yuzu_Station_Core"
+	ship_size = blue_core_ai
+
+	section = {
+		template = "ai_core_key"
+		slot = "mid"
+
+		component = {
+			slot = "PD_01"
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			slot = "PD_02"
+			template = "POINT_DEFENCE_3"
+		}
+
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_05"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_06"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_07"
+			template = "YUZU_M_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_08"
+			template = "YUZU_M_1"
+		}
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "YUZU_L_1"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "YUZU_L_1"
+		}
+
+		# 原版只填了 EXTRA_LARGE_01，EXTRA_LARGE_04 空着
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "YUZU_LANCE_1"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "YUZU_LANCE_1"
+		}
+
+		# 原版这 8 个舰载机槽全空，这里补上；嫌强可整段删掉
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_03"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_04"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_05"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_06"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_07"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_08"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+
+		# large_utility_slots = 20：盾(10) + 甲(10)
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_YUZU_SHIELD_1"
+		}
+
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_13"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_14"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_15"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_16"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_17"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_18"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_19"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_20"
+			template = "LARGE_YUZU_ARMOR_1"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component = "SENSOR_YUZU_1"
+}

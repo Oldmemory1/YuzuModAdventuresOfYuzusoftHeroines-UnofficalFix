@@ -1519,3 +1519,165 @@ tech_yuzu_crystal_armor_2 = {
 		factor = 50
 	}
 }
+
+
+# ===== 高级版 (ADVANCED) 科技 =====
+
+tech_yuzu_l_1_advanced = {
+	cost = @yuzu_tier5cost4
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_1" }
+	weight = @yuzu_tier5weight4
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_lance_1_advanced = {
+	cost = @yuzu_tier5cost5
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_lance_1" }
+	weight = @yuzu_tier5weight5
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_beam_1_advanced = {
+	cost = @yuzu_tier5cost6
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_beam_1" }
+	weight = @yuzu_tier5weight6
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_thrusters_yuzu_1_advanced = {
+	area = engineering
+	cost = @yuzu_tier5cost4
+	tier = 5
+	category = { propulsion }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_thrusters_yuzu_1" }
+	weight = @yuzu_tier5weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_THRUSTER_YUZU_1_ADVANCED_TITLE"
+			desc = "TECH_UNLOCK_THRUSTER_YUZU_1_ADVANCED_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_jump_drive_1_advanced = {
+	cost = @yuzu_tier5cost6
+	area = physics
+	tier = 5
+	category = { particles }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_jump_drive_1" }
+	weight = @yuzu_tier5weight6
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_YUZU_JUMPDRIVE_1_ADVANCED_TITLE"
+			desc = "TECH_UNLOCK_YUZU_JUMPDRIVE_1_ADVANCED_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}

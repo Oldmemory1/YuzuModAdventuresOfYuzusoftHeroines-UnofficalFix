@@ -302,5 +302,35 @@ country_event = {
 				planet_event = { id = Yuzu_situation_event.1 days = 1800 random = 1800 }
 			}
 		}
+
+		# 母星防御站：柚子世界起源专属的开局护航
+		# design 见 common/global_ship_designs/yuzu_ship_designs_military_station.txt
+		# ship_size 用的是原版 blue_military_station_large_ai，其 resources 里没有 upkeep 块，
+		# 所以本身就是 0 维护费，不会拖累前期经济。
+		# 注意 graphical_culture 必须显式写 "ai_01"（该 ship_size 的模型白名单只有 ai_01）。
+		capital_scope = {
+			create_fleet = {
+				name = "NAME_Yuzu_Station_Large"
+				settings = {
+					uses_naval_capacity = no
+					spawn_debris = no
+					can_change_composition = no
+				}
+				effect = {
+					set_owner = PREV.owner
+					create_ship = {
+						name = "NAME_Yuzu_Station_Large"
+						design = "NAME_Yuzu_Station_Large"
+						prefix = no
+						graphical_culture = "ai_01"
+					}
+					set_location = {
+						target = PREV
+						distance = 10
+						angle = random
+					}
+				}
+			}
+		}
 	}
 }
