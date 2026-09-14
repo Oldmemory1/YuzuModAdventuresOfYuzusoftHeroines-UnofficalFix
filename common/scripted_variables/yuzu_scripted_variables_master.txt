@@ -1,0 +1,32 @@
+# 太初版(MASTER) 造价/维护费 —— 由 scripts/make_yuzu_master.py 生成
+# 造价/维护费 = Tier1 x5.5; 暗物质 = 稀有水晶 / 10
+
+@yuzu_s_t1_master_cost = 83
+@yuzu_s_t1_master_rare = 0.88
+@yuzu_s_t1_master_exotic_gases = 0.88
+@yuzu_s_t1_master_upkeep_energy = 1.16
+@yuzu_s_t1_master_upkeep_alloys = 0.237
+
+@yuzu_m_t1_master_cost = 303
+@yuzu_m_t1_master_rare = 3.19
+@yuzu_m_t1_master_exotic_gases = 3.19
+@yuzu_m_t1_master_upkeep_energy = 3.47
+@yuzu_m_t1_master_upkeep_alloys = 0.688
+
+@yuzu_l_t1_master_cost = 946
+@yuzu_l_t1_master_rare = 10.01
+@yuzu_l_t1_master_exotic_gases = 10.01
+@yuzu_l_t1_master_upkeep_energy = 8.64
+@yuzu_l_t1_master_upkeep_alloys = 1.727
+
+@yuzu_xl_t1_master_cost = 3130
+@yuzu_xl_t1_master_rare = 33.06
+@yuzu_xl_t1_master_exotic_gases = 33.06
+@yuzu_xl_t1_master_upkeep_energy = 22.83
+@yuzu_xl_t1_master_upkeep_alloys = 4.565
+
+@yuzu_titanic_t1_master_cost = 5704
+@yuzu_titanic_t1_master_rare = 60.28
+@yuzu_titanic_t1_master_exotic_gases = 60.28
+@yuzu_titanic_t1_master_upkeep_energy = 33.28
+@yuzu_titanic_t1_master_upkeep_alloys = 5.005

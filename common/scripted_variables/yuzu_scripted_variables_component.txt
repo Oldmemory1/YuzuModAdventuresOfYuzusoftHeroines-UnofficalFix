@@ -235,31 +235,64 @@
 @yuzu_armor_l_t2_upkeep_energy = 2.00
 @yuzu_armor_l_t2_upkeep_alloys = 0.40
 
-##########################################
-# 高级版 (ADVANCED) —— 约为 Tier1 的 1.5 倍
-##########################################
+# ===== ADVANCED(先进版) 造价/维护费 自动生成区块 — by scripts/rebalance_adv_elite_tiers.py =====
+@yuzu_s_t1_advanced_cost = 26
+@yuzu_s_t1_advanced_rare = 0.28
+@yuzu_s_t1_advanced_exotic_gases = 0.28
+@yuzu_s_t1_advanced_upkeep_energy = 0.37
+@yuzu_s_t1_advanced_upkeep_alloys = 0.075
 
-@yuzu_s_t1_advanced_cost = 23
-@yuzu_s_t1_advanced_rare = 0.24
-@yuzu_s_t1_advanced_upkeep_energy = 0.32
-@yuzu_s_t1_advanced_upkeep_alloys = 0.065
+@yuzu_m_t1_advanced_cost = 96
+@yuzu_m_t1_advanced_rare = 1.02
+@yuzu_m_t1_advanced_exotic_gases = 1.02
+@yuzu_m_t1_advanced_upkeep_energy = 1.1
+@yuzu_m_t1_advanced_upkeep_alloys = 0.219
 
-@yuzu_m_t1_advanced_cost = 83
-@yuzu_m_t1_advanced_rare = 0.87
-@yuzu_m_t1_advanced_upkeep_energy = 0.95
-@yuzu_m_t1_advanced_upkeep_alloys = 0.188
+@yuzu_l_t1_advanced_cost = 301
+@yuzu_l_t1_advanced_rare = 3.19
+@yuzu_l_t1_advanced_exotic_gases = 3.19
+@yuzu_l_t1_advanced_upkeep_energy = 2.75
+@yuzu_l_t1_advanced_upkeep_alloys = 0.55
 
-@yuzu_l_t1_advanced_cost = 258
-@yuzu_l_t1_advanced_rare = 2.73
-@yuzu_l_t1_advanced_upkeep_energy = 2.36
-@yuzu_l_t1_advanced_upkeep_alloys = 0.471
+@yuzu_xl_t1_advanced_cost = 996
+@yuzu_xl_t1_advanced_rare = 10.52
+@yuzu_xl_t1_advanced_exotic_gases = 10.52
+@yuzu_xl_t1_advanced_upkeep_energy = 7.26
+@yuzu_xl_t1_advanced_upkeep_alloys = 1.453
 
-@yuzu_xl_t1_advanced_cost = 854
-@yuzu_xl_t1_advanced_rare = 9.02
-@yuzu_xl_t1_advanced_upkeep_energy = 6.23
-@yuzu_xl_t1_advanced_upkeep_alloys = 1.245
+@yuzu_titanic_t1_advanced_cost = 1815
+@yuzu_titanic_t1_advanced_rare = 19.18
+@yuzu_titanic_t1_advanced_exotic_gases = 19.18
+@yuzu_titanic_t1_advanced_upkeep_energy = 10.59
+@yuzu_titanic_t1_advanced_upkeep_alloys = 1.593
 
-@yuzu_titanic_t1_advanced_cost = 1556
-@yuzu_titanic_t1_advanced_rare = 16.44
-@yuzu_titanic_t1_advanced_upkeep_energy = 9.08
-@yuzu_titanic_t1_advanced_upkeep_alloys = 1.365
+# ===== ELITE(精英版) 造价/维护费 自动生成区块 — by scripts/rebalance_adv_elite_tiers.py =====
+@yuzu_s_t1_elite_cost = 49
+@yuzu_s_t1_elite_rare = 0.52
+@yuzu_s_t1_elite_exotic_gases = 0.52
+@yuzu_s_t1_elite_upkeep_energy = 0.68
+@yuzu_s_t1_elite_upkeep_alloys = 0.14
+
+@yuzu_m_t1_elite_cost = 179
+@yuzu_m_t1_elite_rare = 1.89
+@yuzu_m_t1_elite_exotic_gases = 1.89
+@yuzu_m_t1_elite_upkeep_energy = 2.05
+@yuzu_m_t1_elite_upkeep_alloys = 0.406
+
+@yuzu_l_t1_elite_cost = 559
+@yuzu_l_t1_elite_rare = 5.92
+@yuzu_l_t1_elite_exotic_gases = 5.92
+@yuzu_l_t1_elite_upkeep_energy = 5.1
+@yuzu_l_t1_elite_upkeep_alloys = 1.021
+
+@yuzu_xl_t1_elite_cost = 1849
+@yuzu_xl_t1_elite_rare = 19.53
+@yuzu_xl_t1_elite_exotic_gases = 19.53
+@yuzu_xl_t1_elite_upkeep_energy = 13.49
+@yuzu_xl_t1_elite_upkeep_alloys = 2.698
+
+@yuzu_titanic_t1_elite_cost = 3370
+@yuzu_titanic_t1_elite_rare = 35.62
+@yuzu_titanic_t1_elite_exotic_gases = 35.62
+@yuzu_titanic_t1_elite_upkeep_energy = 19.66
+@yuzu_titanic_t1_elite_upkeep_alloys = 2.958

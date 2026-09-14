@@ -147,6 +147,90 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_yuzu.dds"
 	}
 	spriteType = {
+		name = "GFX_ship_part_computer_swarm_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_picket_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_picket_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_line_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_line_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_artillery_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_artillery_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_carrier_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_platform_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_swarm_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_picket_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_picket_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_line_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_line_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_artillery_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_artillery_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_carrier_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_platform_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_swarm_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_swarm_yuzu_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_picket_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_picket_yuzu_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_line_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_line_yuzu_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_artillery_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_artillery_yuzu_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_carrier_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_carrier_yuzu_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_platform_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_platform_yuzu_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_computer_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_role_yuzu_master.dds"
+	}
+	spriteType = {
 		name = "GFX_ship_part_sensor_yuzu_1"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_1.dds"
 	}
@@ -261,5 +345,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ship_part_thruster_yuzu_1_elite"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_thruster_yuzu_1_elite.dds"
+	}
+	# 太初版(紫罗兰 #8A7CFF)
+	spriteType = {
+		name = "GFX_ship_part_yuzu_beam_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_energy_torpedoes_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_energy_torpedoes_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_jump_drive_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_jump_drive_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_lance_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_lance_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_thruster_yuzu_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_thruster_yuzu_1_master.dds"
 	}
 }

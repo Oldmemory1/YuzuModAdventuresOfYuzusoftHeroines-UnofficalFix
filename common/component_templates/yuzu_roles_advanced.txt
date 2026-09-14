@@ -1,0 +1,311 @@
+# 先进版作战电脑 (ADVANCED) —— 由 Tier1 派生 (common/component_templates/yuzu_roles.txt)
+# 造价 = Tier1 x1.75 (30 -> 53); 耗电 = Tier1 x1.50 (-35 -> -53)
+# 修正值 = Tier1 的加成 x1.50 (加法百分比: 0.30 -> 0.45)
+# 恒星基地电脑耗电 0 且无 resources 块, 与 Tier1 一致
+# 升级链: Tier1 -> ADVANCED -> ELITE -> MASTER (Tier1 与 ELITE 的 upgrades_to 由本脚本写入各自文件)
+# 本文件由 scripts/make_yuzu_computer_tiers.py 生成, 勿手改
+utility_component_template = {
+	key = "COMBAT_COMPUTER_SWARM_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_SWARM_YUZU_ELITE"
+	ai_tags = { gunship brawler }
+	ai_tag_weight = 0
+
+	potential = {
+		ship_uses_swarm_role = yes
+	}
+
+	modifier = {
+		ship_evasion_mult = 0.45
+		ship_speed_mult = 0.30
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.30
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_TORPEDO_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	prerequisites = { "tech_computer_role_yuzu_advanced" "tech_torpedoes_1" }
+	upgrades_to = "COMBAT_COMPUTER_TORPEDO_YUZU_ELITE"
+	ai_tags = { explosive }
+	ai_tag_weight = 0
+
+	potential = {
+		ship_uses_torpedo_role = yes
+	}
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.30
+		ship_tracking_add = 22.50
+		ship_evasion_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_PICKET_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_picket_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_PICKET_YUZU_ELITE"
+	ai_tags = { screen }
+	ai_tag_weight = 0
+
+	potential = {
+		ship_uses_picket_role = yes
+	}
+
+	modifier = {
+		ship_evasion_mult = 0.15
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.375
+		ship_tracking_add = 75
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_LINE_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_line_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_LINE_YUZU_ELITE"
+	ai_tags = { gunship }
+	ai_tag_weight = 0
+
+	potential = {
+		OR ={
+			ship_uses_line_role = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.375
+		ship_accuracy_add = 37.50
+		ship_tracking_add = 15
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_ARTILLERY_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_artillery_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_ARTILLERY_YUZU_ELITE"
+	ai_tags = { artillery energy_torpedoes }
+	ai_tag_weight = 0
+
+	potential = {
+		OR ={
+			ship_uses_artillery_role = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.375
+		ship_weapon_range_mult = 0.375
+		ship_tracking_add = 15
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_CARRIER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_carrier_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "carrier"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_CARRIER_YUZU_ELITE"
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	potential = {
+		OR ={
+			ship_uses_carrier_role = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ship_modifier = {
+		ship_engagement_range_mult = 1.875
+		ship_tracking_add = 15
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_PLATFORM_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_platform_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_PLATFORM_YUZU_ELITE"
+
+	potential = {
+		ship_uses_platform_computers = yes
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.60
+		ship_tracking_add = 60
+		ship_accuracy_add = 15
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_COMBAT_COMPUTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_yuzu_advanced"
+	icon_frame = 1
+	power = 0
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "STARBASE_COMBAT_COMPUTER_YUZU_ELITE"
+
+	potential = {
+		ship_uses_starbase_components = yes
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.375
+		ship_tracking_add = 75
+		ship_accuracy_add = 30
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}

@@ -488,4 +488,118 @@ objectTypes = {
 		
 		scale = 1.0
 	}
+
+# ===== ELITE(精英版) 自动生成区块 — 由 scripts/make_yuzu_elite.py 写入 =====
+# ---- 精英版 (sky blue #66CCFF) ----
+	pdxparticle = {
+		name = "yuzu_l_1_hit_effect_elite"
+		type = "yuzu_l_1_hit_effect_elite"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_l_1_muzzle_particle_elite"
+		type = "yuzu_l_1_muzzle_elite"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_hit_effect_elite"
+		type = "yuzu_lance_1_hit_effect_elite"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_particle_elite"
+		type = "yuzu_lance_1_muzzle_elite"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_windup_effect_elite"
+		type = "yuzu_lance_1_windup_effect_elite"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_windup_effect_elite"
+		type = "yuzu_lance_1_muzzle_windup_effect_elite"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_hit_effect_elite"
+		type = "yuzu_beam_1_hit_effect_elite"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_effect_elite"
+		type = "yuzu_beam_1_muzzle_effect_elite"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_windup_effect_elite"
+		type = "yuzu_beam_1_muzzle_windup_effect_elite"
+		
+		scale = 1.0
+	}
+
+# ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
+# ---- 太初版 (violet #8A7CFF) ----
+	pdxparticle = {
+		name = "yuzu_l_1_hit_effect_master"
+		type = "yuzu_l_1_hit_effect_master"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_l_1_muzzle_particle_master"
+		type = "yuzu_l_1_muzzle_master"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_hit_effect_master"
+		type = "yuzu_lance_1_hit_effect_master"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_particle_master"
+		type = "yuzu_lance_1_muzzle_master"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_windup_effect_master"
+		type = "yuzu_lance_1_windup_effect_master"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_1_muzzle_windup_effect_master"
+		type = "yuzu_lance_1_muzzle_windup_effect_master"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_hit_effect_master"
+		type = "yuzu_beam_1_hit_effect_master"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_effect_master"
+		type = "yuzu_beam_1_muzzle_effect_master"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_1_muzzle_windup_effect_master"
+		type = "yuzu_beam_1_muzzle_windup_effect_master"
+		
+		scale = 1.0
+	}
 }

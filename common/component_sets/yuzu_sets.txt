@@ -164,3 +164,46 @@ component_set = {
 	icon = "GFX_ship_part_fire_control_yuzu"
 	icon_frame = 1
 }
+# ===== ELITE(精英版) 自动生成区块 — 由 scripts/make_yuzu_elite.py 写入 =====
+component_set = {
+	key = "YUZU_ENERGY_TORPEDO_1_ELITE"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_elite"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_LANCE_1_ELITE"
+
+	icon = "GFX_ship_part_yuzu_lance_1_elite"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_1_ELITE"
+
+	icon = "GFX_ship_part_yuzu_beam_1_elite"
+	icon_frame = 1
+}
+
+# ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
+component_set = {
+	key = "YUZU_ENERGY_TORPEDO_1_MASTER"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_master"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_LANCE_1_MASTER"
+
+	icon = "GFX_ship_part_yuzu_lance_1_master"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_1_MASTER"
+
+	icon = "GFX_ship_part_yuzu_beam_1_master"
+	icon_frame = 1
+}
