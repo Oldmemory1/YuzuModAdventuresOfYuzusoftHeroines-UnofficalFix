@@ -1,0 +1,316 @@
+# 深渊线 T3 先进版组件 —— 由 scripts/make_yuzu_abyss_t3_adv.py 从
+# common/component_templates/yuzu_weapons.txt 的 T3 组件派生, 勿手改
+#
+# 伤害 = Tier2 x2 (T3 是 Tier2 的 x1.5); 射程与 T3 相同;
+# 耗电/溅射沿用每档固定增量; 造价/维护 = T3 x1.5;
+# 异星天然气 = 稀有水晶(本 mod 约定: 有对船体加伤的武器吃气);
+# 前置科技 = 专属的先进版科技 (tech_yuzu_{l,lance,beam}_3_advanced)。
+
+weapon_component_template = {
+	key = "YUZU_S_3_ADVANCED"
+	size = small
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+	icon_frame = 1
+	power = -50
+
+	prerequisites = { "tech_yuzu_l_3_advanced" }
+	component_set = "YUZU_ENERGY_TORPEDO_3_ADVANCED"
+	projectile_gfx = "yuzu_s_3_advanced"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 120
+		max = 320
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.9
+	tracking = 0.4
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_s_t3_advanced_cost
+			rare_crystals = @yuzu_s_t3_advanced_rare
+			exotic_gases = @yuzu_s_t3_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_s_t3_advanced_upkeep_energy
+			alloys = @yuzu_s_t3_advanced_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_M_3_ADVANCED"
+	size = medium
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+	icon_frame = 1
+	power = -90
+
+	prerequisites = { "tech_yuzu_l_3_advanced" }
+	component_set = "YUZU_ENERGY_TORPEDO_3_ADVANCED"
+	projectile_gfx = "yuzu_m_3_advanced"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 300
+		max = 800
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.9
+	tracking = 0.3
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_m_t3_advanced_cost
+			rare_crystals = @yuzu_m_t3_advanced_rare
+			exotic_gases = @yuzu_m_t3_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_m_t3_advanced_upkeep_energy
+			alloys = @yuzu_m_t3_advanced_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_L_3_ADVANCED"
+	size = large
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+	icon_frame = 1
+	power = -170
+
+	prerequisites = { "tech_yuzu_l_3_advanced" }
+	component_set = "YUZU_ENERGY_TORPEDO_3_ADVANCED"
+	projectile_gfx = "yuzu_l_3_advanced"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 720
+		max = 1920
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 150
+	accuracy = 0.9
+	tracking = 0.2
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_l_t3_advanced_cost
+			rare_crystals = @yuzu_l_t3_advanced_rare
+			exotic_gases = @yuzu_l_t3_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_l_t3_advanced_upkeep_energy
+			alloys = @yuzu_l_t3_advanced_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_LANCE_3_ADVANCED"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_lance_3_advanced"
+	icon_frame = 1
+	power = -450
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_lance_3_advanced" }
+	component_set = "YUZU_LANCE_3_ADVANCED"
+	projectile_gfx = "yuzu_lance_3_advanced"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 4000
+		max = 10000
+	}
+	windup = {
+		min = 10
+		max = 20
+	}
+	total_fire_time = 75
+	range = 200
+	accuracy = 0.9
+	tracking = 0.1
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_xl_t3_advanced_cost
+			rare_crystals = @yuzu_xl_t3_advanced_rare
+			exotic_gases = @yuzu_xl_t3_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_xl_t3_advanced_upkeep_energy
+			alloys = @yuzu_xl_t3_advanced_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_BEAM_3_ADVANCED"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_beam_3_advanced"
+	icon_frame = 1
+	power = -900
+
+	#	firing_arc = 10.0  # 与原版制式T槽武器一致,不限制开火角度
+	min_range = 30.0
+	use_ship_main_target = no
+
+	prerequisites = { "tech_yuzu_beam_3_advanced" }
+	component_set = "YUZU_BEAM_3_ADVANCED"
+	projectile_gfx = "yuzu_beam_3_advanced"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 20000
+		max = 50000
+	}
+	windup = {
+		min = 40
+		max = 50
+	}
+	total_fire_time = 200
+	range = 320
+	accuracy = 0.9
+	tracking = 0
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	collateral_damage = 625
+	collateral_range = 40
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_titanic_t3_advanced_cost
+			rare_crystals = @yuzu_titanic_t3_advanced_rare
+			exotic_gases = @yuzu_titanic_t3_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_titanic_t3_advanced_upkeep_energy
+			alloys = @yuzu_titanic_t3_advanced_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}

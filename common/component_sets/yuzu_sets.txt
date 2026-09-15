@@ -207,3 +207,25 @@ component_set = {
 	icon = "GFX_ship_part_yuzu_beam_1_master"
 	icon_frame = 1
 }
+
+# ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
+component_set = {
+	key = "YUZU_ENERGY_TORPEDO_3_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_LANCE_3_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_lance_3_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_3_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_beam_3_advanced"
+	icon_frame = 1
+}

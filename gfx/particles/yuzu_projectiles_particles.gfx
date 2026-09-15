@@ -488,7 +488,6 @@ objectTypes = {
 		
 		scale = 1.0
 	}
-
 # ===== ELITE(精英版) 自动生成区块 — 由 scripts/make_yuzu_elite.py 写入 =====
 # ---- 精英版 (sky blue #66CCFF) ----
 	pdxparticle = {
@@ -601,5 +600,61 @@ objectTypes = {
 		type = "yuzu_beam_1_muzzle_windup_effect_master"
 		
 		scale = 1.0
+	}
+# ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
+# ---- 深渊 T3 先进版 (品红 #EB38BE) ----
+	pdxparticle = {
+		name = "yuzu_beam_3_hit_effect_advanced"
+		type = "yuzu_beam_3_hit_effect_advanced"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_3_muzzle_effect_advanced"
+		type = "yuzu_beam_3_muzzle_effect_advanced"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_beam_3_muzzle_windup_effect_advanced"
+		type = "yuzu_beam_3_muzzle_windup_effect_advanced"
+		
+		scale = 1.0
+	}
+	pdxparticle = {
+		name = "yuzu_l_3_hit_effect_advanced"
+		type = "yuzu_l_3_hit_effect_advanced"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_l_3_muzzle_particle_advanced"
+		type = "yuzu_l_3_muzzle_advanced"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_3_hit_effect_advanced"
+		type = "yuzu_lance_3_hit_effect_advanced"
+		
+		scale = 1.15
+	}
+	pdxparticle = {
+		name = "yuzu_lance_3_muzzle_particle_advanced"
+		type = "yuzu_lance_3_muzzle_advanced"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_3_muzzle_windup_effect_advanced"
+		type = "yuzu_lance_3_muzzle_windup_effect_advanced"
+		
+		scale = 1.5
+	}
+	pdxparticle = {
+		name = "yuzu_lance_3_windup_effect_advanced"
+		type = "yuzu_lance_3_windup_effect_advanced"
+		
+		scale = 1.5
 	}
 }

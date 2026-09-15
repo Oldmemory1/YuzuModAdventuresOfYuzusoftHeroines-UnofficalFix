@@ -1,0 +1,32 @@
+# 深渊线 T3 先进版 造价/维护费 —— 由 scripts/make_yuzu_abyss_t3_adv.py 生成
+# 全部 = T3 的 1.5 倍(T2 -> T3 正是 x1.5); 异星天然气 = 稀有水晶
+
+@yuzu_s_t3_advanced_cost = 117
+@yuzu_s_t3_advanced_rare = 1.23
+@yuzu_s_t3_advanced_upkeep_energy = 1.67
+@yuzu_s_t3_advanced_upkeep_alloys = 0.333
+@yuzu_s_t3_advanced_exotic_gases = 1.23
+
+@yuzu_m_t3_advanced_cost = 416
+@yuzu_m_t3_advanced_rare = 4.4
+@yuzu_m_t3_advanced_upkeep_energy = 4.74
+@yuzu_m_t3_advanced_upkeep_alloys = 0.948
+@yuzu_m_t3_advanced_exotic_gases = 4.4
+
+@yuzu_l_t3_advanced_cost = 1308
+@yuzu_l_t3_advanced_rare = 13.83
+@yuzu_l_t3_advanced_upkeep_energy = 11.93
+@yuzu_l_t3_advanced_upkeep_alloys = 2.385
+@yuzu_l_t3_advanced_exotic_gases = 13.83
+
+@yuzu_xl_t3_advanced_cost = 4101
+@yuzu_xl_t3_advanced_rare = 43.35
+@yuzu_xl_t3_advanced_upkeep_energy = 29.93
+@yuzu_xl_t3_advanced_upkeep_alloys = 5.985
+@yuzu_xl_t3_advanced_exotic_gases = 43.35
+
+@yuzu_titanic_t3_advanced_cost = 7209
+@yuzu_titanic_t3_advanced_rare = 76.2
+@yuzu_titanic_t3_advanced_upkeep_energy = 42.06
+@yuzu_titanic_t3_advanced_upkeep_alloys = 6.3
+@yuzu_titanic_t3_advanced_exotic_gases = 76.2

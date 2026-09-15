@@ -367,4 +367,17 @@ spriteTypes = {
 		name = "GFX_ship_part_thruster_yuzu_1_master"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_thruster_yuzu_1_master.dds"
 	}
+# 深渊 T3 先进版(品红 #EB38BE)
+	spriteType = {
+		name = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_energy_torpedoes_3_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_lance_3_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_lance_3_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_beam_3_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_3_advanced.dds"
+	}
 }
