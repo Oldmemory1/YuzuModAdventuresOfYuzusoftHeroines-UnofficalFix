@@ -282,6 +282,52 @@ yuzu_wish_fleet = {
 	}
 }
 
+# 精锐舰队增援: 花 3 倍心之碎片, 换一支档次更高的契约舰队。
+# 具体档次由事件 Yuzu_country_event.109 按已掌握的时空乱流武器技术决定,
+# 所以这里要求至少研究过先进档, 免得白花钱拿到基础舰队。
+yuzu_wish_fleet_prime = {
+	length = 0
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			fragment_of_heart =  3000
+		}
+	}
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	allow = {
+		has_technology = tech_yuzu_l_1_advanced
+	}
+
+	effect = {
+		hidden_effect = {
+			country_event = { id = Yuzu_country_event.109 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 1000
+			has_country_resource = {
+				type = fragment_of_heart
+				amount >= 3000
+			}
+			OR = {
+				is_at_war = yes
+				AND = {
+					used_naval_capacity_percent < 0.40
+					max_naval_capacity > 200
+				}
+			}
+		}
+	}
+}
+
 yuzu_wish_megastructure_build = {
 	length = 0
 	icon = "GFX_edict_type_time"

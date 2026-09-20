@@ -48,6 +48,9 @@ yuzu_star_eater = {
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
+	# 光环槽: 与原版泰坦一样, 靠「必选组件集」把 aura 槽加出来
+	# (段模板里没有也不需要有对应的 component_slot)
+	required_component_set = "ship_aura_components"
 
 	resources = {
 		category = ships

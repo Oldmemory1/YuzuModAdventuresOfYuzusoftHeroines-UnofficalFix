@@ -385,6 +385,404 @@ create_yuzu_fleet_1 = {
 	}
 }
 
+# ===== 契约舰队 先进/精英/太初 自动生成区块 — by scripts/make_yuzu_contract_fleet_tiers.py =====
+create_yuzu_fleet_advanced = {
+	create_fleet = {
+		name = "NAME_Yuzu_Fleet_Advanced"
+		effect = {
+			set_owner = PREV.owner
+			random_list = {
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Advanced"
+						graphical_culture = "fallen_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Advanced"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Advanced"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Advanced"
+						graphical_culture = "fallen_empire_02"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Advanced"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Advanced"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Advanced"
+						graphical_culture = "fallen_empire_03"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Advanced"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Advanced"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Advanced"
+						graphical_culture = "fallen_empire_04"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Advanced"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Advanced"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Advanced"
+						graphical_culture = "fallen_machine_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Advanced"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Advanced"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+				}
+			}
+			
+			set_location = {
+				target = PREV
+				distance = 35
+				angle = random
+			}
+		}
+	}
+}
+
+create_yuzu_fleet_elite = {
+	create_fleet = {
+		name = "NAME_Yuzu_Fleet_Elite"
+		effect = {
+			set_owner = PREV.owner
+			random_list = {
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Elite"
+						graphical_culture = "fallen_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Elite"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Elite"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Elite"
+						graphical_culture = "fallen_empire_02"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Elite"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Elite"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Elite"
+						graphical_culture = "fallen_empire_03"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Elite"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Elite"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Elite"
+						graphical_culture = "fallen_empire_04"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Elite"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Elite"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Elite"
+						graphical_culture = "fallen_machine_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Elite"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Elite"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+				}
+			}
+			
+			set_location = {
+				target = PREV
+				distance = 35
+				angle = random
+			}
+		}
+	}
+}
+
+create_yuzu_fleet_master = {
+	create_fleet = {
+		name = "NAME_Yuzu_Fleet_Master"
+		effect = {
+			set_owner = PREV.owner
+			random_list = {
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Master"
+						graphical_culture = "fallen_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Master"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Master"
+							graphical_culture = "fallen_empire_01"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Master"
+						graphical_culture = "fallen_empire_02"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Master"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Master"
+							graphical_culture = "fallen_empire_02"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Master"
+						graphical_culture = "fallen_empire_03"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Master"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Master"
+							graphical_culture = "fallen_empire_03"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Master"
+						graphical_culture = "fallen_empire_04"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Master"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Master"
+							graphical_culture = "fallen_empire_04"
+						}
+					}
+				}
+				20 = {
+					create_ship = {
+						name = random
+						design = "NAME_Yuzu_Titan_Master"
+						graphical_culture = "fallen_machine_empire_01"
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Large_Master"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+					while = {
+						count = 24
+						create_ship = {
+							name = random
+							design = "NAME_Yuzu_Small_Master"
+							graphical_culture = "fallen_machine_empire_01"
+						}
+					}
+				}
+			}
+			
+			set_location = {
+				target = PREV
+				distance = 35
+				angle = random
+			}
+		}
+	}
+}
+# ===== 契约舰队 先进/精英/太初 区块结束 =====
+
 create_new_abyss_fleet_1 = {
 	random_list = {
 		10 = {

@@ -939,6 +939,42 @@ country_event = {
 	}
 }
 
+# 愿望: 精锐舰队增援 —— 花费更多心之碎片, 换取档次更高的契约舰队。
+# 档次按本国已掌握的时空乱流武器技术决定(先进 -> 精英 -> 太初)。
+country_event = {
+	id = Yuzu_country_event.109
+	title = Yuzu_country_event.109.name
+	desc = "Yuzu_country_event.109.desc"
+
+	picture = GFX_evt_yuzu_meguru
+	show_sound = event_mind_over_matter
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_technology = tech_yuzu_l_1_master }
+			capital_scope = {
+				create_yuzu_fleet_master = yes
+			}
+		}
+		else_if = {
+			limit = { has_technology = tech_yuzu_l_1_elite }
+			capital_scope = {
+				create_yuzu_fleet_elite = yes
+			}
+		}
+		else = {
+			capital_scope = {
+				create_yuzu_fleet_advanced = yes
+			}
+		}
+	}
+	option = {
+		name = OK
+	}
+}
+
 country_event = {
 	id = Yuzu_country_event.105
 	title = Yuzu_country_event.105.name

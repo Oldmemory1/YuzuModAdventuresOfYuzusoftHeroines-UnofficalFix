@@ -1,0 +1,381 @@
+namespace = Yuzu_fallen_empire_activity
+
+# ============================================================
+# 失落帝国向柚子帝国借用领袖的任务事件（每条每个帝国只能触发一次）
+#
+# 流程：
+#   .1 / .3  五年脉冲判定「失落帝国注意到了我们」，挂起等待（隐藏）
+#   .2 / .4  MTTH 180 天后，失落帝国发来通讯并提出请求（外交事件）
+#
+#   .1/.2  唯物失落帝国：借用 >=10 级科学家修缮主档案库
+#   .3/.4  亲外失落帝国：借用 >=10 级行政官照料保留地的濒危物种
+#
+# 参考原版写法：
+#   - events/fallen_empire_tasks_events.txt  fallen_empires_tasks.21/22
+#     （唯物 FE 索要科学家：非统治者、和平、有通讯、需要高技能科学家）
+#   - events/fallen_empire_tasks_events.txt  fallen_empires_tasks.3/4
+#     （亲外 FE 索要人口：要求自己的保留地还有空位）
+#   - events/fallen_empire_tasks_events.txt  fallen_empires_tasks.11
+#     （带 MTTH 的外交事件：trigger + mean_time_to_happen + immediate 选目标）
+#   - events/origin_events_1.txt  origin.205
+#     （Scion 移交领袖：clone_leader 到 FE，再 kill_leader 原领袖）
+#
+# 触发方式：common/on_actions/yuzu_on_actions.txt 的 on_five_year_pulse_country
+# ============================================================
+
+# 门控事件：只负责挂起等待，不立刻联系玩家。
+country_event = {
+	id = Yuzu_fallen_empire_activity.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		is_YUZU = yes
+		is_country_type = default
+		is_at_war = no
+		has_valid_civic = civic_yuzu_supernatural_research
+		NOT = { has_country_flag = yuzu_fe_archive_request }
+
+		# 月入科研达到失落帝国会「注意到我们」的规模
+		has_monthly_income = { resource = physics_research value >= 1000 }
+		has_monthly_income = { resource = society_research value >= 1000 }
+		has_monthly_income = { resource = engineering_research value >= 1000 }
+
+		# 需要一位 >=10 级、且持有柚子领袖特质的科学家（非统治者、未在星界裂隙中）
+		any_owned_leader = {
+			leader_class = scientist
+			is_ruler = no
+			is_councilor = no
+			is_exploring_astral_rift = no
+			has_base_skill >= 10
+			OR = {
+				has_trait = leader_trait_yuzu
+				has_trait = leader_trait_immortal_yuzu
+			}
+		}
+
+		any_country = {
+			is_country_type = fallen_empire
+			is_fanatic_materialist = yes
+			is_at_war = no
+			has_communications = root
+		}
+	}
+
+	immediate = {
+		# yuzu_fe_archive_request 保证整个事件每个帝国只会发生一次；
+		# yuzu_fe_archive_pending 表示我们在等失落帝国开口。
+		set_country_flag = yuzu_fe_archive_request
+		set_country_flag = yuzu_fe_archive_pending
+	}
+}
+
+# 请求事件：平均 180 天后失落帝国才发来通讯。同意则移交科学家并给予永久修正。
+country_event = {
+	id = Yuzu_fallen_empire_activity.2
+	title = "Yuzu_fallen_empire_activity.2.name"
+	desc = "Yuzu_fallen_empire_activity.2.desc"
+
+	diplomatic = yes
+	diplomatic_title = BLANK_STRING
+	show_sound = event_alien_signal
+
+	# 从「被注意到」到「被找上门」平均 180 天（参考原版 tasks.11 的 MTTH 写法）
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	trigger = {
+		has_country_flag = yuzu_fe_archive_pending
+		is_at_war = no
+
+		any_owned_leader = {
+			leader_class = scientist
+			is_ruler = no
+			is_councilor = no
+			is_exploring_astral_rift = no
+			has_base_skill >= 10
+			OR = {
+				has_trait = leader_trait_yuzu
+				has_trait = leader_trait_immortal_yuzu
+			}
+		}
+
+		any_country = {
+			is_country_type = fallen_empire
+			is_fanatic_materialist = yes
+			is_at_war = no
+			has_communications = root
+		}
+	}
+
+	immediate = {
+		remove_country_flag = yuzu_fe_archive_pending
+
+		# 在所有符合条件的科学家中挑等级最高的那一位
+		ordered_owned_leader = {
+			limit = {
+				leader_class = scientist
+				is_ruler = no
+				is_councilor = no
+				is_exploring_astral_rift = no
+				has_base_skill >= 10
+				OR = {
+					has_trait = leader_trait_yuzu
+					has_trait = leader_trait_immortal_yuzu
+				}
+			}
+			position = 0
+			order_by = trigger:has_base_skill
+			save_event_target_as = yuzu_fe_archive_scientist
+		}
+
+		random_country = {
+			limit = {
+				is_country_type = fallen_empire
+				is_fanatic_materialist = yes
+				is_at_war = no
+				has_communications = root
+			}
+			save_event_target_as = yuzu_fe_archive_origin
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:yuzu_fe_archive_origin
+		planet_background = event_target:yuzu_fe_archive_origin
+		graphical_culture = event_target:yuzu_fe_archive_origin
+		city_level = event_target:yuzu_fe_archive_origin
+		room = event_target:yuzu_fe_archive_origin.ruler
+	}
+
+	# 答应移交
+	option = {
+		name = "Yuzu_fallen_empire_activity.2.a"
+		custom_tooltip = "yuzu_fe_archive_transfer_tooltip"
+
+		add_modifier = { modifier = yuzu_fe_archive_restored }
+
+		hidden_effect = {
+			event_target:yuzu_fe_archive_origin = {
+				clone_leader = {
+					target = event_target:yuzu_fe_archive_scientist
+				}
+			}
+			event_target:yuzu_fe_archive_scientist = {
+				kill_leader = { show_notification = no }
+			}
+			event_target:yuzu_fe_archive_origin = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_accepted_fallen_empire_request
+				}
+			}
+		}
+	}
+
+	# 拒绝
+	option = {
+		name = "Yuzu_fallen_empire_activity.2.b"
+		custom_tooltip = "yuzu_fe_archive_refuse_tooltip"
+
+		hidden_effect = {
+			event_target:yuzu_fe_archive_origin = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_refused_fallen_empire_request
+				}
+			}
+		}
+	}
+}
+
+# ============================================================
+# 亲外失落帝国：借用柚子行政官照料保留地（每个帝国只能触发一次）
+# ============================================================
+
+# 门控事件：只负责挂起等待，不立刻联系玩家。
+country_event = {
+	id = Yuzu_fallen_empire_activity.3
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		is_YUZU = yes
+		is_country_type = default
+		is_at_war = no
+		has_valid_civic = civic_yuzu_social_talent
+		NOT = { has_country_flag = yuzu_fe_preserve_request }
+
+		has_monthly_income = { resource = physics_research value >= 1000 }
+		has_monthly_income = { resource = society_research value >= 1000 }
+		has_monthly_income = { resource = engineering_research value >= 1000 }
+
+		# 需要一位 >=10 级、且持有柚子领袖特质的行政官（非统治者、非内阁成员）
+		any_owned_leader = {
+			leader_class = official
+			is_ruler = no
+			is_councilor = no
+			has_base_skill >= 10
+			OR = {
+				has_trait = leader_trait_yuzu
+				has_trait = leader_trait_immortal_yuzu
+			}
+		}
+
+		# 对方必须还有保留地，且保留地仍有空位（同原版 fallen_empires_tasks.3）
+		any_country = {
+			is_country_type = fallen_empire
+			is_fanatic_xenophile = yes
+			is_at_war = no
+			has_communications = root
+			any_owned_planet = {
+				has_carrier_flag = fe_the_preserve
+				free_housing > 0
+			}
+		}
+	}
+
+	immediate = {
+		# yuzu_fe_preserve_request 保证整个事件每个帝国只会发生一次；
+		# yuzu_fe_preserve_pending 表示我们在等失落帝国开口。
+		set_country_flag = yuzu_fe_preserve_request
+		set_country_flag = yuzu_fe_preserve_pending
+	}
+}
+
+# 请求事件：平均 180 天后失落帝国才发来通讯。同意则移交行政官并给予永久修正。
+country_event = {
+	id = Yuzu_fallen_empire_activity.4
+	title = "Yuzu_fallen_empire_activity.4.name"
+	desc = "Yuzu_fallen_empire_activity.4.desc"
+
+	diplomatic = yes
+	diplomatic_title = BLANK_STRING
+	show_sound = event_alien_signal
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	trigger = {
+		has_country_flag = yuzu_fe_preserve_pending
+		is_at_war = no
+
+		any_owned_leader = {
+			leader_class = official
+			is_ruler = no
+			is_councilor = no
+			has_base_skill >= 10
+			OR = {
+				has_trait = leader_trait_yuzu
+				has_trait = leader_trait_immortal_yuzu
+			}
+		}
+
+		any_country = {
+			is_country_type = fallen_empire
+			is_fanatic_xenophile = yes
+			is_at_war = no
+			has_communications = root
+			any_owned_planet = {
+				has_carrier_flag = fe_the_preserve
+				free_housing > 0
+			}
+		}
+	}
+
+	immediate = {
+		remove_country_flag = yuzu_fe_preserve_pending
+
+		random_country = {
+			limit = {
+				is_country_type = fallen_empire
+				is_fanatic_xenophile = yes
+				is_at_war = no
+				has_communications = root
+				any_owned_planet = {
+					has_carrier_flag = fe_the_preserve
+					free_housing > 0
+				}
+			}
+			save_event_target_as = yuzu_fe_preserve_origin
+			random_owned_planet = {
+				limit = {
+					has_carrier_flag = fe_the_preserve
+					free_housing > 0
+				}
+				save_event_target_as = yuzu_fe_preserve_planet
+			}
+		}
+
+		# 在所有符合条件的行政官中挑等级最高的那一位
+		ordered_owned_leader = {
+			limit = {
+				leader_class = official
+				is_ruler = no
+				is_councilor = no
+				has_base_skill >= 10
+				OR = {
+					has_trait = leader_trait_yuzu
+					has_trait = leader_trait_immortal_yuzu
+				}
+			}
+			position = 0
+			order_by = trigger:has_base_skill
+			save_event_target_as = yuzu_fe_preserve_official
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:yuzu_fe_preserve_origin
+		planet_background = event_target:yuzu_fe_preserve_origin
+		graphical_culture = event_target:yuzu_fe_preserve_origin
+		city_level = event_target:yuzu_fe_preserve_origin
+		room = event_target:yuzu_fe_preserve_origin.ruler
+	}
+
+	# 答应移交
+	option = {
+		name = "Yuzu_fallen_empire_activity.4.a"
+		custom_tooltip = "yuzu_fe_preserve_transfer_tooltip"
+
+		add_modifier = { modifier = yuzu_fe_preserve_guardianship }
+
+		hidden_effect = {
+			event_target:yuzu_fe_preserve_origin = {
+				clone_leader = {
+					target = event_target:yuzu_fe_preserve_official
+				}
+			}
+			event_target:yuzu_fe_preserve_official = {
+				kill_leader = { show_notification = no }
+			}
+			event_target:yuzu_fe_preserve_origin = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_accepted_fallen_empire_request
+				}
+			}
+		}
+	}
+
+	# 拒绝
+	option = {
+		name = "Yuzu_fallen_empire_activity.4.b"
+		custom_tooltip = "yuzu_fe_preserve_refuse_tooltip"
+
+		hidden_effect = {
+			event_target:yuzu_fe_preserve_origin = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_refused_fallen_empire_request
+				}
+			}
+		}
+	}
+}

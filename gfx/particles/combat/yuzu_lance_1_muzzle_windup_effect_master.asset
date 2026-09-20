@@ -49,8 +49,8 @@ particle={
 			shader="ParticleAdditive"
 		}
 		color={
-			x=138.000
-			y=124.000
+			x=199.000
+			y=166.000
 			z=255.000
 			alpha=255.000,fade_alpha
 		}
@@ -84,8 +84,8 @@ particle={
 			shader="ParticleAdditive"
 		}
 		color={
-			x=138.000
-			y=124.000
+			x=199.000
+			y=166.000
 			z=255.000
 			alpha=255.000,fade_alpha
 		}
@@ -117,8 +117,8 @@ particle={
 			shader="ParticleAlphaBlend"
 		}
 		color={
-			x=138.000
-			y=124.000
+			x=199.000
+			y=166.000
 			z=255.000
 			alpha=255.000,alpha_early
 		}
@@ -150,8 +150,8 @@ particle={
 			shader="ParticleAdditive"
 		}
 		color={
-			x=138.000
-			y=124.000
+			x=199.000
+			y=166.000
 			z=255.000
 			alpha=200.000,fade_alpha
 		}
@@ -182,8 +182,8 @@ particle={
 			shader="ParticleAdditive"
 		}
 		color={
-			x=138.000
-			y=124.000
+			x=199.000
+			y=166.000
 			z=255.000
 			alpha=100.000,fade_alpha
 		}

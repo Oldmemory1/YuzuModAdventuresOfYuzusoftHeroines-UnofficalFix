@@ -99,6 +99,16 @@ on_five_year_pulse = {
 	}
 }
 
+# this = country
+# 失落帝国借用柚子领袖的任务事件（唯物：科学家 / 亲外：行政官，每个帝国各一次）
+# 详见 events/Yuzu_fallen_empire_activity.txt
+#on_five_year_pulse_country = {
+#	events = {
+#		Yuzu_fallen_empire_activity.1
+#		Yuzu_fallen_empire_activity.3
+#	}
+#}
+
 # A ship has been built
 # Root = Ship
 # From = Planet

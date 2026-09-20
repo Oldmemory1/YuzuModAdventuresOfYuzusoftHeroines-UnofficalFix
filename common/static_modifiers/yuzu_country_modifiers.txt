@@ -96,6 +96,22 @@ fallen_empire_warning_attend_extreme_modifier = {
 	ships_upkeep_mult = -0.40
 }
 
+##### 唯物失落帝国：主档案库的馈赠 #####
+# 协助维修资料库星球（The Archives）上的主档案库后，失落帝国开放馆藏给予的永久回报。
+yuzu_fe_archive_restored = {
+	num_tech_alternatives_add = 1
+	country_physics_research_produces_mult = 0.05
+	country_society_research_produces_mult = 0.05
+	country_engineering_research_produces_mult = 0.05
+}
+
+##### 亲外失落帝国：保留地的托付 #####
+# 派人照料保留地星球的濒危物种后，亲外失落帝国长期记挂这份情谊。
+yuzu_fe_preserve_guardianship = {
+	pop_happiness = 0.05
+	country_trust_growth = 0.50
+}
+
 ##### 社交达人「惩罚」战争目标：公开羞辱 #####
 # 击败"刻意招惹社交达人"的敌对国后，给其施加的公开羞辱（比原版 humiliated 重得多）。
 # 原版 humiliated 仅 -0.33 影响力产出 / -0.25 外交权重 / -0.10 幸福度；

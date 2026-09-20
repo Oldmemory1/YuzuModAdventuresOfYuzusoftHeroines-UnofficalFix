@@ -2,7 +2,7 @@
 
  building_yuzu_clone_vats:0"原始克隆仓"
  building_yuzu_clone_vats_desc:0"克隆仓建造者遗留下来的遗失科技，分解简单的材料，并用以组装有机人口。这个建筑利用了让人意想不到的技术，虽然原始，但却十分高效。"
- tooltip_only_yuzu_assembly:0"该建筑只能组装柚子类人口。"
+ tooltip_only_yuzu_assembly:0"该建筑只对柚子类人口提供§Y$MOD_BONUS_POP_GROWTH$§!。"
 
  building_yuzu_cafe:0"星光咖啡馆"
  building_yuzu_cafe_desc:0"四季夏目在这个星球上规划开张的咖啡馆，由于经费的充足，建设得要比原世界的更加豪华，能够满足庞大的人流量。"

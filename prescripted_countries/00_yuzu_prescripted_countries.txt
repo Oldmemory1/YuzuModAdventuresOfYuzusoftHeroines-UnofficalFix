@@ -28,7 +28,7 @@ yuzugirls1 = {
 	ethic = "ethic_fanatic_egalitarian"
 	ethic = "ethic_pacifist"
 	authority = "auth_Yuzu"
-	government = "gov_Yuzu"
+	government = "gov_Yuzu_supernatural_research"
 	civics = { "civic_yuzu_supernatural_research" "civic_yuzu_social_talent" }
 	origin = "origin_yuzu_world"
 

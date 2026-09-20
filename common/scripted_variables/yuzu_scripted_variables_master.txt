@@ -30,3 +30,63 @@
 @yuzu_titanic_t1_master_exotic_gases = 60.28
 @yuzu_titanic_t1_master_upkeep_energy = 33.28
 @yuzu_titanic_t1_master_upkeep_alloys = 5.005
+
+# 太初时空屏障: 值 = 时空屏障 x2.5, 耗电 x2.5, 造价/维护 = x4,
+#   硬化 0.40, 再生 4%/日; 造价另需 zro(异星天然气的 1/5),
+#   维护另需异星天然气(造价气量的 1%)
+@yuzu_shield_regen_perc_t1_master = 0.04
+
+@yuzu_shield_S1_master = 625
+@yuzu_power_S1_master = -200
+@yuzu_shield_s_t1_master_cost = 136
+@yuzu_shield_s_t1_master_cost_rare = 4
+@yuzu_shield_s_t1_master_cost_zro = 0.8
+@yuzu_shield_s_t1_master_upkeep_energy = 0.80
+@yuzu_shield_s_t1_master_upkeep_alloys = 0.16
+@yuzu_shield_s_t1_master_upkeep_exotic_gases = 0.04
+
+@yuzu_shield_M1_master = 1875
+@yuzu_power_M1_master = -400
+@yuzu_shield_m_t1_master_cost = 344
+@yuzu_shield_m_t1_master_cost_rare = 8
+@yuzu_shield_m_t1_master_cost_zro = 1.6
+@yuzu_shield_m_t1_master_upkeep_energy = 1.60
+@yuzu_shield_m_t1_master_upkeep_alloys = 0.32
+@yuzu_shield_m_t1_master_upkeep_exotic_gases = 0.08
+
+@yuzu_shield_L1_master = 5625
+@yuzu_power_L1_master = -800
+@yuzu_shield_l_t1_master_cost = 860
+@yuzu_shield_l_t1_master_cost_rare = 16
+@yuzu_shield_l_t1_master_cost_zro = 3.2
+@yuzu_shield_l_t1_master_upkeep_energy = 3.20
+@yuzu_shield_l_t1_master_upkeep_alloys = 0.64
+@yuzu_shield_l_t1_master_upkeep_exotic_gases = 0.16
+
+# 太初世界装甲: 值 = 世界装甲 x2.5, 造价/维护 = x4, 硬化 0.20, 再生 4%/日;
+#   造价另需活体金属(稀有水晶量的 1/5), 维护另需稀有水晶(造价水晶的 1%)
+@yuzu_armor_regen_perc_t1_master = 0.04
+
+@yuzu_armor_S1_master = 625
+@yuzu_armor_s_t1_master_cost = 136
+@yuzu_armor_s_t1_master_cost_rare = 8
+@yuzu_armor_s_t1_master_cost_living_metal = 1.6
+@yuzu_armor_s_t1_master_upkeep_energy = 1.60
+@yuzu_armor_s_t1_master_upkeep_alloys = 0.32
+@yuzu_armor_s_t1_master_upkeep_rare_crystals = 0.08
+
+@yuzu_armor_M1_master = 1875
+@yuzu_armor_m_t1_master_cost = 344
+@yuzu_armor_m_t1_master_cost_rare = 16
+@yuzu_armor_m_t1_master_cost_living_metal = 3.2
+@yuzu_armor_m_t1_master_upkeep_energy = 3.20
+@yuzu_armor_m_t1_master_upkeep_alloys = 0.64
+@yuzu_armor_m_t1_master_upkeep_rare_crystals = 0.16
+
+@yuzu_armor_L1_master = 5625
+@yuzu_armor_l_t1_master_cost = 860
+@yuzu_armor_l_t1_master_cost_rare = 32
+@yuzu_armor_l_t1_master_cost_living_metal = 6.4
+@yuzu_armor_l_t1_master_upkeep_energy = 6.40
+@yuzu_armor_l_t1_master_upkeep_alloys = 1.28
+@yuzu_armor_l_t1_master_upkeep_rare_crystals = 0.32

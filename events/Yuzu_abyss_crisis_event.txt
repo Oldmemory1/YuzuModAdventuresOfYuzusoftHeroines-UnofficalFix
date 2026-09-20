@@ -2398,7 +2398,7 @@ country_event = {
 	}
 }
 
-#堕落与玩家的对话
+#堕落与玩家的对话，要求玩家出资源帮助对抗危机
 country_event = {
 	id = Yuzu_abyss_crisis_event.602
 	title = "Yuzu_abyss_crisis_event.602.1.a"
@@ -2764,12 +2764,14 @@ country_event = {
 			}
 		}		
 	}
-	#无行动
+	#回绝援助
 	option = {
 		name = fallen_warning_help.1.f
 		custom_tooltip = fallen_warning_help.2.f
 		hidden_effect = {
 			set_global_flag = fallen_empire_warning_attend_none
+			# 回绝的消息传回发起对话的失落帝国，稍后由他们来讨说法
+			country_event = { id = Yuzu_abyss_crisis_event.605 days = 15 }
 		}
 	}
 
@@ -2881,5 +2883,49 @@ country_event = {
 
 	option = {
 		name = UNDERSTOOD
+	}
+}
+
+#回绝援助的后续：发起对话的失落帝国对此深感失望，降低对我们的评价
+country_event = {
+	id = Yuzu_abyss_crisis_event.605
+	title = "Yuzu_abyss_crisis_event.605.name"
+	desc = "Yuzu_abyss_crisis_event.605.desc"
+	diplomatic = yes
+	diplomatic_title = BLANK_STRING
+	show_sound = event_bad_omen
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture_event_data = {
+		portrait = event_target:fallen_empire_dialog_with_yuzu
+		planet_background = event_target:fallen_empire_dialog_with_yuzu
+		graphical_culture = event_target:fallen_empire_dialog_with_yuzu
+		city_level = event_target:fallen_empire_dialog_with_yuzu
+		room = event_target:fallen_empire_dialog_with_yuzu
+	}
+
+	trigger = {
+		has_global_flag = fallen_empire_warning_attend_none
+	}
+
+	immediate = {
+		#只有当初开口求援的那个失落帝国会记恨我们
+		if = {
+			limit = {
+				exists = event_target:fallen_empire_dialog_with_yuzu
+			}
+			event_target:fallen_empire_dialog_with_yuzu = {
+				add_opinion_modifier = {
+					who = root
+					#原版修正：会直接让该失落帝国获得 cb_fe_punishment（惩罚战争）宣战理由
+					modifier = opinion_refused_fallen_empire_demand
+				}
+			}
+		}
+	}
+
+	option = {
+		name = Yuzu_abyss_crisis_event.605.a
 	}
 }

@@ -191,3 +191,4 @@ wears_clothes = { # The species uses the portrait that wears clothes
 		species_portrait = season_10_portrait
 	}
 }
+

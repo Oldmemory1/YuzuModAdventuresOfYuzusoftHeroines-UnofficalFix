@@ -131,6 +131,20 @@ component_set = {
 }
 
 component_set = {
+	key = "YUZU_ARMOR_1_ADVANCED"
+
+	icon = "GFX_ship_part_armor_yuzu_1_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_ARMOR_1_ELITE"
+
+	icon = "GFX_ship_part_armor_yuzu_1_elite"
+	icon_frame = 1
+}
+
+component_set = {
 	key = "YUZU_SHIELD_1"
 
 	icon = "GFX_ship_part_shield_yuzu_1"
@@ -141,6 +155,20 @@ component_set = {
 	key = "YUZU_SHIELD_2"
 
 	icon = "GFX_ship_part_shield_yuzu_2"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_SHIELD_1_ADVANCED"
+
+	icon = "GFX_ship_part_shield_yuzu_1_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_SHIELD_1_ELITE"
+
+	icon = "GFX_ship_part_shield_yuzu_1_elite"
 	icon_frame = 1
 }
 
@@ -185,6 +213,27 @@ component_set = {
 	icon = "GFX_ship_part_yuzu_beam_1_elite"
 	icon_frame = 1
 }
+# ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
+component_set = {
+	key = "YUZU_ENERGY_TORPEDO_3_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_LANCE_3_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_lance_3_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_BEAM_3_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_beam_3_advanced"
+	icon_frame = 1
+}
 
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 component_set = {
@@ -208,24 +257,16 @@ component_set = {
 	icon_frame = 1
 }
 
-# ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
 component_set = {
-	key = "YUZU_ENERGY_TORPEDO_3_ADVANCED"
+	key = "YUZU_SHIELD_1_MASTER"
 
-	icon = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+	icon = "GFX_ship_part_shield_yuzu_1_master"
 	icon_frame = 1
 }
 
 component_set = {
-	key = "YUZU_LANCE_3_ADVANCED"
+	key = "YUZU_ARMOR_1_MASTER"
 
-	icon = "GFX_ship_part_yuzu_lance_3_advanced"
-	icon_frame = 1
-}
-
-component_set = {
-	key = "YUZU_BEAM_3_ADVANCED"
-
-	icon = "GFX_ship_part_yuzu_beam_3_advanced"
+	icon = "GFX_ship_part_armor_yuzu_1_master"
 	icon_frame = 1
 }

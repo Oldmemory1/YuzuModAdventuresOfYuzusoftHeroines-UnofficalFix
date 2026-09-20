@@ -1,11 +1,249 @@
+# 政体（Government）定义
+#
+# 名称与描述会随思潮（Ethics）、国民理念（Civics）与飞升路线（Ascension Path）变化，
+# 具体文本见 localisation/simp_chinese/yuzu_l_simp_chinese.yml。
+#
+# 权重参考原版 common/governments 下的写法，权重最高者生效：
+# 基础政体 @gov_authority_weight(10) < 思潮政体 @gov_ethic_weight(100)
+# < 国民理念政体 @gov_civic_weight(1000) < 飞升政体 @gov_authority_swap_weight(10000)
+#
+# 同时满足多个条件时，本文件中靠前的那个生效。
+
+# 基础政体：没有匹配到任何思潮/理念/飞升时的保底政体
 gov_Yuzu = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
-	
+
 	possible = {
 		has_authority = auth_Yuzu
 	}
+
 	weight = {
-		base = 10000
+		base = @gov_authority_weight
+	}
+}
+
+################################
+#           思潮政体
+################################
+
+# 唯心：柚子祈愿制
+gov_Yuzu_spiritualist = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		is_spiritualist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# 唯物：柚子求真制
+gov_Yuzu_materialist = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		is_materialist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# 军国：柚子战歌制
+gov_Yuzu_militarist = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		is_militarist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# 和平：柚子桃源制
+gov_Yuzu_pacifist = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		is_pacifist = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# 平等：柚子大同制
+gov_Yuzu_egalitarian = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		is_egalitarian = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# 排外：柚子孤星制
+gov_Yuzu_xenophobe = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		is_xenophobe = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+# 亲外：柚子群星宴
+gov_Yuzu_xenophile = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		is_xenophile = yes
+	}
+
+	weight = {
+		base = @gov_ethic_weight
+	}
+}
+
+################################
+#          国民理念政体
+################################
+
+# 超自然研究：柚子超研议会
+gov_Yuzu_supernatural_research = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		has_valid_civic = civic_yuzu_supernatural_research
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# 社交达人：柚子亲善议会
+gov_Yuzu_social_talent = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		has_valid_civic = civic_yuzu_social_talent
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# 人心所向：柚子偶像制
+gov_Yuzu_win_the_hearts = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		has_valid_civic = civic_yuzu_win_the_hearts
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+# 星海守望者：柚子守望军团
+gov_Yuzu_apocalypse_hunters = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		has_valid_civic = civic_yuzu_apocalypse_hunters
+	}
+
+	weight = {
+		base = @gov_civic_weight
+	}
+}
+
+################################
+#           飞升政体
+################################
+# 判定条件写在 common/scripted_triggers/yuzu_scripted_triggers.txt：
+# 必须点完该飞升路线的专属传统树（或原版飞升事件已经跑完、留下对应国家标记），
+# 只点下飞升天赋本身是不会换政体的。
+
+# 义体飞升：柚子义体协议
+gov_Yuzu_cybernetic = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		yuzu_ascension_cybernetic_completed = yes
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+	}
+}
+
+# 基因飞升：柚子基因工坊
+gov_Yuzu_biomorphosis = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		yuzu_ascension_biomorphosis_completed = yes
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
+	}
+}
+
+# 灵能飞升：柚子虚境议会
+gov_Yuzu_psionic = {
+	ruler_title = RT_YUZU_SUPERINTENDENT
+	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
+
+	possible = {
+		has_authority = auth_Yuzu
+		yuzu_ascension_psionic_completed = yes
+	}
+
+	weight = {
+		base = @gov_authority_swap_weight
 	}
 }

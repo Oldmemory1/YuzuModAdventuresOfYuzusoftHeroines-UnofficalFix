@@ -9,16 +9,17 @@ utility_component_template = {
 	}
 
 	ship_modifier = {
-		ship_armor_hardening_add = 0.2
+		ship_armor_hardening_add = 0.05
 	}
 
 	prerequisites = { "tech_yuzu_armor_1" }
 	component_set = "YUZU_ARMOR_1"
+	upgrades_to = "SMALL_YUZU_ARMOR_1_ADVANCED"
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_armor_s_t1_cost
-			sr_dark_matter = @yuzu_armor_s_t1_cost_rare
+			rare_crystals = @yuzu_armor_s_t1_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_armor_s_t1_upkeep_energy
@@ -45,16 +46,17 @@ utility_component_template = {
 	}
 
 	ship_modifier = {
-		ship_armor_hardening_add = 0.2
+		ship_armor_hardening_add = 0.05
 	}
 
 	prerequisites = { "tech_yuzu_armor_1" }
 	component_set = "YUZU_ARMOR_1"
+	upgrades_to = "MEDIUM_YUZU_ARMOR_1_ADVANCED"
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_armor_m_t1_cost
-			sr_dark_matter = @yuzu_armor_m_t1_cost_rare
+			rare_crystals = @yuzu_armor_m_t1_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_armor_m_t1_upkeep_energy
@@ -81,16 +83,17 @@ utility_component_template = {
 	}
 	
 	ship_modifier = {
-		ship_armor_hardening_add = 0.2
+		ship_armor_hardening_add = 0.05
 	}
 
 	prerequisites = { "tech_yuzu_armor_1" }
 	component_set = "YUZU_ARMOR_1"
+	upgrades_to = "LARGE_YUZU_ARMOR_1_ADVANCED"
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_armor_l_t1_cost
-			sr_dark_matter = @yuzu_armor_l_t1_cost_rare
+			rare_crystals = @yuzu_armor_l_t1_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_armor_l_t1_upkeep_energy
@@ -122,7 +125,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_armor_s_t2_cost
-			sr_dark_matter = @yuzu_armor_s_t2_cost_rare
+			rare_crystals = @yuzu_armor_s_t2_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_armor_s_t2_upkeep_energy
@@ -155,7 +158,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_armor_m_t2_cost
-			sr_dark_matter = @yuzu_armor_m_t2_cost_rare
+			rare_crystals = @yuzu_armor_m_t2_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_armor_m_t2_upkeep_energy
@@ -188,7 +191,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_armor_l_t2_cost
-			sr_dark_matter = @yuzu_armor_l_t2_cost_rare
+			rare_crystals = @yuzu_armor_l_t2_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_armor_l_t2_upkeep_energy
@@ -215,7 +218,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_shield_s_t1_cost
-			sr_dark_matter = @yuzu_shield_s_t1_cost_rare
+			exotic_gases = @yuzu_shield_s_t1_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_shield_s_t1_upkeep_energy
@@ -224,13 +227,14 @@ utility_component_template = {
 	}
 	modifier = {
 		ship_shield_add = @yuzu_shield_S1
-		ship_shield_regen_add_static = @yuzu_regen_S1
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1
 	}
 	ship_modifier = {
-		ship_shield_hardening_add = 0.2
+		ship_shield_hardening_add = 0.05
 	}
 	prerequisites = { "tech_yuzu_shield_1" }
 	component_set = "YUZU_SHIELD_1"
+	upgrades_to = "SMALL_YUZU_SHIELD_1_ADVANCED"
 
 	ai_weight = {
 		weight = 500
@@ -251,7 +255,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_shield_m_t1_cost
-			sr_dark_matter = @yuzu_shield_m_t1_cost_rare
+			exotic_gases = @yuzu_shield_m_t1_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_shield_m_t1_upkeep_energy
@@ -260,13 +264,14 @@ utility_component_template = {
 	}
 	modifier = {
 		ship_shield_add = @yuzu_shield_M1
-		ship_shield_regen_add_static = @yuzu_regen_M1
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1
 	}
 	ship_modifier = {
-		ship_shield_hardening_add = 0.2
+		ship_shield_hardening_add = 0.05
 	}
 	prerequisites = { "tech_yuzu_shield_1" }
 	component_set = "YUZU_SHIELD_1"
+	upgrades_to = "MEDIUM_YUZU_SHIELD_1_ADVANCED"
 
 	ai_weight = {
 		weight = 500
@@ -287,7 +292,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_shield_l_t1_cost
-			sr_dark_matter = @yuzu_shield_l_t1_cost_rare
+			exotic_gases = @yuzu_shield_l_t1_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_shield_l_t1_upkeep_energy
@@ -296,13 +301,14 @@ utility_component_template = {
 	}
 	modifier = {
 		ship_shield_add = @yuzu_shield_L1
-		ship_shield_regen_add_static = @yuzu_regen_L1
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1
 	}
 	ship_modifier = {
-		ship_shield_hardening_add = 0.2
+		ship_shield_hardening_add = 0.05
 	}
 	prerequisites = { "tech_yuzu_shield_1" }
 	component_set = "YUZU_SHIELD_1"
+	upgrades_to = "LARGE_YUZU_SHIELD_1_ADVANCED"
 
 	ai_weight = {
 		weight = 500
@@ -323,7 +329,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_shield_s_t2_cost
-			sr_dark_matter = @yuzu_shield_s_t2_cost_rare
+			exotic_gases = @yuzu_shield_s_t2_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_shield_s_t2_upkeep_energy
@@ -332,7 +338,7 @@ utility_component_template = {
 	}
 	modifier = {
 		ship_shield_add = @yuzu_shield_S2
-		ship_shield_regen_add_static = @yuzu_regen_S2
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t2
 	}
 	prerequisites = { "tech_yuzu_shield_2" }
 	component_set = "YUZU_SHIELD_2"
@@ -357,7 +363,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_shield_m_t2_cost
-			sr_dark_matter = @yuzu_shield_m_t2_cost_rare
+			exotic_gases = @yuzu_shield_m_t2_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_shield_m_t2_upkeep_energy
@@ -366,7 +372,7 @@ utility_component_template = {
 	}
 	modifier = {
 		ship_shield_add = @yuzu_shield_M2
-		ship_shield_regen_add_static = @yuzu_regen_M2
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t2
 	}
 	prerequisites = { "tech_yuzu_shield_2" }
 	component_set = "YUZU_SHIELD_2"
@@ -391,7 +397,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @yuzu_shield_l_t2_cost
-			sr_dark_matter = @yuzu_shield_l_t2_cost_rare
+			exotic_gases = @yuzu_shield_l_t2_cost_rare
 		}
 		upkeep = {
 			energy = @yuzu_shield_l_t2_upkeep_energy
@@ -400,7 +406,7 @@ utility_component_template = {
 	}
 	modifier = {
 		ship_shield_add = @yuzu_shield_L2
-		ship_shield_regen_add_static = @yuzu_regen_L2
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t2
 	}
 	prerequisites = { "tech_yuzu_shield_2" }
 	component_set = "YUZU_SHIELD_2"

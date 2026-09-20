@@ -110,11 +110,12 @@
 #################
 # SHIELDS
 #################
+# 稀有资源 = 异星天然气 (exotic_gases)。数值 = 原先暗物质用量 x2.5。
 
 @yuzu_shield_s_t1_cost = 34 # 较低，以稀有资源代替
-@yuzu_shield_s_t1_cost_rare = 0.4
+@yuzu_shield_s_t1_cost_rare = 1
 @yuzu_shield_s_t2_cost = 69
-@yuzu_shield_s_t2_cost_rare = 2
+@yuzu_shield_s_t2_cost_rare = 5
 
 @yuzu_shield_s_t1_upkeep_energy = 0.20
 @yuzu_shield_s_t1_upkeep_alloys = 0.04
@@ -123,9 +124,9 @@
 
 
 @yuzu_shield_m_t1_cost = 86 # 较低，以稀有资源代替
-@yuzu_shield_m_t1_cost_rare = 0.8
+@yuzu_shield_m_t1_cost_rare = 2
 @yuzu_shield_m_t2_cost = 172
-@yuzu_shield_m_t2_cost_rare = 4
+@yuzu_shield_m_t2_cost_rare = 10
 
 @yuzu_shield_m_t1_upkeep_energy = 0.40
 @yuzu_shield_m_t1_upkeep_alloys = 0.08
@@ -134,14 +135,31 @@
 
 
 @yuzu_shield_l_t1_cost = 215 # 较低，以稀有资源代替
-@yuzu_shield_l_t1_cost_rare = 1.6
+@yuzu_shield_l_t1_cost_rare = 4
 @yuzu_shield_l_t2_cost = 430
-@yuzu_shield_l_t2_cost_rare = 8
+@yuzu_shield_l_t2_cost_rare = 20
 
 @yuzu_shield_l_t1_upkeep_energy = 0.80
 @yuzu_shield_l_t1_upkeep_alloys = 0.16
 @yuzu_shield_l_t2_upkeep_energy = 1.00
 @yuzu_shield_l_t2_upkeep_alloys = 0.20
+
+# 先进时空屏障: 造价 / 维护 = 时空屏障 x2 (稀有资源仍是异星天然气)
+
+@yuzu_shield_s_t1_advanced_cost = 68
+@yuzu_shield_s_t1_advanced_cost_rare = 2
+@yuzu_shield_s_t1_advanced_upkeep_energy = 0.40
+@yuzu_shield_s_t1_advanced_upkeep_alloys = 0.08
+
+@yuzu_shield_m_t1_advanced_cost = 172
+@yuzu_shield_m_t1_advanced_cost_rare = 4
+@yuzu_shield_m_t1_advanced_upkeep_energy = 0.80
+@yuzu_shield_m_t1_advanced_upkeep_alloys = 0.16
+
+@yuzu_shield_l_t1_advanced_cost = 430
+@yuzu_shield_l_t1_advanced_cost_rare = 8
+@yuzu_shield_l_t1_advanced_upkeep_energy = 1.60
+@yuzu_shield_l_t1_advanced_upkeep_alloys = 0.32
 
 # 承受值 & 回复值
 
@@ -149,36 +167,122 @@
 @yuzu_shield_M1 = 750
 @yuzu_shield_L1 = 2250
 
-@yuzu_regen_S1 = 2.50
-@yuzu_regen_M1 = 7.50
-@yuzu_regen_L1 = 22.5
-
 @yuzu_shield_S2 = 500
 @yuzu_shield_M2 = 1500
 @yuzu_shield_L2 = 4500
 
-@yuzu_regen_S2 = 5
-@yuzu_regen_M2 = 15
-@yuzu_regen_L2 = 45
+# 再生用 _perc 版本 = **总护盾 / 总装甲值的百分比 / 日**
+# (Fairy Libra 的组件就在 modifier 里同时写 ship_shield_regen_add_perc 与
+#  ship_armor_regen_add_perc; 百分比会随全船容量一起放大)
+@yuzu_shield_regen_perc_t1 = 0.01
+@yuzu_shield_regen_perc_t1_advanced = 0.01
+@yuzu_shield_regen_perc_t1_elite = 0.02
+@yuzu_shield_regen_perc_t2 = 0.02
+
+@yuzu_armor_regen_perc_t1_elite = 0.02
+
+# 先进时空屏障 (SHIELD_1_ADVANCED): 值 x1.5, 耗电 x1.5, 造价 / 维护 x2, 硬化 0.25
+
+@yuzu_shield_S1_advanced = 375
+@yuzu_shield_M1_advanced = 1125
+@yuzu_shield_L1_advanced = 3375
+
+# 先进世界装甲 (ARMOR_1_ADVANCED): 值 x1.5, 造价 / 维护 x2, 硬化 0.25 (耗电仍为 0)
+
+@yuzu_armor_S1_advanced = 375
+@yuzu_armor_M1_advanced = 1125
+@yuzu_armor_L1_advanced = 3375
+
+# 精英时空屏障 (SHIELD_1_ELITE): 值 x2, 耗电 x2, 造价 / 维护 x3, 硬化 0.30,
+#   再生 2%/日; **维护费额外吃异星天然气 = 造价异星天然气的 1%**
+
+@yuzu_shield_S1_elite = 500
+@yuzu_shield_M1_elite = 1500
+@yuzu_shield_L1_elite = 4500
+
+@yuzu_shield_s_t1_elite_cost = 102
+@yuzu_shield_s_t1_elite_cost_rare = 3
+@yuzu_shield_s_t1_elite_upkeep_energy = 0.60
+@yuzu_shield_s_t1_elite_upkeep_alloys = 0.12
+@yuzu_shield_s_t1_elite_upkeep_exotic_gases = 0.03
+
+@yuzu_shield_m_t1_elite_cost = 258
+@yuzu_shield_m_t1_elite_cost_rare = 6
+@yuzu_shield_m_t1_elite_upkeep_energy = 1.20
+@yuzu_shield_m_t1_elite_upkeep_alloys = 0.24
+@yuzu_shield_m_t1_elite_upkeep_exotic_gases = 0.06
+
+@yuzu_shield_l_t1_elite_cost = 645
+@yuzu_shield_l_t1_elite_cost_rare = 12
+@yuzu_shield_l_t1_elite_upkeep_energy = 2.40
+@yuzu_shield_l_t1_elite_upkeep_alloys = 0.48
+@yuzu_shield_l_t1_elite_upkeep_exotic_gases = 0.12
+
+# 精英世界装甲 (ARMOR_1_ELITE): 值 x2, 造价 / 维护 x3, 硬化 0.30, 装甲再生 2%/日;
+#   造价额外吃「稀有水晶量 1/5」的活体金属, 维护额外吃稀有水晶 (造价水晶的 1%)
+
+@yuzu_armor_S1_elite = 500
+@yuzu_armor_M1_elite = 1500
+@yuzu_armor_L1_elite = 4500
+
+@yuzu_armor_s_t1_elite_cost = 102
+@yuzu_armor_s_t1_elite_cost_rare = 6
+@yuzu_armor_s_t1_elite_cost_living_metal = 1.2
+@yuzu_armor_s_t1_elite_upkeep_energy = 1.20
+@yuzu_armor_s_t1_elite_upkeep_alloys = 0.24
+@yuzu_armor_s_t1_elite_upkeep_rare_crystals = 0.06
+
+@yuzu_armor_m_t1_elite_cost = 258
+@yuzu_armor_m_t1_elite_cost_rare = 12
+@yuzu_armor_m_t1_elite_cost_living_metal = 2.4
+@yuzu_armor_m_t1_elite_upkeep_energy = 2.40
+@yuzu_armor_m_t1_elite_upkeep_alloys = 0.48
+@yuzu_armor_m_t1_elite_upkeep_rare_crystals = 0.12
+
+@yuzu_armor_l_t1_elite_cost = 645
+@yuzu_armor_l_t1_elite_cost_rare = 24
+@yuzu_armor_l_t1_elite_cost_living_metal = 4.8
+@yuzu_armor_l_t1_elite_upkeep_energy = 4.80
+@yuzu_armor_l_t1_elite_upkeep_alloys = 0.96
+@yuzu_armor_l_t1_elite_upkeep_rare_crystals = 0.24
 
 #############
 #	ARMOR	#
 #############
 
+# 稀有资源 = 稀有水晶 (rare_crystals)。数值 = 原先暗物质用量 x2.5。
+
 @yuzu_armor_s_t1_cost = 34 # @yuzu_s_t1_cost = 40，减少部分以稀有资源代替
-@yuzu_armor_s_t1_cost_rare = 0.8
+@yuzu_armor_s_t1_cost_rare = 2
 @yuzu_armor_s_t2_cost = 69
-@yuzu_armor_s_t2_cost_rare = 3
+@yuzu_armor_s_t2_cost_rare = 7.5
 
 @yuzu_armor_m_t1_cost = 86 # @yuzu_m_t1_cost = 80，减少部分以稀有资源代替
-@yuzu_armor_m_t1_cost_rare = 1.6
+@yuzu_armor_m_t1_cost_rare = 4
 @yuzu_armor_m_t2_cost = 172
-@yuzu_armor_m_t2_cost_rare = 6
+@yuzu_armor_m_t2_cost_rare = 15
 
 @yuzu_armor_l_t1_cost = 215 # @yuzu_l_t1_cost = 160，减少部分以稀有资源代替
-@yuzu_armor_l_t1_cost_rare = 3.2
+@yuzu_armor_l_t1_cost_rare = 8
 @yuzu_armor_l_t2_cost = 430
-@yuzu_armor_l_t2_cost_rare = 12
+@yuzu_armor_l_t2_cost_rare = 30
+
+# 先进世界装甲: 造价 / 维护 = 世界装甲 x2 (稀有资源仍是稀有水晶)
+
+@yuzu_armor_s_t1_advanced_cost = 68
+@yuzu_armor_s_t1_advanced_cost_rare = 4
+@yuzu_armor_s_t1_advanced_upkeep_energy = 0.80
+@yuzu_armor_s_t1_advanced_upkeep_alloys = 0.16
+
+@yuzu_armor_m_t1_advanced_cost = 172
+@yuzu_armor_m_t1_advanced_cost_rare = 8
+@yuzu_armor_m_t1_advanced_upkeep_energy = 1.60
+@yuzu_armor_m_t1_advanced_upkeep_alloys = 0.32
+
+@yuzu_armor_l_t1_advanced_cost = 430
+@yuzu_armor_l_t1_advanced_cost_rare = 16
+@yuzu_armor_l_t1_advanced_upkeep_energy = 3.20
+@yuzu_armor_l_t1_advanced_upkeep_alloys = 0.64
 
 # 承受值 & 回复值
 
@@ -211,6 +315,18 @@
 @yuzu_power_S2 = -100
 @yuzu_power_M2 = -200
 @yuzu_power_L2 = -400
+
+# 先进时空屏障: 耗电 = 时空屏障 x1.5
+
+@yuzu_power_S1_advanced = -120
+@yuzu_power_M1_advanced = -240
+@yuzu_power_L1_advanced = -480
+
+# 精英时空屏障: 耗电 = 时空屏障 x2
+
+@yuzu_power_S1_elite = -160
+@yuzu_power_M1_elite = -320
+@yuzu_power_L1_elite = -640
 
 # 独立定价:冲突的鱼雷 / 掠袭机(不与 M_2 / L_2 共用)
 @yuzu_torpedo_1_cost = 500

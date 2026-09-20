@@ -1,7 +1,11 @@
 # 太初版组件 (MASTER) —— 由 Tier1 派生
 # 武器: 伤害 = Tier1 x2.5; 造价/维护费 = Tier1 x5.5, 另需异星天然气(与稀有水晶等值)
-#       射程 x1.75, 命中 +0.30(上限 1.00, 故太初档与精英档同为 1.00), 追踪 +0.30
+#       射程按槽位单列(见 yuzu_spacetime_weapon_tiers.md), 命中 +0.15(上限 1.00), 追踪 +0.15
 #       对船体加伤 x1.75, 溅射 625
+# 护盾: 值 = 时空屏障 x2.5, 造价/维护 = x4, 硬化 0.20, 再生 4%/日,
+#       造价另需 zro(异星天然气量的 1/5), 维护另需异星天然气(造价气量的 1%)
+# 装甲: 值 = 世界装甲 x2.5, 造价/维护 = x4, 硬化 0.20, 再生 4%/日,
+#       造价另需活体金属(稀有水晶量的 1/5), 维护另需稀有水晶(造价水晶的 1%)
 # 推进器/引擎: 造价 = Tier1 x5.5; 修正值 = 先进 + 2x(先进 - Tier1)
 # 升级链: Tier1 -> ADVANCED -> ELITE -> MASTER
 # 本文件由 scripts/make_yuzu_master.py 生成, 勿手改
@@ -21,7 +25,7 @@ weapon_component_template = {
 	component_set = "YUZU_ENERGY_TORPEDO_1_MASTER"
 	projectile_gfx = "yuzu_s_1_master"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
 	damage = {
 		min = 75
@@ -32,9 +36,9 @@ weapon_component_template = {
 		max = 12
 	}
 	total_fire_time = 35
-	range = 105
-	accuracy = 1.00
-	tracking = 1
+	range = 80
+	accuracy = 0.95
+	tracking = 0.85
 	shield_penetration = 1
 	armor_penetration = 1
 	hull_damage = 1.75
@@ -75,7 +79,7 @@ weapon_component_template = {
 	component_set = "YUZU_ENERGY_TORPEDO_1_MASTER"
 	projectile_gfx = "yuzu_m_1_master"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
 	damage = {
 		min = 188
@@ -86,9 +90,9 @@ weapon_component_template = {
 		max = 12
 	}
 	total_fire_time = 35
-	range = 157.5
-	accuracy = 1.00
-	tracking = 0.9
+	range = 120
+	accuracy = 0.95
+	tracking = 0.75
 	shield_penetration = 1
 	armor_penetration = 1
 	hull_damage = 1.75
@@ -129,7 +133,7 @@ weapon_component_template = {
 	component_set = "YUZU_ENERGY_TORPEDO_1_MASTER"
 	projectile_gfx = "yuzu_l_1_master"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
 	damage = {
 		min = 450
@@ -140,9 +144,9 @@ weapon_component_template = {
 		max = 12
 	}
 	total_fire_time = 35
-	range = 210
-	accuracy = 1.00
-	tracking = 0.8
+	range = 165
+	accuracy = 0.95
+	tracking = 0.65
 	shield_penetration = 1
 	armor_penetration = 1
 	hull_damage = 1.75
@@ -197,7 +201,7 @@ weapon_component_template = {
 	component_set = "YUZU_LANCE_1_MASTER"
 	projectile_gfx = "yuzu_lance_1_master"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
 	damage = {
 		min = 2500
@@ -208,9 +212,9 @@ weapon_component_template = {
 		max = 15
 	}
 	total_fire_time = 70
-	range = 315
+	range = 240
 	accuracy = 1.00
-	tracking = 0.7
+	tracking = 0.55
 	shield_penetration = 1
 	armor_penetration = 1
 	hull_damage = 1.75
@@ -259,7 +263,7 @@ weapon_component_template = {
 	component_set = "YUZU_BEAM_1_MASTER"
 	projectile_gfx = "yuzu_beam_1_master"
 	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 	ai_tag_weight = 0
 	damage = {
 		min = 12500
@@ -270,9 +274,9 @@ weapon_component_template = {
 		max = 45
 	}
 	total_fire_time = 180
-	range = 525
+	range = 400
 	accuracy = 1.00
-	tracking = 0.6
+	tracking = 0.45
 	shield_penetration = 1
 	armor_penetration = 1
 	hull_damage = 1.75
@@ -304,6 +308,250 @@ weapon_component_template = {
 			factor = 0.0
 			is_YUZU = no
 			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+# ===== 装甲 (3) =====
+
+utility_component_template = {
+	key = "SMALL_YUZU_ARMOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_armor_yuzu_1_master"
+	icon_frame = 1
+	power = 0
+
+	modifier = {
+		ship_armor_add = @yuzu_armor_S1_master
+		ship_armor_regen_add_perc = @yuzu_armor_regen_perc_t1_master
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_armor_1_master" }
+	component_set = "YUZU_ARMOR_1_MASTER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_s_t1_master_cost
+			rare_crystals = @yuzu_armor_s_t1_master_cost_rare
+			sr_living_metal = @yuzu_armor_s_t1_master_cost_living_metal
+		}
+		upkeep = {
+			energy = @yuzu_armor_s_t1_master_upkeep_energy
+			alloys = @yuzu_armor_s_t1_master_upkeep_alloys
+			rare_crystals = @yuzu_armor_s_t1_master_upkeep_rare_crystals
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_ARMOR_1_MASTER"
+	size = medium
+	icon = "GFX_ship_part_armor_yuzu_1_master"
+	icon_frame = 1
+	power = 0
+
+	modifier = {
+		ship_armor_add = @yuzu_armor_M1_master
+		ship_armor_regen_add_perc = @yuzu_armor_regen_perc_t1_master
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_armor_1_master" }
+	component_set = "YUZU_ARMOR_1_MASTER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_m_t1_master_cost
+			rare_crystals = @yuzu_armor_m_t1_master_cost_rare
+			sr_living_metal = @yuzu_armor_m_t1_master_cost_living_metal
+		}
+		upkeep = {
+			energy = @yuzu_armor_m_t1_master_upkeep_energy
+			alloys = @yuzu_armor_m_t1_master_upkeep_alloys
+			rare_crystals = @yuzu_armor_m_t1_master_upkeep_rare_crystals
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_ARMOR_1_MASTER"
+	size = large
+	icon = "GFX_ship_part_armor_yuzu_1_master"
+	icon_frame = 1
+	power = 0
+
+	modifier = {
+		ship_armor_add = @yuzu_armor_L1_master
+		ship_armor_regen_add_perc = @yuzu_armor_regen_perc_t1_master
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_armor_1_master" }
+	component_set = "YUZU_ARMOR_1_MASTER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_l_t1_master_cost
+			rare_crystals = @yuzu_armor_l_t1_master_cost_rare
+			sr_living_metal = @yuzu_armor_l_t1_master_cost_living_metal
+		}
+		upkeep = {
+			energy = @yuzu_armor_l_t1_master_upkeep_energy
+			alloys = @yuzu_armor_l_t1_master_upkeep_alloys
+			rare_crystals = @yuzu_armor_l_t1_master_upkeep_rare_crystals
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+# ===== 护盾 (3) =====
+
+utility_component_template = {
+	key = "SMALL_YUZU_SHIELD_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_shield_yuzu_1_master"
+	icon_frame = 1
+	power = @yuzu_power_S1_master
+
+	modifier = {
+		ship_shield_add = @yuzu_shield_S1_master
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1_master
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_shield_1_master" }
+	component_set = "YUZU_SHIELD_1_MASTER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_s_t1_master_cost
+			exotic_gases = @yuzu_shield_s_t1_master_cost_rare
+			sr_zro = @yuzu_shield_s_t1_master_cost_zro
+		}
+		upkeep = {
+			energy = @yuzu_shield_s_t1_master_upkeep_energy
+			alloys = @yuzu_shield_s_t1_master_upkeep_alloys
+			exotic_gases = @yuzu_shield_s_t1_master_upkeep_exotic_gases
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_SHIELD_1_MASTER"
+	size = medium
+	icon = "GFX_ship_part_shield_yuzu_1_master"
+	icon_frame = 1
+	power = @yuzu_power_M1_master
+
+	modifier = {
+		ship_shield_add = @yuzu_shield_M1_master
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1_master
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_shield_1_master" }
+	component_set = "YUZU_SHIELD_1_MASTER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_m_t1_master_cost
+			exotic_gases = @yuzu_shield_m_t1_master_cost_rare
+			sr_zro = @yuzu_shield_m_t1_master_cost_zro
+		}
+		upkeep = {
+			energy = @yuzu_shield_m_t1_master_upkeep_energy
+			alloys = @yuzu_shield_m_t1_master_upkeep_alloys
+			exotic_gases = @yuzu_shield_m_t1_master_upkeep_exotic_gases
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_SHIELD_1_MASTER"
+	size = large
+	icon = "GFX_ship_part_shield_yuzu_1_master"
+	icon_frame = 1
+	power = @yuzu_power_L1_master
+
+	modifier = {
+		ship_shield_add = @yuzu_shield_L1_master
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1_master
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.2
+	}
+
+	prerequisites = { "tech_yuzu_shield_1_master" }
+	component_set = "YUZU_SHIELD_1_MASTER"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_l_t1_master_cost
+			exotic_gases = @yuzu_shield_l_t1_master_cost_rare
+			sr_zro = @yuzu_shield_l_t1_master_cost_zro
+		}
+		upkeep = {
+			energy = @yuzu_shield_l_t1_master_upkeep_energy
+			alloys = @yuzu_shield_l_t1_master_upkeep_alloys
+			exotic_gases = @yuzu_shield_l_t1_master_upkeep_exotic_gases
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
 		}
 	}
 }

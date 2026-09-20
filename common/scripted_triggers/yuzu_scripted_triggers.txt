@@ -198,3 +198,36 @@ yuzu_is_crisis_aspirant = {
 		has_ascension_perk = ap_galactic_hyperthermia
 	}
 }
+
+# 飞升政体（gov_Yuzu_cybernetic / gov_Yuzu_biomorphosis / gov_Yuzu_psionic）的判定。
+# 必须点完该飞升路线的专属传统树 —— tr_*_finish 会在传统树点满时自动授予；
+# 或者原版飞升事件链已经跑完、留下了对应的国家标记。
+# 只点下飞升天赋本身不算，那时政体名称不应该跟着变。
+yuzu_ascension_cybernetic_completed = {
+	OR = {
+		has_tradition = tr_cybernetics_finish
+		has_country_flag = cyber_individualist
+		has_country_flag = cyber_collectivist
+	}
+}
+
+yuzu_ascension_biomorphosis_completed = {
+	OR = {
+		has_tradition = tr_genetics_finish
+		has_tradition = tr_purity_finish
+		has_tradition = tr_cloning_finish
+		has_tradition = tr_mutation_finish
+		has_country_flag = bio_purity
+		has_country_flag = bio_cloning
+		has_country_flag = bio_mutation
+	}
+}
+
+yuzu_ascension_psionic_completed = {
+	OR = {
+		has_tradition = tr_psionics_finish
+		has_tradition = tr_psionics_shroud_finish
+		has_country_flag = transcendent_government
+		has_country_flag = corporeal_government
+	}
+}

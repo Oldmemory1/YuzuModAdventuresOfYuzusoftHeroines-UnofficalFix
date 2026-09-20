@@ -1259,6 +1259,66 @@ tech_yuzu_armor_1 = {
 	}
 }
 
+tech_yuzu_armor_1_advanced = {
+	area = engineering
+	cost = @yuzu_tier5cost6
+	tier = 5
+	category = { materials }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_armor_1" }
+	weight = @yuzu_tier5weight6
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_armor_1_elite = {
+	area = engineering
+	cost = @yuzu_tier6cost4
+	tier = 6
+	category = { materials }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_armor_1_advanced" }
+	weight = @yuzu_tier6weight4
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
 tech_yuzu_armor_2 = {
 	area = engineering
 	cost = @yuzu_tier6cost2
@@ -1299,6 +1359,66 @@ tech_yuzu_shield_1 = {
 	is_reverse_engineerable = no
 	prerequisites = { "tech_yuzu_space_time_theory" "tech_shields_5" }
 	weight = @yuzu_tier5weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_shield_1_advanced = {
+	area = physics
+	cost = @yuzu_tier5cost6
+	tier = 5
+	category = { field_manipulation }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_shield_1" }
+	weight = @yuzu_tier5weight6
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_shield_1_elite = {
+	area = physics
+	cost = @yuzu_tier6cost4
+	tier = 6
+	category = { field_manipulation }
+	ai_update_type = all
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_yuzu_shield_1_advanced" }
+	weight = @yuzu_tier6weight4
+
+	gateway = yuzu_space_time
 
 	potential = {
 		is_YUZU = yes
@@ -1964,6 +2084,102 @@ tech_yuzu_jump_drive_1_elite = {
 		factor = 50
 	}
 }
+# ===== 深渊 T3 先进版 科技 — by scripts/make_yuzu_abyss_t3_adv.py =====
+tech_yuzu_l_3_advanced = {
+	cost = @yuzu_tier6cost5
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_3" }
+	weight = @yuzu_tier6weight5
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_lance_3_advanced = {
+	cost = @yuzu_tier6cost6
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_3_advanced" "tech_yuzu_lance_3" }
+	weight = @yuzu_tier6weight6
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_beam_3_advanced = {
+	cost = @yuzu_tier6cost7
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_lance_3_advanced" "tech_yuzu_beam_3" }
+	weight = @yuzu_tier6weight7
+
+	gateway = yuzu_abyss
+
+	potential = {
+		is_YUZU = yes
+		has_country_flag = yuzu_abyss_project
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
 
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 tech_yuzu_l_1_master = {
@@ -2125,24 +2341,21 @@ tech_yuzu_jump_drive_1_master = {
 	}
 }
 
-# ===== 深渊 T3 先进版 科技 — by scripts/make_yuzu_abyss_t3_adv.py =====
-tech_yuzu_l_3_advanced = {
+tech_yuzu_shield_1_master = {
 	cost = @yuzu_tier6cost5
 	area = physics
 	tier = 6
 	is_rare = yes
-	is_dangerous = yes
 	is_reverse_engineerable = no
 	category = { field_manipulation }
-	ai_update_type = military
-	prerequisites = { "tech_yuzu_l_3" }
+	ai_update_type = all
+	prerequisites = { "tech_yuzu_shield_1_elite" }
 	weight = @yuzu_tier6weight5
 
-	gateway = yuzu_abyss
+	gateway = yuzu_space_time
 
 	potential = {
 		is_YUZU = yes
-		has_country_flag = yuzu_abyss_project
 	}
 
 	weight_modifier = {
@@ -2158,55 +2371,21 @@ tech_yuzu_l_3_advanced = {
 	}
 }
 
-tech_yuzu_lance_3_advanced = {
-	cost = @yuzu_tier6cost6
-	area = physics
+tech_yuzu_armor_1_master = {
+	cost = @yuzu_tier6cost5
+	area = engineering
 	tier = 6
 	is_rare = yes
-	is_dangerous = yes
 	is_reverse_engineerable = no
-	category = { field_manipulation }
-	ai_update_type = military
-	prerequisites = { "tech_yuzu_l_3_advanced" "tech_yuzu_lance_3" }
-	weight = @yuzu_tier6weight6
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_yuzu_armor_1_elite" }
+	weight = @yuzu_tier6weight5
 
-	gateway = yuzu_abyss
+	gateway = yuzu_space_time
 
 	potential = {
 		is_YUZU = yes
-		has_country_flag = yuzu_abyss_project
-	}
-
-	weight_modifier = {
-		factor = 0.25
-		modifier = {
-			factor = 9
-			has_ascension_perk = ap_technological_ascendancy
-		}
-	}
-
-	ai_weight = {
-		factor = 50
-	}
-}
-
-tech_yuzu_beam_3_advanced = {
-	cost = @yuzu_tier6cost7
-	area = physics
-	tier = 6
-	is_rare = yes
-	is_dangerous = yes
-	is_reverse_engineerable = no
-	category = { field_manipulation }
-	ai_update_type = military
-	prerequisites = { "tech_yuzu_lance_3_advanced" "tech_yuzu_beam_3" }
-	weight = @yuzu_tier6weight7
-
-	gateway = yuzu_abyss
-
-	potential = {
-		is_YUZU = yes
-		has_country_flag = yuzu_abyss_project
 	}
 
 	weight_modifier = {
