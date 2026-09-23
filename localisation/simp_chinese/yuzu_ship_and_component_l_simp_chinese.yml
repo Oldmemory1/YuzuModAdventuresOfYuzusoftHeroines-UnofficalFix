@@ -545,3 +545,20 @@
  TECH_UNLOCK_THRUSTER_YUZU_1_MASTER_DESC:0"§H$tech_thrusters_yuzu_1_master$§!\n$tech_thrusters_yuzu_1_master_desc$"
  TECH_UNLOCK_YUZU_JUMPDRIVE_1_MASTER_TITLE:0"$TECH_UNLOCK_COMPONENT_LINE$ $tech_yuzu_jump_drive_1_master$"
  TECH_UNLOCK_YUZU_JUMPDRIVE_1_MASTER_DESC:0"§H$tech_yuzu_jump_drive_1_master$§!\n$tech_yuzu_jump_drive_1_master_desc$"
+
+ # 时空乱流武器的恒星基地模块
+ sm_starbase_yuzu_spacetime_launcher:0"时空乱流炮台"
+ sm_starbase_yuzu_spacetime_launcher_desc:0"把时空乱流发射器阵列搬上恒星基地，让来访者一进门就先尝一发时空乱流。"
+ sm_starbase_yuzu_spacetime_launcher_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1$§!。\n"
+
+ sm_starbase_yuzu_spacetime_launcher_advanced:0"先进时空乱流炮台"
+ sm_starbase_yuzu_spacetime_launcher_advanced_desc:0"恒星基地上的先进时空乱流发射器阵列，能量更高，命中后还会额外撕扯舰体内部结构。"
+ sm_starbase_yuzu_spacetime_launcher_advanced_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1_ADVANCED$§!。\n"
+
+ sm_starbase_yuzu_spacetime_launcher_elite:0"精英时空乱流炮台"
+ sm_starbase_yuzu_spacetime_launcher_elite_desc:0"恒星基地上的精英时空乱流发射器阵列，高度凝聚的时空乱流足以对舰体内部造成毁灭性破坏。"
+ sm_starbase_yuzu_spacetime_launcher_elite_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1_ELITE$§!。\n"
+
+ sm_starbase_yuzu_spacetime_launcher_master:0"太初时空乱流炮台"
+ sm_starbase_yuzu_spacetime_launcher_master_desc:0"恒星基地上的太初时空乱流发射器阵列，时空乱流的能量已凝聚到物理极限，被击中的舰船会连同等离子体一起瓦解。"
+ sm_starbase_yuzu_spacetime_launcher_master_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1_MASTER$§!。\n"

@@ -231,3 +231,19 @@ yuzu_ascension_psionic_completed = {
 		has_country_flag = corporeal_government
 	}
 }
+
+### 童话天秤（libra）mod 检测 ###
+#
+# Stellaris 没有原生的 is_mod_loaded 触发器，libra 也没有设置开局全局 flag，
+# 因此用 libra 开局必然写入的国家 flag 反推「libra 已加载」：
+#   libra_fairy.0001（on_game_start_country）-> libra_country_check
+#   会给每个 default 国家写入 libra_is_biological_empire 或 libra_is_machine_empire；
+#   libra_main.10000（on_game_start）会给一名人类玩家写入 libra_game_host。
+# 注意：只能在国家作用域使用。
+yuzu_libra_loaded = {
+	OR = {
+		has_country_flag = libra_is_biological_empire
+		has_country_flag = libra_is_machine_empire
+		has_country_flag = libra_game_host
+	}
+}

@@ -1,0 +1,91 @@
+namespace = Yuzu_libra_compat
+
+############################################################################
+# 童话天秤（libra）mod 加载检测 + 开局提示
+#
+# Stellaris 没有原生的「mod 是否加载」触发器（is_mod_loaded 之类），
+# libra 自身也没有设置开局全局 flag，所以这里用 libra 开局必然写入的国家 flag 作为判据：
+#   libra/common/scripted_effects/00_libra_effect.txt -> libra_country_check
+#   由 on_game_start_country 的 libra_fairy.0001 对每个 default 国家调用，
+#   按物种/权威写入 libra_is_biological_empire 或 libra_is_machine_empire；
+#   libra_main.10000（on_game_start）另外会给一名人类玩家写 libra_game_host。
+# 判据统一维护在 scripted_trigger「yuzu_libra_loaded」中。
+#
+# 时序：本 mod 与 libra 的 on_game_start_country 会在同一帧触发，先后顺序取决于
+# mod 加载顺序，因此第一次没检测到时会延迟重试，避免漏报。
+############################################################################
+
+# on_game_start_country：隐藏事件，只负责检测与分流
+country_event = {
+	id = Yuzu_libra_compat.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		is_country_type = default
+		NOT = { has_country_flag = yuzu_libra_notice_shown }
+	}
+
+	immediate = {
+		if = {
+			limit = { yuzu_libra_loaded = yes }
+			country_event = { id = Yuzu_libra_compat.10 }
+		}
+		else = {
+			# libra 的事件可能排在本事件之后，稍后再查一次
+			country_event = { id = Yuzu_libra_compat.2 days = 3 }
+		}
+	}
+}
+
+# 重试（+3 天，最多再补一次 +30 天）
+country_event = {
+	id = Yuzu_libra_compat.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = yuzu_libra_notice_shown }
+	}
+
+	immediate = {
+		if = {
+			limit = { yuzu_libra_loaded = yes }
+			country_event = { id = Yuzu_libra_compat.10 }
+		}
+		else = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = yuzu_libra_check_retried }
+				}
+				set_country_flag = yuzu_libra_check_retried
+				country_event = { id = Yuzu_libra_compat.2 days = 30 }
+			}
+		}
+	}
+}
+
+# 提示框
+country_event = {
+	id = Yuzu_libra_compat.10
+	title = Yuzu_libra_compat.10.name
+	desc = Yuzu_libra_compat.10.desc
+	picture = GFX_evt_news_room
+	show_sound = event_default
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = yuzu_libra_notice_shown }
+	}
+
+	immediate = {
+		set_country_flag = yuzu_libra_notice_shown
+	}
+
+	option = {
+		name = Yuzu_libra_compat.10.a
+	}
+}

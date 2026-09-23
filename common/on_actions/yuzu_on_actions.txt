@@ -10,6 +10,7 @@ on_game_start_country = {
 		Yuzu_origin_event.1
 		Yuzu_origin_event.2
 		Yuzu_origin_event.10
+		Yuzu_libra_compat.1 # 检测童话天秤（libra）mod，检测到则弹窗提示
 	}
 }
 

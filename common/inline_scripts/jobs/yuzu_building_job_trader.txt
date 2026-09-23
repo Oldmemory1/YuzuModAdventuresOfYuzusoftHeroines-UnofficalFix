@@ -1,0 +1,23 @@
+#常规(商贩)
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		job_trader_add = $AMOUNT$
+	}
+}
+#格式塔(后勤工蜂)
+#与其它 yuzu_building_job_* 一致: 按帝国类型分发.
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_logistics_drone_add = $AMOUNT$
+	}
+}

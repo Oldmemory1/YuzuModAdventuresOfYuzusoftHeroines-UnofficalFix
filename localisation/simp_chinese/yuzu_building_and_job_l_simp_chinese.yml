@@ -178,8 +178,23 @@
  building_yuzu_fe_dome_tier_2_desc:0 "覆天穹顶的进一步升华。整座浮空乌托邦被织入澄澈的碧落之中，反重力穹幕与梦幻生境融为一体，让栖居其中的人们几乎忘却了尘世的重量。"
 
 
- building_yuzu_fe_stronghold:0 "圣盾基地"
- building_yuzu_fe_stronghold_desc:0 "一座巨大的星球防御基地，拥有多个装满上古神秘武器的军械库。"
+ building_yuzu_fe_stronghold_tier_1:0 "圣盾基地"
+ building_yuzu_fe_stronghold_tier_1_desc:0 "一座巨大的星球防御基地，拥有多个装满上古神秘武器的军械库。"
+
+ building_yuzu_fe_stronghold_tier_2:0 "神盾基地"
+ building_yuzu_fe_stronghold_tier_2_desc:0 "圣盾基地的进一步升华。中央塔尖自环形基座间拔地而起，上古军械库与层层护盾彼此咬合，把整颗行星的天空都收进一道无法绕行的防线。"
+
+ building_yuzu_fe_clinic_tier_1:0 "分子焕活所"
+ building_yuzu_fe_clinic_tier_1_desc:0 "分子焕活所深入细胞最细微的构造，把病痛与衰老都当作可以修正的误差；居民的健康质量与预期寿命，就此被重新书写。"
+
+ building_yuzu_fe_clinic_tier_2:0 "生物再生所"
+ building_yuzu_fe_clinic_tier_2_desc:0 "分子焕活所的进一步升华。生物再生研究所站在医疗技术的巅峰，以开创性的再生疗法不断重写生命的界限——在这座殿堂里，衰老只是一个尚未被修正的参数。"
+
+ building_yuzu_fe_market_tier_1:0 "星系贸易中心"
+ building_yuzu_fe_market_tier_1_desc:0 "高耸的塔尖俯瞰着整条天际线，为脚下熙攘的商业区投下阴影；行星上流通的每一件货物，几乎都要在这里过一道手。"
+
+ building_yuzu_fe_market_tier_2:0 "星际贸易枢纽"
+ building_yuzu_fe_market_tier_2_desc:0 "星系贸易中心的进一步升华。这片贸易区在星系经济中占据着至高无上的地位，连从轨道上俯瞰，也能看见那些庞然尖顶投下的影子。"
 
  job_yuzu_fe_protector:0 "守护者"
  job_yuzu_fe_protector_plural:0 "守护者"

@@ -340,3 +340,8 @@
  Yuzu_fallen_empire_activity.4.b:0"我们的官员不该被这样借走。"
  yuzu_fe_preserve_transfer_tooltip:0"§H[yuzu_fe_preserve_official.GetName]§!将离开我们，加入§H[yuzu_fe_preserve_origin.GetName]§!。"
  yuzu_fe_preserve_refuse_tooltip:0"§H[yuzu_fe_preserve_origin.GetName]§!会对此感到失望。"
+
+ # 童话天秤（libra）兼容提示（Yuzu_libra_compat）
+ Yuzu_libra_compat.10.name:0"兼容性提示：童话天秤（libra）"
+ Yuzu_libra_compat.10.desc:0"您好，检测到您使用了童话天秤（libra）mod，本mod在一定程度上为其做了兼容，不限于反应堆/引擎/推进器等部件。\n\n同时，本mod某些加成效果会因为您选择的libra进阶飞升路线变得不同，例如指令76。"
+ Yuzu_libra_compat.10.a:0"我知道了。"

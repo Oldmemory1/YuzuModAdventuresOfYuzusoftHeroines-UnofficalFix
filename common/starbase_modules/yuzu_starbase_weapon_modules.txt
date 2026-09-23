@@ -1,0 +1,334 @@
+# 时空乱流系列恒星基地模块
+#
+# 结构参照 libra 的星界武器恒星基地模块：
+#   workshop 3490581483 / common/starbase_modules/01_libra_starbase_weapon_modules.txt
+#
+# 恒星基地可选武器槽只有 M（BATTERY_STARBASE_SECTION 的两个 medium_turret），
+# 因此这里挂载的是 S/M/L 时空乱流发射器组件集里的中型组件（YUZU_M_*）。
+# 时空粉碎者（XL，extra_large）与湮灭巨炮（T，titanic）的组件尺寸超出恒星基地槽位，
+# 无法用原版 section 挂载，故不在此文件中收录。
+#
+# 造价参照 yuzu_spacetime_weapon_tiers.md 的档位倍率：
+# 先进 ×1.75、精英 ×3.25、太初 ×5.5，基准为原版电池模块的
+# @defense_platform_section_cost（120 合金）与 25 稀有水晶。
+#
+# 本地化键：sm_starbase_yuzu_spacetime_launcher[_advanced|_elite|_master][_desc|_tt]
+
+# Tier1：中型时空乱流发射器
+starbase_yuzu_spacetime_launcher = {
+	section = "BATTERY_STARBASE_SECTION"
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1"
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = 6
+	}
+
+	potential = {
+		owner? = { has_technology = tech_yuzu_l_1 }
+		is_normal_starbase = yes
+	}
+
+	show_in_tech = "tech_yuzu_l_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = no
+	}
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 120
+			rare_crystals = 25
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = no
+				}
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 1
+		}
+	}
+
+	station_modifier = {
+		ship_hull_mult = 0.10
+		ship_armor_mult = 0.10
+	}
+
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = no
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1
+	}
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = yes
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1
+	}
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = sm_starbase_yuzu_spacetime_launcher_tt
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			owner? = { is_preferred_starbase_weapons = weapon_type_energy }
+		}
+	}
+}
+
+# 先进：中型先进时空乱流发射器
+starbase_yuzu_spacetime_launcher_advanced = {
+	section = "BATTERY_STARBASE_SECTION"
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_advanced"
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = 6
+	}
+
+	potential = {
+		owner? = { has_technology = tech_yuzu_l_1_advanced }
+		is_normal_starbase = yes
+	}
+
+	show_in_tech = "tech_yuzu_l_1_advanced"
+
+	show_tech_unlock_if = {
+		is_nomadic = no
+	}
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 210
+			rare_crystals = 44
+			exotic_gases = 44
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = no
+				}
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 1
+		}
+	}
+
+	station_modifier = {
+		ship_hull_mult = 0.10
+		ship_armor_mult = 0.10
+	}
+
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = no
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1_ADVANCED
+	}
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = yes
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1_ADVANCED
+	}
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = sm_starbase_yuzu_spacetime_launcher_advanced_tt
+
+	ai_weight = {
+		weight = 125 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			owner? = { is_preferred_starbase_weapons = weapon_type_energy }
+		}
+	}
+}
+
+# 精英：中型精英时空乱流发射器
+starbase_yuzu_spacetime_launcher_elite = {
+	section = "BATTERY_STARBASE_SECTION"
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_elite"
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = 6
+	}
+
+	potential = {
+		owner? = { has_technology = tech_yuzu_l_1_elite }
+		is_normal_starbase = yes
+	}
+
+	show_in_tech = "tech_yuzu_l_1_elite"
+
+	show_tech_unlock_if = {
+		is_nomadic = no
+	}
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 390
+			rare_crystals = 81
+			exotic_gases = 81
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = no
+				}
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 1
+		}
+	}
+
+	station_modifier = {
+		ship_hull_mult = 0.10
+		ship_armor_mult = 0.10
+	}
+
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = no
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1_ELITE
+	}
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = yes
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1_ELITE
+	}
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = sm_starbase_yuzu_spacetime_launcher_elite_tt
+
+	ai_weight = {
+		weight = 150 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			owner? = { is_preferred_starbase_weapons = weapon_type_energy }
+		}
+	}
+}
+
+# 太初：中型太初时空乱流发射器
+starbase_yuzu_spacetime_launcher_master = {
+	section = "BATTERY_STARBASE_SECTION"
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_master"
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = 6
+	}
+
+	potential = {
+		owner? = { has_technology = tech_yuzu_l_1_master }
+		is_normal_starbase = yes
+	}
+
+	show_in_tech = "tech_yuzu_l_1_master"
+
+	show_tech_unlock_if = {
+		is_nomadic = no
+	}
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 660
+			rare_crystals = 138
+			exotic_gases = 138
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = no
+				}
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				owner? = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 1
+		}
+	}
+
+	station_modifier = {
+		ship_hull_mult = 0.10
+		ship_armor_mult = 0.10
+	}
+
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = no
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1_MASTER
+	}
+	triggered_component_set = {
+		potential = {
+			owner? = {
+				country_uses_bio_ships = yes
+			}
+		}
+		component_set = YUZU_ENERGY_TORPEDO_1_MASTER
+	}
+	show_component_tooltips = yes
+	custom_tooltip_with_modifiers = sm_starbase_yuzu_spacetime_launcher_master_tt
+
+	ai_weight = {
+		weight = 175 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			owner? = { is_preferred_starbase_weapons = weapon_type_energy }
+		}
+	}
+}
