@@ -124,27 +124,9 @@ objectTypes = {
 		
 		scale = 1.0
 	}
-	
-	pdxparticle = {
-		name = "yuzu_beam_1_windup_effect"
-		type = "yuzu_beam_1_windup_effect"
-		
-		scale = 1.0
-	}
-	
-	pdxparticle = {
-		name = "yuzu_beam_2_windup_effect"
-		type = "yuzu_beam_2_windup_effect"
-		
-		scale = 1.0
-	}
-	
-	pdxparticle = {
-		name = "yuzu_beam_3_windup_effect"
-		type = "yuzu_beam_3_windup_effect"
-		
-		scale = 1.0
-	}
+
+
+
 	
 	pdxparticle = {
 		name = "yuzu_beam_1_muzzle_effect"
@@ -167,236 +149,32 @@ objectTypes = {
 		scale = 1.0
 	}
 
-	pdxparticle = {
-		name = "yuzu_l_1_hit_effect"
-		type = "yuzu_l_1_hit_effect"
-		
-		scale = 1.15
-	}
 
-	pdxparticle = {
-		name = "yuzu_l_1_muzzle_particle"
-		type = "yuzu_l_1_muzzle"
-		
-		scale = 1.5
-	}
-	
-	pdxparticle = {
-		name = "yuzu_l_2_hit_effect"
-		type = "yuzu_l_2_hit_effect"
-		
-		scale = 1.15
-	}
 
-	pdxparticle = {
-		name = "yuzu_l_2_muzzle_particle"
-		type = "yuzu_l_2_muzzle"
-		
-		scale = 1.5
-	}
-	
-	pdxparticle = {
-		name = "yuzu_l_3_hit_effect"
-		type = "yuzu_l_3_hit_effect"
-		
-		scale = 1.15
-	}
 
-	pdxparticle = {
-		name = "yuzu_l_3_muzzle_particle"
-		type = "yuzu_l_3_muzzle"
-		
-		scale = 1.5
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_1_muzzle_particle"
-		type = "yuzu_energy_torpedoes_1_file"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_1_idle_particle"
-		type = "yuzu_energy_torpedoes_1_idle_file"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_1_hit_effect"
-		type = "yuzu_energy_torpedoes_1_hit_effect"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_2_muzzle_particle"
-		type = "yuzu_energy_torpedoes_2_file"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_2_idle_particle"
-		type = "yuzu_energy_torpedoes_2_idle_file"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_2_hit_effect"
-		type = "yuzu_energy_torpedoes_2_hit_effect"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_3_muzzle_particle"
-		type = "yuzu_energy_torpedoes_3_file"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_3_idle_particle"
-		type = "yuzu_energy_torpedoes_3_idle_file"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_3_hit_effect"
-		type = "yuzu_energy_torpedoes_3_hit_effect"
-		
-		scale = 1.0
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_1_muzzle_particle"
-		type = "yuzu_energy_torpedoes_1_file"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_1_idle_particle"
-		type = "yuzu_energy_torpedoes_1_idle_file"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_1_hit_effect"
-		type = "yuzu_energy_torpedoes_1_hit_effect"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_2_muzzle_particle"
-		type = "yuzu_energy_torpedoes_2_file"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_2_idle_particle"
-		type = "yuzu_energy_torpedoes_2_idle_file"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_2_hit_effect"
-		type = "yuzu_energy_torpedoes_2_hit_effect"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_3_muzzle_particle"
-		type = "yuzu_energy_torpedoes_3_file"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_3_idle_particle"
-		type = "yuzu_energy_torpedoes_3_idle_file"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_M_3_hit_effect"
-		type = "yuzu_energy_torpedoes_3_hit_effect"
-		
-		scale = 0.75
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_1_muzzle_particle"
-		type = "yuzu_energy_torpedoes_1_file"
-		
-		scale = 0.5
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_1_idle_particle"
-		type = "yuzu_energy_torpedoes_1_idle_file"
-		
-		scale = 0.5
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_1_hit_effect"
-		type = "yuzu_energy_torpedoes_1_hit_effect"
-		
-		scale = 0.5
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_2_muzzle_particle"
-		type = "yuzu_energy_torpedoes_2_file"
-		
-		scale = 0.5
-	}
 
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_2_idle_particle"
-		type = "yuzu_energy_torpedoes_2_idle_file"
-		
-		scale = 0.5
-	}
-
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_2_hit_effect"
-		type = "yuzu_energy_torpedoes_2_hit_effect"
-		
-		scale = 0.5
-	}
-
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_3_muzzle_particle"
-		type = "yuzu_energy_torpedoes_3_file"
-		
-		scale = 0.5
-	}
-
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_3_idle_particle"
-		type = "yuzu_energy_torpedoes_3_idle_file"
-		
-		scale = 0.5
-	}
-
-	pdxparticle = {
-		name = "yuzu_energy_torpedoes_S_3_hit_effect"
-		type = "yuzu_energy_torpedoes_3_hit_effect"
-		
-		scale = 0.5
-	}
 
 	pdxparticle = {
 		name = "yuzu_torpedo_01_large_hit_effect"
@@ -434,18 +212,7 @@ objectTypes = {
 	}
 
 	# ---- 高级版 (teal #39C5BB) ----
-	pdxparticle = {
-		name = "yuzu_l_1_hit_effect_advanced"
-		type = "yuzu_l_1_hit_effect_advanced"
-		
-		scale = 1.15
-	}
-	pdxparticle = {
-		name = "yuzu_l_1_muzzle_particle_advanced"
-		type = "yuzu_l_1_muzzle_advanced"
-		
-		scale = 1.5
-	}
+
 	pdxparticle = {
 		name = "yuzu_lance_1_hit_effect_advanced"
 		type = "yuzu_lance_1_hit_effect_advanced"
@@ -490,18 +257,7 @@ objectTypes = {
 	}
 # ===== ELITE(精英版) 自动生成区块 — 由 scripts/make_yuzu_elite.py 写入 =====
 # ---- 精英版 (sky blue #66CCFF) ----
-	pdxparticle = {
-		name = "yuzu_l_1_hit_effect_elite"
-		type = "yuzu_l_1_hit_effect_elite"
-		
-		scale = 1.15
-	}
-	pdxparticle = {
-		name = "yuzu_l_1_muzzle_particle_elite"
-		type = "yuzu_l_1_muzzle_elite"
-		
-		scale = 1.5
-	}
+
 	pdxparticle = {
 		name = "yuzu_lance_1_hit_effect_elite"
 		type = "yuzu_lance_1_hit_effect_elite"
@@ -544,6 +300,204 @@ objectTypes = {
 		
 		scale = 1.0
 	}
+# ===== 等离子弹体(能量鱼雷线) 自动生成区块 — 由 scripts/make_yuzu_plasma_torpedoes.py 写入 =====
+# ---- 等离子弹体 (能量鱼雷线) ----
+
+	pdxparticle = {
+		name = "yuzu_torpedo_1_muzzle"
+		type = "yuzu_torpedo_1_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_idle"
+		type = "yuzu_torpedo_1_idle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_hit_effect"
+		type = "yuzu_torpedo_1_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_shield_hit_effect"
+		type = "yuzu_torpedo_1_shield_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_advanced_muzzle"
+		type = "yuzu_torpedo_1_advanced_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_advanced_idle"
+		type = "yuzu_torpedo_1_advanced_idle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_advanced_hit_effect"
+		type = "yuzu_torpedo_1_advanced_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_advanced_shield_hit_effect"
+		type = "yuzu_torpedo_1_advanced_shield_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_elite_muzzle"
+		type = "yuzu_torpedo_1_elite_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_elite_idle"
+		type = "yuzu_torpedo_1_elite_idle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_elite_hit_effect"
+		type = "yuzu_torpedo_1_elite_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_elite_shield_hit_effect"
+		type = "yuzu_torpedo_1_elite_shield_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_master_muzzle"
+		type = "yuzu_torpedo_1_master_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_master_idle"
+		type = "yuzu_torpedo_1_master_idle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_master_hit_effect"
+		type = "yuzu_torpedo_1_master_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_1_master_shield_hit_effect"
+		type = "yuzu_torpedo_1_master_shield_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_2_muzzle"
+		type = "yuzu_torpedo_2_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_2_idle"
+		type = "yuzu_torpedo_2_idle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_2_hit_effect"
+		type = "yuzu_torpedo_2_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_2_shield_hit_effect"
+		type = "yuzu_torpedo_2_shield_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_muzzle"
+		type = "yuzu_torpedo_3_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_idle"
+		type = "yuzu_torpedo_3_idle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_hit_effect"
+		type = "yuzu_torpedo_3_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_shield_hit_effect"
+		type = "yuzu_torpedo_3_shield_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_advanced_muzzle"
+		type = "yuzu_torpedo_3_advanced_muzzle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_advanced_idle"
+		type = "yuzu_torpedo_3_advanced_idle"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_advanced_hit_effect"
+		type = "yuzu_torpedo_3_advanced_hit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "yuzu_torpedo_3_advanced_shield_hit_effect"
+		type = "yuzu_torpedo_3_advanced_shield_hit_effect"
+		
+		scale = 1.0
+	}
 # ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
 # ---- 深渊 T3 先进版 (品红 #EB38BE) ----
 	pdxparticle = {
@@ -563,18 +517,6 @@ objectTypes = {
 		type = "yuzu_beam_3_muzzle_windup_effect_advanced"
 		
 		scale = 1.0
-	}
-	pdxparticle = {
-		name = "yuzu_l_3_hit_effect_advanced"
-		type = "yuzu_l_3_hit_effect_advanced"
-		
-		scale = 1.15
-	}
-	pdxparticle = {
-		name = "yuzu_l_3_muzzle_particle_advanced"
-		type = "yuzu_l_3_muzzle_advanced"
-		
-		scale = 1.5
 	}
 	pdxparticle = {
 		name = "yuzu_lance_3_hit_effect_advanced"
@@ -603,18 +545,7 @@ objectTypes = {
 
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 # ---- 太初版 (light violet #C7A6FF) ----
-	pdxparticle = {
-		name = "yuzu_l_1_hit_effect_master"
-		type = "yuzu_l_1_hit_effect_master"
-		
-		scale = 1.15
-	}
-	pdxparticle = {
-		name = "yuzu_l_1_muzzle_particle_master"
-		type = "yuzu_l_1_muzzle_master"
-		
-		scale = 1.5
-	}
+
 	pdxparticle = {
 		name = "yuzu_lance_1_hit_effect_master"
 		type = "yuzu_lance_1_hit_effect_master"

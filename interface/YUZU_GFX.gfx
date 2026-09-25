@@ -362,6 +362,38 @@ spriteTypes = {
 		name = "GFX_ship_part_thruster_yuzu_1_elite"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_thruster_yuzu_1_elite.dds"
 	}
+
+	# ===== 命定特质的图案层 (原版分层图标里的最上面那层) =====
+	spriteType = {
+		name = "GFX_leader_trait_yuzu_astral_destiny_resonance"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_yuzu_astral_destiny_resonance.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_yuzu_astral_destiny_throne"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_yuzu_astral_destiny_throne.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_yuzu_vampire_destiny_dominion"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_yuzu_vampire_destiny_dominion.dds"
+	}
+	spriteType = {
+		name = "GFX_leader_trait_yuzu_vampire_destiny_dynasty"
+		texturefile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_yuzu_vampire_destiny_dynasty.dds"
+	}
+
+	# ===== 命定特质的蓝底三层 (圆盘 / 光晕 / 边框) =====
+	spriteType = {
+		name = "GFX_yuzu_trait_bg_blue"
+		texturefile = "gfx/interface/icons/traits/leader_traits/yuzu_trait_bg_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_yuzu_destiny_glow_blue"
+		texturefile = "gfx/interface/icons/traits/leader_traits/yuzu_destiny_glow_blue.dds"
+	}
+	spriteType = {
+		name = "GFX_yuzu_destiny_frame_blue"
+		texturefile = "gfx/interface/icons/traits/leader_traits/yuzu_destiny_frame_blue.dds"
+	}
 # 深渊 T3 先进版(品红 #EB38BE)
 	spriteType = {
 		name = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"

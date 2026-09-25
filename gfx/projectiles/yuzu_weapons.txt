@@ -11,38 +11,38 @@ projectile_gfx_beam = {
 	}
 
 	#beam specific data
-	width = 2.0
-	texture_scroll_speed = 2.5
-	texture_tiling = 5.5
+	width = 8.0
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
-		duration = 2.0
+		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_lance_1_diffuse.dds"
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
 	
 	shield_impact = {
 		size = large
 		loop_duration = 0.5
-		delay = 0.1
+		delay = 0.2
 	}
 }
 
@@ -59,38 +59,38 @@ projectile_gfx_beam = {
 	}
 
 	#beam specific data
-	width = 5.0
-	texture_scroll_speed = 2.5
-	texture_tiling = 5
+	width = 8.0
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
-		duration = 2.0
+		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_lance_2_diffuse.dds"
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
 	
 	shield_impact = {
 		size = large
 		loop_duration = 0.5
-		delay = 0.1
+		delay = 0.2
 	}
 }
 
@@ -107,38 +107,38 @@ projectile_gfx_beam = {
 	}
 
 	#beam specific data
-	width = 5.0
-	texture_scroll_speed = 2.5
-	texture_tiling = 5
+	width = 8.0
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
-		duration = 2.0
+		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_lance_2_diffuse.dds"
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
 	
 	shield_impact = {
 		size = large
 		loop_duration = 0.5
-		delay = 0.1
+		delay = 0.2
 	}
 }
 
@@ -153,30 +153,32 @@ projectile_gfx_beam = {
 	
 	#beam specific data
 	width = 12.0
-	texture_scroll_speed = 2.0
-	texture_tiling = 5.5
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_beam_1.dds"
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
 	
 	shield_impact = {
 		size = large
@@ -196,30 +198,32 @@ projectile_gfx_beam = {
 	
 	#beam specific data
 	width = 12.0
-	texture_scroll_speed = 2.0
-	texture_tiling = 5.5
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_beam_2.dds"
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
 	
 	shield_impact = {
 		size = large
@@ -239,30 +243,32 @@ projectile_gfx_beam = {
 	
 	#beam specific data
 	width = 12.0
-	texture_scroll_speed = 2.0
-	texture_tiling = 5.5
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_beam_2.dds"
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
 	
 	shield_impact = {
 		size = large
@@ -271,506 +277,230 @@ projectile_gfx_beam = {
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_l_1"
 	color = { 0.2 	0.9 	0.4 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity"
+	hit_entity = "yuzu_torpedo_l_1_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_l_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_l_1_muzzle_entity"
 	
-	#beam specific data
-	width = 1.0
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_l_1_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
 		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_l_2"
 	color = { 0.9 	0.2 	0.1 	0.8 }
-	hit_entity = "yuzu_l_2_hit_entity"
-	shield_hit_entity = "yuzu_l_2_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_2_muzzle_entity"
+	hit_entity = "yuzu_torpedo_l_2_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_l_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_l_2_muzzle_entity"
 	
-	#beam specific data
-	width = 3.0
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_l_2_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
 		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_l_3"
 	color = { 0.8 	0.2 	1.0 	0.8 }
-	hit_entity = "yuzu_l_3_hit_entity"
-	shield_hit_entity = "yuzu_l_3_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_3_muzzle_entity"
+	hit_entity = "yuzu_torpedo_l_3_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_l_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_l_3_muzzle_entity"
 	
-	#beam specific data
-	width = 3.0
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_l_3_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
 		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_m_1"
 	color = { 0.2 	0.9 	0.4 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity"
+	hit_entity = "yuzu_torpedo_m_1_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_m_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_m_1_muzzle_entity"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_m_1_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = medium
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_m_2"
 	color = { 0.9 	0.2 	0.1 	0.8 }
-	hit_entity = "yuzu_l_2_hit_entity"
-	shield_hit_entity = "yuzu_l_2_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_2_muzzle_entity"
+	hit_entity = "yuzu_torpedo_m_2_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_m_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_m_2_muzzle_entity"
 	
-	#beam specific data
-	width = 1.5
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_m_2_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = medium
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_m_3"
 	color = { 0.8 	0.2 	1.0 	0.8 }
-	hit_entity = "yuzu_l_3_hit_entity"
-	shield_hit_entity = "yuzu_l_3_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_3_muzzle_entity"
+	hit_entity = "yuzu_torpedo_m_3_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_m_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_m_3_muzzle_entity"
 	
-	#beam specific data
-	width = 1.5
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_m_3_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = medium
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_s_1"
 	color = { 0.2 	0.9 	0.4 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity"
+	hit_entity = "yuzu_torpedo_s_1_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_s_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_s_1_muzzle_entity"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_s_1_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = small
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_s_2"
 	color = { 0.9 	0.2 	0.1 	0.8 }
-	hit_entity = "yuzu_l_2_hit_entity"
-	shield_hit_entity = "yuzu_l_2_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_2_muzzle_entity"
+	hit_entity = "yuzu_torpedo_s_2_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_s_2_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_s_2_muzzle_entity"
 	
-	#beam specific data
-	width = 1.5
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_s_2_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = small
+		delay = 0.0
 	}
 }
 
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_s_3"
 	color = { 0.8 	0.2 	1.0 	0.8 }
-	hit_entity = "yuzu_l_3_hit_entity"
-	shield_hit_entity = "yuzu_l_3_shield_hit_entity"
-	muzzle_flash_entity = "yuzu_l_3_muzzle_entity"
+	hit_entity = "yuzu_torpedo_s_3_hit_entity"
+	shield_hit_entity = "yuzu_torpedo_s_3_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_torpedo_s_3_muzzle_entity"
 	
-	#beam specific data
-	width = 1.5
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_s_3_entity"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = small
+		delay = 0.0
 	}
 }
 
 # ---- 高级版弹体 (teal #39C5BB) ----
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_s_1_advanced"
 	color = { 0.2235 	0.7725 	0.7333 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_advanced"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_advanced"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_advanced"
+	hit_entity = "yuzu_torpedo_s_1_hit_entity_advanced"
+	shield_hit_entity = "yuzu_torpedo_s_1_shield_hit_entity_advanced"
+	muzzle_flash_entity = "yuzu_torpedo_s_1_muzzle_entity_advanced"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_s_1_entity_advanced"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = small
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_m_1_advanced"
 	color = { 0.2235 	0.7725 	0.7333 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_advanced"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_advanced"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_advanced"
+	hit_entity = "yuzu_torpedo_m_1_hit_entity_advanced"
+	shield_hit_entity = "yuzu_torpedo_m_1_shield_hit_entity_advanced"
+	muzzle_flash_entity = "yuzu_torpedo_m_1_muzzle_entity_advanced"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_m_1_entity_advanced"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = medium
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_l_1_advanced"
 	color = { 0.2235 	0.7725 	0.7333 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_advanced"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_advanced"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_advanced"
+	hit_entity = "yuzu_torpedo_l_1_hit_entity_advanced"
+	shield_hit_entity = "yuzu_torpedo_l_1_shield_hit_entity_advanced"
+	muzzle_flash_entity = "yuzu_torpedo_l_1_muzzle_entity_advanced"
 	
-	#beam specific data
-	width = 1.0
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_l_1_entity_advanced"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
 		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		delay = 0.0
 	}
 }
 projectile_gfx_beam = {
@@ -786,38 +516,38 @@ projectile_gfx_beam = {
 	}
 
 	#beam specific data
-	width = 2.0
-	texture_scroll_speed = 2.5
-	texture_tiling = 5.5
+	width = 8.0
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
-		duration = 2.0
+		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_lance_1_diffuse.dds"
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
 	
 	shield_impact = {
 		size = large
 		loop_duration = 0.5
-		delay = 0.1
+		delay = 0.2
 	}
 }
 projectile_gfx_beam = {
@@ -831,30 +561,32 @@ projectile_gfx_beam = {
 	
 	#beam specific data
 	width = 12.0
-	texture_scroll_speed = 2.0
-	texture_tiling = 5.5
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_beam_1.dds"
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
 	
 	shield_impact = {
 		size = large
@@ -864,127 +596,58 @@ projectile_gfx_beam = {
 }
 # ===== ELITE(精英版) 自动生成区块 — 由 scripts/make_yuzu_elite.py 写入 =====
 # ---- 精英版弹体 (sky blue #66CCFF) ----
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_s_1_elite"
 	color = { 0.4 	0.8 	1.0 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_elite"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_elite"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_elite"
+	hit_entity = "yuzu_torpedo_s_1_hit_entity_elite"
+	shield_hit_entity = "yuzu_torpedo_s_1_shield_hit_entity_elite"
+	muzzle_flash_entity = "yuzu_torpedo_s_1_muzzle_entity_elite"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_s_1_entity_elite"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = small
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_m_1_elite"
 	color = { 0.4 	0.8 	1.0 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_elite"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_elite"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_elite"
+	hit_entity = "yuzu_torpedo_m_1_hit_entity_elite"
+	shield_hit_entity = "yuzu_torpedo_m_1_shield_hit_entity_elite"
+	muzzle_flash_entity = "yuzu_torpedo_m_1_muzzle_entity_elite"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_m_1_entity_elite"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = medium
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_l_1_elite"
 	color = { 0.4 	0.8 	1.0 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_elite"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_elite"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_elite"
+	hit_entity = "yuzu_torpedo_l_1_hit_entity_elite"
+	shield_hit_entity = "yuzu_torpedo_l_1_shield_hit_entity_elite"
+	muzzle_flash_entity = "yuzu_torpedo_l_1_muzzle_entity_elite"
 	
-	#beam specific data
-	width = 1.0
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_l_1_entity_elite"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
 		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		delay = 0.0
 	}
 }
 projectile_gfx_beam = {
@@ -1000,38 +663,38 @@ projectile_gfx_beam = {
 	}
 
 	#beam specific data
-	width = 2.0
-	texture_scroll_speed = 2.5
-	texture_tiling = 5.5
+	width = 8.0
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
-		duration = 2.0
+		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_lance_1_diffuse.dds"
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
 	
 	shield_impact = {
 		size = large
 		loop_duration = 0.5
-		delay = 0.1
+		delay = 0.2
 	}
 }
 projectile_gfx_beam = {
@@ -1045,30 +708,32 @@ projectile_gfx_beam = {
 	
 	#beam specific data
 	width = 12.0
-	texture_scroll_speed = 2.0
-	texture_tiling = 5.5
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_beam_1.dds"
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
 	
 	shield_impact = {
 		size = large
@@ -1078,127 +743,58 @@ projectile_gfx_beam = {
 }
 # ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
 # ---- 深渊 T3 先进版弹体 (品红 #EB38BE) ----
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_s_3_advanced"
 	color = { 1.0 	0.2 	0.8 	0.8 }
-	hit_entity = "yuzu_l_3_hit_entity_advanced"
-	shield_hit_entity = "yuzu_l_3_shield_hit_entity_advanced"
-	muzzle_flash_entity = "yuzu_l_3_muzzle_entity_advanced"
+	hit_entity = "yuzu_torpedo_s_3_hit_entity_advanced"
+	shield_hit_entity = "yuzu_torpedo_s_3_shield_hit_entity_advanced"
+	muzzle_flash_entity = "yuzu_torpedo_s_3_muzzle_entity_advanced"
 	
-	#beam specific data
-	width = 1.5
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_s_3_entity_advanced"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = small
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_m_3_advanced"
 	color = { 1.0 	0.2 	0.8 	0.8 }
-	hit_entity = "yuzu_l_3_hit_entity_advanced"
-	shield_hit_entity = "yuzu_l_3_shield_hit_entity_advanced"
-	muzzle_flash_entity = "yuzu_l_3_muzzle_entity_advanced"
+	hit_entity = "yuzu_torpedo_m_3_hit_entity_advanced"
+	shield_hit_entity = "yuzu_torpedo_m_3_shield_hit_entity_advanced"
+	muzzle_flash_entity = "yuzu_torpedo_m_3_muzzle_entity_advanced"
 	
-	#beam specific data
-	width = 1.5
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_m_3_entity_advanced"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = medium
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_l_3_advanced"
 	color = { 1.0 	0.2 	0.8 	0.8 }
-	hit_entity = "yuzu_l_3_hit_entity_advanced"
-	shield_hit_entity = "yuzu_l_3_shield_hit_entity_advanced"
-	muzzle_flash_entity = "yuzu_l_3_muzzle_entity_advanced"
+	hit_entity = "yuzu_torpedo_l_3_hit_entity_advanced"
+	shield_hit_entity = "yuzu_torpedo_l_3_shield_hit_entity_advanced"
+	muzzle_flash_entity = "yuzu_torpedo_l_3_muzzle_entity_advanced"
 	
-	#beam specific data
-	width = 3.0
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_2.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_l_3_entity_advanced"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
 		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		delay = 0.0
 	}
 }
 projectile_gfx_beam = {
@@ -1214,38 +810,38 @@ projectile_gfx_beam = {
 	}
 
 	#beam specific data
-	width = 5.0
-	texture_scroll_speed = 2.5
-	texture_tiling = 5
+	width = 8.0
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
-		duration = 2.0
+		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_lance_2_diffuse.dds"
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
 	
 	shield_impact = {
 		size = large
 		loop_duration = 0.5
-		delay = 0.1
+		delay = 0.2
 	}
 }
 projectile_gfx_beam = {
@@ -1259,30 +855,32 @@ projectile_gfx_beam = {
 	
 	#beam specific data
 	width = 12.0
-	texture_scroll_speed = 2.0
-	texture_tiling = 5.5
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_beam_2.dds"
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
 	
 	shield_impact = {
 		size = large
@@ -1293,127 +891,58 @@ projectile_gfx_beam = {
 
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 # ---- 太初版弹体 (light violet #C7A6FF) ----
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_s_1_master"
 	color = { 0.7804 	0.6510 	1.0 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_master"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_master"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_master"
+	hit_entity = "yuzu_torpedo_s_1_hit_entity_master"
+	shield_hit_entity = "yuzu_torpedo_s_1_shield_hit_entity_master"
+	muzzle_flash_entity = "yuzu_torpedo_s_1_muzzle_entity_master"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_s_1_entity_master"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = small
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_m_1_master"
 	color = { 0.7804 	0.6510 	1.0 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_master"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_master"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_master"
+	hit_entity = "yuzu_torpedo_m_1_hit_entity_master"
+	shield_hit_entity = "yuzu_torpedo_m_1_shield_hit_entity_master"
+	muzzle_flash_entity = "yuzu_torpedo_m_1_muzzle_entity_master"
 	
-	#beam specific data
-	width = 0.5
-	texture_scroll_speed = 25.5
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_m_1_entity_master"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
-		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		size = medium
+		delay = 0.0
 	}
 }
-projectile_gfx_beam = {
+projectile_gfx_ballistic = {
 	#common for all types of projectiles
 	name = "yuzu_l_1_master"
 	color = { 0.7804 	0.6510 	1.0 	0.8 }
-	hit_entity = "yuzu_l_1_hit_entity_master"
-	shield_hit_entity = "yuzu_l_1_shield_hit_entity_master"
-	muzzle_flash_entity = "yuzu_l_1_muzzle_entity_master"
+	hit_entity = "yuzu_torpedo_l_1_hit_entity_master"
+	shield_hit_entity = "yuzu_torpedo_l_1_shield_hit_entity_master"
+	muzzle_flash_entity = "yuzu_torpedo_l_1_muzzle_entity_master"
 	
-	#beam specific data
-	width = 1.0
-	texture_scroll_speed = 10
-	texture_tiling = 5.5
-	
-	hit = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
-		}
-		duration = 3.0
-	}
-	miss = {
-		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
-		}
-		duration = 1.5
-	}
-	texture = "gfx/models/combat_items/yuzu_l_1.dds"
+	#ballistic specific (ASB Ironman 等离子)
+	entity = "yuzu_torpedo_l_1_entity_master"
+	speed = 480.0			#preferred speed of the projectile
+	max_duration = 3.0		#guarantee reaching the target within this time
 	
 	shield_impact = {
 		size = large
-		loop_duration = 0.5
-		delay = 0.2
+		delay = 0.0
 	}
 }
 projectile_gfx_beam = {
@@ -1429,38 +958,38 @@ projectile_gfx_beam = {
 	}
 
 	#beam specific data
-	width = 2.0
-	texture_scroll_speed = 2.5
-	texture_tiling = 5.5
+	width = 8.0
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
-		duration = 2.0
+		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		100.0
-			0.4		5.0
-			0.6		0.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_lance_1_diffuse.dds"
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
 	
 	shield_impact = {
 		size = large
 		loop_duration = 0.5
-		delay = 0.1
+		delay = 0.2
 	}
 }
 projectile_gfx_beam = {
@@ -1474,30 +1003,32 @@ projectile_gfx_beam = {
 	
 	#beam specific data
 	width = 12.0
-	texture_scroll_speed = 2.0
-	texture_tiling = 5.5
+	texture_scroll_speed = 0.1
+	texture_tiling = 5000
 	
 	hit = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		20.0
-			0.7		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 3.0
 	}
 	miss = {
 		alpha_curve = { 
-			0.0 	0.0
-			0.05	0.0
-			0.1		15.0
-			0.4		5.0
-			1.0 	0.0
+			0.0 	35.0
+			0.05	20.0
+			0.1		10.0
+			0.4		10.0
+			0.6		10.0
+			1.0 	10.0
 		}
 		duration = 1.5
 	}
-	texture = "gfx/models/combat_items/yuzu_beam_1.dds"
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
 	
 	shield_impact = {
 		size = large

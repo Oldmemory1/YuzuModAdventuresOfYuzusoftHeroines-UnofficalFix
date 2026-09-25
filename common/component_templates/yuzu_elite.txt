@@ -57,10 +57,13 @@ weapon_component_template = {
 		weight = 1000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
+
 }
 
 weapon_component_template = {
@@ -112,10 +115,13 @@ weapon_component_template = {
 		weight = 1000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
+
 }
 
 weapon_component_template = {
@@ -167,10 +173,13 @@ weapon_component_template = {
 		weight = 1000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
+
 }
 
 weapon_component_template = {
@@ -241,10 +250,13 @@ weapon_component_template = {
 		weight = 1000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
+
 }
 
 weapon_component_template = {
@@ -308,10 +320,13 @@ weapon_component_template = {
 		weight = 1000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
+
 }
 
 # ===== 装甲 (3) =====

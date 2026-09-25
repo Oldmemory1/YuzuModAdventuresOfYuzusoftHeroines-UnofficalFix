@@ -349,7 +349,7 @@ yuzu_fe_archivist = {
 	}
 
 	resources = {
-		category = planet_jobs
+		category = planet_researchers
 		produces = {
 			physics_research = 10
 			society_research = 10
@@ -381,7 +381,7 @@ yuzu_fe_archivist = {
 }
 
 yuzu_fe_augur = {
-	category = specialist
+	category = ruler
 	
 	is_capped_by_modifier = yes
 	
@@ -401,13 +401,13 @@ yuzu_fe_augur = {
 		is_sapient = yes
 	}
 
-	possible_precalc = can_fill_specialist_job
+	possible_precalc = can_fill_ruler_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
 	}
 
 	resources = {
-		category = planet_jobs
+		category = planet_bureaucrats
 		produces = {
 			unity = 20
 		}

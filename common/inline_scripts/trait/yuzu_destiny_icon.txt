@@ -1,0 +1,39 @@
+# 「命定特质」的图标分层(蓝底)。
+#
+# 与原版 common/inline_scripts/trait/icon.txt 同构, 只把三层换成蓝色版本:
+#   圆盘底 -> 光晕 -> 边框 -> 图案层
+# 圆盘 / 光晕 / 边框由 scripts/make_yuzu_destiny_icon_layers.py 产出
+# (光晕与边框取自 Libra 的青色层并转到蓝 215°, 圆盘是原版 trait_bg 染蓝)。
+#
+# 参数: CLASS / ICON / RARITY / COUNCIL / TIER, 与原版 trait/icon 一致。
+
+inline_script = {
+	script = trait/subtitle/council_$COUNCIL$
+	RARITY = $RARITY$
+	CLASS = $CLASS$
+}
+icon = {
+	layer = {
+		icon = "GFX_yuzu_trait_bg_blue"
+		color = "white"
+	}
+	layer = {
+		icon = "GFX_yuzu_destiny_glow_blue"
+		color = "white"
+	}
+	layer = {
+		icon = "GFX_yuzu_destiny_frame_blue"
+		color = "white"
+	}
+	layer = {
+		icon = $ICON$
+		color = "white"
+	}
+	inline_script = {
+		script = trait/icon_element/council_$COUNCIL$
+		CLASS = $CLASS$
+	}
+	inline_script = trait/icon_element/tier_$TIER$
+}
+leader_trait_rarity = $RARITY$
+sorting_priority = @trait_sorting_priority_$RARITY$_$COUNCIL$_$TIER$

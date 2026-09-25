@@ -305,3 +305,247 @@ leader_trait_yuzu_abyss_presiding_judge = {
 	initial = no
 	randomized = no
 }
+
+#############################
+# 命定特质 (destiny traits) #
+#############################
+# 领袖 8 级时从候选里挑一个 (原版 defines: LEADER_DESTINY_CHOICE_LEVEL = 8)。
+# 用 requires_traits 锁给对应物种; 图标 = 原版分层图标(圆盘 + 命定金绿光晕 + 边框)
+# + 本 mod 的图案层, 见 interface/YUZU_GFX.gfx 与 destiny_trait.md。
+
+##### 星幽共鸣:舰队司令 #####
+# 只给「指挥官 → 舰队司令」(subclass_commander_admiral) 的老练领袖选。
+leader_trait_yuzu_astral_destiny_resonance_commander_admiral = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/yuzu_destiny_icon
+		CLASS = commander
+		ICON = GFX_leader_trait_yuzu_astral_destiny_resonance
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	background_icon = GFX_leader_background_destiny_1
+
+	requires_traits = { trait_yuzu_astral }
+	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = subclass_commander_admiral
+		has_trait = leader_trait_yuzu_astral
+	}
+	# 命定特质靠"升级时的候选列表"给出, 不能像普通特质那样写 randomized = no, 否则永远不会出现
+	selectable_weight = {
+		weight = @subclass_trait_weight
+	}
+
+	# 星幽术凝成舰队级的护盾与感知
+	fleet_modifier = {
+		ship_weapon_damage = 0.25
+		ship_fire_rate_mult = 0.25
+		ship_weapon_range_mult = 0.25
+		ship_speed_mult = 0.25
+		ships_upkeep_mult = -0.25
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+
+##### 星幽共鸣:产业专员 #####
+# 只给「行政官 → 产业专员」(subclass_official_governor) 的老练领袖选。
+leader_trait_yuzu_astral_destiny_resonance_official_governor = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/yuzu_destiny_icon
+		CLASS = official
+		ICON = GFX_leader_trait_yuzu_astral_destiny_resonance
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	background_icon = GFX_leader_background_destiny_1
+
+	requires_traits = { trait_yuzu_astral }
+	leader_class = { official }
+	leader_potential_add = {
+		has_trait = subclass_official_governor
+		has_trait = leader_trait_yuzu_astral
+	}
+	# 命定特质靠"升级时的候选列表"给出, 不能像普通特质那样写 randomized = no, 否则永远不会出现
+	selectable_weight = {
+		weight = @subclass_trait_weight
+	}
+
+	# 星幽术下沉到行星的每一道工序(与产业专员本身的行星/星区修正同构, 数值放大)
+	planet_modifier = {
+		planet_jobs_specialist_produces_mult = 0.25
+		pop_amenities_usage_mult = -0.25
+		planet_building_build_speed_mult = 0.50
+		planet_clear_blocker_speed_mult = 0.50
+	}
+	sector_modifier = {
+		planet_jobs_specialist_produces_mult = 0.125
+		pop_amenities_usage_mult = -0.125
+		planet_building_build_speed_mult = 0.25
+		planet_clear_blocker_speed_mult = 0.25
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+
+##### 星幽共鸣:统计学家 #####
+# 只给「科学家 → 统计学家」(subclass_scientist_councilor) 的老练领袖选。
+leader_trait_yuzu_astral_destiny_resonance_scientist_councilor = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/yuzu_destiny_icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_yuzu_astral_destiny_resonance
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	background_icon = GFX_leader_background_destiny_1
+
+	requires_traits = { trait_yuzu_astral }
+	leader_class = { scientist }
+	leader_potential_add = {
+		has_trait = subclass_scientist_councilor
+		has_trait = leader_trait_yuzu_astral
+	}
+	# 命定特质靠"升级时的候选列表"给出, 不能像普通特质那样写 randomized = no, 否则永远不会出现
+	selectable_weight = {
+		weight = @subclass_trait_weight
+	}
+
+	# 星幽术直接指向帝国的科研脉络(统计学家本身是议会向)
+	councilor_modifier = {
+		all_technology_research_speed = 0.25
+		category_particles_research_speed_mult = 0.25
+		category_military_theory_research_speed_mult = 0.25
+		category_voidcraft_research_speed_mult = 0.25
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+##### 血裔霸权:舰队司令 #####
+# 只给「指挥官 → 舰队司令」(subclass_commander_admiral) 的老练领袖选。
+leader_trait_yuzu_vampire_destiny_dominion_commander_admiral = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/yuzu_destiny_icon
+		CLASS = commander
+		ICON = GFX_leader_trait_yuzu_vampire_destiny_dominion
+		RARITY = paragon
+		COUNCIL = no
+		TIER = none
+	}
+	background_icon = GFX_leader_background_destiny_1
+
+	requires_traits = { trait_yuzu_vampire }
+	leader_class = { commander }
+	leader_potential_add = {
+		has_trait = subclass_commander_admiral
+		has_trait = leader_trait_yuzu_vampire
+	}
+	# 命定特质靠"升级时的候选列表"给出, 不能像普通特质那样写 randomized = no, 否则永远不会出现
+	selectable_weight = {
+		weight = @subclass_trait_weight
+	}
+
+	fleet_modifier = {
+		ship_weapon_damage = 0.25
+		ship_weapon_range_mult = 0.25
+		ship_shield_damage_mult = 0.25
+		ship_armor_damage_mult = 0.25
+		ships_upkeep_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+##### 血裔霸权:产业专员 #####
+# 只给「行政官 → 产业专员」(subclass_official_governor) 的老练领袖选。
+leader_trait_yuzu_vampire_destiny_dominion_official_governor = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/yuzu_destiny_icon
+		CLASS = official
+		ICON = GFX_leader_trait_yuzu_vampire_destiny_dominion
+		RARITY = paragon
+		COUNCIL = no
+
+		TIER = none
+	}
+	background_icon = GFX_leader_background_destiny_1
+
+	requires_traits = { trait_yuzu_vampire }
+	leader_class = { official }
+	leader_potential_add = {
+		has_trait = subclass_official_governor
+		has_trait = leader_trait_yuzu_vampire
+	}
+	# 命定特质靠"升级时的候选列表"给出, 不能像普通特质那样写 randomized = no, 否则永远不会出现
+	selectable_weight = {
+		weight = @subclass_trait_weight
+	}
+
+	
+	planet_modifier = {
+		planet_jobs_worker_produces_mult = 0.25
+		planet_buildings_cost_mult = -0.25
+		planet_districts_cost_mult = -0.25
+		planet_orbital_bombardment_damage = -0.50
+	}
+	sector_modifier = {
+		planet_jobs_worker_produces_mult = 0.125
+		planet_buildings_cost_mult = -0.125
+		planet_districts_cost_mult = -0.125
+		planet_orbital_bombardment_damage = -0.25
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+
+##### 血裔霸权:统计学家 #####
+# 只给「科学家 → 统计学家」(subclass_scientist_councilor) 的老练领袖选。
+leader_trait_yuzu_vampire_destiny_dominion_scientist_councilor = {
+	leader_trait_type = destiny
+	inline_script = {
+		script = trait/yuzu_destiny_icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_yuzu_vampire_destiny_dominion
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	background_icon = GFX_leader_background_destiny_1
+
+	requires_traits = { trait_yuzu_vampire }
+	leader_class = { scientist }
+	leader_potential_add = {
+		has_trait = subclass_scientist_councilor
+		has_trait = leader_trait_yuzu_vampire
+	}
+	# 命定特质靠"升级时的候选列表"给出, 不能像普通特质那样写 randomized = no, 否则永远不会出现
+	selectable_weight = {
+		weight = @subclass_trait_weight
+	}
+
+	councilor_modifier = {
+		all_technology_research_speed = 0.25
+		category_biology_research_speed_mult = 0.25
+		category_field_manipulation_research_speed_mult = 0.25
+		category_industry_research_speed_mult = 0.25
+	}
+	ai_weight = {
+		weight = 100
+	}
+}

@@ -247,10 +247,11 @@ on_building_upgraded = {
 }
 
 # A building construction has demolished.
+# 复用 23：它按星球 flag 结算全部 36 级；原 22 只处理 1 级，拆除 2 级以上冷冻室时冷冻人口会丢失。
 # This = Planet
 on_building_demolished = {
 	events = {
-		Yuzu_other_event.22
+		Yuzu_other_event.23
 	}
 }
 

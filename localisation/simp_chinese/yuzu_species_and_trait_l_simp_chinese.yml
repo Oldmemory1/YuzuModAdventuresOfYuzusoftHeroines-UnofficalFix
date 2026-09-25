@@ -61,6 +61,23 @@
  leader_trait_yuzu_vampire:"吸血鬼"
  leader_trait_yuzu_vampire_desc:"吸血鬼拥有比人类更强大的身体能力和感觉，并且作息节律与人类相反，昼伏夜出。吸血鬼拥有被称为“吸血鬼病毒”的特殊因子，在吸取人类的血液后，各种身体机能都会大幅上升，也能够使用“能力”——由于吸取人类血液后，吸血鬼病毒活性化所拥有的超能力。每个吸血鬼所拥有的能力的型态和模样及运用方式都不尽相同。"
 
+ leader_trait_yuzu_astral_destiny_resonance_commander_admiral:"星幽共鸣"
+ leader_trait_yuzu_astral_destiny_resonance_commander_admiral_desc:"星幽术凝成舰队级的第二层躯体：护盾与装甲在星幽子的共振中自行弥合，敌人的位置在感知里抢先浮现，就连脱离战场也像是在星幽子之间滑走。"
+ leader_trait_yuzu_astral_destiny_resonance_official_governor:"星幽共鸣"
+ leader_trait_yuzu_astral_destiny_resonance_official_governor_desc:"星幽网络铺满行星的每一道工序：原料在共振中自行归位，生产配额不再需要人去盯，连工厂排出的余热都会被收进下一条产线。"
+ leader_trait_yuzu_astral_destiny_resonance_scientist_councilor:"星幽共鸣"
+ leader_trait_yuzu_astral_destiny_resonance_scientist_councilor_desc:"统计学家把星幽术写进帝国的科研脉络：数据在星幽子之间自行对齐，研究方向不再靠猜，整个帝国的灵光都被收束到同一条时间线上。"
+ leader_trait_yuzu_astral_destiny_throne:"星幽王座"
+ leader_trait_yuzu_astral_destiny_throne_desc:"星幽网络自王座向下铺展，接管行星的每一道工序。被它笼罩的领地运转得更快、更整洁，而王座之上的人只需要决定方向。"
+ leader_trait_yuzu_vampire_destiny_dominion_commander_admiral:"血裔霸权"
+ leader_trait_yuzu_vampire_destiny_dominion_commander_admiral_desc:"病毒在他体内活化到极致，整支舰队都被拖进同一段加速的节律：炮组快过对手的瞄准，舰体在损伤中自行弥合。他麾下的陆军同样被这种活性灌满，动作快到不像活物。"
+ leader_trait_yuzu_vampire_destiny_dominion_official_governor:"血裔霸权"
+ leader_trait_yuzu_vampire_destiny_dominion_official_governor_desc:"昼伏夜出的天性被写进了整颗行星的班表：白昼休眠，夜晚全速开工，产线在黑暗里比任何时候都清醒。至于混乱与犯罪，往往在有人察觉之前就已经被“能力”处理干净。"
+ leader_trait_yuzu_vampire_destiny_dominion_scientist_councilor:"血裔霸权"
+ leader_trait_yuzu_vampire_destiny_dominion_scientist_councilor_desc:"统计学家把病毒的表达谱整理成帝国的研究纲领：病毒如何活化、“能力”为何因人而异，都被拆成可以复现的条目。长夜不再只是作息，而是一份可以被通读的知识遗产。"
+ leader_trait_yuzu_vampire_destiny_dynasty:"永夜王朝"
+ leader_trait_yuzu_vampire_destiny_dynasty_desc:"永夜王朝把昼伏夜出的天性写成了制度：议会彻夜运转，白昼留给沉睡，日光与海水则成了国境线上最省事的屏障。王座上那位久未露面，却没有人怀疑他仍在看着。"
+
 
  ABYSS:0"深渊类"
  ABYSS_desc:1 "物种类别对你的帝国没有太大影响，但与其他类别相比，同是深渊类的物种，双方认同感会更强。"

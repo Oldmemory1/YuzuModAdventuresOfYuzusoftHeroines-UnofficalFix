@@ -258,119 +258,139 @@ create_yuzu_fleet_1 = {
 		name = "NAME_Yuzu_Fleet_1"
 		effect = {
 			set_owner = PREV.owner
-			random_list = {
-				20 = {
+			# 生物舰船组：机械船体（泰坦/战巡/护航全是坠落帝国机械船）不合适，
+			# 同一个法令改刷同档的契约刺蜂。
+			# 数量按「X 槽等价」折算，1 T 槽 = 2 X 槽：
+			#   机械版 = 1 泰坦(2T = 4X) + 6 战巡(各 2X) + 24 护航(无 X) = 16 X
+			#   刺蜂   = 2T + 4X = 8 X/艘  →  16 / 8 = 2 艘
+			# 改这里记得同步 scripts/make_yuzu_contract_fleet_tiers.py 的 stems（含 Stinger）。
+			if = {
+				limit = {
+					PREV.owner = { country_uses_bio_ships = yes }
+				}
+				while = {
+					count = 2
 					create_ship = {
 						name = random
-						design = "NAME_Yuzu_Titan"
-						graphical_culture = "fallen_empire_01"
+						design = "NAME_Yuzu_Stinger"
 					}
-					while = {
-						count = 6
+				}
+			}
+			else = {
+				random_list = {
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large"
+							design = "NAME_Yuzu_Titan"
 							graphical_culture = "fallen_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small"
-							graphical_culture = "fallen_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large"
+								graphical_culture = "fallen_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small"
+								graphical_culture = "fallen_empire_01"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan"
-						graphical_culture = "fallen_empire_02"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large"
+							design = "NAME_Yuzu_Titan"
 							graphical_culture = "fallen_empire_02"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small"
-							graphical_culture = "fallen_empire_02"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large"
+								graphical_culture = "fallen_empire_02"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small"
+								graphical_culture = "fallen_empire_02"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan"
-						graphical_culture = "fallen_empire_03"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large"
+							design = "NAME_Yuzu_Titan"
 							graphical_culture = "fallen_empire_03"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small"
-							graphical_culture = "fallen_empire_03"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large"
+								graphical_culture = "fallen_empire_03"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small"
+								graphical_culture = "fallen_empire_03"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan"
-						graphical_culture = "fallen_empire_04"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large"
+							design = "NAME_Yuzu_Titan"
 							graphical_culture = "fallen_empire_04"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small"
-							graphical_culture = "fallen_empire_04"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large"
+								graphical_culture = "fallen_empire_04"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small"
+								graphical_culture = "fallen_empire_04"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan"
-						graphical_culture = "fallen_machine_empire_01"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large"
+							design = "NAME_Yuzu_Titan"
 							graphical_culture = "fallen_machine_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small"
-							graphical_culture = "fallen_machine_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large"
+								graphical_culture = "fallen_machine_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small"
+								graphical_culture = "fallen_machine_empire_01"
+							}
 						}
 					}
 				}
@@ -391,119 +411,139 @@ create_yuzu_fleet_advanced = {
 		name = "NAME_Yuzu_Fleet_Advanced"
 		effect = {
 			set_owner = PREV.owner
-			random_list = {
-				20 = {
+			# 生物舰船组：机械船体（泰坦/战巡/护航全是坠落帝国机械船）不合适，
+			# 同一个法令改刷同档的契约刺蜂。
+			# 数量按「X 槽等价」折算，1 T 槽 = 2 X 槽：
+			#   机械版 = 1 泰坦(2T = 4X) + 6 战巡(各 2X) + 24 护航(无 X) = 16 X
+			#   刺蜂   = 2T + 4X = 8 X/艘  →  16 / 8 = 2 艘
+			# 改这里记得同步 scripts/make_yuzu_contract_fleet_tiers.py 的 stems（含 Stinger）。
+			if = {
+				limit = {
+					PREV.owner = { country_uses_bio_ships = yes }
+				}
+				while = {
+					count = 2
 					create_ship = {
 						name = random
-						design = "NAME_Yuzu_Titan_Advanced"
-						graphical_culture = "fallen_empire_01"
+						design = "NAME_Yuzu_Stinger_Advanced"
 					}
-					while = {
-						count = 6
+				}
+			}
+			else = {
+				random_list = {
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Advanced"
+							design = "NAME_Yuzu_Titan_Advanced"
 							graphical_culture = "fallen_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Advanced"
-							graphical_culture = "fallen_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Advanced"
+								graphical_culture = "fallen_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Advanced"
+								graphical_culture = "fallen_empire_01"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Advanced"
-						graphical_culture = "fallen_empire_02"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Advanced"
+							design = "NAME_Yuzu_Titan_Advanced"
 							graphical_culture = "fallen_empire_02"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Advanced"
-							graphical_culture = "fallen_empire_02"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Advanced"
+								graphical_culture = "fallen_empire_02"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Advanced"
+								graphical_culture = "fallen_empire_02"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Advanced"
-						graphical_culture = "fallen_empire_03"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Advanced"
+							design = "NAME_Yuzu_Titan_Advanced"
 							graphical_culture = "fallen_empire_03"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Advanced"
-							graphical_culture = "fallen_empire_03"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Advanced"
+								graphical_culture = "fallen_empire_03"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Advanced"
+								graphical_culture = "fallen_empire_03"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Advanced"
-						graphical_culture = "fallen_empire_04"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Advanced"
+							design = "NAME_Yuzu_Titan_Advanced"
 							graphical_culture = "fallen_empire_04"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Advanced"
-							graphical_culture = "fallen_empire_04"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Advanced"
+								graphical_culture = "fallen_empire_04"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Advanced"
+								graphical_culture = "fallen_empire_04"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Advanced"
-						graphical_culture = "fallen_machine_empire_01"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Advanced"
+							design = "NAME_Yuzu_Titan_Advanced"
 							graphical_culture = "fallen_machine_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Advanced"
-							graphical_culture = "fallen_machine_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Advanced"
+								graphical_culture = "fallen_machine_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Advanced"
+								graphical_culture = "fallen_machine_empire_01"
+							}
 						}
 					}
 				}
@@ -523,119 +563,139 @@ create_yuzu_fleet_elite = {
 		name = "NAME_Yuzu_Fleet_Elite"
 		effect = {
 			set_owner = PREV.owner
-			random_list = {
-				20 = {
+			# 生物舰船组：机械船体（泰坦/战巡/护航全是坠落帝国机械船）不合适，
+			# 同一个法令改刷同档的契约刺蜂。
+			# 数量按「X 槽等价」折算，1 T 槽 = 2 X 槽：
+			#   机械版 = 1 泰坦(2T = 4X) + 6 战巡(各 2X) + 24 护航(无 X) = 16 X
+			#   刺蜂   = 2T + 4X = 8 X/艘  →  16 / 8 = 2 艘
+			# 改这里记得同步 scripts/make_yuzu_contract_fleet_tiers.py 的 stems（含 Stinger）。
+			if = {
+				limit = {
+					PREV.owner = { country_uses_bio_ships = yes }
+				}
+				while = {
+					count = 2
 					create_ship = {
 						name = random
-						design = "NAME_Yuzu_Titan_Elite"
-						graphical_culture = "fallen_empire_01"
+						design = "NAME_Yuzu_Stinger_Elite"
 					}
-					while = {
-						count = 6
+				}
+			}
+			else = {
+				random_list = {
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Elite"
+							design = "NAME_Yuzu_Titan_Elite"
 							graphical_culture = "fallen_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Elite"
-							graphical_culture = "fallen_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Elite"
+								graphical_culture = "fallen_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Elite"
+								graphical_culture = "fallen_empire_01"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Elite"
-						graphical_culture = "fallen_empire_02"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Elite"
+							design = "NAME_Yuzu_Titan_Elite"
 							graphical_culture = "fallen_empire_02"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Elite"
-							graphical_culture = "fallen_empire_02"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Elite"
+								graphical_culture = "fallen_empire_02"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Elite"
+								graphical_culture = "fallen_empire_02"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Elite"
-						graphical_culture = "fallen_empire_03"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Elite"
+							design = "NAME_Yuzu_Titan_Elite"
 							graphical_culture = "fallen_empire_03"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Elite"
-							graphical_culture = "fallen_empire_03"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Elite"
+								graphical_culture = "fallen_empire_03"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Elite"
+								graphical_culture = "fallen_empire_03"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Elite"
-						graphical_culture = "fallen_empire_04"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Elite"
+							design = "NAME_Yuzu_Titan_Elite"
 							graphical_culture = "fallen_empire_04"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Elite"
-							graphical_culture = "fallen_empire_04"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Elite"
+								graphical_culture = "fallen_empire_04"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Elite"
+								graphical_culture = "fallen_empire_04"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Elite"
-						graphical_culture = "fallen_machine_empire_01"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Elite"
+							design = "NAME_Yuzu_Titan_Elite"
 							graphical_culture = "fallen_machine_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Elite"
-							graphical_culture = "fallen_machine_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Elite"
+								graphical_culture = "fallen_machine_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Elite"
+								graphical_culture = "fallen_machine_empire_01"
+							}
 						}
 					}
 				}
@@ -655,119 +715,139 @@ create_yuzu_fleet_master = {
 		name = "NAME_Yuzu_Fleet_Master"
 		effect = {
 			set_owner = PREV.owner
-			random_list = {
-				20 = {
+			# 生物舰船组：机械船体（泰坦/战巡/护航全是坠落帝国机械船）不合适，
+			# 同一个法令改刷同档的契约刺蜂。
+			# 数量按「X 槽等价」折算，1 T 槽 = 2 X 槽：
+			#   机械版 = 1 泰坦(2T = 4X) + 6 战巡(各 2X) + 24 护航(无 X) = 16 X
+			#   刺蜂   = 2T + 4X = 8 X/艘  →  16 / 8 = 2 艘
+			# 改这里记得同步 scripts/make_yuzu_contract_fleet_tiers.py 的 stems（含 Stinger）。
+			if = {
+				limit = {
+					PREV.owner = { country_uses_bio_ships = yes }
+				}
+				while = {
+					count = 2
 					create_ship = {
 						name = random
-						design = "NAME_Yuzu_Titan_Master"
-						graphical_culture = "fallen_empire_01"
+						design = "NAME_Yuzu_Stinger_Master"
 					}
-					while = {
-						count = 6
+				}
+			}
+			else = {
+				random_list = {
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Master"
+							design = "NAME_Yuzu_Titan_Master"
 							graphical_culture = "fallen_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Master"
-							graphical_culture = "fallen_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Master"
+								graphical_culture = "fallen_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Master"
+								graphical_culture = "fallen_empire_01"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Master"
-						graphical_culture = "fallen_empire_02"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Master"
+							design = "NAME_Yuzu_Titan_Master"
 							graphical_culture = "fallen_empire_02"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Master"
-							graphical_culture = "fallen_empire_02"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Master"
+								graphical_culture = "fallen_empire_02"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Master"
+								graphical_culture = "fallen_empire_02"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Master"
-						graphical_culture = "fallen_empire_03"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Master"
+							design = "NAME_Yuzu_Titan_Master"
 							graphical_culture = "fallen_empire_03"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Master"
-							graphical_culture = "fallen_empire_03"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Master"
+								graphical_culture = "fallen_empire_03"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Master"
+								graphical_culture = "fallen_empire_03"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Master"
-						graphical_culture = "fallen_empire_04"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Master"
+							design = "NAME_Yuzu_Titan_Master"
 							graphical_culture = "fallen_empire_04"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Master"
-							graphical_culture = "fallen_empire_04"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Master"
+								graphical_culture = "fallen_empire_04"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Master"
+								graphical_culture = "fallen_empire_04"
+							}
 						}
 					}
-				}
-				20 = {
-					create_ship = {
-						name = random
-						design = "NAME_Yuzu_Titan_Master"
-						graphical_culture = "fallen_machine_empire_01"
-					}
-					while = {
-						count = 6
+					20 = {
 						create_ship = {
 							name = random
-							design = "NAME_Yuzu_Large_Master"
+							design = "NAME_Yuzu_Titan_Master"
 							graphical_culture = "fallen_machine_empire_01"
 						}
-					}
-					while = {
-						count = 24
-						create_ship = {
-							name = random
-							design = "NAME_Yuzu_Small_Master"
-							graphical_culture = "fallen_machine_empire_01"
+						while = {
+							count = 6
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Large_Master"
+								graphical_culture = "fallen_machine_empire_01"
+							}
+						}
+						while = {
+							count = 24
+							create_ship = {
+								name = random
+								design = "NAME_Yuzu_Small_Master"
+								graphical_culture = "fallen_machine_empire_01"
+							}
 						}
 					}
 				}

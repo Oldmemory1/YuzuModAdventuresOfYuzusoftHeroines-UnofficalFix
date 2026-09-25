@@ -355,6 +355,31 @@
  MEDIUM_YUZU_SHIELD_1_ELITE_DESC:0"扭曲场近乎凝固的屏障，防护与自愈都远超先进型号，运转时需要持续注入异星天然气。"
  LARGE_YUZU_SHIELD_1_ELITE:0"大型精英时空屏障"
  LARGE_YUZU_SHIELD_1_ELITE_DESC:0"扭曲场近乎凝固的屏障，防护与自愈都远超先进型号，运转时需要持续注入异星天然气。"
+# ===== 时空乱流恒星基地模块（手工维护；对应 common/starbase_modules/yuzu_starbase_weapon_modules.txt）=====
+ sm_starbase_yuzu_spacetime_launcher:0"时空乱流炮阵"
+ sm_starbase_yuzu_spacetime_launcher_desc:0"成排的中型时空乱流发射器嵌在恒星基地外壳上，把撕裂的时空压成弹丸，直击敌舰的内部结构。"
+ sm_starbase_yuzu_spacetime_launcher_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型时空乱流发射器§!，不会随科技自动升级。\n"
+ sm_starbase_yuzu_spacetime_launcher_advanced:0"先进时空乱流炮阵"
+ sm_starbase_yuzu_spacetime_launcher_advanced_desc:0"先进时空乱流发射器成对嵌入恒星基地的炮位，凝聚的能量在命中后仍会向敌舰内部持续扩散。"
+ sm_starbase_yuzu_spacetime_launcher_advanced_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型先进时空乱流发射器§!，不会随科技自动升级。\n"
+ sm_starbase_yuzu_spacetime_launcher_elite:0"精英时空乱流炮阵"
+ sm_starbase_yuzu_spacetime_launcher_elite_desc:0"精英时空乱流发射器把高度凝聚的乱流压入炮膛，被命中的舰船会从结构内部开始崩解。"
+ sm_starbase_yuzu_spacetime_launcher_elite_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型精英时空乱流发射器§!，不会随科技自动升级。\n"
+ sm_starbase_yuzu_spacetime_launcher_master:0"太初时空乱流炮阵"
+ sm_starbase_yuzu_spacetime_launcher_master_desc:0"太初时空乱流发射器把乱流能量推至物理极限，恒星基地的一次齐射就足以让整支舰队在裂隙中湮灭。"
+ sm_starbase_yuzu_spacetime_launcher_master_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型太初时空乱流发射器§!，不会随科技自动升级。\n"
+ sm_starbase_yuzu_spacetime_launcher_orbital_ring:0"$sm_starbase_yuzu_spacetime_launcher$"
+ sm_starbase_yuzu_spacetime_launcher_orbital_ring_desc:0"$sm_starbase_yuzu_spacetime_launcher_desc$"
+ sm_starbase_yuzu_spacetime_launcher_orbital_ring_tt:0"$ORBITAL_RING_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型时空乱流发射器§!，不会随科技自动升级。\n"
+ sm_starbase_yuzu_spacetime_launcher_advanced_orbital_ring:0"$sm_starbase_yuzu_spacetime_launcher_advanced$"
+ sm_starbase_yuzu_spacetime_launcher_advanced_orbital_ring_desc:0"$sm_starbase_yuzu_spacetime_launcher_advanced_desc$"
+ sm_starbase_yuzu_spacetime_launcher_advanced_orbital_ring_tt:0"$ORBITAL_RING_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型先进时空乱流发射器§!，不会随科技自动升级。\n"
+ sm_starbase_yuzu_spacetime_launcher_elite_orbital_ring:0"$sm_starbase_yuzu_spacetime_launcher_elite$"
+ sm_starbase_yuzu_spacetime_launcher_elite_orbital_ring_desc:0"$sm_starbase_yuzu_spacetime_launcher_elite_desc$"
+ sm_starbase_yuzu_spacetime_launcher_elite_orbital_ring_tt:0"$ORBITAL_RING_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型精英时空乱流发射器§!，不会随科技自动升级。\n"
+ sm_starbase_yuzu_spacetime_launcher_master_orbital_ring:0"$sm_starbase_yuzu_spacetime_launcher_master$"
+ sm_starbase_yuzu_spacetime_launcher_master_orbital_ring_desc:0"$sm_starbase_yuzu_spacetime_launcher_master_desc$"
+ sm_starbase_yuzu_spacetime_launcher_master_orbital_ring_tt:0"$ORBITAL_RING_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$该炮阵固定装有§Y中型太初时空乱流发射器§!，不会随科技自动升级。\n"
 # ===== ELITE(精英版) 自动生成区块 =====
  # ===== 精英版 (ELITE) =====
  YUZU_ENERGY_TORPEDO_1_ELITE:0"精英时空乱流发射器"
@@ -545,20 +570,3 @@
  TECH_UNLOCK_THRUSTER_YUZU_1_MASTER_DESC:0"§H$tech_thrusters_yuzu_1_master$§!\n$tech_thrusters_yuzu_1_master_desc$"
  TECH_UNLOCK_YUZU_JUMPDRIVE_1_MASTER_TITLE:0"$TECH_UNLOCK_COMPONENT_LINE$ $tech_yuzu_jump_drive_1_master$"
  TECH_UNLOCK_YUZU_JUMPDRIVE_1_MASTER_DESC:0"§H$tech_yuzu_jump_drive_1_master$§!\n$tech_yuzu_jump_drive_1_master_desc$"
-
- # 时空乱流武器的恒星基地模块
- sm_starbase_yuzu_spacetime_launcher:0"时空乱流炮台"
- sm_starbase_yuzu_spacetime_launcher_desc:0"把时空乱流发射器阵列搬上恒星基地，让来访者一进门就先尝一发时空乱流。"
- sm_starbase_yuzu_spacetime_launcher_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1$§!。\n"
-
- sm_starbase_yuzu_spacetime_launcher_advanced:0"先进时空乱流炮台"
- sm_starbase_yuzu_spacetime_launcher_advanced_desc:0"恒星基地上的先进时空乱流发射器阵列，能量更高，命中后还会额外撕扯舰体内部结构。"
- sm_starbase_yuzu_spacetime_launcher_advanced_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1_ADVANCED$§!。\n"
-
- sm_starbase_yuzu_spacetime_launcher_elite:0"精英时空乱流炮台"
- sm_starbase_yuzu_spacetime_launcher_elite_desc:0"恒星基地上的精英时空乱流发射器阵列，高度凝聚的时空乱流足以对舰体内部造成毁灭性破坏。"
- sm_starbase_yuzu_spacetime_launcher_elite_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1_ELITE$§!。\n"
-
- sm_starbase_yuzu_spacetime_launcher_master:0"太初时空乱流炮台"
- sm_starbase_yuzu_spacetime_launcher_master_desc:0"恒星基地上的太初时空乱流发射器阵列，时空乱流的能量已凝聚到物理极限，被击中的舰船会连同等离子体一起瓦解。"
- sm_starbase_yuzu_spacetime_launcher_master_tt:0"$STARBASE_COMPONENTS$\n$t$$ADDS_STARBASE_M_SLOTS$\n$t$这些炮塔将会装有§Y$YUZU_M_1_MASTER$§!。\n"

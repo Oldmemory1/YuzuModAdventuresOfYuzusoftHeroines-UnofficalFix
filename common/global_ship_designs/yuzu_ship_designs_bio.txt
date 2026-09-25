@@ -128,3 +128,388 @@ ship_design = {
 	is_special_buildable = yes
 	allow_buildable_trigger = is_yuzu_abyss_empire
 }
+
+####################
+
+# 远古刺蜂的先进 / 精英 / 太初三档变种。
+# 与 NAME_Yuzu_Stinger 的槽位、数量、外观完全一致，只把武器 / 装甲 / 护盾 /
+# 推进器 / 作战电脑换成对应档位（反应堆沿用生物版暗物质堆 —— 本 MOD 没有档位化反应堆）。
+# 暂未接入任何舰队生成效果，先只把设计(和本地化)备好。
+
+# 先进 (Advanced)
+ship_design = {
+	name = "NAME_Yuzu_Stinger_Advanced"
+	ship_size = large_fallen_stinger
+
+	section = {
+		template = "large_fallen_stinger_section"
+		slot = "mid"
+
+		component = {
+			slot = "TITANIC_01"
+			template = "YUZU_BEAM_1_ADVANCED"
+		}
+		component = {
+			slot = "TITANIC_02"
+			template = "YUZU_BEAM_1_ADVANCED"
+		}
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "YUZU_LANCE_1_ADVANCED"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "YUZU_LANCE_1_ADVANCED"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "YUZU_LANCE_1_ADVANCED"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "YUZU_LANCE_1_ADVANCED"
+		}
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "YUZU_L_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "YUZU_L_1_ADVANCED"
+		}
+
+		# 12 large utility slots：盾(6) + 甲(6)
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_SHIELD_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_SHIELD_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_ARMOR_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_ARMOR_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_YUZU_ARMOR_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_YUZU_ARMOR_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_YUZU_ARMOR_1_ADVANCED"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_YUZU_ARMOR_1_ADVANCED"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component = "SENSOR_YUZU_1"
+	required_component = "YUZU_JUMP_DRIVE_ADVANCED"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_ADVANCED"
+	required_component = "TITAN_BIO_DARK_MATTER_REACTOR"
+	required_component = "TITAN_SHIP_THRUSTER_YUZU_ADVANCED"
+
+	is_special_buildable = yes
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}
+
+# 精英 (Elite)
+ship_design = {
+	name = "NAME_Yuzu_Stinger_Elite"
+	ship_size = large_fallen_stinger
+
+	section = {
+		template = "large_fallen_stinger_section"
+		slot = "mid"
+
+		component = {
+			slot = "TITANIC_01"
+			template = "YUZU_BEAM_1_ELITE"
+		}
+		component = {
+			slot = "TITANIC_02"
+			template = "YUZU_BEAM_1_ELITE"
+		}
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "YUZU_LANCE_1_ELITE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "YUZU_LANCE_1_ELITE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "YUZU_LANCE_1_ELITE"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "YUZU_LANCE_1_ELITE"
+		}
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "YUZU_L_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "YUZU_L_1_ELITE"
+		}
+
+		# 12 large utility slots：盾(6) + 甲(6)
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_SHIELD_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_SHIELD_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_ARMOR_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_ARMOR_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_YUZU_ARMOR_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_YUZU_ARMOR_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_YUZU_ARMOR_1_ELITE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_YUZU_ARMOR_1_ELITE"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component = "SENSOR_YUZU_1"
+	required_component = "YUZU_JUMP_DRIVE_ELITE"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_ELITE"
+	required_component = "TITAN_BIO_DARK_MATTER_REACTOR"
+	required_component = "TITAN_SHIP_THRUSTER_YUZU_ELITE"
+
+	is_special_buildable = yes
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}
+
+# 太初 (Master)
+ship_design = {
+	name = "NAME_Yuzu_Stinger_Master"
+	ship_size = large_fallen_stinger
+
+	section = {
+		template = "large_fallen_stinger_section"
+		slot = "mid"
+
+		component = {
+			slot = "TITANIC_01"
+			template = "YUZU_BEAM_1_MASTER"
+		}
+		component = {
+			slot = "TITANIC_02"
+			template = "YUZU_BEAM_1_MASTER"
+		}
+
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "YUZU_LANCE_1_MASTER"
+		}
+		component = {
+			slot = "EXTRA_LARGE_02"
+			template = "YUZU_LANCE_1_MASTER"
+		}
+		component = {
+			slot = "EXTRA_LARGE_03"
+			template = "YUZU_LANCE_1_MASTER"
+		}
+		component = {
+			slot = "EXTRA_LARGE_04"
+			template = "YUZU_LANCE_1_MASTER"
+		}
+
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "YUZU_L_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "YUZU_L_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "YUZU_L_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "YUZU_L_1_MASTER"
+		}
+
+		# 12 large utility slots：盾(6) + 甲(6)
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_YUZU_SHIELD_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_YUZU_SHIELD_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_YUZU_SHIELD_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_YUZU_SHIELD_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_YUZU_SHIELD_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_YUZU_SHIELD_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_YUZU_ARMOR_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_YUZU_ARMOR_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_YUZU_ARMOR_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_YUZU_ARMOR_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_11"
+			template = "LARGE_YUZU_ARMOR_1_MASTER"
+		}
+		component = {
+			slot = "LARGE_UTILITY_12"
+			template = "LARGE_YUZU_ARMOR_1_MASTER"
+		}
+
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "FIRE_CONTROL_YUZU"
+		}
+		component = {
+			slot = "AUX_UTILITY_3"
+			template = "FIRE_CONTROL_YUZU"
+		}
+	}
+
+	required_component = "SENSOR_YUZU_1"
+	required_component = "YUZU_JUMP_DRIVE_MASTER"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_MASTER"
+	required_component = "TITAN_BIO_DARK_MATTER_REACTOR"
+	required_component = "TITAN_SHIP_THRUSTER_YUZU_MASTER"
+
+	is_special_buildable = yes
+	allow_buildable_trigger = is_yuzu_abyss_empire
+}

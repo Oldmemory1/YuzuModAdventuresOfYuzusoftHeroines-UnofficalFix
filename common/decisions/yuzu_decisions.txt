@@ -10,7 +10,7 @@ decision_arcology_project = {
 		category = decisions
 		cost = {
 			influence = 200
-			alloys = 10000
+			minerals = 20000
 		}
 	}
 
@@ -122,7 +122,7 @@ decision_arcology_project_relic = {
 		category = decisions
 		cost = {
 			influence = 200
-			alloys = 10000
+			minerals = 20000
 		}
 	}
 

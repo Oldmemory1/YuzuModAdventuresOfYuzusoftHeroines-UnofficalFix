@@ -1035,26 +1035,7 @@ planet_event = {
 	}
 }
 
-# on_building_demolished
-planet_event = {
-	id = Yuzu_other_event.22
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-#		last_building_changed = building_yuzu_ancient_cryo_chamber_1
-        NOT = { has_building = building_yuzu_ancient_cryo_chamber_1 }
-		has_planet_flag = yuzu_ancient_cryo_chamber_1
-	}
-
-	immediate = {
-		remove_planet_flag = yuzu_ancient_cryo_chamber_1
-		yuzu_release_pops = yes
-	}
-}
-
-# on_building_replaced
+# on_building_replaced & on_building_demolished
 planet_event = {
 	id = Yuzu_other_event.23
 	hide_window = yes

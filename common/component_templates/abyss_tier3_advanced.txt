@@ -4,7 +4,9 @@
 # 伤害 = Tier2 x2 (T3 是 Tier2 的 x1.5); 射程与 T3 相同;
 # 耗电/溅射沿用每档固定增量; 造价/维护 = T3 x1.5;
 # 异星天然气 = 稀有水晶(本 mod 约定: 有对船体加伤的武器吃气);
-# 前置科技 = 专属的先进版科技 (tech_yuzu_{l,lance,beam}_3_advanced)。
+# 前置科技 = 专属的先进版科技 (tech_yuzu_{l,lance,beam}_3_advanced);
+# AI 选取排除深渊危机国家 (new_abyss_empire) —— 它带 all_technology_module,
+# 否则教廷恒星基地的自动择优会跳过 T3 直接用上本档。
 
 weapon_component_template = {
 	key = "YUZU_S_3_ADVANCED"
@@ -56,8 +58,10 @@ weapon_component_template = {
 		weight = 3000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
 }
@@ -112,8 +116,10 @@ weapon_component_template = {
 		weight = 3000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
 }
@@ -168,8 +174,10 @@ weapon_component_template = {
 		weight = 3000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
 }
@@ -243,8 +251,10 @@ weapon_component_template = {
 		weight = 3000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
 }
@@ -309,8 +319,10 @@ weapon_component_template = {
 		weight = 3000
 		modifier = {
 			factor = 0.0
-			is_YUZU = no
-			NOT = { is_country_type = new_abyss_empire }
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
 		}
 	}
 }

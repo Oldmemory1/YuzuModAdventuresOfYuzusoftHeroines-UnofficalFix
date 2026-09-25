@@ -8,6 +8,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
+	scale = 6.0
 }
 
 entity = {
@@ -20,6 +21,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
+	scale = 6.0
 }
 
 entity = {
@@ -32,6 +34,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
+	scale = 6.0
 }
 
 entity = {
@@ -376,114 +379,6 @@ entity = {
 	}
 }
 
-entity = {
-	name = "yuzu_l_1_hit_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 2 looping = no
-		start_event = { particle = "yuzu_l_1_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-
-entity = {
-	name = "yuzu_l_2_hit_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 2 looping = no
-		start_event = { particle = "yuzu_l_2_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-
-entity = {
-	name = "yuzu_l_3_hit_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 2 looping = no
-		start_event = { particle = "yuzu_l_3_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-
-entity = {
-	name = "yuzu_l_1_shield_hit_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" 
-		start_event = { particle = "yuzu_l_1_hit_effect" sound = { soundeffect = shield_hit } }
-		start_event = { particle = "projectile_large_shield_hit_effect" }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-
-entity = {
-	name = "yuzu_l_2_shield_hit_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" 
-		start_event = { particle = "yuzu_l_2_hit_effect" sound = { soundeffect = shield_hit } }
-		start_event = { particle = "projectile_large_shield_hit_effect" }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-
-entity = {
-	name = "yuzu_l_3_shield_hit_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" 
-		start_event = { particle = "yuzu_l_3_hit_effect" sound = { soundeffect = shield_hit } }
-		start_event = { particle = "projectile_large_shield_hit_effect" }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-
-entity = {
-	name = "yuzu_l_1_muzzle_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 0.8 looping = no
-		event = { time = 0 particle = "yuzu_l_1_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
-	}
-}
-
-entity = {
-	name = "yuzu_l_2_muzzle_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 0.8 looping = no
-		event = { time = 0 particle = "yuzu_l_2_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
-	}
-}
-
-entity = {
-	name = "yuzu_l_3_muzzle_entity"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 0.8 looping = no
-		event = { time = 0 particle = "yuzu_l_3_muzzle_particle" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
-	}
-}
-
 # WINDUP
 
 entity = {
@@ -520,7 +415,6 @@ entity = {
 
 		event = { trigger_once = yes sound = { soundeffect = "colossus_shield_beam" stop_on_state_change = yes } }
 
-
 	}
 }
 
@@ -555,39 +449,7 @@ entity = {
 }
 
 # ---- 高级版 (teal) ----
-entity = {
-	name = "yuzu_l_1_hit_entity_advanced"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 2 looping = no
-		start_event = { particle = "yuzu_l_1_hit_effect_advanced" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_1_shield_hit_entity_advanced"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" 
-		start_event = { particle = "yuzu_l_1_hit_effect_advanced" sound = { soundeffect = shield_hit } }
-		start_event = { particle = "projectile_large_shield_hit_effect" }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_1_muzzle_entity_advanced"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 0.8 looping = no
-		event = { time = 0 particle = "yuzu_l_1_muzzle_particle_advanced" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
-	}
-}
+
 entity = {
 	name = "yuzu_lance_1_hit_entity_advanced"
 	cull_radius = 1.0
@@ -598,6 +460,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
+	scale = 6.0
 }
 entity = {
 	name = "yuzu_lance_1_shield_hit_entity_advanced"
@@ -707,39 +570,7 @@ entity = {
 }
 # ===== ELITE(精英版) 自动生成区块 — 由 scripts/make_yuzu_elite.py 写入 =====
 # ---- 精英版 (sky blue #66CCFF) ----
-entity = {
-	name = "yuzu_l_1_hit_entity_elite"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 2 looping = no
-		start_event = { particle = "yuzu_l_1_hit_effect_elite" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_1_shield_hit_entity_elite"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" 
-		start_event = { particle = "yuzu_l_1_hit_effect_elite" sound = { soundeffect = shield_hit } }
-		start_event = { particle = "projectile_large_shield_hit_effect" }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_1_muzzle_entity_elite"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 0.8 looping = no
-		event = { time = 0 particle = "yuzu_l_1_muzzle_particle_elite" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
-	}
-}
+
 entity = {
 	name = "yuzu_lance_1_hit_entity_elite"
 	cull_radius = 1.0
@@ -750,6 +581,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
+	scale = 6.0
 }
 entity = {
 	name = "yuzu_lance_1_shield_hit_entity_elite"
@@ -857,41 +689,1167 @@ entity = {
 		event = { time = 0.0 use_parent_nodes = yes node = "xl_gun_01" particle = "yuzu_beam_1_muzzle_windup_effect_elite" trigger_once = yes keep_particle = yes }
 	}
 }
+# ===== 等离子弹体(能量鱼雷线) 自动生成区块 — 由 scripts/make_yuzu_plasma_torpedoes.py 写入 =====
+
+# ---- 等离子弹体 (能量鱼雷线) ----
+
+entity = {
+	name = "yuzu_torpedo_s_1_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 1.3
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_idle" keep_particle = yes }
+	}
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_idle" keep_particle = yes }
+	}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_advanced_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_muzzle_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_advanced_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 1.3
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_advanced_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_shield_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_advanced_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_advanced_idle" keep_particle = yes }
+	}
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_muzzle_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_advanced_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_advanced_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_shield_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_advanced_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_advanced_idle" keep_particle = yes }
+	}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_muzzle_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_advanced_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_advanced_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_shield_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_advanced_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_entity_elite"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_elite_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_muzzle_entity_elite"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_elite_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 1.3
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_hit_entity_elite"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_elite_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_shield_hit_entity_elite"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_elite_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_entity_elite"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_elite_idle" keep_particle = yes }
+	}
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_muzzle_entity_elite"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_elite_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_hit_entity_elite"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_elite_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_shield_hit_entity_elite"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_elite_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_entity_elite"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_elite_idle" keep_particle = yes }
+	}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_muzzle_entity_elite"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_elite_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_hit_entity_elite"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_elite_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_shield_hit_entity_elite"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_elite_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_entity_master"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_master_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_muzzle_entity_master"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_master_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 1.3
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_hit_entity_master"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_master_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_s_1_shield_hit_entity_master"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_master_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_entity_master"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_master_idle" keep_particle = yes }
+	}
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_muzzle_entity_master"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_master_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_hit_entity_master"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_master_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_m_1_shield_hit_entity_master"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_master_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_entity_master"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_1_master_idle" keep_particle = yes }
+	}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_muzzle_entity_master"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_1_master_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_hit_entity_master"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_master_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_1_shield_hit_entity_master"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_1_master_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_s_2_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_2_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_torpedo_s_2_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_2_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 1.3
+}
+
+entity = {
+	name = "yuzu_torpedo_s_2_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_2_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_s_2_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_2_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_m_2_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_2_idle" keep_particle = yes }
+	}
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "yuzu_torpedo_m_2_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_2_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "yuzu_torpedo_m_2_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_2_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_m_2_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_2_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_2_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_2_idle" keep_particle = yes }
+	}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "yuzu_torpedo_l_2_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_2_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "yuzu_torpedo_l_2_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_2_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_2_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_2_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_3_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_3_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 1.3
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_3_idle" keep_particle = yes }
+	}
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_3_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_3_idle" keep_particle = yes }
+	}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_3_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_shield_hit_entity"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_3_advanced_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_muzzle_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_3_advanced_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 1.3
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_advanced_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_s_3_shield_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_advanced_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_small_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 0.5
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_3_advanced_idle" keep_particle = yes }
+	}
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_muzzle_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_3_advanced_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_advanced_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_m_3_shield_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_advanced_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_medium_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 1.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_torpedo_3_advanced_idle" keep_particle = yes }
+	}
+	
+	scale = 1.4
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_muzzle_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "yuzu_torpedo_3_advanced_muzzle" keep_particle = yes sound = { soundeffect = energy_torpedo_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_fire" } }
+	}
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_advanced_hit_effect" sound = { soundeffect = energy_torpedo_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_energy_torpedo_hit" } }
+	}
+	state = { name = "explode_med_shield" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "medium_hit_effect_shield" }
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
+entity = {
+	name = "yuzu_torpedo_l_3_shield_hit_entity_advanced"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "yuzu_torpedo_3_advanced_shield_hit_effect"  }
+		event = { time = 0.0 particle = "projectile_large_shield_hit_effect" sound = { soundeffect = shield_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	
+	scale = 2.0
+}
+
 # ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
 # ---- 深渊 T3 先进版 ----
-entity = {
-	name = "yuzu_l_3_hit_entity_advanced"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 2 looping = no
-		start_event = { particle = "yuzu_l_3_hit_effect_advanced" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_3_shield_hit_entity_advanced"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" 
-		start_event = { particle = "yuzu_l_3_hit_effect_advanced" sound = { soundeffect = shield_hit } }
-		start_event = { particle = "projectile_large_shield_hit_effect" }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_3_muzzle_entity_advanced"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 0.8 looping = no
-		event = { time = 0 particle = "yuzu_l_3_muzzle_particle_advanced" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
-	}
-}
 entity = {
 	name = "yuzu_lance_3_hit_entity_advanced"
 	cull_radius = 1.0
@@ -902,6 +1860,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
+	scale = 6.0
 }
 entity = {
 	name = "yuzu_lance_3_shield_hit_entity_advanced"
@@ -1012,39 +1971,7 @@ entity = {
 
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 # ---- 太初版 (light violet #C7A6FF) ----
-entity = {
-	name = "yuzu_l_1_hit_entity_master"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 2 looping = no
-		start_event = { particle = "yuzu_l_1_hit_effect_master" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_1_shield_hit_entity_master"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" 
-		start_event = { particle = "yuzu_l_1_hit_effect_master" sound = { soundeffect = shield_hit } }
-		start_event = { particle = "projectile_large_shield_hit_effect" }
-		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
-	}
-	state = { name = "stop" state_time = 0.5 looping = no }
-}
-entity = {
-	name = "yuzu_l_1_muzzle_entity_master"
-	cull_radius = 1.0
-	
-	default_state = "idle"
-	state = { name = "idle" state_time = 0.8 looping = no
-		event = { time = 0 particle = "yuzu_l_1_muzzle_particle_master" keep_particle = yes sound = { soundeffect = energy_lance_fire } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_fire" } }
-	}
-}
+
 entity = {
 	name = "yuzu_lance_1_hit_entity_master"
 	cull_radius = 1.0
@@ -1055,6 +1982,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
 	}
 	state = { name = "stop" state_time = 0.5 looping = no }
+	scale = 6.0
 }
 entity = {
 	name = "yuzu_lance_1_shield_hit_entity_master"
