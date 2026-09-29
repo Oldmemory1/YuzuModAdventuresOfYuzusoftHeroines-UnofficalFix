@@ -1,22 +1,22 @@
 utility_component_template = {
-	key = "CORVETTE_YUZU_REACTOR"
+	key = "CORVETTE_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 600
+	power = 715
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 60
-			sr_dark_matter = 2
+			alloys = 228
+			sr_dark_matter = 3
 		}
 		upkeep = {
-			energy = 0.60
-			alloys = 0.06
+			energy = 1.11
+			alloys = 0.11
 		}
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 	component_set = "power_core"
 	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
 	potential = {
@@ -33,24 +33,24 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "DESTROYER_YUZU_REACTOR"
+	key = "DESTROYER_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 1200
+	power = 1375
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 120
-			sr_dark_matter = 4
+			alloys = 456
+			sr_dark_matter = 6
 		}
 		upkeep = {
-			energy = 1.20
-			alloys = 0.12
+			energy = 2.22
+			alloys = 0.22
 		}
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 	component_set = "power_core"
 	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
 	potential = {
@@ -68,24 +68,24 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "CRUISER_YUZU_REACTOR"
+	key = "CRUISER_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 2400
+	power = 2575
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 240
-			sr_dark_matter = 8
+			alloys = 912
+			sr_dark_matter = 12
 		}
 		upkeep = {
-			energy = 2.40
-			alloys = 0.24
+			energy = 4.44
+			alloys = 0.44
 		}
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 	component_set = "power_core"
 	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
 
@@ -105,24 +105,24 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "BATTLESHIP_YUZU_REACTOR"
+	key = "BATTLESHIP_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 4800
+	power = 5000
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 480
-			sr_dark_matter = 16
+			alloys = 1824
+			sr_dark_matter = 24
 		}
 		upkeep = {
-			energy = 4.80
-			alloys = 0.48
+			energy = 8.94
+			alloys = 0.89
 		}
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 	component_set = "power_core"
 	# size_restriction = { battleship offspring_battleship ember_battleship }
 
@@ -141,24 +141,24 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "TITAN_YUZU_REACTOR"
+	key = "TITAN_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 9600
+	power = 10500
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 960
-			sr_dark_matter = 32
+			alloys = 3645
+			sr_dark_matter = 48
 		}
 		upkeep = {
-			energy = 9.60
-			alloys = 0.96
+			energy = 17.79
+			alloys = 1.78
 		}
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 	component_set = "power_core"
 	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
 
@@ -177,16 +177,16 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "COLOSSUS_YUZU_REACTOR"
+	key = "COLOSSUS_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 24000
+	power = 25000
 	resources = {
 		category = ship_components
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 
 	component_set = "power_core"
 	# size_restriction = { colossus star_eater yuzu_star_eater }
@@ -208,24 +208,24 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "JUGGERNAUT_YUZU_REACTOR"
+	key = "JUGGERNAUT_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 24000
+	power = 35750
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 2880
+			alloys = 10935
 			sr_dark_matter = 96
 		}
 		upkeep = {
-			energy = 28.8
-			alloys = 2.88
+			energy = 62.37
+			alloys = 6.24
 		}
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 
 	component_set = "power_core"
 	# size_restriction = { colossus star_eater yuzu_star_eater }
@@ -261,24 +261,24 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "PLATFORM_YUZU_REACTOR"
+	key = "PLATFORM_YUZU_REACTOR_3"
 	size = large
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 1800
+	power = 1875
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 120
-			sr_dark_matter = 8
+			alloys = 456
+			sr_dark_matter = 12
 		}
 		upkeep = {
-			energy = 1.20
-			alloys = 0.12
+			energy = 2.22
+			alloys = 0.22
 		}
 	}
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 	component_set = "power_core"
 	# class_restriction = { shipclass_military_station }
 	# size_restriction = {
@@ -301,17 +301,17 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "ION_CANNON_YUZU_REACTOR"
+	key = "ION_CANNON_YUZU_REACTOR_3"
 	size = small
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 2400
-	prerequisites = { "tech_reactor_yuzu" }
+	power = 5000
+	prerequisites = { "tech_reactor_yuzu_3" }
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 240
-			sr_dark_matter = 16
+			alloys = 912
+			sr_dark_matter = 24
 		}
 	}
 
@@ -332,13 +332,13 @@ utility_component_template = {
 }
 
 utility_component_template = {
-	key = "STARBASE_YUZU_REACTOR"
+	key = "STARBASE_YUZU_REACTOR_3"
 	size = large
-	icon = "GFX_ship_part_reactor_yuzu"
+	icon = "GFX_ship_part_reactor_yuzu_3"
 	icon_frame = 1
-	power = 14400
+	power = 21375
 
-	prerequisites = { "tech_reactor_yuzu" }
+	prerequisites = { "tech_reactor_yuzu_3" }
 	component_set = "power_core"
 	# class_restriction = { shipclass_starbase shipclass_military_special }
 	# size_restriction = {
@@ -365,6 +365,1510 @@ utility_component_template = {
 			factor = 0.0
 			is_YUZU = no
 			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+# ===== 时空线反应堆 四档 自动生成区块 — by scripts/make_yuzu_reactor_tiers.py =====
+
+utility_component_template = {
+	key = "CORVETTE_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 570
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 152
+			exotic_gases = 10
+		}
+		upkeep = {
+			energy = 0.74
+			alloys = 0.07
+			exotic_gases = 0.1
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+	component_set = "power_core"
+	upgrades_to = "CORVETTE_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		ship_uses_corvette_reactors = yes
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 855
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 228
+			exotic_gases = 15
+		}
+		upkeep = {
+			energy = 1.11
+			alloys = 0.11
+			exotic_gases = 0.15
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "CORVETTE_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		ship_uses_corvette_reactors = yes
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 1140
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 304
+			exotic_gases = 20
+		}
+		upkeep = {
+			energy = 1.48
+			alloys = 0.15
+			exotic_gases = 0.2
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	component_set = "power_core"
+	upgrades_to = "CORVETTE_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		ship_uses_corvette_reactors = yes
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 1425
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 380
+			exotic_gases = 25
+		}
+		upkeep = {
+			energy = 1.85
+			alloys = 0.18
+			exotic_gases = 0.25
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	component_set = "power_core"
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		ship_uses_corvette_reactors = yes
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 1100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 304
+			exotic_gases = 20
+		}
+		upkeep = {
+			energy = 1.48
+			alloys = 0.15
+			exotic_gases = 0.2
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+	component_set = "power_core"
+	upgrades_to = "DESTROYER_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		ship_uses_destroyer_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 1650
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 456
+			exotic_gases = 30
+		}
+		upkeep = {
+			energy = 2.22
+			alloys = 0.22
+			exotic_gases = 0.3
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "DESTROYER_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		ship_uses_destroyer_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 2200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 608
+			exotic_gases = 40
+		}
+		upkeep = {
+			energy = 2.96
+			alloys = 0.3
+			exotic_gases = 0.4
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	component_set = "power_core"
+	upgrades_to = "DESTROYER_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		ship_uses_destroyer_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 2750
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 760
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 3.7
+			alloys = 0.37
+			exotic_gases = 0.5
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	component_set = "power_core"
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		ship_uses_destroyer_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 2060
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 608
+			exotic_gases = 40
+		}
+		upkeep = {
+			energy = 2.96
+			alloys = 0.3
+			exotic_gases = 0.4
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+	component_set = "power_core"
+	upgrades_to = "CRUISER_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
+
+	potential = {
+		ship_uses_cruiser_reactors = yes
+	}
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 3090
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 912
+			exotic_gases = 60
+		}
+		upkeep = {
+			energy = 4.44
+			alloys = 0.44
+			exotic_gases = 0.6
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "CRUISER_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
+
+	potential = {
+		ship_uses_cruiser_reactors = yes
+	}
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 4120
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1216
+			exotic_gases = 80
+		}
+		upkeep = {
+			energy = 5.92
+			alloys = 0.59
+			exotic_gases = 0.8
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	component_set = "power_core"
+	upgrades_to = "CRUISER_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
+
+	potential = {
+		ship_uses_cruiser_reactors = yes
+	}
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 5150
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1520
+			exotic_gases = 100
+		}
+		upkeep = {
+			energy = 7.4
+			alloys = 0.74
+			exotic_gases = 1
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	component_set = "power_core"
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
+
+	potential = {
+		ship_uses_cruiser_reactors = yes
+	}
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 4000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1216
+			exotic_gases = 80
+		}
+		upkeep = {
+			energy = 5.96
+			alloys = 0.6
+			exotic_gases = 0.8
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+	component_set = "power_core"
+	upgrades_to = "BATTLESHIP_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { battleship offspring_battleship ember_battleship }
+
+	potential = {
+		ship_uses_battleship_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 6000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1824
+			exotic_gases = 120
+		}
+		upkeep = {
+			energy = 8.94
+			alloys = 0.89
+			exotic_gases = 1.2
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "BATTLESHIP_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { battleship offspring_battleship ember_battleship }
+
+	potential = {
+		ship_uses_battleship_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 8000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2432
+			exotic_gases = 160
+		}
+		upkeep = {
+			energy = 11.92
+			alloys = 1.19
+			exotic_gases = 1.6
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	component_set = "power_core"
+	upgrades_to = "BATTLESHIP_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { battleship offspring_battleship ember_battleship }
+
+	potential = {
+		ship_uses_battleship_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 10000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3040
+			exotic_gases = 200
+		}
+		upkeep = {
+			energy = 14.9
+			alloys = 1.49
+			exotic_gases = 2
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	component_set = "power_core"
+	# size_restriction = { battleship offspring_battleship ember_battleship }
+
+	potential = {
+		ship_uses_battleship_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 8400
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2430
+			exotic_gases = 160
+		}
+		upkeep = {
+			energy = 11.86
+			alloys = 1.19
+			exotic_gases = 1.6
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+	component_set = "power_core"
+	upgrades_to = "TITAN_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
+
+	potential = {
+		ship_uses_titan_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 12600
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3645
+			exotic_gases = 240
+		}
+		upkeep = {
+			energy = 17.79
+			alloys = 1.78
+			exotic_gases = 2.4
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "TITAN_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
+
+	potential = {
+		ship_uses_titan_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 16800
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 4860
+			exotic_gases = 320
+		}
+		upkeep = {
+			energy = 23.72
+			alloys = 2.37
+			exotic_gases = 3.2
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	component_set = "power_core"
+	upgrades_to = "TITAN_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
+
+	potential = {
+		ship_uses_titan_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 21000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 6075
+			exotic_gases = 400
+		}
+		upkeep = {
+			energy = 29.65
+			alloys = 2.96
+			exotic_gases = 4
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	component_set = "power_core"
+	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
+
+	potential = {
+		ship_uses_titan_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 20000
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+
+	component_set = "power_core"
+	upgrades_to = "COLOSSUS_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_colossus_components = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 30000
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+
+	component_set = "power_core"
+	upgrades_to = "COLOSSUS_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_colossus_components = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 40000
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+
+	component_set = "power_core"
+	upgrades_to = "COLOSSUS_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_colossus_components = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 50000
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+
+	component_set = "power_core"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_colossus_components = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 28600
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 7290
+			exotic_gases = 320
+		}
+		upkeep = {
+			energy = 41.58
+			alloys = 4.16
+			exotic_gases = 3.2
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+
+	component_set = "power_core"
+	upgrades_to = "JUGGERNAUT_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_juggernaut_reactors = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 42900
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10935
+			exotic_gases = 480
+		}
+		upkeep = {
+			energy = 62.37
+			alloys = 6.24
+			exotic_gases = 4.8
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+
+	component_set = "power_core"
+	upgrades_to = "JUGGERNAUT_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_juggernaut_reactors = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 57200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 14580
+			exotic_gases = 640
+		}
+		upkeep = {
+			energy = 83.16
+			alloys = 8.32
+			exotic_gases = 6.4
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+
+	component_set = "power_core"
+	upgrades_to = "JUGGERNAUT_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_juggernaut_reactors = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 71500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 18225
+			exotic_gases = 800
+		}
+		upkeep = {
+			energy = 103.95
+			alloys = 10.4
+			exotic_gases = 8
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+
+	component_set = "power_core"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_juggernaut_reactors = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_YUZU_REACTOR_1"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 1500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 304
+			exotic_gases = 40
+		}
+		upkeep = {
+			energy = 1.48
+			alloys = 0.15
+			exotic_gases = 0.4
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_YUZU_REACTOR_1_ADVANCED"
+	# class_restriction = { shipclass_military_station }
+	# size_restriction = {
+	# 	military_station_small
+	# 	military_station_medium
+	# 	military_station_large
+	# }
+	potential = {
+		ship_uses_platform_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_YUZU_REACTOR_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 2250
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 456
+			exotic_gases = 60
+		}
+		upkeep = {
+			energy = 2.22
+			alloys = 0.22
+			exotic_gases = 0.6
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_YUZU_REACTOR_1_ELITE"
+	# class_restriction = { shipclass_military_station }
+	# size_restriction = {
+	# 	military_station_small
+	# 	military_station_medium
+	# 	military_station_large
+	# }
+	potential = {
+		ship_uses_platform_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_YUZU_REACTOR_1_ELITE"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 3000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 608
+			exotic_gases = 80
+		}
+		upkeep = {
+			energy = 2.96
+			alloys = 0.3
+			exotic_gases = 0.8
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_YUZU_REACTOR_1_MASTER"
+	# class_restriction = { shipclass_military_station }
+	# size_restriction = {
+	# 	military_station_small
+	# 	military_station_medium
+	# 	military_station_large
+	# }
+	potential = {
+		ship_uses_platform_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_YUZU_REACTOR_1_MASTER"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 3750
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 760
+			exotic_gases = 100
+		}
+		upkeep = {
+			energy = 3.7
+			alloys = 0.37
+			exotic_gases = 1
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	component_set = "power_core"
+	# class_restriction = { shipclass_military_station }
+	# size_restriction = {
+	# 	military_station_small
+	# 	military_station_medium
+	# 	military_station_large
+	# }
+	potential = {
+		ship_uses_platform_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_YUZU_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 4000
+	prerequisites = { "tech_reactor_yuzu_1" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 608
+			exotic_gases = 80
+		}
+	}
+
+	component_set = "power_core"
+	upgrades_to = "ION_CANNON_YUZU_REACTOR_1_ADVANCED"
+	# size_restriction = { ion_cannon }
+	potential = {
+		ship_uses_ion_cannon_components = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 6000
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 912
+			exotic_gases = 120
+		}
+	}
+
+	component_set = "power_core"
+	upgrades_to = "ION_CANNON_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { ion_cannon }
+	potential = {
+		ship_uses_ion_cannon_components = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_YUZU_REACTOR_1_ELITE"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 8000
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1216
+			exotic_gases = 160
+		}
+	}
+
+	component_set = "power_core"
+	upgrades_to = "ION_CANNON_YUZU_REACTOR_1_MASTER"
+	# size_restriction = { ion_cannon }
+	potential = {
+		ship_uses_ion_cannon_components = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_YUZU_REACTOR_1_MASTER"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 10000
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1520
+			exotic_gases = 200
+		}
+	}
+
+	component_set = "power_core"
+	# size_restriction = { ion_cannon }
+	potential = {
+		ship_uses_ion_cannon_components = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_YUZU_REACTOR_1"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1"
+	icon_frame = 1
+	power = 14250
+
+	prerequisites = { "tech_reactor_yuzu_1" }
+	component_set = "power_core"
+	upgrades_to = "STARBASE_YUZU_REACTOR_1_ADVANCED"
+	# class_restriction = { shipclass_starbase shipclass_military_special }
+	# size_restriction = {
+	#	starbase_outpost
+	#	starbase_starport
+	#	starbase_starhold
+	#	starbase_starfortress
+	#	starbase_citadel
+	#	juggernaut
+	#	starbase_deep_space_citadel_1
+	#	starbase_deep_space_citadel_2
+	#	starbase_deep_space_citadel_3
+	#	monadic_qerr
+	# }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_YUZU_REACTOR_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 21375
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "STARBASE_YUZU_REACTOR_1_ELITE"
+	# class_restriction = { shipclass_starbase shipclass_military_special }
+	# size_restriction = {
+	#	starbase_outpost
+	#	starbase_starport
+	#	starbase_starhold
+	#	starbase_starfortress
+	#	starbase_citadel
+	#	juggernaut
+	#	starbase_deep_space_citadel_1
+	#	starbase_deep_space_citadel_2
+	#	starbase_deep_space_citadel_3
+	#	monadic_qerr
+	# }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_YUZU_REACTOR_1_ELITE"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_elite"
+	icon_frame = 1
+	power = 28500
+
+	prerequisites = { "tech_reactor_yuzu_1_elite" }
+	component_set = "power_core"
+	upgrades_to = "STARBASE_YUZU_REACTOR_1_MASTER"
+	# class_restriction = { shipclass_starbase shipclass_military_special }
+	# size_restriction = {
+	#	starbase_outpost
+	#	starbase_starport
+	#	starbase_starhold
+	#	starbase_starfortress
+	#	starbase_citadel
+	#	juggernaut
+	#	starbase_deep_space_citadel_1
+	#	starbase_deep_space_citadel_2
+	#	starbase_deep_space_citadel_3
+	#	monadic_qerr
+	# }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_YUZU_REACTOR_1_MASTER"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_master"
+	icon_frame = 1
+	power = 35625
+
+	prerequisites = { "tech_reactor_yuzu_1_master" }
+	component_set = "power_core"
+	# class_restriction = { shipclass_starbase shipclass_military_special }
+	# size_restriction = {
+	#	starbase_outpost
+	#	starbase_starport
+	#	starbase_starhold
+	#	starbase_starfortress
+	#	starbase_citadel
+	#	juggernaut
+	#	starbase_deep_space_citadel_1
+	#	starbase_deep_space_citadel_2
+	#	starbase_deep_space_citadel_3
+	#	monadic_qerr
+	# }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
 		}
 	}
 }

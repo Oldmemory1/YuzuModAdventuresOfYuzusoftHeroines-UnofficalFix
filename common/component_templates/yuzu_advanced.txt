@@ -351,7 +351,6 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_armor_1_advanced" }
 	component_set = "YUZU_ARMOR_1_ADVANCED"
-	upgrades_to = "SMALL_YUZU_ARMOR_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -389,7 +388,6 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_armor_1_advanced" }
 	component_set = "YUZU_ARMOR_1_ADVANCED"
-	upgrades_to = "MEDIUM_YUZU_ARMOR_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -427,7 +425,6 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_armor_1_advanced" }
 	component_set = "YUZU_ARMOR_1_ADVANCED"
-	upgrades_to = "LARGE_YUZU_ARMOR_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -471,7 +468,6 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_shield_1_advanced" }
 	component_set = "YUZU_SHIELD_1_ADVANCED"
-	upgrades_to = "SMALL_YUZU_SHIELD_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -510,7 +506,6 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_shield_1_advanced" }
 	component_set = "YUZU_SHIELD_1_ADVANCED"
-	upgrades_to = "MEDIUM_YUZU_SHIELD_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -549,7 +544,6 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_shield_1_advanced" }
 	component_set = "YUZU_SHIELD_1_ADVANCED"
-	upgrades_to = "LARGE_YUZU_SHIELD_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -865,4 +859,45 @@ utility_component_template = {
 	prerequisites = { "tech_yuzu_jump_drive_1_advanced" }
 	component_set = "ftl_components"
 	upgrades_to = "YUZU_JUMP_DRIVE_ELITE"
+}
+
+# ===== 传感器 (1) =====
+# 时空传感器四档 —— 每一档: 追踪 +5、sensor_range +1、hyperlane_range +1。
+#   Tier1 +20 / 5 / 6  ->  先进 +25 / 6 / 7  ->  精英 +30 / 7 / 8  ->  太初 +35 / 8 / 9
+# 造价 = Tier1 x1.75 / x3.25 / x5.5(与推进器同一条倍率), 耗电沿用 Tier1 的 -25
+#   —— 推进器也是全档同耗电, 传感器同样不靠耗电区分档位。
+# 组件集沿用原版 `sensor_components`: 与原版 SENSOR_1..4 以及本 mod 的
+#   SENSOR_YUZU_1 / SENSOR_YUZU_2 同组, 这样舰船设计器里四档排在同一行。
+# 没有 potential 限制(与装甲/护盾同档一致), 生物舰船组也能装。
+
+utility_component_template = {
+	key = "SENSOR_YUZU_1_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_sensor_yuzu_1_advanced"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 18
+		}
+	}
+	sensor_range = 6
+	hyperlane_range = 7
+
+	ship_modifier = {
+		ship_tracking_add = 25
+	}
+
+	prerequisites = { "tech_sensors_yuzu_1_advanced" }
+	component_set = "sensor_components"
+	upgrades_to = "SENSOR_YUZU_1_ELITE"
+
+	ai_weight = {
+		weight = 15000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
 }

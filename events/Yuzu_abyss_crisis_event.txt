@@ -38,7 +38,7 @@ event = {
 								has_technology = tech_yuzu_lance_3
 								has_technology = tech_yuzu_beam_3
 								has_technology = tech_sensors_yuzu_2
-								has_technology = tech_reactor_yuzu
+								has_technology = tech_reactor_yuzu_3
 								has_technology = tech_yuzu_armor_2
 								has_technology = tech_yuzu_shield_2
 							}

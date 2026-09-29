@@ -179,7 +179,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_1"
 	required_component="YUZU_JUMP_DRIVE"
 	required_component="COMBAT_COMPUTER_ARTILLERY_YUZU"
-	required_component="TITAN_DARK_MATTER_REACTOR"
+	required_component="TITAN_YUZU_REACTOR_1"
 	required_component="TITAN_SHIP_THRUSTER_YUZU"
 
 	is_special_buildable = yes
@@ -283,7 +283,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_1"
 	required_component="YUZU_JUMP_DRIVE"
 	required_component="COMBAT_COMPUTER_LINE_YUZU"
-	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component="BATTLESHIP_YUZU_REACTOR_1"
 	required_component="BATTLESHIP_SHIP_THRUSTER_YUZU"
 
 	is_special_buildable = yes
@@ -374,7 +374,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_1"
 	required_component="YUZU_JUMP_DRIVE"
 	required_component="COMBAT_COMPUTER_PICKET_YUZU"
-	required_component="DESTROYER_DARK_MATTER_REACTOR"
+	required_component="DESTROYER_YUZU_REACTOR_1"
 	required_component="DESTROYER_SHIP_THRUSTER_YUZU"
 
 	is_special_buildable = yes
@@ -563,7 +563,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_2"
 	required_component="PSI_JUMP_DRIVE_1"
 	required_component="COMBAT_COMPUTER_ARTILLERY_PRECOG"
-	required_component="TITAN_YUZU_REACTOR"
+	required_component="TITAN_YUZU_REACTOR_3"
 	required_component="TITAN_SHIP_THRUSTER_5"
 
 	is_special_buildable = yes
@@ -666,7 +666,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_2"
 	required_component="PSI_JUMP_DRIVE_1"
 	required_component="COMBAT_COMPUTER_LINE_PRECOG"
-	required_component="BATTLESHIP_YUZU_REACTOR"
+	required_component="BATTLESHIP_YUZU_REACTOR_3"
 	required_component="BATTLESHIP_SHIP_THRUSTER_5"
 
 	is_special_buildable = yes
@@ -757,7 +757,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_2"
 	required_component="PSI_JUMP_DRIVE_1"
 	required_component="COMBAT_COMPUTER_PICKET_PRECOG"
-	required_component="DESTROYER_YUZU_REACTOR"
+	required_component="DESTROYER_YUZU_REACTOR_3"
 	required_component="DESTROYER_SHIP_THRUSTER_5"
 
 	is_special_buildable = yes
@@ -788,7 +788,7 @@ ship_design = {
 	required_component="PSI_JUMP_DRIVE_1"
 	required_component="SHIP_THRUSTER_5"
 	required_component="SENSOR_YUZU_2"
-	required_component="CORVETTE_YUZU_REACTOR"
+	required_component="CORVETTE_YUZU_REACTOR_3"
 
 	is_special_buildable = yes
 	allow_buildable_trigger = is_yuzu_abyss_empire
@@ -873,7 +873,7 @@ ship_design = {
 	}
 	required_component="SENSOR_YUZU_2"
 	required_component="COMBAT_COMPUTER_PLATFORM_PRECOG"
-	required_component="PLATFORM_YUZU_REACTOR"
+	required_component="PLATFORM_YUZU_REACTOR_3"
 
 	is_special_buildable = yes
 	allow_buildable_trigger = is_yuzu_abyss_empire
@@ -930,7 +930,7 @@ ship_design = {
 	}
 	required_component="SENSOR_YUZU_2"
 	required_component="COMBAT_COMPUTER_PLATFORM_PRECOG"
-	required_component="ION_CANNON_YUZU_REACTOR"
+	required_component="ION_CANNON_YUZU_REACTOR_3"
 
 	is_special_buildable = yes
 	allow_buildable_trigger = is_yuzu_abyss_empire

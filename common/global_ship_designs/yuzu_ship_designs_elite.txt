@@ -179,7 +179,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_1"
 	required_component="YUZU_JUMP_DRIVE_ELITE"
 	required_component="COMBAT_COMPUTER_ARTILLERY_YUZU_ELITE"
-	required_component="TITAN_DARK_MATTER_REACTOR"
+	required_component="TITAN_YUZU_REACTOR_1_ELITE"
 	required_component="TITAN_SHIP_THRUSTER_YUZU_ELITE"
 
 	is_special_buildable = yes
@@ -283,7 +283,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_1"
 	required_component="YUZU_JUMP_DRIVE_ELITE"
 	required_component="COMBAT_COMPUTER_LINE_YUZU_ELITE"
-	required_component="BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component="BATTLESHIP_YUZU_REACTOR_1_ELITE"
 	required_component="BATTLESHIP_SHIP_THRUSTER_YUZU_ELITE"
 
 	is_special_buildable = yes
@@ -374,7 +374,7 @@ ship_design = {
 	required_component="SENSOR_YUZU_1"
 	required_component="YUZU_JUMP_DRIVE_ELITE"
 	required_component="COMBAT_COMPUTER_PICKET_YUZU_ELITE"
-	required_component="DESTROYER_DARK_MATTER_REACTOR"
+	required_component="DESTROYER_YUZU_REACTOR_1_ELITE"
 	required_component="DESTROYER_SHIP_THRUSTER_YUZU_ELITE"
 
 	is_special_buildable = yes

@@ -53,6 +53,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_sensors_yuzu_1" }
 	component_set = "sensor_components"
+	upgrades_to = "SENSOR_YUZU_1_ADVANCED"
 
 	ai_weight = {
 		weight = 5000

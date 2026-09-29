@@ -119,8 +119,24 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ship_part_reactor_yuzu"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_yuzu.dds"
+		name = "GFX_ship_part_reactor_yuzu_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_yuzu_3.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_reactor_yuzu_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_yuzu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_reactor_yuzu_1_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_yuzu_1_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_reactor_yuzu_1_elite"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_yuzu_1_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_reactor_yuzu_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_reactor_yuzu_1_master.dds"
 	}
 	spriteType = {
 		name = "GFX_ship_part_computer_swarm_yuzu"
@@ -237,6 +253,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ship_part_sensor_yuzu_2"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sensor_yuzu_1_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_1_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sensor_yuzu_1_elite"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_1_elite.dds"
 	}
 	spriteType = {
 		name = "GFX_ship_part_armor_yuzu_1"
@@ -435,5 +459,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ship_part_thruster_yuzu_1_master"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_thruster_yuzu_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_sensor_yuzu_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_1_master.dds"
 	}
 }

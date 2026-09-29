@@ -880,3 +880,41 @@ utility_component_template = {
 	component_set = "ftl_components"
 	upgrades_to = "YUZU_JUMP_DRIVE_MASTER"
 }
+
+# ===== 传感器 (1) =====
+# 时空传感器四档 —— 每一档: 追踪 +5、sensor_range +1、hyperlane_range +1。
+#   Tier1 +20 / 5 / 6  ->  先进 +25 / 6 / 7  ->  精英 +30 / 7 / 8  ->  太初 +35 / 8 / 9
+# 造价 = Tier1 x3.25(太初 x5.5 由 make_yuzu_master.py 派生), 耗电沿用 Tier1 的 -25。
+# 组件集沿用原版 `sensor_components`(四档同组, 见 yuzu_spacetime_weapon_tiers.md)。
+
+utility_component_template = {
+	key = "SENSOR_YUZU_1_ELITE"
+	size = medium
+	icon = "GFX_ship_part_sensor_yuzu_1_elite"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 33
+		}
+	}
+	sensor_range = 7
+	hyperlane_range = 8
+
+	ship_modifier = {
+		ship_tracking_add = 30
+	}
+
+	prerequisites = { "tech_sensors_yuzu_1_elite" }
+	component_set = "sensor_components"
+	upgrades_to = "SENSOR_YUZU_1_MASTER"
+
+	ai_weight = {
+		weight = 20000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}

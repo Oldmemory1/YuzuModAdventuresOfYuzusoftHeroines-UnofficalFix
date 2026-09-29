@@ -7,6 +7,7 @@
 # 装甲: 值 = 世界装甲 x2.5, 造价/维护 = x4, 硬化 0.20, 再生 4%/日,
 #       造价另需活体金属(稀有水晶量的 1/5), 维护另需稀有水晶(造价水晶的 1%)
 # 推进器/引擎: 造价 = Tier1 x5.5; 修正值 = 先进 + 2x(先进 - Tier1)
+# 传感器: 追踪 +35, sensor_range 8, hyperlane_range 9, 造价 = Tier1 x5.5
 # 升级链: Tier1 -> ADVANCED -> ELITE -> MASTER
 # 本文件由 scripts/make_yuzu_master.py 生成, 勿手改
 
@@ -859,4 +860,37 @@ utility_component_template = {
 	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
 	prerequisites = { "tech_yuzu_jump_drive_1_master" }
 	component_set = "ftl_components"
+}
+
+# ===== 传感器 (1) =====
+
+utility_component_template = {
+	key = "SENSOR_YUZU_1_MASTER"
+	size = medium
+	icon = "GFX_ship_part_sensor_yuzu_1_master"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 55
+		}
+	}
+	sensor_range = 8
+	hyperlane_range = 9
+
+	ship_modifier = {
+		ship_tracking_add = 35
+	}
+
+	prerequisites = { "tech_sensors_yuzu_1_master" }
+	component_set = "sensor_components"
+
+	ai_weight = {
+		weight = 25000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
 }
