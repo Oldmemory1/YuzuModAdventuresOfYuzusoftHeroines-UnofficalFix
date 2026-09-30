@@ -307,6 +307,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_fire_control_yuzu.dds"
 	}
 	spriteType = {
+		name = "GFX_ship_part_fire_control_yuzu_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_fire_control_yuzu_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_fire_control_yuzu_elite"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_fire_control_yuzu_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_fire_control_yuzu_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_fire_control_yuzu_master.dds"
+	}
+	spriteType = {
 		name = "GFX_ship_part_aura_yuzu_abyss"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_aura_yuzu_abyss.dds"
 	}

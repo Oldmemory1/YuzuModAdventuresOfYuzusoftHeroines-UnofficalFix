@@ -122,7 +122,7 @@ ship_design = {
 	required_component = "SENSOR_YUZU_1"
 	required_component = "YUZU_JUMP_DRIVE"
 	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU"
-	required_component = "TITAN_BIO_DARK_MATTER_REACTOR"
+	required_component = "TITAN_YUZU_REACTOR_1"
 	required_component = "TITAN_SHIP_THRUSTER_YUZU"
 
 	is_special_buildable = yes
@@ -240,22 +240,22 @@ ship_design = {
 
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ADVANCED"
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ADVANCED"
 		}
 		component = {
 			slot = "AUX_UTILITY_3"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ADVANCED"
 		}
 	}
 
 	required_component = "SENSOR_YUZU_1"
 	required_component = "YUZU_JUMP_DRIVE_ADVANCED"
 	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_ADVANCED"
-	required_component = "TITAN_BIO_DARK_MATTER_REACTOR"
+	required_component = "TITAN_YUZU_REACTOR_1_ADVANCED"
 	required_component = "TITAN_SHIP_THRUSTER_YUZU_ADVANCED"
 
 	is_special_buildable = yes
@@ -366,22 +366,22 @@ ship_design = {
 
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_3"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 	}
 
 	required_component = "SENSOR_YUZU_1"
 	required_component = "YUZU_JUMP_DRIVE_ELITE"
 	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_ELITE"
-	required_component = "TITAN_BIO_DARK_MATTER_REACTOR"
+	required_component = "TITAN_YUZU_REACTOR_1_ELITE"
 	required_component = "TITAN_SHIP_THRUSTER_YUZU_ELITE"
 
 	is_special_buildable = yes
@@ -492,22 +492,22 @@ ship_design = {
 
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_MASTER"
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_MASTER"
 		}
 		component = {
 			slot = "AUX_UTILITY_3"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_MASTER"
 		}
 	}
 
 	required_component = "SENSOR_YUZU_1"
 	required_component = "YUZU_JUMP_DRIVE_MASTER"
 	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_MASTER"
-	required_component = "TITAN_BIO_DARK_MATTER_REACTOR"
+	required_component = "TITAN_YUZU_REACTOR_1_MASTER"
 	required_component = "TITAN_SHIP_THRUSTER_YUZU_MASTER"
 
 	is_special_buildable = yes

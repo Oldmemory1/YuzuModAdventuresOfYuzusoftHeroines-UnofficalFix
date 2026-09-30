@@ -160,19 +160,19 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_3"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_4"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 	}
 
@@ -268,15 +268,15 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_3"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 	}
 
@@ -364,11 +364,11 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 		component = {
 			slot = "AUX_UTILITY_2"
-			template = "FIRE_CONTROL_YUZU"
+			template = "FIRE_CONTROL_YUZU_ELITE"
 		}
 	}
 	required_component="SENSOR_YUZU_1"

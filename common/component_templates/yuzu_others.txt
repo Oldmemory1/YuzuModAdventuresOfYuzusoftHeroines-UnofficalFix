@@ -119,6 +119,114 @@ utility_component_template = {
 
 	prerequisites = { tech_fire_control_yuzu }
 	component_set = "FIRE_CONTROL_YUZU"
+	upgrades_to = "FIRE_CONTROL_YUZU_ADVANCED"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+# ===== 时空感知水晶 先进 / 精英 / 太初 =====
+# 规则（见 fire_control.md 第三节）：
+#   命中 / 追踪 每级 +5（+5/+10/+15/+20）；回避四档固定 ×1.2；
+#   武器射速从"先进"起每级 +5%（0.05/0.10/0.15）；耗电 -30/-45/-60/-75；
+#   造价 = Tier1 的 20 合金 + 1 稀有水晶 ×1.75/×3.25/×5.5；**四档都没有维护费**。
+
+utility_component_template = {
+	key = "FIRE_CONTROL_YUZU_ADVANCED"
+	size = aux
+	icon = "GFX_ship_part_fire_control_yuzu_advanced"
+	icon_frame = 1
+	power = -45
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 35
+			rare_crystals = 1.75
+		}
+	}
+
+	ship_modifier = {
+		ship_accuracy_add = 10
+		ship_tracking_add = 10
+		ship_evasion_mult = 0.2
+		ship_fire_rate_mult = 0.05
+	}
+
+	prerequisites = { tech_fire_control_yuzu_advanced }
+	component_set = "FIRE_CONTROL_YUZU"
+	upgrades_to = "FIRE_CONTROL_YUZU_ELITE"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "FIRE_CONTROL_YUZU_ELITE"
+	size = aux
+	icon = "GFX_ship_part_fire_control_yuzu_elite"
+	icon_frame = 1
+	power = -60
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 65
+			rare_crystals = 3.25
+		}
+	}
+
+	ship_modifier = {
+		ship_accuracy_add = 15
+		ship_tracking_add = 15
+		ship_evasion_mult = 0.2
+		ship_fire_rate_mult = 0.10
+	}
+
+	prerequisites = { tech_fire_control_yuzu_elite }
+	component_set = "FIRE_CONTROL_YUZU"
+	upgrades_to = "FIRE_CONTROL_YUZU_MASTER"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "FIRE_CONTROL_YUZU_MASTER"
+	size = aux
+	icon = "GFX_ship_part_fire_control_yuzu_master"
+	icon_frame = 1
+	power = -75
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 110
+			rare_crystals = 5.5
+		}
+	}
+
+	ship_modifier = {
+		ship_accuracy_add = 20
+		ship_tracking_add = 20
+		ship_evasion_mult = 0.2
+		ship_fire_rate_mult = 0.15
+	}
+
+	prerequisites = { tech_fire_control_yuzu_master }
+	component_set = "FIRE_CONTROL_YUZU"
 
 	ai_weight = {
 		weight = 100

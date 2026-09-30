@@ -1122,6 +1122,111 @@ tech_fire_control_yuzu = {
 	}
 }
 
+tech_fire_control_yuzu_advanced = {
+	area = physics
+	tier = 5
+	cost = @yuzu_tier5cost5
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_fire_control_yuzu" }
+	weight = @yuzu_tier5weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_FIRE_CONTROL_YUZU_ADVANCED_TITLE"
+			desc = "TECH_UNLOCK_FIRE_CONTROL_YUZU_ADVANCED_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+tech_fire_control_yuzu_elite = {
+	area = physics
+	tier = 6
+	cost = @yuzu_tier6cost4
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_fire_control_yuzu_advanced" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_FIRE_CONTROL_YUZU_ELITE_TITLE"
+			desc = "TECH_UNLOCK_FIRE_CONTROL_YUZU_ELITE_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+tech_fire_control_yuzu_master = {
+	area = physics
+	tier = 6
+	cost = @yuzu_tier6cost5
+	category = { computing }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	prerequisites = { "tech_fire_control_yuzu_elite" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_FIRE_CONTROL_YUZU_MASTER_TITLE"
+			desc = "TECH_UNLOCK_FIRE_CONTROL_YUZU_MASTER_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
 tech_sensors_yuzu_1 = {
 	area = physics
 	cost = @yuzu_tier5cost4
