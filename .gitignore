@@ -11,6 +11,9 @@ wheels/
 
 # Game assets (large binary texture files)
 gfx/**/*.dds
+# 备份包（gfx 里的图 git 不跟踪，改动前先打包）
+/gfx_backup_*.tar.gz
+/backups/
 
 # IDE
 .idea/
@@ -23,3 +26,11 @@ uv.lock
 /docs
 /.cwtools
 /.reserve_gfxs
+/.reserve_gfx_for_weapons
+/.reserve_gfx_for_sensor
+/.reserve_gfx_for_reactor
+/.reserve_gfx_for_fire_control
+/temp
+/scripts
+/node_tools
+/collected_gfx_for_buildings

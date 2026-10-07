@@ -351,6 +351,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_armor_1_advanced" }
 	component_set = "YUZU_ARMOR_1_ADVANCED"
+	upgrades_to = "SMALL_YUZU_ARMOR_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -388,6 +389,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_armor_1_advanced" }
 	component_set = "YUZU_ARMOR_1_ADVANCED"
+	upgrades_to = "MEDIUM_YUZU_ARMOR_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -425,6 +427,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_armor_1_advanced" }
 	component_set = "YUZU_ARMOR_1_ADVANCED"
+	upgrades_to = "LARGE_YUZU_ARMOR_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -468,6 +471,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_shield_1_advanced" }
 	component_set = "YUZU_SHIELD_1_ADVANCED"
+	upgrades_to = "SMALL_YUZU_SHIELD_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -506,6 +510,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_shield_1_advanced" }
 	component_set = "YUZU_SHIELD_1_ADVANCED"
+	upgrades_to = "MEDIUM_YUZU_SHIELD_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -544,6 +549,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_shield_1_advanced" }
 	component_set = "YUZU_SHIELD_1_ADVANCED"
+	upgrades_to = "LARGE_YUZU_SHIELD_1_ELITE"
 	resources = {
 		category = ship_components
 		cost = {
@@ -807,6 +813,9 @@ utility_component_template = {
 		OR = {
 			from = {
 				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
 			}
 			is_arkship_ship = yes
 		}

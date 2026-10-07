@@ -37,7 +37,7 @@ col_city = {
 	}
 
 	ai_building_set_affinity = {
-		trade = 2.0
+		trade = 3.0
 	}
 
 	weight_modifier = {

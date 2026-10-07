@@ -1,0 +1,46 @@
+### 指令-76 联动：把「军用克隆体」补授给全体柚子领袖 ###
+# 只有等 libra 指令-76 局势跑到「领袖特质已解锁」（国家 flag
+# libra_directive_76_leader_trait 被写入）之后才可见，只负责补授漏网者，
+# 不提前发放。详见 directions/libra_directive76_narrative_and_leader_trait.md。
+#
+# 说明：法令的 effect 只在「启用」时执行一次，因此新领袖必须靠 on_actions 里的
+# 钩子（Yuzu_libra_directive76.1）持续补授。
+# compatible with libra
+yuzu_libra_clone_legion_trait = {
+	length = -1
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+	}
+
+	potential = {
+		is_YUZU = yes
+		has_ascension_perk = ap_libra_directive_76
+		has_country_flag = libra_directive_76_leader_trait
+	}
+
+	modifier = {
+		custom_tooltip = edict_yuzu_libra_clone_legion_trait_tt
+	}
+
+	effect = {
+		set_country_flag = yuzu_libra_clone_legion_trait_on
+		every_owned_leader = {
+			limit = { yuzu_libra_clone_legion_trait_can_get = yes }
+			add_trait = { trait = leader_trait_libra_directive_76 show_message = no }
+		}
+		every_pool_leader = {
+			limit = { yuzu_libra_clone_legion_trait_can_get = yes }
+			add_trait = { trait = leader_trait_libra_directive_76 show_message = no }
+		}
+	}
+
+	on_disabled = {
+		remove_country_flag = yuzu_libra_clone_legion_trait_on
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

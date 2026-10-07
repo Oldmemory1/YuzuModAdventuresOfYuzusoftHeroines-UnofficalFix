@@ -356,11 +356,388 @@ fleet_event = {
 		great_artifact_reward = yes
 		owner = {
 			add_relic = r_silver_key
+			if = {
+				limit = {
+					is_YUZU = yes
+					NOT = { has_country_flag = yuzu_doused_system_spawned }
+				}
+				# 深渊考古点挖完 → 60 天后「熄灭」出现在旧深渊星系旁边 (见 events/Yuzu_doused_system_event.txt)
+				country_event = { id = Yuzu_doused_system_event.1 days = 60 }
+			}
 			add_monthly_resource_mult = {
 				resource = physics_research
 				value = @tier5researchreward
 				min = @tier5researchmin
 				max = @tier5researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.13
+	title = Yuzu_arc_sites_event.13.name
+	desc = Yuzu_arc_sites_event.13.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 30
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.14
+	title = Yuzu_arc_sites_event.14.name
+	desc = Yuzu_arc_sites_event.14.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 30
+			}
+		}
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.15
+	title = Yuzu_arc_sites_event.15.name
+	desc = Yuzu_arc_sites_event.15.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 30
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.16
+	title = Yuzu_arc_sites_event.16.name
+	desc = {
+		text = Yuzu_arc_sites_event.16.desc.libra
+		trigger = { owner = { has_country_flag = libra_directive_76_leader_trait } }
+	}
+	desc = {
+		text = Yuzu_arc_sites_event.16.desc
+		trigger = { always = yes }
+	}
+	picture = GFX_evt_ancient_databank
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 30
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.17
+	title = Yuzu_arc_sites_event.17.name
+	desc = Yuzu_arc_sites_event.17.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 60
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.18
+	title = Yuzu_arc_sites_event.18.name
+	desc = {
+		text = Yuzu_arc_sites_event.18.desc.libra
+		trigger = { owner = { has_country_flag = libra_directive_76_leader_trait } }
+	}
+	desc = {
+		text = Yuzu_arc_sites_event.18.desc
+		trigger = { always = yes }
+	}
+	picture = GFX_evt_ancient_databank
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 60
+			}
+		}
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.19
+	title = Yuzu_arc_sites_event.19.name
+	desc = Yuzu_arc_sites_event.19.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 60
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.20
+	title = Yuzu_arc_sites_event.20.name
+	desc = {
+		text = Yuzu_arc_sites_event.20.desc.libra
+		trigger = { owner = { has_country_flag = libra_directive_76_leader_trait } }
+	}
+	desc = {
+		text = Yuzu_arc_sites_event.20.desc
+		trigger = { always = yes }
+	}
+	picture = GFX_evt_ancient_databank
+	show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	# 完成奖励：120 个月凝聚力（原「随机舰队司令 + 记名者特质」方案已取消，2026-10-07）
+	option = {
+		name = Yuzu_arc_sites_event.20.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 120
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.21
+	title = Yuzu_arc_sites_event.21.name
+	desc = Yuzu_arc_sites_event.21.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_resource = { minor_artifacts = 200 }
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.22
+	title = Yuzu_arc_sites_event.22.name
+	desc = {
+		text = Yuzu_arc_sites_event.22.desc.libra
+		trigger = { owner = { has_country_flag = libra_directive_76_leader_trait } }
+	}
+	desc = {
+		text = Yuzu_arc_sites_event.22.desc
+		trigger = { always = yes }
+	}
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_resource = { minor_artifacts = 200 }
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.23
+	title = Yuzu_arc_sites_event.23.name
+	desc = Yuzu_arc_sites_event.23.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_resource = { minor_artifacts = 200 }
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.24
+	title = Yuzu_arc_sites_event.24.name
+	desc = Yuzu_arc_sites_event.24.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_resource = { minor_artifacts = 200 }
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.25
+	title = Yuzu_arc_sites_event.25.name
+	desc = Yuzu_arc_sites_event.25.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_finding_loot
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = KEEP_SEARCHING
+		owner = {
+			add_resource = { minor_artifacts = 200 }
+		}
+	}
+}
+
+fleet_event = {
+	id = Yuzu_arc_sites_event.26
+	title = Yuzu_arc_sites_event.26.name
+	desc = Yuzu_arc_sites_event.26.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_default
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	# 奖励：按玩家当前合金科技水平推进下一级（见 directions/directive76_easter_egg_system.md 3.5）
+	option = {
+		name = Yuzu_arc_sites_event.26.a
+		owner = {
+			if = {
+				limit = { NOT = { has_technology = tech_alloys_1 } }
+				add_research_option = tech_alloys_1
+				add_tech_progress = { tech = tech_alloys_1 progress = 0.25 }
+			}
+			else_if = {
+				limit = { NOT = { has_technology = tech_alloys_2 } }
+				add_research_option = tech_alloys_2
+				add_tech_progress = { tech = tech_alloys_2 progress = 0.25 }
+			}
+			else_if = {
+				limit = { NOT = { has_technology = tech_fe_forge_1 } }
+				add_research_option = tech_fe_forge_1
+				add_tech_progress = { tech = tech_fe_forge_1 progress = 0.25 }
+			}
+			else_if = {
+				limit = { NOT = { has_technology = tech_fe_forge_2 } }
+				add_research_option = tech_fe_forge_2
+				add_tech_progress = { tech = tech_fe_forge_2 progress = 0.25 }
+			}
+			else = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = 12
+					min = @tier1researchmin
+					max = @tier1researchmax
+				}
+				add_monthly_resource_mult = {
+					resource = alloys
+					value = 12
+					min = @tier1materialmin
+					max = 100000
+				}
 			}
 		}
 	}

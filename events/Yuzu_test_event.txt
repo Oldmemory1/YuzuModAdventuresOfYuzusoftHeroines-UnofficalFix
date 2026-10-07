@@ -133,3 +133,75 @@ country_event = {
 		}
 	}
 }
+# ============================================================
+# 「熄灭」（指令-76 彩蛋星系）测试
+#   event Yuzu_test_event.5  —— 在首都旁边刷出「熄灭」并连航道（幂等，靠全局 flag）
+#   event Yuzu_test_event.6  —— 不做检查，强行再刷一个（反复测试用）
+#   目前只处理星系本身：考古点 / 巨型船坞 / 局势触发都还没做
+# ============================================================
+
+# 生成入口（幂等）
+country_event = {
+	id = Yuzu_test_event.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_global_flag = yuzu_doused_system_spawned } }
+			set_global_flag = yuzu_doused_system_spawned
+			country_event = { id = Yuzu_test_event.6 }
+		}
+		else = {
+			country_event = { id = Yuzu_test_event.7 days = 1 }
+		}
+	}
+}
+
+# 强行生成：在首都所在星系旁边刷「熄灭」，并连一条超空间航道
+# （结构刻意与既有的 Yuzu_test_event.2 保持一致，只把 flag 判断换成 always = yes）
+country_event = {
+	id = Yuzu_test_event.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { always = yes }
+			capital_scope.solar_system = {
+				spawn_system = {
+					min_distance = 20
+					max_distance = 30
+					max_jumps = 0
+					initializer = "yuzu_doused_system"
+				}
+				if = {
+					limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+					add_hyperlane = {
+						from = this
+						to = last_created_system
+					}
+				}
+				else = {
+					add_extra_hyperlane_to_spawned_system_effect = yes
+				}
+			}
+			hidden_effect = { country_event = { id = Yuzu_test_event.7 days = 1 } }
+		}
+	}
+}
+
+# 窗口：告诉你星系刷出来了（暂不给 location，先确保事件能注册）
+country_event = {
+	id = Yuzu_test_event.7
+	title = Yuzu_test_event.7.name
+	desc = Yuzu_test_event.7.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_sensor_ping
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_test_event.7.a
+	}
+}

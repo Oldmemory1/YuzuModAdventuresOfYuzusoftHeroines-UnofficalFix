@@ -30,3 +30,10 @@ yuzu_abyss_infiltration = {
 	icon = "gfx/interface/icons/planet_modifiers/yuzu_abyss_infiltration.dds"
 	icon_frame = 3
 }
+
+# 指令-76「熄灭」加工中心 · 战时动员: 自动化冶金全开 (图标沿用原版 pm_factory.dds)
+yuzu_d76_wartime_mobilization = {
+	planet_jobs_alloys_produces_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
+	icon_frame = 1
+}

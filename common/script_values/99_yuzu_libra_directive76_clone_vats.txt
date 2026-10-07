@@ -1,0 +1,59 @@
+############################################################################
+# Yuzu × Fairy Libra 兼容补丁：让柚子克隆仓计入 libra 指令-76
+#
+# libra 的局势 situation_libra_directive_76 每月进度读取 script value
+# 「libra_directive_76_clone_vats_mult」，其原始定义只统计 building_clone_vats
+# （见 libra/common/script_values/<U+E1EE>01_libra_script_values.txt）。
+# 柚子自带 building_yuzu_clone_vats；若不桥接，走了指令-76 的柚子帝国造再多
+# 自家克隆仓，也不会加快该局势。
+#
+# 这里只在柚子侧「重新定义」这一个 script value，而不是整文件替换 libra 的
+# 文件，所以 libra 的其它 150+ 个 script value 完全不受影响：libra 更新别的
+# 数值不会与本文件冲突，只有它改动「本条」数值语义时才需要同步本文件。
+#
+# 数值语义与 libra 原版一致：0.04 ×（libra 克隆仓 + 柚子克隆仓）总数，
+# 上限 4；游牧（is_nomadic）再 ×3。
+#
+# 生效条件（满足其一即可）：
+#   1) 启动器里把本 mod 排在 Fairy Libra 之后加载（推荐，最稳）；
+#   2) 本文件名沿用 libra 同款私有区字符前缀，排序落在 libra 文件之后。
+############################################################################
+# @override
+libra_directive_76_clone_vats_mult = {
+	base = 0
+
+	# vanilla clone vats
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		trigger_scope = owner
+		parameters = {
+			type = building_clone_vats
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+		multiplier = 0.04
+	}
+
+	# this mod clone vats
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		trigger_scope = owner
+		parameters = {
+			type = building_yuzu_clone_vats
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+		multiplier = 0.04
+	}
+
+	modifier = {
+		multiply = 3
+		owner? = {
+			is_nomadic = yes
+		}
+	}
+
+	max = 4
+}

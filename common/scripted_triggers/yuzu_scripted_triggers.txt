@@ -247,3 +247,12 @@ yuzu_libra_loaded = {
 		has_country_flag = libra_game_host
 	}
 }
+
+### 指令-76 联动：某领袖是否应被补授「军用克隆体」特质（领袖作用域） ###
+# 由法令 yuzu_libra_clone_legion_trait 与事件 Yuzu_libra_directive76.1 共用。
+# 刻意不设 has_base_skill <= 10 门槛（那正是 libra 原版漏授的源头之一），
+# 只排除「已经有了」与「机械领袖」。
+yuzu_libra_clone_legion_trait_can_get = {
+	NOT = { has_trait = leader_trait_libra_directive_76 }
+	species = { is_robotic = no }
+}

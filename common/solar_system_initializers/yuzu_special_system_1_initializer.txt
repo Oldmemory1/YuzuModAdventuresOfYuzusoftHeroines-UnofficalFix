@@ -1,0 +1,309 @@
+### 「熄灭」—— 指令-76 彩蛋星系（天体骨架）
+### 设计文档: directions/directive76_easter_egg_system.md
+### 考古点「档案库」「熔炉档案」与「建造中心」巨型船坞都已写入本文件
+###
+### 要点:
+###  - 5 颗遗落世界全部 size 50, 靠 has_set_primary_ps_flag + primary_ps_50 保住尺寸
+###  - 绝不挂 primary_pc_relic_abyss (那是深渊教廷「圣都」标记, 挂了会进深渊之城决议)
+###  - 5 颗中心同处一条轨道 (+72° 均分), 5 颗卫星全部 size 10 (落在中心之间的空档)
+###  - 其余天体全是布景/矿站: 残骸(崩坏) / 宝藏(熔融) / 4 颗冰封卫星 / 净土(盖亚) /
+###    焦土(剧毒) / 残垒·遗迹·荒原(荒芜, 不刷矿藏) / 安息(死寂)
+###  - 建造中心 = 可修复的损坏巨型船坞 mega_shipyard_ruined, 挂在恒星「余烬」轨道上,
+###    周围有残骸; 修复后 -> mega_shipyard_restored
+
+yuzu_doused_system = {
+	name = "NAME_Yuzu_D76_Doused"
+	class = sc_g
+	flags = { yuzu_doused }
+
+	init_effect = {
+		save_global_event_target_as = yuzu_doused_system
+
+		# ---------- 建造中心: 损坏的巨型船坞 (可修复 -> mega_shipyard_restored) ----------
+		# 写在系统 init_effect 里; planet = star 让它挂在恒星「余烬」轨道上
+		# 原型: Stellaris/common/solar_system_initializers/federations_initializers.txt:2081-2100
+		# 本体: Stellaris/common/megastructures/11_mega_shipyard.txt:374 (mega_shipyard_ruined)
+		#   修复前置 tech_mega_engineering(:437), 产物 mega_shipyard_restored(:389)
+		spawn_megastructure = {
+			type = "mega_shipyard_ruined"
+			planet = star
+			orbit_angle = 180
+			init_effect = {
+				set_name = "NAME_Yuzu_D76_Build_Center"
+				# 环绕它的残骸: 它被打坏的那天留下的
+				create_ambient_object = {
+					type = "large_debris_object"
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 18
+						angle = 25
+					}
+				}
+				create_ambient_object = {
+					type = "large_debris_object"
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 26
+						angle = 210
+					}
+				}
+			}
+		}
+	}
+
+	# ---------- 恒星: 余烬 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Ember"
+		class = pc_g_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	# ---------- 残骸: 被赶出去的教廷先头舰队 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Wreckage"
+		class = pc_broken
+		orbit_distance = 22
+		orbit_angle = 20
+		size = 15
+		has_ring = no
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	# ---------- 五中心环: 5 颗中心同处一条轨道 (orbit_distance = 0 = 与上一颗同轨),
+	#            轨道角每颗 +72° -> 360°/5 均匀分布; 这是人工调整过的星系。 ----------
+	# ---------- 指挥中心 (遗落 50) + 卫星 宝藏 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Command_Center"
+		class = pc_relic
+		orbit_distance = 78
+		orbit_angle = 72
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		modifiers = none
+		flags = { has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			relic_world_deposits = yes
+			prevent_anomaly = yes
+			create_archaeological_site = site_yuzu_d76_archive
+		}
+
+		# 宝藏: 加工中心的原料仓 (100 能量币 / 100 矿物 / 10 易爆微粒)
+		moon = {
+			name = "NAME_Yuzu_D76_Treasure"
+			class = pc_molten
+			orbit_distance = 15
+			orbit_angle = 36
+			size = 10
+			has_ring = no
+			init_effect = {
+				clear_deposits = yes
+				prevent_anomaly = yes
+				while = { count = 10 add_deposit = d_energy_10 }
+				while = { count = 10 add_deposit = d_minerals_10 }
+				while = { count = 2 add_deposit = d_volatile_motes_5 }
+			}
+		}
+	}
+
+	# ---------- 生产中心 (遗落 50) + 卫星 回声 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Production_Center"
+		class = pc_relic
+		orbit_distance = 0
+		orbit_angle = 72
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		modifiers = none
+		flags = { has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			relic_world_deposits = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "NAME_Yuzu_D76_Echo"
+			class = pc_frozen
+			orbit_distance = 15
+			orbit_angle = 36
+			size = 10
+			has_ring = no
+			init_effect = { prevent_anomaly = yes }
+		}
+	}
+
+	# ---------- 加工中心 (遗落 50) + 卫星 长眠 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Processing_Center"
+		class = pc_relic
+		orbit_distance = 0
+		orbit_angle = 72
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		modifiers = none
+		flags = { has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			relic_world_deposits = yes
+			prevent_anomaly = yes
+			create_archaeological_site = site_yuzu_d76_foundry
+			# 战时动员: 常驻 +50% 岗位合金产出 (静态修正, 图标沿用原版 pm_factory.dds)
+			add_modifier = { modifier = yuzu_d76_wartime_mobilization days = -1 }
+		}
+
+		moon = {
+			name = "NAME_Yuzu_D76_Slumber"
+			class = pc_frozen
+			orbit_distance = 15
+			orbit_angle = 36
+			size = 10
+			has_ring = no
+			init_effect = { prevent_anomaly = yes }
+		}
+	}
+
+	# ---------- 训练中心 (遗落 50) + 卫星 静默 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Training_Center"
+		class = pc_relic
+		orbit_distance = 0
+		orbit_angle = 72
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		modifiers = none
+		flags = { has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			relic_world_deposits = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "NAME_Yuzu_D76_Silence"
+			class = pc_frozen
+			orbit_distance = 15
+			orbit_angle = 36
+			size = 10
+			has_ring = no
+			init_effect = { prevent_anomaly = yes }
+		}
+	}
+
+	# ---------- 科研中心 (遗落 50) + 卫星 安宁 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Research_Center"
+		class = pc_relic
+		orbit_distance = 0
+		orbit_angle = 72
+		change_orbit = 20
+		size = 50
+		has_ring = no
+		modifiers = none
+		flags = { has_set_primary_ps_flag primary_ps_50 }
+
+		init_effect = {
+			clear_deposits = yes
+			relic_world_deposits = yes
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			name = "NAME_Yuzu_D76_Peace"
+			class = pc_frozen
+			orbit_distance = 15
+			orbit_angle = 36
+			size = 10
+			has_ring = no
+			init_effect = { prevent_anomaly = yes }
+		}
+	}
+
+	# ---------- 净土: 唯一没被战争碰过的地方 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Pure_Land"
+		class = pc_gaia
+		orbit_distance = 38
+		orbit_angle = 50
+		size = 25
+		has_ring = no
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+
+	# ---------- 焦土: 烧过的那一层 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Scorched"
+		class = pc_toxic
+		orbit_distance = 38
+		orbit_angle = 50
+		size = 18
+		has_ring = no
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	# ---------- 残垒 / 遗迹 / 荒原: 荒芜星球, 不刷矿藏 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Bastion_Remnant"
+		class = pc_barren
+		orbit_distance = 30
+		orbit_angle = 45
+		size = 16
+		has_ring = no
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	planet = {
+		name = "NAME_Yuzu_D76_Ruin_Remnant"
+		class = pc_barren
+		orbit_distance = 24
+		orbit_angle = 45
+		size = 14
+		has_ring = no
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	planet = {
+		name = "NAME_Yuzu_D76_Wild_Remnant"
+		class = pc_barren
+		orbit_distance = 24
+		orbit_angle = 45
+		size = 12
+		has_ring = no
+		init_effect = { prevent_anomaly = yes }
+	}
+
+	# ---------- 安息: 墓园世界 ----------
+	planet = {
+		name = "NAME_Yuzu_D76_Rest"
+		class = pc_nuked
+		orbit_distance = 36
+		orbit_angle = 55
+		size = 20
+		has_ring = no
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+}

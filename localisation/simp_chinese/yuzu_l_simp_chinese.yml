@@ -296,6 +296,9 @@
  edict_yuzu_spacetime_overload_1_desc:0"祈愿时空乱流发射器得到超载强化：+25% 护盾穿透、+25% 装甲穿透、+25% 时空乱流类武器伤害。开启时消耗一次心之碎片，并每月支付维护费。"
  edict_yuzu_spacetime_overload_2:0"时空乱流超载 II"
  edict_yuzu_spacetime_overload_2_desc:0"祈愿时空乱流发射器得到过载强化：+25% 护盾穿透、+25% 装甲穿透、+25% 时空乱流类武器伤害。开启时消耗一次心之碎片，并每月支付维护费。"
+ edict_yuzu_libra_clone_legion_trait:0"克隆军团特质补授"
+ edict_yuzu_libra_clone_legion_trait_desc:0"将指令-76的军用克隆体特质直接授予我国全体领袖，补上因克隆体生成等非雇佣途径而漏授者。需要先在指令-76局势中解锁该特质。"
+ edict_yuzu_libra_clone_legion_trait_tt:0"立即为尚无该特质的£leader£§Y领袖§!授予§Y$leader_trait_libra_directive_76$§!，并在之后新领袖出现时自动补授。"
 
  pop_yuzu_released_from_cryo_chamber:0"从冷冻中释放"
 
@@ -845,3 +848,7 @@
  YUZU_CODE_Z7:0 "Z7"
  YUZU_CODE_Z8:0 "Z8"
  YUZU_CODE_Z9:0 "Z9"
+ site_yuzu_d76_archive:0"档案库"
+ site_yuzu_d76_archive_desc:0"指挥中枢最深处的一座地下档案库。加密方式与深渊教廷的典籍完全不同，但保存得异常完整——\n\n这里没有任何匆忙撤离的痕迹。"
+ site_yuzu_d76_foundry:0"熔炉档案"
+ site_yuzu_d76_foundry_desc:0"加工中心自己的厂史：一条从进料到出锭都不需要人的全自动冶金线，和它无人看管地一直跑到停机的那份值班日志。"

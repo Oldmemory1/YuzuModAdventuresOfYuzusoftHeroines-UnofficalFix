@@ -320,6 +320,7 @@ district_arcology_urban_3 = {
 		district_nexus
 		district_hive
 		district_ark_military
+		district_ark_forever_cruise
 	}
 
 	resources = {

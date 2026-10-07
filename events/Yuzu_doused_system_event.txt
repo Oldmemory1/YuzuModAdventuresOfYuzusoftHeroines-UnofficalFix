@@ -1,0 +1,60 @@
+### 「熄灭」的生成 —— 由旧深渊考古点「仪式之地」的末章触发
+### 设计文档: directions/directive76_easter_egg_system.md (§2.1 / §2.2 / §8)
+### 触发链: Yuzu_arc_sites_event.12 (深渊考古点末章)
+###          → 延迟 60 天 → Yuzu_doused_system_event.1 (隐藏)
+###          → 在旧深渊星系 event_target:old_abyss_system 旁边生成「熄灭」, 并连一条超空间航道
+###          → Yuzu_doused_system_event.2 (窗口)
+### 星系内的两个考古点 (档案库 / 熔炉档案) 与建造中心巨型船坞尚未实现
+
+namespace = Yuzu_doused_system_event
+
+# 生成 (隐藏事件, 由 Yuzu_arc_sites_event.12 用 days = 60 延迟触发)
+country_event = {
+	id = Yuzu_doused_system_event.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = yuzu_doused_system_spawned
+
+		# 旧深渊星系: 其 initializer 顶层 init_effect 里存了 save_global_event_target_as = old_abyss_system
+		# (common/solar_system_initializers/yuzu_system_initializer.txt:292-294)
+		event_target:old_abyss_system = {
+			spawn_system = {
+				min_distance = 20
+				max_distance = 30
+				max_jumps = 0
+				initializer = "yuzu_doused_system"
+			}
+
+			if = {
+				limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+				add_hyperlane = {
+					from = this
+					to = last_created_system
+				}
+			}
+			else = {
+				add_extra_hyperlane_to_spawned_system_effect = yes
+			}
+		}
+
+		country_event = { id = Yuzu_doused_system_event.2 days = 1 }
+	}
+}
+
+# 窗口: 告诉玩家「熄灭」出现了
+country_event = {
+	id = Yuzu_doused_system_event.2
+	title = Yuzu_doused_system_event.2.name
+	desc = Yuzu_doused_system_event.2.desc
+	picture = GFX_evt_ancient_databank
+	show_sound = event_sensor_ping
+	location = event_target:yuzu_doused_system
+
+	is_triggered_only = yes
+
+	option = {
+		name = Yuzu_doused_system_event.2.a
+	}
+}

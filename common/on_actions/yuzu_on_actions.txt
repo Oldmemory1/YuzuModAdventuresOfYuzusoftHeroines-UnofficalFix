@@ -23,6 +23,7 @@ on_leader_spawned = {
 		Yuzu_leader_event.3
 		Yuzu_leader_event.7
 		Yuzu_leader_event.12
+		Yuzu_libra_directive76.1 # 指令-76 联动：补授漏授的军用克隆体特质
 	}
 }
 
@@ -32,6 +33,14 @@ on_leader_spawned = {
 on_leader_level_up = {
 	events = {
 		Yuzu_leader_event.11
+	}
+}
+
+# A leader is added to the leader pool, available for recruitment
+# scope: country, from: leader
+on_added_to_leader_pool = {
+	events = {
+		Yuzu_libra_directive76.1 # 指令-76 联动：池中新领袖也补授
 	}
 }
 

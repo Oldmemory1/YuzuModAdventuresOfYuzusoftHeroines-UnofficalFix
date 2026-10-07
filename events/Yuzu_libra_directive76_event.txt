@@ -1,0 +1,45 @@
+namespace = Yuzu_libra_directive76
+
+############################################################################
+# Yuzu × Fairy Libra 指令-76 联动
+#
+# 目的：libra 的「军用克隆体」特质 leader_trait_libra_directive_76 只在
+#   - 局势完成时批量补授已有领袖（libra_fairy.10017）
+#   - 新领袖「被雇佣」时补授（on_leader_hired -> libra_fairy.10016）
+# 两条路径上都可能漏授：克隆体生成决议等「非雇佣」路径不会触发 10016。
+#
+# 本事件补齐这些漏网者：只要玩家开着联动法令
+# yuzu_libra_clone_legion_trait（开关 flag = yuzu_libra_clone_legion_trait_on），
+# 就在领袖出现 / 进入领袖池时，给尚无该特质且非机械的领袖补授。
+#
+# 作用域：on_leader_spawned 与 on_added_to_leader_pool 均为国家作用域，
+# 所以这里用 country_event（不是 leader_event）。
+############################################################################
+
+country_event = {
+	id = Yuzu_libra_directive76.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = yuzu_libra_clone_legion_trait_on
+		has_ascension_perk = ap_libra_directive_76
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = { yuzu_libra_clone_legion_trait_can_get = yes }
+			add_trait = {
+				trait = leader_trait_libra_directive_76
+				show_message = no
+			}
+		}
+		every_pool_leader = {
+			limit = { yuzu_libra_clone_legion_trait_can_get = yes }
+			add_trait = {
+				trait = leader_trait_libra_directive_76
+				show_message = no
+			}
+		}
+	}
+}

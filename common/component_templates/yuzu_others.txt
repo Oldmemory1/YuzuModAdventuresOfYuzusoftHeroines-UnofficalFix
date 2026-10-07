@@ -158,7 +158,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { tech_fire_control_yuzu_advanced }
-	component_set = "FIRE_CONTROL_YUZU"
+	component_set = "FIRE_CONTROL_YUZU_ADVANCED"
 	upgrades_to = "FIRE_CONTROL_YUZU_ELITE"
 
 	ai_weight = {
@@ -192,7 +192,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { tech_fire_control_yuzu_elite }
-	component_set = "FIRE_CONTROL_YUZU"
+	component_set = "FIRE_CONTROL_YUZU_ELITE"
 	upgrades_to = "FIRE_CONTROL_YUZU_MASTER"
 
 	ai_weight = {
@@ -226,7 +226,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { tech_fire_control_yuzu_master }
-	component_set = "FIRE_CONTROL_YUZU"
+	component_set = "FIRE_CONTROL_YUZU_MASTER"
 
 	ai_weight = {
 		weight = 100
