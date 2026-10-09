@@ -225,6 +225,32 @@ tech_yuzu_rapid_cell_division_2 = {
 	}
 }
 
+tech_yuzu_clone_vats_assembly = {
+	cost = @yuzu_tier5cost5
+	area = society
+	tier = 5
+	is_rare = yes
+	category = { biology }
+	prerequisites = { "tech_yuzu_rapid_cell_division_2" }
+	weight = @yuzu_tier5weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
 tech_yuzu_werewolf = {
 	cost = @tier5cost1
 	area = society

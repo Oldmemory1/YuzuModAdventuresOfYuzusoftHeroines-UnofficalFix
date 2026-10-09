@@ -212,6 +212,8 @@
  tech_yuzu_rapid_cell_division_2_desc:0"精心设计的时间加速立场能够在最大限度保证细胞活性的情况下加快克隆时细胞的分裂速度。"
  TECH_YUZU_RAPID_CELL_DIVISION_2_TITLE:0"£building£§Y$building_yuzu_clone_vats$§!提供的§Y$MOD_BONUS_POP_GROWTH$§!:§G+1§!。"
  TECH_YUZU_RAPID_CELL_DIVISION_2_DESC:0"$tech_yuzu_rapid_cell_division_2_desc$"
+ tech_yuzu_clone_vats_assembly:0"克隆仓集群化"
+ tech_yuzu_clone_vats_assembly_desc:0"把原始克隆仓的单个培养槽扩建为成排的灌流阵列，让基因样本在更稳定的介质中同步分裂。"
  
  ap_stare_abyss:0"凝视深渊"
  ap_stare_abyss_desc:0"通过对深渊教廷遗迹的发掘，我们将有能力复现他们的的部分科技。现在，是时候让这个星系感受深渊的气息了。"

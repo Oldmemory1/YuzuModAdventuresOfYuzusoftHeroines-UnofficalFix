@@ -14,7 +14,10 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				has_building = building_yuzu_clone_vats
+				OR = {
+					has_building = building_yuzu_clone_vats
+					has_building = building_yuzu_clone_vats_assembly
+				}
 				OR = {
 					has_building = building_robot_assembly_plant
 					has_building = building_machine_assembly_plant

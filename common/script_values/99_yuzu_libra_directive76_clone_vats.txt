@@ -48,6 +48,19 @@ libra_directive_76_clone_vats_mult = {
 		multiplier = 0.04
 	}
 
+	# this mod clone vats (upgraded)
+	complex_trigger_modifier = {
+		trigger = num_buildings
+		trigger_scope = owner
+		parameters = {
+			type = building_yuzu_clone_vats_assembly
+			disabled = no
+			in_construction = no
+		}
+		mode = add
+		multiplier = 0.04
+	}
+
 	modifier = {
 		multiply = 3
 		owner? = {
