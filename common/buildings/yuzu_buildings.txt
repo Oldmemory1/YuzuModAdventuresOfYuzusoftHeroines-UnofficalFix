@@ -1056,6 +1056,7 @@ building_yuzu_fe_dome_tier_5 = {
 
 
 
+
 ##### 财富圣殿 #####
 building_yuzu_affluence_center_tier_1 = {
 	base_buildtime = @yuzu_fe_b_time_1
@@ -1094,6 +1095,7 @@ building_yuzu_affluence_center_tier_1 = {
 
 	planet_modifier = {
 		planet_housing_add = 800
+		planet_artisans_consumer_goods_produces_add = 0.5
 	}
 
 	resources = {
@@ -1159,6 +1161,7 @@ building_yuzu_affluence_center_tier_2 = {
 	planet_modifier = {
 		planet_housing_add = 1600
 		planet_amenities_add = 1500
+		planet_artisans_consumer_goods_produces_add = 1.0
 	}
 
 	resources = {
@@ -1224,6 +1227,7 @@ building_yuzu_affluence_center_tier_3 = {
 	planet_modifier = {
 		planet_housing_add = 2400
 		planet_amenities_add = 3000
+		planet_artisans_consumer_goods_produces_add = 1.5
 	}
 
 	resources = {
@@ -1289,6 +1293,7 @@ building_yuzu_affluence_center_tier_4 = {
 	planet_modifier = {
 		planet_housing_add = 3200
 		planet_amenities_add = 4500
+		planet_artisans_consumer_goods_produces_add = 2.0
 	}
 
 	resources = {
@@ -1355,6 +1360,7 @@ building_yuzu_affluence_center_tier_5 = {
 		planet_housing_add = 4000
 		planet_amenities_add = 6000
 		job_artisan_per_pop = 0.1
+		planet_artisans_consumer_goods_produces_add = 2.0
 	}
 
 	resources = {
@@ -1376,6 +1382,7 @@ building_yuzu_affluence_center_tier_5 = {
 
 	show_in_tech = tech_building_yuzu_affluence_center_tier_5
 }
+
 
 
 
@@ -1424,6 +1431,7 @@ building_yuzu_nourishment_center_tier_1 = {
 
 	planet_modifier = {
 		planet_housing_add = 800
+		planet_farmers_food_produces_add = 1.0
 	}
 
 	resources = {
@@ -1488,6 +1496,7 @@ building_yuzu_nourishment_center_tier_2 = {
 	planet_modifier = {
 		planet_housing_add = 1600
 		pop_environment_tolerance = 0.05
+		planet_farmers_food_produces_add = 1.5
 	}
 
 	resources = {
@@ -1552,6 +1561,7 @@ building_yuzu_nourishment_center_tier_3 = {
 	planet_modifier = {
 		planet_housing_add = 2400
 		pop_environment_tolerance = 0.1
+		planet_farmers_food_produces_add = 2.0
 	}
 
 	resources = {
@@ -1616,6 +1626,7 @@ building_yuzu_nourishment_center_tier_4 = {
 	planet_modifier = {
 		planet_housing_add = 3200
 		pop_environment_tolerance = 0.15
+		planet_farmers_food_produces_add = 2.5
 	}
 
 	resources = {
@@ -1681,6 +1692,7 @@ building_yuzu_nourishment_center_tier_5 = {
 		planet_housing_add = 4000
 		pop_environment_tolerance = 0.2
 		job_farmer_per_pop = 0.1
+		planet_farmers_food_produces_add = 3.0
 	}
 
 	resources = {
@@ -1702,6 +1714,7 @@ building_yuzu_nourishment_center_tier_5 = {
 
 	show_in_tech = tech_building_yuzu_nourishment_center_tier_5
 }
+
 
 
 
@@ -2007,6 +2020,7 @@ building_yuzu_dimensional_fabricator_tier_5 = {
 
 
 
+
 ##### 星核采矿阵 #####
 building_yuzu_fe_mine_tier_1 = {
 	base_buildtime = @yuzu_fe_b_time_1
@@ -2044,6 +2058,7 @@ building_yuzu_fe_mine_tier_1 = {
 
 	planet_modifier = {
 		planet_housing_add = 800
+		planet_miners_minerals_produces_add = 1.0
 	}
 
 	resources = {
@@ -2107,6 +2122,7 @@ building_yuzu_fe_mine_tier_2 = {
 
 	planet_modifier = {
 		planet_housing_add = 1600
+		planet_miners_minerals_produces_add = 1.5
 	}
 
 	resources = {
@@ -2170,6 +2186,7 @@ building_yuzu_fe_mine_tier_3 = {
 
 	planet_modifier = {
 		planet_housing_add = 2400
+		planet_miners_minerals_produces_add = 2.0
 	}
 
 	resources = {
@@ -2233,6 +2250,7 @@ building_yuzu_fe_mine_tier_4 = {
 
 	planet_modifier = {
 		planet_housing_add = 3200
+		planet_miners_minerals_produces_add = 2.5
 	}
 
 	resources = {
@@ -2297,6 +2315,7 @@ building_yuzu_fe_mine_tier_5 = {
 	planet_modifier = {
 		planet_housing_add = 4000
 		job_miner_per_pop = 0.1
+		planet_miners_minerals_produces_add = 3.0
 	}
 
 	resources = {
@@ -2318,6 +2337,7 @@ building_yuzu_fe_mine_tier_5 = {
 
 	show_in_tech = tech_building_yuzu_fe_mine_tier_5
 }
+
 
 
 
@@ -2366,6 +2386,7 @@ building_yuzu_class_4_singularity_tier_1 = {
 
 	planet_modifier = {
 		planet_housing_add = 800
+		planet_technician_energy_produces_add = 1.0
 	}
 
 	resources = {
@@ -2428,6 +2449,7 @@ building_yuzu_class_4_singularity_tier_2 = {
 
 	planet_modifier = {
 		planet_housing_add = 1600
+		planet_technician_energy_produces_add = 1.5
 	}
 
 	resources = {
@@ -2490,6 +2512,7 @@ building_yuzu_class_4_singularity_tier_3 = {
 
 	planet_modifier = {
 		planet_housing_add = 2400
+		planet_technician_energy_produces_add = 2.0
 	}
 
 	resources = {
@@ -2552,6 +2575,7 @@ building_yuzu_class_4_singularity_tier_4 = {
 
 	planet_modifier = {
 		planet_housing_add = 3200
+		planet_technician_energy_produces_add = 2.5
 	}
 
 	resources = {
@@ -2615,6 +2639,7 @@ building_yuzu_class_4_singularity_tier_5 = {
 	planet_modifier = {
 		planet_housing_add = 4000
 		job_technician_per_pop = 0.1
+		planet_technician_energy_produces_add = 3.0
 	}
 
 	resources = {
@@ -2635,6 +2660,7 @@ building_yuzu_class_4_singularity_tier_5 = {
 
 	show_in_tech = tech_building_yuzu_class_4_singularity_tier_5
 }
+
 
 
 
@@ -2684,6 +2710,7 @@ building_yuzu_nano_forge_tier_1 = {
 
 	planet_modifier = {
 		planet_housing_add = 800
+		planet_metallurgists_alloys_produces_add = 0.5
 	}
 
 	resources = {
@@ -2749,6 +2776,7 @@ building_yuzu_nano_forge_tier_2 = {
 	planet_modifier = {
 		planet_housing_add = 1600
 		planet_structures_upkeep_mult = -0.05
+		planet_metallurgists_alloys_produces_add = 1.0
 	}
 
 	resources = {
@@ -2814,6 +2842,7 @@ building_yuzu_nano_forge_tier_3 = {
 	planet_modifier = {
 		planet_housing_add = 2400
 		planet_structures_upkeep_mult = -0.1
+		planet_metallurgists_alloys_produces_add = 1.5
 	}
 
 	resources = {
@@ -2879,6 +2908,7 @@ building_yuzu_nano_forge_tier_4 = {
 	planet_modifier = {
 		planet_housing_add = 3200
 		planet_structures_upkeep_mult = -0.15000000000000002
+		planet_metallurgists_alloys_produces_add = 2.0
 	}
 
 	resources = {
@@ -2945,6 +2975,7 @@ building_yuzu_nano_forge_tier_5 = {
 		planet_housing_add = 4000
 		planet_structures_upkeep_mult = -0.2
 		job_foundry_per_pop = 0.1
+		planet_metallurgists_alloys_produces_add = 2.0
 	}
 
 	resources = {
@@ -2966,6 +2997,7 @@ building_yuzu_nano_forge_tier_5 = {
 
 	show_in_tech = tech_building_yuzu_nano_forge_tier_5
 }
+
 
 
 
@@ -3391,6 +3423,7 @@ building_yuzu_fe_stronghold_tier_5 = {
 
 
 
+
 ##### 分子焕活所 #####
 building_yuzu_fe_clinic_tier_1 = {
 	base_buildtime = @yuzu_fe_b_time_1
@@ -3686,6 +3719,7 @@ building_yuzu_fe_clinic_tier_5 = {
 
 	show_in_tech = tech_building_yuzu_fe_clinic_tier_5
 }
+
 
 
 
@@ -4008,6 +4042,7 @@ building_yuzu_fe_market_tier_5 = {
 
 
 
+
 ##### 量子创研枢纽 #####
 building_yuzu_fe_lab_tier_1 = {
 	base_buildtime = @yuzu_fe_b_time_1
@@ -4309,6 +4344,7 @@ building_yuzu_fe_lab_tier_5 = {
 
 
 
+
 ##### 虚境欢愉广场 #####
 building_yuzu_fe_entertainment_tier_1 = {
 	base_buildtime = @yuzu_fe_b_time_1
@@ -4589,6 +4625,7 @@ building_yuzu_fe_entertainment_tier_5 = {
 
 	show_in_tech = tech_building_yuzu_fe_entertainment_tier_5
 }
+
 
 
 
