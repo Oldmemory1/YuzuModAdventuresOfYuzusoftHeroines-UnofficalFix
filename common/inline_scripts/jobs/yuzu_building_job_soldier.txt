@@ -1,0 +1,23 @@
+#常规(士兵)
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		job_soldier_add = $AMOUNT$
+	}
+}
+#格式塔(战士无人机)
+#与其它 yuzu_building_job_* 一致: 按帝国类型分发.
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_warrior_drone_add = $AMOUNT$
+	}
+}

@@ -1,0 +1,27 @@
+#常规(研究员: 物理学家/生物学家/工程师)
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		job_physicist_add = $AMOUNT$
+		job_biologist_add = $AMOUNT$
+		job_engineer_add = $AMOUNT$
+	}
+}
+#格式塔(计算单元)
+#与其它 yuzu_building_job_* 一致: 按帝国类型分发.
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_calculator_physicist_add = $AMOUNT$
+		job_calculator_biologist_add = $AMOUNT$
+		job_calculator_engineer_add = $AMOUNT$
+	}
+}

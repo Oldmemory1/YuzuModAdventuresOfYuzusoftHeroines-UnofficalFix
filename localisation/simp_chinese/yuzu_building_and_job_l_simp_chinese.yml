@@ -94,63 +94,63 @@
  yuzu_fe_building_failtext:0"§R需要从§!§Y法令（愿望）§!§R中获取§!"
 
  building_yuzu_nourishment_center_tier_1:0 "营养圣殿"
- building_yuzu_nourishment_center_tier_1_desc:0 "只要是有味道的东西，这里就能迅速重现出来。"
+ building_yuzu_nourishment_center_tier_1_desc:0 "以复制科技即时重构风味的自动化膳食设施。任何已知的味道都可在命令下达后迅速重现。"
 
  building_yuzu_nourishment_center_tier_2:0 "琼浆圣殿"
- building_yuzu_nourishment_center_tier_2_desc:0 "营养圣殿的进一步升华。只要心念所至，世间珍馐便会自行汇聚；圣殿深处的甘泉仿佛能够听见食欲本身，把最荒诞不经的味觉渴求也化作触手可及的盛宴，连行星气候都因此变得温柔。"
+ building_yuzu_nourishment_center_tier_2_desc:0 "只要心念所至，珍馐便会自行汇聚。殿内深处的复现泉能够识别进食者的需求，把最偏门的味觉诉求化为可即时上桌的盛宴，并顺带改善局部气候。"
 
 
  building_yuzu_nano_forge_tier_1:0 "混沌熔炉"
- building_yuzu_nano_forge_tier_1_desc:1 "巨型真空混沌熔炼装置将原材料高效地转化为拥有奇迹般效能的高端合金。"
+ building_yuzu_nano_forge_tier_1_desc:0 "巨型真空混沌熔炼装置。原材料在此被高效转化为性能远超常规冶炼工艺的高端合金。"
 
  building_yuzu_nano_forge_tier_2:0 "万象熔炉"
- building_yuzu_nano_forge_tier_2_desc:0 "混沌熔炉的进一步升华。巨型纳米复制机舱把原材料压进近乎真空的炼造循环，万千形态的合金如潮水般凝结；整座熔炉甚至开始分担行星结构的维护负荷。"
+ building_yuzu_nano_forge_tier_2_desc:0 "巨型纳米复制机舱把原材料压入近乎真空的炼造循环，合金以多种形态连续凝结；整座熔炉同时开始承担行星结构的维护负荷。"
 
  building_yuzu_nano_forge_tier_3:0 "九曜熔炉"
- building_yuzu_nano_forge_tier_3_desc:0 "万象熔炉的进一步升华。幽绿色的熔炼回路自炉心蔓延开去，将整座铸造矩阵化作一具活着的、会呼吸的熔炉，合金的产出变得愈发细腻而纯粹。"
+ building_yuzu_nano_forge_tier_3_desc:0 "熔炼回路自炉心向外蔓延，把整座铸造矩阵改造成一具持续运转的熔炉；合金产出的纯度与细腻度进一步提升。"
 
  building_yuzu_nano_forge_tier_4:0 "真阳熔炉"
- building_yuzu_nano_forge_tier_4_desc:0 "九曜熔炉的进一步升华。赤粉色的炉火汇聚成不熄的熔炼之河，任何投入其中的材料都会被淬炼成极致精纯的合金，连行星结构的维护负荷也被整座熔炉悄然分担。"
+ building_yuzu_nano_forge_tier_4_desc:0 "炉火汇聚成不熄的熔炼之河。任何投入其中的材料都会被淬炼至极致纯度，行星结构的维护负荷也由整座熔炉分担。"
 
  building_yuzu_nano_forge_tier_5:0 "万象终熔"
- building_yuzu_nano_forge_tier_5_desc:0 "熔炉链路的终极形态。淡金色的光辉笼罩着整片铸造矩阵，仿佛行星之心为这座最后的熔炉镀上神性——它既是合金的源头，也是一座燃亮深空的祭坛。"
+ building_yuzu_nano_forge_tier_5_desc:0 "整片铸造矩阵由同一股热流贯穿，合金产线已无可见瓶颈；行星结构的维护负荷被完全纳入其循环。"
 
 
  building_yuzu_dimensional_fabricator_tier_1:0 "多重次元复制机"
- building_yuzu_dimensional_fabricator_tier_1_desc:0 "这些装置能流畅地将能量隧连进多重次元的织构，从中提取出珍稀的战略资源。"
+ building_yuzu_dimensional_fabricator_tier_1_desc:0 "以能量—物质转换为原理的复制装置。装置可稳定隧连进多重次元的织构，从中提取珍稀的战略资源。"
 
  building_yuzu_dimensional_fabricator_tier_2:0 "多重次元制造机"
- building_yuzu_dimensional_fabricator_tier_2_desc:0 "多重次元复制机的进一步升华。先进织造机不断隧连进维度空间的织构，基础战略资源洪流般涌出，零素、暗物质、活体金属与纳米机器人也自此稳定成型。"
+ building_yuzu_dimensional_fabricator_tier_2_desc:0 "先进织造机不断隧连进维度空间的织构，基础战略资源呈洪流状产出，零素、暗物质、活体金属与纳米机器人亦自此稳定成型。"
 
  building_yuzu_fe_mine_tier_1:0 "星核采矿阵"
- building_yuzu_fe_mine_tier_1_desc:0 "透过行星地幔锁定全部矿脉，以量子隧穿在无需物理接触的情况下钻取固态岩层，源源不断输出矿物。"
+ building_yuzu_fe_mine_tier_1_desc:0 "通过行星地幔锁定矿脉的量子隧穿采掘阵列。钻具在不与岩层发生物理接触的前提下穿透固体材料，持续输出矿物。"
 
  building_yuzu_fe_mine_tier_2:0 "星核钻穿枢纽"
- building_yuzu_fe_mine_tier_2_desc:0 "星核采矿阵的进一步升华。量子隧穿井架直抵外地核以上的全部岩层与熔浆界面，矿物被无接触地连续抽出，整座阵列成为行星矿脉的中央枢纽。"
+ building_yuzu_fe_mine_tier_2_desc:0 "隧穿井架可直达外地核以上的全部岩层与熔浆界面，矿物被无接触地连续抽出；整座阵列已升级为行星矿脉的中央采掘枢纽。"
 
 
  building_yuzu_affluence_center_tier_1:0 "财富圣殿"
- building_yuzu_affluence_center_tier_1_desc:0 "无论多奇特的材料，都可以在这里迅速找到。"
+ building_yuzu_affluence_center_tier_1_desc:0 "无论多奇特的材料，都可以在这里迅速找到。先进的采购算法会在需求被意识到之前完成备货。"
 
 
  building_yuzu_affluence_center_tier_2:0 "丰饶圣殿"
- building_yuzu_affluence_center_tier_2_desc:0 "财富圣殿的进一步升华。先进的欲望预测与物质复现系统交织运转，几乎任何奇珍异宝都能在转念之间被调集出来，整座圣殿本身就是一座永不落幕的丰饶之源。"
+ building_yuzu_affluence_center_tier_2_desc:0 "欲望预测与物质复现系统协同运转，几乎任何奇珍异宝都能在转念之间被调集出来；整座圣殿本身就是一座持续的丰饶之源。"
 
 
  building_yuzu_class_4_singularity_tier_1:0 "五级奇点"
- building_yuzu_class_4_singularity_tier_1_desc:0 "运用了无人能够理解的奇点技术制作的全自动发电站，超大型隔离场中源源不断地产生着能量。"
+ building_yuzu_class_4_singularity_tier_1_desc:0 "无人能够完全理解其原理的全自动发电设施。超大型隔离场把奇点约束在稳定能级，能量以恒定速率被抽取并并入电网。"
 
  building_yuzu_class_4_singularity_tier_2:0 "六级奇点"
- building_yuzu_class_4_singularity_tier_2_desc:0 "五级奇点的进一步升华。更强的隔离场把奇点推到更高能级，能量产出挑战着物理学本身，而约束结构却比以往任何时候都更加稳固。"
+ building_yuzu_class_4_singularity_tier_2_desc:0 "更强的隔离场把奇点推向更高能级。能量产出已逼近物理学容许的极限，而约束结构反而比以往任何时候都更加稳固。"
 
  building_yuzu_class_4_singularity_tier_3:0 "七级奇点"
- building_yuzu_class_4_singularity_tier_3_desc:0 "六级奇点的进一步升华。幽绿色的谐振环自隔离场深处生长而出，缠上合金塔架的每一道缝隙，仿佛奇点正在与这座工业巨构呼吸同频，让能量的洪流变得温驯而绵长。"
+ building_yuzu_class_4_singularity_tier_3_desc:0 "谐振环自隔离场深处生长而出，沿合金塔架缠绕成型，使奇点与整座阵列的运行频率保持一致，能量输出由此变得平稳而绵长。"
 
  building_yuzu_class_4_singularity_tier_4:0 "八级奇点"
- building_yuzu_class_4_singularity_tier_4_desc:0 "七级奇点的进一步升华。熔岩般的赤红能量自塔顶倾泻而下，将整座阵列灼成一座不熄的熔炉，哪怕只是远远凝望，也会为那磅礴的存在感所折服。"
+ building_yuzu_class_4_singularity_tier_4_desc:0 "塔顶持续倾泻高温能量流，把整座阵列烧灼成一座不熄的熔炉。其存在感之强，即便远距离观测也足以令人却步。"
 
  building_yuzu_class_4_singularity_tier_5:0 "九级奇点"
- building_yuzu_class_4_singularity_tier_5_desc:0 "奇点链路的终极形态。鎏金的光辉笼罩着每一条回路，仿佛整颗行星都在为这最后的能量圣殿镀上神性——它既是一座发电站，也是一座点亮深空的祭坛。"
+ building_yuzu_class_4_singularity_tier_5_desc:0 "奇点链路的最终形态。能量洪流被完全纳入回路，输出规模已接近行星级工程的上限。"
 
 
  building_yuzu_master_archive:0 "神秘档案库"
@@ -174,29 +174,29 @@
 
 
  building_yuzu_fe_dome_tier_1:0 "覆天穹顶"
- building_yuzu_fe_dome_tier_1_desc:0 "依托极度先进的反重力科技漂浮在空中的超级乌托邦。从地面望去，它几乎覆盖了整个天空。"
+ building_yuzu_fe_dome_tier_1_desc:0 "依托先进反重力技术悬浮的超级乌托邦。从地面望去，它几乎覆盖了整片天空，为居民提供稳定的居住环境。"
 
  building_yuzu_fe_dome_tier_2:0 "碧落穹顶"
- building_yuzu_fe_dome_tier_2_desc:0 "覆天穹顶的进一步升华。整座浮空乌托邦被织入澄澈的碧落之中，反重力穹幕与梦幻生境融为一体，让栖居其中的人们几乎忘却了尘世的重量。"
+ building_yuzu_fe_dome_tier_2_desc:0 "整座浮空乌托邦被织入高空，反重力穹幕与生命支持系统融为一体，持续满足居住者的各项需求。"
 
 
  building_yuzu_fe_stronghold_tier_1:0 "圣盾基地"
- building_yuzu_fe_stronghold_tier_1_desc:0 "一座巨大的星球防御基地，拥有多个装满上古神秘武器的军械库。"
+ building_yuzu_fe_stronghold_tier_1_desc:0 "规模庞大的行星防御复合体，配备多座储存上古神秘武器的军械库与多层装甲。只有高度特化的攻城部队才可能突破其防御。"
 
  building_yuzu_fe_stronghold_tier_2:0 "神盾基地"
- building_yuzu_fe_stronghold_tier_2_desc:0 "圣盾基地的进一步升华。中央塔尖自环形基座间拔地而起，上古军械库与层层护盾彼此咬合，把整颗行星的天空都收进一道无法绕行的防线。"
+ building_yuzu_fe_stronghold_tier_2_desc:0 "中央塔尖自环形基座间拔地而起，上古军械库与层层护盾彼此咬合；行星的天空被收进一道无法绕行的防线。"
 
  building_yuzu_fe_clinic_tier_1:0 "分子焕活所"
- building_yuzu_fe_clinic_tier_1_desc:0 "分子焕活所深入细胞最细微的构造，把病痛与衰老都当作可以修正的误差；居民的健康质量与预期寿命，就此被重新书写。"
+ building_yuzu_fe_clinic_tier_1_desc:0 "分子焕活所深入研究细胞的复杂构造，把病痛与衰老都视为可以修正的误差，显著提高人口的健康质量与预期寿命。"
 
  building_yuzu_fe_clinic_tier_2:0 "生物再生所"
- building_yuzu_fe_clinic_tier_2_desc:0 "分子焕活所的进一步升华。生物再生研究所站在医疗技术的巅峰，以开创性的再生疗法不断重写生命的界限——在这座殿堂里，衰老只是一个尚未被修正的参数。"
+ building_yuzu_fe_clinic_tier_2_desc:0 "站在医疗技术巅峰的再生研究机构。开创性的再生疗法不断重写生命的界限；在这座殿堂里，衰老只是一个尚未被修正的参数。"
 
  building_yuzu_fe_market_tier_1:0 "星系贸易中心"
- building_yuzu_fe_market_tier_1_desc:0 "高耸的塔尖俯瞰着整条天际线，为脚下熙攘的商业区投下阴影；行星上流通的每一件货物，几乎都要在这里过一道手。"
+ building_yuzu_fe_market_tier_1_desc:0 "高耸的塔尖俯瞰整条天际线，为脚下熙攘的商业区投下阴影；行星上流通的货物几乎都要在这里过一道手。"
 
  building_yuzu_fe_market_tier_2:0 "星际贸易枢纽"
- building_yuzu_fe_market_tier_2_desc:0 "星系贸易中心的进一步升华。这片贸易区在星系经济中占据着至高无上的地位，连从轨道上俯瞰，也能看见那些庞然尖顶投下的影子。"
+ building_yuzu_fe_market_tier_2_desc:0 "这片贸易区在星系经济中占据着至高无上的地位，庞大的尖顶即便从轨道上也清晰可见。"
 
  job_yuzu_fe_protector:0 "守护者"
  job_yuzu_fe_protector_plural:0 "守护者"

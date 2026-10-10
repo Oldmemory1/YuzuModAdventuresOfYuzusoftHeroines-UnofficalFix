@@ -1,0 +1,75 @@
+# ===== 失落建筑（yuzu FE）统一造价 / 维护 / 建造时间（按档位）=====
+# 由 yuzu_fe_buildings.csv 整理；tier_1~3 = 600 天，tier_4~5 = 1200 天
+
+@yuzu_fe_b_alloy_cost_1 = 3000
+@yuzu_fe_b_alloy_cost_2 = 4000
+@yuzu_fe_b_alloy_cost_3 = 5000
+@yuzu_fe_b_alloy_cost_4 = 6500
+@yuzu_fe_b_alloy_cost_5 = 8000
+
+@yuzu_fe_b_sr_cost_1 = 600
+@yuzu_fe_b_sr_cost_2 = 800
+@yuzu_fe_b_sr_cost_3 = 1000
+@yuzu_fe_b_sr_cost_4 = 1300
+@yuzu_fe_b_sr_cost_5 = 1600
+
+@yuzu_fe_b_rr_cost_1 = 100
+@yuzu_fe_b_rr_cost_2 = 200
+@yuzu_fe_b_rr_cost_3 = 300
+@yuzu_fe_b_rr_cost_4 = 450
+@yuzu_fe_b_rr_cost_5 = 600
+
+@yuzu_fe_b_fragment_1 = 1000
+@yuzu_fe_b_fragment_2 = 2000
+@yuzu_fe_b_fragment_3 = 3000
+@yuzu_fe_b_fragment_4 = 4500
+@yuzu_fe_b_fragment_5 = 6000
+
+@yuzu_fe_b_time_1 = 600
+@yuzu_fe_b_time_2 = 600
+@yuzu_fe_b_time_3 = 600
+@yuzu_fe_b_time_4 = 1200
+@yuzu_fe_b_time_5 = 1200
+
+@yuzu_fe_b_energy_upkeep_1 = 40
+@yuzu_fe_b_energy_upkeep_2 = 60
+@yuzu_fe_b_energy_upkeep_3 = 80
+@yuzu_fe_b_energy_upkeep_4 = 120
+@yuzu_fe_b_energy_upkeep_5 = 160
+
+@yuzu_fe_b_alloy_upkeep_1 = 5
+@yuzu_fe_b_alloy_upkeep_2 = 15
+@yuzu_fe_b_alloy_upkeep_3 = 25
+@yuzu_fe_b_alloy_upkeep_4 = 40
+@yuzu_fe_b_alloy_upkeep_5 = 55
+
+@yuzu_fe_b_sr_upkeep_1 = 5
+@yuzu_fe_b_sr_upkeep_2 = 15
+@yuzu_fe_b_sr_upkeep_3 = 25
+@yuzu_fe_b_sr_upkeep_4 = 40
+@yuzu_fe_b_sr_upkeep_5 = 55
+
+@yuzu_fe_b_rr_upkeep_1 = 2
+@yuzu_fe_b_rr_upkeep_2 = 4
+@yuzu_fe_b_rr_upkeep_3 = 6
+@yuzu_fe_b_rr_upkeep_4 = 9
+@yuzu_fe_b_rr_upkeep_5 = 12
+
+# 特例：要塞（合金维护更高）
+@yuzu_fe_b_stronghold_alloy_upkeep_1 = 10
+@yuzu_fe_b_stronghold_alloy_upkeep_2 = 20
+@yuzu_fe_b_stronghold_alloy_upkeep_3 = 30
+@yuzu_fe_b_stronghold_alloy_upkeep_4 = 45
+@yuzu_fe_b_stronghold_alloy_upkeep_5 = 60
+
+# 特例：维度造物（无 SR，能量/合金维护自成一套）
+@yuzu_fe_b_dim_energy_upkeep_1 = 150
+@yuzu_fe_b_dim_energy_upkeep_2 = 250
+@yuzu_fe_b_dim_energy_upkeep_3 = 350
+@yuzu_fe_b_dim_energy_upkeep_4 = 500
+@yuzu_fe_b_dim_energy_upkeep_5 = 650
+@yuzu_fe_b_dim_alloy_upkeep_1 = 15
+@yuzu_fe_b_dim_alloy_upkeep_2 = 25
+@yuzu_fe_b_dim_alloy_upkeep_3 = 35
+@yuzu_fe_b_dim_alloy_upkeep_4 = 50
+@yuzu_fe_b_dim_alloy_upkeep_5 = 65

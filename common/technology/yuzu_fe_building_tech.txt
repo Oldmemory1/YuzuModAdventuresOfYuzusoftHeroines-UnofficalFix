@@ -1,0 +1,1179 @@
+# 失落建筑解锁科技（由 yuzu_fe_buildings.csv 生成）
+# tier_1/2 = 稀有科技；tier_3/4/5 = 稀有科技 + 危险科技
+
+tech_building_yuzu_class_4_singularity_tier_1 = {
+	cost = 100000
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_power_plant_4" "tech_power_hub_2" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_class_4_singularity_tier_2 = {
+	cost = 125000
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_building_yuzu_class_4_singularity_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_class_4_singularity_tier_3 = {
+	cost = 150000
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_building_yuzu_class_4_singularity_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_class_4_singularity_tier_4 = {
+	cost = 175000
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_building_yuzu_class_4_singularity_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_class_4_singularity_tier_5 = {
+	cost = 200000
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_building_yuzu_class_4_singularity_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nourishment_center_tier_1 = {
+	cost = 100000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_nano_vitality_crops" "tech_food_processing_2" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nourishment_center_tier_2 = {
+	cost = 125000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_nourishment_center_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nourishment_center_tier_3 = {
+	cost = 150000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_nourishment_center_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nourishment_center_tier_4 = {
+	cost = 175000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_nourishment_center_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nourishment_center_tier_5 = {
+	cost = 200000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_nourishment_center_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_mine_tier_1 = {
+	cost = 100000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_mining_3" "tech_mineral_purification_2" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_mine_tier_2 = {
+	cost = 125000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_fe_mine_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_mine_tier_3 = {
+	cost = 150000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_fe_mine_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_mine_tier_4 = {
+	cost = 175000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_fe_mine_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_mine_tier_5 = {
+	cost = 200000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_fe_mine_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nano_forge_tier_1 = {
+	cost = 100000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_advanced_metallurgy_2" "tech_alloys_2" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nano_forge_tier_2 = {
+	cost = 125000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_nano_forge_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nano_forge_tier_3 = {
+	cost = 150000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_nano_forge_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nano_forge_tier_4 = {
+	cost = 175000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_nano_forge_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_nano_forge_tier_5 = {
+	cost = 200000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_nano_forge_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_affluence_center_tier_1 = {
+	cost = 100000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_consumer_good_refinement_2" "tech_luxuries_2" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_affluence_center_tier_2 = {
+	cost = 125000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_affluence_center_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_affluence_center_tier_3 = {
+	cost = 150000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_affluence_center_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_affluence_center_tier_4 = {
+	cost = 175000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_affluence_center_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_affluence_center_tier_5 = {
+	cost = 200000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_yuzu_affluence_center_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_dimensional_fabricator_tier_1 = {
+	cost = 100000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_dimensional_fabricator_tier_2 = {
+	cost = 125000
+	area = engineering
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_dimensional_fabricator_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_dimensional_fabricator_tier_3 = {
+	cost = 150000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_dimensional_fabricator_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_dimensional_fabricator_tier_4 = {
+	cost = 175000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_dimensional_fabricator_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_dimensional_fabricator_tier_5 = {
+	cost = 200000
+	area = engineering
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_yuzu_dimensional_fabricator_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_dome_tier_1 = {
+	cost = 100000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_paradise_dome" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_dome_tier_2 = {
+	cost = 125000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_dome_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_dome_tier_3 = {
+	cost = 150000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_dome_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_dome_tier_4 = {
+	cost = 175000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_dome_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_dome_tier_5 = {
+	cost = 200000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_dome_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_stronghold_tier_1 = {
+	cost = 100000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { military_theory }
+	prerequisites = { "tech_global_defense_grid" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_stronghold_tier_2 = {
+	cost = 125000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { military_theory }
+	prerequisites = { "tech_building_yuzu_fe_stronghold_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_stronghold_tier_3 = {
+	cost = 150000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { military_theory }
+	prerequisites = { "tech_building_yuzu_fe_stronghold_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_stronghold_tier_4 = {
+	cost = 175000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { military_theory }
+	prerequisites = { "tech_building_yuzu_fe_stronghold_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_stronghold_tier_5 = {
+	cost = 200000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { military_theory }
+	prerequisites = { "tech_building_yuzu_fe_stronghold_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_market_tier_1 = {
+	cost = 100000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_interstellar_economics" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_market_tier_2 = {
+	cost = 125000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_market_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_market_tier_3 = {
+	cost = 150000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_market_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_market_tier_4 = {
+	cost = 175000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_market_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_market_tier_5 = {
+	cost = 200000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_market_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_clinic_tier_1 = {
+	cost = 100000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_frontier_hospital" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_clinic_tier_2 = {
+	cost = 125000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_fe_clinic_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_clinic_tier_3 = {
+	cost = 150000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_fe_clinic_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_clinic_tier_4 = {
+	cost = 175000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_fe_clinic_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_clinic_tier_5 = {
+	cost = 200000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_yuzu_fe_clinic_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_lab_tier_1 = {
+	cost = 100000
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { computing }
+	prerequisites = { "tech_global_research_initiative" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_lab_tier_2 = {
+	cost = 125000
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { computing }
+	prerequisites = { "tech_building_yuzu_fe_lab_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_lab_tier_3 = {
+	cost = 150000
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { computing }
+	prerequisites = { "tech_building_yuzu_fe_lab_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_lab_tier_4 = {
+	cost = 175000
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { computing }
+	prerequisites = { "tech_building_yuzu_fe_lab_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_lab_tier_5 = {
+	cost = 200000
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { computing }
+	prerequisites = { "tech_building_yuzu_fe_lab_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_entertainment_tier_1 = {
+	cost = 100000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_hyper_entertainment_forum" "tech_yuzu_space_time_theory" }
+	weight = @yuzu_tier6weight1
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_entertainment_tier_2 = {
+	cost = 125000
+	area = society
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_entertainment_tier_1" }
+	weight = @yuzu_tier6weight2
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_entertainment_tier_3 = {
+	cost = 150000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_entertainment_tier_2" "tech_yuzu_all_in_one_theory" }
+	weight = @yuzu_tier6weight3
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_entertainment_tier_4 = {
+	cost = 175000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_entertainment_tier_3" }
+	weight = @yuzu_tier6weight4
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_yuzu_fe_entertainment_tier_5 = {
+	cost = 200000
+	area = society
+	tier = 6
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_yuzu_fe_entertainment_tier_4" }
+	weight = @yuzu_tier6weight5
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}
+

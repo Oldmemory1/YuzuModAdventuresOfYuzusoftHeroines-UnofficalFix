@@ -753,9 +753,11 @@ building_yuzu_supernatural_research_center = {
 
 ##### 覆天穹顶 #####
 building_yuzu_fe_dome_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_fe_sky_dome
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_dome_tier_1
 	category = amenity
+
+	position_priority = 180
 
 	building_sets = {
 		fallen_empire
@@ -765,13 +767,14 @@ building_yuzu_fe_dome_tier_1 = {
 		resort
 	}
 
-	position_priority = 180
-
 	potential = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_1
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -782,32 +785,38 @@ building_yuzu_fe_dome_tier_1 = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 4000
-		planet_amenities_add = 4000
+		planet_housing_add = 6000
+		planet_amenities_add = 8000
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b2_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			rare_crystals = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			energy = 10
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			rare_crystals = @yuzu_fe_b_sr_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_fe_dome_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_fe_dome_tier_1
+}
 ##### 碧落穹顶 #####
 building_yuzu_fe_dome_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_fe_dome
+	icon = building_yuzu_fe_dome_tier_2
 	category = amenity
+
+	position_priority = 180
 
 	building_sets = {
 		fallen_empire
@@ -817,13 +826,14 @@ building_yuzu_fe_dome_tier_2 = {
 		resort
 	}
 
-	position_priority = 180
-
 	potential = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_2
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -834,27 +844,222 @@ building_yuzu_fe_dome_tier_2 = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 8000
-		planet_amenities_add = 8000
+		planet_housing_add = 12000
+		planet_amenities_add = 16000
 		planet_pops_upkeep_mult = -0.05
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			rare_crystals = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			energy = 20
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			rare_crystals = @yuzu_fe_b_sr_upkeep_2
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_2
 }
+##### 苍碧穹顶 #####
+building_yuzu_fe_dome_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_dome_tier_3
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 18000
+		planet_amenities_add = 24000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			rare_crystals = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			rare_crystals = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_3
+}
+##### 赤霄穹顶 #####
+building_yuzu_fe_dome_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_dome_tier_4
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 24000
+		planet_amenities_add = 32000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			rare_crystals = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			rare_crystals = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_4
+}
+##### 万象天穹 #####
+building_yuzu_fe_dome_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_dome_tier_5
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 30000
+		planet_amenities_add = 40000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			rare_crystals = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			rare_crystals = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_5
+}
+
+
+
+
+
+
+
+
+
+
 
 ##### 财富圣殿 #####
 building_yuzu_affluence_center_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_affluence_emporium
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_affluence_center_tier_1
 	category = manufacturing
 
 	position_priority = 160
@@ -868,7 +1073,13 @@ building_yuzu_affluence_center_tier_1 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_affluence_center_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -879,6 +1090,10 @@ building_yuzu_affluence_center_tier_1 = {
 	inline_script = {
 		script = jobs/yuzu_building_job_goods
 		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		planet_housing_add = 800
 	}
 
 	resources = {
@@ -887,26 +1102,30 @@ building_yuzu_affluence_center_tier_1 = {
 			consumer_goods = 100
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			sr_living_metal = @yuzu_fe_b_rr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			minerals = 25
-			energy = 10
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_affluence_center_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_affluence_center_tier_1
+}
 ##### 丰饶圣殿 #####
 building_yuzu_affluence_center_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_affluence_center
+	icon = building_yuzu_affluence_center_tier_2
 	category = manufacturing
+
 	position_priority = 160
 
 	building_sets = {
@@ -918,7 +1137,13 @@ building_yuzu_affluence_center_tier_2 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_affluence_center_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -926,13 +1151,14 @@ building_yuzu_affluence_center_tier_2 = {
 		always = no
 	}
 
-	planet_modifier = {
-		planet_amenities_add = 1000
-	}
-
 	inline_script = {
 		script = jobs/yuzu_building_job_goods
 		AMOUNT = 2400
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+		planet_amenities_add = 1500
 	}
 
 	resources = {
@@ -941,24 +1167,233 @@ building_yuzu_affluence_center_tier_2 = {
 			consumer_goods = 200
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			sr_living_metal = @yuzu_fe_b_rr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			minerals = 50
-			energy = 20
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_2
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_affluence_center_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_affluence_center_tier_2
 }
+##### 幽裕圣殿 #####
+building_yuzu_affluence_center_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_affluence_center_tier_3
+	category = manufacturing
+
+	position_priority = 160
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_affluence_center_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_goods
+		AMOUNT = 3600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+		planet_amenities_add = 3000
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 300
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			sr_living_metal = @yuzu_fe_b_rr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_affluence_center_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_affluence_center_tier_3
+}
+##### 赤瑛圣殿 #####
+building_yuzu_affluence_center_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_affluence_center_tier_4
+	category = manufacturing
+
+	position_priority = 160
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_affluence_center_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_goods
+		AMOUNT = 4800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+		planet_amenities_add = 4500
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 400
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			sr_living_metal = @yuzu_fe_b_rr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_affluence_center_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_affluence_center_tier_4
+}
+##### 丰饶终殿 #####
+building_yuzu_affluence_center_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_affluence_center_tier_5
+	category = manufacturing
+
+	position_priority = 160
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_affluence_center_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_goods
+		AMOUNT = 6000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+		planet_amenities_add = 6000
+		job_artisan_per_pop = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 500
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			sr_living_metal = @yuzu_fe_b_rr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_affluence_center_tier_5
+}
+
+
+
+
+
+
+
+
+
+
 
 ##### 营养圣殿 #####
 building_yuzu_nourishment_center_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_nourishment_complex
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_nourishment_center_tier_1
 	category = resource
 
 	position_priority = 150
-
 
 	building_sets = {
 		fallen_empire
@@ -968,7 +1403,13 @@ building_yuzu_nourishment_center_tier_1 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nourishment_center_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -979,6 +1420,10 @@ building_yuzu_nourishment_center_tier_1 = {
 	inline_script = {
 		script = jobs/yuzu_building_job_food
 		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		planet_housing_add = 800
 	}
 
 	resources = {
@@ -987,24 +1432,28 @@ building_yuzu_nourishment_center_tier_1 = {
 			food = 200
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			exotic_gases = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			energy = 20
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			exotic_gases = @yuzu_fe_b_sr_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_nourishment_center_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_nourishment_center_tier_1
+}
 ##### 琼浆圣殿 #####
 building_yuzu_nourishment_center_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_nourishment_center
+	icon = building_yuzu_nourishment_center_tier_2
 	category = resource
 
 	position_priority = 150
@@ -1017,7 +1466,13 @@ building_yuzu_nourishment_center_tier_2 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nourishment_center_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1025,13 +1480,14 @@ building_yuzu_nourishment_center_tier_2 = {
 		always = no
 	}
 
-	planet_modifier = {
-		pop_environment_tolerance = 0.05
-	}
-
 	inline_script = {
 		script = jobs/yuzu_building_job_food
 		AMOUNT = 2400
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+		pop_environment_tolerance = 0.05
 	}
 
 	resources = {
@@ -1040,19 +1496,227 @@ building_yuzu_nourishment_center_tier_2 = {
 			food = 400
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			exotic_gases = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			energy = 40
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			exotic_gases = @yuzu_fe_b_sr_upkeep_2
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_nourishment_center_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_nourishment_center_tier_2
 }
+##### 幽馥圣殿 #####
+building_yuzu_nourishment_center_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_nourishment_center_tier_3
+	category = resource
+
+	position_priority = 150
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_farming
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nourishment_center_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_food
+		AMOUNT = 3600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+		pop_environment_tolerance = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 600
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			exotic_gases = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			exotic_gases = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_nourishment_center_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_nourishment_center_tier_3
+}
+##### 赤醴圣殿 #####
+building_yuzu_nourishment_center_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_nourishment_center_tier_4
+	category = resource
+
+	position_priority = 150
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_farming
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nourishment_center_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_food
+		AMOUNT = 4800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+		pop_environment_tolerance = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 800
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			exotic_gases = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			exotic_gases = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_nourishment_center_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_nourishment_center_tier_4
+}
+##### 琼筵之枢 #####
+building_yuzu_nourishment_center_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_nourishment_center_tier_5
+	category = resource
+
+	position_priority = 150
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_farming
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nourishment_center_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_food
+		AMOUNT = 6000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+		pop_environment_tolerance = 0.2
+		job_farmer_per_pop = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 1000
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			exotic_gases = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			exotic_gases = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_nourishment_center_tier_5
+}
+
+
+
+
+
+
+
+
+
+
 
 ##### 多重次元复制机 #####
 building_yuzu_dimensional_fabricator_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_dimensional_replicator
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_dimensional_fabricator_tier_1
 	category = manufacturing
 
 	position_priority = 140
@@ -1067,7 +1731,13 @@ building_yuzu_dimensional_fabricator_tier_1 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1078,30 +1748,31 @@ building_yuzu_dimensional_fabricator_tier_1 = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			rare_crystals = 15
-			exotic_gases = 15
-			volatile_motes = 15
+			volatile_motes = 30
+			exotic_gases = 30
+			rare_crystals = 30
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			energy = 80
-			alloys = 8
+			energy = @yuzu_fe_b_dim_energy_upkeep_1
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_dimensional_fabricator_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_1
+}
 ##### 多重次元制造机 #####
 building_yuzu_dimensional_fabricator_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_dimensional_fabricator
+	icon = building_yuzu_dimensional_fabricator_tier_2
 	category = manufacturing
 
 	position_priority = 140
@@ -1116,7 +1787,13 @@ building_yuzu_dimensional_fabricator_tier_2 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1127,29 +1804,213 @@ building_yuzu_dimensional_fabricator_tier_2 = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			rare_crystals = 30
-			exotic_gases = 30
-			volatile_motes = 30
-			sr_zro = 5
-			sr_dark_matter = 5
-			sr_living_metal = 5
-			nanites = 5
+			volatile_motes = 50
+			exotic_gases = 50
+			rare_crystals = 50
+			sr_dark_matter = 10
+			sr_living_metal = 10
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			energy = 150
-			alloys = 15
+			energy = @yuzu_fe_b_dim_energy_upkeep_2
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_2
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_2
 }
+##### 多重次元织造矩阵 #####
+building_yuzu_dimensional_fabricator_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_dimensional_fabricator_tier_3
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 70
+			exotic_gases = 70
+			rare_crystals = 70
+			sr_dark_matter = 15
+			sr_living_metal = 15
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_3
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_3
+}
+##### 多重次元熔铸枢纽 #####
+building_yuzu_dimensional_fabricator_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_dimensional_fabricator_tier_4
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 95
+			exotic_gases = 95
+			rare_crystals = 95
+			sr_dark_matter = 20
+			sr_living_metal = 20
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_4
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_4
+}
+##### 次元织枢 #####
+building_yuzu_dimensional_fabricator_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_dimensional_fabricator_tier_5
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 120
+			exotic_gases = 120
+			rare_crystals = 120
+			sr_dark_matter = 25
+			sr_living_metal = 25
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_5
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_5
+}
+
+
+
+
+
+
+
+
+
+
 
 ##### 星核采矿阵 #####
 building_yuzu_fe_mine_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_fe_mine_1
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_mine_tier_1
 	category = resource
 
 	position_priority = 145
@@ -1162,7 +2023,13 @@ building_yuzu_fe_mine_tier_1 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_mine_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1175,14 +2042,8 @@ building_yuzu_fe_mine_tier_1 = {
 		AMOUNT = 1200
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			is_planet_class = pc_shattered_ring_habitable
-		}
-		modifier = {
-			planet_miners_minerals_produces_add = 4
-			planet_miners_alloys_produces_add = 2
-		}
+	planet_modifier = {
+		planet_housing_add = 800
 	}
 
 	resources = {
@@ -1191,24 +2052,28 @@ building_yuzu_fe_mine_tier_1 = {
 			minerals = 200
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			volatile_motes = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			energy = 20
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			volatile_motes = @yuzu_fe_b_sr_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_fe_mine_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_fe_mine_tier_1
+}
 ##### 星核钻穿枢纽 #####
 building_yuzu_fe_mine_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_fe_mine_2
+	icon = building_yuzu_fe_mine_tier_2
 	category = resource
 
 	position_priority = 145
@@ -1221,7 +2086,13 @@ building_yuzu_fe_mine_tier_2 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_mine_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1234,14 +2105,8 @@ building_yuzu_fe_mine_tier_2 = {
 		AMOUNT = 2400
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			is_planet_class = pc_shattered_ring_habitable
-		}
-		modifier = {
-			planet_miners_minerals_produces_add = 4
-			planet_miners_alloys_produces_add = 2
-		}
+	planet_modifier = {
+		planet_housing_add = 1600
 	}
 
 	resources = {
@@ -1250,19 +2115,224 @@ building_yuzu_fe_mine_tier_2 = {
 			minerals = 400
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			volatile_motes = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			energy = 40
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			volatile_motes = @yuzu_fe_b_sr_upkeep_2
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_fe_mine_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_mine_tier_2
 }
+##### 星核脉动矩阵 #####
+building_yuzu_fe_mine_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_mine_tier_3
+	category = resource
+
+	position_priority = 145
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_mining
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_mine_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_minerals
+		AMOUNT = 3600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 600
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			volatile_motes = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			volatile_motes = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_mine_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_mine_tier_3
+}
+##### 星核熔脉枢纽 #####
+building_yuzu_fe_mine_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_mine_tier_4
+	category = resource
+
+	position_priority = 145
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_mining
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_mine_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_minerals
+		AMOUNT = 4800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 800
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			volatile_motes = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			volatile_motes = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_mine_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_mine_tier_4
+}
+##### 星脉终枢 #####
+building_yuzu_fe_mine_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_mine_tier_5
+	category = resource
+
+	position_priority = 145
+
+	building_sets = {
+		fallen_empire
+		fallen_empire_mining
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_mine_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_minerals
+		AMOUNT = 6000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+		job_miner_per_pop = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 1000
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			volatile_motes = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			volatile_motes = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_mine_tier_5
+}
+
+
+
+
+
+
+
+
+
+
 
 ##### 五级奇点 #####
 building_yuzu_class_4_singularity_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_class_3_singularity
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_class_4_singularity_tier_1
 	category = resource
 
 	position_priority = 130
@@ -1276,7 +2346,10 @@ building_yuzu_class_4_singularity_tier_1 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_class_4_singularity_tier_1
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -1291,27 +2364,37 @@ building_yuzu_class_4_singularity_tier_1 = {
 		AMOUNT = 1200
 	}
 
+	planet_modifier = {
+		planet_housing_add = 800
+	}
+
 	resources = {
 		category = planet_buildings
-		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b3_minerals
-		}
 		produces = {
 			energy = 500
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			rare_crystals = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			rare_crystals = @yuzu_fe_b_sr_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_class_4_singularity_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_class_4_singularity_tier_1
+}
 ##### 六级奇点 #####
 building_yuzu_class_4_singularity_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_class_4_singularity
+	icon = building_yuzu_class_4_singularity_tier_2
 	category = resource
 
 	position_priority = 130
@@ -1325,7 +2408,10 @@ building_yuzu_class_4_singularity_tier_2 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_class_4_singularity_tier_2
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -1340,25 +2426,35 @@ building_yuzu_class_4_singularity_tier_2 = {
 		AMOUNT = 2400
 	}
 
+	planet_modifier = {
+		planet_housing_add = 1600
+	}
+
 	resources = {
 		category = planet_buildings
-		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
-		}
 		produces = {
 			energy = 1000
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			rare_crystals = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			rare_crystals = @yuzu_fe_b_sr_upkeep_2
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_class_4_singularity_tier_3"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_class_4_singularity_tier_2
+}
 ##### 七级奇点 #####
 building_yuzu_class_4_singularity_tier_3 = {
-	base_buildtime = @b4_time
+	base_buildtime = @yuzu_fe_b_time_3
 	can_build = no
 	icon = building_yuzu_class_4_singularity_tier_3
 	category = resource
@@ -1374,7 +2470,10 @@ building_yuzu_class_4_singularity_tier_3 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_class_4_singularity_tier_3
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -1389,25 +2488,35 @@ building_yuzu_class_4_singularity_tier_3 = {
 		AMOUNT = 3600
 	}
 
+	planet_modifier = {
+		planet_housing_add = 2400
+	}
+
 	resources = {
 		category = planet_buildings
-		cost = {
-			alloys = 800
-			fragment_of_heart = @yuzu_fe_building_tier_3_fragment_of_heart_cost
-		}
 		produces = {
 			energy = 1500
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			rare_crystals = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			rare_crystals = @yuzu_fe_b_sr_upkeep_3
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_class_4_singularity_tier_4"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_class_4_singularity_tier_3
+}
 ##### 八级奇点 #####
 building_yuzu_class_4_singularity_tier_4 = {
-	base_buildtime = @b5_time
+	base_buildtime = @yuzu_fe_b_time_4
 	can_build = no
 	icon = building_yuzu_class_4_singularity_tier_4
 	category = resource
@@ -1423,7 +2532,10 @@ building_yuzu_class_4_singularity_tier_4 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_class_4_singularity_tier_4
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -1438,25 +2550,35 @@ building_yuzu_class_4_singularity_tier_4 = {
 		AMOUNT = 4800
 	}
 
+	planet_modifier = {
+		planet_housing_add = 3200
+	}
+
 	resources = {
 		category = planet_buildings
-		cost = {
-			alloys = 1600
-			fragment_of_heart = @yuzu_fe_building_tier_4_fragment_of_heart_cost
-		}
 		produces = {
 			energy = 2000
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			rare_crystals = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			rare_crystals = @yuzu_fe_b_sr_upkeep_4
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_class_4_singularity_tier_5"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_class_4_singularity_tier_4
+}
 ##### 九级奇点 #####
 building_yuzu_class_4_singularity_tier_5 = {
-	base_buildtime = @yuzu_fe_building_tier_5_time
+	base_buildtime = @yuzu_fe_b_time_5
 	can_build = no
 	icon = building_yuzu_class_4_singularity_tier_5
 	category = resource
@@ -1472,7 +2594,10 @@ building_yuzu_class_4_singularity_tier_5 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_class_4_singularity_tier_5
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -1488,25 +2613,43 @@ building_yuzu_class_4_singularity_tier_5 = {
 	}
 
 	planet_modifier = {
+		planet_housing_add = 4000
 		job_technician_per_pop = 0.1
 	}
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			alloys = 3200
-			fragment_of_heart = @yuzu_fe_building_tier_5_fragment_of_heart_cost
-		}
 		produces = {
 			energy = 2500
 		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			rare_crystals = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			rare_crystals = @yuzu_fe_b_sr_upkeep_5
+		}
 	}
+
+	show_in_tech = tech_building_yuzu_class_4_singularity_tier_5
 }
+
+
+
+
+
+
+
+
+
+
 
 ##### 混沌熔炉 #####
 building_yuzu_nano_forge_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_micro_forge
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_nano_forge_tier_1
 	category = manufacturing
 
 	position_priority = 170
@@ -1520,28 +2663,18 @@ building_yuzu_nano_forge_tier_1 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nano_forge_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
 	destroy_trigger = {
 		always = no
-	}
-
-
-	resources = {
-		category = planet_buildings
-		produces = {
-			alloys = 50
-		}
-		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b3_minerals
-		}
-		upkeep = {
-			minerals = 50
-			energy = 10
-		}
 	}
 
 	inline_script = {
@@ -1549,16 +2682,38 @@ building_yuzu_nano_forge_tier_1 = {
 		AMOUNT = 1200
 	}
 
+	planet_modifier = {
+		planet_housing_add = 800
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			alloys = 50
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			sr_living_metal = @yuzu_fe_b_rr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_1
+		}
+	}
+
 	upgrades = {
 		"building_yuzu_nano_forge_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_nano_forge_tier_1
+}
 ##### 万象熔炉 #####
 building_yuzu_nano_forge_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_nano_forge
+	icon = building_yuzu_nano_forge_tier_2
 	category = manufacturing
 
 	position_priority = 170
@@ -1572,7 +2727,13 @@ building_yuzu_nano_forge_tier_2 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nano_forge_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1580,13 +2741,14 @@ building_yuzu_nano_forge_tier_2 = {
 		always = no
 	}
 
-	planet_modifier = {
-		planet_structures_upkeep_mult = -0.05
-	}
-
 	inline_script = {
 		script = jobs/yuzu_building_job_alloy
 		AMOUNT = 2400
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+		planet_structures_upkeep_mult = -0.05
 	}
 
 	resources = {
@@ -1595,23 +2757,26 @@ building_yuzu_nano_forge_tier_2 = {
 			alloys = 100
 		}
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			sr_living_metal = @yuzu_fe_b_rr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			minerals = 100
-			energy = 20
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_2
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_nano_forge_tier_3"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_nano_forge_tier_2
+}
 ##### 九曜熔炉 #####
 building_yuzu_nano_forge_tier_3 = {
-	base_buildtime = @b4_time
+	base_buildtime = @yuzu_fe_b_time_3
 	can_build = no
 	icon = building_yuzu_nano_forge_tier_3
 	category = manufacturing
@@ -1627,7 +2792,13 @@ building_yuzu_nano_forge_tier_3 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nano_forge_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1635,13 +2806,14 @@ building_yuzu_nano_forge_tier_3 = {
 		always = no
 	}
 
-	planet_modifier = {
-		planet_structures_upkeep_mult = -0.10
-	}
-
 	inline_script = {
 		script = jobs/yuzu_building_job_alloy
 		AMOUNT = 3600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+		planet_structures_upkeep_mult = -0.1
 	}
 
 	resources = {
@@ -1650,23 +2822,26 @@ building_yuzu_nano_forge_tier_3 = {
 			alloys = 150
 		}
 		cost = {
-			alloys = 400
-			fragment_of_heart = @yuzu_fe_building_tier_3_fragment_of_heart_cost
+			alloys = @yuzu_fe_b_alloy_cost_3
+			sr_living_metal = @yuzu_fe_b_rr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
 		}
 		upkeep = {
-			minerals = 150
-			energy = 30
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_3
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_nano_forge_tier_4"
 	}
-}
 
-##### 十曜熔炉 #####
+	show_in_tech = tech_building_yuzu_nano_forge_tier_3
+}
+##### 真阳熔炉 #####
 building_yuzu_nano_forge_tier_4 = {
-	base_buildtime = @b5_time
+	base_buildtime = @yuzu_fe_b_time_4
 	can_build = no
 	icon = building_yuzu_nano_forge_tier_4
 	category = manufacturing
@@ -1682,7 +2857,13 @@ building_yuzu_nano_forge_tier_4 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nano_forge_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1690,38 +2871,42 @@ building_yuzu_nano_forge_tier_4 = {
 		always = no
 	}
 
-	planet_modifier = {
-		planet_structures_upkeep_mult = -0.15
-	}
-
 	inline_script = {
 		script = jobs/yuzu_building_job_alloy
 		AMOUNT = 4800
 	}
 
+	planet_modifier = {
+		planet_housing_add = 3200
+		planet_structures_upkeep_mult = -0.15000000000000002
+	}
+
 	resources = {
 		category = planet_buildings
 		produces = {
-			alloys = 250
+			alloys = 200
 		}
 		cost = {
-			alloys = 800
-			fragment_of_heart = @yuzu_fe_building_tier_4_fragment_of_heart_cost
+			alloys = @yuzu_fe_b_alloy_cost_4
+			sr_living_metal = @yuzu_fe_b_rr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
 		}
 		upkeep = {
-			minerals = 250
-			energy = 50
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_4
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_nano_forge_tier_5"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_nano_forge_tier_4
+}
 ##### 万象终熔 #####
 building_yuzu_nano_forge_tier_5 = {
-	base_buildtime = @yuzu_fe_building_tier_5_time
+	base_buildtime = @yuzu_fe_b_time_5
 	can_build = no
 	icon = building_yuzu_nano_forge_tier_5
 	category = manufacturing
@@ -1737,7 +2922,13 @@ building_yuzu_nano_forge_tier_5 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_YUZU = yes
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_nano_forge_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
 		}
 	}
 
@@ -1745,35 +2936,51 @@ building_yuzu_nano_forge_tier_5 = {
 		always = no
 	}
 
-	planet_modifier = {
-		planet_structures_upkeep_mult = -0.20
-		job_foundry_per_pop = 0.1
-	}
-
 	inline_script = {
 		script = jobs/yuzu_building_job_alloy
 		AMOUNT = 6000
 	}
 
+	planet_modifier = {
+		planet_housing_add = 4000
+		planet_structures_upkeep_mult = -0.2
+		job_foundry_per_pop = 0.1
+	}
+
 	resources = {
 		category = planet_buildings
 		produces = {
-			alloys = 400
+			alloys = 250
 		}
 		cost = {
-			alloys = 1600
-			fragment_of_heart = @yuzu_fe_building_tier_5_fragment_of_heart_cost
+			alloys = @yuzu_fe_b_alloy_cost_5
+			sr_living_metal = @yuzu_fe_b_rr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
 		}
 		upkeep = {
-			minerals = 400
-			energy = 80
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			sr_living_metal = @yuzu_fe_b_rr_upkeep_5
 		}
 	}
+
+	show_in_tech = tech_building_yuzu_nano_forge_tier_5
 }
+
+
+
+
+
+
+
+
+
+
 
 ##### 神秘档案库 #####
 building_yuzu_master_archive = {
 	base_buildtime = @b2_time
+	can_build = no
 	icon = building_master_archive
 	category = research
 
@@ -1826,6 +3033,7 @@ building_yuzu_master_archive = {
 ##### 苍穹神龛 #####
 building_yuzu_empyrean_shrine = {
 	base_buildtime = @b2_time
+	can_build = no
 	icon = building_empyrean_shrine
 	category = research
 
@@ -1867,9 +3075,10 @@ building_yuzu_empyrean_shrine = {
 ##### 圣盾基地 #####
 # 图标取原版失落帝国建筑「Aspis Bastion」(building_fe_fortress), 升一级为
 # 「Aegis Complex」(building_fe_stronghold) —— 正是原版那条升级链的两张图。
+##### 圣盾基地 #####
 building_yuzu_fe_stronghold_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_fe_fortress
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_stronghold_tier_1
 	category = army
 	planetary_ftl_inhibitor = yes
 
@@ -1884,7 +3093,10 @@ building_yuzu_fe_stronghold_tier_1 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_1
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -1894,31 +3106,40 @@ building_yuzu_fe_stronghold_tier_1 = {
 		always = no
 	}
 
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 1200
+	}
+
 	planet_modifier = {
-		job_yuzu_fe_protector_add = 500
+		planet_housing_add = 800
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b2_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			volatile_motes = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			energy = 10
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_1
+			volatile_motes = @yuzu_fe_b_sr_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_fe_stronghold_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_1
+}
 ##### 神盾基地 #####
 building_yuzu_fe_stronghold_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_fe_stronghold
+	icon = building_yuzu_fe_stronghold_tier_2
 	category = army
 	planetary_ftl_inhibitor = yes
 
@@ -1933,7 +3154,10 @@ building_yuzu_fe_stronghold_tier_2 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_2
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -1941,78 +3165,236 @@ building_yuzu_fe_stronghold_tier_2 = {
 
 	destroy_trigger = {
 		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 2400
 	}
 
 	planet_modifier = {
-		job_yuzu_fe_protector_add = 1000
+		planet_housing_add = 1600
+		planet_orbital_bombardment_damage = -0.15
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			volatile_motes = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			energy = 20
-		}
-	}
-}
-
-##### 分子焕活所 #####
-building_yuzu_fe_clinic_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_fe_clinic_1
-	category = amenity
-
-	position_priority = 175
-
-	building_sets = {
-		fallen_empire
-		urban
-	}
-
-	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				is_YUZU = yes
-				is_yuzu_abyss_empire = yes
-			}
-		}
-	}
-
-	destroy_trigger = {
-		always = no
-	}
-
-
-	inline_script = {
-		script = jobs/yuzu_building_job_healthcare
-		AMOUNT = 300
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b2_minerals
-		}
-		upkeep = {
-			energy = 10
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_2
+			volatile_motes = @yuzu_fe_b_sr_upkeep_2
 		}
 	}
 
 	upgrades = {
-		"building_yuzu_fe_clinic_tier_2"
+		"building_yuzu_fe_stronghold_tier_3"
 	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_2
+}
+##### 玄垒基地 #####
+building_yuzu_fe_stronghold_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_stronghold_tier_3
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 3600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+		planet_orbital_bombardment_damage = -0.3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			volatile_motes = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_3
+			volatile_motes = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_stronghold_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_3
+}
+##### 赤垒要塞 #####
+building_yuzu_fe_stronghold_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_stronghold_tier_4
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 4800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+		planet_orbital_bombardment_damage = -0.45
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			volatile_motes = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_4
+			volatile_motes = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_stronghold_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_4
+}
+##### 不落圣垒 #####
+building_yuzu_fe_stronghold_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_stronghold_tier_5
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 6000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+		planet_orbital_bombardment_damage = -0.6
+		job_soldier_per_pop = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			volatile_motes = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_5
+			volatile_motes = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_5
 }
 
-##### 生物再生所 #####
-building_yuzu_fe_clinic_tier_2 = {
-	base_buildtime = @b3_time
-	can_build = no
-	icon = building_fe_clinic_2
+
+
+
+
+
+
+
+
+
+
+##### 分子焕活所 #####
+building_yuzu_fe_clinic_tier_1 = {
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_clinic_tier_1
 	category = amenity
 
 	position_priority = 175
@@ -2026,7 +3408,10 @@ building_yuzu_fe_clinic_tier_2 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_1
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -2035,32 +3420,291 @@ building_yuzu_fe_clinic_tier_2 = {
 	destroy_trigger = {
 		always = no
 	}
-
 
 	inline_script = {
 		script = jobs/yuzu_building_job_healthcare
 		AMOUNT = 600
 	}
 
+	planet_modifier = {
+		planet_housing_add = 800
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			sr_dark_matter = @yuzu_fe_b_rr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			energy = 20
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_1
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_2"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_1
 }
+##### 生物再生所 #####
+building_yuzu_fe_clinic_tier_2 = {
+	base_buildtime = @yuzu_fe_b_time_2
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_2
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			sr_dark_matter = @yuzu_fe_b_rr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_2
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_2
+}
+##### 幽微再生圣所 #####
+building_yuzu_fe_clinic_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_3
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 1800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			sr_dark_matter = @yuzu_fe_b_rr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_3
+}
+##### 赤髓再生圣殿 #####
+building_yuzu_fe_clinic_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_4
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 2400
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			sr_dark_matter = @yuzu_fe_b_rr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_4
+}
+##### 再生终殿 #####
+building_yuzu_fe_clinic_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_5
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			sr_dark_matter = @yuzu_fe_b_rr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_5
+}
+
+
+
+
+
+
+
+
+
+
 
 ##### 星系贸易中心 #####
 # 图标取原版失落帝国贸易建筑那两档: building_fe_market_1 (Galactic Commerce Hub)
 # -> building_fe_market_2 (Interstellar Commerce Nexus)。
 # 岗位类型与原版一致: 常规帝国给商贩, 格式塔给后勤工蜂。
+##### 星系贸易中心 #####
 building_yuzu_fe_market_tier_1 = {
-	base_buildtime = @b2_time
-	icon = building_fe_market_1
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_market_tier_1
 	category = trade
 
 	position_priority = 170
@@ -2074,7 +3718,10 @@ building_yuzu_fe_market_tier_1 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_market_tier_1
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -2089,27 +3736,35 @@ building_yuzu_fe_market_tier_1 = {
 		AMOUNT = 1200
 	}
 
+	planet_modifier = {
+		planet_housing_add = 800
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
-			minerals = @b2_minerals
+			alloys = @yuzu_fe_b_alloy_cost_1
+			rare_crystals = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
 		}
 		upkeep = {
-			energy = 10
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			rare_crystals = @yuzu_fe_b_sr_upkeep_1
 		}
 	}
 
 	upgrades = {
 		"building_yuzu_fe_market_tier_2"
 	}
-}
 
+	show_in_tech = tech_building_yuzu_fe_market_tier_1
+}
 ##### 星际贸易枢纽 #####
 building_yuzu_fe_market_tier_2 = {
-	base_buildtime = @b3_time
+	base_buildtime = @yuzu_fe_b_time_2
 	can_build = no
-	icon = building_fe_market_2
+	icon = building_yuzu_fe_market_tier_2
 	category = trade
 
 	position_priority = 170
@@ -2123,7 +3778,10 @@ building_yuzu_fe_market_tier_2 = {
 		exists = owner
 		owner = {
 			OR = {
-				is_YUZU = yes
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_market_tier_2
+				}
 				is_yuzu_abyss_empire = yes
 			}
 		}
@@ -2139,24 +3797,814 @@ building_yuzu_fe_market_tier_2 = {
 	}
 
 	planet_modifier = {
+		planet_housing_add = 1600
 		planet_traders_trade_produces_add = 0.5
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			fragment_of_heart = @yuzu_fe_building_tier_2_fragment_of_heart_cost
-			minerals = @b3_minerals
+			alloys = @yuzu_fe_b_alloy_cost_2
+			rare_crystals = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
 		}
 		upkeep = {
-			energy = 20
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			rare_crystals = @yuzu_fe_b_sr_upkeep_2
 		}
 	}
+
+	upgrades = {
+		"building_yuzu_fe_market_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_market_tier_2
 }
+##### 星河贸易圣枢 #####
+building_yuzu_fe_market_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_market_tier_3
+	category = trade
+
+	position_priority = 170
+
+	building_sets = {
+		fallen_empire
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_market_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_trader
+		AMOUNT = 3600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+		planet_traders_trade_produces_add = 1.0
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			rare_crystals = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			rare_crystals = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_market_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_market_tier_3
+}
+##### 赤澜贸易圣殿 #####
+building_yuzu_fe_market_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_market_tier_4
+	category = trade
+
+	position_priority = 170
+
+	building_sets = {
+		fallen_empire
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_market_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_trader
+		AMOUNT = 4800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+		planet_traders_trade_produces_add = 1.5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			rare_crystals = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			rare_crystals = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_market_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_market_tier_4
+}
+##### 星域商枢 #####
+building_yuzu_fe_market_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_market_tier_5
+	category = trade
+
+	position_priority = 170
+
+	building_sets = {
+		fallen_empire
+		trade
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_market_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_trader
+		AMOUNT = 6000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+		planet_traders_trade_produces_add = 2.0
+		job_trader_per_pop = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			rare_crystals = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			rare_crystals = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_market_tier_5
+}
+
+
+
+
+
+
+
+##### 量子创研枢纽 #####
+building_yuzu_fe_lab_tier_1 = {
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_lab_tier_1
+	category = research
+
+	position_priority = 120
+
+	building_sets = {
+		fallen_empire
+		research
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_lab_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 50
+			society_research = 50
+			engineering_research = 50
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			exotic_gases = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			exotic_gases = @yuzu_fe_b_sr_upkeep_1
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_lab_tier_2"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_lab_tier_1
+}
+##### 超验研理圣殿 #####
+building_yuzu_fe_lab_tier_2 = {
+	base_buildtime = @yuzu_fe_b_time_2
+	can_build = no
+	icon = building_yuzu_fe_lab_tier_2
+	category = research
+
+	position_priority = 120
+
+	building_sets = {
+		fallen_empire
+		research
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_lab_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			exotic_gases = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			exotic_gases = @yuzu_fe_b_sr_upkeep_2
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_lab_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_lab_tier_2
+}
+##### 幽玄推演矩阵 #####
+building_yuzu_fe_lab_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_lab_tier_3
+	category = research
+
+	position_priority = 120
+
+	building_sets = {
+		fallen_empire
+		research
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_lab_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4800
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 150
+			society_research = 150
+			engineering_research = 150
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			exotic_gases = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			exotic_gases = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_lab_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_lab_tier_3
+}
+##### 赤曜真知圣所 #####
+building_yuzu_fe_lab_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_lab_tier_4
+	category = research
+
+	position_priority = 120
+
+	building_sets = {
+		fallen_empire
+		research
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_lab_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 6400
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 200
+			society_research = 200
+			engineering_research = 200
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			exotic_gases = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			exotic_gases = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_lab_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_lab_tier_4
+}
+##### 公理之枢 #####
+building_yuzu_fe_lab_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_lab_tier_5
+	category = research
+
+	position_priority = 120
+
+	building_sets = {
+		fallen_empire
+		research
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_lab_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 8000
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 250
+			society_research = 250
+			engineering_research = 250
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			exotic_gases = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			exotic_gases = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_lab_tier_5
+}
+
+
+
+
+
+
+##### 虚境欢愉广场 #####
+building_yuzu_fe_entertainment_tier_1 = {
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_entertainment_tier_1
+	category = amenity
+
+	position_priority = 165
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_entertainment_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 800
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			rare_crystals = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			rare_crystals = @yuzu_fe_b_sr_upkeep_1
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_entertainment_tier_2"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_entertainment_tier_1
+}
+##### 极乐枢纽 #####
+building_yuzu_fe_entertainment_tier_2 = {
+	base_buildtime = @yuzu_fe_b_time_2
+	can_build = no
+	icon = building_yuzu_fe_entertainment_tier_2
+	category = amenity
+
+	position_priority = 165
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_entertainment_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+		planet_amenities_add = 10000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			rare_crystals = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			rare_crystals = @yuzu_fe_b_sr_upkeep_2
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_entertainment_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_entertainment_tier_2
+}
+##### 幽梦欢愉圣殿 #####
+building_yuzu_fe_entertainment_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_entertainment_tier_3
+	category = amenity
+
+	position_priority = 165
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_entertainment_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+		planet_amenities_add = 20000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			rare_crystals = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			rare_crystals = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_entertainment_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_entertainment_tier_3
+}
+##### 赤霞极乐圣所 #####
+building_yuzu_fe_entertainment_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_entertainment_tier_4
+	category = amenity
+
+	position_priority = 165
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_entertainment_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+		planet_amenities_add = 30000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			rare_crystals = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			rare_crystals = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_entertainment_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_entertainment_tier_4
+}
+##### 极乐终殿 #####
+building_yuzu_fe_entertainment_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_entertainment_tier_5
+	category = amenity
+
+	position_priority = 165
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_entertainment_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_entertainer
+		AMOUNT = 1
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+		planet_amenities_add = 40000
+		job_entertainer_per_pop = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			rare_crystals = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			rare_crystals = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_entertainment_tier_5
+}
+
+
+
+
+
+
+
+
+
+
+
 
 ##### 外星庇护所 #####
 building_yuzu_fe_xeno_zoo = {
 	base_buildtime = @b2_time
+	can_build = no
 	icon = building_fe_xeno_zoo
 	category = unity
 
@@ -2204,6 +4652,7 @@ building_yuzu_fe_xeno_zoo = {
 
 building_yuzu_ancient_cryo_chamber_1 = {
 	base_buildtime = @b2_time
+	can_build = no
 	icon = building_ancient_cryo_chamber
 	category = government
 
