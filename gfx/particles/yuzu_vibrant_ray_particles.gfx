@@ -1,0 +1,60 @@
+objectTypes = {
+
+	# 时空脉冲光束：炮口 / 命中粒子（四档，源自原版太虚光束）
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_muzzle_effect"
+		type = "yuzu_vibrant_ray_1_muzzle_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_hit_effect"
+		type = "yuzu_vibrant_ray_1_hit_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_muzzle_effect_advanced"
+		type = "yuzu_vibrant_ray_1_muzzle_effect_advanced"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_hit_effect_advanced"
+		type = "yuzu_vibrant_ray_1_hit_effect_advanced"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_muzzle_effect_elite"
+		type = "yuzu_vibrant_ray_1_muzzle_effect_elite"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_hit_effect_elite"
+		type = "yuzu_vibrant_ray_1_hit_effect_elite"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_muzzle_effect_master"
+		type = "yuzu_vibrant_ray_1_muzzle_effect_master"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_vibrant_ray_1_hit_effect_master"
+		type = "yuzu_vibrant_ray_1_hit_effect_master"
+		
+		scale = 1.0
+	}
+}

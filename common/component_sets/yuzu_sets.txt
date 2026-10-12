@@ -213,6 +213,34 @@ component_set = {
 	icon = "GFX_ship_part_fire_control_yuzu_master"
 	icon_frame = 1
 }
+
+component_set = {
+	key = "YUZU_PARTICLE_1"
+
+	icon = "GFX_ship_part_yuzu_particle_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_PARTICLE_1_ADVANCED"
+
+	icon = "GFX_ship_part_yuzu_particle_1_advanced"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_PARTICLE_1_ELITE"
+
+	icon = "GFX_ship_part_yuzu_particle_1_elite"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "YUZU_PARTICLE_1_MASTER"
+
+	icon = "GFX_ship_part_yuzu_particle_1_master"
+	icon_frame = 1
+}
 # ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
 component_set = {
 	key = "YUZU_ENERGY_TORPEDO_3_ADVANCED"

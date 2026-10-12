@@ -1,0 +1,318 @@
+##### 时空粒子发射器线（`YUZU_PARTICLE_1`，G 槽 · 穿透型） #####
+#
+# 2026-10-12 新建。设计稿见 markdowns/yuzu_spacetime_weapon_tiers.md §9.A：
+#   · G 槽（`size = torpedo`）+ `type = instant`（能量鱼雷，无飞行时间、不会被点防拦截）
+#   · 穿透 1/1（盾甲全绕过），`size_damage_factor = 0.2`（专打大船，打小船只有两成）
+#   · 伤害 ≈ 原版三档鱼雷量级（Tier1 150–250），靠穿透与射程吃饭
+#   · 四档：Tier1 / 先进 / 精英 / 太初，逐级 `upgrades_to`
+#   · 图标 `ship_part_yuzu_particle_1[_档位].dds`；弹体/粒子 `yuzu_particle_1[_档位]`
+#   · 造价用字面量（不走 @变量，避免与 rebalance_adv_elite_tiers.py 的家族表互相牵扯）
+#
+# 注意：本文件**独立**存在，不塞进 yuzu_master.txt（那个文件是 make_yuzu_master.py 的生成物）。
+
+weapon_component_template = {
+	key = "YUZU_PARTICLE_1"
+	size = torpedo
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_particle_1"
+	icon_frame = 1
+	power = -90
+
+	firing_arc = 25.0
+	min_range = 45.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_particle_1" }
+	component_set = "YUZU_PARTICLE_1"
+	upgrades_to = "YUZU_PARTICLE_1_ADVANCED"
+	projectile_gfx = "yuzu_particle_1"
+	tags = { weapon_type_energy g_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+	damage = {
+		min = 150
+		max = 250
+	}
+	windup = {
+		min = 25
+		max = 90
+	}
+	total_fire_time = 180
+	range = 150
+	accuracy = 0.80
+	tracking = 0.15
+	shield_penetration = 1
+	armor_penetration = 1
+	size_damage_factor = 0.2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 240
+			rare_crystals = 2.6
+		}
+		upkeep = {
+			energy = 1.75
+			alloys = 0.35
+		}
+	}
+
+	target_weights = {
+		cruiser = 1
+		battleship = 2
+		titan = 3
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_PARTICLE_1_ADVANCED"
+	size = torpedo
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_particle_1_advanced"
+	icon_frame = 1
+	power = -125
+
+	firing_arc = 25.0
+	min_range = 45.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_particle_1_advanced" }
+	component_set = "YUZU_PARTICLE_1_ADVANCED"
+	upgrades_to = "YUZU_PARTICLE_1_ELITE"
+	projectile_gfx = "yuzu_particle_1_advanced"
+	tags = { weapon_type_energy g_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+	damage = {
+		min = 225
+		max = 375
+	}
+	windup = {
+		min = 25
+		max = 90
+	}
+	total_fire_time = 180
+	range = 165
+	accuracy = 0.85
+	tracking = 0.20
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.25
+	size_damage_factor = 0.2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 420
+			rare_crystals = 4.6
+			exotic_gases = 4.6
+		}
+		upkeep = {
+			energy = 3.06
+			alloys = 0.61
+		}
+	}
+
+	target_weights = {
+		cruiser = 1
+		battleship = 2
+		titan = 3
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_PARTICLE_1_ELITE"
+	size = torpedo
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_particle_1_elite"
+	icon_frame = 1
+	power = -175
+
+	firing_arc = 25.0
+	min_range = 45.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_particle_1_elite" }
+	component_set = "YUZU_PARTICLE_1_ELITE"
+	upgrades_to = "YUZU_PARTICLE_1_MASTER"
+	projectile_gfx = "yuzu_particle_1_elite"
+	tags = { weapon_type_energy g_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+	damage = {
+		min = 300
+		max = 500
+	}
+	windup = {
+		min = 25
+		max = 90
+	}
+	total_fire_time = 180
+	range = 180
+	accuracy = 0.90
+	tracking = 0.25
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.5
+	size_damage_factor = 0.2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 780
+			rare_crystals = 8.5
+			exotic_gases = 8.5
+		}
+		upkeep = {
+			energy = 5.69
+			alloys = 1.14
+		}
+	}
+
+	target_weights = {
+		cruiser = 1
+		battleship = 2
+		titan = 3
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_PARTICLE_1_MASTER"
+	size = torpedo
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_particle_1_master"
+	icon_frame = 1
+	power = -230
+
+	firing_arc = 25.0
+	min_range = 45.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_particle_1_master" }
+	component_set = "YUZU_PARTICLE_1_MASTER"
+	projectile_gfx = "yuzu_particle_1_master"
+	tags = { weapon_type_energy g_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+	damage = {
+		min = 375
+		max = 625
+	}
+	windup = {
+		min = 25
+		max = 90
+	}
+	total_fire_time = 180
+	range = 200
+	accuracy = 0.95
+	tracking = 0.30
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.75
+	size_damage_factor = 0.2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1320
+			rare_crystals = 14.3
+			exotic_gases = 14.3
+		}
+		upkeep = {
+			energy = 9.63
+			alloys = 1.93
+		}
+	}
+
+	target_weights = {
+		cruiser = 1
+		battleship = 2
+		titan = 3
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}

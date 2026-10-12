@@ -1,0 +1,89 @@
+# 时空脉冲光束的炮口 / 命中实体（护盾命中沿用原版 space_whale_weapon_shield_hit_entity）
+
+entity = {
+	name = "yuzu_vibrant_ray_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_vibrant_ray_1_muzzle_effect" keep_particle = yes sound = { soundeffect = space_whale_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_vibrant_ray_1_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_vibrant_ray_1_hit_effect" sound = { soundeffect = space_whale_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_vibrant_ray_1_muzzle_entity_advanced"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_vibrant_ray_1_muzzle_effect_advanced" keep_particle = yes sound = { soundeffect = space_whale_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_vibrant_ray_1_hit_entity_advanced"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_vibrant_ray_1_hit_effect_advanced" sound = { soundeffect = space_whale_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_vibrant_ray_1_muzzle_entity_elite"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_vibrant_ray_1_muzzle_effect_elite" keep_particle = yes sound = { soundeffect = space_whale_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_vibrant_ray_1_hit_entity_elite"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_vibrant_ray_1_hit_effect_elite" sound = { soundeffect = space_whale_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_vibrant_ray_1_muzzle_entity_master"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_vibrant_ray_1_muzzle_effect_master" keep_particle = yes sound = { soundeffect = space_whale_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_fire" } }
+	}
+}
+
+entity = {
+	name = "yuzu_vibrant_ray_1_hit_entity_master"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_vibrant_ray_1_hit_effect_master" sound = { soundeffect = space_whale_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_space_whale_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}

@@ -1965,6 +1965,133 @@ tech_yuzu_crystal_armor_2 = {
 	}
 }
 
+##### 时空粒子发射器（G 槽 · 穿透型） #####
+# 需求侧完全对齐同档「时空粉碎者」（成本 / 权重 / 区域 / 分类 / 稀有度 / gateway），
+# 只有前置科技按设计走：
+#   Tier1   = 时空乱流发射器（tech_yuzu_l_1）
+#   先进以上 = 上一档时空粒子发射器 + 同档时空乱流发射器
+# 详见 markdowns/yuzu_spacetime_weapon_tiers.md §9.A。
+
+tech_yuzu_particle_1 = {
+	cost = @yuzu_tier5cost5
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_l_1" }
+	weight = @yuzu_tier5weight5
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_particle_1_advanced = {
+	cost = @yuzu_tier5cost6
+	area = physics
+	tier = 5
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_particle_1" "tech_yuzu_l_1_advanced" }
+	weight = @yuzu_tier5weight6
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_particle_1_elite = {
+	cost = @yuzu_tier6cost5
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_particle_1_advanced" "tech_yuzu_l_1_elite" }
+	weight = @yuzu_tier6weight5
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
+tech_yuzu_particle_1_master = {
+	cost = @yuzu_tier6cost6
+	area = physics
+	tier = 6
+	is_rare = yes
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	ai_update_type = military
+	prerequisites = { "tech_yuzu_particle_1_elite" "tech_yuzu_l_1_master" }
+	weight = @yuzu_tier6weight6
+
+	gateway = yuzu_space_time
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 9
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+}
+
 
 # ===== 高级版 (ADVANCED) 科技 =====
 

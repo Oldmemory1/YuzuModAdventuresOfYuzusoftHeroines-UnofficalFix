@@ -252,7 +252,7 @@ ship_design = {
 		}
 	}
 
-	required_component = "SENSOR_YUZU_1"
+	required_component = "SENSOR_YUZU_1_ADVANCED"
 	required_component = "YUZU_JUMP_DRIVE_ADVANCED"
 	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_ADVANCED"
 	required_component = "TITAN_YUZU_REACTOR_1_ADVANCED"
@@ -378,7 +378,7 @@ ship_design = {
 		}
 	}
 
-	required_component = "SENSOR_YUZU_1"
+	required_component = "SENSOR_YUZU_1_ELITE"
 	required_component = "YUZU_JUMP_DRIVE_ELITE"
 	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_ELITE"
 	required_component = "TITAN_YUZU_REACTOR_1_ELITE"
@@ -504,7 +504,7 @@ ship_design = {
 		}
 	}
 
-	required_component = "SENSOR_YUZU_1"
+	required_component = "SENSOR_YUZU_1_MASTER"
 	required_component = "YUZU_JUMP_DRIVE_MASTER"
 	required_component = "COMBAT_COMPUTER_ARTILLERY_YUZU_MASTER"
 	required_component = "TITAN_YUZU_REACTOR_1_MASTER"

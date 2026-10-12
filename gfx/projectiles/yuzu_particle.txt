@@ -1,0 +1,81 @@
+# 时空粒子发射器的弹体（proj：源自 ASB Ironman 的中子鱼雷，逐档改配色）
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_particle_1"
+	color = { 0.2 	0.9 	0.4 	0.8 }
+	hit_entity = "yuzu_particle_1_hit_entity"
+	shield_hit_entity = "yuzu_particle_1_shield_hit_entity"
+	muzzle_flash_entity = "yuzu_particle_1_muzzle_entity"
+	windup_entity = "yuzu_particle_1_windup_entity"
+	
+	#ballistic specific (ASB Ironman 中子鱼雷)
+	entity = "yuzu_particle_1_entity"
+	speed = 480.0
+	max_duration = 3.0
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_particle_1_advanced"
+	color = { 0.2235 	0.7725 	0.7333 	0.8 }
+	hit_entity = "yuzu_particle_1_hit_entity_advanced"
+	shield_hit_entity = "yuzu_particle_1_shield_hit_entity_advanced"
+	muzzle_flash_entity = "yuzu_particle_1_muzzle_entity_advanced"
+	windup_entity = "yuzu_particle_1_windup_entity_advanced"
+	
+	#ballistic specific (ASB Ironman 中子鱼雷)
+	entity = "yuzu_particle_1_entity_advanced"
+	speed = 480.0
+	max_duration = 3.0
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_particle_1_elite"
+	color = { 0.4 	0.8 	1.0 	0.8 }
+	hit_entity = "yuzu_particle_1_hit_entity_elite"
+	shield_hit_entity = "yuzu_particle_1_shield_hit_entity_elite"
+	muzzle_flash_entity = "yuzu_particle_1_muzzle_entity_elite"
+	windup_entity = "yuzu_particle_1_windup_entity_elite"
+	
+	#ballistic specific (ASB Ironman 中子鱼雷)
+	entity = "yuzu_particle_1_entity_elite"
+	speed = 480.0
+	max_duration = 3.0
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "yuzu_particle_1_master"
+	color = { 0.7804 	0.6510 	1.0 	0.8 }
+	hit_entity = "yuzu_particle_1_hit_entity_master"
+	shield_hit_entity = "yuzu_particle_1_shield_hit_entity_master"
+	muzzle_flash_entity = "yuzu_particle_1_muzzle_entity_master"
+	windup_entity = "yuzu_particle_1_windup_entity_master"
+	
+	#ballistic specific (ASB Ironman 中子鱼雷)
+	entity = "yuzu_particle_1_entity_master"
+	speed = 480.0
+	max_duration = 3.0
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

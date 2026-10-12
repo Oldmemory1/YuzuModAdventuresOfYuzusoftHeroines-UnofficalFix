@@ -1,0 +1,144 @@
+objectTypes = {
+
+	# 时空粒子发射器：炮口 / 弹体 / 命中 / 护盾命中 / 蓄力（四档，源自 ASB 中子鱼雷）
+
+	pdxparticle = {
+		name = "yuzu_particle_1_muzzle"
+		type = "yuzu_particle_1_muzzle"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_idle"
+		type = "yuzu_particle_1_idle"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_hit_effect"
+		type = "yuzu_particle_1_hit_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_shield_hit_effect"
+		type = "yuzu_particle_1_shield_hit_effect"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_windup"
+		type = "yuzu_particle_1_windup"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_muzzle_advanced"
+		type = "yuzu_particle_1_muzzle_advanced"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_idle_advanced"
+		type = "yuzu_particle_1_idle_advanced"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_hit_effect_advanced"
+		type = "yuzu_particle_1_hit_effect_advanced"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_shield_hit_effect_advanced"
+		type = "yuzu_particle_1_shield_hit_effect_advanced"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_windup_advanced"
+		type = "yuzu_particle_1_windup_advanced"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_muzzle_elite"
+		type = "yuzu_particle_1_muzzle_elite"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_idle_elite"
+		type = "yuzu_particle_1_idle_elite"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_hit_effect_elite"
+		type = "yuzu_particle_1_hit_effect_elite"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_shield_hit_effect_elite"
+		type = "yuzu_particle_1_shield_hit_effect_elite"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_windup_elite"
+		type = "yuzu_particle_1_windup_elite"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_muzzle_master"
+		type = "yuzu_particle_1_muzzle_master"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_idle_master"
+		type = "yuzu_particle_1_idle_master"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_hit_effect_master"
+		type = "yuzu_particle_1_hit_effect_master"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_shield_hit_effect_master"
+		type = "yuzu_particle_1_shield_hit_effect_master"
+		
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "yuzu_particle_1_windup_master"
+		type = "yuzu_particle_1_windup_master"
+		
+		scale = 1.0
+	}
+}

@@ -1,0 +1,209 @@
+# 时空粒子发射器的实体（源自 ASB Ironman 的中子鱼雷那一套）
+
+entity = {
+	name = "yuzu_particle_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_muzzle" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_hit_effect" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_shield_hit_effect" sound = { soundeffect = shield_hit } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_windup_entity"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1.0 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_windup" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_entity"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_particle_1_idle" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_particle_1_muzzle_entity_advanced"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_muzzle_advanced" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_hit_entity_advanced"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_hit_effect_advanced" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_shield_hit_entity_advanced"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_shield_hit_effect_advanced" sound = { soundeffect = shield_hit } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_windup_entity_advanced"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1.0 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_windup_advanced" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_entity_advanced"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_particle_1_idle_advanced" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_particle_1_muzzle_entity_elite"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_muzzle_elite" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_hit_entity_elite"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_hit_effect_elite" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_shield_hit_entity_elite"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_shield_hit_effect_elite" sound = { soundeffect = shield_hit } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_windup_entity_elite"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1.0 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_windup_elite" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_entity_elite"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_particle_1_idle_elite" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
+
+entity = {
+	name = "yuzu_particle_1_muzzle_entity_master"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.9 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_muzzle_master" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_hit_entity_master"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_hit_effect_master" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_shield_hit_entity_master"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { particle = "yuzu_particle_1_shield_hit_effect_master" sound = { soundeffect = shield_hit } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+entity = {
+	name = "yuzu_particle_1_windup_entity_master"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 1.0 looping = no
+		event = { time = 0 particle = "yuzu_particle_1_windup_master" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "yuzu_particle_1_entity_master"
+	cull_radius = 1.0
+	
+	default_state = idle
+	state = { name = "idle"
+		event = { time = 0 particle = "yuzu_particle_1_idle_master" keep_particle = yes }
+	}
+	
+	scale = 2.6
+}
