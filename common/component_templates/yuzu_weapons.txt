@@ -1033,7 +1033,7 @@ weapon_component_template = {
 	armor_damage = 3.00
 	armor_penetration = 0.00
 
-	size_damage_factor = 1
+	size_damage_factor = 0.20
 
 	ai_weight = {
 		weight = 3000

@@ -1,0 +1,320 @@
+# ####################
+# Yuzu humanoid phenotype traits - copies of Fairy Libra's trait_libra_humanoid_0 .. _9
+# ####################
+
+# NOT an override: libra's own traits stay untouched. These are Yuzu-only copies
+# (species_class = YUZUGIRL) with the same cost/modifiers, so Yuzu species can pick
+# one of them at empire creation and in the species-modification window.
+# Changes vs libra's original per block: tag prefix, species_class, species_class_override
+# dropped (so only YUZUGIRL species see these copies), a "before game start" branch in
+# species_possible_add, and opposites extended to libra's 10 tags so the two sets can
+# never stack.
+# Regenerate with scripts/make_yuzu_humanoid_phenotype_traits.py after libra updates.
+# Keep this file ASCII and WITHOUT BOM (a BOM makes the game drop the whole file).
+
+trait_yuzu_humanoid_0 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive pop_output }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		pop_bonus_workforce_mult = 0.08
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_1 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive pop_output consumer_goods alloys }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		foundry_jobs_bonus_workforce_mult = 0.25
+		artisan_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 1
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_2 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive empire_size upkeep }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		planet_pops_upkeep_mult = -0.1
+		species_empire_size_mult = -0.15
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_3 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive pop_growth migration }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_growth_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		logistic_growth_mult = 0.15
+		libra_colony_start_species_pops = 225
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_4 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive pop_output army }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		army_damage_mult = 0.5
+		#soldier_jobs_bonus_workforce_mult = 0.2
+		enforcer_jobs_bonus_workforce_mult = 0.25
+		soldier_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 0.5
+		modifier = {
+			add = 1
+			from = { libra_has_fortress_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_5 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive unity }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		bureaucrat_jobs_bonus_workforce_mult = 0.3
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_6 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive leader }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		commander_exp_gain = 0.2
+		libra_official_initial_skill_species = 2
+		scientist_skill_add = 2
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 2
+			exists = from
+			from = {
+				libra_ai_preferences_leader = yes
+			}
+		}
+	}
+}
+
+trait_yuzu_humanoid_7 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive pop_output research }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_8" "trait_yuzu_humanoid_9" }
+	modifier = {
+		researcher_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { libra_has_research_designation = yes }
+		}
+	}
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_8 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive pop_output trade }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_9" }
+	modifier = {
+		trader_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = { trade = 750 }
+	ai_weight = {
+		factor = 2
+	}
+}
+
+trait_yuzu_humanoid_9 = {
+	cost = 3
+	category = mutation
+	allowed_archetypes = { BIOLOGICAL LITHOID LIBRACUTE }
+	species_class = { YUZUGIRL }
+	localized_tags = { SPECIES_TRAIT_LIBRA_HUMANOID }
+	tags = { species special humanoid positive pop_output amenities }
+	species_possible_add = {
+		OR = {
+			can_add_libra_phenotypic_species_traits = yes
+			NOT = { has_global_flag = game_started }
+		}
+	}
+	species_possible_remove = { can_remove_libra_phenotypic_traits = yes }
+	species_possible_merge_remove = { always = yes }
+	opposites = { "trait_libra_humanoid_0" "trait_libra_humanoid_1" "trait_libra_humanoid_2" "trait_libra_humanoid_3" "trait_libra_humanoid_4" "trait_libra_humanoid_5" "trait_libra_humanoid_6" "trait_libra_humanoid_7" "trait_libra_humanoid_8" "trait_libra_humanoid_9" "trait_yuzu_humanoid_0" "trait_yuzu_humanoid_1" "trait_yuzu_humanoid_2" "trait_yuzu_humanoid_3" "trait_yuzu_humanoid_4" "trait_yuzu_humanoid_5" "trait_yuzu_humanoid_6" "trait_yuzu_humanoid_7" "trait_yuzu_humanoid_8" }
+	modifier = {
+		pop_amenities_usage_add = -0.2
+		influential_jobs_bonus_workforce_mult = 0.25
+	}
+	slave_cost = { trade = 750 }
+	assembly_score = {
+		base = 0.5
+	}
+	ai_weight = {
+		modifier = {
+			factor = 10
+			exists = from
+			from = {
+				is_gestalt = yes
+			}
+		}
+	}
+}
+

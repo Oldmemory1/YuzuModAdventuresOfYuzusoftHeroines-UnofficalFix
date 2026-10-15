@@ -295,6 +295,38 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_shield_yuzu_2.dds"
 	}
 	spriteType = {
+		name = "GFX_ship_part_armor_yuzu_2_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_armor_yuzu_2_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_shield_yuzu_2_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_shield_yuzu_2_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_composite_armor_yuzu_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_composite_armor_yuzu_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_composite_armor_yuzu_1_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_composite_armor_yuzu_1_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_composite_armor_yuzu_1_elite"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_composite_armor_yuzu_1_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_composite_armor_yuzu_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_composite_armor_yuzu_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_composite_armor_yuzu_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_composite_armor_yuzu_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_composite_armor_yuzu_2_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_composite_armor_yuzu_2_advanced.dds"
+	}
+	spriteType = {
 		name = "GFX_ship_part_yuzu_jump_drive_1"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_jump_drive_1.dds"
 	}
@@ -355,6 +387,22 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ship_part_crystal_armor_yuzu_2"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_crystal_armor_yuzu_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_crystal_armor_yuzu_1_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_crystal_armor_yuzu_1_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_crystal_armor_yuzu_1_elite"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_crystal_armor_yuzu_1_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_crystal_armor_yuzu_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_crystal_armor_yuzu_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_crystal_armor_yuzu_2_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_crystal_armor_yuzu_2_advanced.dds"
 	}
 	# 高级版(蓝绿 #39C5BB)
 	spriteType = {
@@ -430,18 +478,37 @@ spriteTypes = {
 		name = "GFX_yuzu_destiny_frame_blue"
 		texturefile = "gfx/interface/icons/traits/leader_traits/yuzu_destiny_frame_blue.dds"
 	}
-# 深渊 T3 先进版(品红 #EB38BE)
 	spriteType = {
-		name = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_energy_torpedoes_3_advanced.dds"
+		name = "GFX_ship_part_yuzu_particle_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1.dds"
 	}
 	spriteType = {
-		name = "GFX_ship_part_yuzu_lance_3_advanced"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_lance_3_advanced.dds"
+		name = "GFX_ship_part_yuzu_particle_1_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1_advanced.dds"
 	}
 	spriteType = {
-		name = "GFX_ship_part_yuzu_beam_3_advanced"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_3_advanced.dds"
+		name = "GFX_ship_part_yuzu_particle_1_elite"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_particle_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1_master.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_vibrant_ray_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_vibrant_ray_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_vibrant_ray_1_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_vibrant_ray_1_advanced.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_vibrant_ray_1_elite"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_vibrant_ray_1_elite.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_yuzu_vibrant_ray_1_master"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_vibrant_ray_1_master.dds"
 	}
 	# 太初版(淡紫 #C7A6FF)
 	spriteType = {
@@ -476,20 +543,17 @@ spriteTypes = {
 		name = "GFX_ship_part_sensor_yuzu_1_master"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_sensor_yuzu_1_master.dds"
 	}
+# 深渊 T3 先进版(品红 #EB38BE)
 	spriteType = {
-		name = "GFX_ship_part_yuzu_particle_1"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1.dds"
+		name = "GFX_ship_part_yuzu_energy_torpedoes_3_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_energy_torpedoes_3_advanced.dds"
 	}
 	spriteType = {
-		name = "GFX_ship_part_yuzu_particle_1_advanced"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1_advanced.dds"
+		name = "GFX_ship_part_yuzu_lance_3_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_lance_3_advanced.dds"
 	}
 	spriteType = {
-		name = "GFX_ship_part_yuzu_particle_1_elite"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1_elite.dds"
-	}
-	spriteType = {
-		name = "GFX_ship_part_yuzu_particle_1_master"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_particle_1_master.dds"
+		name = "GFX_ship_part_yuzu_beam_3_advanced"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_3_advanced.dds"
 	}
 }

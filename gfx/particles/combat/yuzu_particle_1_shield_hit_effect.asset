@@ -211,8 +211,6 @@ particle={
 		box_emitter_x={ 0.000 2.000 }
 		box_emitter_y={ 0.000 2.000 }
 		box_emitter_z={ 0.000 2.000 }
-		box_emitter_yaw={ 180.000 90.000 }
-		box_emitter_pitch={ 0.000 45.000 }
 		invert=no
 		trail=no
 		local_space=no
@@ -336,7 +334,7 @@ particle={
 		op="MUL"
 		time="life"
 	}
-	nimation={
+	animation={
 		name="initial_blast_alpha"
 		start=0.000
 		duration=1.000

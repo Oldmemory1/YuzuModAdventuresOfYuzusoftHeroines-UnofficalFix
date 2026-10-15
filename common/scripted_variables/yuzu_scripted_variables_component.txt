@@ -304,6 +304,68 @@
 @yuzu_hull_M2 = 1500
 @yuzu_hull_L2 = 4500
 
+# 船体值(晶体镀层) 先进 / 精英 / 太初（= 同档装甲值）与先进深渊
+
+@yuzu_hull_S1_advanced = 375
+@yuzu_hull_M1_advanced = 1125
+@yuzu_hull_L1_advanced = 3375
+
+@yuzu_hull_S1_elite = 500
+@yuzu_hull_M1_elite = 1500
+@yuzu_hull_L1_elite = 4500
+
+@yuzu_hull_S1_master = 625
+@yuzu_hull_M1_master = 1875
+@yuzu_hull_L1_master = 5625
+
+@yuzu_hull_S2_advanced = 750
+@yuzu_hull_M2_advanced = 2250
+@yuzu_hull_L2_advanced = 6750
+
+# 深渊装甲 / 深渊之护 先进档（2026-10-13）：值 = 深渊 T1 ×1.5，造价/维护 ×2，耗电 ×1.5
+
+@yuzu_armor_S2_advanced = 750
+@yuzu_armor_M2_advanced = 2250
+@yuzu_armor_L2_advanced = 6750
+
+@yuzu_shield_S2_advanced = 750
+@yuzu_shield_M2_advanced = 2250
+@yuzu_shield_L2_advanced = 6750
+
+@yuzu_armor_s_t2_advanced_cost = 138
+@yuzu_armor_s_t2_advanced_cost_rare = 15
+@yuzu_armor_s_t2_advanced_upkeep_energy = 1.00
+@yuzu_armor_s_t2_advanced_upkeep_alloys = 0.20
+
+@yuzu_armor_m_t2_advanced_cost = 344
+@yuzu_armor_m_t2_advanced_cost_rare = 30
+@yuzu_armor_m_t2_advanced_upkeep_energy = 2.00
+@yuzu_armor_m_t2_advanced_upkeep_alloys = 0.40
+
+@yuzu_armor_l_t2_advanced_cost = 860
+@yuzu_armor_l_t2_advanced_cost_rare = 60
+@yuzu_armor_l_t2_advanced_upkeep_energy = 4.00
+@yuzu_armor_l_t2_advanced_upkeep_alloys = 0.80
+
+@yuzu_shield_s_t2_advanced_cost = 138
+@yuzu_shield_s_t2_advanced_cost_rare = 10
+@yuzu_shield_s_t2_advanced_upkeep_energy = 0.50
+@yuzu_shield_s_t2_advanced_upkeep_alloys = 0.10
+
+@yuzu_shield_m_t2_advanced_cost = 344
+@yuzu_shield_m_t2_advanced_cost_rare = 20
+@yuzu_shield_m_t2_advanced_upkeep_energy = 1.00
+@yuzu_shield_m_t2_advanced_upkeep_alloys = 0.20
+
+@yuzu_shield_l_t2_advanced_cost = 860
+@yuzu_shield_l_t2_advanced_cost_rare = 40
+@yuzu_shield_l_t2_advanced_upkeep_energy = 2.00
+@yuzu_shield_l_t2_advanced_upkeep_alloys = 0.40
+
+@yuzu_power_S2_advanced = -150
+@yuzu_power_M2_advanced = -300
+@yuzu_power_L2_advanced = -600
+
 #############
 #	POWER	#
 #############

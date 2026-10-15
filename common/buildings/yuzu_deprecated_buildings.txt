@@ -1,0 +1,2649 @@
+##### 神秘档案库 #####
+building_yuzu_master_archive = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_master_archive
+	category = research
+
+	position_priority = 110
+
+	building_sets = {
+		fallen_empire
+		research
+		physics
+		society
+		engineering
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_YUZU = yes
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		job_yuzu_fe_archivist_add = 1000
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 200
+			society_research = 200
+			engineering_research = 200
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+}
+
+##### 苍穹神龛 #####
+building_yuzu_empyrean_shrine = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_empyrean_shrine
+	category = research
+
+	position_priority = 120
+
+	building_sets = {
+		fallen_empire
+		unity
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		job_yuzu_fe_augur_add = 300
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+}
+
+
+##### 外星庇护所 #####
+building_yuzu_fe_xeno_zoo = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_fe_xeno_zoo
+	category = unity
+
+	base_cap_amount = 1
+	position_priority = 10
+
+	building_sets = {
+		fallen_empire
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 1500
+		job_yuzu_fe_xeno_keeper_add = 200
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_fe_xeno_zoo_tooltip
+	}
+
+}
+
+##### 神秘冷冻室 #####
+
+building_yuzu_ancient_cryo_chamber_1 = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	base_cap_amount = 1
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 1
+		}
+		cost = {
+			fragment_of_heart = @yuzu_fe_building_tier_1_fragment_of_heart_cost
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_2"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_2 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 2
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_3"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_3 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 3
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_4"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_4 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 4
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_5"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_5 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 5
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_6"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_6 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 6
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_7"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_7 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 7
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_8"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_8 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 8
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_9"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_9 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 9
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_10"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_10 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 10
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_11"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_11 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 11
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_12"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_12 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 12
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_13"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_13 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 13
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_14"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_14 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 14
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_15"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_15 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 15
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_16"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_16 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 16
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_17"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_17 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 17
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_18"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_18 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 18
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_19"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_19 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 19
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_20"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_20 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 20
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_21"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_21 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 21
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_22"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_22 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 22
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_23"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_23 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 23
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_24"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_24 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 24
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_25"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_25 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 25
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_26"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_26 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 26
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_27"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_27 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 27
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_28"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_28 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 28
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_29"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_29 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 29
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_30"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_30 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 30
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_31"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_31 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 31
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_32"
+	}
+}
+building_yuzu_ancient_cryo_chamber_32 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 32
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_33"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_33 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 33
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_34"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_34 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 34
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_35"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_35 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 35
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+
+	upgrades = {
+		"building_yuzu_ancient_cryo_chamber_36"
+	}
+}
+
+building_yuzu_ancient_cryo_chamber_36 = {
+	base_buildtime = @b2_time
+
+	can_build = no
+	icon = building_ancient_cryo_chamber
+	category = government
+
+	position_priority = 20
+
+	building_sets = {
+		fallen_empire
+		research
+		society
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_YUZU = yes
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_1
+			count_owned_pop_amount = {
+				limit = { is_YUZU = yes }
+				count >= 1000
+			}
+		}
+		custom_tooltip = {
+			fail_text = yuzu_pop_is_not_enought_2
+			count_owned_pop_amount = { count > 1000 }
+		}
+		hidden_trigger = {
+			owner = { is_ai = no }
+		}
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_YUZU = yes }
+			}
+			fragment_of_heart = 36
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	triggered_desc = {
+		text = building_yuzu_ancient_cryo_chamber_tooltip
+	}
+}

@@ -17,6 +17,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_crystal_armor_1" }
 	component_set = "YUZU_CRYSTAL_ARMOR_1"
+	upgrades_to = "SMALL_YUZU_CRYSTAL_ARMOR_1_ADVANCED"
 
 	modifier = {
 		ship_hull_add = @yuzu_hull_S1
@@ -49,6 +50,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_crystal_armor_1" }
 	component_set = "YUZU_CRYSTAL_ARMOR_1"
+	upgrades_to = "MEDIUM_YUZU_CRYSTAL_ARMOR_1_ADVANCED"
 
 	modifier = {
 		ship_hull_add = @yuzu_hull_M1
@@ -81,6 +83,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_crystal_armor_1" }
 	component_set = "YUZU_CRYSTAL_ARMOR_1"
+	upgrades_to = "LARGE_YUZU_CRYSTAL_ARMOR_1_ADVANCED"
 
 	modifier = {
 		ship_hull_add = @yuzu_hull_L1
@@ -113,6 +116,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_crystal_armor_2" }
 	component_set = "YUZU_CRYSTAL_ARMOR_2"
+	upgrades_to = "SMALL_YUZU_CRYSTAL_ARMOR_2_ADVANCED"
 
 	modifier = {
 		ship_hull_add = @yuzu_hull_S2
@@ -145,6 +149,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_crystal_armor_2" }
 	component_set = "YUZU_CRYSTAL_ARMOR_2"
+	upgrades_to = "MEDIUM_YUZU_CRYSTAL_ARMOR_2_ADVANCED"
 
 	modifier = {
 		ship_hull_add = @yuzu_hull_M2
@@ -177,6 +182,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_yuzu_crystal_armor_2" }
 	component_set = "YUZU_CRYSTAL_ARMOR_2"
+	upgrades_to = "LARGE_YUZU_CRYSTAL_ARMOR_2_ADVANCED"
 
 	modifier = {
 		ship_hull_add = @yuzu_hull_L2
