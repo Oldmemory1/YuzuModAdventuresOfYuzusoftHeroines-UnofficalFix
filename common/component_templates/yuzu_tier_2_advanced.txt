@@ -1,0 +1,460 @@
+# yuzu_tier_2_advanced.txt —— 2026-10-15 目录重整：**按档位**归拢（原 yuzu_weapons /
+# yuzu_armor_and_shields / yuzu_hulls / yuzu_others / yuzu_thrusters / yuzu_roles /
+# yuzu_particle_line / yuzu_vibrant_ray_line / yuzu_crystal_armor_tiers /
+# 000_yuzu_utilities_aux / yuzu_advanced / yuzu_elite 等文件合并而来）
+# 本档包含: 装甲、护盾、晶体镀层
+
+# ============================================================
+# 装甲
+# ============================================================
+
+utility_component_template = {
+	key = "LARGE_YUZU_ARMOR_2_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_L2_advanced
+	}
+
+	prerequisites = { "tech_yuzu_armor_2_advanced" }
+	component_set = "YUZU_ARMOR_2_ADVANCED"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_l_t2_advanced_cost
+			rare_crystals = @yuzu_armor_l_t2_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_armor_l_t2_advanced_upkeep_energy
+			alloys = @yuzu_armor_l_t2_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_ARMOR_2_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_M2_advanced
+	}
+
+	prerequisites = { "tech_yuzu_armor_2_advanced" }
+	component_set = "YUZU_ARMOR_2_ADVANCED"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_m_t2_advanced_cost
+			rare_crystals = @yuzu_armor_m_t2_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_armor_m_t2_advanced_upkeep_energy
+			alloys = @yuzu_armor_m_t2_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_ARMOR_2_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @yuzu_armor_S2_advanced
+	}
+
+	prerequisites = { "tech_yuzu_armor_2_advanced" }
+	component_set = "YUZU_ARMOR_2_ADVANCED"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_s_t2_advanced_cost
+			rare_crystals = @yuzu_armor_s_t2_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_armor_s_t2_advanced_upkeep_energy
+			alloys = @yuzu_armor_s_t2_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+# ============================================================
+# 护盾
+# ============================================================
+
+utility_component_template = {
+	key = "LARGE_YUZU_SHIELD_2_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_shield_yuzu_2_advanced"
+	icon_frame = 1
+	power = @yuzu_power_L2_advanced
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_l_t2_advanced_cost
+			exotic_gases = @yuzu_shield_l_t2_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_l_t2_advanced_upkeep_energy
+			alloys = @yuzu_shield_l_t2_advanced_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_L2_advanced
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t2
+	}
+	prerequisites = { "tech_yuzu_shield_2_advanced" }
+	component_set = "YUZU_SHIELD_2_ADVANCED"
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_SHIELD_2_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_shield_yuzu_2_advanced"
+	icon_frame = 1
+	power = @yuzu_power_M2_advanced
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_m_t2_advanced_cost
+			exotic_gases = @yuzu_shield_m_t2_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_m_t2_advanced_upkeep_energy
+			alloys = @yuzu_shield_m_t2_advanced_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_M2_advanced
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t2
+	}
+	prerequisites = { "tech_yuzu_shield_2_advanced" }
+	component_set = "YUZU_SHIELD_2_ADVANCED"
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_SHIELD_2_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_shield_yuzu_2_advanced"
+	icon_frame = 1
+	power = @yuzu_power_S2_advanced
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_s_t2_advanced_cost
+			exotic_gases = @yuzu_shield_s_t2_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_s_t2_advanced_upkeep_energy
+			alloys = @yuzu_shield_s_t2_advanced_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @yuzu_shield_S2_advanced
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t2
+	}
+	prerequisites = { "tech_yuzu_shield_2_advanced" }
+	component_set = "YUZU_SHIELD_2_ADVANCED"
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+# ============================================================
+# 晶体镀层
+# ============================================================
+
+utility_component_template = {
+	key = "LARGE_YUZU_CRYSTAL_ARMOR_2_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_crystal_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 5.28
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_2_advanced" }
+	component_set = "YUZU_CRYSTAL_ARMOR_2_ADVANCED"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_L2_advanced
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 8
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_CRYSTAL_ARMOR_2_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_crystal_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 2.64
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_2_advanced" }
+	component_set = "YUZU_CRYSTAL_ARMOR_2_ADVANCED"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_M2_advanced
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 7
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_CRYSTAL_ARMOR_2_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_crystal_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 1.32
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_2_advanced" }
+	component_set = "YUZU_CRYSTAL_ARMOR_2_ADVANCED"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_S2_advanced
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 6
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# ===== 一体化装甲 先进深渊 自动生成区块 — by scripts/make_yuzu_composite_armor_line.py =====
+
+utility_component_template = {
+	key = "SMALL_YUZU_COMPOSITE_ARMOR_2_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_composite_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = -150
+
+	modifier = {
+		ship_armor_add = 938
+		ship_shield_add = 938
+		ship_hull_add = 938
+		ship_shield_regen_add_perc = 0.02
+	}
+
+	ship_modifier = {
+		ship_damage_reduction_add = 6
+	}
+
+	prerequisites = { "tech_yuzu_composite_armor_2_advanced" }
+	component_set = "YUZU_COMPOSITE_ARMOR_2_ADVANCED"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 414
+			rare_crystals = 24.48
+			exotic_gases = 15
+		}
+		upkeep = {
+			energy = 2.25
+			alloys = 0.45
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_COMPOSITE_ARMOR_2_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_composite_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = -300
+
+	modifier = {
+		ship_armor_add = 2813
+		ship_shield_add = 2813
+		ship_hull_add = 2813
+		ship_shield_regen_add_perc = 0.02
+	}
+
+	ship_modifier = {
+		ship_damage_reduction_add = 7
+	}
+
+	prerequisites = { "tech_yuzu_composite_armor_2_advanced" }
+	component_set = "YUZU_COMPOSITE_ARMOR_2_ADVANCED"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1032
+			rare_crystals = 48.96
+			exotic_gases = 30
+		}
+		upkeep = {
+			energy = 4.5
+			alloys = 0.9
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_COMPOSITE_ARMOR_2_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_composite_armor_yuzu_2_advanced"
+	icon_frame = 1
+	power = -600
+
+	modifier = {
+		ship_armor_add = 8438
+		ship_shield_add = 8438
+		ship_hull_add = 8438
+		ship_shield_regen_add_perc = 0.02
+	}
+
+	ship_modifier = {
+		ship_damage_reduction_add = 8
+	}
+
+	prerequisites = { "tech_yuzu_composite_armor_2_advanced" }
+	component_set = "YUZU_COMPOSITE_ARMOR_2_ADVANCED"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2580
+			rare_crystals = 97.92
+			exotic_gases = 60
+		}
+		upkeep = {
+			energy = 9
+			alloys = 1.8
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}

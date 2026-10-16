@@ -1,0 +1,297 @@
+########## 失落建筑 —— dome（tier 1~5）##########
+# **本文件由 scripts/gen_yuzu_fe_buildings.py 从 csvs/yuzu_fe_buildings.csv 生成，勿手改**
+
+##### 覆天穹顶 #####
+building_yuzu_fe_dome_tier_1 = {
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_dome_tier_1
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 6000
+		planet_amenities_add = 8000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			rare_crystals = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			rare_crystals = @yuzu_fe_b_sr_upkeep_1
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_2"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_1
+}
+##### 碧落穹顶 #####
+building_yuzu_fe_dome_tier_2 = {
+	base_buildtime = @yuzu_fe_b_time_2
+	can_build = no
+	icon = building_yuzu_fe_dome_tier_2
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 12000
+		planet_amenities_add = 16000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			rare_crystals = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			rare_crystals = @yuzu_fe_b_sr_upkeep_2
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_2
+}
+##### 苍碧穹顶 #####
+building_yuzu_fe_dome_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_dome_tier_3
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 18000
+		planet_amenities_add = 24000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			rare_crystals = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			rare_crystals = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_3
+}
+##### 赤霄穹顶 #####
+building_yuzu_fe_dome_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_dome_tier_4
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 24000
+		planet_amenities_add = 32000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			rare_crystals = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			rare_crystals = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_dome_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_4
+}
+##### 万象天穹 #####
+building_yuzu_fe_dome_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_dome_tier_5
+	category = amenity
+
+	position_priority = 180
+
+	building_sets = {
+		fallen_empire
+		bio_trophy
+		ark_forever_cruise_passengers
+		urban
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_dome_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	planet_modifier = {
+		planet_housing_add = 30000
+		planet_amenities_add = 40000
+		planet_pops_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			rare_crystals = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			rare_crystals = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_dome_tier_5
+}

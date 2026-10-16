@@ -1847,6 +1847,7 @@ entity = {
 		event = { time = 0.0 use_parent_nodes = yes node = "xl_gun_01" particle = "yuzu_beam_1_muzzle_windup_effect_elite" trigger_once = yes keep_particle = yes }
 	}
 }
+
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 # ---- 太初版 (light violet #C7A6FF) ----
 

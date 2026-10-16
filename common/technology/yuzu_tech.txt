@@ -3060,6 +3060,7 @@ tech_yuzu_jump_drive_1_elite = {
 		factor = 50
 	}
 }
+
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 tech_yuzu_l_1_master = {
 	cost = @yuzu_tier6cost5

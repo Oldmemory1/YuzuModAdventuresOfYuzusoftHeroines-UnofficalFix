@@ -1,0 +1,308 @@
+########## 失落建筑 —— stronghold（tier 1~5）##########
+# **本文件由 scripts/gen_yuzu_fe_buildings.py 从 csvs/yuzu_fe_buildings.csv 生成，勿手改**
+
+##### 圣盾基地 #####
+building_yuzu_fe_stronghold_tier_1 = {
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_stronghold_tier_1
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		planet_housing_add = 800
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			volatile_motes = @yuzu_fe_b_sr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_1
+			volatile_motes = @yuzu_fe_b_sr_upkeep_1
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_stronghold_tier_2"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_1
+}
+##### 神盾基地 #####
+building_yuzu_fe_stronghold_tier_2 = {
+	base_buildtime = @yuzu_fe_b_time_2
+	can_build = no
+	icon = building_yuzu_fe_stronghold_tier_2
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 2400
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+		planet_orbital_bombardment_damage = -0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			volatile_motes = @yuzu_fe_b_sr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_2
+			volatile_motes = @yuzu_fe_b_sr_upkeep_2
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_stronghold_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_2
+}
+##### 玄垒基地 #####
+building_yuzu_fe_stronghold_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_stronghold_tier_3
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 3600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+		planet_orbital_bombardment_damage = -0.3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			volatile_motes = @yuzu_fe_b_sr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_3
+			volatile_motes = @yuzu_fe_b_sr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_stronghold_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_3
+}
+##### 赤垒要塞 #####
+building_yuzu_fe_stronghold_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_stronghold_tier_4
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 4800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+		planet_orbital_bombardment_damage = -0.45
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			volatile_motes = @yuzu_fe_b_sr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_4
+			volatile_motes = @yuzu_fe_b_sr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_stronghold_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_4
+}
+##### 不落圣垒 #####
+building_yuzu_fe_stronghold_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_stronghold_tier_5
+	category = army
+	planetary_ftl_inhibitor = yes
+
+	position_priority = 90
+
+	building_sets = {
+		fallen_empire
+		fortress
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_stronghold_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_soldier
+		AMOUNT = 6000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+		planet_orbital_bombardment_damage = -0.6
+		# job_soldier_per_pop = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			volatile_motes = @yuzu_fe_b_sr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_stronghold_alloy_upkeep_5
+			volatile_motes = @yuzu_fe_b_sr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_stronghold_tier_5
+}

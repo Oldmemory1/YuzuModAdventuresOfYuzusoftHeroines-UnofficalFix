@@ -498,6 +498,7 @@ objectTypes = {
 		
 		scale = 1.0
 	}
+
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 # ---- 太初版 (light violet #C7A6FF) ----
 

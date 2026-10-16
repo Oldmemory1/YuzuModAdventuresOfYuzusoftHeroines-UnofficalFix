@@ -741,6 +741,7 @@ projectile_gfx_beam = {
 		delay = 0.2
 	}
 }
+
 # ===== MASTER(太初版) 自动生成区块 — 由 scripts/make_yuzu_master.py 写入 =====
 # ---- 太初版弹体 (light violet #C7A6FF) ----
 projectile_gfx_ballistic = {

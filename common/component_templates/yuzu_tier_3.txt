@@ -1,0 +1,693 @@
+# yuzu_tier_3.txt —— 2026-10-15 目录重整：**按档位**归拢（原 yuzu_weapons /
+# yuzu_armor_and_shields / yuzu_hulls / yuzu_others / yuzu_thrusters / yuzu_roles /
+# yuzu_particle_line / yuzu_vibrant_ray_line / yuzu_crystal_armor_tiers /
+# 000_yuzu_utilities_aux / yuzu_advanced / yuzu_elite 等文件合并而来）
+# 本档包含: 武器（主炮 / 长矛 / 巨炮）、反应堆
+
+# ============================================================
+# 武器（主炮 / 长矛 / 巨炮）
+# ============================================================
+
+weapon_component_template = {
+	key = "YUZU_BEAM_3"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_beam_3"
+	icon_frame = 1
+	power = -800
+
+	#	firing_arc = 10.0  # 与原版制式T槽武器一致,不限制开火角度
+	min_range = 30.0
+	use_ship_main_target = no
+
+	prerequisites = { "tech_yuzu_beam_3" }
+	component_set = "YUZU_BEAM_3"
+	projectile_gfx = "yuzu_beam_3"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_BEAM_3_ADVANCED"
+	damage = {
+		min = 15000
+		max = 37500
+	}
+	windup = {
+		min = 40
+		max = 50
+	}
+	total_fire_time = 200
+	range = 320
+	accuracy = 0.9
+	tracking = 0
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	collateral_damage = 500
+	collateral_range = 40
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_titanic_t3_cost
+			rare_crystals = @yuzu_titanic_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_titanic_t3_upkeep_energy
+			alloys = @yuzu_titanic_t3_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_LANCE_3"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_lance_3"
+	icon_frame = 1
+	power = -400
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_lance_3" }
+	component_set = "YUZU_LANCE_3"
+	projectile_gfx = "yuzu_lance_3"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_LANCE_3_ADVANCED"
+	damage = {
+		min = 3000
+		max = 7500
+	}
+	windup = {
+		min = 10
+		max = 20
+	}
+	total_fire_time = 75
+	range = 200
+	accuracy = 0.9
+	tracking = 0.1
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_xl_t3_cost
+			rare_crystals = @yuzu_xl_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_xl_t3_upkeep_energy
+			alloys = @yuzu_xl_t3_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_L_3"
+	size = large
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3"
+	icon_frame = 1
+	power = -150
+
+	prerequisites = { "tech_yuzu_l_3" }
+	component_set = "YUZU_ENERGY_TORPEDO_3"
+	projectile_gfx = "yuzu_l_3"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_L_3_ADVANCED"
+	damage = {
+		min = 540
+		max = 1440
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 150
+	accuracy = 0.9
+	tracking = 0.2
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_l_t3_cost
+			rare_crystals = @yuzu_l_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_l_t3_upkeep_energy
+			alloys = @yuzu_l_t3_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_M_3"
+	size = medium
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3"
+	icon_frame = 1
+	power = -80
+
+	prerequisites = { "tech_yuzu_l_3" }
+	component_set = "YUZU_ENERGY_TORPEDO_3"
+	projectile_gfx = "yuzu_m_3"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_M_3_ADVANCED"
+	damage = {
+		min = 225
+		max = 600
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.9
+	tracking = 0.3
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_m_t3_cost
+			rare_crystals = @yuzu_m_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_m_t3_upkeep_energy
+			alloys = @yuzu_m_t3_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_S_3"
+	size = small
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_3"
+	icon_frame = 1
+	power = -45
+
+	prerequisites = { "tech_yuzu_l_3" }
+	component_set = "YUZU_ENERGY_TORPEDO_3"
+	projectile_gfx = "yuzu_s_3"
+	tags = { weapon_type_energy weapon_type_abyss }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_S_3_ADVANCED"
+	damage = {
+		min = 90
+		max = 240
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.9
+	tracking = 0.4
+	hull_damage = 3.00
+	shield_damage = 0.25
+	shield_penetration = 0.00
+	armor_damage = 3.00
+	armor_penetration = 0.00
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_s_t3_cost
+			rare_crystals = @yuzu_s_t3_rare
+		}
+		upkeep = {
+			energy = @yuzu_s_t3_upkeep_energy
+			alloys = @yuzu_s_t3_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 3000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+# ============================================================
+# 反应堆
+# ============================================================
+
+utility_component_template = {
+	key = "BATTLESHIP_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 5000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1824
+			sr_dark_matter = 24
+		}
+		upkeep = {
+			energy = 8.94
+			alloys = 0.89
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+	component_set = "power_core"
+	# size_restriction = { battleship offspring_battleship ember_battleship }
+
+	potential = {
+		ship_uses_battleship_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 25000
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+
+	component_set = "power_core"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_colossus_components = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 715
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 228
+			sr_dark_matter = 3
+		}
+		upkeep = {
+			energy = 1.11
+			alloys = 0.11
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+	component_set = "power_core"
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		ship_uses_corvette_reactors = yes
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 2575
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 912
+			sr_dark_matter = 12
+		}
+		upkeep = {
+			energy = 4.44
+			alloys = 0.44
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+	component_set = "power_core"
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
+
+	potential = {
+		ship_uses_cruiser_reactors = yes
+	}
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 1375
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 456
+			sr_dark_matter = 6
+		}
+		upkeep = {
+			energy = 2.22
+			alloys = 0.22
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+	component_set = "power_core"
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		ship_uses_destroyer_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 5000
+	prerequisites = { "tech_reactor_yuzu_3" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 912
+			sr_dark_matter = 24
+		}
+	}
+
+	component_set = "power_core"
+	# size_restriction = { ion_cannon }
+	potential = {
+		ship_uses_ion_cannon_components = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 35750
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10935
+			sr_dark_matter = 96
+		}
+		upkeep = {
+			energy = 62.37
+			alloys = 6.24
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+
+	component_set = "power_core"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_juggernaut_reactors = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_YUZU_REACTOR_3"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 1875
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 456
+			sr_dark_matter = 12
+		}
+		upkeep = {
+			energy = 2.22
+			alloys = 0.22
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+	component_set = "power_core"
+	# class_restriction = { shipclass_military_station }
+	# size_restriction = {
+	# 	military_station_small
+	# 	military_station_medium
+	# 	military_station_large
+	# }
+	potential = {
+		ship_uses_platform_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_YUZU_REACTOR_3"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 21375
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+	component_set = "power_core"
+	# class_restriction = { shipclass_starbase shipclass_military_special }
+	# size_restriction = {
+	#	starbase_outpost
+	#	starbase_starport
+	#	starbase_starhold
+	#	starbase_starfortress
+	#	starbase_citadel
+	#	juggernaut
+	#	starbase_deep_space_citadel_1
+	#	starbase_deep_space_citadel_2
+	#	starbase_deep_space_citadel_3
+	#	monadic_qerr
+	# }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_YUZU_REACTOR_3"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_3"
+	icon_frame = 1
+	power = 10500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3645
+			sr_dark_matter = 48
+		}
+		upkeep = {
+			energy = 17.79
+			alloys = 1.78
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_3" }
+	component_set = "power_core"
+	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
+
+	potential = {
+		ship_uses_titan_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+			NOT = { is_country_type = new_abyss_empire }
+		}
+	}
+}

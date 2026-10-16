@@ -1,0 +1,294 @@
+########## 失落建筑 —— dimensional_fabricator（tier 1~5）##########
+# **本文件由 scripts/gen_yuzu_fe_buildings.py 从 csvs/yuzu_fe_buildings.csv 生成，勿手改**
+
+##### 多重次元复制机 #####
+building_yuzu_dimensional_fabricator_tier_1 = {
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_dimensional_fabricator_tier_1
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 30
+			exotic_gases = 30
+			rare_crystals = 30
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_1
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_1
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_2"
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_1
+}
+##### 多重次元制造机 #####
+building_yuzu_dimensional_fabricator_tier_2 = {
+	base_buildtime = @yuzu_fe_b_time_2
+	can_build = no
+	icon = building_yuzu_dimensional_fabricator_tier_2
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 50
+			exotic_gases = 50
+			rare_crystals = 50
+			sr_dark_matter = 10
+			sr_living_metal = 10
+			sr_zro = 10
+			nanites = 10
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_2
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_2
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_2
+}
+##### 多重次元织造矩阵 #####
+building_yuzu_dimensional_fabricator_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_dimensional_fabricator_tier_3
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 70
+			exotic_gases = 70
+			rare_crystals = 70
+			sr_dark_matter = 15
+			sr_living_metal = 15
+			sr_zro = 15
+			nanites = 15
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_3
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_3
+}
+##### 多重次元熔铸枢纽 #####
+building_yuzu_dimensional_fabricator_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_dimensional_fabricator_tier_4
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 95
+			exotic_gases = 95
+			rare_crystals = 95
+			sr_dark_matter = 20
+			sr_living_metal = 20
+			sr_zro = 20
+			nanites = 20
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_4
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_dimensional_fabricator_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_4
+}
+##### 次元织枢 #####
+building_yuzu_dimensional_fabricator_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_dimensional_fabricator_tier_5
+	category = manufacturing
+
+	position_priority = 140
+
+	building_sets = {
+		fallen_empire
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_dimensional_fabricator_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 120
+			exotic_gases = 120
+			rare_crystals = 120
+			sr_dark_matter = 25
+			sr_living_metal = 25
+			sr_zro = 25
+			nanites = 25
+		}
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_dim_energy_upkeep_5
+			alloys = @yuzu_fe_b_dim_alloy_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_dimensional_fabricator_tier_5
+}

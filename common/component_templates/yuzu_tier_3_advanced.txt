@@ -1,5 +1,8 @@
+
+
+# ===== 深渊 T3 先进版 自动生成区块 — by scripts/make_yuzu_abyss_t3_adv.py =====
 # 深渊线 T3 先进版组件 —— 由 scripts/make_yuzu_abyss_t3_adv.py 从
-# common/component_templates/yuzu_weapons.txt 的 T3 组件派生, 勿手改
+# common/component_templates/yuzu_tier_3.txt 的 T3 组件派生, 勿手改
 #
 # 伤害 = Tier2 x2 (T3 是 Tier2 的 x1.5); 射程与 T3 相同;
 # 耗电/溅射沿用每档固定增量; 造价/维护 = T3 x1.5;

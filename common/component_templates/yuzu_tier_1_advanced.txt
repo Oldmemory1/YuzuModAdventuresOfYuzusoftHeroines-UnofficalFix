@@ -1,0 +1,2139 @@
+# yuzu_tier_1_advanced.txt —— 2026-10-15 目录重整：**按档位**归拢（原 yuzu_weapons /
+# yuzu_armor_and_shields / yuzu_hulls / yuzu_others / yuzu_thrusters / yuzu_roles /
+# yuzu_particle_line / yuzu_vibrant_ray_line / yuzu_crystal_armor_tiers /
+# 000_yuzu_utilities_aux / yuzu_advanced / yuzu_elite 等文件合并而来）
+# 本档包含: 武器（主炮 / 长矛 / 巨炮）、时空粒子发射器、时空脉冲光束、装甲、护盾、晶体镀层、推进器、折跃引擎、传感器、火控（时空感知水晶）
+
+# ============================================================
+# 武器（主炮 / 长矛 / 巨炮）
+# ============================================================
+
+weapon_component_template = {
+	key = "YUZU_BEAM_1_ADVANCED"
+	size = titanic
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_beam_1_advanced"
+	icon_frame = 1
+	power = -1100
+
+	#	firing_arc = 10.0  # 与原版制式T槽武器一致,不限制开火角度
+	min_range = 30.0
+	use_ship_main_target = no
+
+	prerequisites = { "tech_yuzu_beam_1_advanced" }
+	component_set = "YUZU_BEAM_1_ADVANCED"
+	upgrades_to = "YUZU_BEAM_1_ELITE"
+	projectile_gfx = "yuzu_beam_1_advanced"
+	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 7500
+		max = 11250
+	}
+	windup = {
+		min = 30
+		max = 45
+	}
+	total_fire_time = 180
+	range = 325
+	accuracy = 0.95
+	tracking = 0.35
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.25
+
+	collateral_damage = 375
+	collateral_range = 40
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_titanic_t1_advanced_cost
+			rare_crystals = @yuzu_titanic_t1_advanced_rare
+			exotic_gases = @yuzu_titanic_t1_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_titanic_t1_advanced_upkeep_energy
+			alloys = @yuzu_titanic_t1_advanced_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+
+}
+
+weapon_component_template = {
+	key = "YUZU_LANCE_1_ADVANCED"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_lance_1_advanced"
+	icon_frame = 1
+	power = -550
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_lance_1_advanced" }
+	component_set = "YUZU_LANCE_1_ADVANCED"
+	upgrades_to = "YUZU_LANCE_1_ELITE"
+	projectile_gfx = "yuzu_lance_1_advanced"
+	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 1500
+		max = 2250
+	}
+	windup = {
+		min = 5
+		max = 15
+	}
+	total_fire_time = 70
+	range = 200
+	accuracy = 0.90
+	tracking = 0.45
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_xl_t1_advanced_cost
+			rare_crystals = @yuzu_xl_t1_advanced_rare
+			exotic_gases = @yuzu_xl_t1_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_xl_t1_advanced_upkeep_energy
+			alloys = @yuzu_xl_t1_advanced_upkeep_alloys
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+
+}
+
+weapon_component_template = {
+	key = "YUZU_L_1_ADVANCED"
+	size = large
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_advanced"
+	icon_frame = 1
+	power = -155
+
+	prerequisites = { "tech_yuzu_l_1_advanced" }
+	component_set = "YUZU_ENERGY_TORPEDO_1_ADVANCED"
+	upgrades_to = "YUZU_L_1_ELITE"
+	projectile_gfx = "yuzu_l_1_advanced"
+	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 270
+		max = 450
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 135
+	accuracy = 0.85
+	tracking = 0.55
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_l_t1_advanced_cost
+			rare_crystals = @yuzu_l_t1_advanced_rare
+			exotic_gases = @yuzu_l_t1_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_l_t1_advanced_upkeep_energy
+			alloys = @yuzu_l_t1_advanced_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+
+}
+
+weapon_component_template = {
+	key = "YUZU_M_1_ADVANCED"
+	size = medium
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_advanced"
+	icon_frame = 1
+	power = -85
+
+	prerequisites = { "tech_yuzu_l_1_advanced" }
+	component_set = "YUZU_ENERGY_TORPEDO_1_ADVANCED"
+	upgrades_to = "YUZU_M_1_ELITE"
+	projectile_gfx = "yuzu_m_1_advanced"
+	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 113
+		max = 188
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 100
+	accuracy = 0.85
+	tracking = 0.65
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_m_t1_advanced_cost
+			rare_crystals = @yuzu_m_t1_advanced_rare
+			exotic_gases = @yuzu_m_t1_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_m_t1_advanced_upkeep_energy
+			alloys = @yuzu_m_t1_advanced_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+
+}
+
+weapon_component_template = {
+	key = "YUZU_S_1_ADVANCED"
+	size = small
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_energy_torpedoes_1_advanced"
+	icon_frame = 1
+	power = -50
+
+	prerequisites = { "tech_yuzu_l_1_advanced" }
+	component_set = "YUZU_ENERGY_TORPEDO_1_ADVANCED"
+	upgrades_to = "YUZU_S_1_ELITE"
+	projectile_gfx = "yuzu_s_1_advanced"
+	tags = { weapon_type_energy weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	damage = {
+		min = 45
+		max = 75
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 65
+	accuracy = 0.85
+	tracking = 0.75
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_s_t1_advanced_cost
+			rare_crystals = @yuzu_s_t1_advanced_rare
+			exotic_gases = @yuzu_s_t1_advanced_exotic_gases
+		}
+		upkeep = {
+			energy = @yuzu_s_t1_advanced_upkeep_energy
+			alloys = @yuzu_s_t1_advanced_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+
+}
+
+# ============================================================
+# 时空粒子发射器
+# ============================================================
+
+weapon_component_template = {
+	key = "YUZU_PARTICLE_1_ADVANCED"
+	size = torpedo
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_particle_1_advanced"
+	icon_frame = 1
+	power = -125
+
+	firing_arc = 25.0
+	min_range = 45.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+	}
+
+	prerequisites = { "tech_yuzu_particle_1_advanced" }
+	component_set = "YUZU_PARTICLE_1_ADVANCED"
+	upgrades_to = "YUZU_PARTICLE_1_ELITE"
+	projectile_gfx = "yuzu_particle_1_advanced"
+	tags = { weapon_type_energy g_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+	damage = {
+		min = 225
+		max = 375
+	}
+	windup = {
+		min = 25
+		max = 90
+	}
+	total_fire_time = 180
+	range = 165
+	accuracy = 0.85
+	tracking = 0.20
+	shield_penetration = 1
+	armor_penetration = 1
+	hull_damage = 1.25
+	size_damage_factor = 0.2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 420
+			rare_crystals = 4.6
+			exotic_gases = 4.6
+		}
+		upkeep = {
+			energy = 3.06
+			alloys = 0.61
+		}
+	}
+
+	target_weights = {
+		cruiser = 1
+		battleship = 2
+		titan = 3
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+# ============================================================
+# 时空脉冲光束
+# ============================================================
+
+weapon_component_template = {
+	key = "YUZU_VIBRANT_RAY_L_1_ADVANCED"
+	size = large
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_vibrant_ray_1_advanced"
+	icon_frame = 1
+	power = -155
+
+	prerequisites = { "tech_yuzu_vibrant_ray_1_advanced" }
+	component_set = "YUZU_VIBRANT_RAY_1_ADVANCED"
+	projectile_gfx = "yuzu_vibrant_ray_1_advanced"
+	tags = { weapon_type_energy l_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_VIBRANT_RAY_L_1_ELITE"
+	damage = {
+		min = 270
+		max = 450
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 175
+	accuracy = 0.90
+	tracking = 0.55
+	shield_damage = 4.0
+	armor_damage = 0.5
+	hull_damage = 0.5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 376
+			rare_crystals = 3.99
+		}
+		upkeep = {
+			energy = 3.438
+			alloys = 0.688
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_VIBRANT_RAY_M_1_ADVANCED"
+	size = medium
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_vibrant_ray_1_advanced"
+	icon_frame = 1
+	power = -85
+
+	prerequisites = { "tech_yuzu_vibrant_ray_1_advanced" }
+	component_set = "YUZU_VIBRANT_RAY_1_ADVANCED"
+	projectile_gfx = "yuzu_vibrant_ray_1_advanced"
+	tags = { weapon_type_energy m_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_VIBRANT_RAY_M_1_ELITE"
+	damage = {
+		min = 113
+		max = 188
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 145
+	accuracy = 0.90
+	tracking = 0.65
+	shield_damage = 4.0
+	armor_damage = 0.5
+	hull_damage = 0.5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			rare_crystals = 1.28
+		}
+		upkeep = {
+			energy = 1.375
+			alloys = 0.274
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "YUZU_VIBRANT_RAY_S_1_ADVANCED"
+	size = small
+	#entity = "turret_energy_torpedo_entity"
+	type = instant
+
+	icon = "GFX_ship_part_yuzu_vibrant_ray_1_advanced"
+	icon_frame = 1
+	power = -50
+
+	prerequisites = { "tech_yuzu_vibrant_ray_1_advanced" }
+	component_set = "YUZU_VIBRANT_RAY_1_ADVANCED"
+	projectile_gfx = "yuzu_vibrant_ray_1_advanced"
+	tags = { weapon_type_energy s_slot weapon_type_spacetime_turbulence }
+	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tag_weight = 0
+	upgrades_to = "YUZU_VIBRANT_RAY_S_1_ELITE"
+	damage = {
+		min = 45
+		max = 75
+	}
+	windup = {
+		min = 3
+		max = 12
+	}
+	total_fire_time = 35
+	range = 115
+	accuracy = 0.90
+	tracking = 0.75
+	shield_damage = 4.0
+	armor_damage = 0.5
+	hull_damage = 0.5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 33
+			rare_crystals = 0.35
+		}
+		upkeep = {
+			energy = 0.463
+			alloys = 0.094
+		}
+	}
+
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+# ============================================================
+# 装甲
+# ============================================================
+
+utility_component_template = {
+	key = "LARGE_YUZU_ARMOR_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 0
+
+	modifier = {
+		ship_armor_add = @yuzu_armor_L1_advanced
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_armor_1_advanced" }
+	component_set = "YUZU_ARMOR_1_ADVANCED"
+	upgrades_to = "LARGE_YUZU_ARMOR_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_l_t1_advanced_cost
+			rare_crystals = @yuzu_armor_l_t1_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_armor_l_t1_advanced_upkeep_energy
+			alloys = @yuzu_armor_l_t1_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_ARMOR_1_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 0
+
+	modifier = {
+		ship_armor_add = @yuzu_armor_M1_advanced
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_armor_1_advanced" }
+	component_set = "YUZU_ARMOR_1_ADVANCED"
+	upgrades_to = "MEDIUM_YUZU_ARMOR_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_m_t1_advanced_cost
+			rare_crystals = @yuzu_armor_m_t1_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_armor_m_t1_advanced_upkeep_energy
+			alloys = @yuzu_armor_m_t1_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_ARMOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 0
+
+	modifier = {
+		ship_armor_add = @yuzu_armor_S1_advanced
+	}
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_armor_1_advanced" }
+	component_set = "YUZU_ARMOR_1_ADVANCED"
+	upgrades_to = "SMALL_YUZU_ARMOR_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_armor_s_t1_advanced_cost
+			rare_crystals = @yuzu_armor_s_t1_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_armor_s_t1_advanced_upkeep_energy
+			alloys = @yuzu_armor_s_t1_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+# ============================================================
+# 护盾
+# ============================================================
+
+utility_component_template = {
+	key = "LARGE_YUZU_SHIELD_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_shield_yuzu_1_advanced"
+	icon_frame = 1
+	power = @yuzu_power_L1_advanced
+
+	modifier = {
+		ship_shield_add = @yuzu_shield_L1_advanced
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1_advanced
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_shield_1_advanced" }
+	component_set = "YUZU_SHIELD_1_ADVANCED"
+	upgrades_to = "LARGE_YUZU_SHIELD_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_l_t1_advanced_cost
+			exotic_gases = @yuzu_shield_l_t1_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_l_t1_advanced_upkeep_energy
+			alloys = @yuzu_shield_l_t1_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_SHIELD_1_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_shield_yuzu_1_advanced"
+	icon_frame = 1
+	power = @yuzu_power_M1_advanced
+
+	modifier = {
+		ship_shield_add = @yuzu_shield_M1_advanced
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1_advanced
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_shield_1_advanced" }
+	component_set = "YUZU_SHIELD_1_ADVANCED"
+	upgrades_to = "MEDIUM_YUZU_SHIELD_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_m_t1_advanced_cost
+			exotic_gases = @yuzu_shield_m_t1_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_m_t1_advanced_upkeep_energy
+			alloys = @yuzu_shield_m_t1_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_SHIELD_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_shield_yuzu_1_advanced"
+	icon_frame = 1
+	power = @yuzu_power_S1_advanced
+
+	modifier = {
+		ship_shield_add = @yuzu_shield_S1_advanced
+		ship_shield_regen_add_perc = @yuzu_shield_regen_perc_t1_advanced
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_shield_1_advanced" }
+	component_set = "YUZU_SHIELD_1_ADVANCED"
+	upgrades_to = "SMALL_YUZU_SHIELD_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @yuzu_shield_s_t1_advanced_cost
+			exotic_gases = @yuzu_shield_s_t1_advanced_cost_rare
+		}
+		upkeep = {
+			energy = @yuzu_shield_s_t1_advanced_upkeep_energy
+			alloys = @yuzu_shield_s_t1_advanced_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+# ============================================================
+# 晶体镀层
+# ============================================================
+
+utility_component_template = {
+	key = "LARGE_YUZU_CRYSTAL_ARMOR_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_crystal_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 4.00
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_1_advanced" }
+	component_set = "YUZU_CRYSTAL_ARMOR_1_ADVANCED"
+	upgrades_to = "LARGE_YUZU_CRYSTAL_ARMOR_1_ELITE"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_L1_advanced
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 7
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_CRYSTAL_ARMOR_1_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_crystal_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 2.00
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_1_advanced" }
+	component_set = "YUZU_CRYSTAL_ARMOR_1_ADVANCED"
+	upgrades_to = "MEDIUM_YUZU_CRYSTAL_ARMOR_1_ELITE"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_M1_advanced
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 6
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_YUZU_CRYSTAL_ARMOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_crystal_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			rare_crystals = 1.00
+		}
+	}
+
+	prerequisites = { "tech_yuzu_crystal_armor_1_advanced" }
+	component_set = "YUZU_CRYSTAL_ARMOR_1_ADVANCED"
+	upgrades_to = "SMALL_YUZU_CRYSTAL_ARMOR_1_ELITE"
+
+	modifier = {
+		ship_hull_add = @yuzu_hull_S1_advanced
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 5
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# ============================================================
+# 推进器
+# ============================================================
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1_advanced"
+	icon_frame = 1
+	power = -280
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 210
+			sr_dark_matter = 14
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 2.00
+		ship_evasion_add = 15
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1_advanced" }
+	component_set = "thruster_components"
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_YUZU_ELITE"
+	# size_restriction = { battleship offspring_battleship }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_battleship_components = yes
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1_advanced"
+	icon_frame = 1
+	power = -700
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 630
+			sr_dark_matter = 56
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 2.00
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1_advanced" }
+	component_set = "thruster_components"
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_YUZU_ELITE"
+	# size_restriction = { colossus juggernaut star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+			is_arkship_ship = yes
+		}
+		OR = {
+			ship_uses_colossus_thrusters = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1_advanced"
+	icon_frame = 1
+	power = -140
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 105
+			sr_dark_matter = 7
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 2.00
+		ship_evasion_add = 15
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1_advanced" }
+	component_set = "thruster_components"
+	upgrades_to = "CRUISER_SHIP_THRUSTER_YUZU_ELITE"
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_cruiser_components = yes
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1_advanced"
+	icon_frame = 1
+	power = -70
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+			sr_dark_matter = 3.5
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 2.00
+		ship_evasion_add = 25
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1_advanced" }
+	component_set = "thruster_components"
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_YUZU_ELITE"
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_destroyer_components = yes
+	}
+
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1_advanced"
+	icon_frame = 1
+	power = -35
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 26
+			sr_dark_matter = 1.75
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 2.00
+		ship_evasion_add = 30
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1_advanced" }
+	component_set = "thruster_components"
+	upgrades_to = "SHIP_THRUSTER_YUZU_ELITE"
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_corvette_components  = yes
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_thruster_yuzu_1_advanced"
+	icon_frame = 1
+	power = -560
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 420
+			sr_dark_matter = 28
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 2.00
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "tech_thrusters_yuzu_1_advanced" }
+	component_set = "thruster_components"
+	upgrades_to = "TITAN_SHIP_THRUSTER_YUZU_ELITE"
+	# size_restriction = { titan }
+	potential = {
+		OR = {
+			from = {
+				country_uses_bio_ships = no
+			}
+			from = {
+				country_uses_bio_ships = yes
+			}
+		}
+		ship_uses_titan_thrusters = yes
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+# ============================================================
+# 折跃引擎
+# ============================================================
+
+utility_component_template = {
+	key = "YUZU_JUMP_DRIVE_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_yuzu_jump_drive_1_advanced"
+	icon_frame = 1
+	power = -35
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_disengage_opportunities_add = 4
+		ship_windup_mult = -0.9
+		ship_ftl_jumpdrive_range_mult = 1.50
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_yuzu_jump_drive_1_advanced" }
+	component_set = "ftl_components"
+	upgrades_to = "YUZU_JUMP_DRIVE_ELITE"
+}
+
+# ============================================================
+# 传感器
+# ============================================================
+
+utility_component_template = {
+	key = "SENSOR_YUZU_1_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_sensor_yuzu_1_advanced"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 18
+		}
+	}
+	sensor_range = 6
+	hyperlane_range = 7
+
+	ship_modifier = {
+		ship_tracking_add = 25
+	}
+
+	prerequisites = { "tech_sensors_yuzu_1_advanced" }
+	component_set = "sensor_components"
+	upgrades_to = "SENSOR_YUZU_1_ELITE"
+
+	ai_weight = {
+		weight = 15000
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+# ============================================================
+# 火控（时空感知水晶）
+# ============================================================
+
+utility_component_template = {
+	key = "FIRE_CONTROL_YUZU_ADVANCED"
+	size = aux
+	icon = "GFX_ship_part_fire_control_yuzu_advanced"
+	icon_frame = 1
+	power = -45
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 35
+			rare_crystals = 1.75
+		}
+	}
+
+	ship_modifier = {
+		ship_accuracy_add = 10
+		ship_tracking_add = 10
+		ship_evasion_mult = 0.2
+		ship_fire_rate_mult = 0.05
+	}
+
+	prerequisites = { tech_fire_control_yuzu_advanced }
+	component_set = "FIRE_CONTROL_YUZU_ADVANCED"
+	upgrades_to = "FIRE_CONTROL_YUZU_ELITE"
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+# ===== 时空线反应堆 先进时空反应堆 自动生成区块 — by scripts/make_yuzu_reactor_tiers.py =====
+
+utility_component_template = {
+	key = "CORVETTE_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 855
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 228
+			exotic_gases = 15
+		}
+		upkeep = {
+			energy = 1.11
+			alloys = 0.11
+			exotic_gases = 0.15
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "CORVETTE_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+	potential = {
+		ship_uses_corvette_reactors = yes
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 1650
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 456
+			exotic_gases = 30
+		}
+		upkeep = {
+			energy = 2.22
+			alloys = 0.22
+			exotic_gases = 0.3
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "DESTROYER_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	potential = {
+		ship_uses_destroyer_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 3090
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 912
+			exotic_gases = 60
+		}
+		upkeep = {
+			energy = 4.44
+			alloys = 0.44
+			exotic_gases = 0.6
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "CRUISER_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { cruiser crisis_cruiser offspring_cruiser ember_cruiser cosmo_crisis_destroyer }
+
+	potential = {
+		ship_uses_cruiser_reactors = yes
+	}
+
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 6000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1824
+			exotic_gases = 120
+		}
+		upkeep = {
+			energy = 8.94
+			alloys = 0.89
+			exotic_gases = 1.2
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "BATTLESHIP_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { battleship offspring_battleship ember_battleship }
+
+	potential = {
+		ship_uses_battleship_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 12600
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3645
+			exotic_gases = 240
+		}
+		upkeep = {
+			energy = 17.79
+			alloys = 1.78
+			exotic_gases = 2.4
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "TITAN_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { titan cosmo_crisis_battlecruiser cosmo_crisis_titan }
+
+	potential = {
+		ship_uses_titan_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 30000
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+
+	component_set = "power_core"
+	upgrades_to = "COLOSSUS_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_colossus_components = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 42900
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10935
+			exotic_gases = 480
+		}
+		upkeep = {
+			energy = 62.37
+			alloys = 6.24
+			exotic_gases = 4.8
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+
+	component_set = "power_core"
+	upgrades_to = "JUGGERNAUT_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { colossus star_eater yuzu_star_eater }
+	potential = {
+		OR = {
+			ship_uses_juggernaut_reactors = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_YUZU_REACTOR_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 2250
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 456
+			exotic_gases = 60
+		}
+		upkeep = {
+			energy = 2.22
+			alloys = 0.22
+			exotic_gases = 0.6
+		}
+	}
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_YUZU_REACTOR_1_ELITE"
+	# class_restriction = { shipclass_military_station }
+	# size_restriction = {
+	# 	military_station_small
+	# 	military_station_medium
+	# 	military_station_large
+	# }
+	potential = {
+		ship_uses_platform_reactors = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_YUZU_REACTOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 6000
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 912
+			exotic_gases = 120
+		}
+	}
+
+	component_set = "power_core"
+	upgrades_to = "ION_CANNON_YUZU_REACTOR_1_ELITE"
+	# size_restriction = { ion_cannon }
+	potential = {
+		ship_uses_ion_cannon_components = yes
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_YUZU_REACTOR_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_reactor_yuzu_1_advanced"
+	icon_frame = 1
+	power = 21375
+
+	prerequisites = { "tech_reactor_yuzu_1_advanced" }
+	component_set = "power_core"
+	upgrades_to = "STARBASE_YUZU_REACTOR_1_ELITE"
+	# class_restriction = { shipclass_starbase shipclass_military_special }
+	# size_restriction = {
+	#	starbase_outpost
+	#	starbase_starport
+	#	starbase_starhold
+	#	starbase_starfortress
+	#	starbase_citadel
+	#	juggernaut
+	#	starbase_deep_space_citadel_1
+	#	starbase_deep_space_citadel_2
+	#	starbase_deep_space_citadel_3
+	#	monadic_qerr
+	# }
+	potential = {
+		OR = {
+			ship_uses_starbase_components = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+# ===== 一体化装甲 先进 自动生成区块 — by scripts/make_yuzu_composite_armor_line.py =====
+
+utility_component_template = {
+	key = "SMALL_YUZU_COMPOSITE_ARMOR_1_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_composite_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = -120
+
+	modifier = {
+		ship_armor_add = 469
+		ship_shield_add = 469
+		ship_hull_add = 469
+		ship_shield_regen_add_perc = 0.01
+	}
+
+	ship_modifier = {
+		ship_damage_reduction_add = 5
+		ship_shield_hardening_add = 0.1
+		ship_armor_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_composite_armor_1_advanced" }
+	component_set = "YUZU_COMPOSITE_ARMOR_1_ADVANCED"
+	upgrades_to = "SMALL_YUZU_COMPOSITE_ARMOR_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 204
+			rare_crystals = 7.5
+			exotic_gases = 3
+		}
+		upkeep = {
+			energy = 1.8
+			alloys = 0.36
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_YUZU_COMPOSITE_ARMOR_1_ADVANCED"
+	size = medium
+	icon = "GFX_ship_part_composite_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = -240
+
+	modifier = {
+		ship_armor_add = 1406
+		ship_shield_add = 1406
+		ship_hull_add = 1406
+		ship_shield_regen_add_perc = 0.01
+	}
+
+	ship_modifier = {
+		ship_damage_reduction_add = 6
+		ship_shield_hardening_add = 0.1
+		ship_armor_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_composite_armor_1_advanced" }
+	component_set = "YUZU_COMPOSITE_ARMOR_1_ADVANCED"
+	upgrades_to = "MEDIUM_YUZU_COMPOSITE_ARMOR_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 516
+			rare_crystals = 15
+			exotic_gases = 6
+		}
+		upkeep = {
+			energy = 3.6
+			alloys = 0.72
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_YUZU_COMPOSITE_ARMOR_1_ADVANCED"
+	size = large
+	icon = "GFX_ship_part_composite_armor_yuzu_1_advanced"
+	icon_frame = 1
+	power = -480
+
+	modifier = {
+		ship_armor_add = 4219
+		ship_shield_add = 4219
+		ship_hull_add = 4219
+		ship_shield_regen_add_perc = 0.01
+	}
+
+	ship_modifier = {
+		ship_damage_reduction_add = 7
+		ship_shield_hardening_add = 0.1
+		ship_armor_hardening_add = 0.1
+	}
+
+	prerequisites = { "tech_yuzu_composite_armor_1_advanced" }
+	component_set = "YUZU_COMPOSITE_ARMOR_1_ADVANCED"
+	upgrades_to = "LARGE_YUZU_COMPOSITE_ARMOR_1_ELITE"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1290
+			rare_crystals = 30
+			exotic_gases = 12
+		}
+		upkeep = {
+			energy = 7.2
+			alloys = 1.44
+		}
+	}
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0.0
+			OR = {
+				is_YUZU = no
+				is_country_type = new_abyss_empire
+			}
+		}
+	}
+}
+
+# ===== 作战电脑 先进 自动生成区块 — by scripts/make_yuzu_computer_tiers.py =====
+# 先进版作战电脑 (ADVANCED) —— 由 Tier1 派生 (common/component_templates/yuzu_tier_1.txt)
+# 造价 = Tier1 x1.75 (30 -> 53); 耗电 = Tier1 x1.50 (-35 -> -53)
+# 修正值 = Tier1 + 每档增量 x1 (增量逐角色不同, 见 make_yuzu_computer_tiers.py 的 ROLES 表)
+# 恒星基地电脑耗电 0 且无 resources 块, 与 Tier1 一致
+# 升级链: Tier1 -> ADVANCED -> ELITE -> MASTER (Tier1 与 ELITE 的 upgrades_to 由本脚本写入各自文件)
+# 本区块由 scripts/make_yuzu_computer_tiers.py 生成, 勿手改
+utility_component_template = {
+	key = "COMBAT_COMPUTER_SWARM_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_SWARM_YUZU_ELITE"
+	ai_tags = { gunship brawler }
+	ai_tag_weight = 0
+
+	potential = {
+		ship_uses_swarm_role = yes
+	}
+
+	modifier = {
+		ship_evasion_mult = 0.40
+		ship_speed_mult = 0.30
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.30
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_TORPEDO_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_swarm_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	prerequisites = { "tech_computer_role_yuzu_advanced" "tech_torpedoes_1" }
+	upgrades_to = "COMBAT_COMPUTER_TORPEDO_YUZU_ELITE"
+	ai_tags = { explosive }
+	ai_tag_weight = 0
+
+	potential = {
+		ship_uses_torpedo_role = yes
+	}
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.30
+		ship_tracking_add = 25
+		ship_evasion_mult = 0.20
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_PICKET_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_picket_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_PICKET_YUZU_ELITE"
+	ai_tags = { screen }
+	ai_tag_weight = 0
+
+	potential = {
+		ship_uses_picket_role = yes
+	}
+
+	modifier = {
+		ship_evasion_mult = 0.20
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.40
+		ship_tracking_add = 60
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_LINE_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_line_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_LINE_YUZU_ELITE"
+	ai_tags = { gunship }
+	ai_tag_weight = 0
+
+	potential = {
+		OR ={
+			ship_uses_line_role = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.40
+		ship_accuracy_add = 35
+		ship_tracking_add = 20
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_ARTILLERY_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_artillery_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_ARTILLERY_YUZU_ELITE"
+	ai_tags = { artillery energy_torpedoes }
+	ai_tag_weight = 0
+
+	potential = {
+		OR ={
+			ship_uses_artillery_role = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.35
+		ship_weapon_range_mult = 0.35
+		ship_tracking_add = 20
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_CARRIER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_carrier_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "carrier"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_CARRIER_YUZU_ELITE"
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	potential = {
+		OR ={
+			ship_uses_carrier_role = yes
+			is_ship_size = yuzu_star_eater
+		}
+	}
+
+	ship_modifier = {
+		ship_engagement_range_mult = 1.50
+		ship_tracking_add = 20
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COMBAT_COMPUTER_PLATFORM_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_platform_yuzu_advanced"
+	icon_frame = 1
+	power = -53
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 53
+		}
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "COMBAT_COMPUTER_PLATFORM_YUZU_ELITE"
+
+	potential = {
+		ship_uses_platform_computers = yes
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.50
+		ship_tracking_add = 50
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_COMBAT_COMPUTER_YUZU_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_yuzu_advanced"
+	icon_frame = 1
+	power = 0
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_computer_role_yuzu_advanced" }
+	upgrades_to = "STARBASE_COMBAT_COMPUTER_YUZU_ELITE"
+
+	potential = {
+		ship_uses_starbase_components = yes
+	}
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.35
+		ship_tracking_add = 60
+		ship_accuracy_add = 30
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0.0
+			is_YUZU = no
+		}
+	}
+}

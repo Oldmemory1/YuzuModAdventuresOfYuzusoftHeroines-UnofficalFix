@@ -1,0 +1,298 @@
+########## 失落建筑 —— clinic（tier 1~5）##########
+# **本文件由 scripts/gen_yuzu_fe_buildings.py 从 csvs/yuzu_fe_buildings.csv 生成，勿手改**
+
+##### 分子焕活所 #####
+building_yuzu_fe_clinic_tier_1 = {
+	base_buildtime = @yuzu_fe_b_time_1
+	icon = building_yuzu_fe_clinic_tier_1
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_1
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 600
+	}
+
+	planet_modifier = {
+		planet_housing_add = 800
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_1
+			sr_dark_matter = @yuzu_fe_b_rr_cost_1
+			fragment_of_heart = @yuzu_fe_b_fragment_1
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_1
+			alloys = @yuzu_fe_b_alloy_upkeep_1
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_1
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_2"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_1
+}
+##### 生物再生所 #####
+building_yuzu_fe_clinic_tier_2 = {
+	base_buildtime = @yuzu_fe_b_time_2
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_2
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_2
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1600
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_2
+			sr_dark_matter = @yuzu_fe_b_rr_cost_2
+			fragment_of_heart = @yuzu_fe_b_fragment_2
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_2
+			alloys = @yuzu_fe_b_alloy_upkeep_2
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_2
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_3"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_2
+}
+##### 幽微再生圣所 #####
+building_yuzu_fe_clinic_tier_3 = {
+	base_buildtime = @yuzu_fe_b_time_3
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_3
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_3
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 1800
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2400
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_3
+			sr_dark_matter = @yuzu_fe_b_rr_cost_3
+			fragment_of_heart = @yuzu_fe_b_fragment_3
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_3
+			alloys = @yuzu_fe_b_alloy_upkeep_3
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_3
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_4"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_3
+}
+##### 赤髓再生圣殿 #####
+building_yuzu_fe_clinic_tier_4 = {
+	base_buildtime = @yuzu_fe_b_time_4
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_4
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_4
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 2400
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3200
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_4
+			sr_dark_matter = @yuzu_fe_b_rr_cost_4
+			fragment_of_heart = @yuzu_fe_b_fragment_4
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_4
+			alloys = @yuzu_fe_b_alloy_upkeep_4
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_4
+		}
+	}
+
+	upgrades = {
+		"building_yuzu_fe_clinic_tier_5"
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_4
+}
+##### 再生终殿 #####
+building_yuzu_fe_clinic_tier_5 = {
+	base_buildtime = @yuzu_fe_b_time_5
+	can_build = no
+	icon = building_yuzu_fe_clinic_tier_5
+	category = amenity
+
+	position_priority = 175
+
+	building_sets = {
+		fallen_empire
+		urban
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					is_YUZU = yes
+					has_technology = tech_building_yuzu_fe_clinic_tier_5
+				}
+				is_yuzu_abyss_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_healthcare
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @yuzu_fe_b_alloy_cost_5
+			sr_dark_matter = @yuzu_fe_b_rr_cost_5
+			fragment_of_heart = @yuzu_fe_b_fragment_5
+		}
+		upkeep = {
+			energy = @yuzu_fe_b_energy_upkeep_5
+			alloys = @yuzu_fe_b_alloy_upkeep_5
+			sr_dark_matter = @yuzu_fe_b_rr_upkeep_5
+		}
+	}
+
+	show_in_tech = tech_building_yuzu_fe_clinic_tier_5
+}
