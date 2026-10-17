@@ -12,6 +12,14 @@
 #   is_crisis_faction : +synth_queen, +awakened_synth_queen, +synth_queen_storm, +voidworms_crisis
 #   habitable_planet  : 改为委托 habitable_planet_not_urban（原缺 pc_volcanic）
 #   wears_clothes     : +tox2/3/6/8/10/11/12/14/15, +cyb1~8/10, +season_10_portrait
+#
+# 2026-10-16 新增覆盖项：
+#   blocks_ai_synthetic_evolution : +is_yuzu_empire
+#     （柚子帝国 AI 不允许采纳「合成进化」飞升。这是原版专为「不让 AI 走合成飞升」
+#      留的钩子，全游戏唯一调用点就是原版 ap_synthetic_evolution 的 ai_weight：
+#      modifier = { factor = 0 blocks_ai_synthetic_evolution = yes }。
+#      覆盖它 = 只把这条飞升对柚子帝国的 AI 权重乘 0，不碰飞升本体、不碰传统树。
+#      注意：只影响 AI，玩家侧不受影响。）
 
 is_regular_empire = {
 	OR = {
@@ -189,6 +197,23 @@ wears_clothes = { # The species uses the portrait that wears clothes
 		species_portrait = cyb10
 		species_portrait = cyb5
 		species_portrait = season_10_portrait
+	}
+}
+
+# YUZU：禁止 AI 柚子帝国采纳「合成进化」飞升（原版钩子，调用点见本文件头部 2026-10-16 说明）。
+# 判断用的是 is_yuzu_empire（主物种属于 YUZUGIRL 物种类），不是 is_YUZU
+# （遍历任意拥有物种）—— 收编了柚子人口的人类帝国不会被误伤。
+blocks_ai_synthetic_evolution = {
+	OR = {
+		has_policy_flag = ai_outlawed
+		has_policy_flag = robots_outlawed
+		has_origin = origin_necrophage
+		has_origin = origin_clone_army
+		has_origin = origin_overtuned
+		has_origin = origin_slavers
+		has_valid_civic = civic_idyllic_bloom
+		has_valid_civic = civic_hive_idyllic_bloom
+		is_yuzu_empire = yes # YUZU
 	}
 }
 

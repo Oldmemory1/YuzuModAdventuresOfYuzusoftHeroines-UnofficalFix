@@ -27,7 +27,7 @@ gov_Yuzu = {
 #           思潮政体
 ################################
 
-# 唯心：柚子祈愿制
+
 gov_Yuzu_spiritualist = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
@@ -42,7 +42,7 @@ gov_Yuzu_spiritualist = {
 	}
 }
 
-# 唯物：柚子求真制
+
 gov_Yuzu_materialist = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
@@ -57,7 +57,7 @@ gov_Yuzu_materialist = {
 	}
 }
 
-# 军国：柚子战歌制
+
 gov_Yuzu_militarist = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
@@ -72,7 +72,7 @@ gov_Yuzu_militarist = {
 	}
 }
 
-# 和平：柚子桃源制
+
 gov_Yuzu_pacifist = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
@@ -87,7 +87,7 @@ gov_Yuzu_pacifist = {
 	}
 }
 
-# 平等：柚子大同制
+
 gov_Yuzu_egalitarian = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
@@ -102,7 +102,7 @@ gov_Yuzu_egalitarian = {
 	}
 }
 
-# 排外：柚子孤星制
+
 gov_Yuzu_xenophobe = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE
@@ -117,7 +117,7 @@ gov_Yuzu_xenophobe = {
 	}
 }
 
-# 亲外：柚子群星宴
+
 gov_Yuzu_xenophile = {
 	ruler_title = RT_YUZU_SUPERINTENDENT
 	ruler_title_female = RT_YUZU_SUPERINTENDENT_FEMALE

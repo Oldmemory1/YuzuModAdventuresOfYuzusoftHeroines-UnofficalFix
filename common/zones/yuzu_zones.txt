@@ -4,6 +4,10 @@
 # Zone set: yuzu_arcology
 # Slot:     slot_yuzu_arcology_urban_01/02/03
 # District: district_yuzu_city_urban_1/2/3
+#
+# 每个 arcology zone 都带 planet_modifier = { zone_building_slots_add = 3 }，与 vanilla 的
+# shared_*_zone inline_script 一致（vanilla 的 12 个 arcology zone 全部给 3 个建筑槽）。
+# 少了这一条，塔楼区划里就放不下该 zone 家族的建筑（研究所 / 要塞 / 商业楼等）。
 
 zone_yuzu_industrial_arcology = {
 
@@ -32,11 +36,19 @@ zone_yuzu_industrial_arcology = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_goods
-		AMOUNT = 500
+		AMOUNT = 600
 	}
 	inline_script = {
 		script = jobs/yuzu_zone_job_alloy
-		AMOUNT = 500
+		AMOUNT = 600
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
 	}
 }
 
@@ -67,7 +79,15 @@ zone_yuzu_foundry_arcology = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_alloy
-		AMOUNT = 1000
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
 	}
 }
 
@@ -98,7 +118,15 @@ zone_yuzu_factory_arcology = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_goods
-		AMOUNT = 1000
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
 	}
 }
 
@@ -138,7 +166,15 @@ zone_yuzu_unity_arcology = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_unity
-		AMOUNT = 1000
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
 	}
 
 	convert_to = {
@@ -180,11 +216,307 @@ zone_yuzu_unity_spiritualist_arcology = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_priest
-		AMOUNT = 1000
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
 	}
 
 	convert_to = {
 		zone_yuzu_unity_arcology
+	}
+}
+
+# 科研 / 军事 / 贸易特化（对照 vanilla 04_secondary_zones.txt 的 zone_research/foundry/factory/
+# unity/fortress/trade_arcology）。AMOUNT 沿用 yuzu zone 的 5 倍口径：原版 ecu zone 用
+# @doubled_scaling_district_*_job（研究 60/类型、其他 200），这里取 5 倍
+# （研究 300/类型、其余 1000），且 triggered_district_planet_modifier 会再乘区划等级。
+
+zone_yuzu_research_arcology = {
+	icon = GFX_district_specialization_research
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_research
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_research
+		AMOUNT = 400
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_research_physics_arcology = {
+	icon = GFX_district_specialization_physics
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_research_physics
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		physics
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_physics
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_research_society_arcology = {
+	icon = GFX_district_specialization_society
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_research_society
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		society
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_society
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_research_engineering_arcology = {
+	icon = GFX_district_specialization_engineering
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_research_engineering
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		engineering
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_engineering
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_fortress_arcology = {
+	icon = GFX_district_specialization_fortress
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_fortress
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		fortress
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_soldier
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_trade_arcology = {
+	icon = GFX_district_specialization_trade
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	swap_type = district_yuzu_city_trade
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		trade
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_trader
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+# 医疗（人口增长）特化。写法对照工作坊 mod「小狐狸的底层框架」(3243731913) 的
+# zone_restoration_arcology：zone 图标记用原版 GFX_district_specialization_healthcare，
+# 建筑集 medical + entertainment，岗位走 job_healthcare（医务工作者，原版唯一带
+# pop_growth / pop_assembly / amenities 的常规岗位）。AMOUNT 与其它 yuzu zone 同单位
+# （1/100 个岗位），300 = 每级 3 个医务工作者。
+zone_yuzu_healthcare_arcology = {
+	icon = GFX_district_specialization_healthcare
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	# 医务工作者岗位与医疗建筑都只对非格式塔开放，格式塔帝国没必要看到这个 zone
+	potential = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	swap_type = district_yuzu_city_healthcare
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		medical
+		entertainment
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_healthcare
+		AMOUNT = 300
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
 	}
 }
 
@@ -211,11 +543,7 @@ zone_yuzu_energy_city_dream = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_energy
-		AMOUNT = 1000
-	}
-
-	planet_modifier = {
-		planet_max_districts_add = 1
+		AMOUNT = 1200
 	}
 }
 
@@ -242,11 +570,7 @@ zone_yuzu_minerals_city_dream = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_minerals
-		AMOUNT = 1000
-	}
-
-	planet_modifier = {
-		planet_max_districts_add = 1
+		AMOUNT = 1200
 	}
 }
 
@@ -274,10 +598,6 @@ zone_yuzu_food_city_dream = {
 
 	inline_script = {
 		script = jobs/yuzu_zone_job_food
-		AMOUNT = 1000
-	}
-
-	planet_modifier = {
-		planet_max_districts_add = 1
+		AMOUNT = 1200
 	}
 }

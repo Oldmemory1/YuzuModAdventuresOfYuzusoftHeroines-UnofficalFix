@@ -2,6 +2,7 @@ pc_yuzu_abyss_city = {
 	entity = "yuzu_abyss_city_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
+	icon_large = GFX_planet_type_city_big
 
 	climate = "dry"
 
@@ -45,6 +46,7 @@ pc_yuzu_sunset_city = {
 	entity = "yuzu_sunset_city_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
+	icon_large = GFX_planet_type_city_big
 
 	climate = "dry"
 

@@ -1,5 +1,11 @@
 ## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
 ## It is possible to have multiple entries with the same category and resource ##
+# ⚠️ 维护须知：common/ai_budget/ 是「后加载者生效」，而原版 common/ai_budget/00_README.txt 明写
+# 「no two files share an entry key」：同一个 entry key 被两个文件定义时，排在后面的那份才会生效。
+# 2026-10-16：原 yuzu_fragment_of_heart_budget_building.txt 与本文件重复定义了同一个 key
+#   fragment_of_heart_expenditure_edicts（它排在 "...budget_building.txt"，'_' > '.'，所以 0.25 那份
+#   覆盖掉了本文件的 0.75 —— 0.75 一直是死数据），该文件已删除，本文件权重保持实际生效的 0.25。
+# 将来若要再加一条别的支出类别（如 buildings），必须另起 entry key 名。
 
 #################
 ## Expenditure ##
@@ -14,6 +20,6 @@ fragment_of_heart_expenditure_edicts = {
 	}
 
 	weight = {
-		weight = 0.75
+		weight = 0.25
 	}
 }

@@ -303,7 +303,6 @@ building_yuzu_affluence_center_tier_5 = {
 	planet_modifier = {
 		planet_housing_add = 4000
 		planet_amenities_add = 6000
-		# job_artisan_per_pop = 0.1
 		planet_artisans_consumer_goods_produces_add = 2.0
 	}
 

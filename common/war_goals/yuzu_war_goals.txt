@@ -68,7 +68,7 @@ yuzu_crisis_extermination = {
 # defender_default = yes 只是超时兜底（若被宣战方迟迟不选，才默认为此目标），不会覆盖其自主选择。
 yuzu_humiliate = {
 	casus_belli = cb_yuzu_punishment
-	defender_default = yes
+	defender_default = no
 
 	surrender_acceptance = -25
 

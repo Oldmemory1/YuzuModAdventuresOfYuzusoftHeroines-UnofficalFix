@@ -89,3 +89,36 @@ country_event = {
 		name = Yuzu_libra_compat.10.a
 	}
 }
+
+############################################################################
+# 给柚子帝国打上 libra 的「物种不可改造」标记 libra_keep_species
+#
+# 童话天秤（libra）用这个国家 flag 当开关，三条会改造主物种的飞升都在 potential 里
+# 检查它（libra 自己的 common/ascension_perks/libra_ap.txt）：
+#   ap_libra_apotheosis_gene     天阶序论
+#   ap_libra_cutefied_world      萌化世界
+#   ap_libra_dimensional_fusion  次元融合
+# 设上 flag 之后这三条对柚子帝国直接不出现（玩家和 AI 都拿不到），不必覆盖 libra 的
+# 任何文件；libra 没加载时这个 flag 也没有任何副作用。
+#
+# 判据沿用 is_yuzu_empire（主物种属于 YUZUGIRL 物种类），与其它柚子判定保持一致，
+# 因此收编了柚子人口的外族帝国不会被波及。
+#
+# 挂两个 on_action：on_game_start_country 负责开局就位；on_yearly_pulse_country 兜住
+# 开局之后才出现的柚子国家（例如释放附庸、其它 mod 中途生成）。
+############################################################################
+
+country_event = {
+	id = Yuzu_libra_compat.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_yuzu_empire = yes
+		NOT = { has_country_flag = libra_keep_species }
+	}
+
+	immediate = {
+		set_country_flag = libra_keep_species
+	}
+}

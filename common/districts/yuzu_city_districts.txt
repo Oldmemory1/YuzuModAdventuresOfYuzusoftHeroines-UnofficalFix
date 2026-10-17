@@ -414,6 +414,14 @@ district_yuzu_city_dream = {
 		}
 	}
 
+	# 梦境区划不吃行星的区划上限：每个梦境区划自己补 +1 上限（district 的 planet_modifier
+	# 按区划个数叠加），所以 3 个梦境区划 + N 个塔楼可以并存。这一条在 3.12 原版里就在
+	# district 上（旧版 yuzu_city_districts.txt 的 planet_max_districts_add = 1），移植时
+	# 被挪到了三个 dream zone 上 —— zone 要等区划建好才存在，等于没补偿，故挪回来。
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -527,5 +535,129 @@ district_yuzu_city_religious = {
 	}
 	triggered_name = {
 		text = district_yuzu_city_religious
+	}
+}
+
+# icon = 该特化对应的地块底图 (vanilla district_arcology_*_bg)
+# overlay_icon = 地块上的特化徽标 (vanilla GFX_district_*)，两者都设才与普世城观感一致
+
+district_yuzu_city_research = {
+	icon = district_arcology_research
+	overlay_icon = GFX_district_research
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_research
+	}
+}
+
+district_yuzu_city_research_physics = {
+	icon = district_arcology_research_physics
+	overlay_icon = GFX_district_physics
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_research_physics
+	}
+}
+
+district_yuzu_city_research_society = {
+	icon = district_arcology_research_society
+	overlay_icon = GFX_district_society
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_research_society
+	}
+}
+
+district_yuzu_city_research_engineering = {
+	icon = district_arcology_research_engineering
+	overlay_icon = GFX_district_engineering
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_research_engineering
+	}
+}
+
+district_yuzu_city_fortress = {
+	icon = district_arcology_fortress
+	overlay_icon = GFX_district_fortress
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_fortress
+	}
+}
+
+district_yuzu_city_trade = {
+	icon = district_arcology_trade
+	overlay_icon = GFX_district_trade
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_trade
+	}
+}
+
+
+# 见 scripts/make_yuzu_healthcare_district_icon.py）。
+district_yuzu_city_healthcare = {
+	icon = district_resort_restoration_enclave
+	overlay_icon = GFX_district_yuzu_healthcare
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_healthcare
 	}
 }

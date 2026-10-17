@@ -287,7 +287,6 @@ building_yuzu_fe_stronghold_tier_5 = {
 	planet_modifier = {
 		planet_housing_add = 4000
 		planet_orbital_bombardment_damage = -0.6
-		# job_soldier_per_pop = 0.1
 	}
 
 	resources = {

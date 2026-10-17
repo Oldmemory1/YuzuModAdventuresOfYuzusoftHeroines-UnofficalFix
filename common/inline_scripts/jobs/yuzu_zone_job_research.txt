@@ -1,0 +1,27 @@
+# 科研区划岗位（zone 用，随区划等级缩放）
+# 注意: 与 yuzu_zone_job_researcher.txt 区分 —— 那个是给 deposit/特征用的扁平岗位
+# (triggered_planet_modifier)，本文件给 zone 用，必须是 triggered_district_planet_modifier。
+# 常规帝国: 物理学家 / 生物学家 / 工程师
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_physicist_add = $AMOUNT$
+	job_biologist_add = $AMOUNT$
+	job_engineer_add = $AMOUNT$
+}
+# 格式塔: 计算单元
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_calculator_physicist_add = $AMOUNT$
+	job_calculator_biologist_add = $AMOUNT$
+	job_calculator_engineer_add = $AMOUNT$
+}

@@ -1,0 +1,51 @@
+# ⚠️ 维护须知：common/governments/civics/ 是「后加载者生效」(LIOS)：同 key 的后一份
+# 定义整体替换前一份，所以这里用 zzz_ 前缀（排在原版 01_special_civics.txt 之后）整条
+# 重写 civic_psionic_sovereign。原版以后新增字段不会自动合并，改动前请 diff：
+#   原版（Stellaris 4.5.2）common/governments/civics/01_special_civics.txt 的 civic_psionic_sovereign。
+#
+# 2026-10-16 改动（相对原版）：删掉 potential 里的 authority = { value = auth_imperial }。
+#   这条理念由事件 utopia.3400 补发，本来就不会出现在可选列表里（potential 里的 civics
+#   自引用就是干这个的）；但原版的政体门槛要求 auth_imperial，而协商制帝国（auth_Yuzu）
+#   的政体不是 auth_imperial —— 于是出现「理念还在、政体没变」时理念变成非法理念的意外 bug。
+#   原版 civic_galactic_sovereign 同样由事件补发、potential 里也不带政体门槛，这里与其保持一致。
+#   其余字段（modifier / swap_type）逐字对照原版，未改动。
+
+civic_psionic_sovereign = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_psionic_sovereign.dds"
+	potential = {
+		civics = {
+			value = civic_psionic_sovereign # Added via event - this trigger prevents the civic from being picked by others
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		country_government_civic_points_add = 1
+		country_unity_produces_mult = 0.10
+		pop_government_ethic_attraction = 0.25
+	}
+	swap_type = {
+		name = civic_psionic_sovereign_organic_gestalt
+		trigger = {
+			exists = owner
+			owner = { is_robot_empire = no }
+			owner = { is_gestalt = yes }
+		}
+	}
+	swap_type = {
+		name = civic_psionic_sovereign_machine_gestalt
+		trigger = {
+			exists = owner
+			owner = { is_robot_empire = yes }
+			owner = { is_gestalt = yes }
+		}
+	}
+	swap_type = {
+		name = civic_psionic_sovereign_machine_non_gestalt
+		trigger = {
+			exists = owner
+			owner = { is_robot_empire = yes }
+			owner = { is_gestalt = no }
+		}
+	}
+}

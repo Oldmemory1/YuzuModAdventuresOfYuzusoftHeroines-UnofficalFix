@@ -1,0 +1,21 @@
+# 物理学研究区划岗位（zone 用，随区划等级缩放）
+# 常规帝国: 物理学家
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_physicist_add = $AMOUNT$
+}
+# 格式塔: 计算单元
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_calculator_physicist_add = $AMOUNT$
+}

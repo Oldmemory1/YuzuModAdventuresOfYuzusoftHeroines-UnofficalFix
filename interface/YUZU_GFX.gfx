@@ -556,4 +556,10 @@ spriteTypes = {
 		name = "GFX_ship_part_yuzu_beam_3_advanced"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_yuzu_beam_3_advanced.dds"
 	}
+	# 医疗理想城区划的 overlay 徽标（独立 32x32 贴图，图案源自工作坊 mod 3243731913，
+	# 由 scripts/make_yuzu_healthcare_district_icon.py 生成）
+	spriteType = {
+		name = "GFX_district_yuzu_healthcare"
+		texturefile = "gfx/interface/icons/districts/district_yuzu_city_healthcare.dds"
+	}
 }

@@ -1,0 +1,22 @@
+# 贸易区划岗位（zone 用，随区划等级缩放）
+# 与 yuzu_building_job_trader.txt 区分: 那个是给建筑用的扁平岗位，本文件给 zone 用。
+# 常规帝国: 商贩
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_trader_add = $AMOUNT$
+}
+# 格式塔: 后勤工蜂
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_logistics_drone_add = $AMOUNT$
+}

@@ -1,35 +1,14 @@
 namespace = Yuzu_ai_event
 
-country_event = {
-	id = Yuzu_ai_event.1
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		is_ai = yes
-		is_YUZU = yes
-	}
-
-	immediate = {
-		every_owned_planet = {
-			limit = {
-				OR = {
-					has_building = building_yuzu_clone_vats
-					has_building = building_yuzu_clone_vats_assembly
-				}
-				OR = {
-					has_building = building_robot_assembly_plant
-					has_building = building_machine_assembly_plant
-					has_building = building_machine_assembly_complex
-				}
-			}
-			remove_building = building_robot_assembly_plant
-			remove_building = building_machine_assembly_plant
-			remove_building = building_machine_assembly_complex
-		}
-	}
-}
+# 注：原 Yuzu_ai_event.1（柚子 AI 星球上一旦有克隆仓就拆掉机器/机械组装厂）已于 2026-10-16 删除。
+#   理由：3.x 时代有机组装（planet_pop_assembly_organic_add）与机械组装共用同一个组装池，克隆仓和
+#   机器人组装厂会互相抢组装目标；4.x 起有机人口增长改走 bonus_pop_growth（本 mod 的克隆仓也只给
+#   bonus_pop_growth + fake_pop_growth_mod，见 common/buildings/yuzu_buildings.txt，与 vanilla 的
+#   inline_scripts/output/bonus_pop_growth.txt 写法逐字对应），组装池只剩 roboticist / replicator 的
+#   planet_pop_assembly_add，而 common/game_rules/zzz_yuzu_rules.txt 的 can_species_be_assembled 又已限定
+#   只有 is_robotic 的物种能进组装队列 —— 两者不再冲突，该事件在 4.5 里只会把 AI 合理的机器人组装厂删掉。
+#   （README「已修复的兼容性问题」里同一条结论此前只清掉了克隆仓的误报警 tooltip，代码侧漏了这一处。）
+#   编号保持 2..7 不变，不重排。
 
 ##### ai法令 #####
 

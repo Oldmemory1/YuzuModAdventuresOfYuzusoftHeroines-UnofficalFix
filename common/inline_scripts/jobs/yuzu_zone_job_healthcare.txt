@@ -1,0 +1,14 @@
+# 医疗（人口增长）区划岗位（zone 用，随区划等级缩放）
+# 医务工作者 job_healthcare 是原版唯一带 pop_growth / pop_assembly / amenities 标签的常规岗位
+# （见 common/pop_jobs/02_specialist_jobs.txt），也就是原版"增长型"岗位。
+# 它只对非格式塔帝国可填、医疗建筑 building_medical_* 也只对 is_regular_empire 开放，
+# 所以这里不做格式塔分支（zone 自身也把格式塔排除在 potential 之外）。
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_healthcare_add = $AMOUNT$
+}

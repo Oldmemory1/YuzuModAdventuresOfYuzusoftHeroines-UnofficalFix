@@ -343,7 +343,7 @@
 
  # 童话天秤（libra）兼容提示（Yuzu_libra_compat）
  Yuzu_libra_compat.10.name:0"兼容性提示：童话天秤（libra）"
- Yuzu_libra_compat.10.desc:0"您好，检测到您使用了童话天秤（libra）mod，本mod在一定程度上为其做了兼容，不限于反应堆/引擎/推进器等部件。\n\n同时，本mod某些加成效果会因为您选择的libra进阶飞升路线变得不同，例如指令76。"
+ Yuzu_libra_compat.10.desc:0"您好，检测到您使用了童话天秤（libra）mod，本mod在一定程度上为其做了兼容，不限于反应堆/引擎/推进器等部件。\n\n同时，本mod某些加成效果会因为您选择的libra进阶飞升路线变得不同，例如指令76。\n\n另外：童话天秤中会改造主物种的三条飞升（天阶序论、萌化世界、次元融合）已对柚子帝国自动屏蔽，您在飞升列表里不会看到它们，也就不必再手动回避了。"
  Yuzu_libra_compat.10.a:0"我知道了。"
  Yuzu_test_event.7.name:0"测试：「熄灭」已生成"
  Yuzu_test_event.7.desc:0"指令-76 彩蛋星系「熄灭」已经出现在 [Root.Capital.GetName] 附近，并用一条超空间航道与我们的首都星系直接相连。\n\n目前它只是一个空白星系：天体骨架已经就位，但考古点、巨型船坞和触发链条都还没有做。派一艘科研船过去看看就行。\n\n（想再刷一个，用 event Yuzu_test_event.6。）"

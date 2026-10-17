@@ -1,0 +1,178 @@
+# ⚠️ 维护须知：本文件按事件 id 覆盖原版事件，靠文件名 `!00_` 排在原版文件之前。
+# events/ 是「先加载者生效」(FIOS)：同一个 id 的第二份定义会被引擎直接丢弃并报
+#   [eventmanager.cpp:427] an event with id [utopia.3400] already exists!
+# 所以只能靠文件名排到 events/utopia_shroud_events.txt 前面；`zzz_` 之类的后缀前缀
+# 反而会排在原版之后，覆盖不生效（原 Prethoryn_Scourge_fix 的 zzz_ 覆盖文件即如此）。
+# 代价：整个 utopia.3400 必须逐字抄一份，原版以后改动不会自动合并进来。
+# 对照原版（Stellaris 4.5.2）：events/utopia_shroud_events.txt 的 utopia.3400。
+#
+# 2026-10-16 改动（相对原版）：option b 增加「协商制（auth_Yuzu）」分支。
+#   原版这条会先 clear_ethos 再把思潮换成唯心 + 狂热威权，接着把政体强制改成
+#   auth_imperial 并 remove_invalid_civics —— 对柚子帝国来说，等于玩家点了
+#   「接受天选帝君」之后，整套协商制政体连同全部柚子国民理念被一起拆掉（而
+#   auth_Yuzu.can_reform = no，拆掉就再也选不回来），这就是那个意外的 bug。
+#   现在协商制帝国保留原政体与思潮，只补发 civic_psionic_sovereign 这条国民理念
+#   （该理念的政体门槛已在 common/governments/civics/zzz_yuzu_psionic_sovereign.txt
+#   里放开）。拥立天选者为统治者、通知他国（utopia.3401 / utopia.3402）等其余
+#   流程与原版完全一致；非 auth_Yuzu 帝国一律走原版分支，行为不变。
+#   另外 trigger 与 immediate 里那份「非帝制政体」判定都显式加上了 has_authority = auth_Yuzu：
+#   原版这里靠引擎的 is_democratic/oligarchic/dictatorial_authority 分类，自定义政体算哪一类
+#   在脚本里读不出来，写死了才敢说协商制一定能触发（两处必须一致，否则 immediate 会走 else
+#   分支、event_target:chosen_one 不会被保存）。
+
+namespace = utopia
+
+# Chosen One becomes ruler
+country_event = {
+	id = utopia.3400
+	title = "utopia.3400.name"
+	desc = "utopia.3400.desc"
+	picture = GFX_evt_chosen_leader
+	show_sound = event_mystic_reveal
+
+	trigger = {
+		is_country_type = default
+		NOT = { has_country_flag = chosen_one_ruler_event }
+		OR = {
+			# Either you've not Imperial and have a Chosen One
+			AND = {
+				OR = {
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_dictatorial_authority = yes
+					has_authority = auth_Yuzu # 协商制：引擎给自定义政体的分类读不出来，显式列出
+					# MegaCorps deliberately excluded.
+				}
+				any_owned_leader = {
+					has_any_chosen_one_leader_trait = yes
+				}
+			}
+			# Or you're Imperial and the Chosen One is your current ruler or heir.
+			AND = {
+				is_imperial_authority = yes
+				any_owned_leader = {
+					has_any_chosen_one_leader_trait = yes
+					has_trait = trait_imperial_heir
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		set_country_flag = chosen_one_ruler_event
+		if = {
+			limit = {
+				OR = {
+					is_democratic_authority = yes
+					is_oligarchic_authority = yes
+					is_dictatorial_authority = yes
+					has_authority = auth_Yuzu # 与 trigger 保持一致，否则 chosen_one 不会被保存
+					# MegaCorps deliberately excluded.
+				}
+			}
+			random_owned_leader = {
+				limit = {
+					has_any_chosen_one_leader_trait = yes
+				}
+				save_event_target_as = chosen_one
+				species = { save_event_target_as = chosen_one_species }
+			}
+		}
+		else = {
+			random_owned_leader = {
+				limit = {
+					has_any_chosen_one_leader_trait = yes
+					has_trait = trait_imperial_heir
+				}
+				save_event_target_as = chosen_one
+				species = { save_event_target_as = chosen_one_species }
+			}
+		}
+	}
+
+	option = {
+		name = "utopia.3400.a"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 40
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 80
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		custom_tooltip = reject_god_emperor
+	}
+	option = {
+		name = "utopia.3400.b"
+		ai_chance = {
+			factor = 150
+			modifier = {
+				factor = 40
+				has_ethic = ethic_authoritarian
+			}
+			modifier = {
+				factor = 80
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		# Yuzu：协商制帝国不动政体与思潮，只补发国民理念
+		if = {
+			limit = {
+				has_authority = auth_Yuzu
+			}
+			force_add_civic = civic_psionic_sovereign
+			set_government_cooldown = no
+		}
+		else = {
+			# 传说领袖起源是「篡位成帝」的一部分，留在原版分支里
+			if = {
+				limit = {
+					has_origin = origin_legendary_leader_dictatorial
+				}
+				set_origin = origin_legendary_leader_imperial
+			}
+			clear_ethos = yes
+			shift_ethic = ethic_spiritualist
+			shift_ethic = ethic_fanatic_authoritarian
+			change_government = {
+				authority = auth_imperial
+				cooldown = no
+				remove_invalid_civics = yes
+			}
+			force_add_civic = civic_psionic_sovereign
+			set_government_cooldown = no
+		}
+		# The ruler doesn't need to abdicate if they're being crowned.
+		if = {
+			limit = {
+				ruler = {
+					NOT = {
+						is_same_value = event_target:chosen_one
+					}
+				}
+			}
+			ruler = {
+				exile_leader_as = destituted_ruler_chosen_one
+			}
+			set_leader = event_target:chosen_one
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+					NOT = { is_same_value = root }
+					has_communications = root
+				}
+				country_event = { id = utopia.3401 days = 4 }
+			}
+			country_event = { id = utopia.3402 days = 5 }
+		}
+	}
+}

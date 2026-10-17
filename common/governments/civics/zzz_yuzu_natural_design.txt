@@ -1,0 +1,69 @@
+# ⚠️ 维护须知：common/governments/civics/ 是「后加载者生效」(LIOS)：同 key 的后一份定义
+# 整体替换前一份，所以这里用 zzz_ 前缀（排在原版 00_civics.txt 之后）整条重写
+# civic_natural_design。原版以后新增字段不会自动合并，改动前请 diff：
+#   原版（Stellaris Cygnus v4.5.2）common/governments/civics/00_civics.txt 的 civic_natural_design。
+#
+# 2026-10-16 改动（相对原版）：possible 里补一条物种排除 —— 柚子（YUZUGIRL）帝国不再能选
+#   「自然设计」。写在 possible（而不是 potential）是照原版惯例：civic_tankbound、
+#   civic_scorched_earth 都是用 species_class 在 possible 里限制物种，这样理念在创建界面
+#   仍然可见、只是选不了（已有存档里的旧选择也不会被强制清掉）。
+#   作用域写法与本 mod 既有口径一致（Yuzu_origins.txt 里就是 species_class = { value = YUZUGIRL }）。
+#   其余字段逐字对照原版，未改动。
+
+civic_natural_design = {
+	modification = no
+	playable = { has_machine_age_dlc = yes }
+	ai_playable = { has_machine_age_dlc = yes }
+	random_weight = {
+		base = @civic_rare_random_weight
+	}
+	potential = {
+		species_archetype = { NOT = { value = MACHINE } }
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+		}
+		authority = {
+			NOT = { value = auth_corporate }
+		}
+	}
+	possible = {
+		origin = {
+			NOR = {
+				value = origin_clone_army
+				value = origin_overtuned
+				value = origin_shroudwalker_apprentice
+				value = origin_cybernetic_creed
+				value = origin_synthetic_fertility
+				value = origin_evolutionary_predators
+				value = origin_unplugged
+				value = origin_endbringers
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_guided_sapience
+			}
+			NOR = {
+				text = civic_tooltip_not_entropy_drinkers
+				value = civic_entropy_drinkers
+				value = civic_entropy_drinkers_corporate
+			}
+			NOR = {
+				text = civic_tooltip_not_chosen
+				value = civic_chosen
+				value = civic_corporate_chosen
+			}
+		}
+		# YUZU：柚子物种（YUZUGIRL）帝国不可选
+		species_class = {
+			NOT = { value = YUZUGIRL }
+		}
+	}
+	modifier = {
+		BIOLOGICAL_species_trait_picks_add = 2
+		BIOLOGICAL_species_trait_points_add = 2
+		planet_doctors_society_research_produces_add = 0.5
+	}
+	description = civic_tooltip_natural_design_effects
+	negative_description = civic_tooltip_natural_design_negative_effects
+}
