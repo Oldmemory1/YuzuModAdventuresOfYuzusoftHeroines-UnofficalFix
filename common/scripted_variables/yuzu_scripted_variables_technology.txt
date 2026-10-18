@@ -1,5 +1,5 @@
-@spacetimeTurbulenceRepeatableTechBaseCost = 250000
-@spacetimeTurbulenceRepeatableTechLevelCost = 25000
+@spacetimeTurbulenceRepeatableTechBaseCost = 500000
+@spacetimeTurbulenceRepeatableTechLevelCost = 50000
 
-@abyssRepeatableTechBaseCost = 250000
-@abyssRepeatableTechLevelCost = 25000
+@abyssRepeatableTechBaseCost = 500000
+@abyssRepeatableTechLevelCost = 50000
