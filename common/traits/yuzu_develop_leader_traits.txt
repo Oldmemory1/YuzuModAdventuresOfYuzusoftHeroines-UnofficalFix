@@ -1,0 +1,58 @@
+# 培养传统：十级职业专属内阁特质
+leader_trait_yuzu_develop_scientist = {
+	inline_script = {
+		script = trait/icon
+		CLASS = scientist
+		ICON = GFX_leader_trait_yuzu_develop
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		all_technology_research_speed = 0.25
+		planet_researchers_produces_mult = 0.25
+	}
+	leader_class = { scientist }
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_yuzu_develop_commander = {
+	inline_script = {
+		script = trait/icon
+		CLASS = commander
+		ICON = GFX_leader_trait_yuzu_develop
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		country_power_projection_influence_produces_add = 1
+		shipclass_military_build_speed_mult = 0.5
+	}
+	leader_class = { commander }
+	selectable_weight = {
+		weight = 0
+	}
+}
+
+leader_trait_yuzu_develop_official = {
+	inline_script = {
+		script = trait/icon
+		CLASS = official
+		ICON = GFX_leader_trait_yuzu_develop
+		RARITY = paragon
+		COUNCIL = yes
+		TIER = none
+	}
+	councilor_modifier = {
+		planet_jobs_produces_mult = 0.1
+		council_agenda_progress_speed = 0.5
+		council_agenda_finishing_effect_duration_mult = 0.25
+	}
+	leader_class = { official }
+	selectable_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,43 @@
+namespace = Yuzu_develop_event
+
+# 培养传统：领袖达到十级后获得职业专属内阁特质
+country_event = {
+	id = Yuzu_develop_event.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_tradition = tr_yuzu_develop_1
+		from = {
+			has_base_skill >= 10
+			NOR = {
+				has_trait = leader_trait_yuzu_develop_scientist
+				has_trait = leader_trait_yuzu_develop_commander
+				has_trait = leader_trait_yuzu_develop_official
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					leader_class = scientist
+				}
+				add_trait = leader_trait_yuzu_develop_scientist
+			}
+			if = {
+				limit = {
+					leader_class = commander
+				}
+				add_trait = leader_trait_yuzu_develop_commander
+			}
+			if = {
+				limit = {
+					leader_class = official
+				}
+				add_trait = leader_trait_yuzu_develop_official
+			}
+		}
+	}
+}

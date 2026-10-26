@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="柚子社少女们的奇妙冒险 Mod：深渊之城、夕阳之城、基础区划与 Zone 特化区划图鉴。">
+  <title>特殊星球与区划图鉴 | 柚子社少女们的奇妙冒险</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回顶部">
+      <span class="brand-mark" aria-hidden="true">Y</span>
+      <span class="brand-copy">
+        <strong>YUZU WIKI</strong>
+        <small>特殊星球与区划</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="页面导航">
+      <a href="#planets">特殊星球</a>
+      <a href="#base-districts">基础区划</a>
+      <a href="#tower-zones">塔楼特化</a>
+      <a href="#dream-zones">梦境区划</a>
+      <a href="#rules">规则说明</a>
+      <a href="../buildings/index.html">建筑图鉴</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">PLANETARY ENGINEERING · 行星工程档案</p>
+        <h1 id="page-title">特殊星球<span>与区划</span></h1>
+        <p class="hero-lead">
+          深渊之城与夕阳之城并不是普通都市星球。它们拥有独立的基础区划、可切换的塔楼 Zone，
+          以及夕阳之城独有的梦境资源区划。本页按“基础区划 → Zone 特化 → 最终区划”梳理造价、维护费与岗位。
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#planets">查看两座星球</a>
+          <a class="text-link" href="#tower-zones">直接浏览特化区划 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <aside class="archive-summary" aria-label="区划档案摘要">
+        <div class="summary-head">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>DISTRICT ARCHIVE</span>
+          <span>DZ-04</span>
+        </div>
+        <div class="summary-grid">
+          <div><strong>2</strong><span>特殊星球</span></div>
+          <div><strong>3</strong><span>基础区划类型</span></div>
+          <div><strong>12</strong><span>塔楼 Zone</span></div>
+          <div><strong>3</strong><span>梦境 Zone</span></div>
+        </div>
+        <p>
+          Zone 提供岗位时直接采用脚本中的 <code>AMOUNT</code> 原值。例如
+          <code>AMOUNT = 1200</code> 就是 <b>1200 个岗位</b>。
+        </p>
+      </aside>
+    </section>
+
+    <section class="planet-section" id="planets" aria-labelledby="planets-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SPECIAL PLANET CLASSES · 特殊星球类型</p>
+          <h2 id="planets-title">深渊与夕阳</h2>
+        </div>
+        <p>两者都属于可殖民理想星球，不会自然随机生成，并使用各自独立的区划集合。</p>
+      </div>
+      <div class="planet-grid" id="planet-grid"></div>
+    </section>
+
+    <section class="flow-section" aria-labelledby="flow-title">
+      <div class="section-heading compact-heading">
+        <div>
+          <p class="eyebrow">DISTRICT PIPELINE · 区划构成</p>
+          <h2 id="flow-title">一座特化区划是怎样形成的</h2>
+        </div>
+      </div>
+      <div class="flow-grid">
+        <article class="flow-step">
+          <span>01</span>
+          <h3>建造基础区划</h3>
+          <p>居住理想城、未分配塔楼或梦境区划先占据行星区划槽。</p>
+        </article>
+        <i class="flow-arrow" aria-hidden="true">→</i>
+        <article class="flow-step">
+          <span>02</span>
+          <h3>选择 Zone</h3>
+          <p>塔楼与梦境区划各有一个 Zone 槽，选择工业、科研、行政、防御或资源方向。</p>
+        </article>
+        <i class="flow-arrow" aria-hidden="true">→</i>
+        <article class="flow-step">
+          <span>03</span>
+          <h3>替换为特化区划</h3>
+          <p>Zone 的 swap_type 把地块外观与名称替换为对应特殊区划，同时提供岗位。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="base-districts" aria-labelledby="base-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BASE DISTRICTS · 基础区划</p>
+          <h2 id="base-title">先建城，再特化</h2>
+        </div>
+        <p>基础区划本身主要提供住房或区划容量；真正的大规模岗位来自后续安装的 Zone。</p>
+      </div>
+      <div class="base-grid" id="base-district-grid"></div>
+    </section>
+
+    <section class="content-section zone-section" id="tower-zones" aria-labelledby="tower-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ARCOLOGY SPECIALIZATION · 塔楼特化</p>
+          <h2 id="tower-title">十二种塔楼 Zone</h2>
+        </div>
+        <p>点击任意区划卡片，可查看基础造价、Zone 造价、维护费、岗位、住房变化和解锁条件。</p>
+      </div>
+      <div class="filter-bar" id="zone-filters" aria-label="塔楼特化分类"></div>
+      <div class="zone-grid" id="tower-zone-grid"></div>
+      <noscript><p class="noscript-warning">此页面需要启用 JavaScript 才能显示区划数据。</p></noscript>
+    </section>
+
+    <section class="content-section dream-section" id="dream-zones" aria-labelledby="dream-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DREAMLAND DISTRICT · 梦境区划</p>
+          <h2 id="dream-title">夕阳之城的幻梦资源带</h2>
+        </div>
+        <p>梦境区划只在夕阳之城出现。它不提供住房，但每种 Zone 都会提供 1,200 个基础资源岗位。</p>
+      </div>
+      <div class="zone-grid dream-grid" id="dream-zone-grid"></div>
+    </section>
+
+    <section class="rules-section" id="rules" aria-labelledby="rules-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COST &amp; JOB REFERENCE · 数值说明</p>
+          <h2 id="rules-title">怎么读这些数字</h2>
+        </div>
+      </div>
+      <div class="rule-grid">
+        <article class="rule-card">
+          <span class="rule-index">01</span>
+          <h3>造价分两层</h3>
+          <p>
+            先支付基础区划的造价，再支付 Zone 特化的矿物造价。卡片会分别列出两者，避免把一组资源误认为总价。
+          </p>
+        </article>
+        <article class="rule-card">
+          <span class="rule-index">02</span>
+          <h3>维护费沿用基础区划</h3>
+          <p>
+            当前 Zone 没有额外的月度维护费。塔楼特化继续支付 5 能量；梦境特化继续支付 5 能量和 1 稀有水晶。
+          </p>
+        </article>
+        <article class="rule-card">
+          <span class="rule-index">03</span>
+          <h3>岗位直接采用脚本原值</h3>
+          <p>
+            <code>AMOUNT = 1200</code> 就是 1200 个岗位，<code>AMOUNT = 300</code> 就是 300 个。
+            岗位是否能填满仍取决于行星人口。
+          </p>
+        </article>
+        <article class="rule-card">
+          <span class="rule-index">04</span>
+          <h3>外观替换不等于二次建造</h3>
+          <p>
+            特化后显示为新的特殊区划名称和图片，但区划数量仍只占一个槽位；它没有额外复制一座基础区划。
+          </p>
+        </article>
+      </div>
+      <aside class="origin-term">
+        <p class="eyebrow">ORIGINAL LOCALISATION · 原版术语核对</p>
+        <div class="origin-term-copy">
+          <div>
+            <h3>“起源建筑”具体指什么？</h3>
+            <p>
+              原版简体中文确实使用“起源建筑”这一称呼。它对应脚本里的建筑集合
+              <code>origin</code>，只包含特定起源帝国才能使用的专属建筑，例如克隆军团起源的克隆仓；
+              不是“初始建筑”，也不是所有与起源事件有关的建筑的统称。
+            </p>
+            <p>
+              为避免歧义，本页的 Zone 效果已改写为“当前起源解锁的专属建筑”。
+            </p>
+          </div>
+          <blockquote>
+            <span>原版文本 · nomads.1030</span>
+            “所有专属建筑<strong>「起源建筑」</strong>将被摧毁。”
+            <cite>localisation/simp_chinese/nomads_1_l_simp_chinese.yml</cite>
+          </blockquote>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Yuzu Mod · Special Planets &amp; Districts</strong>
+      <span>数据来自当前移植分支的星球、区划与 Zone 脚本</span>
+    </div>
+    <a href="#top">返回顶部 ↑</a>
+  </footer>
+
+  <dialog class="detail-dialog" id="district-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="关闭详情">×</button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

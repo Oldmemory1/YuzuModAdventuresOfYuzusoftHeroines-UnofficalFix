@@ -1,0 +1,68 @@
+# 文物
+tr_yuzu_relic_adopt = {
+	modifier = {
+		science_ship_survey_speed = 0.15
+	}
+}
+
+tr_yuzu_relic_finish = {
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.5
+		ship_archaeological_site_excavation_speed_mult = 0.25
+		ascension_perks_add = 1
+	}
+}
+
+# 全民鉴赏
+tr_yuzu_relic_1 = {
+	custom_tooltip = tr_yuzu_relic_1_desc
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+# 高调展览
+tr_yuzu_relic_2 = {
+	custom_tooltip = tr_yuzu_relic_2_desc
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 考古培训
+tr_yuzu_relic_3 = {
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.25
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 先驱经验
+tr_yuzu_relic_4 = {
+	custom_tooltip = tr_yuzu_relic_4_desc
+	possible = {
+		has_tradition = tr_yuzu_relic_1
+		has_tradition = tr_yuzu_relic_2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 深入探索
+tr_yuzu_relic_5 = {
+	custom_tooltip = tr_yuzu_relic_5_desc
+	possible = {
+		has_tradition = tr_yuzu_relic_3
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

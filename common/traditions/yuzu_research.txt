@@ -1,0 +1,81 @@
+# 聚焦科研
+tr_yuzu_research_adopt = {
+	modifier = {
+		planet_researchers_upkeep_mult = -0.05
+	}
+}
+
+tr_yuzu_research_finish = {
+	modifier = {
+		planet_researchers_physics_research_produces_mult = 0.15
+		planet_researchers_society_research_produces_mult = 0.15
+		planet_researchers_engineering_research_produces_mult = 0.15
+		ascension_perks_add = 1
+	}
+}
+
+# 智能协助
+tr_yuzu_research_1 = {
+	modifier = {
+		planet_researchers_upkeep_mult = -0.05
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+# 人员培训
+tr_yuzu_research_2 = {
+	modifier = {
+		planet_researchers_physics_research_produces_mult = 0.05
+		planet_researchers_society_research_produces_mult = 0.05
+		planet_researchers_engineering_research_produces_mult = 0.05
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 广泛讨论
+tr_yuzu_research_3 = {
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 领袖培养
+tr_yuzu_research_4 = {
+	possible = {
+		has_tradition = tr_yuzu_research_1
+		has_tradition = tr_yuzu_research_2
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.5
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 全民科研
+tr_yuzu_research_5 = {
+	possible = {
+		has_tradition = tr_yuzu_research_3
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.15
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

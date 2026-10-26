@@ -45,4 +45,385 @@ spriteTypes = {
 		name = "GFX_tr_yuzu_festival_school"
 		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_festival_school.dds"
 	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_production_innovation"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_production_innovation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_production_innovation"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_production_innovation.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_production_innovation"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_production_innovation.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_production_innovation"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_production_innovation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_production_innovation_safety"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_production_innovation_safety.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_production_innovation_energy"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_production_innovation_energy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_production_innovation_farming"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_production_innovation_farming.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_production_innovation_mining"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_production_innovation_mining.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_production_innovation_research"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_production_innovation_research.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_energy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_energy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_energy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_energy.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_energy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_energy.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_energy"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_energy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_energy_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_energy_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_energy_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_energy_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_energy_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_energy_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_energy_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_energy_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_energy_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_energy_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_mining"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_mining.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_mining"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_mining.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_mining"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_mining.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_mining"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_mining.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_mining_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_mining_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_mining_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_mining_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_mining_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_mining_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_mining_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_mining_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_mining_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_mining_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_agriculture"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_agriculture.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_agriculture"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_agriculture.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_agriculture"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_agriculture.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_agriculture"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_agriculture.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_agriculture_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_agriculture_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_agriculture_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_agriculture_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_agriculture_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_agriculture_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_agriculture_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_agriculture_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_agriculture_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_agriculture_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_research"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_research.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_research"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_research.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_research"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_research.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_research"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_research.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_research_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_research_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_research_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_research_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_research_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_research_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_research_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_research_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_research_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_research_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_preparewar"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_preparewar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_preparewar"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_preparewar.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_preparewar"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_preparewar.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_preparewar"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_preparewar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_preparewar_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_preparewar_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_preparewar_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_preparewar_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_preparewar_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_preparewar_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_preparewar_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_preparewar_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_preparewar_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_preparewar_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_relic"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_relic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_relic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_relic.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_relic"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_relic.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_relic"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_relic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_relic_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_relic_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_relic_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_relic_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_relic_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_relic_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_relic_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_relic_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_relic_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_relic_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_yuzu_develop"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_yuzu_develop.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_yuzu_develop"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_develop.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_tradition_yuzu_develop"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_yuzu_develop.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_yuzu_develop"
+		textureFile = "gfx/interface/icons/traditions/tree_icons/tradition_icon_yuzu_develop.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_develop_1"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_develop_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_develop_2"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_develop_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_develop_3"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_develop_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_develop_4"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_develop_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tr_yuzu_develop_5"
+		textureFile = "gfx/interface/icons/traditions/tradition_yuzu_develop_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_trait_yuzu_develop"
+		textureFile = "gfx/interface/icons/traits/leader_trait_icons/leader_trait_yuzu_develop.dds"
+	}
 }

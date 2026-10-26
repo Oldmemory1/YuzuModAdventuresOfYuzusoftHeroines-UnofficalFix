@@ -562,4 +562,30 @@ spriteTypes = {
 		name = "GFX_district_yuzu_healthcare"
 		texturefile = "gfx/interface/icons/districts/district_yuzu_city_healthcare.dds"
 	}
+	# 梦境区划（icon = district_yuzu_city_dream）：
+	#   77x77 图标按原版约定走 gfx/interface/icons/districts/<icon>.dds，不需要 sprite；
+	#   下面两个 sprite 是 4.x 额外要的"地块底图"和"通用动画条"。
+	#   底图由 scripts/make_yuzu_dream_district_art.py 从 77x77 素材生成。
+	spriteType = {
+		name = "GFX_district_yuzu_city_dream_bg"
+		texturefile = "gfx/interface/icons/districts/district_yuzu_city_dream_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_yuzu_city_dream_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_arcology_housing_secondary_rectangle.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
+			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
+			animationrotation = 90.0
+			animationlooping = yes
+			animationtime = 2.0
+			animationdelay = 0.0
+			animationblendmode = "add"
+			animationtype = "pulsing"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
 }

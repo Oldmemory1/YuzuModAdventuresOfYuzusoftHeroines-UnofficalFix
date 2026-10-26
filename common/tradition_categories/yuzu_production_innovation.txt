@@ -1,0 +1,29 @@
+tradition_yuzu_production_innovation = {
+	tree_template = "tree_yuzu_131"
+	adoption_bonus = "tr_yuzu_production_innovation_adopt"
+	finish_bonus = "tr_yuzu_production_innovation_finish"
+	traditions = {
+		"tr_yuzu_production_innovation_safety"
+		"tr_yuzu_production_innovation_energy"
+		"tr_yuzu_production_innovation_farming"
+		"tr_yuzu_production_innovation_mining"
+		"tr_yuzu_production_innovation_research"
+	}
+
+	potential = {
+		is_yuzu_empire = yes
+		is_regular_empire = yes
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 100
+			years_passed > 35
+		}
+		modifier = {
+			factor = 200
+			years_passed > 70
+		}
+	}
+}

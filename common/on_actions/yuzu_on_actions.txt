@@ -24,6 +24,7 @@ on_leader_spawned = {
 		Yuzu_leader_event.3
 		Yuzu_leader_event.7
 		Yuzu_leader_event.12
+		Yuzu_develop_event.1 # BMI 可能直接生成高等级领袖
 		Yuzu_libra_directive76.1 # 指令-76 联动：补授漏授的军用克隆体特质
 	}
 }
@@ -34,6 +35,7 @@ on_leader_spawned = {
 on_leader_level_up = {
 	events = {
 		Yuzu_leader_event.11
+		Yuzu_develop_event.1
 	}
 }
 
@@ -42,6 +44,7 @@ on_leader_level_up = {
 on_added_to_leader_pool = {
 	events = {
 		Yuzu_libra_directive76.1 # 指令-76 联动：池中新领袖也补授
+		Yuzu_develop_event.1 # BMI 生成的十级领袖加入招募池时补授
 	}
 }
 

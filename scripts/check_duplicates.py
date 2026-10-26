@@ -37,11 +37,19 @@ def read(rel):
 # (分类名, 正则, 文件范围, 扩展名)
 SCANS = [
     ("科技", r"^(tech_\w+) = \{", "common/technology", (".txt",)),
+    # 物种特质: 同名 trait 在原版是"追加一条新记录"而不是覆盖(见 README 人形特质那条),
+    # 所以本 mod 自己更不能出现重复键, 否则列表里会出现同名特质两份。
+    ("物种/领袖特质", r"^(trait_\w+) = \{", "common/traits", (".txt",)),
     ("组件模板 key", r'^\s+key = "([^"]+)"', "common/component_templates", (".txt",)),
     ("组件套装 key", r'^\s+key = "([^"]+)"', "common/component_sets", (".txt",)),
     ("sprite 名", r'^\s+name = "(GFX_[^"]+)"', "interface", (".gfx",)),
     ("scripted_variables @变量", r"^@(\w+) = ", "common/scripted_variables", (".txt",)),
     ("弹体 projectile name", r'^\tname = "([^"]+)"', "gfx/projectiles", (".txt",)),
+    ("法令 / 决议", r"^(\w+) = \{", "common/edicts", (".txt",)),
+    ("决议", r"^(\w+) = \{", "common/decisions", (".txt",)),
+    ("scripted_effect", r"^(\w+) = \{", "common/scripted_effects", (".txt",)),
+    ("scripted_trigger", r"^(\w+) = \{", "common/scripted_triggers", (".txt",)),
+    ("舰船设计 name", r'^\tname = "([^"]+)"', "common/global_ship_designs", (".txt",)),
 ]
 
 

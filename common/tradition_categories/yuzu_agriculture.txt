@@ -1,0 +1,21 @@
+tradition_yuzu_agriculture = {
+	tree_template = "tree_11_111"
+	adoption_bonus = "tr_yuzu_agriculture_adopt"
+	finish_bonus = "tr_yuzu_agriculture_finish"
+	traditions = {
+		"tr_yuzu_agriculture_1"
+		"tr_yuzu_agriculture_2"
+		"tr_yuzu_agriculture_3"
+		"tr_yuzu_agriculture_4"
+		"tr_yuzu_agriculture_5"
+	}
+
+	potential = {
+		is_yuzu_empire = yes
+		is_regular_empire = yes
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

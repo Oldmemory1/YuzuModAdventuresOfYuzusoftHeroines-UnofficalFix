@@ -1,0 +1,3625 @@
+{
+  "meta": {
+    "title": "失落建筑数据",
+    "version": "Stellaris 4.4.6 移植线",
+    "updated": "2026-10-24",
+    "buildingCount": 12,
+    "tierCount": 60,
+    "maxTier": 5,
+    "buildableTierCount": 1,
+    "excludedNote": "未收录神秘档案库、苍穹神龛、外星庇护所、远古冷冻仓等废弃或不可建造条目。"
+  },
+  "costLadder": [
+    {
+      "tier": 1,
+      "source": "直接新建",
+      "buildTime": "600 天",
+      "alloy": 3000,
+      "heart": 1000,
+      "standardSpecial": 600,
+      "rareSpecial": 100
+    },
+    {
+      "tier": 2,
+      "source": "由 T1 升级",
+      "buildTime": "600 天",
+      "alloy": 4000,
+      "heart": 2000,
+      "standardSpecial": 800,
+      "rareSpecial": 200
+    },
+    {
+      "tier": 3,
+      "source": "由 T2 升级",
+      "buildTime": "600 天",
+      "alloy": 5000,
+      "heart": 3000,
+      "standardSpecial": 1000,
+      "rareSpecial": 300
+    },
+    {
+      "tier": 4,
+      "source": "由 T3 升级",
+      "buildTime": "1200 天",
+      "alloy": 6500,
+      "heart": 4500,
+      "standardSpecial": 1300,
+      "rareSpecial": 450
+    },
+    {
+      "tier": 5,
+      "source": "由 T4 升级",
+      "buildTime": "1200 天",
+      "alloy": 8000,
+      "heart": 6000,
+      "standardSpecial": 1600,
+      "rareSpecial": 600
+    }
+  ],
+  "sections": [
+    {
+      "id": "economy",
+      "eyebrow": "ECONOMY · 经济建筑",
+      "title": "资源与生产",
+      "description": "六条建筑线把基础资源、制造品与战略资源推向行星级规模。"
+    },
+    {
+      "id": "society",
+      "eyebrow": "SOCIETY · 社会建筑",
+      "title": "居所、健康与知识",
+      "description": "从悬浮城市到行星级研究中枢，这些建筑重塑人口生活与国家知识体系。"
+    },
+    {
+      "id": "power",
+      "eyebrow": "TRADE & DEFENSE · 贸易与防御",
+      "title": "财富与壁垒",
+      "description": "一条贸易线负责兑现星球人口红利，一条防御线负责让行星在轨道轰炸下继续存在。"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "singularity",
+      "prefix": "building_yuzu_class_4_singularity_tier_",
+      "order": "01",
+      "section": "economy",
+      "accent": "accent-energy",
+      "kicker": "01 · ENERGY GENERATION",
+      "name": "奇点反应堆",
+      "summary": "能源 · 物理研究",
+      "headline": {
+        "label": "T5 基础产出",
+        "value": "2,500",
+        "unit": "能量币 / 月"
+      },
+      "title": "五级奇点",
+      "finalName": "九级奇点",
+      "tagline": "五级奇点 → 九级奇点",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "稀有水晶 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "合金 5 → 55 · 稀有水晶 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "物理学 · 粒子物理"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_class_4_singularity_tier_1",
+          "name": "五级奇点",
+          "description": "无人能够完全理解其原理的全自动发电设施。超大型隔离场把奇点约束在稳定能级，能量以恒定速率被抽取并并入电网。",
+          "icon": "icons/building_yuzu_class_4_singularity_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 5
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "能量币",
+              "amount": 500
+            }
+          ],
+          "effects": [
+            "1,200 技工",
+            "800 住房",
+            "技工产出的能量币 +1"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "物理学",
+            "category": "粒子物理"
+          },
+          "techId": "tech_building_yuzu_class_4_singularity_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_class_4_singularity_tier_2",
+          "name": "六级奇点",
+          "description": "更强的隔离场把奇点推向更高能级。能量产出已逼近物理学容许的极限，而约束结构反而比以往任何时候都更加稳固。",
+          "icon": "icons/building_yuzu_class_4_singularity_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 15
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "能量币",
+              "amount": 1000
+            }
+          ],
+          "effects": [
+            "2,400 技工",
+            "1,600 住房",
+            "技工产出的能量币 +1.5"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "物理学",
+            "category": "粒子物理"
+          },
+          "techId": "tech_building_yuzu_class_4_singularity_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_class_4_singularity_tier_3",
+          "name": "七级奇点",
+          "description": "谐振环自隔离场深处生长而出，沿合金塔架缠绕成型，使奇点与整座阵列的运行频率保持一致，能量输出由此变得平稳而绵长。",
+          "icon": "icons/building_yuzu_class_4_singularity_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 25
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "能量币",
+              "amount": 1500
+            }
+          ],
+          "effects": [
+            "3,600 技工",
+            "2,400 住房",
+            "技工产出的能量币 +2"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "物理学",
+            "category": "粒子物理"
+          },
+          "techId": "tech_building_yuzu_class_4_singularity_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_class_4_singularity_tier_4",
+          "name": "八级奇点",
+          "description": "塔顶持续倾泻高温能量流，把整座阵列烧灼成一座不熄的熔炉。其存在感之强，即便远距离观测也足以令人却步。",
+          "icon": "icons/building_yuzu_class_4_singularity_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 40
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "能量币",
+              "amount": 2000
+            }
+          ],
+          "effects": [
+            "4,800 技工",
+            "3,200 住房",
+            "技工产出的能量币 +2.5"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "物理学",
+            "category": "粒子物理"
+          },
+          "techId": "tech_building_yuzu_class_4_singularity_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_class_4_singularity_tier_5",
+          "name": "九级奇点",
+          "description": "奇点链路的最终形态。能量洪流被完全纳入回路，输出规模已接近行星级工程的上限。",
+          "icon": "icons/building_yuzu_class_4_singularity_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 55
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "能量币",
+              "amount": 2500
+            }
+          ],
+          "effects": [
+            "6,000 技工",
+            "4,000 住房",
+            "技工产出的能量币 +3"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "物理学",
+            "category": "粒子物理"
+          },
+          "techId": "tech_building_yuzu_class_4_singularity_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "nourishment",
+      "prefix": "building_yuzu_nourishment_center_tier_",
+      "order": "02",
+      "section": "economy",
+      "accent": "accent-food",
+      "kicker": "02 · FOOD & HABITABILITY",
+      "name": "营养圣殿",
+      "summary": "食物 · 宜居度",
+      "headline": {
+        "label": "T5 基础产出",
+        "value": "1,000",
+        "unit": "食物 / 月"
+      },
+      "title": "营养圣殿",
+      "finalName": "琼筵之枢",
+      "tagline": "营养圣殿 → 琼筵之枢",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "异星天然气 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 异星天然气 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "社会学 · 生物学"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_nourishment_center_tier_1",
+          "name": "营养圣殿",
+          "description": "以复制科技即时重构风味的自动化膳食设施。任何已知的味道都可在命令下达后迅速重现。",
+          "icon": "icons/building_yuzu_nourishment_center_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 5
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "食物",
+              "amount": 200
+            }
+          ],
+          "effects": [
+            "1,200 农夫",
+            "800 住房",
+            "农夫产出的食物 +1"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_nourishment_center_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_nourishment_center_tier_2",
+          "name": "琼浆圣殿",
+          "description": "只要心念所至，珍馐便会自行汇聚。殿内深处的复现泉能够识别进食者的需求，把最偏门的味觉诉求化为可即时上桌的盛宴，并顺带改善局部气候。",
+          "icon": "icons/building_yuzu_nourishment_center_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 15
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "食物",
+              "amount": 400
+            }
+          ],
+          "effects": [
+            "2,400 农夫",
+            "宜居度 +5%",
+            "1,600 住房",
+            "农夫产出的食物 +1.5"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_nourishment_center_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_nourishment_center_tier_3",
+          "name": "幽馥圣殿",
+          "description": "复现网络沿穹顶铺设，把风味与气候一并纳入调配范围。随着网络在行星各处成形，全星的宜居度同步上升。",
+          "icon": "icons/building_yuzu_nourishment_center_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 25
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "食物",
+              "amount": 600
+            }
+          ],
+          "effects": [
+            "3,600 农夫",
+            "宜居度 +10%",
+            "2,400 住房",
+            "农夫产出的食物 +2"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_nourishment_center_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_nourishment_center_tier_4",
+          "name": "赤醴圣殿",
+          "description": "菌毯与复现回路相互交织，把行星季风也纳入了可改写的循环，作物与环境在其中都能获得超出常规的生长条件。",
+          "icon": "icons/building_yuzu_nourishment_center_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 40
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "食物",
+              "amount": 800
+            }
+          ],
+          "effects": [
+            "4,800 农夫",
+            "宜居度 +15%",
+            "3,200 住房",
+            "农夫产出的食物 +2.5"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_nourishment_center_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_nourishment_center_tier_5",
+          "name": "琼筵之枢",
+          "description": "复现流的覆盖范围扩展至全星，使其长期维持在丰饶的盛季；风味与气候在此都可被随时重新配置。",
+          "icon": "icons/building_yuzu_nourishment_center_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 55
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "食物",
+              "amount": 1000
+            }
+          ],
+          "effects": [
+            "6,000 农夫",
+            "宜居度 +20%",
+            "4,000 住房",
+            "农夫产出的食物 +3"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_nourishment_center_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "mine",
+      "prefix": "building_yuzu_fe_mine_tier_",
+      "order": "03",
+      "section": "economy",
+      "accent": "accent-mineral",
+      "kicker": "03 · MINERAL EXTRACTION",
+      "name": "星核采矿阵",
+      "summary": "矿物 · 工程研究",
+      "headline": {
+        "label": "T5 基础产出",
+        "value": "1,000",
+        "unit": "矿物 / 月"
+      },
+      "title": "星核采矿阵",
+      "finalName": "星脉终枢",
+      "tagline": "星核采矿阵 → 星脉终枢",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "易爆微粒 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 易爆微粒 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "工程学 · 材料学"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_fe_mine_tier_1",
+          "name": "星核采矿阵",
+          "description": "通过行星地幔锁定矿脉的量子隧穿采掘阵列。钻具在不与岩层发生物理接触的前提下穿透固体材料，持续输出矿物。",
+          "icon": "icons/building_yuzu_fe_mine_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 5
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "矿物",
+              "amount": 200
+            }
+          ],
+          "effects": [
+            "1,200 矿工",
+            "800 住房",
+            "矿工产出的矿物 +1"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_fe_mine_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_fe_mine_tier_2",
+          "name": "星核钻穿枢纽",
+          "description": "隧穿井架可直达外地核以上的全部岩层与熔浆界面，矿物被无接触地连续抽出；整座阵列已升级为行星矿脉的中央采掘枢纽。",
+          "icon": "icons/building_yuzu_fe_mine_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 15
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "矿物",
+              "amount": 400
+            }
+          ],
+          "effects": [
+            "2,400 矿工",
+            "1,600 住房",
+            "矿工产出的矿物 +1.5"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_fe_mine_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_fe_mine_tier_3",
+          "name": "星核脉动矩阵",
+          "description": "隧穿井架沿地幔脉络次第点亮，把矿脉的分布与压力变化实时读入阵列，无接触抽取的效率与连续性进一步提高。",
+          "icon": "icons/building_yuzu_fe_mine_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 25
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "矿物",
+              "amount": 600
+            }
+          ],
+          "effects": [
+            "3,600 矿工",
+            "2,400 住房",
+            "矿工产出的矿物 +2"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_fe_mine_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_fe_mine_tier_4",
+          "name": "星核熔脉枢纽",
+          "description": "采掘网络延伸至地核以上的每一层岩壳，行星内部的热流被稳定地转化为持续的矿物产出。",
+          "icon": "icons/building_yuzu_fe_mine_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 40
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "矿物",
+              "amount": 800
+            }
+          ],
+          "effects": [
+            "4,800 矿工",
+            "3,200 住房",
+            "矿工产出的矿物 +2.5"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_fe_mine_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_fe_mine_tier_5",
+          "name": "星脉终枢",
+          "description": "采掘井网覆盖整颗行星的矿脉，自地心向外持续输运矿物与熔流，基本不再受地层结构的限制。",
+          "icon": "icons/building_yuzu_fe_mine_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 55
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "矿物",
+              "amount": 1000
+            }
+          ],
+          "effects": [
+            "6,000 矿工",
+            "4,000 住房",
+            "矿工产出的矿物 +3"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_fe_mine_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "nano-forge",
+      "prefix": "building_yuzu_nano_forge_tier_",
+      "order": "04",
+      "section": "economy",
+      "accent": "accent-alloy",
+      "kicker": "04 · ALLOY PRODUCTION",
+      "name": "混沌熔炉",
+      "summary": "合金 · 结构维护",
+      "headline": {
+        "label": "T5 基础产出",
+        "value": "250",
+        "unit": "合金 / 月"
+      },
+      "title": "混沌熔炉",
+      "finalName": "万象终熔",
+      "tagline": "混沌熔炉 → 万象终熔",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "活体金属 100 → 600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 活体金属 2 → 12"
+        },
+        {
+          "label": "研究领域",
+          "value": "工程学 · 工业"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_nano_forge_tier_1",
+          "name": "混沌熔炉",
+          "description": "巨型真空混沌熔炼装置。原材料在此被高效转化为性能远超常规冶炼工艺的高端合金。",
+          "icon": "icons/building_yuzu_nano_forge_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 100
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "活体金属",
+              "amount": 2
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "合金",
+              "amount": 50
+            }
+          ],
+          "effects": [
+            "1,200 冶金师",
+            "800 住房",
+            "冶金师产出的合金 +0.5"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_nano_forge_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_nano_forge_tier_2",
+          "name": "万象熔炉",
+          "description": "巨型纳米复制机舱把原材料压入近乎真空的炼造循环，合金以多种形态连续凝结；整座熔炉同时开始承担行星结构的维护负荷。",
+          "icon": "icons/building_yuzu_nano_forge_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 200
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "活体金属",
+              "amount": 4
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "合金",
+              "amount": 100
+            }
+          ],
+          "effects": [
+            "2,400 冶金师",
+            "基础设施维护费 −5%",
+            "1,600 住房",
+            "冶金师产出的合金 +1"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_nano_forge_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_nano_forge_tier_3",
+          "name": "九曜熔炉",
+          "description": "熔炼回路自炉心向外蔓延，把整座铸造矩阵改造成一具持续运转的熔炉；合金产出的纯度与细腻度进一步提升。",
+          "icon": "icons/building_yuzu_nano_forge_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "活体金属",
+              "amount": 6
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "合金",
+              "amount": 150
+            }
+          ],
+          "effects": [
+            "3,600 冶金师",
+            "基础设施维护费 −10%",
+            "2,400 住房",
+            "冶金师产出的合金 +1.5"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_nano_forge_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_nano_forge_tier_4",
+          "name": "真阳熔炉",
+          "description": "炉火汇聚成不熄的熔炼之河。任何投入其中的材料都会被淬炼至极致纯度，行星结构的维护负荷也由整座熔炉分担。",
+          "icon": "icons/building_yuzu_nano_forge_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "活体金属",
+              "amount": 450
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "活体金属",
+              "amount": 9
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "合金",
+              "amount": 200
+            }
+          ],
+          "effects": [
+            "4,800 冶金师",
+            "基础设施维护费 −15%",
+            "3,200 住房",
+            "冶金师产出的合金 +2"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_nano_forge_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_nano_forge_tier_5",
+          "name": "万象终熔",
+          "description": "整片铸造矩阵由同一股热流贯穿，合金产线已无可见瓶颈；行星结构的维护负荷被完全纳入其循环。",
+          "icon": "icons/building_yuzu_nano_forge_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "活体金属",
+              "amount": 12
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "合金",
+              "amount": 250
+            }
+          ],
+          "effects": [
+            "6,000 冶金师",
+            "基础设施维护费 −20%",
+            "4,000 住房",
+            "冶金师产出的合金 +2"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_nano_forge_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "affluence",
+      "prefix": "building_yuzu_affluence_center_tier_",
+      "order": "05",
+      "section": "economy",
+      "accent": "accent-consumer",
+      "kicker": "05 · CONSUMER GOODS",
+      "name": "财富圣殿",
+      "summary": "消费品 · 舒适度",
+      "headline": {
+        "label": "T5 基础产出",
+        "value": "500",
+        "unit": "消费品 / 月"
+      },
+      "title": "财富圣殿",
+      "finalName": "丰饶终殿",
+      "tagline": "财富圣殿 → 丰饶终殿",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "活体金属 100 → 600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 活体金属 2 → 12"
+        },
+        {
+          "label": "研究领域",
+          "value": "工程学 · 工业"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_affluence_center_tier_1",
+          "name": "财富圣殿",
+          "description": "无论多奇特的材料，都可以在这里迅速找到。先进的采购算法会在需求被意识到之前完成备货。",
+          "icon": "icons/building_yuzu_affluence_center_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 100
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "活体金属",
+              "amount": 2
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "消费品",
+              "amount": 100
+            }
+          ],
+          "effects": [
+            "1,200 工匠",
+            "800 住房",
+            "工匠产出的消费品 +0.5"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_affluence_center_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_affluence_center_tier_2",
+          "name": "丰饶圣殿",
+          "description": "欲望预测与物质复现系统协同运转，几乎任何奇珍异宝都能在转念之间被调集出来；整座圣殿本身就是一座持续的丰饶之源。",
+          "icon": "icons/building_yuzu_affluence_center_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 200
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "活体金属",
+              "amount": 4
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "消费品",
+              "amount": 200
+            }
+          ],
+          "effects": [
+            "2,400 工匠",
+            "1,500 舒适度",
+            "1,600 住房",
+            "工匠产出的消费品 +1"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_affluence_center_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_affluence_center_tier_3",
+          "name": "幽裕圣殿",
+          "description": "预测系统与复现回路融为一体，珍稀物资的成形时间被压缩到接近瞬时；整座殿堂可在没有外部补给的情况下自我充盈。",
+          "icon": "icons/building_yuzu_affluence_center_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "活体金属",
+              "amount": 6
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "消费品",
+              "amount": 300
+            }
+          ],
+          "effects": [
+            "3,600 工匠",
+            "3,000 舒适度",
+            "2,400 住房",
+            "工匠产出的消费品 +1.5"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_affluence_center_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_affluence_center_tier_4",
+          "name": "赤瑛圣殿",
+          "description": "物质在复现与回收之间几乎不留损耗，获取财富的流程被简化为检索与确认两个步骤。",
+          "icon": "icons/building_yuzu_affluence_center_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "活体金属",
+              "amount": 450
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "活体金属",
+              "amount": 9
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "消费品",
+              "amount": 400
+            }
+          ],
+          "effects": [
+            "4,800 工匠",
+            "4,500 舒适度",
+            "3,200 住房",
+            "工匠产出的消费品 +2"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_affluence_center_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_affluence_center_tier_5",
+          "name": "丰饶终殿",
+          "description": "全星的物质需求都在此汇总并即时兑现，循环过程中的损耗已被压到可以忽略的水平。",
+          "icon": "icons/building_yuzu_affluence_center_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "活体金属",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "活体金属",
+              "amount": 12
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "消费品",
+              "amount": 500
+            }
+          ],
+          "effects": [
+            "6,000 工匠",
+            "6,000 舒适度",
+            "4,000 住房",
+            "工匠产出的消费品 +2"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "工程学",
+            "category": "工业"
+          },
+          "techId": "tech_building_yuzu_affluence_center_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "dimensional",
+      "prefix": "building_yuzu_dimensional_fabricator_tier_",
+      "order": "06",
+      "section": "economy",
+      "accent": "accent-dimensional",
+      "kicker": "06 · STRATEGIC RESOURCES",
+      "name": "多重次元复制机",
+      "summary": "战略资源 · 次元工程",
+      "headline": {
+        "label": "T5 同时生产",
+        "value": "7",
+        "unit": "种战略资源"
+      },
+      "title": "多重次元复制机",
+      "finalName": "次元织枢",
+      "tagline": "多重次元复制机 → 次元织枢",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "无战略资源附加"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 150 → 650 · 合金 15 → 65"
+        },
+        {
+          "label": "研究领域",
+          "value": "工程学 · 材料学"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_dimensional_fabricator_tier_1",
+          "name": "多重次元复制机",
+          "description": "以能量—物质转换为原理的复制装置。装置可稳定隧连进多重次元的织构，从中提取珍稀的战略资源。",
+          "icon": "icons/building_yuzu_dimensional_fabricator_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 150
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "易爆微粒",
+              "amount": 30
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 30
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 30
+            }
+          ],
+          "effects": [],
+          "research": {
+            "points": 100000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_dimensional_fabricator_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_dimensional_fabricator_tier_2",
+          "name": "多重次元制造机",
+          "description": "先进织造机不断隧连进维度空间的织构，基础战略资源呈洪流状产出，零素、暗物质、活体金属与纳米机器人亦自此稳定成型。",
+          "icon": "icons/building_yuzu_dimensional_fabricator_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 250
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "易爆微粒",
+              "amount": 50
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 50
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 50
+            },
+            {
+              "resource": "暗物质",
+              "amount": 10
+            },
+            {
+              "resource": "活体金属",
+              "amount": 10
+            },
+            {
+              "resource": "泽洛",
+              "amount": 10
+            },
+            {
+              "resource": "纳米机器人",
+              "amount": 10
+            }
+          ],
+          "effects": [],
+          "research": {
+            "points": 125000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_dimensional_fabricator_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_dimensional_fabricator_tier_3",
+          "name": "多重次元织造矩阵",
+          "description": "织造线程把维度织构编成一张可反复汲取的网，战略资源的产出几乎不再中断。",
+          "icon": "icons/building_yuzu_dimensional_fabricator_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 350
+            },
+            {
+              "resource": "合金",
+              "amount": 35
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "易爆微粒",
+              "amount": 70
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 70
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 70
+            },
+            {
+              "resource": "暗物质",
+              "amount": 15
+            },
+            {
+              "resource": "活体金属",
+              "amount": 15
+            },
+            {
+              "resource": "泽洛",
+              "amount": 15
+            },
+            {
+              "resource": "纳米机器人",
+              "amount": 15
+            }
+          ],
+          "effects": [],
+          "research": {
+            "points": 150000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_dimensional_fabricator_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_dimensional_fabricator_tier_4",
+          "name": "多重次元熔铸枢纽",
+          "description": "次元裂纹在枢纽中央反复张合，多种稀有资源沿同一条通道稳定析出，产量与种类同步提升。",
+          "icon": "icons/building_yuzu_dimensional_fabricator_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 500
+            },
+            {
+              "resource": "合金",
+              "amount": 50
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "易爆微粒",
+              "amount": 95
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 95
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 95
+            },
+            {
+              "resource": "暗物质",
+              "amount": 20
+            },
+            {
+              "resource": "活体金属",
+              "amount": 20
+            },
+            {
+              "resource": "泽洛",
+              "amount": 20
+            },
+            {
+              "resource": "纳米机器人",
+              "amount": 20
+            }
+          ],
+          "effects": [],
+          "research": {
+            "points": 175000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_dimensional_fabricator_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_dimensional_fabricator_tier_5",
+          "name": "次元织枢",
+          "description": "维度线束在枢纽内纵横交错，等同于把通向所有次元的走廊折进同一座建筑，资源自此持续析出。",
+          "icon": "icons/building_yuzu_dimensional_fabricator_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 650
+            },
+            {
+              "resource": "合金",
+              "amount": 65
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "易爆微粒",
+              "amount": 120
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 120
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 120
+            },
+            {
+              "resource": "暗物质",
+              "amount": 25
+            },
+            {
+              "resource": "活体金属",
+              "amount": 25
+            },
+            {
+              "resource": "泽洛",
+              "amount": 25
+            },
+            {
+              "resource": "纳米机器人",
+              "amount": 25
+            }
+          ],
+          "effects": [],
+          "research": {
+            "points": 200000,
+            "field": "工程学",
+            "category": "材料学"
+          },
+          "techId": "tech_building_yuzu_dimensional_fabricator_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "dome",
+      "prefix": "building_yuzu_fe_dome_tier_",
+      "order": "07",
+      "section": "society",
+      "accent": "accent-dome",
+      "kicker": "07 · HABITATION",
+      "name": "覆天穹顶",
+      "summary": "住房 · 舒适度",
+      "headline": {
+        "label": "T5 提供",
+        "value": "30,000",
+        "unit": "住房"
+      },
+      "title": "覆天穹顶",
+      "finalName": "万象天穹",
+      "tagline": "覆天穹顶 → 万象天穹",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "稀有水晶 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 稀有水晶 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "社会学 · 治国术"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_fe_dome_tier_1",
+          "name": "覆天穹顶",
+          "description": "依托先进反重力技术悬浮的超级乌托邦。从地面望去，它几乎覆盖了整片天空，为居民提供稳定的居住环境。",
+          "icon": "icons/building_yuzu_fe_dome_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 5
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "6,000 住房",
+            "8,000 舒适度"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_dome_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_fe_dome_tier_2",
+          "name": "碧落穹顶",
+          "description": "整座浮空乌托邦被织入高空，反重力穹幕与生命支持系统融为一体，持续满足居住者的各项需求。",
+          "icon": "icons/building_yuzu_fe_dome_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 15
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "12,000 住房",
+            "16,000 舒适度",
+            "人口维护费 −5%"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_dome_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_fe_dome_tier_3",
+          "name": "苍碧穹顶",
+          "description": "反重力穹幕自地面缓缓升起，把整座城市托举至云层之上；居住区由此摆脱了地形与地质灾害的限制。",
+          "icon": "icons/building_yuzu_fe_dome_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 25
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "18,000 住房",
+            "24,000 舒适度",
+            "人口维护费 −5%"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_dome_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_fe_dome_tier_4",
+          "name": "赤霄穹顶",
+          "description": "浮空城市在失重天幕下持续扩张，居住密度与面积同步提升，地面的环境压力被大幅转移。",
+          "icon": "icons/building_yuzu_fe_dome_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 40
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "24,000 住房",
+            "32,000 舒适度",
+            "人口维护费 −5%"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_dome_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_fe_dome_tier_5",
+          "name": "万象天穹",
+          "description": "穹幕覆盖整片天空，整颗行星被托入不受重力约束的生境，居民的居住与舒适需求由系统统一供给。",
+          "icon": "icons/building_yuzu_fe_dome_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 55
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "30,000 住房",
+            "40,000 舒适度",
+            "人口维护费 −5%"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_dome_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "clinic",
+      "prefix": "building_yuzu_fe_clinic_tier_",
+      "order": "08",
+      "section": "society",
+      "accent": "accent-clinic",
+      "kicker": "08 · HEALTHCARE",
+      "name": "分子焕活所",
+      "summary": "医疗 · 寿命",
+      "headline": {
+        "label": "T5 提供",
+        "value": "3,000",
+        "unit": "医务岗位"
+      },
+      "title": "分子焕活所",
+      "finalName": "再生终殿",
+      "tagline": "分子焕活所 → 再生终殿",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "暗物质 100 → 600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 暗物质 2 → 12"
+        },
+        {
+          "label": "研究领域",
+          "value": "社会学 · 生物学"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_fe_clinic_tier_1",
+          "name": "分子焕活所",
+          "description": "分子焕活所深入研究细胞的复杂构造，把病痛与衰老都视为可以修正的误差，显著提高人口的健康质量与预期寿命。",
+          "icon": "icons/building_yuzu_fe_clinic_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "暗物质",
+              "amount": 100
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "暗物质",
+              "amount": 2
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "600 医务工作者",
+            "800 住房",
+            "「加强能力」传统：岗位效率 +5%"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_fe_clinic_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_fe_clinic_tier_2",
+          "name": "生物再生所",
+          "description": "站在医疗技术巅峰的再生研究机构。开创性的再生疗法不断重写生命的界限；在这座殿堂里，衰老只是一个尚未被修正的参数。",
+          "icon": "icons/building_yuzu_fe_clinic_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "暗物质",
+              "amount": 200
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "暗物质",
+              "amount": 4
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "1,200 医务工作者",
+            "1,600 住房",
+            "「加强能力」传统：岗位效率 +10%"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_fe_clinic_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_fe_clinic_tier_3",
+          "name": "幽微再生圣所",
+          "description": "再生溶液在培养腔中循环，创口与衰老被逐层还原为尚未发生的误差；健康从被治疗的对象转为被长期维护的日常。",
+          "icon": "icons/building_yuzu_fe_clinic_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "暗物质",
+              "amount": 300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "暗物质",
+              "amount": 6
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "1,800 医务工作者",
+            "2,400 住房",
+            "「加强能力」传统：岗位效率 +15%"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_fe_clinic_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_fe_clinic_tier_4",
+          "name": "赤髓再生圣殿",
+          "description": "再生髓流贯穿整座殿堂，寿命不再是医学追求的目标，而只是可以调校的刻度，全星健康水平借此一并抬升。",
+          "icon": "icons/building_yuzu_fe_clinic_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "暗物质",
+              "amount": 450
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "暗物质",
+              "amount": 9
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "2,400 医务工作者",
+            "3,200 住房",
+            "「加强能力」传统：岗位效率 +20%"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_fe_clinic_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_fe_clinic_tier_5",
+          "name": "再生终殿",
+          "description": "再生疗程覆盖整座殿堂，寿命成为一种可以被反复延长的状态，居民健康被稳定维持在最理想的区间。",
+          "icon": "icons/building_yuzu_fe_clinic_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "暗物质",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "暗物质",
+              "amount": 12
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "3,000 医务工作者",
+            "4,000 住房",
+            "「加强能力」传统：岗位效率 +25%"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "社会学",
+            "category": "生物学"
+          },
+          "techId": "tech_building_yuzu_fe_clinic_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "entertainment",
+      "prefix": "building_yuzu_fe_entertainment_tier_",
+      "order": "09",
+      "section": "society",
+      "accent": "accent-entertainment",
+      "kicker": "09 · ENTERTAINMENT",
+      "name": "虚境欢愉广场",
+      "summary": "娱乐 · 舒适度",
+      "headline": {
+        "label": "T5 提供",
+        "value": "40,000",
+        "unit": "舒适度"
+      },
+      "title": "虚境欢愉广场",
+      "finalName": "极乐终殿",
+      "tagline": "虚境欢愉广场 → 极乐终殿",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "稀有水晶 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 稀有水晶 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "社会学 · 治国术"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_fe_entertainment_tier_1",
+          "name": "虚境欢愉广场",
+          "description": "这片庞大的娱乐区段处于休闲产业的最前沿，脑波读取技术可为每位居民生成即时、个性化的虚拟度假体验。",
+          "icon": "icons/building_yuzu_fe_entertainment_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 5
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "1,200 演艺人员",
+            "800 住房"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_entertainment_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_fe_entertainment_tier_2",
+          "name": "极乐枢纽",
+          "description": "娱乐产业的顶峰。这座枢纽超越了常规限制，居民的所有愿望在许下之前就已经被实现。",
+          "icon": "icons/building_yuzu_fe_entertainment_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 15
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "2,400 演艺人员",
+            "10,000 舒适度",
+            "1,600 住房"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_entertainment_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_fe_entertainment_tier_3",
+          "name": "幽梦欢愉圣殿",
+          "description": "梦境光幕覆盖各大厅，娱乐体验被编成可以反复回放的序列，进入者不再受疲劳影响。",
+          "icon": "icons/building_yuzu_fe_entertainment_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 25
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "3,600 演艺人员",
+            "20,000 舒适度",
+            "2,400 住房"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_entertainment_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_fe_entertainment_tier_4",
+          "name": "赤霞极乐圣所",
+          "description": "愉悦不再需要被制造，只需要被允许；连行星的作息都为这场不散的庆典让开道路。",
+          "icon": "icons/building_yuzu_fe_entertainment_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 40
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "4,800 演艺人员",
+            "30,000 舒适度",
+            "3,200 住房"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_entertainment_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_fe_entertainment_tier_5",
+          "name": "极乐终殿",
+          "description": "娱乐需求在整片城区被统一承接，愉悦的供给不再有上限，全星长期处于同一场庆典之中。",
+          "icon": "icons/building_yuzu_fe_entertainment_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 55
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "6,000 演艺人员",
+            "40,000 舒适度",
+            "4,000 住房"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_entertainment_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "lab",
+      "prefix": "building_yuzu_fe_lab_tier_",
+      "order": "10",
+      "section": "society",
+      "accent": "accent-research",
+      "kicker": "10 · RESEARCH",
+      "name": "量子创研枢纽",
+      "summary": "三项研究 · 计算技术",
+      "headline": {
+        "label": "T5 基础产出",
+        "value": "750",
+        "unit": "三项研究合计 / 月"
+      },
+      "title": "量子创研枢纽",
+      "finalName": "公理之枢",
+      "tagline": "量子创研枢纽 → 公理之枢",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "异星天然气 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 异星天然气 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "物理学 · 计算技术"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_fe_lab_tier_1",
+          "name": "量子创研枢纽",
+          "description": "汇集最先进设备与空前人力规模的研究枢纽。量子理论在此不再只是被探讨的对象，而是被转化为可以落地的技术成果。",
+          "icon": "icons/building_yuzu_fe_lab_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 5
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "物理学研究",
+              "amount": 50
+            },
+            {
+              "resource": "社会学研究",
+              "amount": 50
+            },
+            {
+              "resource": "工程学研究",
+              "amount": 50
+            }
+          ],
+          "effects": [
+            "800 物理学家",
+            "800 工程学家",
+            "800 社会学家",
+            "1,600 住房"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "物理学",
+            "category": "计算技术"
+          },
+          "techId": "tech_building_yuzu_fe_lab_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_fe_lab_tier_2",
+          "name": "超验研理圣殿",
+          "description": "站在科学进步顶点的研究机构。它把“不可解”列入待办事项，见证着一个创造无远弗届的时代。",
+          "icon": "icons/building_yuzu_fe_lab_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 15
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "物理学研究",
+              "amount": 100
+            },
+            {
+              "resource": "社会学研究",
+              "amount": 100
+            },
+            {
+              "resource": "工程学研究",
+              "amount": 100
+            }
+          ],
+          "effects": [
+            "1,600 物理学家",
+            "1,600 工程学家",
+            "1,600 社会学家",
+            "3,200 住房"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "物理学",
+            "category": "计算技术"
+          },
+          "techId": "tech_building_yuzu_fe_lab_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_fe_lab_tier_3",
+          "name": "幽玄推演矩阵",
+          "description": "假说在演算矩阵中被成批地提出、推翻与重建；知识不再是缓慢的积累，而是一条可以被加速的产线。",
+          "icon": "icons/building_yuzu_fe_lab_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 25
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "物理学研究",
+              "amount": 150
+            },
+            {
+              "resource": "社会学研究",
+              "amount": 150
+            },
+            {
+              "resource": "工程学研究",
+              "amount": 150
+            }
+          ],
+          "effects": [
+            "2,400 物理学家",
+            "2,400 工程学家",
+            "2,400 社会学家",
+            "4,800 住房"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "物理学",
+            "category": "计算技术"
+          },
+          "techId": "tech_building_yuzu_fe_lab_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_fe_lab_tier_4",
+          "name": "赤曜真知圣所",
+          "description": "经过验证的规律在穹顶下凝结成可以反复调用的公理，全星的思维资源都在为同一批问题让路。",
+          "icon": "icons/building_yuzu_fe_lab_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 40
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "物理学研究",
+              "amount": 200
+            },
+            {
+              "resource": "社会学研究",
+              "amount": 200
+            },
+            {
+              "resource": "工程学研究",
+              "amount": 200
+            }
+          ],
+          "effects": [
+            "3,200 物理学家",
+            "3,200 工程学家",
+            "3,200 社会学家",
+            "6,400 住房"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "物理学",
+            "category": "计算技术"
+          },
+          "techId": "tech_building_yuzu_fe_lab_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_fe_lab_tier_5",
+          "name": "公理之枢",
+          "description": "文明所掌握的全部公理在此归档并可即时调用，研究流程本身已被压缩到接近极限。",
+          "icon": "icons/building_yuzu_fe_lab_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "异星天然气",
+              "amount": 55
+            }
+          ],
+          "outputs": [
+            {
+              "resource": "物理学研究",
+              "amount": 250
+            },
+            {
+              "resource": "社会学研究",
+              "amount": 250
+            },
+            {
+              "resource": "工程学研究",
+              "amount": 250
+            }
+          ],
+          "effects": [
+            "4,000 物理学家",
+            "4,000 工程学家",
+            "4,000 社会学家",
+            "8,000 住房"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "物理学",
+            "category": "计算技术"
+          },
+          "techId": "tech_building_yuzu_fe_lab_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "prefix": "building_yuzu_fe_market_tier_",
+      "order": "11",
+      "section": "power",
+      "accent": "accent-market",
+      "kicker": "11 · TRADE",
+      "name": "星系贸易中心",
+      "summary": "贸易 · 商贩",
+      "headline": {
+        "label": "T5 提供",
+        "value": "6,000",
+        "unit": "商贩岗位"
+      },
+      "title": "星系贸易中心",
+      "finalName": "星域商枢",
+      "tagline": "星系贸易中心 → 星域商枢",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "稀有水晶 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 5 → 55 · 稀有水晶 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "社会学 · 治国术"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_fe_market_tier_1",
+          "name": "星系贸易中心",
+          "description": "高耸的塔尖俯瞰整条天际线，为脚下熙攘的商业区投下阴影；行星上流通的货物几乎都要在这里过一道手。",
+          "icon": "icons/building_yuzu_fe_market_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 5
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 5
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "1,200 商贩",
+            "800 住房"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_market_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_fe_market_tier_2",
+          "name": "星际贸易枢纽",
+          "description": "这片贸易区在星系经济中占据着至高无上的地位，庞大的尖顶即便从轨道上也清晰可见。",
+          "icon": "icons/building_yuzu_fe_market_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 15
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 15
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "2,400 商贩",
+            "商贩产出的贸易值 +0.5",
+            "1,600 住房"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_market_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_fe_market_tier_3",
+          "name": "星河贸易圣枢",
+          "description": "贸易回路沿尖顶盘旋而上，商路在星图上自行收束成网；行星上流通的每一件货物都在同一道枢纽里换手。",
+          "icon": "icons/building_yuzu_fe_market_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 25
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 25
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "3,600 商贩",
+            "商贩产出的贸易值 +1",
+            "2,400 住房"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_market_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_fe_market_tier_4",
+          "name": "赤澜贸易圣殿",
+          "description": "货流在殿内持续奔涌，每一次成交都被折算成可以再投资的资本，观测范围内的星域几乎都在此挂牌交易。",
+          "icon": "icons/building_yuzu_fe_market_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 40
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 40
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "4,800 商贩",
+            "商贩产出的贸易值 +1.5",
+            "3,200 住房"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_market_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_fe_market_tier_5",
+          "name": "星域商枢",
+          "description": "整片星域的货物都要经由这座枢纽换手，它本身就是一座设立在轨道上的市场。",
+          "icon": "icons/building_yuzu_fe_market_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 55
+            },
+            {
+              "resource": "稀有水晶",
+              "amount": 55
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "6,000 商贩",
+            "商贩产出的贸易值 +2",
+            "4,000 住房"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "社会学",
+            "category": "治国术"
+          },
+          "techId": "tech_building_yuzu_fe_market_tier_5"
+        }
+      ]
+    },
+    {
+      "id": "stronghold",
+      "prefix": "building_yuzu_fe_stronghold_tier_",
+      "order": "12",
+      "section": "power",
+      "accent": "accent-stronghold",
+      "kicker": "12 · PLANETARY DEFENSE",
+      "name": "圣盾基地",
+      "summary": "防御 · 舰队抑制",
+      "headline": {
+        "label": "T5 提供",
+        "value": "6,000",
+        "unit": "士兵岗位"
+      },
+      "title": "圣盾基地",
+      "finalName": "不落圣垒",
+      "tagline": "圣盾基地 → 不落圣垒",
+      "resourceStrip": [
+        {
+          "label": "成本附加",
+          "value": "易爆微粒 600 → 1,600"
+        },
+        {
+          "label": "维护",
+          "value": "能量币 40 → 160 · 合金 10 → 60 · 易爆微粒 5 → 55"
+        },
+        {
+          "label": "研究领域",
+          "value": "社会学 · 军事理论"
+        }
+      ],
+      "tiers": [
+        {
+          "tier": 1,
+          "buildingId": "building_yuzu_fe_stronghold_tier_1",
+          "name": "圣盾基地",
+          "description": "规模庞大的行星防御复合体，配备多座储存上古神秘武器的军械库与多层装甲。只有高度特化的攻城部队才可能突破其防御。",
+          "icon": "icons/building_yuzu_fe_stronghold_tier_1.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 3000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 1000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 40
+            },
+            {
+              "resource": "合金",
+              "amount": 10
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 5
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "1,200 士兵",
+            "800 住房"
+          ],
+          "research": {
+            "points": 100000,
+            "field": "社会学",
+            "category": "军事理论"
+          },
+          "techId": "tech_building_yuzu_fe_stronghold_tier_1"
+        },
+        {
+          "tier": 2,
+          "buildingId": "building_yuzu_fe_stronghold_tier_2",
+          "name": "神盾基地",
+          "description": "中央塔尖自环形基座间拔地而起，上古军械库与层层护盾彼此咬合；行星的天空被收进一道无法绕行的防线。",
+          "icon": "icons/building_yuzu_fe_stronghold_tier_2.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 4000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 2000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 800
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 60
+            },
+            {
+              "resource": "合金",
+              "amount": 20
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 15
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "2,400 士兵",
+            "受到轨道轰炸的伤害 −15%",
+            "FTL 抑制器",
+            "1,600 住房"
+          ],
+          "research": {
+            "points": 125000,
+            "field": "社会学",
+            "category": "军事理论"
+          },
+          "techId": "tech_building_yuzu_fe_stronghold_tier_2"
+        },
+        {
+          "tier": 3,
+          "buildingId": "building_yuzu_fe_stronghold_tier_3",
+          "name": "玄垒基地",
+          "description": "抑制场自环形基座升起，军械库与护盾层被整合为统一系统，接近行星的舰队会在第一时间被防线探测并锁定。",
+          "icon": "icons/building_yuzu_fe_stronghold_tier_3.png",
+          "buildTime": "600天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 5000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 3000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 1000
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 80
+            },
+            {
+              "resource": "合金",
+              "amount": 30
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 25
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "3,600 士兵",
+            "受到轨道轰炸的伤害 −30%",
+            "FTL 抑制器",
+            "2,400 住房"
+          ],
+          "research": {
+            "points": 150000,
+            "field": "社会学",
+            "category": "军事理论"
+          },
+          "techId": "tech_building_yuzu_fe_stronghold_tier_3"
+        },
+        {
+          "tier": 4,
+          "buildingId": "building_yuzu_fe_stronghold_tier_4",
+          "name": "赤垒要塞",
+          "description": "护盾在轨道高度凝成一道连续的环，上古武器沿塔尖展开布防，行星天空被纳入一道无法绕行的火墙。",
+          "icon": "icons/building_yuzu_fe_stronghold_tier_4.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 6500
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 4500
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 1300
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 120
+            },
+            {
+              "resource": "合金",
+              "amount": 45
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 40
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "4,800 士兵",
+            "受到轨道轰炸的伤害 −45%",
+            "FTL 抑制器",
+            "3,200 住房"
+          ],
+          "research": {
+            "points": 175000,
+            "field": "社会学",
+            "category": "军事理论"
+          },
+          "techId": "tech_building_yuzu_fe_stronghold_tier_4"
+        },
+        {
+          "tier": 5,
+          "buildingId": "building_yuzu_fe_stronghold_tier_5",
+          "name": "不落圣垒",
+          "description": "护盾覆盖整颗行星并与上古军械库联动，防御纵深与持续作战能力均已达到该体系的极限。",
+          "icon": "icons/building_yuzu_fe_stronghold_tier_5.png",
+          "buildTime": "1200天",
+          "cost": [
+            {
+              "resource": "合金",
+              "amount": 8000
+            },
+            {
+              "resource": "心之碎片",
+              "amount": 6000
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 1600
+            }
+          ],
+          "upkeep": [
+            {
+              "resource": "能量币",
+              "amount": 160
+            },
+            {
+              "resource": "合金",
+              "amount": 60
+            },
+            {
+              "resource": "易爆微粒",
+              "amount": 55
+            }
+          ],
+          "outputs": [],
+          "effects": [
+            "6,000 士兵",
+            "受到轨道轰炸的伤害 −60%",
+            "FTL 抑制器",
+            "4,000 住房"
+          ],
+          "research": {
+            "points": 200000,
+            "field": "社会学",
+            "category": "军事理论"
+          },
+          "techId": "tech_building_yuzu_fe_stronghold_tier_5"
+        }
+      ]
+    }
+  ]
+}

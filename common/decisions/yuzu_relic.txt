@@ -1,0 +1,44 @@
+# 文物传统：深入探索
+decision_yuzu_relic = {
+	important = yes
+	owned_planets_only = no
+	sound = event_administrative_work
+	icon = decision_archaeological_dig
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_tradition = tr_yuzu_relic_5
+		}
+		exists = space_owner
+		exists = from
+		space_owner = {
+			is_same_value = from
+		}
+		is_star = no
+		is_artificial = no
+		is_ringworld = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_yuzu_relic_no_site
+			can_spawn_random_archaeological_site = yes
+		}
+	}
+
+	effect = {
+		create_archaeological_site = random
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

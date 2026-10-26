@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="柚子社少女们的奇妙冒险 Mod：自定义传统与议会议程玩家图鉴，收录 9 棵传统树、45 个项目、依赖关系与点击查看的效果。">
+  <title>传统与议程 | 柚子社少女们的奇妙冒险</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回页面顶部">
+      <span class="brand-mark" aria-hidden="true">Y</span>
+      <span class="brand-copy">
+        <strong>YUZU WIKI</strong>
+        <small>传统与议程档案</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="主导航">
+      <a href="#tree-index">传统索引</a>
+      <a href="#traditions">传统树</a>
+      <a href="#agendas">议程核对</a>
+      <a href="../buildings/index.html">失落建筑</a>
+      <a href="../districts/index.html">特殊区划</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">TRADITIONS &amp; AGENDAS · 国家传统档案</p>
+        <h1 id="page-title">传统<span>TRADITIONS</span></h1>
+        <p class="hero-lead">
+          九棵柚子帝国专属传统分别补强基础产业、科研、领袖、庆典、军工与远古遗迹。
+          本页按游戏内前置关系绘制完整依赖图，点击任意项目图标即可单独查阅它的效果。
+        </p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#tree-index">选择传统树</a>
+          <a class="text-link" href="#reading-guide">阅读图例 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <aside class="archive-summary" aria-label="传统档案摘要">
+        <div class="summary-head">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>ARCHIVE ONLINE</span>
+          <span>TR-09</span>
+        </div>
+        <div class="summary-grid">
+          <div><strong id="stat-trees">9</strong><span>传统树</span></div>
+          <div><strong id="stat-projects">45</strong><span>项目</span></div>
+          <div><strong id="stat-agendas">0</strong><span>已实装议程</span></div>
+        </div>
+        <dl class="summary-meta">
+          <div>
+            <dt>适用版本</dt>
+            <dd>Stellaris 4.4.6 移植线</dd>
+          </div>
+          <div>
+            <dt>数据来源</dt>
+            <dd>传统脚本、分类脚本与本地化</dd>
+          </div>
+          <div>
+            <dt>议程状态</dt>
+            <dd>当前九棵树均无议程</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="reading-guide" id="reading-guide" aria-labelledby="guide-title">
+      <div class="guide-heading">
+        <p class="eyebrow">HOW TO READ · 阅读方式</p>
+        <h2 id="guide-title">先看连线，再点图标</h2>
+      </div>
+      <div class="guide-grid">
+        <article>
+          <span class="guide-symbol node-symbol" aria-hidden="true"></span>
+          <div>
+            <h3>传统项目</h3>
+            <p>每个六边形图标代表一个可花费凝聚力采纳的传统。图标下方的文字是项目名称。</p>
+          </div>
+        </article>
+        <article>
+          <span class="guide-symbol arrow-symbol" aria-hidden="true">→</span>
+          <div>
+            <h3>依赖箭头</h3>
+            <p>箭头表示前置关系。一个节点连入多条线时，需要先完成所有指向它的项目。</p>
+          </div>
+        </article>
+        <article>
+          <span class="guide-symbol click-symbol" aria-hidden="true">+</span>
+          <div>
+            <h3>单项详情</h3>
+            <p>点击图标只会打开这个项目的说明、前置与效果，不会一次性展开整棵树的数据。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="agenda-callout" aria-labelledby="agenda-callout-title">
+      <div class="callout-mark" aria-hidden="true">0</div>
+      <div>
+        <p class="eyebrow">AGENDA STATUS · 议程状态</p>
+        <h2 id="agenda-callout-title">当前没有已实装的传统议程</h2>
+        <p>
+          九棵传统树在现有脚本中都没有对应的议会议程。项目里的候选议程设计稿没有被写入
+          <code>common/council_agendas</code>，所以不应把它当作可玩内容。
+        </p>
+      </div>
+    </section>
+
+    <section class="index-section" id="tree-index" aria-labelledby="tree-index-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TRADITION INDEX · 传统索引</p>
+          <h2 id="tree-index-title">九种国家路线</h2>
+        </div>
+        <p>选择一棵传统树可直接跳转到对应依赖图。</p>
+      </div>
+      <div class="tree-index-grid" id="tree-index-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="traditions-section" id="traditions" aria-labelledby="traditions-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DEPENDENCY ARCHIVE · 依赖档案</p>
+          <h2 id="traditions-title">全部传统树</h2>
+        </div>
+        <p>图中的位置按脚本前置关系重新排版；连线才是实际依赖。</p>
+      </div>
+      <div class="tree-list" id="tree-list"></div>
+    </section>
+
+    <section class="agenda-section" id="agendas" aria-labelledby="agenda-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COUNCIL AGENDAS · 议会议程</p>
+          <h2 id="agenda-title">逐树议程核对</h2>
+        </div>
+        <p>按当前脚本逐棵列出；没有定义时明确写“无议程”。</p>
+      </div>
+      <div class="agenda-list" id="agenda-list"></div>
+      <p class="agenda-footnote">
+        孤立本地化条目 <code>agenda_yuzu</code> 不是有效的议会议程定义。未来的议程需要同时具备
+        <code>common/council_agendas</code> 脚本、正确本地化与图标后才能计入。
+      </p>
+    </section>
+
+    <section class="closing-note" aria-labelledby="closing-title">
+      <p class="eyebrow">ARCHIVE NOTE · 档案备注</p>
+      <h2 id="closing-title">数值阅读说明</h2>
+      <p>
+        “岗位产出的资源 +X”表示对应岗位每单位人口的基础产出变化；百分比效果作用于对应产出乘区。
+        一个岗位或住房的 100 点脚本单位按游戏内 1 点显示，因此本页已经换算为玩家能在面板中看到的数值。
+      </p>
+      <p>
+        文物传统的三个文物行动分别持续 3600 天；道具消耗与一次性影响力收益按行动脚本列出。
+        传统树可用性以当前移植的分类 <code>potential</code> 条件为准。
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Yuzu Mod · Traditions &amp; Agendas</strong>
+      <span>玩家图鉴 · 2026-10-22 整理</span>
+    </div>
+    <a href="#top">返回顶部 ↑</a>
+  </footer>
+
+  <dialog class="tradition-dialog" id="tradition-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <button class="dialog-close" type="button" aria-label="关闭详情">×</button>
+      <div id="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="noscript-note">本页需要 JavaScript 才能绘制传统依赖图并打开单项详情。</p>
+  </noscript>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -531,6 +531,9 @@ zone_yuzu_energy_city_dream = {
 		}
 	}
 
+	swap_type = district_yuzu_city_dream_energy
+	swap_type_weight = 5
+
 	zone_sets = {
 		yuzu_arcology_dream
 	}
@@ -558,6 +561,9 @@ zone_yuzu_minerals_city_dream = {
 		}
 	}
 
+	swap_type = district_yuzu_city_dream_minerals
+	swap_type_weight = 5
+
 	zone_sets = {
 		yuzu_arcology_dream
 	}
@@ -584,6 +590,9 @@ zone_yuzu_food_city_dream = {
 			minerals = 1000
 		}
 	}
+
+	swap_type = district_yuzu_city_dream_food
+	swap_type_weight = 5
 
 	zone_sets = {
 		yuzu_arcology_dream

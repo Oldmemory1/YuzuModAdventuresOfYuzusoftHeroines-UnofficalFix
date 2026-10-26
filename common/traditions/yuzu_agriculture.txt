@@ -1,0 +1,80 @@
+# 农业
+tr_yuzu_agriculture_adopt = {
+	modifier = {
+		job_farmer_add = 100
+	}
+}
+
+tr_yuzu_agriculture_finish = {
+	modifier = {
+		planet_farmers_food_produces_add = 1
+		ascension_perks_add = 1
+	}
+}
+
+# 高效生产
+tr_yuzu_agriculture_1 = {
+	modifier = {
+		planet_farmers_food_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+# 高产作物
+tr_yuzu_agriculture_2 = {
+	possible = {
+		has_tradition = tr_yuzu_agriculture_1
+	}
+
+	modifier = {
+		country_food_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 超凡脱俗
+tr_yuzu_agriculture_3 = {
+	modifier = {
+		planet_farmers_unity_produces_add = 0.5
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 杂交技术
+tr_yuzu_agriculture_4 = {
+	possible = {
+		has_tradition = tr_yuzu_agriculture_3
+	}
+
+	modifier = {
+		planet_farmers_society_research_produces_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 自然思维
+tr_yuzu_agriculture_5 = {
+	possible = {
+		has_tradition = tr_yuzu_agriculture_4
+	}
+
+	modifier = {
+		planet_farmers_society_research_produces_add = 2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

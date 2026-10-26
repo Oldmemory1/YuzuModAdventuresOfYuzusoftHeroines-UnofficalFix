@@ -1,0 +1,46 @@
+{
+  "planets": [
+    {
+      "id": "abyss",
+      "name": "深渊之城",
+      "code": "pc_yuzu_abyss_city",
+      "image": "images/planet_abyss.jpg",
+      "accent": "abyss",
+      "eyebrow": "ABYSS CITY · 工业都市星球",
+      "description": "整个星球都被都市与工业集群覆盖，并利用深渊之息辅助生产。从太空中已经无法辨认其地壳的自然形态。",
+      "highlights": [
+        "岗位产出 +50%",
+        "人口消费品维护 +50%",
+        "人口增长速度 +50%",
+        "固定城市等级 6"
+      ],
+      "facts": [
+        "可殖民理想星球，不会自然随机生成",
+        "每个空闲区划提供 1,200 人口承载",
+        "使用独立的 yuzu_abyss_city_world 区划集合",
+        "可建造居住理想城、未分配塔楼与全部塔楼特化"
+      ]
+    },
+    {
+      "id": "sunset",
+      "name": "夕阳之城",
+      "code": "pc_yuzu_sunset_city",
+      "image": "images/planet_sunset.jpg",
+      "accent": "sunset",
+      "eyebrow": "SUNSET CITY · 梦境都市星球",
+      "description": "整个星球都被都市与工业集群覆盖，并与幻梦境中自身的投影重叠。城市与梦境共用同一片天际线。",
+      "highlights": [
+        "岗位产出 +30%",
+        "人口增长速度 +150%",
+        "固定城市等级 6",
+        "每空闲区划承载 1,200 人口"
+      ],
+      "facts": [
+        "可殖民理想星球，不会自然随机生成",
+        "使用独立的 yuzu_sunset_city_world 区划集合",
+        "可使用全部普通塔楼与塔楼特化",
+        "独有梦境区划及能源、矿物、农业三种梦境特化"
+      ]
+    }
+  ]
+}

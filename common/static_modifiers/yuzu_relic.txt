@@ -1,0 +1,17 @@
+# 文物传统：全民鉴赏
+modifiers_yuzu_relic_appreciation = {
+	pop_citizen_happiness = 0.05
+	icon = "gfx/interface/icons/resources/minor_artifacts.dds"
+}
+
+# 文物传统：高调展览
+modifiers_yuzu_relic_exhibition = {
+	country_influence_produces_mult = 0.1
+	icon = "gfx/interface/icons/resources/minor_artifacts.dds"
+}
+
+# 文物传统：先驱经验
+modifiers_yuzu_relic_experience = {
+	all_technology_research_speed = 0.3
+	icon = "gfx/interface/icons/resources/minor_artifacts.dds"
+}

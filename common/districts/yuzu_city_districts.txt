@@ -378,6 +378,11 @@ district_yuzu_city_urban_3 = {
 
 district_yuzu_city_dream = {
 	base_buildtime = 600
+	# 用 3.x 时代自己的贴图：77x77 图标走 gfx/interface/icons/districts/<icon>.dds 路径约定，
+	# 279x170 地块底图（由 scripts/make_yuzu_dream_district_art.py 生成）与 60x8 动画条
+	# 的 sprite 定义在 interface/YUZU_GFX.gfx。
+	# 特化后由 swap district（文件末尾 district_yuzu_city_dream_*）叠加资源徽标。
+	icon = district_yuzu_city_dream
 	# Non-empty is_uncapped generates district_yuzu_city_dream_max(_add) capacity.
 	# Without this, deposit/zone max modifiers display in the UI but do not cap builds.
 	is_uncapped = { always = no }
@@ -492,6 +497,7 @@ district_yuzu_city_dream = {
 
 district_yuzu_city_industry = {
 	icon = district_arcology_mixed_industry
+	overlay_icon = GFX_district_mixed_industry
 	zone_slots = {
 		slot_empty
 	}
@@ -508,6 +514,7 @@ district_yuzu_city_industry = {
 
 district_yuzu_city_administrative = {
 	icon = district_arcology_administrative
+	overlay_icon = GFX_district_unity
 	zone_slots = {
 		slot_empty
 	}
@@ -524,6 +531,7 @@ district_yuzu_city_administrative = {
 
 district_yuzu_city_religious = {
 	icon = district_arcology_spiritualist
+	overlay_icon = GFX_district_unity
 	zone_slots = {
 		slot_empty
 	}
@@ -659,5 +667,58 @@ district_yuzu_city_healthcare = {
 	}
 	triggered_name = {
 		text = district_yuzu_city_healthcare
+	}
+}
+
+# 梦境区划的三条特化外观：与塔楼用同一套地块底图，叠原版资源徽标
+# （GFX_district_energy / _minerals / _food），和原版都市星球特化一样在区划上提示产出。
+district_yuzu_city_dream_energy = {
+	icon = district_yuzu_city_dream
+	overlay_icon = GFX_district_energy
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_dream
+	}
+}
+
+district_yuzu_city_dream_minerals = {
+	icon = district_yuzu_city_dream
+	overlay_icon = GFX_district_minerals
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_dream
+	}
+}
+
+district_yuzu_city_dream_food = {
+	icon = district_yuzu_city_dream
+	overlay_icon = GFX_district_food
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_dream
 	}
 }

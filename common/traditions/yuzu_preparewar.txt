@@ -1,0 +1,93 @@
+# 备战
+tr_yuzu_preparewar_adopt = {
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+	}
+}
+
+tr_yuzu_preparewar_finish = {
+	modifier = {
+		ascension_perks_add = 1
+	}
+
+	triggered_modifier = {
+		potential = {
+			country_uses_bio_ships = yes
+		}
+		category_biology_research_speed_mult = 0.15
+	}
+
+	triggered_modifier = {
+		potential = {
+			country_uses_bio_ships = no
+		}
+		category_voidcraft_research_speed_mult = 0.15
+	}
+}
+
+# 聚焦合金
+tr_yuzu_preparewar_1 = {
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.1
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+# 强化船体
+tr_yuzu_preparewar_2 = {
+	possible = {
+		has_tradition = tr_yuzu_preparewar_1
+	}
+
+	modifier = {
+		ship_hull_mult = 0.25
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 强化武器
+tr_yuzu_preparewar_3 = {
+	modifier = {
+		ship_hull_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 舰队扩容
+tr_yuzu_preparewar_4 = {
+	possible = {
+		has_tradition = tr_yuzu_preparewar_3
+	}
+
+	modifier = {
+		country_naval_cap_mult = 0.1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 高效扩军
+tr_yuzu_preparewar_5 = {
+	possible = {
+		has_tradition = tr_yuzu_preparewar_4
+	}
+
+	modifier = {
+		planet_army_build_speed_mult = 0.5
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

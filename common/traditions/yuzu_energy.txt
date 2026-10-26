@@ -1,0 +1,80 @@
+# 电业
+tr_yuzu_energy_adopt = {
+	modifier = {
+		job_technician_add = 100
+	}
+}
+
+tr_yuzu_energy_finish = {
+	modifier = {
+		planet_technician_energy_produces_add = 1
+		ascension_perks_add = 1
+	}
+}
+
+# 电力革新
+tr_yuzu_energy_1 = {
+	modifier = {
+		planet_technician_energy_produces_mult = 0.15
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+# 电厂扩建
+tr_yuzu_energy_2 = {
+	possible = {
+		has_tradition = tr_yuzu_energy_1
+	}
+
+	modifier = {
+		district_generator_max_add = 3
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 技工培训
+tr_yuzu_energy_3 = {
+	modifier = {
+		planet_technician_energy_produces_add = 0.2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 物理实验
+tr_yuzu_energy_4 = {
+	possible = {
+		has_tradition = tr_yuzu_energy_3
+	}
+
+	modifier = {
+		planet_technician_physics_research_produces_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 研究式电厂
+tr_yuzu_energy_5 = {
+	possible = {
+		has_tradition = tr_yuzu_energy_4
+	}
+
+	modifier = {
+		planet_technician_physics_research_produces_add = 2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

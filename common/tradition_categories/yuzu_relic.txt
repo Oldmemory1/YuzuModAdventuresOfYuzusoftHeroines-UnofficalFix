@@ -1,0 +1,22 @@
+tradition_yuzu_relic = {
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_yuzu_relic_adopt"
+	finish_bonus = "tr_yuzu_relic_finish"
+	traditions = {
+		"tr_yuzu_relic_1"
+		"tr_yuzu_relic_2"
+		"tr_yuzu_relic_3"
+		"tr_yuzu_relic_4"
+		"tr_yuzu_relic_5"
+	}
+
+	potential = {
+		is_yuzu_empire = yes
+		is_regular_empire = yes
+		host_has_dlc = "Ancient Relics Story Pack"
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

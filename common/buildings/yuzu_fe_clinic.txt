@@ -40,6 +40,15 @@ building_yuzu_fe_clinic_tier_1 = {
 		planet_housing_add = 800
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				has_purity_heightened_attributes_tradition = yes
+			}
+		}
+		organic_pop_bonus_workforce_mult = 0.05
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -98,6 +107,15 @@ building_yuzu_fe_clinic_tier_2 = {
 
 	planet_modifier = {
 		planet_housing_add = 1600
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				has_purity_heightened_attributes_tradition = yes
+			}
+		}
+		organic_pop_bonus_workforce_mult = 0.10
 	}
 
 	resources = {
@@ -160,6 +178,15 @@ building_yuzu_fe_clinic_tier_3 = {
 		planet_housing_add = 2400
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				has_purity_heightened_attributes_tradition = yes
+			}
+		}
+		organic_pop_bonus_workforce_mult = 0.15
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -220,6 +247,15 @@ building_yuzu_fe_clinic_tier_4 = {
 		planet_housing_add = 3200
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				has_purity_heightened_attributes_tradition = yes
+			}
+		}
+		organic_pop_bonus_workforce_mult = 0.20
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -278,6 +314,15 @@ building_yuzu_fe_clinic_tier_5 = {
 
 	planet_modifier = {
 		planet_housing_add = 4000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = {
+				has_purity_heightened_attributes_tradition = yes
+			}
+		}
+		organic_pop_bonus_workforce_mult = 0.25
 	}
 
 	resources = {

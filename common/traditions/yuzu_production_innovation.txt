@@ -1,0 +1,99 @@
+# 生产技术革新
+tr_yuzu_production_innovation_adopt = {
+	modifier = {
+		planet_technician_energy_produces_add = 2
+		planet_miners_minerals_produces_add = 2
+		planet_farmers_food_produces_add = 2
+		planet_housing_add = 600
+	}
+}
+
+tr_yuzu_production_innovation_finish = {
+	modifier = {
+		planet_technician_energy_produces_add = 3
+		planet_miners_minerals_produces_add = 3
+		planet_farmers_food_produces_add = 3
+		ascension_perks_add = 1
+	}
+}
+
+# 生产安全改进
+tr_yuzu_production_innovation_safety = {
+	modifier = {
+		planet_stability_add = 10
+		pop_amenities_usage_base = -0.5
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+# 电力系统拓建
+tr_yuzu_production_innovation_energy = {
+	possible = {
+		has_tradition = tr_yuzu_production_innovation_safety
+	}
+
+	modifier = {
+		planet_technician_energy_produces_mult = 0.2
+		planet_technician_energy_produces_add = 3
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 农业设备革新
+tr_yuzu_production_innovation_farming = {
+	possible = {
+		has_tradition = tr_yuzu_production_innovation_safety
+	}
+
+	modifier = {
+		planet_farmers_food_produces_mult = 0.2
+		planet_farmers_food_produces_add = 3
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 更新开采设备
+tr_yuzu_production_innovation_mining = {
+	possible = {
+		has_tradition = tr_yuzu_production_innovation_safety
+	}
+
+	modifier = {
+		planet_miners_alloys_produces_add = 1
+		planet_miners_rare_crystals_produces_add = 1
+		planet_miners_exotic_gases_produces_add = 1
+		planet_miners_volatile_motes_produces_add = 1
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 科研民主化
+tr_yuzu_production_innovation_research = {
+	possible = {
+		has_tradition = tr_yuzu_production_innovation_energy
+		has_tradition = tr_yuzu_production_innovation_farming
+		has_tradition = tr_yuzu_production_innovation_mining
+	}
+
+	modifier = {
+		planet_miners_engineering_research_produces_add = 2
+		planet_farmers_society_research_produces_add = 2
+		planet_technician_physics_research_produces_add = 2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

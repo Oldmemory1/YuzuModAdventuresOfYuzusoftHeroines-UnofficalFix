@@ -1,0 +1,107 @@
+# 文物传统：全民鉴赏
+artifact_yuzu_relic_appreciation = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 200
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	potential = {
+		has_tradition = tr_yuzu_relic_1
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = requires_yuzu_relic_appreciation_no_cooldown
+			NOT = { has_modifier = modifiers_yuzu_relic_appreciation }
+		}
+	}
+
+	effect = {
+		custom_tooltip = artifact_yuzu_relic_appreciation_effect
+		hidden_effect = {
+			add_modifier = {
+				modifier = modifiers_yuzu_relic_appreciation
+				days = 3600
+			}
+		}
+	}
+}
+
+# 文物传统：高调展览
+artifact_yuzu_relic_exhibition = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 500
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	potential = {
+		has_tradition = tr_yuzu_relic_2
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = requires_yuzu_relic_exhibition_no_cooldown
+			NOT = { has_modifier = modifiers_yuzu_relic_exhibition }
+		}
+	}
+
+	effect = {
+		add_resource = {
+			influence = 50
+		}
+		custom_tooltip = artifact_yuzu_relic_exhibition_effect
+		hidden_effect = {
+			add_modifier = {
+				modifier = modifiers_yuzu_relic_exhibition
+				days = 3600
+			}
+		}
+	}
+}
+
+# 文物传统：先驱经验
+artifact_yuzu_relic_experience = {
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 200
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	potential = {
+		has_tradition = tr_yuzu_relic_4
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = requires_yuzu_relic_experience_no_cooldown
+			NOT = { has_modifier = modifiers_yuzu_relic_experience }
+		}
+	}
+
+	effect = {
+		custom_tooltip = artifact_yuzu_relic_experience_effect
+		hidden_effect = {
+			add_modifier = {
+				modifier = modifiers_yuzu_relic_experience
+				days = 3600
+			}
+		}
+	}
+}

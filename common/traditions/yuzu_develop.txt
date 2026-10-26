@@ -1,0 +1,143 @@
+# 培养
+tr_yuzu_develop_adopt = {
+	modifier = {
+		leaders_upkeep_mult = -0.25
+	}
+}
+
+tr_yuzu_develop_finish = {
+	modifier = {
+		species_leader_exp_gain = 0.5
+		ascension_perks_add = 1
+	}
+}
+
+# 突破上限
+tr_yuzu_develop_1 = {
+	custom_tooltip = tr_yuzu_develop_1_desc
+
+	on_enabled = {
+		hidden_effect = {
+			every_owned_leader = {
+				if = {
+					limit = {
+						has_base_skill >= 10
+						NOR = {
+							has_trait = leader_trait_yuzu_develop_scientist
+							has_trait = leader_trait_yuzu_develop_commander
+							has_trait = leader_trait_yuzu_develop_official
+						}
+					}
+					if = {
+						limit = {
+							leader_class = scientist
+						}
+						add_trait = leader_trait_yuzu_develop_scientist
+					}
+					if = {
+						limit = {
+							leader_class = commander
+						}
+						add_trait = leader_trait_yuzu_develop_commander
+					}
+					if = {
+						limit = {
+							leader_class = official
+						}
+						add_trait = leader_trait_yuzu_develop_official
+					}
+				}
+			}
+			every_pool_leader = {
+				if = {
+					limit = {
+						has_base_skill >= 10
+						NOR = {
+							has_trait = leader_trait_yuzu_develop_scientist
+							has_trait = leader_trait_yuzu_develop_commander
+							has_trait = leader_trait_yuzu_develop_official
+						}
+					}
+					if = {
+						limit = {
+							leader_class = scientist
+						}
+						add_trait = leader_trait_yuzu_develop_scientist
+					}
+					if = {
+						limit = {
+							leader_class = commander
+						}
+						add_trait = leader_trait_yuzu_develop_commander
+					}
+					if = {
+						limit = {
+							leader_class = official
+						}
+						add_trait = leader_trait_yuzu_develop_official
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 10000
+	}
+}
+
+# 学习交流
+tr_yuzu_develop_2 = {
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# 扩大基础
+tr_yuzu_develop_3 = {
+	modifier = {
+		country_leader_pool_size = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 特殊培养
+tr_yuzu_develop_4 = {
+	possible = {
+		has_tradition = tr_yuzu_develop_1
+		has_tradition = tr_yuzu_develop_2
+	}
+
+	modifier = {
+		leader_trait_selection_options_add = 1
+		negative_traits_country = -2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# 全民领袖
+tr_yuzu_develop_5 = {
+	possible = {
+		has_tradition = tr_yuzu_develop_3
+	}
+
+	modifier = {
+		country_commander_cap_add = 1
+		country_official_cap_add = 1
+		country_scientist_cap_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}

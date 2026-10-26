@@ -1,0 +1,21 @@
+tradition_yuzu_preparewar = {
+	tree_template = "tree_11_111"
+	adoption_bonus = "tr_yuzu_preparewar_adopt"
+	finish_bonus = "tr_yuzu_preparewar_finish"
+	traditions = {
+		"tr_yuzu_preparewar_1"
+		"tr_yuzu_preparewar_2"
+		"tr_yuzu_preparewar_3"
+		"tr_yuzu_preparewar_4"
+		"tr_yuzu_preparewar_5"
+	}
+
+	potential = {
+		is_yuzu_empire = yes
+		is_regular_empire = yes
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

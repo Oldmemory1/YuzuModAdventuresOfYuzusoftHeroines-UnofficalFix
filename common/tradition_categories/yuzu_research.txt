@@ -1,0 +1,21 @@
+tradition_yuzu_research = {
+	tree_template = "tree_21_11"
+	adoption_bonus = "tr_yuzu_research_adopt"
+	finish_bonus = "tr_yuzu_research_finish"
+	traditions = {
+		"tr_yuzu_research_1"
+		"tr_yuzu_research_2"
+		"tr_yuzu_research_3"
+		"tr_yuzu_research_4"
+		"tr_yuzu_research_5"
+	}
+
+	potential = {
+		is_yuzu_empire = yes
+		is_regular_empire = yes
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

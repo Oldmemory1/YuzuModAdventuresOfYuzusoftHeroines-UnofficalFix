@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
-"""作战电脑(combat computer)的 先进 / 精英 两档：组件、sprite、本地化、科技、科技图标。
+"""作战电脑(combat computer)的 先进 / 精英 / 太初 三档：组件、sprite、本地化、科技、科技图标。
 
-数值规则（与武器/推进器两档一致）
---------------------------------
-  造价   = Tier1 x1.75 (先进) / x3.25 (精英)   -> 30 -> 53 / 98
-  耗电   = Tier1 x1.5  (先进) / x2    (精英)   -> -35 -> -53 / -70
-  修正值 = Tier1 的**加成** x1.5 / x2
-           (这些 modifier 是加法百分比: 0.30 就是 +30%, 故 0.30 -> 0.45 -> 0.60)
-  恒星基地电脑耗电为 0 且无 resources 块, 两档保持原样。
+数值规则
+--------
+  造价   = Tier1 x1.75 (先进) / x3.25 (精英) / x5.5 (太初)  -> 30 -> 53 / 98 / 165
+  耗电   = Tier1 x1.5  (先进) / x2    (精英) / x2.5 (太初)  -> -35 -> -53 / -70 / -88
+  修正值 = Tier1 + 每档增量 x 档序号 (先进 1 / 精英 2 / 太初 3)
+           **增量逐角色、逐字段单列** —— 不再是一条统一的 ×1.5/×2/×2.5 倍率,
+           故倍率不再可反推, 增量写在下面的 ROLES 表里(每项第三个元素)。
+           modifier 是加法百分比(0.30 就是 +30%), tracking/accuracy 是平铺数。
+  恒星基地电脑耗电为 0 且无 resources 块, 各档保持原样。
 
-修正值 x1.5 会遇到 .5 / .375 这类小数(tracking 15 -> 22.5, fire_rate 0.25 ->
-0.375)。PDX 脚本支持小数(distance/range 本就用 112.5), 故**不做取整**,
-保持倍率精确、可反推。
+增量的例子: 蜂拥 回避 0.30 +0.10/级 -> 先进 0.40、精英 0.50、太初 0.60;
+攻城 追踪 15 +10/级 -> 25 / 35 / 45。会出现 .5 这类小数也不必取整
+(PDX 脚本支持小数, 武器的 accuracy / tracking 本就写小数)。
 
 科技花费
 --------
@@ -19,17 +21,19 @@
   Tier1  tier 5  @yuzu_tier5cost5 =  64000  weight 18
   先进   tier 5  @yuzu_tier5cost6 =  72000  weight 17
   精英   tier 6  @yuzu_tier6cost5 = 152000  weight 12
-先进与 Tier1 同 tier(与武器档位一致), 靠 cost 变量拉开; 精英进 tier 6。
+  太初   tier 6  @yuzu_tier6cost6 = 168000  weight 11
+先进与 Tier1 同 tier(与武器档位一致), 靠 cost 变量拉开; 精英与太初进 tier 6。
 
 升级链
 ------
-Tier1 -> 先进 -> 精英 一条链。Tier1 的 upgrades_to 由本脚本写进
-common/component_templates/yuzu_roles.txt(该文件其余内容仍由人工维护)。
+Tier1 -> 先进 -> 精英 -> 太初 一条链。Tier1 与精英的 upgrades_to 由本脚本写进
+common/component_templates/yuzu_tier_1.txt / yuzu_tier_1_elite.txt
+(2026-10-15 目录重整后按档位落位；这两个文件其余内容仍由人工维护)。
 
 图标
 ----
 7 个 role 图标用 Tier1 同名图标的档位 DDS(由 make_yuzu_computer_icons.py 生成);
-恒星基地电脑 Tier1 用原版 GFX_ship_part_computer_default, 两档改用 role_yuzu
+恒星基地电脑 Tier1 用原版 GFX_ship_part_computer_default, 其余三档改用 role_yuzu
 的档位图标。
 
 Run:  uv run python scripts/make_yuzu_computer_tiers.py
@@ -43,6 +47,7 @@ from decimal import Decimal, ROUND_HALF_UP
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from make_yuzu_elite import ADV_HUE, ELITE_HUE, dds_bytes, hue_replace  # noqa: E402
+from make_yuzu_master_icons import master_hue, master_recolor  # noqa: E402
 
 from PIL import Image  # noqa: E402
 
@@ -52,30 +57,40 @@ TECH_DIR = os.path.join(ROOT, "gfx/interface/icons/technologies")
 LOC = os.path.join(ROOT, "localisation/simp_chinese/yuzu_ship_and_component_l_simp_chinese.yml")
 GFX = os.path.join(ROOT, "interface/YUZU_GFX.gfx")
 TECH = os.path.join(ROOT, "common/technology/yuzu_tech.txt")
-ROLES_T1 = os.path.join(ROOT, "common/component_templates/yuzu_roles.txt")
-ROLES_ELITE = os.path.join(ROOT, "common/component_templates/yuzu_roles_elite.txt")
+# 2026-10-15 目录重整：作战电脑按档位落进 yuzu_tier_*.txt（Tier1 的基准块就在 tier_1 文件里）
+ROLES_T1 = os.path.join(ROOT, "common/component_templates/yuzu_tier_1.txt")
+ROLES_ELITE = os.path.join(ROOT, "common/component_templates/yuzu_tier_1_elite.txt")
+TIER_FILE = {                       # 档位 -> 目标文件
+    "advanced": "yuzu_tier_1_advanced.txt",
+    "elite": "yuzu_tier_1_elite.txt",
+    "master": "yuzu_tier_1_master.txt",
+}
+COMP_MARK = "# ===== 作战电脑 %s 自动生成区块 — by scripts/make_yuzu_computer_tiers.py ====="
 
 LOC_MARK = "# ===== 先进 / 精英 / 太初 作战电脑 (by scripts/make_yuzu_computer_tiers.py) ====="
 
 # Tier1 基准值
 T1_COST = 30
 T1_POWER = -35
-# 各档倍率: (造价/维护费倍率, 修正值倍率)
+# 各档造价 / 耗电倍率: (造价倍率, 耗电倍率)。
+# 修正值不走统一倍率 —— 由 ROLES 表逐项给出「每档增量」。
 TIER_MULT = {
     "ADVANCED": (Decimal("1.75"), Decimal("1.5")),
     "ELITE": (Decimal("3.25"), Decimal("2")),
     "MASTER": (Decimal("5.5"), Decimal("2.5")),
 }
 
+# 档序号: 修正值 = Tier1 + 每档增量 x 序号
+VAL_STEP = {"ADVANCED": 1, "ELITE": 2, "MASTER": 3}
+
 TECH_BASE = "tech_computer_role_yuzu"
 
-MASTER_HUE = colorsys.rgb_to_hsv(138 / 255.0, 124 / 255.0, 1.0)[0]   # #8A7CFF
+MASTER_HUE = master_hue()                                            # #C7A6FF
 
 TECH_DESC = {
-    "advanced": "在基础型时空分析接口之上，先进型号进一步提升了时空波动的解析精度，"
-                "使舰船的火控与机动响应更为敏捷。",
-    "elite": "精英时空分析接口将时空感知推向极致，几乎能够完全预判战场的每一次变化。",
-    "master": "太初时空分析接口几乎与战场本身融为一体，敌方的每一次机动都早已在它的预判之中。",
+    "advanced": "先进型号。解析精度更高，火控与机动响应更灵敏。",
+    "elite": "精英型号。几乎能完全预判战场的每一次变化。",
+    "master": "太初型号。预判能力已到极限，敌方机动尽在掌握。",
 }
 
 # 各档: 档位后缀 / 本地化键中缀 / 中文档位词 / 色相 / 科技参数
@@ -103,6 +118,10 @@ TIERS = [
 # modifier  -> 组件自身的 modifier 块(影响舰船以上一级的实体)
 # ship_modifier -> 组件作用到舰船上的修正
 # potential 原样照抄 Tier1, 不改语义。
+#
+# 每项修饰写成 (字段名, Tier1 值, 每档增量):
+#   先进 = Tier1 + 增量 x1, 精英 = + 增量 x2, 太初 = + 增量 x3。
+# 增量逐角色手写 —— 这是设计值, 不从 Tier1 的数值推算。
 ROLES = [
     dict(
         role="SWARM", cn="蜂拥", icon="swarm", behavior="swarm",
@@ -110,8 +129,8 @@ ROLES = [
         potential="""	potential = {
 		ship_uses_swarm_role = yes
 	}""",
-        modifier=[("ship_evasion_mult", 0.30), ("ship_speed_mult", 0.20)],
-        ship_modifier=[("ship_fire_rate_mult", 0.20)],
+        modifier=[("ship_evasion_mult", 0.30, 0.10), ("ship_speed_mult", 0.20, 0.10)],
+        ship_modifier=[("ship_fire_rate_mult", 0.20, 0.10)],
     ),
     dict(
         role="TORPEDO", cn="攻城", icon="swarm", behavior="torpedo",
@@ -120,8 +139,8 @@ ROLES = [
 		ship_uses_torpedo_role = yes
 	}""",
         prereq_extra='"tech_torpedoes_1" ',
-        modifier=[("weapon_type_explosive_weapon_damage_mult", 0.20),
-                  ("ship_tracking_add", 15), ("ship_evasion_mult", 0.10)],
+        modifier=[("weapon_type_explosive_weapon_damage_mult", 0.20, 0.10),
+                  ("ship_tracking_add", 15, 10), ("ship_evasion_mult", 0.10, 0.10)],
         ship_modifier=[],
     ),
     dict(
@@ -130,8 +149,9 @@ ROLES = [
         potential="""	potential = {
 		ship_uses_picket_role = yes
 	}""",
-        modifier=[("ship_evasion_mult", 0.10)],
-        ship_modifier=[("ship_fire_rate_mult", 0.25), ("ship_tracking_add", 50)],
+        modifier=[("ship_evasion_mult", 0.10, 0.10)],
+        ship_modifier=[("ship_fire_rate_mult", 0.25, 0.15),
+                       ("ship_tracking_add", 50, 10)],
     ),
     dict(
         role="LINE", cn="线列", icon="line", behavior="line",
@@ -143,8 +163,9 @@ ROLES = [
 		}
 	}""",
         modifier=[],
-        ship_modifier=[("ship_fire_rate_mult", 0.25), ("ship_accuracy_add", 25),
-                       ("ship_tracking_add", 10)],
+        ship_modifier=[("ship_fire_rate_mult", 0.25, 0.15),
+                       ("ship_accuracy_add", 25, 10),
+                       ("ship_tracking_add", 10, 10)],
     ),
     dict(
         role="ARTILLERY", cn="炮击", icon="artillery", behavior="artillery",
@@ -156,8 +177,9 @@ ROLES = [
 		}
 	}""",
         modifier=[],
-        ship_modifier=[("ship_fire_rate_mult", 0.25), ("ship_weapon_range_mult", 0.25),
-                       ("ship_tracking_add", 10)],
+        ship_modifier=[("ship_fire_rate_mult", 0.25, 0.10),
+                       ("ship_weapon_range_mult", 0.25, 0.10),
+                       ("ship_tracking_add", 10, 10)],
     ),
     dict(
         role="CARRIER", cn="航母", icon="carrier", behavior="carrier",
@@ -169,7 +191,8 @@ ROLES = [
 		}
 	}""",
         modifier=[],
-        ship_modifier=[("ship_engagement_range_mult", 1.25), ("ship_tracking_add", 10)],
+        ship_modifier=[("ship_engagement_range_mult", 1.25, 0.25),
+                       ("ship_tracking_add", 10, 10)],
     ),
     dict(
         role="PLATFORM", cn="平台", icon="platform", behavior="platform",
@@ -178,8 +201,9 @@ ROLES = [
 		ship_uses_platform_computers = yes
 	}""",
         modifier=[],
-        ship_modifier=[("ship_fire_rate_mult", 0.40), ("ship_tracking_add", 40),
-                       ("ship_accuracy_add", 10)],
+        ship_modifier=[("ship_fire_rate_mult", 0.40, 0.10),
+                       ("ship_tracking_add", 40, 10),
+                       ("ship_accuracy_add", 10, 10)],
     ),
     dict(
         role="STARBASE", cn="恒星基地", icon="yuzu", behavior="platform",
@@ -195,8 +219,9 @@ ROLES = [
 		ship_uses_starbase_components = yes
 	}""",
         modifier=[],
-        ship_modifier=[("ship_fire_rate_mult", 0.25), ("ship_tracking_add", 50),
-                       ("ship_accuracy_add", 20)],
+        ship_modifier=[("ship_fire_rate_mult", 0.25, 0.10),
+                       ("ship_tracking_add", 50, 10),
+                       ("ship_accuracy_add", 20, 10)],
     ),
 ]
 
@@ -236,6 +261,11 @@ def scale(v, f):
     return Decimal(str(v)) * Decimal(str(f))
 
 
+def stepped(t1, inc, step):
+    """修正值 = Tier1 + 每档增量 x 档序号。"""
+    return Decimal(str(t1)) + Decimal(str(inc)) * step
+
+
 def round_cost(v):
     return int(Decimal(str(v)).quantize(Decimal("1"), rounding=ROUND_HALF_UP))
 
@@ -266,7 +296,7 @@ def build_rules(tag):
     return factor, valf, cost, power
 
 
-def render(role, tier, tag, cn, cost, power, valf):
+def render(role, tier, tag, cn, cost, power, step):
     key = key_of(role, tag)
     lines = []
     lines.append("utility_component_template = {")
@@ -298,13 +328,13 @@ def render(role, tier, tag, cn, cost, power, valf):
     lines.append("")
     if role["modifier"]:
         lines.append("\tmodifier = {")
-        for name, val in role["modifier"]:
-            lines.append("\t\t%s = %s" % (name, fmt(scale(val, valf))))
+        for name, t1val, inc in role["modifier"]:
+            lines.append("\t\t%s = %s" % (name, fmt(stepped(t1val, inc, step))))
         lines.append("\t}")
     if role["ship_modifier"]:
         lines.append("\tship_modifier = {")
-        for name, val in role["ship_modifier"]:
-            lines.append("\t\t%s = %s" % (name, fmt(scale(val, valf))))
+        for name, t1val, inc in role["ship_modifier"]:
+            lines.append("\t\t%s = %s" % (name, fmt(stepped(t1val, inc, step))))
         lines.append("\t}")
     lines.append("")
     lines.append("\tai_weight = {")
@@ -368,27 +398,29 @@ def _write_chain(path, src_tag, dst_tag, label):
 def write_components():
     for spec in TIERS:
         tier, tag, cn = spec["tier"], spec["tag"], spec["cn"]
-        factor, valf, cost, power = build_rules(tag)
+        factor, powerf, cost, power = build_rules(tag)
+        step = VAL_STEP[tag]
         head = [
-            "# %s版作战电脑 (%s) —— 由 Tier1 派生 (common/component_templates/yuzu_roles.txt)" % (cn, tag),
+            COMP_MARK % cn,
+            "# %s版作战电脑 (%s) —— 由 Tier1 派生 (common/component_templates/yuzu_tier_1.txt)" % (cn, tag),
             "# 造价 = Tier1 x%s (%d -> %d); 耗电 = Tier1 x%s (%d -> %d)" % (
-                fmt(factor), T1_COST, cost, fmt(valf), T1_POWER, power),
-            "# 修正值 = Tier1 的加成 x%s (加法百分比: 0.30 -> %s)" % (
-                fmt(valf), fmt(scale(0.30, valf))),
+                fmt(factor), T1_COST, cost, fmt(powerf), T1_POWER, power),
+            "# 修正值 = Tier1 + 每档增量 x%d (增量逐角色不同, 见 make_yuzu_computer_tiers.py 的 ROLES 表)" % step,
             "# 恒星基地电脑耗电 0 且无 resources 块, 与 Tier1 一致",
             "# 升级链: Tier1 -> ADVANCED -> ELITE -> MASTER"
             " (Tier1 与 ELITE 的 upgrades_to 由本脚本写入各自文件)",
         ]
         head += [
-            "# 本文件由 scripts/make_yuzu_computer_tiers.py 生成, 勿手改",
+            "# 本区块由 scripts/make_yuzu_computer_tiers.py 生成, 勿手改",
             "",
         ]
         body = []
         for role in ROLES:
-            body.append(render(role, tier, tag, cn, cost, power, valf))
+            body.append(render(role, tier, tag, cn, cost, power, step))
             body.append("")
-        text = "\n".join(head) + "\n".join(body).rstrip() + "\n"
-        path = os.path.join(ROOT, "common/component_templates/yuzu_roles_%s.txt" % tier)
+        path = os.path.join(ROOT, "common/component_templates", TIER_FILE[tier])
+        text = strip_section(read_text(path), COMP_MARK % cn)      # 幂等：先删旧区块
+        text = text.rstrip("\n") + "\n\n" + "\n".join(head) + "\n".join(body).rstrip() + "\n"
         write_text(path, text, newline_of(path))
         print("组件: %-46s %d 个" % (os.path.relpath(path, ROOT), len(ROLES)))
 
@@ -572,15 +604,20 @@ def write_tech_icons():
     for spec in TIERS:
         tier, hue = spec["tier"], spec["hue"]
         dest = os.path.join(TECH_DIR, "%s_%s.dds" % (TECH_BASE, tier))
-        data = dds_bytes(hue_replace(base, hue))
+        # 太初档走 master_recolor(换色相 + 压饱和), 与组件图标 / 科技图标一致;
+        # 先进 / 精英仍是纯换色相
+        img = master_recolor(base, hue) if tier == "master" else hue_replace(base, hue)
+        data = dds_bytes(img)
         with open(dest, "wb") as f:
             f.write(data)
         print("科技图标: %-44s %d bytes" % (os.path.basename(dest), len(data)))
 
 
 def main():
-    write_upgrade_chain()
+    # 先生成各档区块（精英档要落进 yuzu_tier_1_elite.txt），再插升级链
+    # —— 插链要在区块存在之后才找得到精英档的组件。
     write_components()
+    write_upgrade_chain()
     write_sprites()
     write_techs()
     write_loc()

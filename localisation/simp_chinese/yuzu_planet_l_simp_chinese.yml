@@ -81,6 +81,15 @@
  district_yuzu_city_healthcare:0 "医疗理想城"
  district_yuzu_city_healthcare_plural:0 "医疗理想城"
  district_yuzu_city_healthcare_desc:0 "以先进医学与令人安心的设计构成的疗愈城区。医务工作者在此照料居民的健康，也是这座城市人口得以不断增长的原因。"
+ district_yuzu_city_dream_energy:0 "梦境发电区划"
+ district_yuzu_city_dream_energy_plural:0 "梦境发电区划"
+ district_yuzu_city_dream_energy_desc:0 "这座区划从幻梦境的混沌中提取纯粹的能量，让虚幻的雷鸣与发电机的嗡鸣一同为现实世界供能。"
+ district_yuzu_city_dream_minerals:0 "梦境采矿区划"
+ district_yuzu_city_dream_minerals_plural:0 "梦境采矿区划"
+ district_yuzu_city_dream_minerals_desc:0 "幻梦境的地下埋藏着无尽的矿物；在这座区划中，采矿依靠的不是钻头，而是想象力。"
+ district_yuzu_city_dream_food:0 "梦境农业区划"
+ district_yuzu_city_dream_food_plural:0 "梦境农业区划"
+ district_yuzu_city_dream_food_desc:0 "梦境中的土地永不贫瘠，只要播下思想的种子，这座区划便能收获丰饶的作物。"
  
 
  col_yuzu_city_capital:0 "帝国首都"

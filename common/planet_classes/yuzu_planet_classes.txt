@@ -39,7 +39,7 @@ pc_yuzu_abyss_city = {
 	ideal = yes
 	uses_alternative_skies_for_moons = yes
 
-	carry_cap_per_free_district = @carry_cap_high
+	carry_cap_per_free_district = 1200
 }
 
 pc_yuzu_sunset_city = {
@@ -82,5 +82,5 @@ pc_yuzu_sunset_city = {
 	ideal = yes
 	uses_alternative_skies_for_moons = yes
 
-	carry_cap_per_free_district = @carry_cap_high
+	carry_cap_per_free_district = 1200
 }
