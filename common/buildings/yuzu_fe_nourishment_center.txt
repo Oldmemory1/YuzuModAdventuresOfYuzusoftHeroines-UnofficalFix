@@ -39,6 +39,8 @@ building_yuzu_nourishment_center_tier_1 = {
 	planet_modifier = {
 		planet_housing_add = 800
 		planet_farmers_food_produces_add = 1.0
+		planet_farmers_trade_upkeep_add = 0.5
+		farmer_jobs_bonus_workforce_mult = 0.2
 	}
 
 	resources = {
@@ -104,6 +106,8 @@ building_yuzu_nourishment_center_tier_2 = {
 		planet_housing_add = 1600
 		pop_environment_tolerance = 0.05
 		planet_farmers_food_produces_add = 1.5
+		planet_farmers_trade_upkeep_add = 0.75
+		farmer_jobs_bonus_workforce_mult = 0.4
 	}
 
 	resources = {
@@ -169,6 +173,8 @@ building_yuzu_nourishment_center_tier_3 = {
 		planet_housing_add = 2400
 		pop_environment_tolerance = 0.1
 		planet_farmers_food_produces_add = 2.0
+		planet_farmers_trade_upkeep_add = 1
+		farmer_jobs_bonus_workforce_mult = 0.6
 	}
 
 	resources = {
@@ -234,6 +240,8 @@ building_yuzu_nourishment_center_tier_4 = {
 		planet_housing_add = 3200
 		pop_environment_tolerance = 0.15
 		planet_farmers_food_produces_add = 2.5
+		planet_farmers_trade_upkeep_add = 1.25
+		farmer_jobs_bonus_workforce_mult = 0.8
 	}
 
 	resources = {
@@ -299,6 +307,8 @@ building_yuzu_nourishment_center_tier_5 = {
 		planet_housing_add = 4000
 		pop_environment_tolerance = 0.2
 		planet_farmers_food_produces_add = 3.0
+		planet_farmers_trade_upkeep_add = 1.5
+		farmer_jobs_bonus_workforce_mult = 1
 	}
 
 	resources = {

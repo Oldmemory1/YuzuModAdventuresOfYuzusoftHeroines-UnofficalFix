@@ -39,6 +39,8 @@ building_yuzu_fe_mine_tier_1 = {
 	planet_modifier = {
 		planet_housing_add = 800
 		planet_miners_minerals_produces_add = 1.0
+		planet_miners_trade_upkeep_add = 0.5
+		miner_jobs_bonus_workforce_mult = 0.2
 	}
 
 	resources = {
@@ -103,6 +105,8 @@ building_yuzu_fe_mine_tier_2 = {
 	planet_modifier = {
 		planet_housing_add = 1600
 		planet_miners_minerals_produces_add = 1.5
+		planet_miners_trade_upkeep_add = 0.75
+		miner_jobs_bonus_workforce_mult = 0.4
 	}
 
 	resources = {
@@ -167,6 +171,8 @@ building_yuzu_fe_mine_tier_3 = {
 	planet_modifier = {
 		planet_housing_add = 2400
 		planet_miners_minerals_produces_add = 2.0
+		planet_miners_trade_upkeep_add = 1
+		miner_jobs_bonus_workforce_mult = 0.6
 	}
 
 	resources = {
@@ -231,6 +237,8 @@ building_yuzu_fe_mine_tier_4 = {
 	planet_modifier = {
 		planet_housing_add = 3200
 		planet_miners_minerals_produces_add = 2.5
+		planet_miners_trade_upkeep_add = 1.25
+		miner_jobs_bonus_workforce_mult = 0.8
 	}
 
 	resources = {
@@ -295,6 +303,8 @@ building_yuzu_fe_mine_tier_5 = {
 	planet_modifier = {
 		planet_housing_add = 4000
 		planet_miners_minerals_produces_add = 3.0
+		planet_miners_trade_upkeep_add = 1.5
+		miner_jobs_bonus_workforce_mult = 1
 	}
 
 	resources = {
