@@ -37,3 +37,13 @@ yuzu_d76_wartime_mobilization = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
 	icon_frame = 1
 }
+
+yuzu_galaxy_center = {
+	planet_jobs_produces_mult = 0.25
+	planet_jobs_upkeep_mult = -0.25
+	planet_buildings_produces_mult = 0.25
+	planet_buildings_upkeep_mult = -0.25
+	pop_housing_usage_mult = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+}

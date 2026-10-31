@@ -64,7 +64,7 @@ zone_yuzu_foundry_arcology = {
 		}
 	}
 
-	swap_type = district_yuzu_city_industry
+	swap_type = district_yuzu_city_foundry
 	swap_type_weight = 5
 
 	zone_sets = {
@@ -103,7 +103,7 @@ zone_yuzu_factory_arcology = {
 		}
 	}
 
-	swap_type = district_yuzu_city_industry
+	swap_type = district_yuzu_city_factory
 	swap_type_weight = 5
 
 	zone_sets = {
@@ -449,9 +449,15 @@ zone_yuzu_trade_arcology = {
 	}
 
 	included_building_sets = {
+		urban
 		trade
-		automation
+		urban_automation
+		urban_automation_arcology
 		origin
+	}
+
+	excluded_building_sets = {
+		urban_automation
 	}
 
 	inline_script = {
@@ -608,5 +614,736 @@ zone_yuzu_food_city_dream = {
 	inline_script = {
 		script = jobs/yuzu_zone_job_food
 		AMOUNT = 1200
+	}
+}
+
+# Galaxy Center Advanced Arcology Zones
+
+zone_yuzu_foundry_advanced = {
+	icon = GFX_district_specialization_foundry
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_foundry_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		foundry
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_alloy
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_factory_advanced = {
+	icon = GFX_district_specialization_factory
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_factory_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		factory
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_goods
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_unity_arcology_advanced = {
+	icon = GFX_district_specialization_unity
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+		owner = {
+			is_wilderness_empire = no
+			is_spiritualist = no
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+	}
+
+	swap_type = district_yuzu_city_administrative_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		unity
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_unity
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	convert_to = {
+		zone_yuzu_unity_spiritualist_arcology_advanced
+	}
+}
+
+zone_yuzu_unity_spiritualist_arcology_advanced = {
+	icon = GFX_district_specialization_priest
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+		owner = {
+			is_spiritualist = yes
+		}
+	}
+
+	swap_type = district_yuzu_city_religious_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		unity
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_priest
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	convert_to = {
+		zone_yuzu_unity_arcology_advanced
+	}
+}
+
+zone_yuzu_research_physics_arcology_advanced = {
+	icon = GFX_district_specialization_physics
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_research_physics_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		physics
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_physics
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_research_society_arcology_advanced = {
+	icon = GFX_district_specialization_society
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_research_society_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		society
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_society
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_research_engineering_arcology_advanced = {
+	icon = GFX_district_specialization_engineering
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_research_engineering_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		engineering
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_engineering
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_fortress_arcology_advanced = {
+	icon = GFX_district_specialization_fortress
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_fortress_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		fortress
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_soldier
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_trade_arcology_advanced = {
+	icon = GFX_district_specialization_trade
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_trade_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		urban
+		trade
+		urban_automation
+		urban_automation_arcology
+		origin
+	}
+
+	excluded_building_sets = {
+		urban_automation
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_trader
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+# Refinery Arcology Zones
+
+zone_yuzu_exotic_gases_refinery_arcology = {
+	icon = GFX_district_specialization_exotic_gases
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_exotic_gases
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_exotic_gases_refiner
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_rare_crystals_refinery_arcology = {
+	icon = GFX_district_specialization_rare_crystals
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_rare_crystals
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_rare_crystals_refiner
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_volatile_motes_refinery_arcology = {
+	icon = GFX_district_specialization_volatile_motes
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_volatile_motes
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_volatile_motes_refiner
+		AMOUNT = 1200
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_arcology_housing_negative
+	}
+}
+
+zone_yuzu_exotic_gases_refinery_arcology_advanced = {
+	icon = GFX_district_specialization_exotic_gases
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_exotic_gases_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_exotic_gases_refiner
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_rare_crystals_refinery_arcology_advanced = {
+	icon = GFX_district_specialization_rare_crystals
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_rare_crystals_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_rare_crystals_refiner
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
+	}
+}
+
+zone_yuzu_volatile_motes_refinery_arcology_advanced = {
+	icon = GFX_district_specialization_volatile_motes
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		hidden_trigger = { exists = owner }
+		has_planet_flag = yuzu_galaxy_center_planet
+		OR = {
+			is_planet_class = pc_yuzu_abyss_city
+			is_planet_class = pc_yuzu_sunset_city
+		}
+	}
+
+	swap_type = district_yuzu_city_volatile_motes_advanced
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_arcology
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_volatile_motes_refiner
+		AMOUNT = 3000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 1500
 	}
 }

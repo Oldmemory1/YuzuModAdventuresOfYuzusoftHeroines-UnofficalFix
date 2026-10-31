@@ -382,6 +382,12 @@
  enable_stare_abyss:0 "§H发布特殊项目：§!凝视深渊\n\n"
  describe_stare_abyss:0 "完成§Y凝视深渊§!，能够解锁§R深渊教廷§!的部分科技。"
  requires_tech_yuzu_all_in_one_theory:1"$TRIGGER_FAIL$需要£physics£§Y$tech_yuzu_all_in_one_theory$§!科技。"
+ ap_yuzu_galaxy_center:0"星河中心"
+ ap_yuzu_galaxy_center_desc:0"深渊之城与夕阳之城的建设技术已经成熟，我们有能力进一步扩展柚子文明的居住边界，为建造一座前所未有的超级都市奠定基础。"
+ enable_yuzu_galaxy_center:0 "§H解锁决议：§!星河中心\n\n"
+ describe_yuzu_galaxy_center:0 "允许在人口超过§Y80§!的§Y深渊之城§!或§Y夕阳之城§!上执行升格决议。目标行星类型不变；行星尺寸提升至§G100§!并获得§Y星河中心§!行星修正。若目标是夕阳之城，还会将梦境之地补充至100个。"
+ requires_tech_yuzu_abyss_city:1"$TRIGGER_FAIL$需要£engineering£§Y$tech_yuzu_abyss_city$§!科技。"
+ requires_tech_yuzu_sunset_city:1"$TRIGGER_FAIL$需要£engineering£§Y$tech_yuzu_sunset_city$§!科技。"
  YUZU_ABYSS_PROJECT:"凝视深渊"
  YUZU_ABYSS_PROJECT_DESC:"我们将深入理解那些深埋在深渊教廷遗址下的秘密，让这些禁忌的知识重新展现在我们眼前。"
  

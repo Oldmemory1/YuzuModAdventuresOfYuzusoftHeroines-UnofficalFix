@@ -65,3 +65,32 @@ ap_stare_abyss = {
 		factor = 20000
 	}
 }
+
+ap_yuzu_galaxy_center = {
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_yuzu_galaxy_center
+		}
+		is_YUZU = yes
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_tech_yuzu_abyss_city"
+			has_technology = tech_yuzu_abyss_city
+		}
+		custom_tooltip = {
+			fail_text = "requires_tech_yuzu_sunset_city"
+			has_technology = tech_yuzu_sunset_city
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = enable_yuzu_galaxy_center
+		custom_tooltip = describe_yuzu_galaxy_center
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

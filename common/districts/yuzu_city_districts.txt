@@ -512,6 +512,40 @@ district_yuzu_city_industry = {
 	}
 }
 
+district_yuzu_city_foundry = {
+	icon = district_arcology_arms_industry
+	overlay_icon = GFX_district_alloys
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_foundry
+	}
+}
+
+district_yuzu_city_factory = {
+	icon = district_arcology_civilian_industry
+	overlay_icon = GFX_district_consumer_goods
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_factory
+	}
+}
+
 district_yuzu_city_administrative = {
 	icon = district_arcology_administrative
 	overlay_icon = GFX_district_unity
@@ -651,6 +685,161 @@ district_yuzu_city_trade = {
 	}
 }
 
+# Galaxy Center Advanced Swap Districts (visual only)
+
+district_yuzu_city_foundry_advanced = {
+	icon = district_arcology_arms_industry
+	overlay_icon = GFX_district_alloys
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_foundry_advanced
+	}
+}
+
+district_yuzu_city_factory_advanced = {
+	icon = district_arcology_civilian_industry
+	overlay_icon = GFX_district_consumer_goods
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_factory_advanced
+	}
+}
+
+district_yuzu_city_administrative_advanced = {
+	icon = district_arcology_administrative
+	overlay_icon = GFX_district_unity
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_administrative_advanced
+	}
+}
+
+district_yuzu_city_religious_advanced = {
+	icon = district_arcology_spiritualist
+	overlay_icon = GFX_district_unity
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_religious_advanced
+	}
+}
+
+district_yuzu_city_research_physics_advanced = {
+	icon = district_arcology_research_physics
+	overlay_icon = GFX_district_physics
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_research_physics_advanced
+	}
+}
+
+district_yuzu_city_research_society_advanced = {
+	icon = district_arcology_research_society
+	overlay_icon = GFX_district_society
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_research_society_advanced
+	}
+}
+
+district_yuzu_city_research_engineering_advanced = {
+	icon = district_arcology_research_engineering
+	overlay_icon = GFX_district_engineering
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_research_engineering_advanced
+	}
+}
+
+district_yuzu_city_fortress_advanced = {
+	icon = district_arcology_fortress
+	overlay_icon = GFX_district_fortress
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_fortress_advanced
+	}
+}
+
+district_yuzu_city_trade_advanced = {
+	icon = district_arcology_trade
+	overlay_icon = GFX_district_trade
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_trade_advanced
+	}
+}
+
 
 # 见 scripts/make_yuzu_healthcare_district_icon.py）。
 district_yuzu_city_healthcare = {
@@ -720,5 +909,115 @@ district_yuzu_city_dream_food = {
 	}
 	triggered_name = {
 		text = district_yuzu_city_dream
+	}
+}
+
+# Refinery Arcology Swap Districts (visual only)
+
+district_yuzu_city_exotic_gases = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_exotic_gases
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_exotic_gases
+	}
+}
+
+district_yuzu_city_rare_crystals = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_rare_crystals
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_rare_crystals
+	}
+}
+
+district_yuzu_city_volatile_motes = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_volatile_motes
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_volatile_motes
+	}
+}
+
+district_yuzu_city_exotic_gases_advanced = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_exotic_gases
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_exotic_gases_advanced
+	}
+}
+
+district_yuzu_city_rare_crystals_advanced = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_rare_crystals
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_rare_crystals_advanced
+	}
+}
+
+district_yuzu_city_volatile_motes_advanced = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_volatile_motes
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_city_volatile_motes_advanced
 	}
 }

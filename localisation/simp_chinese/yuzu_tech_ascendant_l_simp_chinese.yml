@@ -1,0 +1,43 @@
+﻿l_simp_chinese:
+###################################################
+# Technology Ascendant - Breakthrough Technologies
+###################################################
+
+tech_materials_breakthrough: "纳米制造"
+tech_materials_breakthrough_desc: "我们可以制造非常非常小的机器人，让它们去制造其他非常非常小的机器人。这看起来非常可爱，绝不会演变成恐怖的灰色黏液危机。"
+
+tech_industry_breakthrough: "物质复制器"
+tech_industry_breakthrough_desc: "你所欲求的一切，皆可瞬间实现。欢迎来到未来。伯爵红茶，热的。"
+
+tech_rocketry_breakthrough: "无惯性推进器"
+tech_rocketry_breakthrough_desc: "每个作用力都有一个相等且反方向的反作用力。但如果我们能用局部超空间场把多余的惯性排进亚空间，同时在航行中保持舒适的 1G 加速度呢？"
+
+tech_particles_breakthrough: "预测量子力学"
+tech_particles_breakthrough_desc: "你不能同时知道粒子的位置和速度，但如果我们在猜测其中一个方面变得非常擅长呢？"
+
+tech_voidcraft_breakthrough: "活体星舰"
+tech_voidcraft_breakthrough_desc: "舰船将成为舰员的延伸，融合神经回路、自我保护协议和再生机制。不幸的是，这也意味着舰船可能会对频繁的升级或改装提交“不适”报告。官僚主义，永无止境。"
+
+tech_field_manipulation_breakthrough: "时间护盾"
+tech_field_manipulation_breakthrough_desc: "时间，比任何能量护盾都更加高效。小型的时间位移力场将确保攻击无法击中已经‘不在’的目标。"
+
+tech_computing_breakthrough: "受控奇点"
+tech_computing_breakthrough_desc: "自我优化的人工智能确实有可能迅速超越其创造者的智能。但我们把它关在一个非常坚固的盒子里，还硬编码了三大法则。完全安全，绝对放心。"
+
+tech_psionics_breakthrough: "心理史学"
+tech_psionics_breakthrough_desc: "个体难以预测，但群体却高度可预见。结合历史学、社会学与统计学，我们可以预测整个帝国的未来走向。"
+
+tech_new_worlds_breakthrough: "终极边疆"
+tech_new_worlds_breakthrough_desc: "以探索精神为驱动，配合高效规划与管理，我们能大大加快边疆殖民地的建设进程。"
+
+tech_biology_breakthrough: "基因重编码"
+tech_biology_breakthrough_desc: "进化是强大的力量，但其过程太过缓慢。即使是基因编辑也通常需要一代人才能见效。而现在，我们可以在生物体仍存活时，实时编辑其整个基因组。"
+
+tech_statecraft_breakthrough: "通用翻译器"
+tech_statecraft_breakthrough_desc: "语言不仅是不同物种间的障碍，还是同一物种内部文化差异的隔阂。通用翻译器有潜力彻底改变异星外交，乃至内部政治结构。"
+
+tech_military_theory_breakthrough: "大战略模拟"
+tech_military_theory_breakthrough_desc: "通过‘4X学派’开发的电脑模拟系统训练我们的指挥官，他们将能更好地探索、扩张、开发，或是灭绝——视情况而定。"
+
+tech_archeo_breakthrough: "神机降临"
+tech_archeo_breakthrough_desc: "古代算法让机器人也能穿越灵能帷幕。有机生命不再独占灵魂的通行证。"

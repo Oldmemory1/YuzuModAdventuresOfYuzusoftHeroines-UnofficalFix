@@ -65,6 +65,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/icons/ascension_perks/ap_stare_abyss.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_ap_yuzu_galaxy_center"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_yuzu_galaxy_center.dds"
+		alwaystransparent = yes
+	}
 	spriteType = {
 		name = "GFX_army_type_yuzu_werewolf"
 		texturefile = "gfx/interface/planetview/yuzu_werewolf.dds"
