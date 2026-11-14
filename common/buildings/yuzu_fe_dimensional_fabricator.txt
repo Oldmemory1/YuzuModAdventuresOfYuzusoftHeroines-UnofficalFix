@@ -1,5 +1,5 @@
 ########## 失落建筑 —— dimensional_fabricator（tier 1~5）##########
-# **本文件由 scripts/gen_yuzu_fe_buildings.py 从 csvs/yuzu_fe_buildings.csv 生成，勿手改**
+# **本文件由 yuzu_fe_building_development/scripts/gen_yuzu_fe_buildings.py 从 data/source/yuzu_fe_buildings.csv 生成，勿手改**
 
 ##### 多重次元复制机 #####
 building_yuzu_dimensional_fabricator_tier_1 = {

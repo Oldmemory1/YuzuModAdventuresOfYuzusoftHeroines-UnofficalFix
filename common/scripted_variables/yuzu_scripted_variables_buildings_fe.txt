@@ -1,5 +1,5 @@
 # ===== 失落建筑（yuzu FE）统一造价 / 维护 / 建造时间（按档位）=====
-# 由 yuzu_fe_buildings.csv 整理；tier_1~3 = 600 天，tier_4~5 = 1200 天
+# 由 data/source/yuzu_fe_buildings.csv 整理；tier_1~3 = 600 天，tier_4~5 = 1200 天
 
 @yuzu_fe_b_alloy_cost_1 = 3000
 @yuzu_fe_b_alloy_cost_2 = 4000

@@ -1,0 +1,176 @@
+# 失落建筑 · 岗位效率循环科技（由 yuzu_repeatable_technology_development/generate_yuzu_repeatable_technology.py 生成，勿手改）
+# 每级 +2% 岗位效率（jobs_bonus_workforce_mult）；成本 50000 + 5000/级
+tech_yuzu_repeatable_efficiency_technician = {
+	area = physics
+	cost = 50000
+	cost_per_level = 5000
+	tier = @repeatableTechTier
+	category = { field_manipulation }
+	ai_update_type = all
+	levels = -1
+	prerequisites = { "tech_building_yuzu_class_4_singularity_tier_5" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+
+	modifier = {
+		technician_jobs_bonus_workforce_mult = 0.02
+	}
+}
+
+tech_yuzu_repeatable_efficiency_miner = {
+	area = engineering
+	cost = 50000
+	cost_per_level = 5000
+	tier = @repeatableTechTier
+	category = { industry }
+	ai_update_type = all
+	levels = -1
+	prerequisites = { "tech_building_yuzu_fe_mine_tier_5" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+
+	modifier = {
+		miner_jobs_bonus_workforce_mult = 0.02
+	}
+}
+
+tech_yuzu_repeatable_efficiency_farmer = {
+	area = society
+	cost = 50000
+	cost_per_level = 5000
+	tier = @repeatableTechTier
+	category = { biology }
+	ai_update_type = all
+	levels = -1
+	prerequisites = { "tech_building_yuzu_nourishment_center_tier_5" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+
+	modifier = {
+		farmer_jobs_bonus_workforce_mult = 0.02
+	}
+}
+
+tech_yuzu_repeatable_efficiency_foundry = {
+	area = engineering
+	cost = 50000
+	cost_per_level = 5000
+	tier = @repeatableTechTier
+	category = { materials }
+	ai_update_type = all
+	levels = -1
+	prerequisites = { "tech_building_yuzu_nano_forge_tier_5" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+
+	modifier = {
+		foundry_jobs_bonus_workforce_mult = 0.02
+	}
+}
+
+tech_yuzu_repeatable_efficiency_artisan = {
+	area = engineering
+	cost = 50000
+	cost_per_level = 5000
+	tier = @repeatableTechTier
+	category = { materials }
+	ai_update_type = all
+	levels = -1
+	prerequisites = { "tech_building_yuzu_affluence_center_tier_5" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		is_YUZU = yes
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	ai_weight = {
+		factor = 50
+	}
+
+	modifier = {
+		artisan_jobs_bonus_workforce_mult = 0.02
+	}
+}

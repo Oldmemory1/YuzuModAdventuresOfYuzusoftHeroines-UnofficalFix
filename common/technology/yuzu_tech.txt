@@ -1828,7 +1828,7 @@ tech_yuzu_crystal_armor_2 = {
 #   精英 = @yuzu_tier6cost4 / weight4（同 tech_yuzu_armor_1_elite）
 #   太初 = @yuzu_tier6cost5 / weight5（同 tech_yuzu_armor_1_master）
 #   先进深渊 = @yuzu_tier6cost2 / weight2（同 tech_yuzu_armor_2，带 is_dangerous）
-# 详见 markdowns/yuzu_armor_spacetime.md §二。
+# 详见 yuzu_weapon_design_development/docs/yuzu_armor_spacetime.md §二。
 
 tech_yuzu_crystal_armor_1_advanced = {
 	area = engineering
@@ -2143,7 +2143,7 @@ tech_yuzu_composite_armor_2_advanced = {
 # 只有前置科技按设计走：
 #   Tier1   = 时空乱流发射器（tech_yuzu_l_1）
 #   先进以上 = 上一档时空粒子发射器 + 同档时空乱流发射器
-# 详见 markdowns/yuzu_spacetime_weapon_tiers.md §9.A。
+# 详见 yuzu_weapon_design_development/docs/yuzu_spacetime_weapon_tiers.md §9.A。
 
 tech_yuzu_particle_1 = {
 	cost = @yuzu_tier5cost5

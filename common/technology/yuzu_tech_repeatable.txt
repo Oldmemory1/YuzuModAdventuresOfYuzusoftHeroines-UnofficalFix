@@ -39,7 +39,7 @@ tech_yuzu_repeatable_spacetime_turbulence_damage = {
 	}
 
 	modifier = {
-		weapon_type_spacetime_turbulence_weapon_damage_mult = 0.50
+		weapon_type_spacetime_turbulence_weapon_damage_mult = 1.00
 	}
 }
 
@@ -82,7 +82,7 @@ tech_yuzu_repeatable_spacetime_turbulence_fire_rate = {
 	}
 
 	modifier = {
-		weapon_type_spacetime_turbulence_weapon_fire_rate_mult = 0.50
+		weapon_type_spacetime_turbulence_weapon_fire_rate_mult = 1.00
 	}
 }
 
@@ -99,7 +99,6 @@ tech_yuzu_repeatable_abyss_damage = {
 
 	potential = {
 		is_YUZU = yes
-		has_country_flag = yuzu_abyss_project
 	}
 
 	weight_modifier = {
@@ -126,7 +125,7 @@ tech_yuzu_repeatable_abyss_damage = {
 	}
 
 	modifier = {
-		weapon_type_abyss_weapon_damage_mult = 0.50
+		weapon_type_abyss_weapon_damage_mult = 1.00
 	}
 }
 
@@ -143,7 +142,6 @@ tech_yuzu_repeatable_abyss_fire_rate = {
 
 	potential = {
 		is_YUZU = yes
-		has_country_flag = yuzu_abyss_project
 	}
 
 	weight_modifier = {
@@ -170,11 +168,11 @@ tech_yuzu_repeatable_abyss_fire_rate = {
 	}
 
 	modifier = {
-		weapon_type_abyss_weapon_fire_rate_mult = 0.50
+		weapon_type_abyss_weapon_fire_rate_mult = 1.00
 	}
 }
 
-# 社会学会循环：资源存储上限。每级 +500000 资源容量。
+# 社会学会循环：资源存储上限。每级 +1000000 资源容量。
 # 图标参考原版宇宙创生(cosmogenesis)失落帝国仓库科技 tech_fe_silo_1，加黄角标(循环箭头)。
 tech_yuzu_repeatable_resource_storage = {
 	area = society
@@ -203,6 +201,6 @@ tech_yuzu_repeatable_resource_storage = {
 	}
 
 	modifier = {
-		country_resource_max_add = 500000
+		country_resource_max_add = 1000000
 	}
 }
