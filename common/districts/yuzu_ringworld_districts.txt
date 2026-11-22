@@ -1,0 +1,997 @@
+# 柚子环世界区划（都市 6 + 夕阳梦境 1 + 视觉 swap 14）
+#
+# 都市区划（深渊 / 夕阳各 3 个）替换原版 district_rw_urban_1/2/3：
+# - 数值：360 天、矿物 1000、能量 5 维护、基础住房 5000
+#   （以及原版的触发式住房加成、tankbound 监督者岗位、奥术发电机说明）。
+# - potential 只匹配对应柚子行星类，不排除格式塔；格式塔的住房由原版
+#   district_rw_hive / district_rw_nexus 提供，本文件不重定义它们。
+# - 槽位见 common/zone_slots/yuzu_ringworld_zone_slots.txt：
+#   6 个都市槽位共用 yuzu_ring_world_urban 集。
+# - 夕阳另有梦境区段 district_yuzu_sunset_ringworld_dream：普通区划、
+#   5000 住房、只允许 yuzu_sunset_ring_world_dream 集（发电 / 采矿 / 农业）。
+# - 文件末尾 14 个 swap district 为纯视觉，被 zone 的 swap_type 引用。
+# - 原版 district_rw_urban_1/2/3 由
+#   common/districts/zzz_override_yuzu_ringworld_urban_districts.txt 排除本行星类，
+#   并把本文件的区划加进 convert_to，避免新旧塔楼区划同时出现。
+
+district_yuzu_abyss_ringworld_urban_1 = {
+	icon = district_rw_city_secondary
+	base_buildtime = 360
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_abyss_ringworld_urban_01
+	}
+
+	convert_to = {
+		district_rw_urban_1
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		exists = owner
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+district_yuzu_abyss_ringworld_urban_2 = {
+	icon = district_rw_city_secondary
+	base_buildtime = 360
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_abyss_ringworld_urban_02
+	}
+
+	convert_to = {
+		district_rw_urban_2
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		exists = owner
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+district_yuzu_abyss_ringworld_urban_3 = {
+	icon = district_rw_city_secondary
+	base_buildtime = 360
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_abyss_ringworld_urban_03
+	}
+
+	convert_to = {
+		district_rw_urban_3
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		exists = owner
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+district_yuzu_sunset_ringworld_urban_1 = {
+	icon = district_rw_city_secondary
+	base_buildtime = 360
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_sunset_ringworld_urban_01
+	}
+
+	convert_to = {
+		district_rw_urban_1
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		exists = owner
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+district_yuzu_sunset_ringworld_urban_2 = {
+	icon = district_rw_city_secondary
+	base_buildtime = 360
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_sunset_ringworld_urban_02
+	}
+
+	convert_to = {
+		district_rw_urban_2
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		exists = owner
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+district_yuzu_sunset_ringworld_urban_3 = {
+	icon = district_rw_city_secondary
+	base_buildtime = 360
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_yuzu_sunset_ringworld_urban_03
+	}
+
+	convert_to = {
+		district_rw_urban_3
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		exists = owner
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+
+# =============================================================================
+# 夕阳环世界梦境区段（普通区划，占区划上限）
+# =============================================================================
+
+district_yuzu_sunset_ringworld_dream = {
+	icon = district_yuzu_city_dream
+	base_buildtime = 360
+
+	exempt_from_ai_planet_specialization = yes
+
+	zone_slots = {
+		slot_yuzu_sunset_ringworld_dream
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		exists = owner
+	}
+
+	convert_to = {
+		district_rw_urban_1
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+}
+
+# =============================================================================
+# Swap Districts（纯视觉；被柚子环世界 zone 的 swap_type 引用）
+# =============================================================================
+
+district_yuzu_ringworld_industrial = {
+	icon = district_arcology_mixed_industry
+	overlay_icon = GFX_district_mixed_industry
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_industrial
+	}
+}
+
+district_yuzu_ringworld_foundry = {
+	icon = district_arcology_arms_industry
+	overlay_icon = GFX_district_alloys
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_foundry
+	}
+}
+
+district_yuzu_ringworld_factory = {
+	icon = district_arcology_civilian_industry
+	overlay_icon = GFX_district_consumer_goods
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_factory
+	}
+}
+
+district_yuzu_ringworld_exotic_gases_refinery = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_exotic_gases
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_exotic_gases_refinery
+	}
+}
+
+district_yuzu_ringworld_rare_crystals_refinery = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_rare_crystals
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_rare_crystals_refinery
+	}
+}
+
+district_yuzu_ringworld_volatile_motes_refinery = {
+	icon = district_yuzu_city_refinery
+	overlay_icon = GFX_district_volatile_motes
+	gridbox = district_industrial
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_volatile_motes_refinery
+	}
+}
+
+district_yuzu_sunset_ringworld_dream_energy = {
+	icon = district_yuzu_city_dream
+	overlay_icon = GFX_district_energy
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_sunset_ringworld_dream_energy
+	}
+}
+
+district_yuzu_sunset_ringworld_dream_minerals = {
+	icon = district_yuzu_city_dream
+	overlay_icon = GFX_district_minerals
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_sunset_ringworld_dream_minerals
+	}
+}
+
+district_yuzu_sunset_ringworld_dream_food = {
+	icon = district_yuzu_city_dream
+	overlay_icon = GFX_district_food
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_sunset_ringworld_dream_food
+	}
+}
+
+
+district_yuzu_ringworld_trade = {
+	icon = district_arcology_trade
+	overlay_icon = GFX_district_trade
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_trade
+	}
+}
+
+district_yuzu_ringworld_research_physics = {
+	icon = district_arcology_research_physics
+	overlay_icon = GFX_district_physics
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_research_physics
+	}
+}
+
+district_yuzu_ringworld_research_society = {
+	icon = district_arcology_research_society
+	overlay_icon = GFX_district_society
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_research_society
+	}
+}
+
+district_yuzu_ringworld_research_engineering = {
+	icon = district_arcology_research_engineering
+	overlay_icon = GFX_district_engineering
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_research_engineering
+	}
+}
+
+district_yuzu_ringworld_unity = {
+	icon = district_arcology_administrative
+	overlay_icon = GFX_district_unity
+	zone_slots = {
+		slot_empty
+	}
+	show_on_uncolonized = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	triggered_name = {
+		text = district_yuzu_ringworld_unity
+	}
+}

@@ -1,0 +1,87 @@
+# 柚子环世界都市区划槽位
+#
+# 深渊 / 夕阳各 3 个都市区划槽位，共用 urban zone 集；
+# 夕阳另有 1 个梦境区段槽位，只放发电 / 采矿 / 农业。
+#
+# 槽位集合由 common/zones/yuzu_ringworld_zones.txt 中的 zone_sets 标签定义：
+#   yuzu_ring_world_urban      —— 工业 / 精炼 / 贸易 / 研究 / 凝聚
+#   yuzu_sunset_ring_world_dream  —— 发电 / 采矿 / 农业
+#
+# unlock 用行星类限定：这些槽位只应出现在对应柚子环世界的区划上。
+
+slot_yuzu_abyss_ringworld_urban_01 = {
+	# 集合定义见 common/zones/yuzu_ringworld_zones.txt。
+	included_zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	unlock = { # planet scope
+		is_planet_class = pc_yuzu_abyss_ringworld
+	}
+}
+
+slot_yuzu_abyss_ringworld_urban_02 = {
+	# 集合定义见 common/zones/yuzu_ringworld_zones.txt。
+	included_zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	unlock = { # planet scope
+		is_planet_class = pc_yuzu_abyss_ringworld
+	}
+}
+
+slot_yuzu_abyss_ringworld_urban_03 = {
+	# 集合定义见 common/zones/yuzu_ringworld_zones.txt。
+	included_zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	unlock = { # planet scope
+		is_planet_class = pc_yuzu_abyss_ringworld
+	}
+}
+
+slot_yuzu_sunset_ringworld_urban_01 = {
+	# 集合定义见 common/zones/yuzu_ringworld_zones.txt。
+	included_zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	unlock = { # planet scope
+		is_planet_class = pc_yuzu_sunset_ringworld
+	}
+}
+
+slot_yuzu_sunset_ringworld_urban_02 = {
+	# 集合定义见 common/zones/yuzu_ringworld_zones.txt。
+	included_zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	unlock = { # planet scope
+		is_planet_class = pc_yuzu_sunset_ringworld
+	}
+}
+
+slot_yuzu_sunset_ringworld_urban_03 = {
+	# 集合定义见 common/zones/yuzu_ringworld_zones.txt。
+	included_zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	unlock = { # planet scope
+		is_planet_class = pc_yuzu_sunset_ringworld
+	}
+}
+
+slot_yuzu_sunset_ringworld_dream = {
+	# 夕阳环世界梦境区段专用：只放发电 / 采矿 / 农业。
+	included_zone_sets = {
+		yuzu_sunset_ring_world_dream
+	}
+
+	unlock = { # planet scope
+		is_planet_class = pc_yuzu_sunset_ringworld
+	}
+}

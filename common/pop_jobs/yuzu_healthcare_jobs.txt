@@ -1,0 +1,98 @@
+# YUZU 医疗岗位定义
+# 数值来源：yuzu_advanced_jobs/data_design.csv 第 26-27 行。
+# 精英医务工作者（yuzu_elite_healthcare）按 CSV 为 specialist；
+# 医务主管（yuzu_elite_healthcare_manager）按 CSV 为 ruler。
+# 注意：planet_amenities_add、logistic_growth_mult、bonus_pop_growth_mult、
+# planet_pops_organics_upkeep_mult 是行星修正，不是资源 key，因此写入 planet_modifier，
+# resources 中只保留 category 与 upkeep。
+# 不 include 原版 output/healthcare_triggered_modifiers，避免引入 CSV 之外的效果。
+
+yuzu_elite_healthcare = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_medical_2
+			icon = yuzu_elite_healthcare
+		}
+	}
+
+	tags = { pop_growth amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_doctors
+		upkeep = {
+			consumer_goods = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 3750
+		logistic_growth_mult = 0.10
+		bonus_pop_growth_mult = 0.10
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
+
+yuzu_elite_healthcare_manager = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_medical_2
+			icon = yuzu_healthcare_manager
+		}
+	}
+
+	tags = { pop_growth amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_doctors
+		upkeep = {
+			consumer_goods = 25
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 20000
+		logistic_growth_mult = 0.25
+		bonus_pop_growth_mult = 0.25
+		planet_pops_organics_upkeep_mult = -0.05
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+}

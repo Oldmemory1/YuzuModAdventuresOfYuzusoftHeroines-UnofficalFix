@@ -32,8 +32,24 @@ building_yuzu_fe_lab_tier_1 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_research
-		AMOUNT = 800
+		script = jobs/yuzu_building_job_elite_researcher
+		AMOUNT = 840
+		DRONE_AMOUNT = 280
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_physics
+		AMOUNT = 120
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_society
+		AMOUNT = 120
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_engineering
+		AMOUNT = 120
 	}
 
 	planet_modifier = {
@@ -106,8 +122,24 @@ building_yuzu_fe_lab_tier_2 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_research
-		AMOUNT = 1600
+		script = jobs/yuzu_building_job_elite_researcher
+		AMOUNT = 1680
+		DRONE_AMOUNT = 560
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_physics
+		AMOUNT = 240
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_society
+		AMOUNT = 240
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_engineering
+		AMOUNT = 240
 	}
 
 	planet_modifier = {
@@ -180,8 +212,24 @@ building_yuzu_fe_lab_tier_3 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_research
-		AMOUNT = 2400
+		script = jobs/yuzu_building_job_elite_researcher
+		AMOUNT = 2520
+		DRONE_AMOUNT = 840
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_physics
+		AMOUNT = 360
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_society
+		AMOUNT = 360
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_engineering
+		AMOUNT = 360
 	}
 
 	planet_modifier = {
@@ -254,8 +302,24 @@ building_yuzu_fe_lab_tier_4 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_research
-		AMOUNT = 3200
+		script = jobs/yuzu_building_job_elite_researcher
+		AMOUNT = 3360
+		DRONE_AMOUNT = 1120
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_physics
+		AMOUNT = 480
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_society
+		AMOUNT = 480
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_engineering
+		AMOUNT = 480
 	}
 
 	planet_modifier = {
@@ -328,8 +392,24 @@ building_yuzu_fe_lab_tier_5 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_research
-		AMOUNT = 4000
+		script = jobs/yuzu_building_job_elite_researcher
+		AMOUNT = 4200
+		DRONE_AMOUNT = 1400
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_physics
+		AMOUNT = 600
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_society
+		AMOUNT = 600
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_researcher_manager_engineering
+		AMOUNT = 600
 	}
 
 	planet_modifier = {

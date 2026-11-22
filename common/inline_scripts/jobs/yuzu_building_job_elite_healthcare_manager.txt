@@ -1,0 +1,25 @@
+# 主管岗位分发（建筑用）：常规帝国 → yuzu 主管岗位；格式塔帝国 → 降级为普通岗位的子个体
+# 常规
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		job_yuzu_elite_healthcare_manager_add = $AMOUNT$
+	}
+}
+# 格式塔（降级为普通子个体：孵育子个体）
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	modifier = {
+		job_spawning_drone_add = $AMOUNT$
+	}
+}

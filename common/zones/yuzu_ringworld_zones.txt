@@ -1,0 +1,672 @@
+# 柚子环世界 zone
+#
+# 参照 common/zones/yuzu_zones.txt 的城市 zone 写法：
+# - 360 天、矿物 1000、无 zone 级维护；
+# - 每个 zone 给 +3 建筑槽；
+# - 每个 zone 给 +5000 住房（由 triggered_district_planet_modifier 提供，按区划等级叠加）；
+# - 岗位通过现有 inline script 分发，AMOUNT 直接写字面量（1/100 个岗位，再乘区划等级）。
+#
+# zone 集：
+#   yuzu_ring_world_urban      —— 两座柚子环世界共用：混合工业、重工业、民用工业、三种精炼、
+#                                 贸易、物理学/社会学/工程学三种研究、凝聚力
+#   yuzu_sunset_ring_world_dream  —— 夕阳环世界专属：发电、采矿、农业
+#
+# 槽位见 common/zone_slots/yuzu_ringworld_zone_slots.txt。
+# 注意：混合工业按“每个特化合计 10000 岗位”拆成 goods 5000 + alloy 5000；
+# 若本意是合金/消费品各 10000，直接把两个 AMOUNT 都改成 10000。
+
+# =============================================================================
+# 共享 urban zone（深渊环世界与夕阳环世界都能用）
+# =============================================================================
+
+zone_yuzu_ringworld_industrial = {
+	icon = GFX_district_specialization_industrial
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_industrial
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_goods
+		AMOUNT = 5000
+	}
+	inline_script = {
+		script = jobs/yuzu_zone_job_alloy
+		AMOUNT = 5000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_foundry = {
+	icon = GFX_district_specialization_foundry
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_foundry
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		foundry
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_alloy
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_factory = {
+	icon = GFX_district_specialization_factory
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_factory
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		factory
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_goods
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_exotic_gases_refinery = {
+	icon = GFX_district_specialization_exotic_gases
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_exotic_gases_refinery
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_exotic_gases_refiner
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_rare_crystals_refinery = {
+	icon = GFX_district_specialization_rare_crystals
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_rare_crystals_refinery
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_rare_crystals_refiner
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_volatile_motes_refinery = {
+	icon = GFX_district_specialization_volatile_motes
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_volatile_motes_refinery
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		industrial
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_volatile_motes_refiner
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_trade = {
+	icon = GFX_district_specialization_trade
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_trade
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		urban
+		trade
+		urban_automation_arcology
+		origin
+	}
+
+	excluded_building_sets = {
+		urban_automation
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_trader
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_research_physics = {
+	icon = GFX_district_specialization_physics
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_research_physics
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		physics
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_physics
+		AMOUNT = 5000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_research_society = {
+	icon = GFX_district_specialization_society
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_research_society
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		society
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_society
+		AMOUNT = 5000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_research_engineering = {
+	icon = GFX_district_specialization_engineering
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_research_engineering
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		engineering
+		research
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_engineering
+		AMOUNT = 5000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_ringworld_unity = {
+	icon = GFX_district_specialization_unity
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			is_planet_class = pc_yuzu_abyss_ringworld
+			is_planet_class = pc_yuzu_sunset_ringworld
+		}
+	}
+
+	swap_type = district_yuzu_ringworld_unity
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_ring_world_urban
+	}
+
+	included_building_sets = {
+		unity
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_unity
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+# =============================================================================
+# 夕阳环世界梦境 zone（仅夕阳环世界）
+# =============================================================================
+
+zone_yuzu_sunset_ringworld_energy = {
+	icon = GFX_district_specialization_energy
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_yuzu_sunset_ringworld
+	}
+
+	swap_type = district_yuzu_sunset_ringworld_dream_energy
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_sunset_ring_world_dream
+	}
+
+	included_building_sets = {
+		generator
+		fallen_empire_generator
+		automation
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_energy
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_sunset_ringworld_minerals = {
+	icon = GFX_district_specialization_minerals
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_yuzu_sunset_ringworld
+	}
+
+	swap_type = district_yuzu_sunset_ringworld_dream_minerals
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_sunset_ring_world_dream
+	}
+
+	included_building_sets = {
+		mining
+		fallen_empire_mining
+		automation
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_minerals
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}
+
+zone_yuzu_sunset_ringworld_food = {
+	icon = GFX_district_specialization_food
+
+	base_buildtime = 360
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = 1000
+		}
+	}
+
+	potential = {
+		exists = owner
+		is_planet_class = pc_yuzu_sunset_ringworld
+	}
+
+	swap_type = district_yuzu_sunset_ringworld_dream_food
+	swap_type_weight = 5
+
+	zone_sets = {
+		yuzu_sunset_ring_world_dream
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		automation
+		fallen_empire_farming
+	}
+
+	inline_script = {
+		script = jobs/yuzu_zone_job_food
+		AMOUNT = 10000
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = 5000
+	}
+}

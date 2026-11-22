@@ -1,0 +1,244 @@
+# 高级工匠 / 高级工艺师 / 工匠主管 / 工艺主管
+# key 约定：common/pop_jobs 定义 key = CSV 中 job_yuzu_* 去掉 job_ 前缀
+#   job_yuzu_elite_artisan          -> yuzu_elite_artisan
+#   job_yuzu_elite_artificier       -> yuzu_elite_artificier
+#   job_yuzu_elite_artisan_manager  -> yuzu_elite_artisan_manager
+#   job_yuzu_elite_artificier_manager -> yuzu_elite_artificier_manager
+# 数值来源：yuzu_advanced_jobs/data_design.csv 第 12-19 行。
+# 能工巧匠判定复用原版 artisan_is_artificer_trigger（is_crafter_empire），
+# 催化加工判定复用原版 industrial_jobs_are_catalytic_trigger。
+
+yuzu_elite_artisan = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_factory_1
+			icon = yuzu_elite_artisan
+		}
+		# 能工巧匠：显示为高级工艺师，产出另由下方条件 produces 块补足
+		swap_type = {
+			trigger = {
+				artisan_is_artificer_trigger = yes
+			}
+			name = yuzu_elite_artificier
+			desc = job_yuzu_elite_artificier_desc
+			icon = yuzu_elite_artificier
+			weight = 5
+		}
+	}
+
+	tags = { consumer_goods }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_artisans
+
+		# 基础产出：20 消费品 + 4 工程学研究
+		produces = {
+			consumer_goods = 20
+			engineering_research = 4
+		}
+
+		# 能工巧匠 swap：额外 +5 消费品、+5 贸易（合计 25 消费品）
+		produces = {
+			trigger = {
+				artisan_is_artificer_trigger = yes
+			}
+			consumer_goods = 5
+			trade = 5
+		}
+
+		# 非催化维护费：36 矿物
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = no
+			}
+			minerals = 36
+		}
+
+		# 催化加工维护费：非能工巧匠 54 食物
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+				NOT = { artisan_is_artificer_trigger = yes }
+			}
+			food = 54
+		}
+
+		# 催化加工 + 能工巧匠：CSV 第 18 行写的是 54 矿物，照实实现
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+				artisan_is_artificer_trigger = yes
+			}
+			minerals = 54
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_consumer_goods"
+}
+
+# 高级工艺师：仅用于 yuzu_elite_artisan 的 swap 显示与本地化，
+# 不是可独立填充的岗位（原版 artificer placeholder 的写法）。
+yuzu_elite_artificier = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_factory_1
+			icon = yuzu_elite_artificier
+		}
+	}
+
+	tags = { consumer_goods }
+
+	resources = {
+		category = planet_artisans
+	}
+
+	possible = {
+		always = no
+	}
+}
+
+yuzu_elite_artisan_manager = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_factory_1
+			icon = yuzu_elite_artisan_manager
+		}
+		# 能工巧匠：显示为工艺主管
+		swap_type = {
+			trigger = {
+				artisan_is_artificer_trigger = yes
+			}
+			name = yuzu_elite_artificier_manager
+			desc = job_yuzu_elite_artificier_manager_desc
+			icon = yuzu_elite_artificier_manager
+			weight = 5
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_artisans
+
+		# 基础产出：100 消费品 + 20 工程学研究 + 5 凝聚力
+		produces = {
+			consumer_goods = 100
+			engineering_research = 20
+			unity = 5
+		}
+
+		# 能工巧匠 swap：额外 +25 消费品、+25 贸易（合计 125 消费品）
+		produces = {
+			trigger = {
+				artisan_is_artificer_trigger = yes
+			}
+			consumer_goods = 25
+			trade = 25
+		}
+
+		# 活体金属维护费不随催化/能工巧匠变化
+		upkeep = {
+			sr_living_metal = 1
+		}
+
+		# 非催化维护费：180 矿物（能工巧匠时同样为 180 矿物）
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = no
+			}
+			minerals = 180
+		}
+
+		# 催化加工：270 食物（仅非能工巧匠）
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+				NOT = { artisan_is_artificer_trigger = yes }
+			}
+			food = 270
+		}
+
+		# 催化加工 + 能工巧匠：CSV 第 19 行写的是 270 矿物，照实实现
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+				artisan_is_artificer_trigger = yes
+			}
+			minerals = 270
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.03
+		planet_artisans_upkeep_mult = 0.03
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_consumer_goods"
+}
+
+# 工艺主管：仅用于 yuzu_elite_artisan_manager 的 swap 显示与本地化。
+yuzu_elite_artificier_manager = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_factory_1
+			icon = yuzu_elite_artificier_manager
+		}
+	}
+
+	resources = {
+		category = planet_artisans
+	}
+
+	possible = {
+		always = no
+	}
+}

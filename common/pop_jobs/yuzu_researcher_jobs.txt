@@ -1,0 +1,206 @@
+# YUZU 精英研究岗位定义
+# 数值来源：yuzu_advanced_jobs/data_design.csv 第 20-23 行
+# 结构参考：原版 common/pop_jobs/02_specialist_jobs.txt（physicist）与 01_ruler_jobs.txt（politician）
+# 共 4 个岗位：1 个高级研究员（specialist）+ 3 个学科研究主管（ruler）。
+# CSV 中的 violate_motes 为拼写错误，实际资源 key 为 volatile_motes。
+# CSV 中社会学主管写的是 planet_sociologists_produces_mult / planet_sociologists_upkeep_mult，
+# 但原版 4.5 没有 planet_sociologists 经济类别；社会学研究岗位类别实际为 planet_biologists，
+# 因此这里映射为 planet_biologists_produces_mult / planet_biologists_upkeep_mult。
+
+yuzu_elite_researcher = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_research_lab_1
+			icon = yuzu_elite_researcher
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		complex_specialist_job_check_trigger = yes
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 6
+			society_research = 6
+			engineering_research = 6
+			unity = 5
+		}
+		upkeep = {
+			consumer_goods = 12
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+}
+
+yuzu_elite_researcher_manager_physics = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_research_lab_1
+			icon = yuzu_elite_researcher_manager_physics
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 100
+			unity = 25
+		}
+		upkeep = {
+			consumer_goods = 60
+			volatile_motes = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.03
+		planet_physicists_upkeep_mult = 0.03
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+}
+
+yuzu_elite_researcher_manager_society = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_research_lab_1
+			icon = yuzu_elite_researcher_manager_society
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			society_research = 100
+			unity = 25
+		}
+		upkeep = {
+			consumer_goods = 60
+			exotic_gases = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.03
+		planet_biologists_upkeep_mult = 0.03
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+}
+
+yuzu_elite_researcher_manager_engineering = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_research_lab_1
+			icon = yuzu_elite_researcher_manager_engineering
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			engineering_research = 100
+			unity = 25
+		}
+		upkeep = {
+			consumer_goods = 60
+			rare_crystals = 2
+		}
+	}
+
+	planet_modifier = {
+		# 注意：CSV 要求 planet_engineers_produces_mult，但原版 4.5 的 planet_engineers
+		# 经济类别在 common/economic_categories/01_job_categories.txt 中注释掉了
+		# produces 倍率生成（generate_mult_modifiers 仅保留 upkeep），
+		# 因此 CWTools 会对此键报 CW262。此处按 CSV 原样保留。
+		planet_jobs_engineering_research_produces_mult = 0.03
+		planet_engineers_upkeep_mult = 0.03
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+}

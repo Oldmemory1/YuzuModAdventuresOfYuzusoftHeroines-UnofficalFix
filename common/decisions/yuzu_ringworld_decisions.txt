@@ -1,0 +1,89 @@
+# 柚子环世界改造决议
+#
+# 直接从原版可殖民环世界区段（pc_ringworld_habitable）改造，不经过“都市型环世界”中间态。
+# 成本 / 时间：500 影响力 + 50000 矿物，3600 天（每区段一次）。
+# 图标复用深渊之城 / 夕阳之城的决议图标，不新建贴图。
+#
+# 效果：change_pc + validate_and_repair_planet_buildings_and_districts
+# - district_set 保持 ring_world，原版住房区划（district_rw_city 等）不受影响；
+# - 原有 district_rw_urban_1/2/3 会通过覆盖文件里的 convert_to 转成对应柚子区划。
+
+decision_yuzu_abyss_ringworld = {
+	owned_planets_only = yes
+	icon = decision_yuzu_abyss_city
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 500
+			minerals = 50000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_ringworld_habitable
+		exists = owner
+		owner = {
+			is_YUZU = yes
+			has_technology = tech_yuzu_abyss_city
+			has_technology = tech_mega_engineering
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = decision_yuzu_abyss_ringworld_effects
+		hidden_effect = {
+			change_pc = pc_yuzu_abyss_ringworld
+			validate_and_repair_planet_buildings_and_districts = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+}
+
+decision_yuzu_sunset_ringworld = {
+	owned_planets_only = yes
+	icon = decision_yuzu_sunset_city
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 500
+			minerals = 50000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_ringworld_habitable
+		exists = owner
+		owner = {
+			is_YUZU = yes
+			has_technology = tech_yuzu_sunset_city
+			has_technology = tech_mega_engineering
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		custom_tooltip = decision_yuzu_sunset_ringworld_effects
+		hidden_effect = {
+			change_pc = pc_yuzu_sunset_ringworld
+			validate_and_repair_planet_buildings_and_districts = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+}

@@ -1,0 +1,247 @@
+# YUZU 高级岗位：冶金 / 铸造类
+#
+# CSV（data_design.csv）中的 job_yuzu_* 是本地化与图标前缀；岗位定义 key 去掉 job_ 前缀：
+#   job_yuzu_elite_foundry                      -> yuzu_elite_foundry
+#   job_yuzu_elite_catalytic_technician         -> yuzu_elite_catalytic_technician（placeholder / swap 显示）
+#   job_yuzu_elite_foundry_manager              -> yuzu_elite_foundry_manager
+#   job_yuzu_elite_catalytic_technician_manager -> yuzu_elite_catalytic_technician_manager（placeholder / swap 显示）
+#
+# 催化分支沿用原版 foundry 的写法：同一个实际岗位，swappable_data 只负责换显示名/图标，
+# 实际产出与维护费由 resources 内带 industrial_jobs_are_catalytic_trigger 的条件块决定。
+
+#####################
+# Specialist Jobs
+#####################
+
+yuzu_elite_foundry = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_foundry_1
+			icon = yuzu_elite_metallurgist
+		}
+		# Catalytic Swap
+		swap_type = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+			}
+			name = yuzu_elite_catalytic_technician
+			desc = job_yuzu_elite_catalytic_technician_desc
+			icon = yuzu_elite_metallurgist
+			building_icon = building_foundry_1
+			weight = 5
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_metallurgists
+		# 非催化：矿物 -> 合金 + 工程学
+		produces = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = no
+			}
+			alloys = 12
+			engineering_research = 4
+		}
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = no
+			}
+			minerals = 40
+		}
+		# 催化加工：食物 -> 合金 + 工程学
+		produces = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+			}
+			alloys = 15
+			engineering_research = 5
+		}
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+			}
+			food = 60
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 2
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 5
+			has_trait = trait_cyborg_creed_of_construction
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_alloys"
+}
+
+# 仅供 Catalytic Swap 显示与本地化使用；实际岗位仍是 yuzu_elite_foundry。
+yuzu_elite_catalytic_technician = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_foundry_1
+			icon = yuzu_elite_metallurgist
+		}
+	}
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_metallurgists
+	}
+}
+
+#####################
+# Ruler Jobs
+#####################
+
+yuzu_elite_foundry_manager = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_yuzu_nano_forge_tier_1
+			icon = yuzu_elite_foundry_manager
+		}
+		# Catalytic Swap
+		swap_type = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+			}
+			name = yuzu_elite_catalytic_technician_manager
+			desc = job_yuzu_elite_catalytic_technician_manager_desc
+			icon = yuzu_elite_catalytic_technician_manager
+			building_icon = building_yuzu_nano_forge_tier_1
+			weight = 5
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_metallurgists
+		# 非催化：矿物 -> 合金 + 工程学 + 凝聚力
+		produces = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = no
+			}
+			alloys = 60
+			engineering_research = 20
+			unity = 5
+		}
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = no
+			}
+			sr_living_metal = 1
+			minerals = 200
+		}
+		# 催化加工：食物 -> 合金 + 工程学 + 凝聚力
+		produces = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+			}
+			alloys = 75
+			engineering_research = 25
+			unity = 5
+		}
+		upkeep = {
+			trigger = {
+				industrial_jobs_are_catalytic_trigger = yes
+			}
+			sr_living_metal = 1
+			food = 300
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_alloys_produces_mult = 0.03
+		planet_metallurgists_upkeep_mult = 0.03
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+	}
+}
+
+# 仅供 Catalytic Swap 显示与本地化使用；实际岗位仍是 yuzu_elite_foundry_manager。
+yuzu_elite_catalytic_technician_manager = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_yuzu_nano_forge_tier_1
+			icon = yuzu_elite_catalytic_technician_manager
+		}
+	}
+	tags = { alloys }
+
+	possible = {
+		always = no
+	}
+
+	resources = {
+		category = planet_metallurgists
+	}
+}

@@ -1,0 +1,376 @@
+# =============================================================================
+# Yuzu 环世界都市区划 —— 原版 district_rw_urban_1/2/3 覆盖
+# =============================================================================
+#
+# 原版路径：common/districts/04_ringworld_districts.txt
+# 原版版本：Stellaris Cygnus v4.5.2
+# 原版起始行：district_rw_urban_1 = 849
+#             district_rw_urban_2 = 956
+#             district_rw_urban_3 = 1064
+#
+# 本次改动清单（只做最小改动，其余与原版逐字等价）：
+#   1. potential 增加排除：
+#        NOT = { OR = { is_planet_class = pc_yuzu_abyss_ringworld
+#                       is_planet_class = pc_yuzu_sunset_ringworld } }
+#      避免原版未特化塔楼与柚子区划同时出现在柚子环世界上。
+#   2. convert_to 顶部加入对应的两个柚子区划：
+#        district_rw_urban_1 → district_yuzu_abyss_ringworld_urban_1
+#                              district_yuzu_sunset_ringworld_urban_1
+#        2 / 3 同理。
+#      这样 change_pc 后原版区划会自动回收成对应编号的柚子区划。
+#
+# ⚠️ 维护警告：
+#   - 本文件是整段重定义（Stellaris 的 district 不合并），不是增量补丁。
+#   - 升级游戏版本后，先 diff 原版 04_ringworld_districts.txt 再同步本文件，
+#     否则会静默丢失原版新增的字段 / 触发器。
+#   - 不要顺手改数值、资源、触发条件；只保留上面列出的差异。
+# =============================================================================
+
+# @override
+district_rw_urban_1 = {
+	icon = district_rw_city_secondary
+	base_buildtime = @rw_district_buildtime
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_rw_urban_01
+	}
+
+	convert_to = {
+		district_yuzu_abyss_ringworld_urban_1
+		district_yuzu_sunset_ringworld_urban_1
+		district_ark_generator
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = ring_world
+	}
+
+	potential = {
+		exists = owner
+		uses_district_set = ring_world
+		NOT = {
+			OR = {
+				is_planet_class = pc_yuzu_abyss_ringworld
+				is_planet_class = pc_yuzu_sunset_ringworld
+			}
+		}
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @rw_cost
+		}
+		upkeep = {
+			energy = @rw_maintenance
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+# @override
+district_rw_urban_2 = {
+	icon = district_rw_city_secondary
+	base_buildtime = @rw_district_buildtime
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_rw_urban_02
+	}
+
+	convert_to = {
+		district_yuzu_abyss_ringworld_urban_2
+		district_yuzu_sunset_ringworld_urban_2
+		district_ark_military
+		district_ark_forever_cruise
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = ring_world
+	}
+
+	potential = {
+		exists = owner
+		uses_district_set = ring_world
+		NOT = {
+			OR = {
+				is_planet_class = pc_yuzu_abyss_ringworld
+				is_planet_class = pc_yuzu_sunset_ringworld
+			}
+		}
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @rw_cost
+		}
+		upkeep = {
+			energy = @rw_maintenance
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}
+
+# @override
+district_rw_urban_3 = {
+	icon = district_rw_city_secondary
+	base_buildtime = @rw_district_buildtime
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
+
+	zone_slots = {
+		slot_rw_urban_03
+	}
+
+	convert_to = {
+		district_yuzu_abyss_ringworld_urban_3
+		district_yuzu_sunset_ringworld_urban_3
+		district_ark_basic
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		uses_district_set = ring_world
+	}
+
+	potential = {
+		exists = owner
+		uses_district_set = ring_world
+		NOT = {
+			OR = {
+				is_planet_class = pc_yuzu_abyss_ringworld
+				is_planet_class = pc_yuzu_sunset_ringworld
+			}
+		}
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @rw_cost
+		}
+		upkeep = {
+			energy = @rw_maintenance
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 2500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		job_production_overseer_add = 100
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_deposit = d_arcane_generator
+				NOT = { has_district = district_rw_city }
+			}
+		}
+		text = arcane_generator_upkeep_desc
+	}
+}

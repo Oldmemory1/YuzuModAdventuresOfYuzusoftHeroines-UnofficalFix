@@ -32,8 +32,13 @@ building_yuzu_fe_clinic_tier_1 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_healthcare
-		AMOUNT = 600
+		script = jobs/yuzu_building_job_elite_healthcare
+		AMOUNT = 540
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_healthcare_manager
+		AMOUNT = 60
 	}
 
 	planet_modifier = {
@@ -101,8 +106,13 @@ building_yuzu_fe_clinic_tier_2 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_healthcare
-		AMOUNT = 1200
+		script = jobs/yuzu_building_job_elite_healthcare
+		AMOUNT = 1080
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_healthcare_manager
+		AMOUNT = 120
 	}
 
 	planet_modifier = {
@@ -170,8 +180,13 @@ building_yuzu_fe_clinic_tier_3 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_healthcare
-		AMOUNT = 1800
+		script = jobs/yuzu_building_job_elite_healthcare
+		AMOUNT = 1620
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_healthcare_manager
+		AMOUNT = 180
 	}
 
 	planet_modifier = {
@@ -239,8 +254,13 @@ building_yuzu_fe_clinic_tier_4 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_healthcare
-		AMOUNT = 2400
+		script = jobs/yuzu_building_job_elite_healthcare
+		AMOUNT = 2160
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_healthcare_manager
+		AMOUNT = 240
 	}
 
 	planet_modifier = {
@@ -308,8 +328,13 @@ building_yuzu_fe_clinic_tier_5 = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_building_job_healthcare
-		AMOUNT = 3000
+		script = jobs/yuzu_building_job_elite_healthcare
+		AMOUNT = 2700
+	}
+
+	inline_script = {
+		script = jobs/yuzu_building_job_elite_healthcare_manager
+		AMOUNT = 300
 	}
 
 	planet_modifier = {

@@ -1,0 +1,361 @@
+# 柚子环世界殖民地类型（13 个：夕阳 8 + 深渊 5）
+#
+# 岗位通过原版 `job_<job>_per_pop` 行星修饰符提供：
+#   0.1 = 每 10 人口 +1 岗位，0.2 = 每 5 人口 +1 岗位。
+# 不用 script value 手算人口；`mod_job_*_per_pop` 的 tooltip 由原版 / mod 本地化提供。
+#
+# 权重使用简单形式：base = 10，选中自身再 +5。玩家可手动选择；AI 不会强制优先选择。
+# potential 仅匹配对应环世界类，因此两座环世界的类型互不串用。
+
+# =============================================================================
+# 夕阳环世界（8 个）
+# =============================================================================
+
+col_yuzu_sunset_ring_foundry = {
+	icon = GFX_colony_type_foundry
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.2
+		planet_metallurgists_upkeep_mult = -0.2
+		job_foundry_per_pop = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_foundry
+		}
+	}
+}
+
+col_yuzu_sunset_ring_factory = {
+	icon = GFX_colony_type_factory
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+		owner = { country_uses_consumer_goods = yes }
+	}
+
+	planet_modifier = {
+		planet_artisans_produces_mult = 0.2
+		planet_artisans_upkeep_mult = -0.2
+		job_artisan_per_pop = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_factory
+		}
+	}
+}
+
+col_yuzu_sunset_ring_trade = {
+	icon = GFX_colony_type_habitat_trade
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_jobs_trade_produces_mult = 0.25
+		job_trader_per_pop = 0.1
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_trade
+		}
+	}
+}
+
+col_yuzu_sunset_ring_research = {
+	icon = GFX_colony_type_research
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.2
+		planet_researchers_upkeep_mult = -0.2
+		job_physicist_per_pop = 0.1
+		job_biologist_per_pop = 0.1
+		job_engineer_per_pop = 0.1
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_research
+		}
+	}
+}
+
+col_yuzu_sunset_ring_mining = {
+	icon = GFX_colony_type_mine
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_miners_produces_mult = 0.5
+		job_miner_per_pop = 0.1
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_mining
+		}
+	}
+}
+
+col_yuzu_sunset_ring_farming = {
+	icon = GFX_colony_type_farm
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_farmers_produces_mult = 0.5
+		job_farmer_per_pop = 0.1
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_farming
+		}
+	}
+}
+
+col_yuzu_sunset_ring_generator = {
+	icon = GFX_colony_type_generator
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_technician_produces_mult = 0.5
+		job_technician_per_pop = 0.1
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_generator
+		}
+	}
+}
+
+col_yuzu_sunset_ring_unity = {
+	icon = GFX_colony_type_bureaucratic
+
+	potential = {
+		is_planet_class = pc_yuzu_sunset_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_bureaucrats_produces_mult = 0.2
+		planet_bureaucrats_upkeep_mult = -0.2
+		job_bureaucrat_per_pop = 0.1
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_sunset_ring_unity
+		}
+	}
+}
+
+# =============================================================================
+# 深渊环世界（5 个）
+# =============================================================================
+
+col_yuzu_abyss_ring_foundry = {
+	icon = GFX_colony_type_foundry
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.5
+		planet_metallurgists_upkeep_mult = -0.5
+		job_foundry_per_pop = 0.2
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_abyss_ring_foundry
+		}
+	}
+}
+
+col_yuzu_abyss_ring_factory = {
+	icon = GFX_colony_type_factory
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		is_special_colony_type = no
+		exists = owner
+		owner = { country_uses_consumer_goods = yes }
+	}
+
+	planet_modifier = {
+		planet_artisans_produces_mult = 0.5
+		planet_artisans_upkeep_mult = -0.5
+		job_artisan_per_pop = 0.2
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_abyss_ring_factory
+		}
+	}
+}
+
+col_yuzu_abyss_ring_trade = {
+	icon = GFX_colony_type_habitat_trade
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_jobs_trade_produces_mult = 0.5
+		job_trader_per_pop = 0.2
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_abyss_ring_trade
+		}
+	}
+}
+
+col_yuzu_abyss_ring_research = {
+	icon = GFX_colony_type_research
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.5
+		planet_researchers_upkeep_mult = -0.5
+		job_physicist_per_pop = 0.2
+		job_biologist_per_pop = 0.2
+		job_engineer_per_pop = 0.2
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_abyss_ring_research
+		}
+	}
+}
+
+col_yuzu_abyss_ring_unity = {
+	icon = GFX_colony_type_bureaucratic
+
+	potential = {
+		is_planet_class = pc_yuzu_abyss_ringworld
+		is_special_colony_type = no
+		exists = owner
+	}
+
+	planet_modifier = {
+		planet_bureaucrats_produces_mult = 0.5
+		planet_bureaucrats_upkeep_mult = -0.5
+		job_bureaucrat_per_pop = 0.1
+	}
+
+	weight_modifier = {
+		base = 10
+		modifier = {
+			add = 5
+			has_designation = col_yuzu_abyss_ring_unity
+		}
+	}
+}

@@ -1,0 +1,91 @@
+# YUZU 商贩岗位定义
+# 数值来源：yuzu_advanced_jobs/data_design.csv 第 28-29 行
+# yuzu_elite_trader         : specialist, 40 贸易，维护费 5 消费品
+# yuzu_elite_trader_manager : ruler, 200 贸易 + 5 凝聚力，维护费 25 消费品
+# 不 include 原版商贩的 subterranean / 商业传统等 triggered modifiers，CSV 中没有这些效果。
+
+yuzu_elite_trader = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_galactic_stock_exchange
+			icon = yuzu_elite_trader
+		}
+	}
+
+	tags = { trade }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_traders
+		produces = {
+			trade = 40
+		}
+		upkeep = {
+			consumer_goods = 5
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_trade"
+}
+
+yuzu_elite_trader_manager = {
+	category = ruler
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_galactic_stock_exchange
+			icon = yuzu_elite_trader_manager
+		}
+	}
+
+	tags = { trade }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_traders
+		produces = {
+			trade = 200
+			unity = 5
+		}
+		upkeep = {
+			consumer_goods = 25
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+}
