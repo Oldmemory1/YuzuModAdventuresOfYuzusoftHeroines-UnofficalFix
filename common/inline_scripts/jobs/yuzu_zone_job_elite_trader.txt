@@ -1,0 +1,21 @@
+# 精英岗位分发（区划用）：常规帝国 → yuzu 精英岗位；格式塔帝国 → 普通岗位的子个体
+# 常规
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_yuzu_elite_trader_add = $AMOUNT$
+}
+# 格式塔（后勤子个体）
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_logistics_drone_add = $AMOUNT$
+}

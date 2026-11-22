@@ -1,0 +1,24 @@
+# 精英岗位分发（区划用）：常规帝国 → yuzu 精英岗位；格式塔帝国 → 普通岗位的子个体
+# 调用方必须同时传 AMOUNT 与 DRONE_AMOUNT，其中 DRONE_AMOUNT = AMOUNT / 3（脚本语言不能做除法，由生成器预计算）。
+# 常规
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_yuzu_elite_researcher_add = $AMOUNT$
+}
+# 格式塔（计算单元：物理/生物/工程；各拿总岗位的 1/3）
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_calculator_physicist_add = $DRONE_AMOUNT$
+	job_calculator_biologist_add = $DRONE_AMOUNT$
+	job_calculator_engineer_add = $DRONE_AMOUNT$
+}

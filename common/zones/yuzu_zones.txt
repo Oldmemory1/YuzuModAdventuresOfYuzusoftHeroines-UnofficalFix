@@ -653,7 +653,7 @@ zone_yuzu_foundry_advanced = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_alloy
+		script = jobs/yuzu_zone_job_elite_metallurgist
 		AMOUNT = 3000
 	}
 
@@ -700,7 +700,7 @@ zone_yuzu_factory_advanced = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_goods
+		script = jobs/yuzu_zone_job_elite_artisan
 		AMOUNT = 3000
 	}
 
@@ -858,8 +858,9 @@ zone_yuzu_research_physics_arcology_advanced = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_physics
-		AMOUNT = 3000
+		script = jobs/yuzu_zone_job_elite_researcher_physics
+		AMOUNT = 1000
+		DRONE_AMOUNT = 3000
 	}
 
 	planet_modifier = {
@@ -906,8 +907,9 @@ zone_yuzu_research_society_arcology_advanced = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_society
-		AMOUNT = 3000
+		script = jobs/yuzu_zone_job_elite_researcher_society
+		AMOUNT = 1000
+		DRONE_AMOUNT = 3000
 	}
 
 	planet_modifier = {
@@ -954,8 +956,9 @@ zone_yuzu_research_engineering_arcology_advanced = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_engineering
-		AMOUNT = 3000
+		script = jobs/yuzu_zone_job_elite_researcher_engineering
+		AMOUNT = 1000
+		DRONE_AMOUNT = 3000
 	}
 
 	planet_modifier = {
@@ -1001,7 +1004,7 @@ zone_yuzu_fortress_arcology_advanced = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_soldier
+		script = jobs/yuzu_zone_job_elite_soldier
 		AMOUNT = 3000
 	}
 
@@ -1054,7 +1057,7 @@ zone_yuzu_trade_arcology_advanced = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_trader
+		script = jobs/yuzu_zone_job_elite_trader
 		AMOUNT = 3000
 	}
 

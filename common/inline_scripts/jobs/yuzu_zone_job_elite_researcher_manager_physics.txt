@@ -1,0 +1,21 @@
+# 主管岗位分发（区划用）：常规帝国 → yuzu 主管岗位；格式塔帝国 → 降级为普通岗位的子个体
+# 常规
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	job_yuzu_elite_researcher_manager_physics_add = $AMOUNT$
+}
+# 格式塔（降级为普通子个体：物理计算单元）
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	job_calculator_physicist_add = $AMOUNT$
+}

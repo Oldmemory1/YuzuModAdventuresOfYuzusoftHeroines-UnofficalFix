@@ -52,11 +52,11 @@ zone_yuzu_ringworld_industrial = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_goods
+		script = jobs/yuzu_zone_job_elite_artisan
 		AMOUNT = 5000
 	}
 	inline_script = {
-		script = jobs/yuzu_zone_job_alloy
+		script = jobs/yuzu_zone_job_elite_metallurgist
 		AMOUNT = 5000
 	}
 
@@ -102,7 +102,7 @@ zone_yuzu_ringworld_foundry = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_alloy
+		script = jobs/yuzu_zone_job_elite_metallurgist
 		AMOUNT = 10000
 	}
 
@@ -148,7 +148,7 @@ zone_yuzu_ringworld_factory = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_goods
+		script = jobs/yuzu_zone_job_elite_artisan
 		AMOUNT = 10000
 	}
 
@@ -337,7 +337,7 @@ zone_yuzu_ringworld_trade = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_trader
+		script = jobs/yuzu_zone_job_elite_trader
 		AMOUNT = 10000
 	}
 
@@ -384,8 +384,9 @@ zone_yuzu_ringworld_research_physics = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_physics
-		AMOUNT = 5000
+		script = jobs/yuzu_zone_job_elite_researcher_physics
+		AMOUNT = 2000
+		DRONE_AMOUNT = 6000
 	}
 
 	planet_modifier = {
@@ -431,8 +432,9 @@ zone_yuzu_ringworld_research_society = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_society
-		AMOUNT = 5000
+		script = jobs/yuzu_zone_job_elite_researcher_society
+		AMOUNT = 2000
+		DRONE_AMOUNT = 6000
 	}
 
 	planet_modifier = {
@@ -478,8 +480,9 @@ zone_yuzu_ringworld_research_engineering = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_engineering
-		AMOUNT = 5000
+		script = jobs/yuzu_zone_job_elite_researcher_engineering
+		AMOUNT = 2000
+		DRONE_AMOUNT = 6000
 	}
 
 	planet_modifier = {
@@ -571,7 +574,7 @@ zone_yuzu_sunset_ringworld_energy = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_energy
+		script = jobs/yuzu_zone_job_elite_technician
 		AMOUNT = 10000
 	}
 
@@ -614,7 +617,7 @@ zone_yuzu_sunset_ringworld_minerals = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_minerals
+		script = jobs/yuzu_zone_job_elite_miner
 		AMOUNT = 10000
 	}
 
@@ -658,7 +661,7 @@ zone_yuzu_sunset_ringworld_food = {
 	}
 
 	inline_script = {
-		script = jobs/yuzu_zone_job_food
+		script = jobs/yuzu_zone_job_elite_farmer
 		AMOUNT = 10000
 	}
 
