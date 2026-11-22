@@ -1,0 +1,25 @@
+﻿l_simp_chinese:
+
+ job_yuzu_elite_researcher:0"高级研究员"
+ job_yuzu_elite_researcher_plural:0"高级研究员"
+ job_yuzu_elite_researcher_desc:0"在尖端实验室中统筹多学科研究的高级研究员。他们以更严苛的标准审视每一份数据，将物理学、社会学与工程学的洞见熔铸为推动文明跃迁的理论。"
+ job_yuzu_elite_researcher_effect_desc:0"£job_yuzu_elite_researcher£$job_yuzu_elite_researcher_plural$产出£physics_research£§Y$physics_research$§!、£society_research£§Y$society_research$§!、£engineering_research£§Y$engineering_research$§!和£unity£§Y$unity$§!，消耗£consumer_goods£§Y$consumer_goods$§!。"
+ mod_job_yuzu_elite_researcher_add:0"$job_yuzu_elite_researcher$岗位"
+
+ job_yuzu_elite_researcher_manager_physics:0"物理学研究主管"
+ job_yuzu_elite_researcher_manager_physics_plural:0"物理学研究主管"
+ job_yuzu_elite_researcher_manager_physics_desc:0"统领物理学研究体系的研究主管。他们亲自攻关最艰深的理论问题，并统筹物理学团队，让每一次实验都服务于文明的长远图景。"
+ job_yuzu_elite_researcher_manager_physics_effect_desc:0"£job_yuzu_elite_researcher_manager_physics£$job_yuzu_elite_researcher_manager_physics_plural$产出£physics_research£§Y100§!与£unity£§Y25§!，维护费为£consumer_goods£§Y60§!与£volatile_motes£§Y2§!；每名物理学研究主管使行星物理学家岗位产出§G+3%§!、维护费§R+3%§!。"
+ mod_job_yuzu_elite_researcher_manager_physics_add:0"$job_yuzu_elite_researcher_manager_physics$岗位"
+
+ job_yuzu_elite_researcher_manager_society:0"社会学研究主管"
+ job_yuzu_elite_researcher_manager_society_plural:0"社会学研究主管"
+ job_yuzu_elite_researcher_manager_society_desc:0"统领社会学研究体系的研究主管。他们审视文明与物种的深层规律，协调社会学团队，把社会洞见转化为治理与扩张的力量。"
+ job_yuzu_elite_researcher_manager_society_effect_desc:0"£job_yuzu_elite_researcher_manager_society£$job_yuzu_elite_researcher_manager_society_plural$产出£society_research£§Y100§!与£unity£§Y25§!，维护费为£consumer_goods£§Y60§!与£exotic_gases£§Y2§!；每名社会学研究主管使行星生物学家岗位产出§G+3%§!、维护费§R+3%§!。"
+ mod_job_yuzu_elite_researcher_manager_society_add:0"$job_yuzu_elite_researcher_manager_society$岗位"
+
+ job_yuzu_elite_researcher_manager_engineering:0"工程学研究主管"
+ job_yuzu_elite_researcher_manager_engineering_plural:0"工程学研究主管"
+ job_yuzu_elite_researcher_manager_engineering_desc:0"统领工程学研究体系的研究主管。他们主导最复杂的工程攻关，协调工程团队，将理论转化为舰船、巨构与基础设施。"
+ job_yuzu_elite_researcher_manager_engineering_effect_desc:0"£job_yuzu_elite_researcher_manager_engineering£$job_yuzu_elite_researcher_manager_engineering_plural$产出£engineering_research£§Y100§!与£unity£§Y25§!，维护费为£consumer_goods£§Y60§!与£rare_crystals£§Y2§!；每名工程学研究主管使行星工程学家岗位产出§G+3%§!、维护费§R+3%§!。"
+ mod_job_yuzu_elite_researcher_manager_engineering_add:0"$job_yuzu_elite_researcher_manager_engineering$岗位"

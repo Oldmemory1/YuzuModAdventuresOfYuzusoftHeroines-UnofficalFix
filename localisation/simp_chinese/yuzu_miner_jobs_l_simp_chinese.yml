@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+
+ job_yuzu_elite_miner:0"高级矿工"
+ job_yuzu_elite_miner_plural:0"高级矿工"
+ job_yuzu_elite_miner_desc:0"高级矿工熟悉深层矿脉的走向，能以更低的损耗剥离矿石；他们在井下记录的岩层数据同样是工程学研究的宝贵素材。"
+ job_yuzu_elite_miner_effect_desc:0"£job_yuzu_elite_miner£$job_yuzu_elite_miner_plural$产出£minerals£§Y$minerals$§!和£engineering_research£§Y$engineering_research$§!，无需维护费。"
+ mod_job_yuzu_elite_miner_add:0"$job_yuzu_elite_miner$岗位"
+
+ job_yuzu_miner_manager:0"矿业主管"
+ job_yuzu_miner_manager_plural:0"矿业主管"
+ job_yuzu_miner_manager_desc:0"矿业主管规划矿脉的开采顺序与设备检修周期，让全行星的采矿作业始终保持高效。"
+ job_yuzu_miner_manager_effect_desc:0"£job_yuzu_miner_manager£$job_yuzu_miner_manager_plural$产出£minerals£§Y$minerals$§!、£engineering_research£§Y$engineering_research$§!和£unity£§Y$unity$§!，无需维护费；每名矿业主管使行星岗位的矿物产出§G+3%§!。"
+ mod_job_yuzu_miner_manager_add:0"$job_yuzu_miner_manager$岗位"

@@ -46,9 +46,6 @@
  decision_yuzu_galaxy_center_pop_requirement:0"$TRIGGER_FAIL$目标行星人口必须大于§Y8000§!。"
 
  
- district_yuzu_city_housing:0 "居住理想城"
- district_yuzu_city_housing_plural:0 "居住理想城"
- district_yuzu_city_housing_desc:0 "这些特殊的巨城区划利用整合式垂直建筑，可实现地表面积人口密度最大化。"
  district_yuzu_city_industry:1 "工业理想城"
  district_yuzu_city_industry_plural:1 "工业理想城"
  district_yuzu_city_industry_desc:0 "这座区划的阶层街道两侧布满了冶炼设施和工厂，熔炉的嘶吼与铸造厂的哐铛声在里面不断回响。"

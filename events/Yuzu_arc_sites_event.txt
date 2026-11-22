@@ -391,7 +391,7 @@ fleet_event = {
 		owner = {
 			add_monthly_resource_mult = {
 				resource = unity
-				value = 30
+				value = 6
 			}
 		}
 	}
@@ -411,12 +411,6 @@ fleet_event = {
 
 	option = {
 		name = KEEP_SEARCHING
-		owner = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 30
-			}
-		}
 		small_artifact_reward = yes
 	}
 }
@@ -435,12 +429,7 @@ fleet_event = {
 
 	option = {
 		name = KEEP_SEARCHING
-		owner = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 30
-			}
-		}
+		small_artifact_reward = yes
 	}
 }
 
@@ -465,12 +454,7 @@ fleet_event = {
 
 	option = {
 		name = KEEP_SEARCHING
-		owner = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 30
-			}
-		}
+		small_artifact_reward = yes
 	}
 }
 
@@ -488,12 +472,7 @@ fleet_event = {
 
 	option = {
 		name = KEEP_SEARCHING
-		owner = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 60
-			}
-		}
+		small_artifact_reward = yes
 	}
 }
 
@@ -518,12 +497,6 @@ fleet_event = {
 
 	option = {
 		name = KEEP_SEARCHING
-		owner = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 60
-			}
-		}
 		small_artifact_reward = yes
 	}
 }
@@ -542,12 +515,7 @@ fleet_event = {
 
 	option = {
 		name = KEEP_SEARCHING
-		owner = {
-			add_monthly_resource_mult = {
-				resource = unity
-				value = 60
-			}
-		}
+		small_artifact_reward = yes
 	}
 }
 
@@ -570,13 +538,13 @@ fleet_event = {
 
 	is_triggered_only = yes
 
-	# 完成奖励：120 个月凝聚力（原「随机舰队司令 + 记名者特质」方案已取消，2026-10-07）
+	# 完成奖励：12 个月凝聚力（原「随机舰队司令 + 记名者特质」方案已取消，2026-10-07）
 	option = {
 		name = Yuzu_arc_sites_event.20.a
 		owner = {
 			add_monthly_resource_mult = {
 				resource = unity
-				value = 120
+				value = 12
 			}
 		}
 	}

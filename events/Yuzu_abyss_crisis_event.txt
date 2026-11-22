@@ -710,23 +710,144 @@ country_event = {
 				}
 				set_owner = event_target:new_abyss_country
 				set_capital = yes
-					while = {
-						count = 100
-						create_pop_group = {
-							species = event_target:new_abyss_species
-							size = 100
-						}
-					}
-				# housing provides slot_city_government / zone_default for the capital
-				# Use vanilla housing: yuzu city worlds keep district_arcology_housing valid.
+				# 深渊教廷首都初始化顺序：区划 → zone → 建筑 → 人口。
+				# 区划：1 个居住理想城 + urban_1 17 + urban_2 16 + urban_3 16 = 50（planet_size 50，正好填满）。
 				add_district = district_arcology_housing
-				add_building = building_system_capital
-				add_building = building_yuzu_master_archive
-				add_building = building_yuzu_class_4_singularity_tier_2
-				add_building = building_yuzu_fe_dome_tier_2
 				while = {
-					count = 50
+					count = 17
+					add_district = district_yuzu_city_urban_1
+				}
+				while = {
+					count = 16
 					add_district = district_yuzu_city_urban_2
+				}
+				while = {
+					count = 16
+					add_district = district_yuzu_city_urban_3
+				}
+
+				# 特化：住房区划的 slot_city_01/02 都吃 zone_urban（共 2 个城市 zone）。
+				# 每个特化组给 3 个建筑槽，不随区划数量增加。
+				# 三种塔楼全部转铸造（重工业）特化：3 个特化组 × 3 槽 = 9 个铸造建筑槽。
+				add_zone = {
+					district = district_arcology_housing
+					zone = zone_urban
+					zone_slot = 1
+				}
+				add_zone = {
+					district = district_arcology_housing
+					zone = zone_urban
+					zone_slot = 2
+				}
+				add_zone = {
+					district = district_yuzu_city_urban_1
+					zone = zone_yuzu_foundry_arcology
+				}
+				add_zone = {
+					district = district_yuzu_city_urban_2
+					zone = zone_yuzu_foundry_arcology
+				}
+				add_zone = {
+					district = district_yuzu_city_urban_3
+					zone = zone_yuzu_foundry_arcology
+				}
+
+				# 上部 12 个建筑（21 槽全满）：政府区 6（6 槽）= 复合型恒星系首府 + 5 个万象天穹；
+				# 城市区 6（2 个 zone_urban，各 3 槽，正好填满）= 3 个星脉终枢 + 3 个琼筵之枢。
+				add_building = {
+					zone = zone_default
+					building = building_system_capital
+				}
+				add_building = {
+					zone = zone_default
+					building = building_yuzu_fe_dome_tier_5
+				}
+				add_building = {
+					zone = zone_default
+					building = building_yuzu_fe_dome_tier_5
+				}
+				add_building = {
+					zone = zone_default
+					building = building_yuzu_fe_dome_tier_5
+				}
+				add_building = {
+					zone = zone_default
+					building = building_yuzu_fe_dome_tier_5
+				}
+				add_building = {
+					zone = zone_default
+					building = building_yuzu_fe_dome_tier_5
+				}
+				add_building = {
+					zone = zone_urban
+					building = building_yuzu_fe_mine_tier_5
+				}
+				add_building = {
+					zone = zone_urban
+					building = building_yuzu_fe_mine_tier_5
+				}
+				add_building = {
+					zone = zone_urban
+					building = building_yuzu_fe_mine_tier_5
+				}
+				add_building = {
+					zone = zone_urban
+					building = building_yuzu_nourishment_center_tier_5
+				}
+				add_building = {
+					zone = zone_urban
+					building = building_yuzu_nourishment_center_tier_5
+				}
+				add_building = {
+					zone = zone_urban
+					building = building_yuzu_nourishment_center_tier_5
+				}
+
+				# 下部塔楼 9 个建筑（3 个特化组 × 3 槽）：全部放万象终熔，落在铸造 zone。
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+				add_building = {
+					zone = zone_yuzu_foundry_arcology
+					building = building_yuzu_nano_forge_tier_5
+				}
+
+				# 人口最后生成，避免第一 tick 的失业/无家可归。
+				while = {
+					count = 100
+					create_pop_group = {
+						species = event_target:new_abyss_species
+						size = 100
+					}
 				}
 				planet_event = { id = Yuzu_abyss_crisis_event.104 days = 5 }
 		        planet_event = { id = Yuzu_abyss_crisis_event.105 days = 5 }
@@ -1804,6 +1925,11 @@ carrier_event = {
 
 	immediate = {
 		destroy_colony = yes
+		if = {
+			limit = { is_artificial = no }
+			change_pc = pc_shattered
+			reset_planet = yes
+		}
 		every_country = {
 			limit = { has_event_chain = "yuzu_abyss_descended_chain" }
 			add_event_chain_counter = {

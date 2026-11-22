@@ -46,50 +46,6 @@
  planet_yuzu_witches:0"魔女岗位"
  YUZU_WITCH_JOB_TRIGGER:0"这个岗位仅能由柚子大类的人口从事。"
 
- job_yuzu_energy_officiant:0"能量司仪"
- job_yuzu_energy_officiant_plural:0"能量司仪"
- job_yuzu_energy_officiant_desc:0"她们从不多言，只是以精密的专注不断校准着能量流的涌浪，把这座发电矩阵稳稳地维系在最善解人意的状态。"
- job_yuzu_energy_officiant_effect_desc:0"£job_yuzu_energy_officiant£$job_yuzu_energy_officiant_plural$产出£energy£ §Y$energy$§!"
- mod_job_yuzu_energy_officiant_add:0"$job_yuzu_energy_officiant$岗位"
- mod_job_yuzu_energy_officiant_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_energy_officiant$岗位"
-
- job_yuzu_energy_officiant_drone:0"能量司仪子个体"
- job_yuzu_energy_officiant_drone_plural:0"能量司仪子个体"
- job_yuzu_energy_officiant_drone_desc:0"为奇点能量而生的专用单元。它们以精密的循环不断校准能量流的涌浪，将这座发电矩阵维系在不可思议的高效状态。"
- job_yuzu_energy_officiant_drone_effect_desc:0"£job_yuzu_energy_officiant_drone£$job_yuzu_energy_officiant_drone_plural$产出£energy£ §Y$energy$§!"
- mod_job_yuzu_energy_officiant_drone_add:0"$job_yuzu_energy_officiant_drone$岗位"
- mod_job_yuzu_energy_officiant_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_energy_officiant_drone$岗位"
-
-
- job_yuzu_smelter:0"熔铸师"
- job_yuzu_smelter_plural:0"熔铸师"
- job_yuzu_smelter_desc:0"把粗粝的矿石锻造成合金的匠人。他们守在温度惊人的熔炉旁，以精准到毫厘的火候，让每一块金属都呈现出恰到好处的韧性。"
- job_yuzu_smelter_effect_desc:0"£job_yuzu_smelter£$job_yuzu_smelter_plural$消耗£minerals£§Y$minerals$§!，产出£alloys£ §Y$alloys$§!"
- mod_job_yuzu_smelter_add:0"$job_yuzu_smelter$岗位"
- mod_job_yuzu_smelter_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_smelter$岗位"
-
- job_yuzu_smelter_drone:0"熔铸子个体"
- job_yuzu_smelter_drone_plural:0"熔铸子个体"
- job_yuzu_smelter_drone_desc:0"专为熔炼诞生的单元。它们在炽热中纤毫不差地配比原料，自成一体的循环让整座熔炉恒久地运转，几乎不知疲倦为何物。"
- job_yuzu_smelter_drone_effect_desc:0"£job_yuzu_smelter_drone£$job_yuzu_smelter_drone_plural$消耗£minerals£§Y$minerals$§!，产出£alloys£ §Y$alloys$§!"
- mod_job_yuzu_smelter_drone_add:0"$job_yuzu_smelter_drone$岗位"
- mod_job_yuzu_smelter_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_smelter_drone$岗位"
-
-
- job_yuzu_catalytic_smelter:0"催化熔铸师"
- job_yuzu_catalytic_smelter_plural:0"催化熔铸师"
- job_yuzu_catalytic_smelter_desc:0"掌握催化工艺的锻造者。他们用生机勃勃的有机物取代冰冷的矿石，以奇妙的催化反应淬炼出同样坚韧的合金——仿佛为金属注入了一缕不灭的活力。"
- job_yuzu_catalytic_smelter_effect_desc:0"£job_yuzu_catalytic_smelter£$job_yuzu_catalytic_smelter_plural$消耗£food£§Y$food$§!，产出£alloys£ §Y$alloys$§!"
- mod_job_yuzu_catalytic_smelter_add:0"$job_yuzu_catalytic_smelter$岗位"
- mod_job_yuzu_catalytic_smelter_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_catalytic_smelter$岗位"
-
- job_yuzu_catalytic_smelter_drone:0"催化熔铸子个体"
- job_yuzu_catalytic_smelter_drone_plural:0"催化熔铸子个体"
- job_yuzu_catalytic_smelter_drone_desc:0"遵循催化循环的熔炼单元。它们以有机物为养料，通过连续不断的催化反应将生物质冶炼成合金，为整座熔炉注入近乎自我生长的活力。"
- job_yuzu_catalytic_smelter_drone_effect_desc:0"£job_yuzu_catalytic_smelter_drone£$job_yuzu_catalytic_smelter_drone_plural$消耗£food£§Y$food$§!，产出£alloys£ §Y$alloys$§!"
- mod_job_yuzu_catalytic_smelter_drone_add:0"$job_yuzu_catalytic_smelter_drone$岗位"
- mod_job_yuzu_catalytic_smelter_drone_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_yuzu_catalytic_smelter_drone$岗位"
-
 
  yuzu_fe_building_failtext:0"§R需要从§!§Y法令（愿望）§!§R中获取§!"
 

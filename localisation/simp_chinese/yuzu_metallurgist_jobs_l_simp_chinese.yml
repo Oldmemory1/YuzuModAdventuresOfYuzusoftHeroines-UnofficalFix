@@ -1,0 +1,28 @@
+﻿l_simp_chinese:
+
+ # 冶金 / 铸造类高级岗位
+ job_yuzu_elite_foundry:0"高级冶金师"
+ job_yuzu_elite_foundry_plural:0"高级冶金师"
+ job_yuzu_elite_foundry_desc:0"在纳米熔炉中锻造合金的精英冶金师。他们以远超常规工艺的精度掌控炉温与配比，为舰队和巨构铸出最坚韧的骨架。"
+ job_yuzu_elite_foundry_effect_desc:0"£job_yuzu_elite_metallurgist£$job_yuzu_elite_foundry_plural$产出£alloys£ §Y12§!与£engineering_research£ §Y4§!，维护费为£minerals£ §Y40§!。"
+ mod_job_yuzu_elite_foundry_add:0"$job_yuzu_elite_foundry$岗位"
+
+ job_yuzu_elite_catalytic_technician:0"高级催化技师"
+ job_yuzu_elite_catalytic_technician_plural:0"高级催化技师"
+ yuzu_elite_catalytic_technician:0"$job_yuzu_elite_catalytic_technician$"
+ job_yuzu_elite_catalytic_technician_desc:0"掌握催化加工工艺的精英技师。他们以有机物替代矿物，通过精密的催化反应炼出坚韧的合金；在“催化加工”国民理念下，食物就是他们的矿石。"
+ job_yuzu_elite_catalytic_technician_effect_desc:0"£job_yuzu_elite_metallurgist£$job_yuzu_elite_catalytic_technician_plural$产出£alloys£ §Y15§!与£engineering_research£ §Y5§!，维护费为£food£ §Y60§!。"
+ mod_job_yuzu_elite_catalytic_technician_add:0"$job_yuzu_elite_catalytic_technician$岗位"
+
+ job_yuzu_elite_foundry_manager:0"冶金主管"
+ job_yuzu_elite_foundry_manager_plural:0"冶金主管"
+ job_yuzu_elite_foundry_manager_desc:0"统筹纳米熔炉生产的主管。他们调度原料、监督炉温，并让每一位冶金师都以更高的效率投入生产。"
+ job_yuzu_elite_foundry_manager_effect_desc:0"£job_yuzu_elite_foundry_manager£$job_yuzu_elite_foundry_manager_plural$产出£alloys£ §Y60§!、£engineering_research£ §Y20§!与£unity£ §Y5§!，维护费为£sr_living_metal£ §Y1§!与£minerals£ §Y200§!；同时使本星球岗位合金产出§G+3%§!、冶金师维护费§R+3%§!。"
+ mod_job_yuzu_elite_foundry_manager_add:0"$job_yuzu_elite_foundry_manager$岗位"
+
+ job_yuzu_elite_catalytic_technician_manager:0"催化冶金主管"
+ job_yuzu_elite_catalytic_technician_manager_plural:0"催化冶金主管"
+ yuzu_elite_catalytic_technician_manager:0"$job_yuzu_elite_catalytic_technician_manager$"
+ job_yuzu_elite_catalytic_technician_manager_desc:0"在“催化加工”体系下统筹合金生产的主管。他们以食物代替矿物组织生产，并用精密的流程管理提升整座熔炉的产出。"
+ job_yuzu_elite_catalytic_technician_manager_effect_desc:0"£job_yuzu_elite_catalytic_technician_manager£$job_yuzu_elite_catalytic_technician_manager_plural$产出£alloys£ §Y75§!、£engineering_research£ §Y25§!与£unity£ §Y5§!，维护费为£sr_living_metal£ §Y1§!与£food£ §Y300§!；同时使本星球岗位合金产出§G+3%§!、冶金师维护费§R+3%§!。"
+ mod_job_yuzu_elite_catalytic_technician_manager_add:0"$job_yuzu_elite_catalytic_technician_manager$岗位"

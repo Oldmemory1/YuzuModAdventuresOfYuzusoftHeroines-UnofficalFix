@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+
+ tech_yuzu_repeatable_efficiency_technician:0 "技工岗位效率"
+ tech_yuzu_repeatable_efficiency_technician_desc:0 "通过对奇点阵列的持续调校，技工岗位的劳动力效率稳步提升；能量产出随之提高，而岗位数量保持不变。"
+ tech_yuzu_repeatable_efficiency_miner:0 "矿工岗位效率"
+ tech_yuzu_repeatable_efficiency_miner_desc:0 "量子隧穿采掘阵列的作业流程被反复优化，矿工岗位的劳动力效率稳步提升。"
+ tech_yuzu_repeatable_efficiency_farmer:0 "农夫岗位效率"
+ tech_yuzu_repeatable_efficiency_farmer_desc:0 "复现网络与耕作流程深度协同，农夫岗位的劳动力效率稳步提升。"
+ tech_yuzu_repeatable_efficiency_foundry:0 "冶金师岗位效率"
+ tech_yuzu_repeatable_efficiency_foundry_desc:0 "熔炉的炼造循环被持续精炼，冶金师岗位的劳动力效率稳步提升。"
+ tech_yuzu_repeatable_efficiency_artisan:0 "工匠岗位效率"
+ tech_yuzu_repeatable_efficiency_artisan_desc:0 "财富圣殿的复现与调集流程被反复优化，工匠岗位的劳动力效率稳步提升。"
