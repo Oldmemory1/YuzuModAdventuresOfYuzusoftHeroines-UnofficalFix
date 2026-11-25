@@ -1,0 +1,91 @@
+# 深渊教廷危机核心 — 区域核心 core_abyss 与终局核心 final_core_abyss。
+# 设计说明与素材来源：crisis_design/core_abyss、crisis_design/final_core_abyss。
+# 两型均为不可设计的空间站级全局设计；刷新/生成机制另行接入。
+
+# core_abyss — repeatable regional Abyss core.
+core_abyss = {
+	graphical_culture = { "fallen_yuzu_abyss_empire_01" }
+
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+
+	modifier = {
+		ship_evasion_mult = -1
+	}
+
+	max_hitpoints = 100000
+	combat_size_multiplier = 200
+	size_multiplier = 200
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_station
+	fleet_slot_size = 4
+
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = 0
+
+	class = shipclass_military_station
+	is_designable = no
+	components_add_to_cost = no
+
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 5000
+		}
+	}
+
+	potential_country = {
+		is_country_type = new_abyss_empire
+	}
+}
+
+# final_core_abyss — final core spawned near the Abyss City and above each shattered colony.
+final_core_abyss = {
+	graphical_culture = { "fallen_yuzu_abyss_empire_01" }
+
+	max_speed = 0.0
+	acceleration = 0.0
+	rotation_speed = 0.0
+
+	modifier = {
+		ship_evasion_mult = -1
+	}
+
+	max_hitpoints = 300000
+	combat_size_multiplier = 200
+	size_multiplier = 200
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_station
+	fleet_slot_size = 4
+
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = yes
+	build_block_radius = 0
+
+	class = shipclass_military_station
+	is_designable = no
+	components_add_to_cost = no
+
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 10000
+		}
+	}
+
+	potential_country = {
+		is_country_type = new_abyss_empire
+	}
+}

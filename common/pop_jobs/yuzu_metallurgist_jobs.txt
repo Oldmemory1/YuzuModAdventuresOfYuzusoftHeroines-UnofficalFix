@@ -20,7 +20,7 @@ yuzu_elite_foundry = {
 		default = {
 			condition_string = SPECIALIST_JOB_TRIGGER
 			building_icon = building_foundry_1
-			icon = yuzu_elite_metallurgist
+			icon = yuzu_elite_foundry
 		}
 		# Catalytic Swap
 		swap_type = {
@@ -29,7 +29,7 @@ yuzu_elite_foundry = {
 			}
 			name = yuzu_elite_catalytic_technician
 			desc = job_yuzu_elite_catalytic_technician_desc
-			icon = yuzu_elite_metallurgist
+			icon = yuzu_elite_foundry
 			building_icon = building_foundry_1
 			weight = 5
 		}
@@ -54,13 +54,14 @@ yuzu_elite_foundry = {
 
 	resources = {
 		category = planet_metallurgists
-		# 非催化：矿物 -> 合金 + 工程学
+		# 非催化：矿物 -> 合金 + 工程学 + 活体金属
 		produces = {
 			trigger = {
 				industrial_jobs_are_catalytic_trigger = no
 			}
 			alloys = 12
 			engineering_research = 4
+			sr_living_metal = 0.05
 		}
 		upkeep = {
 			trigger = {
@@ -68,13 +69,14 @@ yuzu_elite_foundry = {
 			}
 			minerals = 40
 		}
-		# 催化加工：食物 -> 合金 + 工程学
+		# 催化加工：食物 -> 合金 + 工程学 + 活体金属
 		produces = {
 			trigger = {
 				industrial_jobs_are_catalytic_trigger = yes
 			}
 			alloys = 15
 			engineering_research = 5
+			sr_living_metal = 0.05
 		}
 		upkeep = {
 			trigger = {
@@ -108,7 +110,7 @@ yuzu_elite_catalytic_technician = {
 		default = {
 			condition_string = SPECIALIST_JOB_TRIGGER
 			building_icon = building_foundry_1
-			icon = yuzu_elite_metallurgist
+			icon = yuzu_elite_foundry
 		}
 	}
 	tags = { alloys }

@@ -58,7 +58,7 @@ yuzu_elite_healthcare_manager = {
 		default = {
 			condition_string = RULER_JOB_TRIGGER
 			building_icon = building_medical_2
-			icon = yuzu_healthcare_manager
+			icon = yuzu_elite_healthcare_manager
 		}
 	}
 

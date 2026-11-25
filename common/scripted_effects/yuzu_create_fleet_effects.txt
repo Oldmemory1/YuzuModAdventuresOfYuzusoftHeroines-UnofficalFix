@@ -1149,6 +1149,49 @@ create_new_abyss_ion_cannon = {
 	}
 }
 
+# ===== 深渊核心刷新（空间站级全局设计） =====
+# 调用前需先保存：
+#   event_target:abyss_core_owner  —— 归属国家（new_abyss_empire）
+#   event_target:abyss_core_anchor —— 生成位置（行星 / 恒星基地 / 舰队等）
+# 设计定义见 common/global_ship_designs/yuzu_abyss_core_designs.txt。
+create_new_abyss_core = {
+	create_fleet = {
+		name = "NAME_Abyss_Core"
+		effect = {
+			set_owner = event_target:abyss_core_owner
+			create_ship = {
+				name = random
+				design = "NAME_Abyss_Core"
+				graphical_culture = "fallen_yuzu_abyss_empire_01"
+			}
+			set_location = {
+				target = event_target:abyss_core_anchor
+				distance = 10
+				angle = random
+			}
+		}
+	}
+}
+
+create_new_abyss_final_core = {
+	create_fleet = {
+		name = "NAME_Abyss_Final_Core"
+		effect = {
+			set_owner = event_target:abyss_core_owner
+			create_ship = {
+				name = random
+				design = "NAME_Abyss_Final_Core"
+				graphical_culture = "fallen_yuzu_abyss_empire_01"
+			}
+			set_location = {
+				target = event_target:abyss_core_anchor
+				distance = 10
+				angle = random
+			}
+		}
+	}
+}
+
 create_presiding_judge_fleet_and_constructors = {
 	if = {
 		limit = {
