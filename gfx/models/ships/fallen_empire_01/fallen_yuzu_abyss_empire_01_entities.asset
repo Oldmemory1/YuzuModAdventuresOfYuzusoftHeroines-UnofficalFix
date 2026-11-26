@@ -309,6 +309,7 @@ entity = {
 	name = "fallen_yuzu_abyss_empire_01_construction_ship_entity"
 	pdxmesh = "fallen_yuzu_abyss_empire_01_civilian_mesh"
 	scale = 0.8
+	locator = { name = "root" position = { 0 0 0 } }
 	
 	default_state = "idle"
 	state = { name = "idle" state_time = 5

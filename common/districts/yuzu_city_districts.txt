@@ -764,6 +764,7 @@ district_yuzu_city_trade_advanced = {
 district_yuzu_city_healthcare = {
 	icon = district_resort_restoration_enclave
 	overlay_icon = GFX_district_yuzu_healthcare
+	gridbox = district_resort
 	zone_slots = {
 		slot_empty
 	}

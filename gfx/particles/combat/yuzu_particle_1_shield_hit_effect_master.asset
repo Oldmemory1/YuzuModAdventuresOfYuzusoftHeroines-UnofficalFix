@@ -348,6 +348,20 @@ particle={
 		time="life"
 	}
 	force={
+		type="planar"
+		name="forceaway"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 0.000 1.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+	force={
 		type="friction"
 		name="drag"
 		position={

@@ -1,4 +1,5 @@
 #####原版内容#####
+# @override
 sectors_others_group = {
 	resources = {
 		volatile_motes
@@ -8,6 +9,7 @@ sectors_others_group = {
 		sr_zro
 		sr_dark_matter
 		nanites
+		trade
 		fragment_of_heart
 	}
 	localization = {

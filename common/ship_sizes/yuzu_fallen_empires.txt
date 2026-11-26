@@ -463,6 +463,7 @@ large_fallen_weaver = {
 
 # Fallen Hive Large Mauler
 # Stage 3 mauler with two additional weapon and armor slots
+# @override
 large_fallen_mauler = {
 	graphical_culture = { "biogenesis_01_fallen_empire" }
 	entity = "biogenesis_01_fallen_empire_mauler_ship_entity"
@@ -503,11 +504,11 @@ large_fallen_mauler = {
 	triggered_ship_roles = {
 		{
 			name = brawler_stealth
-			trigger = { has_technology = tech_cloaking_1 }
+			trigger = { has_cloaking_tech = yes }
 		}
 		{
 			name = screen_stealth
-			trigger = { has_technology = tech_cloaking_1 }
+			trigger = { has_cloaking_tech = yes }
 		}
 	}
 	prerequisites = { "tech_mauler_growth_2" }

@@ -572,9 +572,15 @@ spriteTypes = {
 	#   77x77 图标按原版约定走 gfx/interface/icons/districts/<icon>.dds，不需要 sprite；
 	#   下面两个 sprite 是 4.x 额外要的"地块底图"和"通用动画条"。
 	#   底图由 scripts/make_yuzu_dream_district_art.py 从 77x77 素材生成。
+	# 炼油厂区划（icon = district_yuzu_city_refinery，城市 6 + 环世界 3 共用）：
+	#   地块底图由 scripts/make_yuzu_refinery_district_art.py 从 77x77 素材生成。
 	spriteType = {
 		name = "GFX_district_yuzu_city_dream_bg"
 		texturefile = "gfx/interface/icons/districts/district_yuzu_city_dream_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_yuzu_city_refinery_bg"
+		texturefile = "gfx/interface/icons/districts/district_yuzu_city_refinery_bg.dds"
 	}
 	spriteType = {
 		name = "GFX_district_yuzu_city_dream_box_icon_rectangle"

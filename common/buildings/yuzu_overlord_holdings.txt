@@ -16,6 +16,7 @@ holding_yuzu_cafe = {
 	}
 
 	potential = {
+		exists = owner.overlord
 		owner.overlord = { is_yuzu_empire = yes }
 		owner = { is_machine_empire = no }
 	#	NOT = {	has_modifier = slave_colony	}
@@ -64,6 +65,7 @@ holding_yuzu_supernatural_research_organization = {
 	}
 
 	potential = {
+		exists = owner.overlord
 		owner.overlord = { is_yuzu_empire = yes }
 		owner = { is_machine_empire = no }
 	#	NOT = {	has_modifier = slave_colony	}
