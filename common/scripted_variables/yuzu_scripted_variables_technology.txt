@@ -3,3 +3,20 @@
 
 @abyssRepeatableTechBaseCost = 50000
 @abyssRepeatableTechLevelCost = 2000000
+
+# 供 yuzu_tech.txt / yuzu_fe_building_tech.txt 共用（4.6 起跨文件变量必须放这里）
+@yuzu_tier6cost1 = 88000
+@yuzu_tier6cost2 = 104000
+@yuzu_tier6cost3 = 120000
+@yuzu_tier6cost4 = 136000
+@yuzu_tier6cost5 = 152000
+@yuzu_tier6cost6 = 168000
+@yuzu_tier6cost7 = 184000
+
+@yuzu_tier6weight1 = 16
+@yuzu_tier6weight2 = 15
+@yuzu_tier6weight3 = 14
+@yuzu_tier6weight4 = 13
+@yuzu_tier6weight5 = 12
+@yuzu_tier6weight6 = 11
+@yuzu_tier6weight7 = 10

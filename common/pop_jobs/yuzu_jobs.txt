@@ -1,13 +1,12 @@
 cafe_clerk = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
 	swappable_data = {
 		default = {
 			icon = cafe_clerk
 			building_icon = building_yuzu_cafe
+			condition_string = SPECIALIST_JOB_TRIGGER
 		}
 	}
-	clothes_texture_index = 3
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -53,14 +52,13 @@ cafe_clerk = {
 
 supernatural_researcher = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
 	swappable_data = {
 		default = {
 			icon = researcher
 			building_icon = building_yuzu_supernatural_research_organization
+			condition_string = SPECIALIST_JOB_TRIGGER
 		}
 	}
-	clothes_texture_index = 3
 	
 	possible_pre_triggers = {
 		has_owner = yes
@@ -140,15 +138,14 @@ supernatural_researcher = {
 
 yuzu_witch = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
 
 	swappable_data = {
 		default = {
 			building_icon = building_yuzu_supernatural_research_organization
 			icon = yuzu_witch
+			condition_string = SPECIALIST_JOB_TRIGGER
 		}
 	}
-	clothes_texture_index = 3
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -202,15 +199,14 @@ yuzu_witch = {
 
 yuzu_slime_researcher = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
 	
-	clothes_texture_index = 3
 	
 
 	swappable_data = {
 		default = {
 			building_icon = building_research_lab_1
 			icon = researcher
+			condition_string = SPECIALIST_JOB_TRIGGER
 		}
 	}
 
@@ -261,16 +257,15 @@ yuzu_slime_researcher = {
 
 yuzu_slime_breeder = {
 	category = worker
-	condition_string = WORKER_JOB_TRIGGER
 	is_capped_by_modifier = yes
 	
-	clothes_texture_index = 2
 	
 
 	swappable_data = {
 		default = {
 			building_icon = building_food_processing_facility
 			icon = farmer
+			condition_string = WORKER_JOB_TRIGGER
 		}
 	}
 
@@ -327,7 +322,6 @@ yuzu_fe_archivist = {
 	
 	is_capped_by_modifier = yes
 	
-	clothes_texture_index = 2
 
 	swappable_data = {
 		default = {
@@ -385,7 +379,6 @@ yuzu_fe_augur = {
 	
 	is_capped_by_modifier = yes
 	
-	clothes_texture_index = 2
 
 	swappable_data = {
 		default = {
@@ -430,16 +423,15 @@ yuzu_fe_augur = {
 yuzu_fe_protector = {
 	category = specialist
 	
-	condition_string = BATTLE_THRALL_JOB_TRIGGER
 	
 
 	swappable_data = {
 		default = {
 			building_icon = building_fortress
 			icon = enforcer
+			condition_string = BATTLE_THRALL_JOB_TRIGGER
 		}
 	}
-	clothes_texture_index = 2
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -571,7 +563,6 @@ yuzu_fe_xeno_keeper = {
 	
 	is_capped_by_modifier = yes
 	
-	clothes_texture_index = 2
 
 	swappable_data = {
 		default = {
@@ -614,7 +605,6 @@ yuzu_fe_xeno_keeper = {
 yuzu_fe_xeno_ward = {
 	category = yuzu_xeno_ward
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
 
 	swappable_data = {
 		default = {

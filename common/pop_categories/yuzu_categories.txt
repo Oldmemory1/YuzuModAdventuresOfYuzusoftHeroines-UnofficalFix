@@ -1,6 +1,5 @@
 yuzu_xeno_ward = {
 	rank = 0
-	clothes_texture_index = 3
 	change_job_threshold = 2
 
 	pop_group_modifier = {

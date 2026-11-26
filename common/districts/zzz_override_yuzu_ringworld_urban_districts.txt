@@ -26,6 +26,10 @@
 #   - 不要顺手改数值、资源、触发条件；只保留上面列出的差异。
 # =============================================================================
 
+@rw_cost = 1000
+@rw_maintenance = 5
+@rw_district_buildtime = 360
+
 # @override
 district_rw_urban_1 = {
 	icon = district_rw_city_secondary
