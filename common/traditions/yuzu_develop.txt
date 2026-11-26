@@ -127,6 +127,7 @@ tr_yuzu_develop_4 = {
 
 # 全民领袖
 tr_yuzu_develop_5 = {
+	custom_tooltip = tr_yuzu_develop_5_delayed
 	possible = {
 		has_tradition = tr_yuzu_develop_3
 	}

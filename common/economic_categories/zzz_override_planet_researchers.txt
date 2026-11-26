@@ -1,0 +1,38 @@
+# =============================================================================
+# Yuzu Mod —— 原版经济类别 planet_researchers（研究员）覆盖
+# =============================================================================
+#
+# 原版路径：common/economic_categories/01_job_categories.txt
+# 原版版本：Stellaris Corona Borealis v4.6.0 (3d1a)
+# 原版起始行：planet_researchers = 270
+#
+# 本次改动清单（只做最小改动，其余与原版逐字等价）：
+#   1. generate_add_modifiers 增加 produces。
+#      4.6 原版 planet_researchers 只生成 upkeep 的 add 修正；本 mod 的
+#      tech_yuzu_all_in_one_theory（万物归一理论，
+#      common/technology/yuzu_tech.txt）使用
+#      planet_researchers_physics_research_produces_add = 2，
+#      必须由该类别自己声明 generate_add_modifiers = { produces } 才会生成。
+#   2. 文件名的 zzz_ 前缀确保在 01_job_categories.txt 之后加载，
+#      整块覆盖原版定义（经济类别不合并，必须整块复制）。
+#
+# ⚠️ 维护警告：
+#   - 升级游戏版本后，先 diff 原版 01_job_categories.txt 再同步本文件，
+#     否则会静默丢失原版新增的字段 / 触发器。
+#   - 不要顺手改 parent / icon / modifier_category；只保留上面列出的差异。
+# =============================================================================
+
+# @override
+planet_researchers = {
+	icon = "job_researcher"
+	parent = planet_jobs_specialist
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
+}

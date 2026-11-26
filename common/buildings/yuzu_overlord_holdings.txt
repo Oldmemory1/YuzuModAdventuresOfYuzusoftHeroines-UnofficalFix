@@ -3,6 +3,7 @@ holding_yuzu_cafe = {
 	owner_type = subject_holding
 	icon = building_yuzu_cafe
 	base_cap_amount = 1
+	category = amenity
 
 	resources = {
 		category = planet_holdings
@@ -50,6 +51,7 @@ holding_yuzu_supernatural_research_organization = {
 	owner_type = subject_holding
 	icon = building_yuzu_supernatural_research_organization
 	base_cap_amount = 1
+	category = research
 
 	resources = {
 		category = planet_holdings

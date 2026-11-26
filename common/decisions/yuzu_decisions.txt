@@ -1,16 +1,29 @@
 #####原版内容#####
+# 原版参考: common/decisions/02_special_decisions.txt (4.6.0 / 3d1a)
+# 覆盖块: decision_resort_colony (原版 L302), decision_slave_colony (原版 L219),
+#         decision_arcology_project (原版 L937), decision_arcology_project_relic (原版 L1064)
+# 2026-11-26: 同步 4.6 的 enactment_time 与 allow 结构；成本保留 minerals = 20000，
+#             并按用户要求加入理想城成本乘数。
 
+# @override
 decision_arcology_project = {
 	important = yes
 	owned_planets_only = yes
 	icon = decision_arcology_project
 
-	enactment_time = 3600
+	enactment_time = {
+		base = 3600
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
 			influence = 200
 			minerals = 20000
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 
@@ -35,20 +48,30 @@ decision_arcology_project = {
 	allow = {
 		if = {
 			limit = { owner = { is_ai = no } }
-			custom_tooltip = {
-				fail_text = decision_arcology_project_requirements
+			if = {
+				limit = { owner = { is_megacity_architects_empire = yes } }
 				free_district_slots < 1
-				num_districts = { type = district_farming value < 1 }
-				num_districts = { type = district_mining value < 1 }
-				num_districts = { type = district_generator value < 1 }
-				# Volcanic Worlds
-				num_districts = { type = district_geothermal value < 1 }
-				num_districts = { type = district_melting value < 1 }
-				num_districts = { type = district_polytechnic value < 1 }
+				custom_tooltip = {
+					fail_text = "needs_urban_expansion_frame"
+					has_modifier = urban_expansion_frame
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = decision_arcology_project_requirements
+					free_district_slots < 1
+					num_districts = { type = district_farming value < 1 }
+					num_districts = { type = district_mining value < 1 }
+					num_districts = { type = district_generator value < 1 }
+					# Volcanic Worlds
+					num_districts = { type = district_geothermal value < 1 }
+					num_districts = { type = district_melting value < 1 }
+					num_districts = { type = district_polytechnic value < 1 }
+				}
 			}
 			custom_tooltip = {
 				fail_text = legendary_leader_decision_arcology_project
-				NOT = { has_carrier_flag = legendary_leader_planet }
+				NOT = { has_planet_flag = legendary_leader_planet }
 			}
 		}
 		num_uncleared_blockers < 1
@@ -112,17 +135,25 @@ decision_arcology_project = {
 }
 
 # Arcology Project (Relic Worlds)
+# @override
 decision_arcology_project_relic = {
 	important = yes
 	owned_planets_only = yes
 	icon = decision_arcology_project
 
-	enactment_time = 3600
+	enactment_time = {
+		base = 3600
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
 			influence = 200
 			minerals = 20000
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 
@@ -141,6 +172,13 @@ decision_arcology_project_relic = {
 	allow = {
 		num_uncleared_blockers < 1
 		owner = { has_technology = tech_housing_2 }
+		if = {
+			limit = { owner = { is_megacity_architects_empire = yes } }
+			custom_tooltip = {
+				fail_text = "needs_urban_expansion_frame"
+				has_modifier = urban_expansion_frame
+			}
+		}
 	}
 
 	on_queued = {
@@ -208,6 +246,7 @@ decision_arcology_project_relic = {
 }
 
 # Resort Colony
+# @override
 decision_resort_colony = {
 	owned_planets_only = yes
 
@@ -273,7 +312,12 @@ decision_resort_colony = {
 			fail_text = decision_resort_colony_only_one
 			NOT = {
 				owner = {
-					any_owned_planet = { has_modifier = resort_colony }
+					any_owned_planet = {
+						OR = {
+							has_modifier = resort_colony
+							has_carrier_flag = resort_colony_queued
+						}
+					}
 				}
 			}
 		}
@@ -320,6 +364,7 @@ decision_resort_colony = {
 }
 
 # Thrall-World
+# @override
 decision_slave_colony = {
 	owned_planets_only = yes
 

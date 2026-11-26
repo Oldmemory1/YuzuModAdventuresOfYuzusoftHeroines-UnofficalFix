@@ -3,7 +3,13 @@ decision_yuzu_arcology_project = {
 	owned_planets_only = yes
 	icon = decision_arcology_project
 
-	enactment_time = 1800
+	enactment_time = {
+		base = 1800
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
@@ -12,6 +18,7 @@ decision_yuzu_arcology_project = {
 			volatile_motes = 100
 			exotic_gases = 100
 			rare_crystals = 100
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 
@@ -52,7 +59,7 @@ decision_yuzu_arcology_project = {
 			}
 			custom_tooltip = {
 				fail_text = legendary_leader_decision_arcology_project
-				NOT = { has_carrier_flag = legendary_leader_planet }
+				NOT = { has_planet_flag = legendary_leader_planet }
 			}
 		}
 		num_uncleared_blockers < 1
@@ -120,7 +127,13 @@ decision_yuzu_arcology_project_relic = {
 	owned_planets_only = yes
 	icon = decision_arcology_project
 
-	enactment_time = 1800
+	enactment_time = {
+		base = 1800
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
@@ -129,6 +142,7 @@ decision_yuzu_arcology_project_relic = {
 			volatile_motes = 100
 			exotic_gases = 100
 			rare_crystals = 100
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 
@@ -214,7 +228,13 @@ decision_restore_yuzu_abyss_city = {
 	owned_planets_only = yes
 	icon = decision_yuzu_abyss_city
 
-	enactment_time = 600
+	enactment_time = {
+		base = 600
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
@@ -224,6 +244,7 @@ decision_restore_yuzu_abyss_city = {
 			exotic_gases = 100
 			rare_crystals = 100
 			sr_dark_matter = 100
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 
@@ -270,7 +291,13 @@ decision_yuzu_abyss_city = {
 	owned_planets_only = yes
 	icon = decision_yuzu_abyss_city
 
-	enactment_time = 1200
+	enactment_time = {
+		base = 1200
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
@@ -280,6 +307,7 @@ decision_yuzu_abyss_city = {
 			exotic_gases = 100
 			rare_crystals = 100
 			sr_dark_matter = 100
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 
@@ -317,7 +345,13 @@ decision_yuzu_sunset_city = {
 	owned_planets_only = yes
 	icon = decision_yuzu_sunset_city
 
-	enactment_time = 1200
+	enactment_time = {
+		base = 1200
+		modifier = {
+			owner = { is_megacity_architects_empire = yes }
+			factor = 0.5
+		}
+	}
 	resources = {
 		category = decisions
 		cost = {
@@ -327,6 +361,7 @@ decision_yuzu_sunset_city = {
 			exotic_gases = 100
 			rare_crystals = 100
 			sr_dark_matter = 100
+			mult = owner.value:scripted_modifier_mult|MODIFIER|arcology_project_cost_mult|
 		}
 	}
 
