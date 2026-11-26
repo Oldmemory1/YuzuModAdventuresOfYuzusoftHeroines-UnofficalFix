@@ -8,6 +8,8 @@
 # 引擎按 <name>_01_entity 解析到下面的实体。
 # 贴图文件（yuzu_*_ringworld_{diffuse,normal,specular}.dds）放 gfx/models/planets/。
 
+@ringworld_segment_size = 50
+
 entity = {
 	name = "yuzu_abyss_ringworld_planet_01_entity"
 	cull_radius = 500.0

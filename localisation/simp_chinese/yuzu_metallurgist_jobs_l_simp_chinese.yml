@@ -4,14 +4,14 @@
  job_yuzu_elite_foundry:0"高级冶金师"
  job_yuzu_elite_foundry_plural:0"高级冶金师"
  job_yuzu_elite_foundry_desc:0"在纳米熔炉中锻造合金的精英冶金师。他们以远超常规工艺的精度掌控炉温与配比，为舰队和巨构铸出最坚韧的骨架。"
- job_yuzu_elite_foundry_effect_desc:0"£job_yuzu_elite_metallurgist£$job_yuzu_elite_foundry_plural$产出£alloys£ §Y12§!与£engineering_research£ §Y4§!，维护费为£minerals£ §Y40§!。"
+ job_yuzu_elite_foundry_effect_desc:0"£job_yuzu_elite_foundry£$job_yuzu_elite_foundry_plural$产出£alloys£ §Y12§!与£engineering_research£ §Y4§!，维护费为£minerals£ §Y40§!。"
  mod_job_yuzu_elite_foundry_add:0"$job_yuzu_elite_foundry$岗位"
 
  job_yuzu_elite_catalytic_technician:0"高级催化技师"
  job_yuzu_elite_catalytic_technician_plural:0"高级催化技师"
  yuzu_elite_catalytic_technician:0"$job_yuzu_elite_catalytic_technician$"
  job_yuzu_elite_catalytic_technician_desc:0"掌握催化加工工艺的精英技师。他们以有机物替代矿物，通过精密的催化反应炼出坚韧的合金。"
- job_yuzu_elite_catalytic_technician_effect_desc:0"£job_yuzu_elite_metallurgist£$job_yuzu_elite_catalytic_technician_plural$产出£alloys£ §Y15§!与£engineering_research£ §Y5§!，维护费为£food£ §Y60§!。"
+ job_yuzu_elite_catalytic_technician_effect_desc:0"£job_yuzu_elite_foundry£$job_yuzu_elite_catalytic_technician_plural$产出£alloys£ §Y15§!与£engineering_research£ §Y5§!，维护费为£food£ §Y60§!。"
  mod_job_yuzu_elite_catalytic_technician_add:0"$job_yuzu_elite_catalytic_technician$岗位"
 
  job_yuzu_elite_foundry_manager:0"冶金主管"

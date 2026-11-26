@@ -11,6 +11,14 @@
  SHIP_YUZU_STAR_EATER_SECTION:0"$tech_yuzu_star_eater$"
  SHIP_GRAPHICS_YUZU_STAR_EATER_DESC:0"深渊教廷仿制出的恒星级巨舰。它携带的武器能引爆恒星，也能单独对抗一支大型舰队。"
 
+ # 深渊危机核心船型（core_abyss / final_core_abyss）
+ core_abyss:0"教廷核心"
+ core_abyss_cap:0"$core_abyss$"
+ core_abyss_plural:0"教廷核心"
+ final_core_abyss:0"深渊终局核心"
+ final_core_abyss_cap:0"$final_core_abyss$"
+ final_core_abyss_plural:0"深渊终局核心"
+
  
  tech_pk_back_in_time:0"时光倒流"
  tech_pk_back_in_time_desc:0"$PLANET_KILLER_BACK_IN_TIME_DESC$"

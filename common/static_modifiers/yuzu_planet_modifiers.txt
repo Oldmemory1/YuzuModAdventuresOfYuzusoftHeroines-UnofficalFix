@@ -10,7 +10,7 @@ yuzu_home_planet_modifier = {
 
 yuzu_with_slime = {
 	pop_amenities_usage_mult = -0.05
-	district_farming_max = 6
+	district_farming_max_add = 6
 	planet_jobs_food_produces_mult = 0.3
 	job_yuzu_slime_breeder_add = 2
 	job_yuzu_slime_breeder_per_pop = 0.05 # 1 per 20

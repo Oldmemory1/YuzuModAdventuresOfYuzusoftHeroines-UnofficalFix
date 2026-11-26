@@ -9,5 +9,5 @@
  job_yuzu_elite_healthcare_manager:0"医务主管"
  job_yuzu_elite_healthcare_manager_plural:0"医务主管"
  job_yuzu_elite_healthcare_manager_desc:0"统筹殖民地医疗体系的主管。他们调度医疗资源与公共卫生政策，以远高于普通医务工作者的效率提升舒适度和人口增长，同时降低有机人口的维护开销。"
- job_yuzu_elite_healthcare_manager_effect_desc:0"£job_yuzu_healthcare_manager£$job_yuzu_elite_healthcare_manager_plural$提供£mod_planet_amenities_add£$PLANET_AMENITIES_TITLE$§Y20000§!、£mod_logistic_growth_mult£$MOD_LOGISTIC_GROWTH_MULT$§G+25%§!、£mod_bonus_pop_growth_mult£$MOD_BONUS_POP_GROWTH_MULT$§G+25%§!，使有机人口维护费§G-5%§!，维护费为£consumer_goods£§Y25§!。"
+ job_yuzu_elite_healthcare_manager_effect_desc:0"£job_yuzu_elite_healthcare_manager£$job_yuzu_elite_healthcare_manager_plural$提供£mod_planet_amenities_add£$PLANET_AMENITIES_TITLE$§Y20000§!、£mod_logistic_growth_mult£$MOD_LOGISTIC_GROWTH_MULT$§G+25%§!、£mod_bonus_pop_growth_mult£$MOD_BONUS_POP_GROWTH_MULT$§G+25%§!，使有机人口维护费§G-5%§!，维护费为£consumer_goods£§Y25§!。"
  mod_job_yuzu_elite_healthcare_manager_add:0"$job_yuzu_elite_healthcare_manager$岗位"

@@ -710,6 +710,18 @@ country_event = {
 				}
 				set_owner = event_target:new_abyss_country
 				set_capital = yes
+
+				# 教廷主力进场：首都行星旁 4 个教廷核心 + 1 个深渊终局核心。
+				save_event_target_as = abyss_core_anchor
+				event_target:new_abyss_country = {
+					save_event_target_as = abyss_core_owner
+				}
+				while = {
+					count = 4
+					create_new_abyss_core = yes
+				}
+				create_new_abyss_final_core = yes
+
 				# 深渊教廷首都初始化顺序：区划 → zone → 建筑 → 人口。
 				# 区划：1 个居住理想城 + urban_1 17 + urban_2 16 + urban_3 16 = 50（planet_size 50，正好填满）。
 				add_district = district_arcology_housing
@@ -1280,6 +1292,16 @@ system_event = {
 			}
 			# create_new_abyss_ion_cannon = yes
 			# remove create ion cannon because it is too difficult
+		}
+
+		# 深渊势力建立恒星基地后：围绕基地生成 2 个教廷核心。
+		starbase = {
+			save_event_target_as = abyss_core_anchor
+			owner = { save_event_target_as = abyss_core_owner }
+		}
+		while = {
+			count = 2
+			create_new_abyss_core = yes
 		}
 	}
 }
@@ -1939,6 +1961,11 @@ carrier_event = {
 			}
 		}
 		yuzu_abyss_situation_add_progress = { VALUE = 10 }
+
+		# 殖民地被轰炸至 100% 并粉碎：在星球上方生成 1 个深渊终局核心。
+		save_event_target_as = abyss_core_anchor
+		from = { save_event_target_as = abyss_core_owner }
+		create_new_abyss_final_core = yes
 	}
 }
 

@@ -1,7 +1,6 @@
 trait_yuzu = {
 	cost = 0
     initial = yes
-	potential_crossbreeding_chance = 1.00
 	sorting_priority = 20
 	icon = "gfx/interface/icons/traits/trait_yuzu.dds"
 	improves_leaders = yes
@@ -39,7 +38,6 @@ trait_yuzu = {
 trait_yuzu_astral = { #星幽使
 	cost = 2
     initial = no
-	potential_crossbreeding_chance = 1.00
 	icon = "gfx/interface/icons/traits/trait_astral.dds"
 
 	improves_leaders = yes
@@ -67,7 +65,6 @@ trait_yuzu_astral = { #星幽使
 trait_yuzu_vampire = { #吸血鬼
     cost = 2
     initial = no
-	potential_crossbreeding_chance = 1.00
 	icon = "gfx/interface/icons/traits/trait_vampire.dds"
 
 	improves_leaders = yes
@@ -127,7 +124,6 @@ trait_yuzu_vampire = { #吸血鬼
 trait_yuzu_ciallo = {
 	cost = 1
     initial = yes
-	potential_crossbreeding_chance = 1.00
 	icon = "gfx/interface/icons/traits/trait_ciallo.dds"
 
 	improves_leaders = no
@@ -151,7 +147,6 @@ trait_yuzu_ciallo = {
 trait_yuzu_big_eater = {
 	cost = -2
     initial = yes
-	potential_crossbreeding_chance = 1.00
 	icon = "gfx/interface/icons/traits/trait_big_eater.dds"
 
 	improves_leaders = no
@@ -174,7 +169,6 @@ trait_yuzu_big_eater = {
 trait_abyss = {
 	cost = 0
     initial = no
-	potential_crossbreeding_chance = 1.00
 	sorting_priority = 20
 	icon = "gfx/interface/icons/traits/trait_abyss.dds"
 	improves_leaders = yes
